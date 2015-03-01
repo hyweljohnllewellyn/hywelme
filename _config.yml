@@ -1,4 +1,5 @@
 # Site settings
+
 title: Your awesome title
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -10,6 +11,7 @@ description: > # this means to ignore newlines until "baseurl:"
 url: "http://www.hywel.me" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+permalink:        /blog/
 
 # Build settings
 markdown: kramdown

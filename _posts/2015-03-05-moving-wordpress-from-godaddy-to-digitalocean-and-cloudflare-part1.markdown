@@ -14,7 +14,7 @@ Also, the response time for all the websites hosted with them has not been good 
 
 I have decided try out the *do it yourself* cloud hosting option provided by [DigitalOcean.com](https://www.digitalocean.com/?refcode=92e12787bf7a) partly to learn some new skills and also they have had some great reviews.
 
-After a quick search online, I found a promotional code to get 2 months free hosting with DigitalOcean.com, so at least I could without any fees. 
+After a quick search online, I found a promotional code to get 2 months free hosting with DigitalOcean.com, so at least I could try before I buy. 
 
 As a member, DigitalOcean offer a referal scheme - please click my link if you'd like to try it for free:
 

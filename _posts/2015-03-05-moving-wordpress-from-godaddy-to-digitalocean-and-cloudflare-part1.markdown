@@ -30,6 +30,6 @@ DigitalOcean is managed through a command line terminal, so if you are slightly 
 
 I was also tempted with the [CloudFlare.com](https://www.cloudflare.com) service as it offers free SSL/ SDPY and static file cache - which is supposed to translate to faster and more Google friendly websites. Worth a try right?
 
-In my next post, I'll descripe the stepsto move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!
+In my next post, I'll descripe the steps to move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!
 
 

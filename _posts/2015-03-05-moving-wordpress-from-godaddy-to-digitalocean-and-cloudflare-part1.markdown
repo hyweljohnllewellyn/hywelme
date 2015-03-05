@@ -6,7 +6,7 @@ categories: DigitalOcean WordPress CloudFlare
 ---
 
 
-It it time for a change.  At the time, £60 was a great deal for the 5 Year hosting plan at [GoDaddy.com](http://GoDaddy.com) and for that money it still is a good deal.  
+It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at [GoDaddy.com](http://GoDaddy.com).  
 
 However, now they want to charge me an arm and a leg to renew - GoDaddy provides a great price for new customers, but charge **alot** when you are locked in.
 

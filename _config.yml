@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   A personal blog site for me, with musings about technology and documenting what I learn.
 baseurl: "" # the subpath of your site - use "/hywelme" for GitPages and "" for Custom Domain
 url: "http://www.hywel.me" # the base hostname & protocol for your site
-twitter_username: not yet
+twitter_username: hywel_llewellyn
 github_username:  hyweljohnllewellyn
 
 # Build settings

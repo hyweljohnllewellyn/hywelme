@@ -136,8 +136,7 @@ Wait the usual time for the details to propogate across the world.
 Lastly, i rysync the file from the DigitalOcean server to my local Mac as a backup:
 
 {% highlight bash %}
-rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public /Users/Hywel/operascoolorg/public/
-{% endhighlight %}
+rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public{% endhighlight %}
 
 That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.  
 

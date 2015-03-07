@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  " Moving a WordPress site from GoDaddy to DigitalOcean using ServerPilot.io and then adding it to CloudFlare CDN - Part 1 Why?"
+title:  " Moving a WordPress site from GoDaddy to DigitalOcean - Part 1 Why?"
 date:   2015-03-05 21:31:00
-categories: DigitalOcean WordPress CloudFlare
+categories: DigitalOcean WordPress
 ---
 
 

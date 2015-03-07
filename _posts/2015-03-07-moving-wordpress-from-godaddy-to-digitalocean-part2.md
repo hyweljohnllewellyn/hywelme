@@ -80,8 +80,7 @@ nano wp-config.php
 {% endhighlight %}
 
 
-![My helpful screenshot]({{ site.url }}/assets/2015-03-07/8nano_wpconfig.png
-)
+![My helpful screenshot]({{ site.url }}/assets/2015-03-07/8nano_wpconfig.png)
 
 This will allow me to update the database configuration to that created by ServerPilot.
 

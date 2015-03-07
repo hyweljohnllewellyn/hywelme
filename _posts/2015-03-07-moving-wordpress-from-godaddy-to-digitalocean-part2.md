@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  " Moving a WordPress site from GoDaddy to DigitalOcean - Part 2 Install WordPress"
-date:   2015-03-07 21:31:00
+title:  " Moving a WordPress site from GoDaddy to DigitalOcean - Part 2"
+date:   2015-03-07 21:51:00
 categories: DigitalOcean WordPress
 ---
 ###Create the Site  

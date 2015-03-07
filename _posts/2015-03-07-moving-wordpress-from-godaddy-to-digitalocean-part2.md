@@ -32,7 +32,7 @@ Next, SSH to the apps public directory on the DigitalOcean server.  My app is lo
 
 Then download the latest wordpress version using the following:
 
-{% highlight ruby %}
+{% highlight bash %}
 wget https://wordpress.org/latest.tar.gz
 tar xzf latest.tar.gz
 mv wordpress/* .
@@ -74,7 +74,7 @@ Now we need to update the database credentials in the WordPress config file.
 
 SSH back to to the apps public directory on the DigitalOcean server and type hte following:
 
-{% highlight ruby %}
+{% highlight bash %}
 mv wp-config-sample.php wp-config.php
 nano wp-config.php
 {% endhighlight %}
@@ -84,13 +84,12 @@ nano wp-config.php
 
 This will allow me to update the database configuration to that created by ServerPilot.
 
+{% highlight bash %}
 define('DB_NAME', 'database_name_here');
-
 define('DB_USER', 'username_here');
-
 define('DB_PASSWORD', 'password_here');
-
 define('DB_HOST', 'localhost');
+{% endhighlight %} 
 
 Note that the localhost for my server is 127.0.0.1.  Save the file.
 
@@ -118,13 +117,22 @@ Login to the GoDaddy account and go to the operascool.org Domain settings to man
 
 Select Custom and enter the DigitalOcean domain servers:
 
+{% highlight bash %}
 ns1.digitalocean.com
 ns2.digitalocean.com
 ns3.digitalocean.com 
+{% endhighlight %}
+
 
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/12godaddy_costom_nameserver.png)
 
 Wait the usual time for the details to propogate across the world.
+
+Lastly, i rysync the file from the DigitalOcean server to my local Mac as a backup:
+
+{% highlight bash %}
+rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public /Users/Hywel/operascoolorg/public/
+{% endhighlight %}
 
 That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.  
 

@@ -122,6 +122,8 @@ ns1.digitalocean.com
 ns2.digitalocean.com
 ns3.digitalocean.com 
 
+![My helpful screenshot]({{ site.url }}/assets/2015-03-07/12godaddy_costom_nameserver.png)
+
 Wait the usual time for the details to propogate across the world.
 
 That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.  

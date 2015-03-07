@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>Posts</title>
+    <description>A personal blog site for me, with musings about technology and documenting what I learn.
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Mar 2015 21:38:06 +0000</pubDate>
-    <lastBuildDate>Sun, 01 Mar 2015 21:38:06 +0000</lastBuildDate>
+    <pubDate>Sat, 07 Mar 2015 14:41:42 +0000</pubDate>
+    <lastBuildDate>Sat, 07 Mar 2015 14:41:42 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 1 Why?</title>
+        <description>&lt;p&gt;It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at &lt;a href=&quot;http://GoDaddy.com&quot;&gt;GoDaddy.com&lt;/a&gt;.  &lt;/p&gt;
+
+&lt;p&gt;However, now they want to charge me an arm and a leg to renew - GoDaddy provides a great price for new customers, but charge &lt;strong&gt;alot&lt;/strong&gt; when you are locked in.&lt;/p&gt;
+
+&lt;p&gt;Also, the response time for all the websites hosted with them has not been good enough - especially now that Solid State Disks (SSDs) are becoming more commonplace with hosting companies.&lt;/p&gt;
+
+&lt;p&gt;I have decided try out the &lt;em&gt;do it yourself&lt;/em&gt; cloud hosting option provided by &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;DigitalOcean.com&lt;/a&gt; partly to learn some new skills and also they have had some great reviews.&lt;/p&gt;
+
+&lt;p&gt;After a quick search online, I found a promotional code to get 2 months free hosting with DigitalOcean.com, so at least I could try before I buy. &lt;/p&gt;
+
+&lt;p&gt;As a member, DigitalOcean offer a referal scheme - please click my link if you’d like to try it for free:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;$10 credit at Digital Ocean&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;DigitalOcean’s documentation and user forums are very active and I found it quite straight forward as a tech-savvy person to get a basic Ubuntu operating system insalled on a &lt;em&gt;droplet&lt;/em&gt; . &lt;/p&gt;
+
+&lt;p&gt;DigitalOcean is managed through a command line terminal, so if you are slightly allergic to the thought of typing commands, it’s propably not for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt; is a simple  management system for DigitalOcean servers. Even their free plan takes care automatically of basic server security and PHP application management.  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;$10 credit at ServerPilot.io&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;I was also tempted with the &lt;a href=&quot;https://www.cloudflare.com&quot;&gt;CloudFlare.com&lt;/a&gt; service as it offers free SSL/ SDPY and static file cache - which is supposed to translate to faster and more Google friendly websites. Worth a try right?&lt;/p&gt;
+
+&lt;p&gt;In my next post, I’ll describe the steps to move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 05 Mar 2015 21:31:00 +0000</pubDate>
+        <link>http://www.hywel.me/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html</guid>
+        
+        
+        <category>digitalocean</category>
+        
+        <category>wordpress</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>

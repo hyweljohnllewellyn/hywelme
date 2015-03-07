@@ -69,6 +69,11 @@ Using my favorite MySQL database software [SequelPro](http://www.sequelpro.com/)
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/7sequelpro_export_database.png
 )
 
+Whilst still in SequelPro, I need to update the post id's as they have moved folder location (you may not need to do this):
+
+{% highlight SQL %}
+update wp_posts set guid = replace(guid, 'http://operascool.org/operascoolwp/','http://operascool.org');
+{% endhighlight %}
 
 Now we need to update the database credentials in the WordPress config file.  
 

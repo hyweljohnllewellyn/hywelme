@@ -6,7 +6,7 @@ categories: DigitalOcean WordPress
 ---
 ###Create the Site  
 
-[In my previous post,]{% post_url 2015-03-05-moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1 %} I described by I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.
+[In my previous post,]{% post_url 2015-03-05-moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.markdown %} I described by I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.
 
 The site I am moving is [operascool.org](http://operascool.org).
 

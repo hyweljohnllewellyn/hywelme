@@ -47,11 +47,11 @@ Browsing the sites domain URL will show the WordPress installer:
 
 As I am migrating an existing WordPress site, I am not going to continue with the install.  
 
-Now, using Filezilla to download the operascool WordPress files from GoDaddy to a local folder on my Mac.
+Now, using Filezilla, download the operascool WordPress files from GoDaddy to a local folder on my Mac.
 
 The only content that I want to keep from the GoDaddy server are in the wp-content folder: a custom theme "wpcartoons" and the uploads folder with the images for the site.
 
-Again using Filezilla, I upload these folders to the wp-content folde on the DigitalOcean server:
+Again using Filezilla, I upload these folders to the wp-content folder on the DigitalOcean server:
 
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/5ftp_wpcontent_to_newsite.png
 )

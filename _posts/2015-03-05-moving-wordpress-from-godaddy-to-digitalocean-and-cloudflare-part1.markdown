@@ -3,6 +3,7 @@ layout: post
 title:  " Moving a WordPress site from GoDaddy to DigitalOcean - Part 1"
 date:   2015-03-05 21:31:00
 author: Hywel
+meta: DigitalOcean WordPress ServerPilot.io
 categories: DigitalOcean WordPress
 ---
 

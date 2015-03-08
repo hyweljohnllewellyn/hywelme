@@ -10,6 +10,7 @@ github_username:  hyweljohnllewellyn
 
 # Build settings
 markdown: kramdown
+image:"/assets/hywel.png"
 
 # Author details.
 hywel:

@@ -1,5 +1,5 @@
 # Site settings
-title: Posts
+title: Have You Wondered Ever Land
 email: hywel.llewellyn@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A personal blog site for me, with musings about technology and documenting what I learn.
@@ -10,3 +10,9 @@ github_username:  hyweljohnllewellyn
 
 # Build settings
 markdown: kramdown
+
+# Author details.
+hywel:
+    name: Hywel Llewellyn
+    email: rhywel.llewellyn@gmail.com
+    web: http://www.hywel.me

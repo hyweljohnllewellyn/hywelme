@@ -1,17 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts</title>
+    <title>Have You Wandered Every Land</title>
     <description>A personal blog site for me, with musings about technology and documenting what I learn.
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 Mar 2015 14:41:42 +0000</pubDate>
-    <lastBuildDate>Sat, 07 Mar 2015 14:41:42 +0000</lastBuildDate>
+    <pubDate>Sun, 15 Nov 2015 15:06:43 +0000</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2015 15:06:43 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 1 Why?</title>
+        <title> Installing Jekyll Locally on a Mac</title>
+        <description>&lt;h3 id=&quot;static-sites-with-jekyll&quot;&gt;Static Sites with Jekyll&lt;/h3&gt;
+
+&lt;p&gt;Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  As I have started some projects requiring relatively simple websites with only a few pages, the reduced security concerns and above all the effectively &lt;strong&gt;free&lt;/strong&gt; hosting on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt; was very appealing.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; , but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of it’s native integration with &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt; and there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;
+
+&lt;h3 id=&quot;problems-installing-jekyll-locally-on-a-mac&quot;&gt;Problems Installing Jekyll Locally on a Mac&lt;/h3&gt;
+
+&lt;p&gt;After cloning the So Simple Theme, by &lt;a href=&quot;http://mademistakes.com&quot;&gt;Michael Rose&lt;/a&gt;, I tried to install Jekyll locally as described on &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install Jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;However, I received the following error&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;You don&amp;#39;t have write permissions for the /Library/Ruby/Gems/2.0.0 directory&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This error has been described on the Jekyll forums &lt;a href=&quot;https://github.com/jekyll/jekyll/issues/3984&quot;&gt;gem-install-jekyll-failed-on-Mac-OS-X&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The steps taken to resolve these were as follows:&lt;/p&gt;
+
+&lt;p&gt;Install &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt; using&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Install a user specific version of Ruby using  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install ruby&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a user specific bash profile as described at &lt;a href=&quot;http://hathaway.cc/post/69201163472/how-to-edit-your-path-environment-variables-on-mac&quot;&gt;How To Edit Your PATH Environment Variables On Mac OS X&lt;/a&gt; using&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Inside the .bash_profile add the line so it can find the updated path to the ruby as described &lt;a href=&quot;http://stackoverflow.com/questions/11025980/how-to-add-usr-local-bin-in-path-on-mac&quot;&gt;How to add /usr/local/bin in $PATH on Mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/usr/local/git/bin:/usr/local/bin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To ensure that all the Jekyll dependencies were installed I installed &lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; using&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install bundler&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and then  within the directory having the Jekyll/ Github repository I ran&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bundle install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, as I was using Bundler to manager my dependencies, in order to run Jekyll locally, I needed to use&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now my site was successfully being served locally  at http://127.0.0.1:4000/ using the built in web server provided by Jekyll.&lt;/p&gt;
+
+&lt;p&gt;It is worth noting that there is a great resource at &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages/&quot;&gt;GitHub Using Jekyll with Pages&lt;/a&gt;, which may be a simpler way to install Jekyll.  I may try that next time…&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Nov 2015 12:56:00 +0000</pubDate>
+        <link>http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>static</category>
+        
+        <category>site</category>
+        
+      </item>
+    
+      <item>
+        <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 2</title>
+        <description>&lt;h3 id=&quot;create-the-site&quot;&gt;Create the Site&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html&quot;&gt;In my previous post,&lt;/a&gt; I described by I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.&lt;/p&gt;
+
+&lt;p&gt;The site I am moving is &lt;a href=&quot;http://operascool.org&quot;&gt;operascool.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/0operascoolorg_godaddy.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On my DigitalOcean server I use ServerPilot.io to manage the server as mentioned in part 1 of this blog.&lt;/p&gt;
+
+&lt;p&gt;So login to the ServerPilot.io account and create a new app called operascoolorg&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/1serverpilot_create_app.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This creates a new public folder for my new operascoolorg app.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/2serverpilot_app_directory.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and it is instantly available on the web:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/3serverpilot_app_setup.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;migrate-wordpress-folders&quot;&gt;Migrate WordPress Folders&lt;/h3&gt;
+
+&lt;p&gt;Next, SSH to the apps public directory on the DigitalOcean server.  My app is located in apps/operascoolorg/public folder.&lt;/p&gt;
+
+&lt;p&gt;Then download the latest wordpress version using the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget https://wordpress.org/latest.tar.gz
+tar xzf latest.tar.gz
+mv wordpress/* .
+rm latest.tar.gz
+rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Browsing the sites domain URL will show the WordPress installer:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/4wordpress_installer.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As I am migrating an existing WordPress site, I am not going to continue with the install.  &lt;/p&gt;
+
+&lt;p&gt;Now, using Filezilla, download the operascool WordPress files from GoDaddy to a local folder on my Mac.&lt;/p&gt;
+
+&lt;p&gt;The only content that I want to keep from the GoDaddy server are in the wp-content folder: a custom theme “wpcartoons” and the uploads folder with the images for the site.&lt;/p&gt;
+
+&lt;p&gt;Again using Filezilla, I upload these folders to the wp-content folder on the DigitalOcean server:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/5ftp_wpcontent_to_newsite.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;migrate-wordpress-database&quot;&gt;Migrate WordPress Database&lt;/h3&gt;
+
+&lt;p&gt;Going back to ServerPilot.io, a database is created for the operascoolorg app. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/6serverpilot_create_database.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using my favorite MySQL database software &lt;a href=&quot;http://www.sequelpro.com/&quot;&gt;SequelPro&lt;/a&gt;, I export the database from GoDaddy and Import to the newly created operascoolorg database.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/7sequelpro_export_database.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Whilst still in SequelPro, I need to update the post id’s as they have moved folder location (you may not need to do this):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wp_posts&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;guid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;guid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://operascool.org/operascoolwp/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://operascool.org&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we need to update the database credentials in the WordPress config file.  &lt;/p&gt;
+
+&lt;p&gt;SSH back to to the apps public directory on the DigitalOcean server and type hte following:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mv wp-config-sample.php wp-config.php
+nano wp-config.php&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/8nano_wpconfig.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This will allow me to update the database configuration to that created by ServerPilot.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_NAME&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;database_name_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_USER&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;username_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_PASSWORD&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;password_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_HOST&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that the localhost for my server is 127.0.0.1.  Save the file.&lt;/p&gt;
+
+&lt;h3 id=&quot;move-domain-name-server-to-digitalocean&quot;&gt;Move Domain Name Server to DigitalOcean&lt;/h3&gt;
+
+&lt;p&gt;Firstly, I will add the operascool.org domain to my operascoolorg app in ServerPilot.io:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/10Aserverpilot_add_domain.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now to add the operascool.org DNS to my DigitalOcean server:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/9digitalocean_add_domain.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/10digitalocean_add_cname.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Login to the GoDaddy account and go to the operascool.org Domain settings to manage the Nameservers:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/11godaddy_nameserver.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select Custom and enter the DigitalOcean domain servers:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ns1.digitalocean.com
+ns2.digitalocean.com
+ns3.digitalocean.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/12godaddy_costom_nameserver.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Wait the usual time for the details to propogate across the world.&lt;/p&gt;
+
+&lt;p&gt;Lastly, i rysync the file from the DigitalOcean server to my local Mac as a backup:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.  &lt;/p&gt;
+
+&lt;p&gt;More details on Creating DigitalOcean droplets and ServerPilot.io accounts can be found at this useful blog by &lt;a href=&quot;http://blog.thepascalbecker.com/2015/01/05/getting-started-with-a-vps/&quot;&gt;Pascal Becker&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 Mar 2015 21:51:00 +0000</pubDate>
+        <link>http://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html</guid>
+        
+        
+        <category>digitalocean</category>
+        
+        <category>wordpress</category>
+        
+      </item>
+    
+      <item>
+        <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 1</title>
         <description>&lt;p&gt;It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at &lt;a href=&quot;http://GoDaddy.com&quot;&gt;GoDaddy.com&lt;/a&gt;.  &lt;/p&gt;
 
 &lt;p&gt;However, now they want to charge me an arm and a leg to renew - GoDaddy provides a great price for new customers, but charge &lt;strong&gt;alot&lt;/strong&gt; when you are locked in.&lt;/p&gt;
@@ -36,8 +230,7 @@
 
 &lt;p&gt;I was also tempted with the &lt;a href=&quot;https://www.cloudflare.com&quot;&gt;CloudFlare.com&lt;/a&gt; service as it offers free SSL/ SDPY and static file cache - which is supposed to translate to faster and more Google friendly websites. Worth a try right?&lt;/p&gt;
 
-&lt;p&gt;In my next post, I’ll describe the steps to move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html&quot;&gt;In my next post,&lt;/a&gt; I’ll describe the steps to move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!&lt;/p&gt;
 </description>
         <pubDate>Thu, 05 Mar 2015 21:31:00 +0000</pubDate>
         <link>http://www.hywel.me/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html</link>

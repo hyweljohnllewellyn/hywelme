@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title > Moving a WordPress site from GoDaddy to DigitalOcean - Part 2 </title>
+
+  <meta name="description" content="Create the Site">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/" ><img src="http://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+  
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"> Moving a WordPress site from GoDaddy to DigitalOcean - Part 2</h1>
+    <p class="post-meta">Mar 7, 2015 ✎ Hywel • DigitalOcean WordPress ServerPilot.io</p>
+  </header>
+
+  <article class="post-content">
+    <h3 id="create-the-site">Create the Site</h3>
+
+<p><a href="/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html">In my previous post,</a> I described by I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.</p>
+
+<p>The site I am moving is <a href="http://operascool.org">operascool.org</a>.</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/0operascoolorg_godaddy.png" alt="My helpful screenshot" /></p>
+
+<p>On my DigitalOcean server I use ServerPilot.io to manage the server as mentioned in part 1 of this blog.</p>
+
+<p>So login to the ServerPilot.io account and create a new app called operascoolorg</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/1serverpilot_create_app.png" alt="My helpful screenshot" /></p>
+
+<p>This creates a new public folder for my new operascoolorg app.</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/2serverpilot_app_directory.png" alt="My helpful screenshot" /></p>
+
+<p>and it is instantly available on the web:</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/3serverpilot_app_setup.png" alt="My helpful screenshot" /></p>
+
+<h3 id="migrate-wordpress-folders">Migrate WordPress Folders</h3>
+
+<p>Next, SSH to the apps public directory on the DigitalOcean server.  My app is located in apps/operascoolorg/public folder.</p>
+
+<p>Then download the latest wordpress version using the following:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget https://wordpress.org/latest.tar.gz
+tar xzf latest.tar.gz
+mv wordpress/* .
+rm latest.tar.gz
+rmdir wordpress</code></pre></div>
+
+<p>Browsing the sites domain URL will show the WordPress installer:</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/4wordpress_installer.png" alt="My helpful screenshot" /></p>
+
+<p>As I am migrating an existing WordPress site, I am not going to continue with the install.  </p>
+
+<p>Now, using Filezilla, download the operascool WordPress files from GoDaddy to a local folder on my Mac.</p>
+
+<p>The only content that I want to keep from the GoDaddy server are in the wp-content folder: a custom theme “wpcartoons” and the uploads folder with the images for the site.</p>
+
+<p>Again using Filezilla, I upload these folders to the wp-content folder on the DigitalOcean server:</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/5ftp_wpcontent_to_newsite.png" alt="My helpful screenshot" /></p>
+
+<h3 id="migrate-wordpress-database">Migrate WordPress Database</h3>
+
+<p>Going back to ServerPilot.io, a database is created for the operascoolorg app. </p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/6serverpilot_create_database.png" alt="My helpful screenshot" /></p>
+
+<p>Using my favorite MySQL database software <a href="http://www.sequelpro.com/">SequelPro</a>, I export the database from GoDaddy and Import to the newly created operascoolorg database.</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/7sequelpro_export_database.png" alt="My helpful screenshot" /></p>
+
+<p>Whilst still in SequelPro, I need to update the post id’s as they have moved folder location (you may not need to do this):</p>
+
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">update</span> <span class="n">wp_posts</span> <span class="k">set</span> <span class="n">guid</span> <span class="o">=</span> <span class="k">replace</span><span class="p">(</span><span class="n">guid</span><span class="p">,</span> <span class="s1">&#39;http://operascool.org/operascoolwp/&#39;</span><span class="p">,</span><span class="s1">&#39;http://operascool.org&#39;</span><span class="p">);</span></code></pre></div>
+
+<p>Now we need to update the database credentials in the WordPress config file.  </p>
+
+<p>SSH back to to the apps public directory on the DigitalOcean server and type hte following:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mv wp-config-sample.php wp-config.php
+nano wp-config.php</code></pre></div>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/8nano_wpconfig.png" alt="My helpful screenshot" /></p>
+
+<p>This will allow me to update the database configuration to that created by ServerPilot.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">define<span class="o">(</span><span class="s1">&#39;DB_NAME&#39;</span>, <span class="s1">&#39;database_name_here&#39;</span><span class="o">)</span><span class="p">;</span>
+define<span class="o">(</span><span class="s1">&#39;DB_USER&#39;</span>, <span class="s1">&#39;username_here&#39;</span><span class="o">)</span><span class="p">;</span>
+define<span class="o">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span>, <span class="s1">&#39;password_here&#39;</span><span class="o">)</span><span class="p">;</span>
+define<span class="o">(</span><span class="s1">&#39;DB_HOST&#39;</span>, <span class="s1">&#39;localhost&#39;</span><span class="o">)</span><span class="p">;</span></code></pre></div>
+
+<p>Note that the localhost for my server is 127.0.0.1.  Save the file.</p>
+
+<h3 id="move-domain-name-server-to-digitalocean">Move Domain Name Server to DigitalOcean</h3>
+
+<p>Firstly, I will add the operascool.org domain to my operascoolorg app in ServerPilot.io:</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/10Aserverpilot_add_domain.png" alt="My helpful screenshot" /></p>
+
+<p>Now to add the operascool.org DNS to my DigitalOcean server:</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/9digitalocean_add_domain.png" alt="My helpful screenshot" /></p>
+
+<p>and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.  </p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/10digitalocean_add_cname.png" alt="My helpful screenshot" /></p>
+
+<p>Login to the GoDaddy account and go to the operascool.org Domain settings to manage the Nameservers:</p>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/11godaddy_nameserver.png" alt="My helpful screenshot" /></p>
+
+<p>Select Custom and enter the DigitalOcean domain servers:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ns1.digitalocean.com
+ns2.digitalocean.com
+ns3.digitalocean.com</code></pre></div>
+
+<p><img src="http://www.hywel.me/assets/2015-03-07/12godaddy_costom_nameserver.png" alt="My helpful screenshot" /></p>
+
+<p>Wait the usual time for the details to propogate across the world.</p>
+
+<p>Lastly, i rysync the file from the DigitalOcean server to my local Mac as a backup:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public</code></pre></div>
+
+<p>That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.  </p>
+
+<p>More details on Creating DigitalOcean droplets and ServerPilot.io accounts can be found at this useful blog by <a href="http://blog.thepascalbecker.com/2015/01/05/getting-started-with-a-vps/">Pascal Becker</a></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Have You Wandered Every Land</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <!--li>Have You Wandered Every Land</li-->
+          <li><a href="mailto:hywel.llewellyn@gmail.com">hywel.llewellyn@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/hyweljohnllewellyn">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">hyweljohnllewellyn</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/hywel_llewellyn">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">hywel_llewellyn</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">A personal blog site for me, with musings about technology and documenting what I learn.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

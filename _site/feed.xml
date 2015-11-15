@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Nov 2015 15:06:43 +0000</pubDate>
-    <lastBuildDate>Sun, 15 Nov 2015 15:06:43 +0000</lastBuildDate>
+    <pubDate>Sun, 15 Nov 2015 15:09:25 +0000</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2015 15:09:25 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -16,7 +16,7 @@
 
 &lt;p&gt;Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  As I have started some projects requiring relatively simple websites with only a few pages, the reduced security concerns and above all the effectively &lt;strong&gt;free&lt;/strong&gt; hosting on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt; was very appealing.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; , but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of it’s native integration with &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt; and there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;
 
-&lt;h3 id=&quot;problems-installing-jekyll-locally-on-a-mac&quot;&gt;Problems Installing Jekyll Locally on a Mac&lt;/h3&gt;
+&lt;h3 id=&quot;some-problems-installing-jekyll-locally-on-a-mac&quot;&gt;Some Problems Installing Jekyll Locally on a Mac&lt;/h3&gt;
 
 &lt;p&gt;After cloning the So Simple Theme, by &lt;a href=&quot;http://mademistakes.com&quot;&gt;Michael Rose&lt;/a&gt;, I tried to install Jekyll locally as described on &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
 

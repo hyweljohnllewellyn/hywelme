@@ -10,7 +10,7 @@ categories: Jekyll Static Site
 
 Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  As I have started some projects requiring relatively simple websites with only a few pages, the reduced security concerns and above all the effectively **free** hosting on [GitHub](http://jgithub.com/) was very appealing.  I considered [Hugo](https://gohugo.io/) , but decided to try [Jekyll](http://jekyllrb.com/) because of it's native integration with [GitHub](http://jgithub.com/) and there are more [Themes](http://jekyllthemes.org/) readily available.
 
-###Problems Installing Jekyll Locally on a Mac
+###Some Problems Installing Jekyll Locally on a Mac
 
 After cloning the So Simple Theme, by [Michael Rose](http://mademistakes.com), I tried to install Jekyll locally as described on [Jekyll](http://jekyllrb.com/)
 {% highlight bash %}

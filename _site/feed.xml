@@ -6,15 +6,15 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Nov 2015 18:31:32 +0000</pubDate>
-    <lastBuildDate>Sun, 15 Nov 2015 18:31:32 +0000</lastBuildDate>
+    <pubDate>Sun, 15 Nov 2015 19:42:39 +0000</pubDate>
+    <lastBuildDate>Sun, 15 Nov 2015 19:42:39 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title> Installing Jekyll Locally on a Mac</title>
         <description>&lt;h3 id=&quot;static-sites-with-jekyll&quot;&gt;Static Sites with Jekyll&lt;/h3&gt;
 
-&lt;p&gt;Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  As I have started some projects requiring relatively simple websites with only a few pages, the reduced security concerns and above all the effectively &lt;strong&gt;free&lt;/strong&gt; hosting on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt; was very appealing.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; , but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of it’s native integration with &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt; and there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;
+&lt;p&gt;Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  Static sites are particularly suited to projects requiring relatively simple websites with only a few pages, or blog style sites where &lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot;&gt;markdown&lt;/a&gt; is key.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;, but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the effectively &lt;strong&gt;free&lt;/strong&gt; hosting and native integration on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt;.  Also, there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;
 
 &lt;h3 id=&quot;some-problems-installing-jekyll-locally-on-a-mac&quot;&gt;Some Problems Installing Jekyll Locally on a Mac&lt;/h3&gt;
 

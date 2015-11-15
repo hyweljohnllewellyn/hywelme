@@ -8,11 +8,10 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} ✎ {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
-<!--Google Adsense -->
-  {% if site.safe == false %}
-  <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
-  {% else %}
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {% if site.safe == false %}
+    <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
+    {% else %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- AD_1 -->
   <ins class="adsbygoogle"
        style="display:block"
@@ -22,7 +21,7 @@ layout: default
   <script>
   (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
-  {% endif %}
+    {% endif %}
 
   <article class="post-content">
     {{ content }}

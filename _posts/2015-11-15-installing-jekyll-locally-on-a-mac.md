@@ -3,7 +3,7 @@ layout: post
 title:  " Installing Jekyll Locally on a Mac"
 date:   2015-11-15 12:56:00
 author: Hywel
-meta: jekyll homebrew Brew gem bundle bash profile ruby static site
+meta: jekyll homebrew brew gem bundle bash profile ruby static site
 categories: Jekyll Static Site
 ---
 ###Static Sites with Jekyll  

@@ -15,7 +15,7 @@ In this post, I will share some of the applications needed for managing static s
 
 OK, so hosting may not be seen as an application, but without the host application serving the web site pages then no one could see them.  
 
-My host application of choice for static sites is [Github Pages](https://pages.github.com).  This provides sites "hosted directly from your GitHub repository".  This is fantastic as I get to benefit from the scalable Github  infrastructure, without spending a penny.  Note that the source code in the repository is public, unless you upgrade to a paid plan, starting from about £4.60 a month [Github Pricing](https://github.com/pricing).
+My host application of choice for static sites is [Github Pages](https://pages.github.com).  This provides sites "hosted directly from your GitHub repository".  This is fantastic as I get to benefit from the scalable Github  infrastructure, without spending a penny.  Note that the source code in the repository is public, unless you upgrade to a paid plan, starting from about £4.60 a month [Github Pricing](https://github.com/pricing).  As web site content is generally public, having a public repository is a minor concern for static site pages.
 
 I think gh-pages are perfect, in particular as my static site projects are relatively small.  Thank you Github!
 

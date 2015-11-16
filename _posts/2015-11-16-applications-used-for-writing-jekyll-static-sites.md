@@ -25,7 +25,7 @@ Not much to say here, except that I have recently switched to using [Firefox](ht
 
 ###[Text Editor](https://en.wikipedia.org/wiki/Text_editor)
 
-On searching the web for a text editor, the most popular results are likely to be [Sublime Text](http://www.sublimetext.com/) or [Notepad++](https://notepad-plus-plus.org/).  I have used both, but am currently using [Atom](https://atom.io/),  it is **free** and it is written by those lovely people at [Github](https://github.com/), so should be well integrated with Jekyll and  other Github software.
+On searching the web for a text editor, the most popular results are likely to be [Sublime Text](http://www.sublimetext.com/) or [Notepad++](https://notepad-plus-plus.org/).  I have used both, but am currently using [Atom](https://atom.io/).  It is **free** and it is written by those lovely people at [Github](https://github.com/), so should be well integrated with Jekyll and  other Github software.
 
 I do like Atom, though it is very slow in comparison with other editors, particularly running on my 5 year old Mac Mini.  If I was not using all of the Github ecosystem, I may try something else, for example [Text Mate](http://macromates.com) or even  [Vim]( http://www.vim.org), the Macintosh version is on Github at [macvim](https://github.com/macvim-dev/macvim).
 

@@ -19,6 +19,9 @@ My host application of choice for static sites is [Github Pages](https://pages.g
 
 I think gh-pages are perfect, in particular as my static site projects are relatively small.  Thank you Github!
 
+###[Web Browser](https://en.wikipedia.org/wiki/Web_browser)
+
+Not much to say here, except that I have recently switched to using [Firefox](https://www.mozilla.org/en-US/firefox/new/) from [Chrome](https://www.google.com/chrome) as Chrome is  very slow on my computer. Google Chrome.app is 393.4Mb, whereas Firefox.app is 185.3Mb - that's over twice the size - why?
 
 ###[Text Editor](https://en.wikipedia.org/wiki/Text_editor)
 

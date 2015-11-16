@@ -29,12 +29,12 @@ On searching the web for a text editor, the most popular results are likely to b
 
 I do like Atom, though it is very slow in comparison with other editors, particularly running on my 5 year old Mac Mini.  If I was not using all of the Github ecosystem, I may try something else, for example [Text Mate](http://macromates.com) or even  [Vim]( http://www.vim.org), the Macintosh version is on Github at [macvim](https://github.com/macvim-dev/macvim).
 
-####[Version Control](https://en.wikipedia.org/wiki/Version_control)
+###[Version Control](https://en.wikipedia.org/wiki/Version_control)
 
 Interestingly, since I have chosen [Github Pages](https://pages.github.com) as my host, by implication I am probably using one of the most well known web software version control applications in the world.
 
 In order to manage the version control and deployment of my site to the host, I'm using the relatively straight forward [Github Desktop](https://desktop.github.com/).  I am still a novice at using Github, so keep my usage to typing a summary, committing and syncing the changes to the GitHub repository.  
 
-####[Command line Interface](https://en.wikipedia.org/wiki/Command-line_interface)
+###[Command line Interface](https://en.wikipedia.org/wiki/Command-line_interface)
 
 [Apple Macintosh Terminal Emulator](https://en.wikipedia.org/wiki/Terminal_%28OS_X%29).  I discuss some of the commands used, primarily "jekyll serve" more at [installing Jekyll locally on a mac]({% post_url 2015-11-15-installing-jekyll-locally-on-a-mac %}).

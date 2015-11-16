@@ -8,7 +8,9 @@ categories: Jekyll Static Site
 ---
 ###Static Sites with Jekyll  
 
-Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  Static sites are particularly suited to projects requiring relatively simple websites with only a few pages, or blog style sites where [markdown](https://help.github.com/articles/markdown-basics/) is key.  I considered [Hugo](https://gohugo.io/), but decided to try [Jekyll](http://jekyllrb.com/) because of the effectively **free** hosting and native integration on [GitHub](http://jgithub.com/).  Also, there are more [Themes](http://jekyllthemes.org/) readily available.
+Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  Static sites are fast to load for clients are particularly suited to projects requiring relatively simple websites with only a few pages, or blog style sites where [markdown](https://help.github.com/articles/markdown-basics/) is key.  I considered [Hugo](https://gohugo.io/), but decided to try [Jekyll](http://jekyllrb.com/) because of the effectively **free** hosting and native integration on [GitHub](http://jgithub.com/).  Also, there are more [Themes](http://jekyllthemes.org/) readily available.
+
+**A note of caution...** Static sites using Jekyll are written locally on you computer and then pushed to the server.   Therefore, Jekyll and all it's pre-requisite software, for example Ruby, needs to be installed on your computer using the command line (terminal).  This is not so user friendly and can result is some teething problems..
 
 ###Some Problems Installing Jekyll Locally on a Mac
 

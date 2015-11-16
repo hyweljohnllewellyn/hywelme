@@ -6,15 +6,17 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Nov 2015 20:27:44 +0000</pubDate>
-    <lastBuildDate>Mon, 16 Nov 2015 20:27:44 +0000</lastBuildDate>
+    <pubDate>Mon, 16 Nov 2015 20:43:27 +0000</pubDate>
+    <lastBuildDate>Mon, 16 Nov 2015 20:43:27 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title> Installing Jekyll Locally on a Mac</title>
         <description>&lt;h3 id=&quot;static-sites-with-jekyll&quot;&gt;Static Sites with Jekyll&lt;/h3&gt;
 
-&lt;p&gt;Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  Static sites are particularly suited to projects requiring relatively simple websites with only a few pages, or blog style sites where &lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot;&gt;markdown&lt;/a&gt; is key.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;, but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the effectively &lt;strong&gt;free&lt;/strong&gt; hosting and native integration on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt;.  Also, there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;
+&lt;p&gt;Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  Static sites are fast to load for clients are particularly suited to projects requiring relatively simple websites with only a few pages, or blog style sites where &lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot;&gt;markdown&lt;/a&gt; is key.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;, but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the effectively &lt;strong&gt;free&lt;/strong&gt; hosting and native integration on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt;.  Also, there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A note of caution…&lt;/strong&gt; Static sites using Jekyll are written locally on you computer and then pushed to the server.   Therefore, Jekyll and all it’s pre-requisite software, for example Ruby, needs to be installed on your computer using the command line (terminal).  This is not so user friendly and can result is some teething problems..&lt;/p&gt;
 
 &lt;h3 id=&quot;some-problems-installing-jekyll-locally-on-a-mac&quot;&gt;Some Problems Installing Jekyll Locally on a Mac&lt;/h3&gt;
 

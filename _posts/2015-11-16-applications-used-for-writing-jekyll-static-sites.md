@@ -11,7 +11,7 @@ categories: Jekyll Static Site
 
 In my post on [installing Jekyll locally on a mac]({% post_url 2015-11-15-installing-jekyll-locally-on-a-mac %}) I gave a brief description on why I chose to use [Jekyll](http://jekyllrb.com/) for writing static web sites.  I Also described some of the software needed by Jekyll.
 
-In this post, I will share some of the applications that are more generic to writing static sites that I'm currently using, firstly hosting.
+In this post, I will share some of the applications needed for managing static sites, firstly hosting.
 
 OK, so hosting may not be seen as an application, but without the host application serving by sites pages then that would be that.
 

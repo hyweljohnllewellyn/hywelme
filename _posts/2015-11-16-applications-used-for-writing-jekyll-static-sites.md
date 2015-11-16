@@ -13,7 +13,7 @@ In my post on [installing Jekyll locally on a mac]({% post_url 2015-11-15-instal
 
 In this post, I will share some of the applications needed for managing static sites, firstly hosting.
 
-OK, so hosting may not be seen as an application, but without the host application serving by sites pages then that would be that.
+OK, so hosting may not be seen as an application, but without the host application serving the web site pages then no one could see them.  
 
 My host application of choice for static sites is [Github Pages](https://pages.github.com).  This provides sites "hosted directly from your GitHub repository".  This is fantastic as I get to benefit from the scalable Github  infrastructure, without spending a penny.  Note that the source code in the repository is public, unless you upgrade to a paid plan, starting from about £4.60 a month [Github Pricing](https://github.com/pricing).
 
@@ -25,9 +25,9 @@ Not much to say here, except that I have recently switched to using [Firefox](ht
 
 ###[Text Editor](https://en.wikipedia.org/wiki/Text_editor)
 
-On searching the web for a text editor, the most popular results are likely to be [Sublime Text](http://www.sublimetext.com/) or [Notepad++](https://notepad-plus-plus.org/).  I have used both, but am currently using [Atom](https://atom.io/).  It is **free** and it is written by those lovely people at [Github](https://github.com/), so should be well integrated with Jekyll and  other Github software.
+On searching the web for a text editor, the most popular results are likely to be [Sublime Text](http://www.sublimetext.com/) or [Notepad++](https://notepad-plus-plus.org/).  I have used both, but am currently using [Atom](https://atom.io/).  It is **free** and it is written by those lovely people at [Github](https://github.com/), so should be well integrated with Jekyll and other Github software.
 
-I do like Atom, though it is very slow in comparison with other editors, particularly running on my 5 year old Mac Mini.  If I was not using all of the Github ecosystem, I may try something else, for example [Text Mate](http://macromates.com) or even  [Vim]( http://www.vim.org), the Macintosh version is on Github at [macvim](https://github.com/macvim-dev/macvim).
+I do like Atom, though it is very slow in comparison with other editors, particularly running on my 2010 Mac Mini.  If I was not using all of the Github ecosystem, I may try something else, for example [Text Mate](http://macromates.com) or even  [Vim]( http://www.vim.org), the Macintosh version is on Github at [macvim](https://github.com/macvim-dev/macvim).
 
 ###[Version Control](https://en.wikipedia.org/wiki/Version_control)
 

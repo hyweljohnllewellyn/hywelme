@@ -74,7 +74,7 @@
   <article class="post-content">
     <h3 id="create-the-site">Create the Site</h3>
 
-<p><a href="/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html">In my previous post,</a> I described by I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.</p>
+<p><a href="/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html">In my previous post,</a> I described why I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.</p>
 
 <p>The site I am moving is <a href="http://operascool.org">operascool.org</a>.</p>
 
@@ -98,7 +98,7 @@
 
 <p>Next, SSH to the apps public directory on the DigitalOcean server.  My app is located in apps/operascoolorg/public folder.</p>
 
-<p>Then download the latest wordpress version using the following:</p>
+<p>Then download the latest Wordpress version using the following:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">wget https://wordpress.org/latest.tar.gz
 tar xzf latest.tar.gz
@@ -122,7 +122,7 @@ rmdir wordpress</code></pre></div>
 
 <h3 id="migrate-wordpress-database">Migrate WordPress Database</h3>
 
-<p>Going back to ServerPilot.io, a database is created for the operascoolorg app. </p>
+<p>Going back to ServerPilot.io, a database is created for the operascoolorg app.</p>
 
 <p><img src="http://www.hywel.me/assets/2015-03-07/6serverpilot_create_database.png" alt="My helpful screenshot" /></p>
 
@@ -136,7 +136,7 @@ rmdir wordpress</code></pre></div>
 
 <p>Now we need to update the database credentials in the WordPress config file.  </p>
 
-<p>SSH back to to the apps public directory on the DigitalOcean server and type hte following:</p>
+<p>SSH back to to the apps public directory on the DigitalOcean server and type the following:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">mv wp-config-sample.php wp-config.php
 nano wp-config.php</code></pre></div>
@@ -178,9 +178,9 @@ ns3.digitalocean.com</code></pre></div>
 
 <p><img src="http://www.hywel.me/assets/2015-03-07/12godaddy_costom_nameserver.png" alt="My helpful screenshot" /></p>
 
-<p>Wait the usual time for the details to propogate across the world.</p>
+<p>Wait the usual time for the details to propagate across the world.</p>
 
-<p>Lastly, i rysync the file from the DigitalOcean server to my local Mac as a backup:</p>
+<p>Lastly, I synchronise the file from the DigitalOcean server to my local Mac as a backup:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public</code></pre></div>
 
@@ -243,7 +243,7 @@ ns3.digitalocean.com</code></pre></div>
       </div>
 
       <div class="footer-col  footer-col-3">
-        <p class="text">A personal blog site for me, with musings about technology and documenting what I learn.
+        <p class="text">A personal blog site, with musings about technology and documenting what I learn.
 </p>
       </div>
     </div>

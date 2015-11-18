@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title > Moving a WordPress site from GoDaddy to DigitalOcean - Part 1 </title>
+  <title > Applications used for Writing Jekyll Static Sites </title>
 
-  <meta name="description" content="It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at GoDaddy.com.  ">
+  <meta name="description" content="Web Hosting Service">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.hywel.me/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html">
+  <link rel="canonical" href="http://www.hywel.me/jekyll/static/site/2015/11/16/applications-used-for-writing-jekyll-static-sites.html">
   <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
 </head>
 
@@ -63,8 +63,8 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> Moving a WordPress site from GoDaddy to DigitalOcean - Part 1</h1>
-    <p class="post-meta">Mar 5, 2015 ✎ Hywel • DigitalOcean WordPress ServerPilot.io</p>
+    <h1 class="post-title"> Applications used for Writing Jekyll Static Sites</h1>
+    <p class="post-meta">Nov 16, 2015 ✎ Hywel • jekyll atom.io atom static site github terminal mac mini firefox chrome gh-pages</p>
   </header>
 
     
@@ -72,31 +72,37 @@
     
 
   <article class="post-content">
-    <p>It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at <a href="http://GoDaddy.com">GoDaddy.com</a>.  </p>
+    <h3 id="web-hosting-servicehttpsenwikipediaorgwikiwebhostingservice"><a href="https://en.wikipedia.org/wiki/Web_hosting_service">Web Hosting Service</a></h3>
 
-<p>However, now they want to charge me an arm and a leg to renew - GoDaddy provides a great price for new customers, but charge <strong>alot</strong> when you are locked in.</p>
+<p>In my post on <a href="/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html">installing Jekyll locally on a mac</a> I gave a brief description on why I chose to use <a href="http://jekyllrb.com/">Jekyll</a> for writing static web sites and the software needed by Jekyll.</p>
 
-<p>Also, the response time for all the websites hosted with them has not been good enough - especially now that Solid State Disks (SSDs) are becoming more commonplace with hosting companies.</p>
+<p>In this post, I will share some of the applications I use for managing static sites, firstly hosting.</p>
 
-<p>I have decided try out the <em>do it yourself</em> cloud hosting option provided by <a href="https://www.digitalocean.com/?refcode=92e12787bf7a">DigitalOcean.com</a> partly to learn some new skills and also they have had some great reviews.</p>
+<p>OK, so hosting may not be seen as an application, but without the host application serving web site pages then no one would see them.  </p>
 
-<p>After a quick search online, I found a promotional code to get 2 months free hosting with DigitalOcean.com, so at least I could try before I buy. </p>
+<p>My host application of choice for static sites is <a href="https://pages.github.com">Github Pages</a>.  This provides sites “hosted directly from your GitHub repository”.  This is fantastic as I get to benefit from the scalable Github infrastructure, without spending a penny.  Note that the source code in the repository is public, unless you upgrade to a paid plan, starting from about £4.60 a month <a href="https://github.com/pricing">Github Pricing</a>.  As web site content is generally public, having a public repository is a minor concern for static site pages.</p>
 
-<p>As a member, DigitalOcean offer a referal scheme - please click my link if you’d like to try it for free:</p>
+<p>I think gh-pages are perfect, in particular as my static site projects are relatively small.  Thank you Github!</p>
 
-<p><a href="https://www.digitalocean.com/?refcode=92e12787bf7a">$10 credit at Digital Ocean</a></p>
+<h3 id="web-browserhttpsenwikipediaorgwikiwebbrowser"><a href="https://en.wikipedia.org/wiki/Web_browser">Web Browser</a></h3>
 
-<p>DigitalOcean’s documentation and user forums are very active and I found it quite straight forward as a tech-savvy person to get a basic Ubuntu operating system insalled on a <em>droplet</em> . </p>
+<p>Not much to say here, except that I have recently switched to using <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> from <a href="https://www.google.com/chrome">Chrome</a> as Chrome is very slow on my computer. Google Chrome.app is 393.4Mb, whereas Firefox.app is 185.3Mb - that’s over twice the size - why?</p>
 
-<p>DigitalOcean is managed through a command line terminal, so if you are slightly allergic to the thought of typing commands, it’s propably not for you.</p>
+<h3 id="text-editorhttpsenwikipediaorgwikitexteditor"><a href="https://en.wikipedia.org/wiki/Text_editor">Text Editor</a></h3>
 
-<p><a href="https://www.serverpilot.io/?refcode=c2131f64db72">Serverpilot.io</a> is a simple  management system for DigitalOcean servers. Even their free plan takes care automatically of basic server security and PHP application management.  </p>
+<p>On searching the web for a text editor, the most popular results are likely to be <a href="http://www.sublimetext.com/">Sublime Text</a> or <a href="https://notepad-plus-plus.org/">Notepad++</a>.  I have used both, but am currently using <a href="https://atom.io/">Atom</a>.  It is <strong>free</strong> and is written by those lovely people at <a href="https://github.com/">Github</a>, so should be well integrated with Jekyll and other Github software.</p>
 
-<p><a href="https://www.serverpilot.io/?refcode=c2131f64db72">$10 credit at ServerPilot.io</a> </p>
+<p>I do like Atom, though it is relatively slow to startup in comparison with other editors, particularly running on my 2010 Mac Mini.  If I was not using all of the Github ecosystem, I may try something else, for example <a href="http://macromates.com">Text Mate</a> or even  <a href="http://www.vim.org">Vim</a>, the Macintosh version is on Github at <a href="https://github.com/macvim-dev/macvim">macvim</a>.</p>
 
-<p>I was also tempted with the <a href="https://www.cloudflare.com">CloudFlare.com</a> service as it offers free SSL/ SDPY and static file cache - which is supposed to translate to faster and more Google friendly websites. Worth a try right?</p>
+<h3 id="version-controlhttpsenwikipediaorgwikiversioncontrol"><a href="https://en.wikipedia.org/wiki/Version_control">Version Control</a></h3>
 
-<p><a href="/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html">In my next post,</a> I’ll describe the steps to move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!</p>
+<p>Interestingly, since I have chosen <a href="https://pages.github.com">Github Pages</a> as my host, by implication I am probably using one of the most well known web software version control applications in the world.</p>
+
+<p>In order to manage the version control and deployment of my site to the host, I’m using the relatively straight forward <a href="https://desktop.github.com/">Github Desktop</a>.  I am still a novice at using Github, so keep my usage to typing a summary, committing and syncing the changes to the GitHub repository.  </p>
+
+<h3 id="command-line-interfacehttpsenwikipediaorgwikicommand-lineinterface"><a href="https://en.wikipedia.org/wiki/Command-line_interface">Command line Interface</a></h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Terminal_%28OS_X%29">Apple Macintosh Terminal Emulator</a>.  I discuss some of the commands used, primarily “jekyll serve” more at <a href="/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html">installing Jekyll locally on a mac</a>.</p>
 
   </article>
 

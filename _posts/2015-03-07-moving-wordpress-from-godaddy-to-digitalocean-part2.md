@@ -8,7 +8,7 @@ categories: DigitalOcean WordPress
 ---
 ###Create the Site  
 
-[In my previous post,]({% post_url 2015-03-05-moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1 %}) I described by I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.
+[In my previous post,]({% post_url 2015-03-05-moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1 %}) I described why I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.
 
 The site I am moving is [operascool.org](http://operascool.org).
 
@@ -34,7 +34,7 @@ and it is instantly available on the web:
 
 Next, SSH to the apps public directory on the DigitalOcean server.  My app is located in apps/operascoolorg/public folder.
 
-Then download the latest wordpress version using the following:
+Then download the latest Wordpress version using the following:
 
 {% highlight bash %}
 wget https://wordpress.org/latest.tar.gz
@@ -60,10 +60,10 @@ Again using Filezilla, I upload these folders to the wp-content folder on the Di
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/5ftp_wpcontent_to_newsite.png
 )
 
-###Migrate WordPress Database 
+###Migrate WordPress Database
 
-Going back to ServerPilot.io, a database is created for the operascoolorg app. 
- 
+Going back to ServerPilot.io, a database is created for the operascoolorg app.
+
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/6serverpilot_create_database.png
 )
 
@@ -81,7 +81,7 @@ update wp_posts set guid = replace(guid, 'http://operascool.org/operascoolwp/','
 
 Now we need to update the database credentials in the WordPress config file.  
 
-SSH back to to the apps public directory on the DigitalOcean server and type hte following:
+SSH back to to the apps public directory on the DigitalOcean server and type the following:
 
 {% highlight bash %}
 mv wp-config-sample.php wp-config.php
@@ -98,7 +98,7 @@ define('DB_NAME', 'database_name_here');
 define('DB_USER', 'username_here');
 define('DB_PASSWORD', 'password_here');
 define('DB_HOST', 'localhost');
-{% endhighlight %} 
+{% endhighlight %}
 
 Note that the localhost for my server is 127.0.0.1.  Save the file.
 
@@ -129,15 +129,15 @@ Select Custom and enter the DigitalOcean domain servers:
 {% highlight bash %}
 ns1.digitalocean.com
 ns2.digitalocean.com
-ns3.digitalocean.com 
+ns3.digitalocean.com
 {% endhighlight %}
 
 
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/12godaddy_costom_nameserver.png)
 
-Wait the usual time for the details to propogate across the world.
+Wait the usual time for the details to propagate across the world.
 
-Lastly, i rysync the file from the DigitalOcean server to my local Mac as a backup:
+Lastly, I synchronise the file from the DigitalOcean server to my local Mac as a backup:
 
 {% highlight bash %}
 rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public{% endhighlight %}

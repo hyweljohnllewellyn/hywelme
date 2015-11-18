@@ -2,13 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Have You Wandered Every Land</title>
-    <description>A personal blog site for me, with musings about technology and documenting what I learn.
+    <description>A personal blog site, with musings about technology and documenting what I learn.
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Nov 2015 20:43:27 +0000</pubDate>
-    <lastBuildDate>Mon, 16 Nov 2015 20:43:27 +0000</lastBuildDate>
+    <pubDate>Wed, 18 Nov 2015 19:33:00 +0000</pubDate>
+    <lastBuildDate>Wed, 18 Nov 2015 19:33:00 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title> Applications used for Writing Jekyll Static Sites</title>
+        <description>&lt;h3 id=&quot;web-hosting-servicehttpsenwikipediaorgwikiwebhostingservice&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_hosting_service&quot;&gt;Web Hosting Service&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;In my post on &lt;a href=&quot;/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;installing Jekyll locally on a mac&lt;/a&gt; I gave a brief description on why I chose to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; for writing static web sites and the software needed by Jekyll.&lt;/p&gt;
+
+&lt;p&gt;In this post, I will share some of the applications I use for managing static sites, firstly hosting.&lt;/p&gt;
+
+&lt;p&gt;OK, so hosting may not be seen as an application, but without the host application serving web site pages then no one would see them.  &lt;/p&gt;
+
+&lt;p&gt;My host application of choice for static sites is &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt;.  This provides sites “hosted directly from your GitHub repository”.  This is fantastic as I get to benefit from the scalable Github infrastructure, without spending a penny.  Note that the source code in the repository is public, unless you upgrade to a paid plan, starting from about £4.60 a month &lt;a href=&quot;https://github.com/pricing&quot;&gt;Github Pricing&lt;/a&gt;.  As web site content is generally public, having a public repository is a minor concern for static site pages.&lt;/p&gt;
+
+&lt;p&gt;I think gh-pages are perfect, in particular as my static site projects are relatively small.  Thank you Github!&lt;/p&gt;
+
+&lt;h3 id=&quot;web-browserhttpsenwikipediaorgwikiwebbrowser&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_browser&quot;&gt;Web Browser&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Not much to say here, except that I have recently switched to using &lt;a href=&quot;https://www.mozilla.org/en-US/firefox/new/&quot;&gt;Firefox&lt;/a&gt; from &lt;a href=&quot;https://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; as Chrome is very slow on my computer. Google Chrome.app is 393.4Mb, whereas Firefox.app is 185.3Mb - that’s over twice the size - why?&lt;/p&gt;
+
+&lt;h3 id=&quot;text-editorhttpsenwikipediaorgwikitexteditor&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Text_editor&quot;&gt;Text Editor&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;On searching the web for a text editor, the most popular results are likely to be &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; or &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;.  I have used both, but am currently using &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;.  It is &lt;strong&gt;free&lt;/strong&gt; and is written by those lovely people at &lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;, so should be well integrated with Jekyll and other Github software.&lt;/p&gt;
+
+&lt;p&gt;I do like Atom, though it is relatively slow to startup in comparison with other editors, particularly running on my 2010 Mac Mini.  If I was not using all of the Github ecosystem, I may try something else, for example &lt;a href=&quot;http://macromates.com&quot;&gt;Text Mate&lt;/a&gt; or even  &lt;a href=&quot;http://www.vim.org&quot;&gt;Vim&lt;/a&gt;, the Macintosh version is on Github at &lt;a href=&quot;https://github.com/macvim-dev/macvim&quot;&gt;macvim&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;version-controlhttpsenwikipediaorgwikiversioncontrol&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;Version Control&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Interestingly, since I have chosen &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt; as my host, by implication I am probably using one of the most well known web software version control applications in the world.&lt;/p&gt;
+
+&lt;p&gt;In order to manage the version control and deployment of my site to the host, I’m using the relatively straight forward &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;.  I am still a novice at using Github, so keep my usage to typing a summary, committing and syncing the changes to the GitHub repository.  &lt;/p&gt;
+
+&lt;h3 id=&quot;command-line-interfacehttpsenwikipediaorgwikicommand-lineinterface&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command-line_interface&quot;&gt;Command line Interface&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Terminal_%28OS_X%29&quot;&gt;Apple Macintosh Terminal Emulator&lt;/a&gt;.  I discuss some of the commands used, primarily “jekyll serve” more at &lt;a href=&quot;/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;installing Jekyll locally on a mac&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Nov 2015 21:50:00 +0000</pubDate>
+        <link>http://www.hywel.me/jekyll/static/site/2015/11/16/applications-used-for-writing-jekyll-static-sites.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/16/applications-used-for-writing-jekyll-static-sites.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>static</category>
+        
+        <category>site</category>
+        
+      </item>
     
       <item>
         <title> Installing Jekyll Locally on a Mac</title>
@@ -81,7 +128,7 @@
         <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 2</title>
         <description>&lt;h3 id=&quot;create-the-site&quot;&gt;Create the Site&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html&quot;&gt;In my previous post,&lt;/a&gt; I described by I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I wanted to move my site from GoDaddy to DigitalOcean.  In this post I will describe how.&lt;/p&gt;
 
 &lt;p&gt;The site I am moving is &lt;a href=&quot;http://operascool.org&quot;&gt;operascool.org&lt;/a&gt;.&lt;/p&gt;
 
@@ -105,7 +152,7 @@
 
 &lt;p&gt;Next, SSH to the apps public directory on the DigitalOcean server.  My app is located in apps/operascoolorg/public folder.&lt;/p&gt;
 
-&lt;p&gt;Then download the latest wordpress version using the following:&lt;/p&gt;
+&lt;p&gt;Then download the latest Wordpress version using the following:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget https://wordpress.org/latest.tar.gz
 tar xzf latest.tar.gz
@@ -129,7 +176,7 @@ rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;migrate-wordpress-database&quot;&gt;Migrate WordPress Database&lt;/h3&gt;
 
-&lt;p&gt;Going back to ServerPilot.io, a database is created for the operascoolorg app. &lt;/p&gt;
+&lt;p&gt;Going back to ServerPilot.io, a database is created for the operascoolorg app.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/6serverpilot_create_database.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
@@ -143,7 +190,7 @@ rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now we need to update the database credentials in the WordPress config file.  &lt;/p&gt;
 
-&lt;p&gt;SSH back to to the apps public directory on the DigitalOcean server and type hte following:&lt;/p&gt;
+&lt;p&gt;SSH back to to the apps public directory on the DigitalOcean server and type the following:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mv wp-config-sample.php wp-config.php
 nano wp-config.php&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -185,9 +232,9 @@ ns3.digitalocean.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/12godaddy_costom_nameserver.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Wait the usual time for the details to propogate across the world.&lt;/p&gt;
+&lt;p&gt;Wait the usual time for the details to propagate across the world.&lt;/p&gt;
 
-&lt;p&gt;Lastly, i rysync the file from the DigitalOcean server to my local Mac as a backup:&lt;/p&gt;
+&lt;p&gt;Lastly, I synchronise the file from the DigitalOcean server to my local Mac as a backup:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 

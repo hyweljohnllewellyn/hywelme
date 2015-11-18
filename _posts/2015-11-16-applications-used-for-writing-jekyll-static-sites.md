@@ -5,13 +5,14 @@ date:   2015-11-16 21:50:00
 author: Hywel
 meta: jekyll atom.io atom static site github terminal mac mini firefox chrome gh-pages
 categories: Jekyll Static Site
+excerpt: I will share some of the applications used for managing Jekyll static sites, including the web hosting service, web browser, text editor and version control.  Most of this is managed using Github.
 ---
 
 ###[Web Hosting Service](https://en.wikipedia.org/wiki/Web_hosting_service)
 
 In my post on [installing Jekyll locally on a mac]({% post_url 2015-11-15-installing-jekyll-locally-on-a-mac %}) I gave a brief description on why I chose to use [Jekyll](http://jekyllrb.com/) for writing static web sites and the software needed by Jekyll.
 
-In this post, I will share some of the applications I use for managing static sites, firstly hosting.
+In this post, I will share some of the applications used for managing Jekyll static sites, including the web hosting service, web browser, text editor and version control.  Most of this is managed using Github.
 
 OK, so hosting may not be seen as an application, but without the host application serving web site pages then no one would see them.  
 

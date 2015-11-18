@@ -5,12 +5,13 @@ date:   2015-11-15 12:56:00
 author: Hywel
 meta: jekyll homebrew brew gem bundle bash profile ruby static site github
 categories: Jekyll Static Site
+excerpt: Static sites are fast to load and are particularly suited to blog style pages written with markdown.  A note of caution, sites using Jekyll are written locally on your computer and then pushed to the host.   Therefore, Jekyll and all it's pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly and can result is some teething problems
 ---
 ###Static Sites with Jekyll  
 
-Static sites provide many benefits compared with other sites that require a database, for example Wordpress or Drupal.  Static sites are fast to load for clients are particularly suited to projects requiring relatively simple websites with only a few pages, or blog style sites where [markdown](https://help.github.com/articles/markdown-basics/) is key.  I considered [Hugo](https://gohugo.io/), but decided to try [Jekyll](http://jekyllrb.com/) because of the effectively **free** hosting and native integration on [GitHub](http://jgithub.com/).  Also, there are more [Themes](http://jekyllthemes.org/) readily available.
+Static sites are fast to load and are particularly suited to blog style pages written with [markdown](https://help.github.com/articles/markdown-basics/).  They also don't require a database, so provide many benefits compared with Wordpress or Drupal.  I considered [Hugo](https://gohugo.io/), but decided to try [Jekyll](http://jekyllrb.com/) because of the effectively **free** hosting and native integration on [GitHub](http://jgithub.com/).  Also, there are more [Themes](http://jekyllthemes.org/) readily available.
 
-**A note of caution...** Static sites using Jekyll are written locally on you computer and then pushed to the server.   Therefore, Jekyll and all it's pre-requisite software, for example Ruby, needs to be installed on your computer using the command line (terminal).  This is not so user friendly and can result is some teething problems..
+**A note of caution...**,sites using Jekyll are written locally on your computer and then pushed to the host.   Therefore, Jekyll and all it's pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly and can result is some teething problems..
 
 ###Some Problems Installing Jekyll Locally on a Mac
 

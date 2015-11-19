@@ -6,9 +6,49 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Nov 2015 20:27:34 +0000</pubDate>
-    <lastBuildDate>Wed, 18 Nov 2015 20:27:34 +0000</lastBuildDate>
+    <pubDate>Thu, 19 Nov 2015 21:38:34 +0000</pubDate>
+    <lastBuildDate>Thu, 19 Nov 2015 21:38:34 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Microsoft Office 365 Catch-all using Mail Rules</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://products.office.com/en-gb/business/compare-office-365-for-business-plans&quot;&gt;Microsoft Office 365 Business Essentials&lt;/a&gt; costs from £3.10 per ‘Exchange’ user per month&lt;/p&gt;
+
+&lt;p&gt;An ‘Exchange’ user is a single email account for a specified domain, with 50 Gb of storage and highly configurable mail server rules.  &lt;/p&gt;
+
+&lt;p&gt;Some mail providers provide multiple email accounts for a given domain, so Office 365 can get quite expensive with multiple users, just for email.  &lt;/p&gt;
+
+&lt;p&gt;Though it has to be said - the email service we have experienced for the last 4 months from Office 365 has been great for spam protection and reliability.  You get what you pay for.&lt;/p&gt;
+
+&lt;p&gt;Office 365 &lt;strong&gt;does not&lt;/strong&gt; support &lt;a href=&quot;https://en.wikipedia.org/wiki/Catch-all&quot;&gt;catch-all&lt;/a&gt;, that is email addresses not specifically defined in the mail server.&lt;/p&gt;
+
+&lt;p&gt;Exchange mail flow rules can be used to re-direct email addresses to a specified email.   Note that this is distinct to a shared mailbox, which appears as a separate mail box from the user.  Setting up shared mailboxes on Office 365 will be described in an upcoming post.&lt;/p&gt;
+
+&lt;p&gt;For this example, the ‘Exchange’ user will be hywel@customdomain.co.uk.  Alternative ‘catch-all’ email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;From the Office 365 admin center, select ‘CONTACTS’, click the plus icon  to add howell@customdomain.co.uk as a contact.  Repeat for contact@customdomain.co.uk.&lt;/li&gt;
+  &lt;li&gt;Next, select ‘ADMIN’ -&amp;gt; ‘Exchange’ to go the Exchange admin center.&lt;/li&gt;
+  &lt;li&gt;Select mail flow , then rules and click the plus icon and select ‘Create a new rule..’&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;Apply rule if…&lt;/em&gt; option select ‘The recipient is…’&lt;/li&gt;
+  &lt;li&gt;Select the email addresses howell@customdomain.co.uk and contact@customdomain.co.uk to be re-directed&lt;/li&gt;
+  &lt;li&gt;In the &lt;em&gt;Do the following…&lt;/em&gt; option select ‘Redirect the message to…’ and select the active user hywel@customdomain.co.uk.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s it, this method provides functionality similar to catch-all,  whilst maintaining the excellent service from Office 365 email.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Nov 2015 21:23:00 +0000</pubDate>
+        <link>http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-exchange-email-rules.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-exchange-email-rules.html</guid>
+        
+        
+        <category>small</category>
+        
+        <category>business</category>
+        
+        <category>email</category>
+        
+      </item>
     
       <item>
         <title> Applications used for Writing Jekyll Static Sites</title>

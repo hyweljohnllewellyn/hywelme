@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Microsoft Office 365 Catch-all using Mail Rules"
+title:  "Microsoft Office 365 Catch-all using Additional Alias Email Addresses"
 date:   2015-11-19 21:23:00
 author: Hywel
-meta: Microsoft Office 365 small business email setup catch-all mail rules exchange admin
+meta: Microsoft Office 365 small business email setup catch-all alias  admin alternative
 categories: small business email
-excerpt: Office 365 does not support catch all email, that is addresses not specifically defined in the mail server.  Exchange mail flow rules can be used to re-direct email addresses to a specified email.
+excerpt: Office 365 does not support catch all email, that is addresses not specifically defined in the mail server.  Additional alias addresses can be created to re-direct email to a specified user.
 ---
 [Microsoft Office 365 Business Essentials](https://products.office.com/en-gb/business/compare-office-365-for-business-plans) costs from £3.10 per 'Exchange' user per month
 
@@ -17,15 +17,13 @@ Though it has to be said - the email service we have experienced for the last 4 
 
 Office 365 **does not** support [catch-all](https://en.wikipedia.org/wiki/Catch-all), that is email addresses not specifically defined in the mail server.
 
-Exchange mail flow rules can be used to re-direct email addresses to a specified email.   Note that this is distinct to a shared mailbox, which appears as a separate mail box from the user.  Setting up shared mailboxes on Office 365 will be described in an upcoming post.
+Additional addresses can be created to re-direct email to a specified user.   Note that this is distinct to a shared mailbox, which appears as a separate mail box from the user.  Setting up shared mailboxes on Office 365 will be described in an upcoming post.
 
-For this example, the 'Exchange' user will be hywel@customdomain.co.uk.  Alternative 'catch-all' email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.
+For this example, the 'Exchange' user will be hywel@customdomain.co.uk.  Additional  'catch-all' email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.
 
-1. From the Office 365 admin center, select 'CONTACTS', click the plus icon  to add howell@customdomain.co.uk as a contact.  Repeat for contact@customdomain.co.uk.
-2. Next, select 'ADMIN' -> 'Exchange' to go the Exchange admin center.
-3. Select mail flow , then rules and click the plus icon and select 'Create a new rule..'
-4. In the *Apply rule if...* option select 'The recipient is...'
-5. Select the email addresses howell@customdomain.co.uk and contact@customdomain.co.uk to be re-directed
-6.  In the *Do the following...* option select 'Redirect the message to...' and select the active user hywel@customdomain.co.uk.
+1. From the Office 365 admin center, select the user and click 'EDIT'
+2. Select 'Email addresses' and click *Add new* under  **Other email addresses**
+3. Enter 'howell' in the space before the @ sign and click 'Add'.  
+4. Repeat steps 2 and 3 to add 'contact' as an alias
 
 That's it, this method provides functionality similar to catch-all,  whilst maintaining the excellent service from Office 365 email.

@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title >Microsoft Office 365 Catch-all using Mail Rules </title>
+  <title >Microsoft Office 365 Catch-all using Additional Alias Email Addresses </title>
 
-  <meta name="description" content="Office 365 does not support catch all email, that is addresses not specifically defined in the mail server.  Exchange mail flow rules can be used to re-direc...">
+  <meta name="description" content="Office 365 does by default not support catch all email, that is addresses not specifically defined in the mail server.  Additional alias addresses can be cre...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-exchange-email-rules.html">
+  <link rel="canonical" href="http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html">
   <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
 </head>
 
@@ -62,16 +62,15 @@
       <div class="wrapper">
         <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Microsoft Office 365 Catch-all using Additional Alias Email Addresses</h1>
+    <p class="post-meta">Nov 19, 2015 ✎ Hywel • Microsoft Office 365 small business email setup catch-all alias  admin alternative</p>
+  </header>
+
   
   <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
   
-
-  <br>
-
-  <header class="post-header">
-    <h1 class="post-title">Microsoft Office 365 Catch-all using Mail Rules</h1>
-    <p class="post-meta">Nov 19, 2015 ✎ Hywel • Microsoft Office 365 small business email setup catch-all mail rules exchange admin</p>
-  </header>
+  
 
   <article class="post-content">
     <p><a href="https://products.office.com/en-gb/business/compare-office-365-for-business-plans">Microsoft Office 365 Business Essentials</a> costs from £3.10 per ‘Exchange’ user per month</p>
@@ -82,22 +81,24 @@
 
 <p>Though it has to be said - the email service we have experienced for the last 4 months from Office 365 has been great for spam protection and reliability.  You get what you pay for.</p>
 
-<p>Office 365 <strong>does not</strong> support <a href="https://en.wikipedia.org/wiki/Catch-all">catch-all</a>, that is email addresses not specifically defined in the mail server.</p>
+<p>Office 365 by default does not support <a href="https://en.wikipedia.org/wiki/Catch-all">catch-all</a>, that is email addresses not specifically defined in the mail server.</p>
 
-<p>Exchange mail flow rules can be used to re-direct email addresses to a specified email.   Note that this is distinct to a shared mailbox, which appears as a separate mail box from the user.  Setting up shared mailboxes on Office 365 will be described in an upcoming post.</p>
+<p>Additional alias addresses can be created to re-direct email to a specified user as a simple and safe substitute to catch-all.  </p>
 
-<p>For this example, the ‘Exchange’ user will be hywel@customdomain.co.uk.  Alternative ‘catch-all’ email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.</p>
+<p>Note that an additional alias address is distinct to a shared mailbox, which appears as a separate mail box from the user.  Setting up shared mailboxes on Office 365 will be described in an upcoming post.</p>
+
+<p>For this example, the ‘Exchange’ user will be hywel@customdomain.co.uk.  Additional  ‘catch-all’ email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.</p>
 
 <ol>
-  <li>From the Office 365 admin center, select ‘CONTACTS’, click the plus icon  to add howell@customdomain.co.uk as a contact.  Repeat for contact@customdomain.co.uk.</li>
-  <li>Next, select ‘ADMIN’ -&gt; ‘Exchange’ to go the Exchange admin center.</li>
-  <li>Select mail flow , then rules and click the plus icon and select ‘Create a new rule..’</li>
-  <li>In the <em>Apply rule if…</em> option select ‘The recipient is…’</li>
-  <li>Select the email addresses howell@customdomain.co.uk and contact@customdomain.co.uk to be re-directed</li>
-  <li>In the <em>Do the following…</em> option select ‘Redirect the message to…’ and select the active user hywel@customdomain.co.uk.</li>
+  <li>From the Office 365 admin center, select the user and click ‘EDIT’</li>
+  <li>Select ‘Email addresses’ and click <em>Add new</em> under  <strong>Other email addresses</strong></li>
+  <li>Enter ‘howell’ in the space before the @ sign and click ‘Add’.  </li>
+  <li>Repeat steps 2 and 3 to add ‘contact’ as an alias</li>
 </ol>
 
 <p>That’s it, this method provides functionality similar to catch-all,  whilst maintaining the excellent service from Office 365 email.</p>
+
+<p>If you really do want a catch-all in Office 365 Business Essentials, then there is a good post by <a href="http://www.yourithelp.co.uk/office-365-create-catchall-wildcard-address-office-365/">yourithelp.co.uk</a>.</p>
 
   </article>
 

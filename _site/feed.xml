@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Nov 2015 19:15:23 +0000</pubDate>
-    <lastBuildDate>Fri, 20 Nov 2015 19:15:23 +0000</lastBuildDate>
+    <pubDate>Fri, 20 Nov 2015 20:13:46 +0000</pubDate>
+    <lastBuildDate>Fri, 20 Nov 2015 20:13:46 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -29,10 +29,21 @@
 &lt;p&gt;For this example, the ‘Exchange’ user will be hywel@customdomain.co.uk.  Additional  ‘catch-all’ email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;From the Office 365 admin center, select the user and click ‘EDIT’&lt;/li&gt;
-  &lt;li&gt;Select ‘Email addresses’ and click &lt;em&gt;Add new&lt;/em&gt; under  &lt;strong&gt;Other email addresses&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Enter ‘howell’ in the space before the @ sign and click ‘Add’.  &lt;/li&gt;
-  &lt;li&gt;Repeat steps 2 and 3 to add ‘contact’ as an alias&lt;/li&gt;
+  &lt;li&gt;Login to Office 365
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step1_office365_login.jpg&quot; alt=&quot;step1_office365_login&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Click the little box icons at the top left of the screen, then select the Admin icon
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step2_office365_select_admin.jpg&quot; alt=&quot;step2_office365_select_admin&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Under ‘USERS’ on the left hand pane, select ‘Active Users’
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step3_office365_active_users.jpg&quot; alt=&quot;step3_office365_active_users&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Select the user and click ‘EDIT’, on the right hand side
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step4_office365_edit_active_user.jpg&quot; alt=&quot;step4_office365_edit_active_user&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Select ‘Email addresses’
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step5_office365_user_email_addresses.jpg&quot; alt=&quot;step5_office365_user_email_addresses&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Add new&lt;/strong&gt; under &lt;strong&gt;Other email addresses&lt;/strong&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step6_office365_add_new_email_address.jpg&quot; alt=&quot;step6_office365_add_new_email_address&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Enter ‘howell’ in the space before the @ sign and click ‘Add’.&lt;br /&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step7_office365_add_additional_address.jpg&quot; alt=&quot;step7_office365_add_additional_address&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Repeat steps 6 and 7 to add ‘contact’ as an alias&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;That’s it, this method provides functionality similar to catch-all,  whilst maintaining the excellent service from Office 365 email.&lt;/p&gt;

@@ -6,9 +6,105 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Nov 2015 20:13:46 +0000</pubDate>
-    <lastBuildDate>Fri, 20 Nov 2015 20:13:46 +0000</lastBuildDate>
+    <pubDate>Sat, 21 Nov 2015 13:46:10 +0000</pubDate>
+    <lastBuildDate>Sat, 21 Nov 2015 13:46:10 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox</title>
+        <description>&lt;h3 id=&quot;microsoft-office-365-for-email&quot;&gt;Microsoft Office 365 for Email&lt;/h3&gt;
+
+&lt;p&gt;Email is an essential part of managing a small business.  In our experience, we found that &lt;a href=&quot;https://www.zoho.com/mail/&quot;&gt;Zoho Mail&lt;/a&gt; was allowing too much spam content through to the inbox, hiding essential emails from clients.  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://products.office.com/en-gb/business/compare-office-365-for-business-plans&quot;&gt;Microsoft Office 365&lt;/a&gt; is a full productivity suite.   The business essentials subscription of £3.10 per user per month provides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1 Microsoft Exchange user email account - 50 Gb&lt;/li&gt;
+  &lt;li&gt;1 Tb of cloud storage&lt;/li&gt;
+  &lt;li&gt;Online (cloud) versions of Word, Excel and Powerpoint&lt;/li&gt;
+  &lt;li&gt;Unlimited Online meetings through Skype&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are several guides to using Office 365 and comparison with other productivity solutions, notably  &lt;a href=&quot;https://www.zoho.com/mail/&quot;&gt;Zoho&lt;/a&gt; and &lt;a href=&quot;https://apps.google.com/intx/en_uk/&quot;&gt;Google Apps&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The key reason we chose Office 365 over Google Apps was that we already had a Google Email for the business, but Google would not allow this account to be &lt;em&gt;converted&lt;/em&gt; to a Google Apps account.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-up-a-mac-mail-client-for-the-shared-mailbox&quot;&gt;Setting up a Mac Mail Client for the Shared Mailbox&lt;/h3&gt;
+
+&lt;p&gt;In this example  hywel@customdomain.co.uk is the active user with an assigned Office 365 license.  A shared mail box of info@customdomain.co.uk has been setup through &lt;a href=&quot;https://support.office.com/en-in/article/Create-shared-mailboxes-in-Office-365-for-Small-Business-ecacf5b0-b5c8-449f-a89a-b7e87dcb55d4?ui=en-US&amp;amp;rs=en-IN&amp;amp;ad=IN&quot;&gt;Office 365 Admin&lt;/a&gt;.  Here are the steps to set up Mac Mail client to receive and send mail using the new shared mailbox.&lt;/p&gt;
+
+&lt;h4 id=&quot;receiving-mail&quot;&gt;Receiving Mail&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to Mac Mail -&amp;gt; Preferences
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 1 go to mail preferences.jpg&quot; alt=&quot;step 1 go to mail preferences&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add new account by selecting the plus icon
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 2 add new account.jpg&quot; alt=&quot;step 2 add new account&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Choose the &lt;em&gt;Other Mail Account&lt;/em&gt; radio button
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 3 choose other mail account.jpg&quot; alt=&quot;step 3 choose other mail account&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enter the &lt;em&gt;shared&lt;/em&gt; mailbox email address, info@customdomain.co.uk and password of hywel@customdomain.co.uk (the user with an assigned Office 365 license)
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 4 fill in email of shared mailbox.jpg&quot; alt=&quot;step 4 fill in email of shared mailbox&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Don’t worry if you see the error &lt;em&gt;Unable to verify account name of password&lt;/em&gt;. Enter the following
+Email Address: &lt;strong&gt;info@customdomain.co.uk&lt;/strong&gt;  &lt;em&gt;(the shared mailbox email address)&lt;/em&gt;
+User Name: &lt;strong&gt;hywel@customdomain.co.uk/info&lt;/strong&gt;  &lt;em&gt;(the user email address with the shared mailbox name after a trailing slash)&lt;/em&gt;
+Account Type: &lt;strong&gt;IMAP&lt;/strong&gt;  &lt;em&gt;(POP is available, but I prefer IMAP)&lt;/em&gt;
+Incoming Mail Server: &lt;strong&gt;outlook.office365.com&lt;/strong&gt;
+Outgoing Mail Server: &lt;strong&gt;smtp.office365.com&lt;/strong&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 5 set username and mail servers.jpg&quot; alt=&quot;step 5 set username and mail servers&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click ‘Sign In’ button and then select ‘Mail’ as the app to use
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 6a sign in.jpg&quot; alt=&quot;step 6a sign in&quot; /&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 6b select mail as the app to use.jpg&quot; alt=&quot;step 6b select mail as the app to use&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Your new &lt;em&gt;Shared Inbox&lt;/em&gt; is ready and should be receiving email
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 7 Receiving Email.jpg&quot; alt=&quot;step 7 Receiving Email&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sending-mail&quot;&gt;Sending Mail&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to Mac Mail -&amp;gt; Preferences and under &lt;em&gt;Outgoing Mail Server (SMTP)&lt;/em&gt; select &lt;strong&gt;Edit SMTP Server List…&lt;/strong&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 8 edit SMTP server list.jpg&quot; alt=&quot;step 8 edit SMTP server list&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select &lt;em&gt;Advanvced&lt;/em&gt; button and under &lt;em&gt;Authentication&lt;/em&gt; select &lt;strong&gt;Password&lt;/strong&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 9 click advanced authentication password.jpg&quot; alt=&quot;step 9 click advanced authentication password&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set &lt;em&gt;Port&lt;/em&gt; to &lt;strong&gt;25&lt;/strong&gt; and enter:
+User Name:  &lt;strong&gt;hywel@customdomain.co.uk&lt;/strong&gt; &lt;em&gt;(the user email address)&lt;/em&gt;
+Password:  the user’s password
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 10 set port to 25 username and password of primary user.jpg&quot; alt=&quot;step 10 set port to 25 username and password of primary user&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;All done, you should now be able to send and receive email using the shared mail box.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 21 Nov 2015 13:45:00 +0000</pubDate>
+        <link>http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html</guid>
+        
+        
+        <category>small</category>
+        
+        <category>business</category>
+        
+        <category>email</category>
+        
+      </item>
     
       <item>
         <title>Microsoft Office 365 Catch-all using Additional Alias Email Addresses</title>
@@ -29,21 +125,37 @@
 &lt;p&gt;For this example, the ‘Exchange’ user will be hywel@customdomain.co.uk.  Additional  ‘catch-all’ email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Login to Office 365
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step1_office365_login.jpg&quot; alt=&quot;step1_office365_login&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Click the little box icons at the top left of the screen, then select the Admin icon
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step2_office365_select_admin.jpg&quot; alt=&quot;step2_office365_select_admin&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Under ‘USERS’ on the left hand pane, select ‘Active Users’
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step3_office365_active_users.jpg&quot; alt=&quot;step3_office365_active_users&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Select the user and click ‘EDIT’, on the right hand side
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step4_office365_edit_active_user.jpg&quot; alt=&quot;step4_office365_edit_active_user&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Select ‘Email addresses’
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step5_office365_user_email_addresses.jpg&quot; alt=&quot;step5_office365_user_email_addresses&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Click &lt;strong&gt;Add new&lt;/strong&gt; under &lt;strong&gt;Other email addresses&lt;/strong&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step6_office365_add_new_email_address.jpg&quot; alt=&quot;step6_office365_add_new_email_address&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Enter ‘howell’ in the space before the @ sign and click ‘Add’.&lt;br /&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step7_office365_add_additional_address.jpg&quot; alt=&quot;step7_office365_add_additional_address&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Repeat steps 6 and 7 to add ‘contact’ as an alias&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Login to Office 365
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step1_office365_login.jpg&quot; alt=&quot;step1_office365_login&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click the little box icons at the top left of the screen, then select the Admin icon
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step2_office365_select_admin.jpg&quot; alt=&quot;step2_office365_select_admin&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Under ‘USERS’ on the left hand pane, select ‘Active Users’
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step3_office365_active_users.jpg&quot; alt=&quot;step3_office365_active_users&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select the user and click ‘EDIT’, on the right hand side
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step4_office365_edit_active_user.jpg&quot; alt=&quot;step4_office365_edit_active_user&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select ‘Email addresses’
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step5_office365_user_email_addresses.jpg&quot; alt=&quot;step5_office365_user_email_addresses&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;strong&gt;Add new&lt;/strong&gt; under &lt;strong&gt;Other email addresses&lt;/strong&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step6_office365_add_new_email_address.jpg&quot; alt=&quot;step6_office365_add_new_email_address&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enter ‘howell’ in the space before the @ sign and click ‘Add’.&lt;br /&gt;
+&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step7_office365_add_additional_address.jpg&quot; alt=&quot;step7_office365_add_additional_address&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Repeat steps 6 and 7 to add ‘contact’ as an alias&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;That’s it, this method provides functionality similar to catch-all,  whilst maintaining the excellent service from Office 365 email.&lt;/p&gt;

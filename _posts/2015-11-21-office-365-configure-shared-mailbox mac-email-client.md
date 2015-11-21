@@ -41,11 +41,17 @@ In this example  hywel@customdomain.co.uk is the active user with an assigned Of
 ![step 4 fill in email of shared mailbox]({{ site.url }}/assets/2015-11-21/step 4 fill in email of shared mailbox.jpg)
 
 5. Don't worry if you see the error *Unable to verify account name of password*. Enter the following
+
 Email Address: **info@customdomain.co.uk**  *(the shared mailbox email address)*
+
 User Name: **hywel@customdomain.co.uk/info**  *(the user email address with the shared mailbox name after a trailing slash)*
+
 Account Type: **IMAP**  *(POP is available, but I prefer IMAP)*
+
 Incoming Mail Server: **outlook.office365.com**
+
 Outgoing Mail Server: **smtp.office365.com**
+
 ![step 5 set username and mail servers]({{ site.url }}/assets/2015-11-21/step 5 set username and mail servers.jpg)
 
 6. Click 'Sign In' button and then select 'Mail' as the app to use
@@ -64,8 +70,11 @@ Outgoing Mail Server: **smtp.office365.com**
 ![step 9 click advanced authentication password]({{ site.url }}/assets/2015-11-21/step 9 click advanced authentication password.jpg)
 
 10. Set *Port* to **25** and enter:
+
 User Name:  **hywel@customdomain.co.uk** *(the user email address)*
+
 Password:  the user's password
+
 ![step 10 set port to 25 username and password of primary user]({{ site.url }}/assets/2015-11-21/step 10 set port to 25 username and password of primary user.jpg)
 
 All done, you should now be able to send and receive email using the shared mail box.

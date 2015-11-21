@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Nov 2015 13:49:43 +0000</pubDate>
-    <lastBuildDate>Sat, 21 Nov 2015 13:49:43 +0000</lastBuildDate>
+    <pubDate>Sat, 21 Nov 2015 13:51:33 +0000</pubDate>
+    <lastBuildDate>Sat, 21 Nov 2015 13:51:33 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -53,14 +53,23 @@
 &lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 4 fill in email of shared mailbox.jpg&quot; alt=&quot;step 4 fill in email of shared mailbox&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Don’t worry if you see the error &lt;em&gt;Unable to verify account name of password&lt;/em&gt;. Enter the following
-Email Address: &lt;strong&gt;info@customdomain.co.uk&lt;/strong&gt;  &lt;em&gt;(the shared mailbox email address)&lt;/em&gt;
-User Name: &lt;strong&gt;hywel@customdomain.co.uk/info&lt;/strong&gt;  &lt;em&gt;(the user email address with the shared mailbox name after a trailing slash)&lt;/em&gt;
-Account Type: &lt;strong&gt;IMAP&lt;/strong&gt;  &lt;em&gt;(POP is available, but I prefer IMAP)&lt;/em&gt;
-Incoming Mail Server: &lt;strong&gt;outlook.office365.com&lt;/strong&gt;
-Outgoing Mail Server: &lt;strong&gt;smtp.office365.com&lt;/strong&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 5 set username and mail servers.jpg&quot; alt=&quot;step 5 set username and mail servers&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;Don’t worry if you see the error &lt;em&gt;Unable to verify account name of password&lt;/em&gt;. Enter the following&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Email Address: &lt;strong&gt;info@customdomain.co.uk&lt;/strong&gt;  &lt;em&gt;(the shared mailbox email address)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;User Name: &lt;strong&gt;hywel@customdomain.co.uk/info&lt;/strong&gt;  &lt;em&gt;(the user email address with the shared mailbox name after a trailing slash)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Account Type: &lt;strong&gt;IMAP&lt;/strong&gt;  &lt;em&gt;(POP is available, but I prefer IMAP)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Incoming Mail Server: &lt;strong&gt;outlook.office365.com&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Outgoing Mail Server: &lt;strong&gt;smtp.office365.com&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 5 set username and mail servers.jpg&quot; alt=&quot;step 5 set username and mail servers&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Click ‘Sign In’ button and then select ‘Mail’ as the app to use
 &lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 6a sign in.jpg&quot; alt=&quot;step 6a sign in&quot; /&gt;
@@ -84,12 +93,15 @@ Outgoing Mail Server: &lt;strong&gt;smtp.office365.com&lt;/strong&gt;
 &lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 9 click advanced authentication password.jpg&quot; alt=&quot;step 9 click advanced authentication password&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Set &lt;em&gt;Port&lt;/em&gt; to &lt;strong&gt;25&lt;/strong&gt; and enter:
-User Name:  &lt;strong&gt;hywel@customdomain.co.uk&lt;/strong&gt; &lt;em&gt;(the user email address)&lt;/em&gt;
-Password:  the user’s password
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 10 set port to 25 username and password of primary user.jpg&quot; alt=&quot;step 10 set port to 25 username and password of primary user&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;Set &lt;em&gt;Port&lt;/em&gt; to &lt;strong&gt;25&lt;/strong&gt; and enter:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;User Name:  &lt;strong&gt;hywel@customdomain.co.uk&lt;/strong&gt; &lt;em&gt;(the user email address)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Password:  the user’s password&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 10 set port to 25 username and password of primary user.jpg&quot; alt=&quot;step 10 set port to 25 username and password of primary user&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;All done, you should now be able to send and receive email using the shared mail box.&lt;/p&gt;
 </description>

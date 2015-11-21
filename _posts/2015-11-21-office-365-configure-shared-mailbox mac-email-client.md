@@ -40,7 +40,7 @@ In this example  hywel@customdomain.co.uk is the active user with an assigned Of
 4. Enter the *shared* mailbox email address, info@customdomain.co.uk and password of hywel@customdomain.co.uk (the user with an assigned Office 365 license)
 ![step 4 fill in email of shared mailbox]({{ site.url }}/assets/2015-11-21/step 4 fill in email of shared mailbox.jpg)
 
-5. Don't worry if you see the error *Unable to verify account name of password*. Enter the following
+5. Don't worry if you see the error *Unable to verify account name of password*. Enter the following:
 
 Email Address: **info@customdomain.co.uk**  *(the shared mailbox email address)*
 

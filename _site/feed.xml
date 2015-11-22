@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Nov 2015 13:51:33 +0000</pubDate>
-    <lastBuildDate>Sat, 21 Nov 2015 13:51:33 +0000</lastBuildDate>
+    <pubDate>Sun, 22 Nov 2015 21:38:28 +0000</pubDate>
+    <lastBuildDate>Sun, 22 Nov 2015 21:38:28 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -53,7 +53,7 @@
 &lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 4 fill in email of shared mailbox.jpg&quot; alt=&quot;step 4 fill in email of shared mailbox&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Don’t worry if you see the error &lt;em&gt;Unable to verify account name of password&lt;/em&gt;. Enter the following&lt;/p&gt;
+    &lt;p&gt;Don’t worry if you see the error &lt;em&gt;Unable to verify account name of password&lt;/em&gt;. Enter the following:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -235,7 +235,7 @@
       </item>
     
       <item>
-        <title> Installing Jekyll Locally on a Mac</title>
+        <title>Installing Jekyll Locally on a Mac</title>
         <description>&lt;h3 id=&quot;static-sites-with-jekyll&quot;&gt;Static Sites with Jekyll&lt;/h3&gt;
 
 &lt;p&gt;Static sites are fast to load and are particularly suited to blog style pages written with &lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot;&gt;markdown&lt;/a&gt;.  They also don’t require a database, so provide many benefits compared with Wordpress or Drupal.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;, but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the effectively &lt;strong&gt;free&lt;/strong&gt; hosting and native integration on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt;.  Also, there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;

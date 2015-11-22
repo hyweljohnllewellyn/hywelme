@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  " Installing Jekyll Locally on a Mac"
+title:  "Installing Jekyll Locally on a Mac"
 date:   2015-11-15 12:56:00
 author: Hywel
 meta: jekyll homebrew brew gem bundle bash profile ruby static site github
 categories: Jekyll Static Site
-excerpt: Static sites are fast to load and are particularly suited to blog style pages written with markdown.  A note of caution, sites using Jekyll are written locally on your computer and then pushed to the host.   Therefore, Jekyll and all it's pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly and can result is some teething problems
+excerpt: Installing Jekyll locally on a Mac can result is some teething problems because all it's pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly.
 ---
 ###Static Sites with Jekyll  
 

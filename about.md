@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-meta: Hywel Llewellyn
+meta: Hywel Llewellyn technology
 ---
 
 This is a personal blog by Hywel Llewellyn, mainly about technology.

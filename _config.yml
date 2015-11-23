@@ -22,7 +22,7 @@ prose:
           label: "layout"
           element: "test"
           value: "post"
-      - name: "datet"
+      - name: "date"
         field:
           label: "date"
           element: "text"

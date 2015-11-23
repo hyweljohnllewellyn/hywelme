@@ -32,12 +32,22 @@ prose:
           label: "author"
           element: "text"
           value: "Hywel"
+      - name: "title"
+        field:
+          label: "title"
+          element: "text"
+          placeholder: "Enter Title"          
       - name: "categories"
         field:
           label: "categories"
           element: "text"
-          value: "Hywel"
-          
+          placeholder: "Enter categories"
+      - name: "excerpt"
+        field:
+          label: "excerpt"
+          element: "text"
+          placeholder: "Enter excerpt"
+
 # Author details.
 hywel:
     name: Hywel Llewellyn

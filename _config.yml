@@ -27,11 +27,11 @@ prose:
           label: "date"
           element: "text"
           value: "CURRENT_DATETIME"
-      - name: "title"
+      - name: "author"
         field:
-          label: "title"
+          label: "author"
           element: "text"
-          value: "Post Title"
+          value: "Hywel"
           
           
 # Author details.

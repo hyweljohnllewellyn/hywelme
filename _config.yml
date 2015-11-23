@@ -27,7 +27,13 @@ prose:
           label: "date"
           element: "text"
           value: "CURRENT_DATETIME"
-
+      - name: "title"
+        field:
+          label: "title"
+          element: "text"
+          placeholder: "Post Title"
+          
+          
 # Author details.
 hywel:
     name: Hywel Llewellyn

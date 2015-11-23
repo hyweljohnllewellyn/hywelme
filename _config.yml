@@ -11,6 +11,41 @@ github_username:  hyweljohnllewellyn
 # Build settings
 markdown: kramdown
 
+prose:
+  rooturl: ''
+  siteurl: 'http://www.hywel.me'
+  media: 'assets'
+  metadata:
+    posts:
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          help: "Uncheck to make this post hidden."
+          value: true
+          on: "true"
+          off: "false"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          help: "The blog post title"
+          placeholder: "Enter title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Publication Date"
+          help: "The publication date for this post."
+          placeholder: "Enter date in the form YYYY-MM-DD"
+      - name: "allowComments"
+        field:
+          element: "checkbox"
+          label: "Allow Comments"
+          help: "Allow users to comment with Disqus."
+          value: true
+          on: "true"
+          off: "false"
+  
 
 # Author details.
 hywel:

@@ -42,6 +42,11 @@ prose:
           label: "excerpt"
           element: "text"
           placeholder: "Enter excerpt"
+      - name: "meta"
+        field:
+          label: "meta"
+          element: "text"
+          placeholder: "Enter metadata"
 
 # Author details.
 hywel:

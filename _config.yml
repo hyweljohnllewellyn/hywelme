@@ -31,7 +31,7 @@ prose:
         field:
           label: "title"
           element: "text"
-          placeholder: "A awesome Headline!"
+          value: "A awesome Headline!"
 
 # Author details.
 hywel:

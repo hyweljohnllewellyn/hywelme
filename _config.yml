@@ -22,11 +22,11 @@ prose:
           label: "layout"
           element: "text"
           value: "post"
-     -  name: "title"
+      - name: "date"
         field:
-          label: "title"
+          label: "date"
           element: "text"
-          value: "A awesome Headline!"
+          value: "CURRENT_DATETIME"
 
 # Author details.
 hywel:

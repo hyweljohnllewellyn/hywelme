@@ -20,14 +20,34 @@ prose:
       - name: "layout"
         field:
           label: "layout"
-          element: "test"
+          element: "text"
           value: "post"
       - name: "date"
         field:
           label: "date"
           element: "text"
           value: CURRENT_DATETIME
-     
+      - name: "title"
+        field:
+          label: "title"
+          element: "text"
+          placeholder: "A awesome Headline!"
+      - name: "author"
+        field:
+          label: "author"
+          element: "text"
+          value: "Hywel"
+      - name: "categories"
+        field:
+          label: "categories"
+          element: "text"
+          placeholder: "Enter categories"
+       - name: "excerpt"
+        field:
+          label: "excerpt"
+          element: "text"
+          placeholder: "Enter excerpt"
+  
 
 # Author details.
 hywel:

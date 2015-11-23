@@ -37,6 +37,11 @@ prose:
           label: "categories"
           element: "text"
           placeholder: "Enter categories"
+      - name: "title"
+        field:
+          label: "title"
+          element: "text"
+          placeholder: "Enter title"
       - name: "excerpt"
         field:
           label: "excerpt"

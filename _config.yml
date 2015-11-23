@@ -17,21 +17,36 @@ prose:
   media: 'assets'
   metadata:
     _posts:
-      - name: "published"
-        field:
-          label: "Published"
-          element: "checkbox"
-          value: "true"
       - name: "layout"
         field:
-          label: "Layout"
-          element: "text"
+          label: "layout"
+          element: "test"
           value: "post"
+      - name: "datet"
+        field:
+          label: "date"
+          element: "text"
+          value: CURRENT_DATETIME
       - name: "title"
         field:
-          label: "Title"
+          label: "title"
           element: "text"
-          value: "A awesome Headline!"
+          placeholder: "A awesome Headline!"
+      - name: "author"
+        field:
+          label: "author"
+          element: "text"
+          value: "Hywel"
+      - name: "categories"
+        field:
+          label: "categories"
+          element: "text"
+          placeholder: "Enter categories"
+       - name: "excerpt"
+        field:
+          label: "excerpt"
+          element: "text"
+          placeholder: "Enter excerpt"
   
 
 # Author details.

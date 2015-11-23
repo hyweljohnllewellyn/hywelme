@@ -14,7 +14,7 @@ markdown: kramdown
 prose:
   rooturl: ''
   siteurl: 'http://www.hywel.me'
-  media: 'assets/CURRENT_DATE'
+  media: 'assets/CURRENT_DATETIME'
   metadata:
     posts:
       - name: "published"

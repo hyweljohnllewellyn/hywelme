@@ -25,8 +25,8 @@ prose:
   	  - name: "date"
         field:
           label: "date"
-          element: "text"
-          value: "CURRENT_DATETIME"
+          element: "textarea"
+          value: 'CURRENT_DATETIME'
           
 # Author details.
 hywel:

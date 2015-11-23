@@ -32,11 +32,6 @@ prose:
           label: "author"
           element: "text"
           value: "Hywel"
-      - name: "title"
-        field:
-          label: "title"
-          element: "text"
-          placeholder: "Enter Title"          
       - name: "categories"
         field:
           label: "categories"

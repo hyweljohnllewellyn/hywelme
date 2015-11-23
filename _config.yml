@@ -16,35 +16,22 @@ prose:
   siteurl: 'http://www.hywel.me'
   media: 'assets'
   metadata:
-    posts:
-      - name: "published"
+   _posts:
+      - name: "layout"
         field:
-          element: "checkbox"
-          label: "Published"
-          help: "Uncheck to make this post hidden."
-          value: true
-          on: "true"
-          off: "false"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          help: "The blog post title"
-          placeholder: "Enter title"
+          value: "post"
       - name: "date"
         field:
-          element: "text"
-          label: "Publication Date"
-          help: "The publication date for this post."
-          placeholder: "Enter date in the form YYYY-MM-DD"
-      - name: "allowComments"
+          value: CURRENT_DATETIME
+     - name: "author"
         field:
-          element: "checkbox"
-          label: "Allow Comments"
-          help: "Allow users to comment with Disqus."
-          value: true
-          on: "true"
-          off: "false"
+          value: Hywel
+      - name: "categories"
+        field:
+          placeholder: "Enter categories"
+      - name: "excerpt"
+        field:
+          placeholder: "Enter excerpt"
   
 
 # Author details.

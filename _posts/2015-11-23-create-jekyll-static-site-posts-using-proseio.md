@@ -1,6 +1,13 @@
 ---
 published: true
+layout: post
+date: "2015-11-23 16:24 +0000"
+author: Hywel
+categories: ""
+excerpt: A CMS editing experience using Prose.io to write Jekyll posts
+meta: jekyll static site posts prose.io
 ---
+
 
 
 ## Prose.io and Jekyll Static Sites
@@ -10,10 +17,46 @@ published: true
 Prose.io has some poweful configuration capability to simplify the user editing experience, which I will be exploring in upcoming posts.  
 
 The basic prose configuration is added to the _config.yml file of my Jekyll site
-    prose:
-     rooturl: ''
-     siteurl: 'http://www.hywel.me'
-     media: 'assets'
+
+{% highlight %}
+prose:
+  rooturl: ''
+  siteurl: 'http://www.hywel.me'
+  media: 'assets'
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          label: "layout"
+          element: "text"
+          value: "post"
+      - name: "date"
+        field:
+          label: "date"
+          element: "text"
+          value: "CURRENT_DATETIME"
+      - name: "author"
+        field:
+          label: "author"
+          element: "text"
+          value: "Hywel"
+      - name: "categories"
+        field:
+          label: "categories"
+          element: "text"
+          placeholder: "Enter categories"
+      - name: "excerpt"
+        field:
+          label: "excerpt"
+          element: "text"
+          placeholder: "Enter excerpt"
+      - name: "meta"
+        field:
+          label: "meta"
+          element: "text"
+          placeholder: "Enter metadata"
+      {% endhighlight %}
+
 
 Note that I have defined my media folder with today's date.  I keep my media sorted into date folders.  I have not found out how to configure this as yet.
 

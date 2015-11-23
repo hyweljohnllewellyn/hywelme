@@ -22,11 +22,6 @@ prose:
           label: "layout"
           element: "text"
           value: "post"
-      - name: "date"
-        field:
-          label: "date"
-          element: "text"
-          value: "CURRENT_DATETIME"
      -  name: "title"
         field:
           label: "title"

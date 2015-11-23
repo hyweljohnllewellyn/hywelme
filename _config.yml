@@ -16,7 +16,7 @@ prose:
   siteurl: 'http://www.hywel.me'
   media: 'assets'
   metadata:
-   _posts:
+    _posts:
       - name: "layout"
         field:
           value: "post"

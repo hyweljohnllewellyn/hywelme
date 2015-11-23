@@ -32,11 +32,11 @@ prose:
           label: "author"
           element: "text"
           value: "Hywel"
-      - name: "title"
+      - name: "categories"
         field:
-          label: "title"
+          label: "categories"
           element: "text"
-          value: "Title"         
+          placeholder: "Categories"  
           
 # Author details.
 hywel:

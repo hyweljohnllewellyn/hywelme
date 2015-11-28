@@ -51,12 +51,12 @@ I chose a simple rectangle shape for the area co-ordinates.  So the HTML code lo
 
 There is the image with the usemap="#my_image", the four HTML5 audio files along with the map of areas and their co-ordinates.  
 
+Lastly to make it responsive  https://github.com/stowball/jQuery-rwdImageMaps
 
+## Using jQuery to Control the Audio
 
-
-https://github.com/stowball/jQuery-rwdImageMaps
 http://stackoverflow.com/questions/31430502/jquery-toggle-play-pause-button-multiple-audios
 http://stackoverflow.com/questions/9283656/stopping-html5-audio
 http://stackoverflow.com/questions/10978103/determine-which-area-in-a-map-imagemap-was-clicked-using-javascript-or-jquery
 
-For my most 
+

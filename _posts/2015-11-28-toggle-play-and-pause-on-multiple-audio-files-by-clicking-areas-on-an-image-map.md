@@ -13,4 +13,9 @@ title: Toggle Play and Pause on Multiple Audio Files by Clicking Areas on an Ima
 
 There are many solutions available for playing audio, on of my favourites was the Yahoo Media Player, from times past. HTML5 introduced the [audio tag](https://en.wikipedia.org/wiki/HTML5_Audio), which is widely suppored.  There are also several jQuery media players for websites including [jplayer](http://jplayer.org/).  
 
+https://github.com/stowball/jQuery-rwdImageMaps
+http://stackoverflow.com/questions/31430502/jquery-toggle-play-pause-button-multiple-audios
+http://stackoverflow.com/questions/9283656/stopping-html5-audio
+http://stackoverflow.com/questions/10978103/determine-which-area-in-a-map-imagemap-was-clicked-using-javascript-or-jquery
+
 For my most 

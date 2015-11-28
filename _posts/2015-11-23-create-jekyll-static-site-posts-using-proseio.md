@@ -62,7 +62,7 @@ Note that I have defined my media folder with today's date.  I keep my media sor
 
 ## Create the Post
 
-### 1. Log in to prose.io using your Github credentials and navigate to your _posts folder
+### 1. Log in to prose.io using your Github credentials and navigate to your _posts folder. Click 'New File' to start a new post.
 
 ![step 1 log in to prose.io and navigate to your posts folder]({{site.baseurl}}/assets/2015-11-23/step 1 login to proseio and go to posts folder.JPG)
 

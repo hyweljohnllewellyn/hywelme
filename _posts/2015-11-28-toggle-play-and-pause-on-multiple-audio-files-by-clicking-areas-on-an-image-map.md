@@ -5,7 +5,7 @@ author: Hywel
 categories: Jekyll Static Site
 excerpt: "I wanted to add a bit of fun to a website by allowing users to play audio by clicking on objects in an image.  I know that this is not new, but I have not found any resource that ties up creating an image map linked to multiple areas and audio, controlled using jQuery."
 meta: "HTML5 image map jQuery audio area play pause "
-published: false
+published: true
 title: Toggle Play and Pause on Multiple Audio Files by Clicking Areas on an Image Map
 ---
 
@@ -47,13 +47,13 @@ There are several choices available, some are polished and have several function
 
 There is the image with the usemap="#my_image", the four HTML5 audio files along with the map of areas and their co-ordinates.  
 
-In order for the image map to be responsive by recalculating the area coordinates to match the actual image size, I found [jQuery RWD Image Maps](https://github.com/stowball/jQuery-rwdImageMaps) by [Matt Stow](http://mattstow.com/).
+In order for the image map to be responsive by recalculating the area coordinates to match the actual image size.  Note that some [re-sizers are not compatible with Chrome on iOS](http://stackoverflow.com/questions/28872555/image-map-is-not-working-on-chrome-for-ios).  I'm using [ imageMapResizer](https://github.com/davidjbradshaw/image-map-resizer) by David Bradshaw.  
 
-In my page scripts, as well as loading the jQuery js files, these are included;
+In my page scripts, as well as loading the jQuery files, these are included;
 
 {% highlight html %}
-<script type="text/javascript" src="{{ site.url }}/assets/js/jquery.rwdImageMaps.min.js"></script>
-<script type="text/javascript" > $('img[usemap]').rwdImageMaps();</script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/imagemapresizer/imageMapResizer.min.js"></script>
+<script type="text/javascript" >imageMapResize();</script>
 {% endhighlight %}
 
 ## Using jQuery to Control the Audio

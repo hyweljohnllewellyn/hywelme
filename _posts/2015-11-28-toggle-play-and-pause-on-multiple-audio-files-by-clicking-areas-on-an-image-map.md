@@ -3,9 +3,9 @@ layout: post
 date: "2015-11-28 21:26 +0000"
 author: Hywel
 categories: Jekyll Static Site
-excerpt: ""
+excerpt: "I wanted to add a bit of fun to a website by allowing users to play audio by clicking on objects in an image.  I realise this is not new, but I have not found any resource that ties up creating an image map linked to multiple areas and audio, controlled using jquery."
 meta: "HTML5 image map jquery audio area play pause "
-published: false
+published: true
 title: Toggle Play and Pause on Multiple Audio Files by Clicking Areas on an Image Map
 ---
 
@@ -47,7 +47,7 @@ There are several choices available, some are polished and have several function
 
 There is the image with the usemap="#my_image", the four HTML5 audio files along with the map of areas and their co-ordinates.  
 
-In order tfor the image map to be responsive by recalculating the area coordinates to match the actual image size, I found jQuery RWD Image Maps  [jQuery RWD Image Maps](https://github.com/stowball/jQuery-rwdImageMaps) by [Matt Stow](http://mattstow.com/). 
+In order for the image map to be responsive by recalculating the area coordinates to match the actual image size, I found jQuery RWD Image Maps  [jQuery RWD Image Maps](https://github.com/stowball/jQuery-rwdImageMaps) by [Matt Stow](http://mattstow.com/). 
 
 In my page scripts, as well as loading the jQuery js files, these are included;
 
@@ -58,8 +58,41 @@ In my page scripts, as well as loading the jQuery js files, these are included;
 
 ## Using jQuery to Control the Audio
 
-http://stackoverflow.com/questions/31430502/jquery-toggle-play-pause-button-multiple-audios
-http://stackoverflow.com/questions/9283656/stopping-html5-audio
-http://stackoverflow.com/questions/10978103/determine-which-area-in-a-map-imagemap-was-clicked-using-javascript-or-jquery
+The controls I wanted to acheive were to play or pause the audio on click of object and pause any other audio that may be playing.  This script was placed in a file called audioplay.js:
 
+{% highlight javascipt %}
+$("map[name=my_image] area").on('click', function () {
+//$("#my_image area").on('click', function () {
+var $this = $(this);
+ var id = $this.attr('id').replace(/area/, '');
 
+$.each($('audio'), function () {
+   this.pause();
+});
+
+    $this.toggleClass('active');
+    if($this.hasClass('active')){
+        $this.text('pause');
+      $('audio[id^="sound"]')[id-1].play();
+    } else {
+        $this.text('play');
+      $('audio[id^="sound"]')[id-1].pause();
+    }
+});
+{% endhighlight %}
+
+this was then was called from the page
+
+{% highlight html %}
+<script type="text/javascript" src="{{ site.url }}/assets/js/audioplay.js"></script>
+{% endhighlight %}
+
+Thanks to the following resourcce for their inspiration:
+
+[Toggle play pause of multiple audios](http://stackoverflow.com/questions/31430502/jquery-toggle-play-pause-button-multiple-audios)
+
+[Determine which area was clicked](http://stackoverflow.com/questions/10978103/determine-which-area-in-a-map-imagemap-was-clicked-using-javascript-or-jquery) 
+
+[Stopping all audio playing](http://stackoverflow.com/questions/9283656/stopping-html5-audio)
+
+That's it, the final result can be found at [Victorian Carol Singers Hire UK](http://www.victoriancarolsingershire.uk/).

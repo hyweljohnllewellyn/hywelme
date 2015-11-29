@@ -17,7 +17,7 @@ I wanted to add a bit of fun to a website by allowing users to play audio by cli
 
 ## Mapping Areas in an Image - Being Responsive
 
-The fist step was to create defined <Areas> in an image that could be clicked.  The co-ordinates of the areas also need  to be recalculated when viewed on different screen sizes, so that the clickable area is correctly updated.
+The fist step was to create defined areas in an image that could be clicked.  The co-ordinates of the areas also needed to be recalculated when viewed on different screen sizes, so that the clickable area is correctly updated.
 
 There were four audio samples, each to be mapped to four objects.  I tried calculating the co-ordinates of the objects manually, but in the end decided to find an app.  
 

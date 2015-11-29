@@ -19,13 +19,9 @@ I wanted to add a bit of fun to a website by allowing users to play audio by cli
 
 The fist step was to create defined <Areas> in an image that could be clicked.  The co-ordinates of the areas also need  to be recalculated when viewed on different screen sizes, so that the clickable area whould also be recalculated.
 
-![Victorian Carol Singers London]({{site.baseurl}}/http://victoriancarolsingershire.uk/images/Victorian%20Carol%20Singers%20Colourful%20Dresses%20and%20Top%20Hats.jpg)
+There were four audio samples, each to be mapped to four objects.  I tried calculating the co-ordinates of the objects manually, but in the end decided to find an app.  
 
-The areas to be clicked are the objects being held.  There were four audio samples, each to be mapped to four objects.
-
-I tried calculating the co-ordinates of the objects manually, but in the end decided to find an app.  There are several choices available, some are polished and have several functions such as [coffee cup](http://www.coffeecup.com/image-mapper/), but as I only wanted a basic map I found this simple, effective [Online Image Map Editor](http://www.maschek.hu/imagemap/imgmap) by Adam Maschek.  
-
-I chose a simple rectangle shape for the area co-ordinates.  So the HTML code looked like this:
+There are several choices available, some are polished and have several functions such as [coffee cup](http://www.coffeecup.com/image-mapper/), but as I only wanted a basic map I found this simple, effective [Online Image Map Editor](http://www.maschek.hu/imagemap/imgmap) by Adam Maschek.    I chose a simple rectangle shape for the area co-ordinates.  Here's th finished HTML: 
 
 {% highlight html %}
 <img src="http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg" class="entry-feature-image" alt="London's Premier Victorian Carollers" usemap="#my_image" style="margin-top:0;">
@@ -51,7 +47,14 @@ I chose a simple rectangle shape for the area co-ordinates.  So the HTML code lo
 
 There is the image with the usemap="#my_image", the four HTML5 audio files along with the map of areas and their co-ordinates.  
 
-Lastly to make it responsive  https://github.com/stowball/jQuery-rwdImageMaps
+In order tfor the image map to be responsive by recalculating the area coordinates to match the actual image size, I found jQuery RWD Image Maps  [jQuery RWD Image Maps](https://github.com/stowball/jQuery-rwdImageMaps) by [Matt Stow](http://mattstow.com/). 
+
+In my page scripts, as well as loading the jQuery js files, these are included;
+
+{% highlight html %}
+<script type="text/javascript" src="{{ site.url }}/assets/js/jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript" > $('img[usemap]').rwdImageMaps();</script>
+{% endhighlight %}
 
 ## Using jQuery to Control the Audio
 

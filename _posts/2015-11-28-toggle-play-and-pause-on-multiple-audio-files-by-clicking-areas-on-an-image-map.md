@@ -21,7 +21,7 @@ The fist step was to create defined <Areas> in an image that could be clicked.  
 
 There were four audio samples, each to be mapped to four objects.  I tried calculating the co-ordinates of the objects manually, but in the end decided to find an app.  
 
-There are several choices available, some are polished and have several functions such as [coffee cup](http://www.coffeecup.com/image-mapper/), but as I only wanted a basic map I found this simple, effective [Online Image Map Editor](http://www.maschek.hu/imagemap/imgmap) by Adam Maschek.    I chose a simple rectangle shape for the area co-ordinates.  Here's th finished HTML: 
+There are several choices available, some are polished and have several functions such as [coffee cup](http://www.coffeecup.com/image-mapper/), but as I only wanted a basic map I found this simple, effective [Online Image Map Editor](http://www.maschek.hu/imagemap/imgmap) by Adam Maschek.    I chose a simple rectangle shape for the area co-ordinates.  Here's th finished HTML:
 
 {% highlight html %}
 <img src="http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg" class="entry-feature-image" alt="London's Premier Victorian Carollers" usemap="#my_image" style="margin-top:0;">
@@ -47,7 +47,7 @@ There are several choices available, some are polished and have several function
 
 There is the image with the usemap="#my_image", the four HTML5 audio files along with the map of areas and their co-ordinates.  
 
-In order for the image map to be responsive by recalculating the area coordinates to match the actual image size, I found jQuery RWD Image Maps  [jQuery RWD Image Maps](https://github.com/stowball/jQuery-rwdImageMaps) by [Matt Stow](http://mattstow.com/). 
+In order for the image map to be responsive by recalculating the area coordinates to match the actual image size, I found jQuery RWD Image Maps  [jQuery RWD Image Maps](https://github.com/stowball/jQuery-rwdImageMaps) by [Matt Stow](http://mattstow.com/).
 
 In my page scripts, as well as loading the jQuery js files, these are included;
 
@@ -60,7 +60,7 @@ In my page scripts, as well as loading the jQuery js files, these are included;
 
 The controls I wanted to acheive were to play or pause the audio on click of object and pause any other audio that may be playing.  This script was placed in a file called audioplay.js:
 
-{% highlight javascipt %}
+{% highlight javascript %}
 $("map[name=my_image] area").on('click', function () {
 //$("#my_image area").on('click', function () {
 var $this = $(this);
@@ -91,7 +91,7 @@ Thanks to the following resourcce for their inspiration:
 
 [Toggle play pause of multiple audios](http://stackoverflow.com/questions/31430502/jquery-toggle-play-pause-button-multiple-audios)
 
-[Determine which area was clicked](http://stackoverflow.com/questions/10978103/determine-which-area-in-a-map-imagemap-was-clicked-using-javascript-or-jquery) 
+[Determine which area was clicked](http://stackoverflow.com/questions/10978103/determine-which-area-in-a-map-imagemap-was-clicked-using-javascript-or-jquery)
 
 [Stopping all audio playing](http://stackoverflow.com/questions/9283656/stopping-html5-audio)
 

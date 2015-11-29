@@ -11,7 +11,7 @@ title: Toggle Play and Pause on Multiple Audio Files by Clicking Areas on an Ima
 
 ## Playing Audio Files Without a Player
 
-There are many solutions available for playing audio, on of my favorites was the Yahoo Media Player, from times past. HTML5 introduced the [audio tag](https://en.wikipedia.org/wiki/HTML5_Audio), which is widely supported.  There are also several [jQuery](https://en.wikipedia.org/wiki/JQuery) media players for websites including [jplayer](http://jplayer.org/).  
+There are many solutions available for playing audio, one of my favorites was the Yahoo Media Player.  HTML5 introduced the [audio tag](https://en.wikipedia.org/wiki/HTML5_Audio), which is widely supported.  There are also several [jQuery](https://en.wikipedia.org/wiki/JQuery) media players for websites including [jplayer](http://jplayer.org/).  
 
 I wanted to add a bit of fun to a website by allowing users to play audio by clicking on objects in an image.  I know that this is not new, but I have not found any resource that ties up creating an image map linked to multiple areas and audio, controlled using jQuery.
 

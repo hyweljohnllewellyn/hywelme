@@ -47,7 +47,7 @@ There are several choices available, some are polished and have several function
 
 There is the image with the usemap="#my_image", the four HTML5 audio files along with the map of areas and their co-ordinates.  
 
-In order for the image map to be responsive by recalculating the area coordinates to match the actual image size.  Note that some [re-sizers are not compatible with Chrome on iOS](http://stackoverflow.com/questions/28872555/image-map-is-not-working-on-chrome-for-ios).  I'm using [ imageMapResizer](https://github.com/davidjbradshaw/image-map-resizer) by David Bradshaw.  
+In order for the image map to be responsive by recalculating the area coordinates to match the actual image size  I need an image map re-sizer.  Note that some [re-sizers are not compatible with Chrome on iOS](http://stackoverflow.com/questions/28872555/image-map-is-not-working-on-chrome-for-ios).  I'm using [ imageMapResizer](https://github.com/davidjbradshaw/image-map-resizer) by David Bradshaw.  
 
 In my page scripts, as well as loading the jQuery files, these are included;
 

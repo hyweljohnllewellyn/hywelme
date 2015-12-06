@@ -6,8 +6,9 @@ categories: ""
 excerpt: ""
 meta: ""
 published: false
-title: ""
+title: GitHub Pages Custom Domain Names with CloudFlare
 ---
+
 
 ## Why Use a Custom Domain Name 
 
@@ -29,10 +30,19 @@ GitHub has a great guide to configuring [Custom Subdomains](https://help.github.
 
 Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub's own Content Delivery, but for now it seems to work for me.
 
+
 ## Setting the Custom Subdomain
 
 ### Step 1: Create a CNAME file
 The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case **www.victoriancarolsingershire.uk**
 
+![CNAME GitHub Pages]({{site.baseurl}}/assets/2015-12-06/cname file github pages custom subdomain.jpg)
 
+### Step 2: CloudFlare CNAME
+Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.  
 
+![cloudflare cname github subdomain]({{site.baseurl}}/assets/2015/-12-06/cloudflare cname github subdomain.jpg)
+
+All Done, your page is published at the new subdomain:
+
+![published.jpg]({{site.baseurl}}/assets/published.jpg)

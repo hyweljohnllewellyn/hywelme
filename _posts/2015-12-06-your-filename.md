@@ -2,9 +2,9 @@
 layout: post
 date: "2015-12-06 14:10 +0000"
 author: Hywel
-categories: ""
-excerpt: ""
-meta: ""
+categories: static sites
+excerpt: "GitHub allows the configuring of Apex Domains, however is it recommended to use a subdomain’.The CNAME file should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain.  Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare."
+meta: CloudFlare GitHub Pages CNAME subdomain DNS
 published: false
 title: GitHub Pages Custom Domain Names with CloudFlare
 ---
@@ -12,11 +12,9 @@ title: GitHub Pages Custom Domain Names with CloudFlare
 
 ## Why Use a Custom Domain Name 
 
-Static websites hosted with Github Pages by default are shown in eht form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by hte repository name.
+Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.
 
-If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.
-
-This custom domain name describes the service being offered as well as the location.
+If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.
 
 The domain name was purchased through [Name Cheap](http://namecheap.com), which is great value for money for domains, though I have stuggled somewhat with managing settings through it's administration console.
 

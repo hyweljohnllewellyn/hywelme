@@ -3,11 +3,12 @@ layout: post
 date: "2015-12-06 19:20 +0000"
 author: Hywel
 categories: static site
-excerpt: Step By Step to adding a Disqus Comment system
+excerpt: "Well, I was amazed to receive some feedback through GitHub regarding a post I made regarding prose.io from Phlow. As a side project and to allow comments, I have decided to add Disqus to this website and include as a step by step guide - just in case it’s tricky…so, what is Disqus?"
 meta: Disqus Comments Canonical URL Jekyll
 published: true
 title: Adding a Comment System to a Jekyll Static Site with Disqus
 ---
+
 
 ## So I Received feedback through GitHub
 Well, I was amazed to receive some feedback through GitHub regarding a post I made regarding [prose.io](http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html) from [Phlow](https://github.com/Phlow).  As a side project and to allow comments, I have decided to add Disqus to this website and include as a step by step guide - just in case it's tricky...[so, what is Disqus?](https://help.disqus.com/customer/portal/articles/466179-what-is-disqus-).
@@ -41,7 +42,7 @@ As my site is static, I've chosen Universal Code
 4. Additional customization....
 ![Disqus setup instructions]({{site.baseurl}}/assets/2015-12-06/disqus setup instruction.jpg)
 
-###Step 4: As a mimimim I'll add the code to my post pages
+###Step 4: Add the Disqus code to my post pages
 In my post.html after the closing article tag, I've added the Disqus code:
 
 {% highlight javascript %}
@@ -82,3 +83,8 @@ Note that I used the canonical URL variable as defined in Jekyll's head.html
 {% highlight html %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 {% endhighlight %}
+
+###Step 5: Check that the comments are showm.. 
+![Disqus comments on hywel.me]({{site.baseurl}}/assets/2015-12-06/discus comments on hywelme site.jpg)
+
+

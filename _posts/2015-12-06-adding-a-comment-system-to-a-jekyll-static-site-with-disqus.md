@@ -28,6 +28,7 @@ The list of platforms are :
 - MovableType
 - Drupal
 - Joomla
+
 As my site is static, I've chosen Universal Code
 ![Disqus choose your platform]({{site.baseurl}}/assets/2015-12-06/disqus choose your platform.jpg)
 

@@ -6,15 +6,234 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Nov 2015 21:38:28 +0000</pubDate>
-    <lastBuildDate>Sun, 22 Nov 2015 21:38:28 +0000</lastBuildDate>
+    <pubDate>Sun, 06 Dec 2015 18:21:11 +0000</pubDate>
+    <lastBuildDate>Sun, 06 Dec 2015 18:21:11 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>GitHub Pages Custom Domain Names with CloudFlare</title>
+        <description>&lt;h2 id=&quot;why-use-a-custom-domain-name&quot;&gt;Why Use a Custom Domain Name&lt;/h2&gt;
+
+&lt;p&gt;Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.&lt;/p&gt;
+
+&lt;p&gt;If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.&lt;/p&gt;
+
+&lt;p&gt;The domain name was purchased through &lt;a href=&quot;http://namecheap.com&quot;&gt;Name Cheap&lt;/a&gt;, which is great value for money for domains, though I have struggled somewhat with managing settings through it’s administration console.&lt;/p&gt;
+
+&lt;p&gt;Therefore, I generally use CloudFlare, which is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_delivery_network&quot;&gt;Content Delivery Network&lt;/a&gt; to administer &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_Name_System&quot;&gt;Domain Name System&lt;/a&gt; settings.&lt;/p&gt;
+
+&lt;h2 id=&quot;github-pages-custom-domain-names&quot;&gt;GitHub Pages Custom Domain Names&lt;/h2&gt;
+
+&lt;p&gt;GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the &lt;em&gt;‘www’&lt;/em&gt;, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the &lt;em&gt;‘www’&lt;/em&gt;, as described by GitHub at &lt;a href=&quot;https://help.github.com/articles/about-custom-domains-for-github-pages-sites/&quot;&gt;About Custom Domains&lt;/a&gt;.  Briefly, using GitHub Pages subdomains will make the pages load faster.&lt;/p&gt;
+
+&lt;p&gt;GitHub has a great guide to configuring &lt;a href=&quot;https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/&quot;&gt;Custom Subdomains&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub’s own Content Delivery, but for now it seems to work for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-create-a-cname-file&quot;&gt;Step 1: Create a CNAME file&lt;/h3&gt;
+&lt;p&gt;The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case &lt;strong&gt;www.victoriancarolsingershire.uk&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/cname file github pages custom subdomain.jpg&quot; alt=&quot;CNAME GitHub Pages&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-cloudflare-cname&quot;&gt;Step 2: CloudFlare CNAME&lt;/h3&gt;
+&lt;p&gt;Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015/-12-06/cloudflare cname github subdomain.jpg&quot; alt=&quot;cloudflare cname github subdomain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All Done, your page is published at the new subdomain:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/published.jpg&quot; alt=&quot;published.jpg&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Dec 2015 14:10:00 +0000</pubDate>
+        <link>http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</guid>
+        
+        
+        <category>static</category>
+        
+        <category>sites</category>
+        
+      </item>
+    
+      <item>
+        <title>Toggle Play and Pause on Multiple Audio Files by Clicking Areas on an Image Map</title>
+        <description>&lt;h2 id=&quot;playing-audio-files-without-a-player&quot;&gt;Playing Audio Files Without a Player&lt;/h2&gt;
+
+&lt;p&gt;There are many solutions available for playing audio, one of my favorites was the Yahoo Media Player.  HTML5 introduced the &lt;a href=&quot;https://en.wikipedia.org/wiki/HTML5_Audio&quot;&gt;audio tag&lt;/a&gt;, which is widely supported.  There are also several &lt;a href=&quot;https://en.wikipedia.org/wiki/JQuery&quot;&gt;jQuery&lt;/a&gt; media players for websites including &lt;a href=&quot;http://jplayer.org/&quot;&gt;jplayer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wanted to add a bit of fun to a website by allowing users to play audio by clicking on objects in an image.  I know that this is not new, but I have not found any resource that ties up creating an image map linked to multiple areas and audio, controlled using jQuery.&lt;/p&gt;
+
+&lt;h2 id=&quot;mapping-areas-in-an-image---being-responsive&quot;&gt;Mapping Areas in an Image - Being Responsive&lt;/h2&gt;
+
+&lt;p&gt;The fist step was to create defined areas in an image that could be clicked.  The co-ordinates of the areas also needed to be recalculated when viewed on different screen sizes, so that the clickable area is correctly updated.&lt;/p&gt;
+
+&lt;p&gt;There were four audio samples, each to be mapped to four objects.  I tried calculating the co-ordinates of the objects manually, but in the end decided to find an app.&lt;/p&gt;
+
+&lt;p&gt;There are several choices available, some are polished and have several functions such as &lt;a href=&quot;http://www.coffeecup.com/image-mapper/&quot;&gt;coffee cup&lt;/a&gt;, but as I only wanted a basic map I found this simple, effective &lt;a href=&quot;http://www.maschek.hu/imagemap/imgmap&quot;&gt;Online Image Map Editor&lt;/a&gt; by Adam Maschek.    I chose a simple rectangle shape for the area co-ordinates.  Here’s the finished HTML:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;entry-feature-image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;London&amp;#39;s Premier Victorian Carolers&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;usemap=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#my_image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin-top:0;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/joy to the world.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound2&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/jingle bells.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound3&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/silent night short.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound4&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/deck the halls.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;map&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;my_image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;my_image&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;408,556,660,996&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area1&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;880,552,1096,852&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area2&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1120,428,1360,732&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area3&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1712,544,2444,1160&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area4&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/map&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There is the image with the usemap=”#my_image”, the four HTML5 audio files along with the map of areas and their co-ordinates.&lt;/p&gt;
+
+&lt;p&gt;In order for the image map to be responsive by recalculating the area coordinates to match the actual image size  I need an image map re-sizer.  Note that some &lt;a href=&quot;http://stackoverflow.com/questions/28872555/image-map-is-not-working-on-chrome-for-ios&quot;&gt;re-sizers are not compatible with Chrome on iOS&lt;/a&gt;.  I’m using &lt;a href=&quot;https://github.com/davidjbradshaw/image-map-resizer&quot;&gt; imageMapResizer&lt;/a&gt; by David Bradshaw.&lt;/p&gt;
+
+&lt;p&gt;In my page scripts, as well as loading the jQuery files, these are included;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/assets/js/imagemapresizer/imageMapResizer.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imageMapResize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;using-jquery-to-control-the-audio&quot;&gt;Using jQuery to Control the Audio&lt;/h2&gt;
+
+&lt;p&gt;The controls I wanted to achieve were to play or pause the audio on click of object and pause any other audio that may be playing.  This script was placed in a file called audioplay.js:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;map[name=my_image] area&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;click&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//$(&amp;quot;#my_image area&amp;quot;).on(&amp;#39;click&amp;#39;, function () {&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/area/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;audio&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pause&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggleClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;pause&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;audio[id^=&amp;quot;sound&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;play&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;audio[id^=&amp;quot;sound&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pause&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;this was then was called from the page&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/assets/js/audioplay.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks to the following resources for their inspiration:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/31430502/jquery-toggle-play-pause-button-multiple-audios&quot;&gt;Toggle play pause of multiple audios&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/10978103/determine-which-area-in-a-map-imagemap-was-clicked-using-javascript-or-jquery&quot;&gt;Determine which area was clicked&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/9283656/stopping-html5-audio&quot;&gt;Stopping all audio playing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s it, the final result can be found at &lt;a href=&quot;http://www.victoriancarolsingershire.uk/&quot;&gt;Victorian Carol Singers Hire UK&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 28 Nov 2015 21:26:00 +0000</pubDate>
+        <link>http://www.hywel.me/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>static</category>
+        
+        <category>site</category>
+        
+      </item>
+    
+      <item>
+        <title>Create Jekyll Static Site Posts Using Prose.io</title>
+        <description>&lt;h2 id=&quot;proseio-and-jekyll-static-sites&quot;&gt;Prose.io and Jekyll Static Sites&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://prose.io&quot;&gt;Prose.io&lt;/a&gt;&lt;/strong&gt; is a web application that allows editing of Github Repositories through your browser.  This has great potential, particularly when used with the website hosting offered by &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;, providing &lt;em&gt;a CMS-like experience for a generated static site&lt;/em&gt;, as described by &lt;a href=&quot;http://blog.crushingpennies.com/a-static-site-generator-with-gulp-proseio-and-travis-ci.html&quot;&gt;Daniel Nabb&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Prose.io has some powerful configuration capability to simplify the user editing experience, which I will be exploring in upcoming posts.&lt;/p&gt;
+
+&lt;p&gt;The basic prose configuration is added to the _config.yml file of my Jekyll site&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;prose&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;rooturl&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;siteurl&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;http://www.hywel.me&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;assets&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;l-Scalar-Plain&quot;&gt;_posts&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;layout&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;layout&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;CURRENT_DATETIME&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Hywel&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;excerpt&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;excerpt&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&amp;quot;&lt;/span&gt;
+      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;meta&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;meta&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
+          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;metadata&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that I have defined my media folder with today’s date.  I keep my media sorted into date folders.  I have not found out how to configure this as yet.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-the-post&quot;&gt;Create the Post&lt;/h2&gt;
+
+&lt;h3 id=&quot;log-in-to-proseio-using-your-github-credentials-and-navigate-to-your-posts-folder-click-new-file-to-start-a-new-post&quot;&gt;1. Log in to prose.io using your Github credentials and navigate to your _posts folder. Click ‘New File’ to start a new post.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/step 1 login to proseio and go to posts folder.JPG&quot; alt=&quot;step 1 log in to prose.io and navigate to your posts folder&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;write-your-post&quot;&gt;2. Write your post&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/step 2 write your post using prose io.JPG&quot; alt=&quot;write your post using prose io&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;select-medatata-to-edit&quot;&gt;3. Select Medatata to edit&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/select metadata to edit.JPG&quot; alt=&quot;select metadata option to edit&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;edit-your-metadata--note-that-the-default-options-from-the-configuration-are-shown&quot;&gt;4. Edit your metadata.  Note that the default options from the configuration are shown&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/enter metadata.JPG&quot; alt=&quot;enter metadata default options are shown&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;insert-an-image-using-proseio-note-that-the-image-is-uploaded-and-inserted-to-the-post-automatically&quot;&gt;5. Insert an image using prose.io, note that the image is uploaded and inserted to the post automatically&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/step 3 insert an image using prose io.JPG&quot; alt=&quot;select image for upload to prose.io&quot; /&gt;
+&lt;img src=&quot;/assets/2015-11-23/step 3a image code automatically generated by prose io.JPG&quot; alt=&quot;insert an image using prose io&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 23 Nov 2015 16:24:00 +0000</pubDate>
+        <link>http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox</title>
         <description>&lt;h3 id=&quot;microsoft-office-365-for-email&quot;&gt;Microsoft Office 365 for Email&lt;/h3&gt;
 
-&lt;p&gt;Email is an essential part of managing a small business.  In our experience, we found that &lt;a href=&quot;https://www.zoho.com/mail/&quot;&gt;Zoho Mail&lt;/a&gt; was allowing too much spam content through to the inbox, hiding essential emails from clients.  &lt;/p&gt;
+&lt;p&gt;Email is an essential part of managing a small business.  In our experience, we found that &lt;a href=&quot;https://www.zoho.com/mail/&quot;&gt;Zoho Mail&lt;/a&gt; was allowing too much spam content through to the inbox, hiding essential emails from clients.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://products.office.com/en-gb/business/compare-office-365-for-business-plans&quot;&gt;Microsoft Office 365&lt;/a&gt; is a full productivity suite.   The business essentials subscription of £3.10 per user per month provides:&lt;/p&gt;
 
@@ -122,15 +341,15 @@
         <title>Microsoft Office 365 Catch-all using Additional Alias Email Addresses</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://products.office.com/en-gb/business/compare-office-365-for-business-plans&quot;&gt;Microsoft Office 365 Business Essentials&lt;/a&gt; costs from £3.10 per ‘Exchange’ user per month&lt;/p&gt;
 
-&lt;p&gt;An ‘Exchange’ user is a single email account for a specified domain, with 50 Gb of storage and highly configurable mail server rules.  &lt;/p&gt;
+&lt;p&gt;An ‘Exchange’ user is a single email account for a specified domain, with 50 Gb of storage and highly configurable mail server rules.&lt;/p&gt;
 
-&lt;p&gt;Some mail providers provide multiple email accounts for a given domain, so Office 365 can get quite expensive with multiple users, just for email.  &lt;/p&gt;
+&lt;p&gt;Some mail providers provide multiple email accounts for a given domain, so Office 365 can get quite expensive with multiple users, just for email.&lt;/p&gt;
 
 &lt;p&gt;Though it has to be said - the email service we have experienced for the last 4 months from Office 365 has been great for spam protection and reliability.  You get what you pay for.&lt;/p&gt;
 
 &lt;p&gt;Office 365 by default does not support &lt;a href=&quot;https://en.wikipedia.org/wiki/Catch-all&quot;&gt;catch-all&lt;/a&gt;, that is email addresses not specifically defined in the mail server.&lt;/p&gt;
 
-&lt;p&gt;Additional alias addresses can be created to re-direct email to a specified user as a simple and safe substitute to catch-all.  &lt;/p&gt;
+&lt;p&gt;Additional alias addresses can be created to re-direct email to a specified user as a simple and safe substitute to catch-all.&lt;/p&gt;
 
 &lt;p&gt;Note that an additional alias address is distinct to a shared mailbox, which appears as a separate mail box from the user.  Setting up shared mailboxes on Office 365 will be described in an upcoming post.&lt;/p&gt;
 
@@ -195,7 +414,7 @@
 
 &lt;p&gt;In this post, I will share some of the applications used for managing Jekyll static sites, including the web hosting service, web browser, text editor and version control.  Most of this is managed using Github.&lt;/p&gt;
 
-&lt;p&gt;OK, so hosting may not be seen as an application, but without the host application serving web site pages then no one would see them.  &lt;/p&gt;
+&lt;p&gt;OK, so hosting may not be seen as an application, but without the host application serving web site pages then no one would see them.&lt;/p&gt;
 
 &lt;p&gt;My host application of choice for static sites is &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt;.  This provides sites “hosted directly from your GitHub repository”.  This is fantastic as I get to benefit from the scalable Github infrastructure, without spending a penny.  Note that the source code in the repository is public, unless you upgrade to a paid plan, starting from about £4.60 a month &lt;a href=&quot;https://github.com/pricing&quot;&gt;Github Pricing&lt;/a&gt;.  As web site content is generally public, having a public repository is a minor concern for static site pages.&lt;/p&gt;
 
@@ -215,7 +434,7 @@
 
 &lt;p&gt;Interestingly, since I have chosen &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt; as my host, by implication I am probably using one of the most well known web software version control applications in the world.&lt;/p&gt;
 
-&lt;p&gt;In order to manage the version control and deployment of my site to the host, I’m using the relatively straight forward &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;.  I am still a novice at using Github, so keep my usage to typing a summary, committing and syncing the changes to the GitHub repository.  &lt;/p&gt;
+&lt;p&gt;In order to manage the version control and deployment of my site to the host, I’m using the relatively straight forward &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;.  I am still a novice at using Github, so keep my usage to typing a summary, committing and syncing the changes to the GitHub repository.&lt;/p&gt;
 
 &lt;h3 id=&quot;command-line-interfacehttpsenwikipediaorgwikicommand-lineinterface&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command-line_interface&quot;&gt;Command line Interface&lt;/a&gt;&lt;/h3&gt;
 
@@ -260,7 +479,7 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Install a user specific version of Ruby using  &lt;/p&gt;
+&lt;p&gt;Install a user specific version of Ruby using&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install ruby&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -305,7 +524,7 @@
         <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 2</title>
         <description>&lt;h3 id=&quot;create-the-site&quot;&gt;Create the Site&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I wanted to move my site from GoDaddy to DigitalOcean.  &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I wanted to move my site from GoDaddy to DigitalOcean.&lt;/p&gt;
 
 &lt;p&gt;I will describe how I moved an existing site from GoDaddy to DigitalOcean hosting via ServerPilot.io. The steps to install and migrate WordPress content and database to DigitalOcean.  Finally, moving the domain name server to DigitalOcean.&lt;/p&gt;
 
@@ -343,7 +562,7 @@ rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/4wordpress_installer.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As I am migrating an existing WordPress site, I am not going to continue with the install.  &lt;/p&gt;
+&lt;p&gt;As I am migrating an existing WordPress site, I am not going to continue with the install.&lt;/p&gt;
 
 &lt;p&gt;Now, using Filezilla, download the operascool WordPress files from GoDaddy to a local folder on my Mac.&lt;/p&gt;
 
@@ -367,7 +586,7 @@ rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wp_posts&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;guid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;guid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://operascool.org/operascoolwp/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://operascool.org&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Now we need to update the database credentials in the WordPress config file.  &lt;/p&gt;
+&lt;p&gt;Now we need to update the database credentials in the WordPress config file.&lt;/p&gt;
 
 &lt;p&gt;SSH back to to the apps public directory on the DigitalOcean server and type the following:&lt;/p&gt;
 
@@ -395,7 +614,7 @@ define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot
 
 &lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/9digitalocean_add_domain.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.  &lt;/p&gt;
+&lt;p&gt;and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/10digitalocean_add_cname.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
 
@@ -417,7 +636,7 @@ ns3.digitalocean.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.  &lt;/p&gt;
+&lt;p&gt;That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.&lt;/p&gt;
 
 &lt;p&gt;More details on Creating DigitalOcean droplets and ServerPilot.io accounts can be found at this useful blog by &lt;a href=&quot;http://blog.thepascalbecker.com/2015/01/05/getting-started-with-a-vps/&quot;&gt;Pascal Becker&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -434,7 +653,7 @@ ns3.digitalocean.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
       <item>
         <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 1</title>
-        <description>&lt;p&gt;It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at &lt;a href=&quot;http://GoDaddy.com&quot;&gt;GoDaddy.com&lt;/a&gt;.  &lt;/p&gt;
+        <description>&lt;p&gt;It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at &lt;a href=&quot;http://GoDaddy.com&quot;&gt;GoDaddy.com&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;However, now they want to charge me an arm and a leg to renew - GoDaddy provides a great price for new customers, but charge &lt;strong&gt;alot&lt;/strong&gt; when you are locked in.&lt;/p&gt;
 
@@ -452,7 +671,7 @@ ns3.digitalocean.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;DigitalOcean is managed through a command line terminal, so if you are slightly allergic to the thought of typing commands, it’s propably not for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt; is a simple  management system for DigitalOcean servers. Even their free plan takes care automatically of basic server security and PHP application management.  &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt; is a simple  management system for DigitalOcean servers. Even their free plan takes care automatically of basic server security and PHP application management.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;$10 credit at ServerPilot.io&lt;/a&gt;&lt;/p&gt;
 

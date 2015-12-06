@@ -75,7 +75,7 @@
   <article class="post-content">
     <h3 id="create-the-site">Create the Site</h3>
 
-<p><a href="/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html">In my previous post,</a> I described why I wanted to move my site from GoDaddy to DigitalOcean.  </p>
+<p><a href="/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html">In my previous post,</a> I described why I wanted to move my site from GoDaddy to DigitalOcean.</p>
 
 <p>I will describe how I moved an existing site from GoDaddy to DigitalOcean hosting via ServerPilot.io. The steps to install and migrate WordPress content and database to DigitalOcean.  Finally, moving the domain name server to DigitalOcean.</p>
 
@@ -113,7 +113,7 @@ rmdir wordpress</code></pre></div>
 
 <p><img src="http://www.hywel.me/assets/2015-03-07/4wordpress_installer.png" alt="My helpful screenshot" /></p>
 
-<p>As I am migrating an existing WordPress site, I am not going to continue with the install.  </p>
+<p>As I am migrating an existing WordPress site, I am not going to continue with the install.</p>
 
 <p>Now, using Filezilla, download the operascool WordPress files from GoDaddy to a local folder on my Mac.</p>
 
@@ -137,7 +137,7 @@ rmdir wordpress</code></pre></div>
 
 <div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">update</span> <span class="n">wp_posts</span> <span class="k">set</span> <span class="n">guid</span> <span class="o">=</span> <span class="k">replace</span><span class="p">(</span><span class="n">guid</span><span class="p">,</span> <span class="s1">&#39;http://operascool.org/operascoolwp/&#39;</span><span class="p">,</span><span class="s1">&#39;http://operascool.org&#39;</span><span class="p">);</span></code></pre></div>
 
-<p>Now we need to update the database credentials in the WordPress config file.  </p>
+<p>Now we need to update the database credentials in the WordPress config file.</p>
 
 <p>SSH back to to the apps public directory on the DigitalOcean server and type the following:</p>
 
@@ -165,7 +165,7 @@ define<span class="o">(</span><span class="s1">&#39;DB_HOST&#39;</span>, <span c
 
 <p><img src="http://www.hywel.me/assets/2015-03-07/9digitalocean_add_domain.png" alt="My helpful screenshot" /></p>
 
-<p>and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.  </p>
+<p>and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.</p>
 
 <p><img src="http://www.hywel.me/assets/2015-03-07/10digitalocean_add_cname.png" alt="My helpful screenshot" /></p>
 
@@ -187,7 +187,7 @@ ns3.digitalocean.com</code></pre></div>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public</code></pre></div>
 
-<p>That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.  </p>
+<p>That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.</p>
 
 <p>More details on Creating DigitalOcean droplets and ServerPilot.io accounts can be found at this useful blog by <a href="http://blog.thepascalbecker.com/2015/01/05/getting-started-with-a-vps/">Pascal Becker</a></p>
 

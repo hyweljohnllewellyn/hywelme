@@ -6,13 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title >Have You Wandered Every Land </title>
+  <title >GitHub Pages Custom Domain Names with CloudFlare </title>
 
-  <meta name="description" content="A personal blog site, with musings about technology and documenting what I learn.
-">
+  <meta name="description" content="GitHub allows the configuring of Apex Domains, however is it recommended to use a subdomain’.The CNAME file should be placed in your repository and there sho...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.hywel.me/">
+  <link rel="canonical" href="http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html">
   <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
 </head>
 
@@ -61,95 +60,52 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">GitHub Pages Custom Domain Names with CloudFlare</h1>
+    <p class="post-meta">Dec 6, 2015 ✎ Hywel • CloudFlare GitHub Pages CNAME subdomain DNS</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Dec 6, 2015</span>
+  
+  <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
+  
+  
 
-        <h2>
-          <a class="post-link" href="/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html">GitHub Pages Custom Domain Names with CloudFlare</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 28, 2015</span>
+  <article class="post-content">
+    <h2 id="why-use-a-custom-domain-name">Why Use a Custom Domain Name</h2>
 
-        <h2>
-          <a class="post-link" href="/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html">Toggle Play and Pause on Multiple Audio Files by Clicking Areas on an Image Map</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 23, 2015</span>
+<p>Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.</p>
 
-        <h2>
-          <a class="post-link" href="/2015/11/23/create-jekyll-static-site-posts-using-proseio.html">Create Jekyll Static Site Posts Using Prose.io</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 21, 2015</span>
+<p>If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.</p>
 
-        <h2>
-          <a class="post-link" href="/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html">How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 19, 2015</span>
+<p>The domain name was purchased through <a href="http://namecheap.com">Name Cheap</a>, which is great value for money for domains, though I have struggled somewhat with managing settings through it’s administration console.</p>
 
-        <h2>
-          <a class="post-link" href="/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html">Microsoft Office 365 Catch-all using Additional Alias Email Addresses</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 16, 2015</span>
+<p>Therefore, I generally use CloudFlare, which is a <a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> to administer <a href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name System</a> settings.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/static/site/2015/11/16/applications-used-for-writing-jekyll-static-sites.html"> Applications used for Writing Jekyll Static Sites</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 15, 2015</span>
+<h2 id="github-pages-custom-domain-names">GitHub Pages Custom Domain Names</h2>
 
-        <h2>
-          <a class="post-link" href="/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html">Installing Jekyll Locally on a Mac</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 7, 2015</span>
+<p>GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the <em>‘www’</em>, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the <em>‘www’</em>, as described by GitHub at <a href="https://help.github.com/articles/about-custom-domains-for-github-pages-sites/">About Custom Domains</a>.  Briefly, using GitHub Pages subdomains will make the pages load faster.</p>
 
-        <h2>
-          <a class="post-link" href="/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html"> Moving a WordPress site from GoDaddy to DigitalOcean - Part 2</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 5, 2015</span>
+<p>GitHub has a great guide to configuring <a href="https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/">Custom Subdomains</a>.</p>
 
-        <h2>
-          <a class="post-link" href="/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html"> Moving a WordPress site from GoDaddy to DigitalOcean - Part 1</a>
-        </h2> 
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 1, 2015</span>
+<p>Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub’s own Content Delivery, but for now it seems to work for me.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2015/03/01/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2> 
-      </li>
-    
-  </ul>
+<h3 id="step-1-create-a-cname-file">Step 1: Create a CNAME file</h3>
+<p>The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case <strong>www.victoriancarolsingershire.uk</strong></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><img src="/assets/2015-12-06/cname file github pages custom subdomain.jpg" alt="CNAME GitHub Pages" /></p>
+
+<h3 id="step-2-cloudflare-cname">Step 2: CloudFlare CNAME</h3>
+<p>Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.</p>
+
+<p><img src="/assets/2015/-12-06/cloudflare cname github subdomain.jpg" alt="cloudflare cname github subdomain" /></p>
+
+<p>All Done, your page is published at the new subdomain:</p>
+
+<p><img src="/assets/published.jpg" alt="published.jpg" /></p>
+
+  </article>
 
 </div>
 

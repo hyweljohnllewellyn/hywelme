@@ -47,6 +47,11 @@ prose:
           label: "excerpt"
           element: "text"
           placeholder: "Enter excerpt"
+      - name: "published"
+          field:
+          label: "published"
+          element: "text"
+          value: "true"
       - name: "meta"
         field:
           label: "meta"

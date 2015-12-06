@@ -8,7 +8,7 @@
 
   <title >Adding a Comment System to a Jekyll Static Site with Disqus </title>
 
-  <meta name="description" content="Step By Step to adding a Disqus Comment system">
+  <meta name="description" content="Well, I was amazed to receive some feedback through GitHub regarding a post I made regarding prose.io from Phlow. As a side project and to allow comments, I ...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html">
@@ -105,22 +105,22 @@
 <img src="/assets/2015-12-06/disqus setup instruction.jpg" alt="Disqus setup instructions" /></li>
 </ol>
 
-<h3 id="step-4-as-a-mimimim-ill-add-the-code-to-my-post-pages">Step 4: As a mimimim I’ll add the code to my post pages</h3>
+<h3 id="step-4-add-the-disqus-code-to-my-post-pages">Step 4: Add the Disqus code to my post pages</h3>
 <p>In my post.html after the closing article tag, I’ve added the Disqus code:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">article</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;post-content&quot;</span><span class="o">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">&quot;post-content&quot;</span><span class="nt">&gt;</span>
     
-  <span class="o">&lt;</span><span class="err">/article&gt;</span>
+  <span class="nt">&lt;/article&gt;</span>
 
-<span class="c">&lt;!--</span> <span class="nx">Hywel</span> <span class="nx">Start</span> <span class="nx">Disqus</span> <span class="nx">Comments</span> <span class="o">--&gt;</span>
-  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;disqus_thread&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
-  <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="c">&lt;!-- Hywel Start Disqus Comments --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;disqus_thread&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
       <span class="cm">/**</span>
 <span class="cm">       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.</span>
 <span class="cm">       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables</span>
 <span class="cm">       */</span>
       <span class="kd">var</span> <span class="nx">disqus_config</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-          <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span>  <span class="nx">http</span><span class="o">:</span><span class="c1">//www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html;  // Replace PAGE_URL with your page&#39;s canonical URL variable</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span>  <span class="s2">&quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&quot;</span><span class="p">;</span>  <span class="c1">// Replace PAGE_URL with your page&#39;s canonical URL variable</span>
 
           <span class="c1">//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable</span>
       <span class="p">};</span>
@@ -133,16 +133,18 @@
           <span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;data-timestamp&#39;</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
           <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
       <span class="p">})();</span>
-  <span class="o">&lt;</span><span class="err">/script&gt;</span>
-  <span class="o">&lt;</span><span class="nx">noscript</span><span class="o">&gt;</span><span class="nx">Please</span> <span class="nx">enable</span> <span class="nx">JavaScript</span> <span class="nx">to</span> <span class="nx">view</span> <span class="nx">the</span> <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;https://disqus.com/?ref_noscript&quot;</span> <span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;nofollow&quot;</span><span class="o">&gt;</span><span class="nx">comments</span> <span class="nx">powered</span> <span class="nx">by</span> <span class="nx">Disqus</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/a&gt;&lt;/noscript&gt;</span>
-<span class="c">&lt;!--</span> <span class="nx">Hywel</span> <span class="nx">End</span> <span class="nx">Disqus</span> <span class="nx">Comments</span> <span class="o">--&gt;</span>
+  <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://disqus.com/?ref_noscript&quot;</span> <span class="na">rel=</span><span class="s">&quot;nofollow&quot;</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span>
+<span class="c">&lt;!-- Hywel End Disqus Comments --&gt;</span>
 
-<span class="o">&lt;</span><span class="err">/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <p>Note that I used the canonical URL variable as defined in Jekyll’s head.html</p>
 
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;canonical&quot;</span> <span class="na">href=</span><span class="s">&quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
+<h3 id="step-5-check-that-the-comments-are-showm">Step 5: Check that the comments are showm..</h3>
+<p><img src="/assets/2015-12-06/discus comments on hywelme site.jpg" alt="Disqus comments on hywel.me" /></p>
 
   </article>
 

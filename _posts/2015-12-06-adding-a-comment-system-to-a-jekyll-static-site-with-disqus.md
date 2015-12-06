@@ -45,7 +45,7 @@ As my site is static, I've chosen Universal Code
 ###Step 4: Add the Disqus code to my post pages
 In my post.html after the closing article tag, I've added the Disqus code:
 
-{% highlight javascript %}
+{% highlight html %}
   <article class="post-content">
     {{ content }}
   </article>
@@ -84,7 +84,5 @@ Note that I used the canonical URL variable as defined in Jekyll's head.html
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 {% endhighlight %}
 
-###Step 5: Check that the comments are showm.. 
+###Step 5: Check that the comments are showm..
 ![Disqus comments on hywel.me]({{site.baseurl}}/assets/2015-12-06/discus comments on hywelme site.jpg)
-
-

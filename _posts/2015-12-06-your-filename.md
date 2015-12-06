@@ -30,9 +30,6 @@ GitHub has a great guide to configuring [Custom Subdomains](https://help.github.
 
 Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub's own Content Delivery, but for now it seems to work for me.
 
-
-## Setting the Custom Subdomain
-
 ### Step 1: Create a CNAME file
 The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case **www.victoriancarolsingershire.uk**
 

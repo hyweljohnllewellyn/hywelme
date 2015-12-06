@@ -84,5 +84,5 @@ Note that I used the canonical URL variable as defined in Jekyll's head.html
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 {% endhighlight %}
 
-###Step 5: Check that the comments are showm..
+###Step 5: Check that the comments are shown..
 ![Disqus comments on hywel.me]({{site.baseurl}}/assets/2015-12-06/discus comments on hywelme site.jpg)

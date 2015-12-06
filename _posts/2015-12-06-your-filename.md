@@ -25,4 +25,14 @@ Therefore, I generally use Cloudflare, which is a [Content Delivery Network](htt
 
 GitHub allows the configring of Apex Domains, for example http://victoriancarolsingershire.uk i.e without the _'www'_, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the _'www'_, as described by GitHub at [About Custom Domains](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/).  Briefly, using GitHub Pages subdomains will make the pages load faster.
 
-Finallu 
+GitHub has a great guide to configuring [Custom Subdomains](https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/).
+
+Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub's own Content Delivery, but for now it seems to work for me.
+
+## Setting the Custom Subdomain
+
+### Step 1: Create a CNAME file
+The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case **www.victoriancarolsingershire.uk**
+
+
+

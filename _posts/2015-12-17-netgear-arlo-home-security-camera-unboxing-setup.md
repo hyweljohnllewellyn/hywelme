@@ -10,6 +10,7 @@ title: Netgear Arlo Home Security Camera Unboxing and Basic Setup
 ---
 
 
+
 ##Some Research
 
 Following online research of home security camera options, I had narrowed my choices to Nest and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from about £8 / month, so this extra cost should be considered when making a decision.
@@ -88,15 +89,3 @@ I repeated steps A to D for the second camera
 ![arlo router sync light on]({{site.baseurl}}/assets/9 arlo router sync light on.jpg)
 
 That's it..I will describe some more advanced configuration in an upcoming post.  I would recommend these little cameras for useability..
-
-
-
-
-
-
-
-
-
-
-
-

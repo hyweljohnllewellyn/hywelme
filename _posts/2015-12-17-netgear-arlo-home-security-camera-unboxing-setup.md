@@ -9,11 +9,12 @@ published: true
 title: Netgear Arlo Home Security Camera Unboxing and Basic Setup
 ---
 
+
 ##Some Research
 
-Following online research of home security camera options, I had narrowed my choices to Nest and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from about £8 / month, so this extra cost should be considered when making a decision.
+Following online research of home security camera options, I had narrowed my choices to [Nest](https://store.nest.com/uk/product/camera/) and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from  £6.49/ month, so this extra cost should be considered when making a decision.
 
-As Arlo currently comes with a free basic service, providing 1Gb storage, 10 days history and up to 5 cameras, this was good enough - even though the camera has a higher initial cost.  
+As Arlo currently comes with a free basic service, providing 1Gb storage, 7 days history and up to 5 cameras, this was good enough - even though the camera has a higher initial cost.  
 
 Note that the key downsides to Arlo are that there is no microphone or speaker, so you cannot hear or speak - so as a baby or pet monitor, the Arlo may not be the best choice.
 

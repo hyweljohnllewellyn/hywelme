@@ -11,6 +11,7 @@ title: Netgear Arlo Home Security Camera Unboxing and Basic Setup
 
 
 
+
 ##Some Research
 
 Following online research of home security camera options, I had narrowed my choices to [Nest](https://store.nest.com/uk/product/camera/) and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from  £6.49/ month, so this extra cost should be considered when making a decision.
@@ -35,7 +36,7 @@ Here is the boxed arlo smart home security two camera system:
 
 ####Contents 2
 - 8 lithium 123 batteries _(notice the extra battery compartment for systems with a third camera)_
-- 4 wall mounts )I thought providing extra mounts, was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)
+- 4 wall mounts _(I thought providing extra mounts, was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)_
 
 ![arlo unboxed batteries and wall mount]({{site.baseurl}}/assets/2015-12-17/4 arlo unboxed batteries and wall mount.jpg)
 

@@ -73,37 +73,37 @@
 
 
   <article class="post-content">
-    <h2 id="why-use-a-custom-domain-name">Why Use a Custom Domain Name</h2>
+    ## Why Use a Custom Domain Name
 
-<p>Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.</p>
+Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.
 
-<p>If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.</p>
+If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.
 
-<p>The domain name was purchased through <a href="http://namecheap.com">Name Cheap</a>, which is great value for money for domains, though I have struggled somewhat with managing settings through it’s administration console.</p>
+The domain name was purchased through [Name Cheap](http://namecheap.com), which is great value for money for domains, though I have struggled somewhat with managing settings through it's administration console.
 
-<p>Therefore, I generally use CloudFlare, which is a <a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> to administer <a href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name System</a> settings.</p>
+Therefore, I generally use CloudFlare, which is a [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network) to administer [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) settings.
 
-<h2 id="github-pages-custom-domain-names">GitHub Pages Custom Domain Names</h2>
+## GitHub Pages Custom Domain Names
 
-<p>GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the <em>‘www’</em>, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the <em>‘www’</em>, as described by GitHub at <a href="https://help.github.com/articles/about-custom-domains-for-github-pages-sites/">About Custom Domains</a>.  Briefly, using GitHub Pages subdomains will make the pages load faster.</p>
+GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the _'www'_, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the _'www'_, as described by GitHub at [About Custom Domains](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/).  Briefly, using GitHub Pages subdomains will make the pages load faster.
 
-<p>GitHub has a great guide to configuring <a href="https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/">Custom Subdomains</a>.</p>
+GitHub has a great guide to configuring [Custom Subdomains](https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/).
 
-<p>Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub’s own Content Delivery, but for now it seems to work for me.</p>
+Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub's own Content Delivery, but for now it seems to work for me.
 
-<h3 id="step-1-create-a-cname-file">Step 1: Create a CNAME file</h3>
-<p>The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case <strong>www.victoriancarolsingershire.uk</strong></p>
+### Step 1: Create a CNAME file
+The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case **www.victoriancarolsingershire.uk**
 
-<p><img src="/assets/2015-12-06/cname file github pages custom subdomain.jpg" alt="CNAME GitHub Pages" /></p>
+![CNAME GitHub Pages](/assets/2015-12-06/cname file github pages custom subdomain.jpg)
 
-<h3 id="step-2-cloudflare-cname">Step 2: CloudFlare CNAME</h3>
-<p>Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.</p>
+### Step 2: CloudFlare CNAME
+Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.
 
-<p><img src="/assets/2015/-12-06/cloudflare cname github subdomain.jpg" alt="cloudflare cname github subdomain" /></p>
+![cloudflare cname github subdomain](/assets/2015/-12-06/cloudflare cname github subdomain.jpg)
 
-<p>All Done, your page is published at the new subdomain:</p>
+All Done, your page is published at the new subdomain:
 
-<p><img src="/assets/published.jpg" alt="published.jpg" /></p>
+![published.jpg](/assets/published.jpg)
 
   </article>
 

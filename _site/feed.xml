@@ -6,9 +6,107 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Dec 2015 20:12:47 +0000</pubDate>
-    <lastBuildDate>Sun, 06 Dec 2015 20:12:47 +0000</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 20:16:18 +0000</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 20:16:18 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Netgear Arlo Home Security Camera Unboxing and Basic Setup</title>
+        <description>&lt;h2 id=&quot;some-research&quot;&gt;Some Research&lt;/h2&gt;
+
+&lt;p&gt;Following online research of home security camera options, I had narrowed my choices to Nest and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from about £8 / month, so this extra cost should be considered when making a decision.&lt;/p&gt;
+
+&lt;p&gt;As Arlo currently comes with a free basic service, providing 1Gb storage, 10 days history and up to 5 cameras, this was good enough - even though the camera has a higher initial cost.&lt;/p&gt;
+
+&lt;p&gt;Note that the key downsides to Arlo are that there is no microphone or speaker, so you cannot hear or speak - so as a baby or pet monitor, the Arlo may not be the best choice.&lt;/p&gt;
+
+&lt;p&gt;I eventually bought the 2-camera package for £279.99 at &lt;a href=&quot;http://www.pcworld.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-home-monitoring-and-power/netgear-arlo-smart-home-security-system-10125398-pdt.html?gclid=CjwKEAiA18mzBRCo1e_-y_KLpXISJACEsANGZ_90KxxzCCYcAMPsuoIdvKzYpJ5t-Tzy4RiGtLZ2ZxoCzrfw_wcB&amp;amp;srcid=198&amp;amp;cmpid=ppc~gg~~~Exact&amp;amp;mctag=gg_goog_7904&amp;amp;s_kwcid=AL!3391!3!68396508140!!!g!114416079860!&amp;amp;istCompanyId=9a35962d-802d-4e67-9721-0a3328ca1f02&amp;amp;istItemId=ltpxmmqxr&amp;amp;istBid=tztx&amp;amp;ef_id=VgB68AAAAda8ZfDl:20151217142418:s&quot;&gt;PC World Arlo Camera&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;unboxing&quot;&gt;Unboxing&lt;/h2&gt;
+&lt;p&gt;Here is the boxed arlo smart home security two camera system:
+&lt;img src=&quot;/assets/2015-12-17/1 arlo smart home security camera boxed.jpg&quot; alt=&quot;arlo smart home security camera boxed&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;contents-1&quot;&gt;Contents 1&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;US power plug with UK and EU adapter&lt;/li&gt;
+  &lt;li&gt;Ethernet cable&lt;/li&gt;
+  &lt;li&gt;Wall plugs
+&lt;img src=&quot;/assets/2015-12-17/2 arlo unboxed contents.jpg&quot; alt=&quot;arlo unboxed contents&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;contents-2&quot;&gt;Contents 2&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;8 lithium 123 batteries &lt;em&gt;(notice the extra battery compartment for systems with a third camera)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;4 wall mounts )I thought providing extra mounts, was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)
+&lt;img src=&quot;/assets/2015-12-17/4 arlo unboxed batteries and wall mount.jpg&quot; alt=&quot;arlo unboxed batteries and wall mount&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;contents-3&quot;&gt;Contents 3&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;the netgear base station for the cameras
+&lt;img src=&quot;/assets/2015-12-17//3 arlo unboxed router.jpg&quot; alt=&quot;3 arlo unboxed base station&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;contents-4&quot;&gt;Contents 4&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;the two cameras - notice the standard camera mount at the base of the cameras, that could be used as an alternative to the magnetic mount
+&lt;img src=&quot;/assets/2015-12-17/5 arlo unboxed cameras.jpg&quot; alt=&quot;arlo unboxed cameras&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As there were no instructions included I Used &lt;a href=&quot;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&quot; title=&quot;Arlo Instructions Oct 2015&quot;&gt;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&lt;/a&gt;.  The instructions were very clear and it worked…&lt;/p&gt;
+
+&lt;h2 id=&quot;connect-base-station-to-router-and-register-account&quot;&gt;Connect Base Station to Router and Register Account&lt;/h2&gt;
+
+&lt;h3 id=&quot;connect-base-station-to-home-or-work-router&quot;&gt;Connect Base Station to home or work router&lt;/h3&gt;
+&lt;p&gt;So, following the instructions, I connected the base station directly to a free ethernet port on my BT Home Hub 3 and then powered on the base station.&lt;/p&gt;
+
+&lt;h3 id=&quot;arlo-login-page&quot;&gt;Arlo Login Page&lt;/h3&gt;
+&lt;p&gt;Next, was to register an account at arlo.com/login:
+&lt;img src=&quot;/assets/2015-12-17/10 arlo login page.jpg&quot; alt=&quot;arlo new system setup page&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;system-setup-page&quot;&gt;System Setup Page&lt;/h3&gt;
+&lt;p&gt;Amazingly, the browser defaulted the base station serial number, I just selected my timezone.
+&lt;img src=&quot;/assets/2015-12-17/11 arlo system setup page.jpg&quot; alt=&quot;arlo system setup page&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;account-setup-page&quot;&gt;Account Setup Page&lt;/h3&gt;
+&lt;p&gt;Just some basic information required for the account setup
+&lt;img src=&quot;/assets/2015-12-17/12 arlo account setup page.jpg&quot; alt=&quot;arlo account setup page&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;service-selection-page&quot;&gt;Service Selection Page&lt;/h3&gt;
+&lt;p&gt;Next the all important service selection.  I selected the free Basic plan.
+&lt;img src=&quot;/assets/2015/12-17/13 arlo service selection page.jpg&quot; alt=&quot;arlo service selection page&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sync-cameras-to-base-station&quot;&gt;Sync Cameras to Base Station&lt;/h2&gt;
+
+&lt;h3 id=&quot;a-insert-batteries&quot;&gt;A Insert Batteries&lt;/h3&gt;
+&lt;p&gt;Slightly tricky to open the battery compartment as there is a lock and it slides out and then hinges up… here are the batteries…
+&lt;img src=&quot;/assets/2015-12-17/6 arlo unboxed camera open with batteries.jpg&quot; alt=&quot;arlo unboxed camera open with batteries&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;b-press-the-base-station-sync-button&quot;&gt;B Press the Base Station Sync Button&lt;/h3&gt;
+&lt;p&gt;Note that the instructions mention that the sync status LED should light up - it did not for me, though strategy the USB light lit up… regardless, I continued with the next step
+&lt;img src=&quot;/assets/2015-12-17/7 arlo sync button on router.jpg&quot; alt=&quot;arlo sync button on router&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;c-press-the-camera-sync-button&quot;&gt;C Press the Camera Sync Button&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/8 arlo camera sync button.jpg&quot; alt=&quot;arlo camera sync button&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;d-streaming-video&quot;&gt;D Streaming Video!&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/15 camera streaming.jpg&quot; alt=&quot;camera streaming&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I repeated steps A to D for the second camera&lt;/p&gt;
+
+&lt;h3 id=&quot;base-station-with-camera-sync-light&quot;&gt;Base Station with Camera Sync Light&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/9 arlo router sync light on.jpg&quot; alt=&quot;arlo router sync light on&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s it..I will describe some more advanced configuration in an upcoming post.  I would recommend these little cameras for usability..&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 17:10:00 +0000</pubDate>
+        <link>http://www.hywel.me/gadgets/2015/12/17/netgear-arlo-home-security-camera-unboxing-setup.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/gadgets/2015/12/17/netgear-arlo-home-security-camera-unboxing-setup.html</guid>
+        
+        
+        <category>gadgets</category>
+        
+      </item>
     
       <item>
         <title>Adding a Comment System to a Jekyll Static Site with Disqus</title>
@@ -82,7 +180,7 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;canonical&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;step-5-check-that-the-comments-are-showm&quot;&gt;Step 5: Check that the comments are showm..&lt;/h3&gt;
+&lt;h3 id=&quot;step-5-check-that-the-comments-are-shown&quot;&gt;Step 5: Check that the comments are shown..&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/discus comments on hywelme site.jpg&quot; alt=&quot;Disqus comments on hywel.me&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 06 Dec 2015 19:20:00 +0000</pubDate>
@@ -98,37 +196,37 @@
     
       <item>
         <title>GitHub Pages Custom Domain Names with CloudFlare</title>
-        <description>&lt;h2 id=&quot;why-use-a-custom-domain-name&quot;&gt;Why Use a Custom Domain Name&lt;/h2&gt;
+        <description>## Why Use a Custom Domain Name
 
-&lt;p&gt;Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.&lt;/p&gt;
+Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.
 
-&lt;p&gt;If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.&lt;/p&gt;
+If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.
 
-&lt;p&gt;The domain name was purchased through &lt;a href=&quot;http://namecheap.com&quot;&gt;Name Cheap&lt;/a&gt;, which is great value for money for domains, though I have struggled somewhat with managing settings through it’s administration console.&lt;/p&gt;
+The domain name was purchased through [Name Cheap](http://namecheap.com), which is great value for money for domains, though I have struggled somewhat with managing settings through it&#39;s administration console.
 
-&lt;p&gt;Therefore, I generally use CloudFlare, which is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_delivery_network&quot;&gt;Content Delivery Network&lt;/a&gt; to administer &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_Name_System&quot;&gt;Domain Name System&lt;/a&gt; settings.&lt;/p&gt;
+Therefore, I generally use CloudFlare, which is a [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network) to administer [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) settings.
 
-&lt;h2 id=&quot;github-pages-custom-domain-names&quot;&gt;GitHub Pages Custom Domain Names&lt;/h2&gt;
+## GitHub Pages Custom Domain Names
 
-&lt;p&gt;GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the &lt;em&gt;‘www’&lt;/em&gt;, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the &lt;em&gt;‘www’&lt;/em&gt;, as described by GitHub at &lt;a href=&quot;https://help.github.com/articles/about-custom-domains-for-github-pages-sites/&quot;&gt;About Custom Domains&lt;/a&gt;.  Briefly, using GitHub Pages subdomains will make the pages load faster.&lt;/p&gt;
+GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the _&#39;www&#39;_, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the _&#39;www&#39;_, as described by GitHub at [About Custom Domains](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/).  Briefly, using GitHub Pages subdomains will make the pages load faster.
 
-&lt;p&gt;GitHub has a great guide to configuring &lt;a href=&quot;https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/&quot;&gt;Custom Subdomains&lt;/a&gt;.&lt;/p&gt;
+GitHub has a great guide to configuring [Custom Subdomains](https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/).
 
-&lt;p&gt;Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub’s own Content Delivery, but for now it seems to work for me.&lt;/p&gt;
+Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub&#39;s own Content Delivery, but for now it seems to work for me.
 
-&lt;h3 id=&quot;step-1-create-a-cname-file&quot;&gt;Step 1: Create a CNAME file&lt;/h3&gt;
-&lt;p&gt;The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case &lt;strong&gt;www.victoriancarolsingershire.uk&lt;/strong&gt;&lt;/p&gt;
+### Step 1: Create a CNAME file
+The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case **www.victoriancarolsingershire.uk**
 
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/cname file github pages custom subdomain.jpg&quot; alt=&quot;CNAME GitHub Pages&quot; /&gt;&lt;/p&gt;
+![CNAME GitHub Pages](/assets/2015-12-06/cname file github pages custom subdomain.jpg)
 
-&lt;h3 id=&quot;step-2-cloudflare-cname&quot;&gt;Step 2: CloudFlare CNAME&lt;/h3&gt;
-&lt;p&gt;Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.&lt;/p&gt;
+### Step 2: CloudFlare CNAME
+Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.
 
-&lt;p&gt;&lt;img src=&quot;/assets/2015/-12-06/cloudflare cname github subdomain.jpg&quot; alt=&quot;cloudflare cname github subdomain&quot; /&gt;&lt;/p&gt;
+![cloudflare cname github subdomain](/assets/2015/-12-06/cloudflare cname github subdomain.jpg)
 
-&lt;p&gt;All Done, your page is published at the new subdomain:&lt;/p&gt;
+All Done, your page is published at the new subdomain:
 
-&lt;p&gt;&lt;img src=&quot;/assets/published.jpg&quot; alt=&quot;published.jpg&quot; /&gt;&lt;/p&gt;
+![published.jpg](/assets/published.jpg)
 </description>
         <pubDate>Sun, 06 Dec 2015 14:10:00 +0000</pubDate>
         <link>http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</link>
@@ -729,45 +827,6 @@ ns3.digitalocean.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
         <pubDate>Sat, 07 Mar 2015 21:51:00 +0000</pubDate>
         <link>http://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html</link>
         <guid isPermaLink="true">http://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html</guid>
-        
-        
-        <category>digitalocean</category>
-        
-        <category>wordpress</category>
-        
-      </item>
-    
-      <item>
-        <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 1</title>
-        <description>&lt;p&gt;It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at &lt;a href=&quot;http://GoDaddy.com&quot;&gt;GoDaddy.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;However, now they want to charge me an arm and a leg to renew - GoDaddy provides a great price for new customers, but charge &lt;strong&gt;alot&lt;/strong&gt; when you are locked in.&lt;/p&gt;
-
-&lt;p&gt;Also, the response time for all my websites hosted with GoDaddy had become disappointing - especially now that Solid State Disks (SSDs) are becoming more commonplace with hosting companies.&lt;/p&gt;
-
-&lt;p&gt;I have decided try out the &lt;em&gt;do it yourself&lt;/em&gt; cloud hosting option provided by &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;DigitalOcean.com&lt;/a&gt; partly to learn some new skills and also they have had some great reviews.&lt;/p&gt;
-
-&lt;p&gt;After a quick search online, I found a promotional code to get 2 months free hosting with DigitalOcean.com, so at least I could try before I buy.&lt;/p&gt;
-
-&lt;p&gt;As a member, DigitalOcean offer a referal scheme - please click my link if you’d like to try it for free:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;$10 credit at Digital Ocean&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;DigitalOcean’s documentation and user forums are very active and I found it quite straight forward as a tech-savvy person to get a basic Ubuntu operating system insalled on a &lt;em&gt;droplet&lt;/em&gt; .&lt;/p&gt;
-
-&lt;p&gt;DigitalOcean is managed through a command line terminal, so if you are slightly allergic to the thought of typing commands, it’s propably not for you.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt; is a simple  management system for DigitalOcean servers. Even their free plan takes care automatically of basic server security and PHP application management.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;$10 credit at ServerPilot.io&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I was also tempted with the &lt;a href=&quot;https://www.cloudflare.com&quot;&gt;CloudFlare.com&lt;/a&gt; service as it offers free SSL/ SDPY and static file cache - which is supposed to translate to faster and more Google friendly websites. Worth a try right?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html&quot;&gt;In my next post,&lt;/a&gt; I’ll describe the steps to move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!&lt;/p&gt;
-</description>
-        <pubDate>Thu, 05 Mar 2015 21:31:00 +0000</pubDate>
-        <link>http://www.hywel.me/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html</guid>
         
         
         <category>digitalocean</category>

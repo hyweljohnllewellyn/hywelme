@@ -46,42 +46,42 @@ As there were no instructions included I Used [http://www.downloads.netgear.com/
 
 ##Connect Base Station to Router and Register Account
 
-####Connect Base Station to home or work router
+####Step 1: Connect Base Station to home or work router
 So, following the instructions, I connected the base station directly to a free ethernet port on my BT Home Hub 3 and then powered on the base station.
 
-####Arlo Login Page
+####Step 2: Arlo Login Page
 Next, was to register an account at arlo.com/login:
 ![arlo new system setup page]({{site.baseurl}}/assets/2015-12-17/10 arlo login page.jpg)
 
-####System Setup Page
+####Step 3: System Setup Page
 Amazingly, the browser defaulted the base station serial number, I just selected my timezone.
 ![arlo system setup page]({{site.baseurl}}/assets/2015-12-17/11 arlo system setup page.jpg)
 
-####Account Setup Page
+####Step 4: Account Setup Page
 Just some basic information required for the account setup
 ![arlo account setup page]({{site.baseurl}}/assets/2015-12-17/12 arlo account setup page.jpg)
 
-####Service Selection Page
+####Step 5: Service Selection Page
 Next the all important service selection.  I selected the free Basic plan.
 ![arlo service selection page]({{site.baseurl}}/assets/2015-12-17/13 arlo service selection page.jpg)
 
 ##Sync Cameras to Base Station
 
-####A Insert Batteries
+####Step 6: Insert Batteries
 Slightly tricky to open the battery compartment as there is a lock and it slides out and then hinges up... here are the batteries...
 ![arlo unboxed camera open with batteries]({{site.baseurl}}/assets/2015-12-17/6 arlo unboxed camera open with batteries.jpg)
 
-####B Press the Base Station Sync Button
+####Step 7: Press the Base Station Sync Button
 Note that the instructions mention that the sync status LED should light up - it did not for me, though strategy the USB light lit up... regardless, I continued with the next step
 ![arlo sync button on router]({{site.baseurl}}/assets/2015-12-17/7 arlo sync button on router.jpg)
 
-####C Press the Camera Sync Button
+####Step 8: Press the Camera Sync Button
 ![arlo camera sync button]({{site.baseurl}}/assets/2015-12-17/8 arlo camera sync button.jpg)
 
-####D Streaming Video!
+####Streaming Video!
 ![camera streaming]({{site.baseurl}}/assets/2015-12-17/15 camera streaming.jpg)
 
-I repeated steps A to D for the second camera
+I repeated steps 6 to 8 for the second camera
 
 ####Base Station with Camera Sync Light
 ![arlo router sync light on]({{site.baseurl}}/assets/2015-12-17/9 arlo router sync light on.jpg)

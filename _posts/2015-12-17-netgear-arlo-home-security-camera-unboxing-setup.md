@@ -63,7 +63,7 @@ Just some basic information required for the account setup
 
 ####Service Selection Page
 Next the all important service selection.  I selected the free Basic plan.
-![arlo service selection page]({{site.baseurl}}/assets/2015/12-17/13 arlo service selection page.jpg)
+![arlo service selection page]({{site.baseurl}}/assets/2015-12-17/13 arlo service selection page.jpg)
 
 ##Sync Cameras to Base Station
 

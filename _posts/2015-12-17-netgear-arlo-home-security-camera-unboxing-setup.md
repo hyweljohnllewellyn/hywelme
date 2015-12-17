@@ -10,6 +10,7 @@ title: Netgear Arlo Home Security Camera Unboxing and Basic Setup
 ---
 
 
+
 ##Some Research
 
 Following online research of home security camera options, I had narrowed my choices to [Nest](https://store.nest.com/uk/product/camera/) and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from  £6.49/ month, so this extra cost should be considered when making a decision.
@@ -48,7 +49,7 @@ Here is the boxed arlo smart home security two camera system:
 
 ![arlo unboxed cameras]({{site.baseurl}}/assets/2015-12-17/5 arlo unboxed cameras.jpg)
 
-As there were no instructions included I Used [http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf](http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf "Arlo Instructions Oct 2015").  The instructions were very clear and it worked...
+As there were no instructions included I used [http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf](http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf "Arlo Instructions Oct 2015").  The instructions were very clear and it worked...
 
 ##Connect Base Station to Router and Register Account
 

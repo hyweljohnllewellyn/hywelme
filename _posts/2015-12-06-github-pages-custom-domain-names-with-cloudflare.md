@@ -9,7 +9,6 @@ published: true
 title: GitHub Pages Custom Domain Names with CloudFlare
 ---
 
--
 
 ## Why Use a Custom Domain Name
 

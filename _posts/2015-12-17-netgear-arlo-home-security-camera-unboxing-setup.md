@@ -36,7 +36,7 @@ Here is the boxed arlo smart home security two camera system:
 
 ####Contents 2
 - 8 lithium 123 batteries _(notice the extra battery compartment for systems with a third camera)_
-- 4 wall mounts _(I thought providing extra mounts, was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)_
+- 4 wall mounts _(I thought providing extra mounts was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)_
 
 ![arlo unboxed batteries and wall mount]({{site.baseurl}}/assets/2015-12-17/4 arlo unboxed batteries and wall mount.jpg)
 

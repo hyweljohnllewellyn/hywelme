@@ -88,7 +88,7 @@ Slightly tricky to open the battery compartment as there is a lock and it slides
 ![arlo unboxed camera open with batteries]({{site.baseurl}}/assets/2015-12-17/6 arlo unboxed camera open with batteries.jpg)
 
 ####Step 7: Press the Base Station Sync Button
-Note that the instructions mention that the sync status LED should light up - it did not for me, though strategy the USB light lit up... regardless, I continued with the next step
+Note that the instructions mention that the sync status LED should light up - it did not for me, though strangely, the USB light lit up... regardless, I continued with the next step
 
 ![arlo sync button on router]({{site.baseurl}}/assets/2015-12-17/7 arlo sync button on router.jpg)
 

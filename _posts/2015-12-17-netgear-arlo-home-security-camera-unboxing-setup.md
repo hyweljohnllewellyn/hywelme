@@ -14,13 +14,14 @@ title: Netgear Arlo Home Security Camera Unboxing and Basic Setup
 
 
 
+
 ##Some Research
 
 Following online research of home security camera options, I had narrowed my choices to [Nest](https://store.nest.com/uk/product/camera/) and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from  £6.49/ month, so this extra cost should be considered when making a decision.
 
 As Arlo currently comes with a free basic service, providing 1Gb storage, 7 days history and up to 5 cameras, this was good enough - even though the camera has a higher initial cost.  
 
-Note that the key downsides to Arlo are that there is no microphone or speaker, so you cannot hear or speak - so as a baby or pet monitor, the Arlo may not be the best choice.
+Note that the key downsides to Arlo are that there is no microphone or speaker, so you cannot hear or speak, concequently the Arlo may not be the best choice  as a baby or pet monitor.
 
 I eventually bought the 2-camera package for £279.99 at [PC World Arlo Camera](http://www.pcworld.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-home-monitoring-and-power/netgear-arlo-smart-home-security-system-10125398-pdt.html?gclid=CjwKEAiA18mzBRCo1e_-y_KLpXISJACEsANGZ_90KxxzCCYcAMPsuoIdvKzYpJ5t-Tzy4RiGtLZ2ZxoCzrfw_wcB&srcid=198&cmpid=ppc~gg~~~Exact&mctag=gg_goog_7904&s_kwcid=AL!3391!3!68396508140!!!g!114416079860!&istCompanyId=9a35962d-802d-4e67-9721-0a3328ca1f02&istItemId=ltpxmmqxr&istBid=tztx&ef_id=VgB68AAAAda8ZfDl:20151217142418:s)
 
@@ -105,4 +106,4 @@ I repeated steps 6 to 8 for the second camera
 
 ![arlo router sync light on]({{site.baseurl}}/assets/2015-12-17/9 arlo router sync light on.jpg)
 
-That's it..I will describe some more advanced configuration in an upcoming post.  I would recommend these little cameras because of the simple setup and they are magnetic, so are easy to position.
+That's it..I will describe some more advanced configuration in an upcoming post.  I would recommend these little cameras because of the simplicity of setup and ease to positioning.

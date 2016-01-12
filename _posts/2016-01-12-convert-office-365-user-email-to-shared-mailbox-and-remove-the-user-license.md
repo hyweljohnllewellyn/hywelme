@@ -14,26 +14,48 @@ During peak trade, a temporary member of admin staff was needed, so it was requi
 In order to keep the emails for future reference and/ or for the same staff member to return,  converting the user email to a shared mailbox was the best option.  Then it would be possible to unsubscribe from the Office 365 license.
 
 ## Convert User Mailbox to a Shared Mailbox
-###Step 1 - Go to the Admin console in Office 365 and select Exchange from the options to the left of the screen
 
-###Step 2 - Click On Recipients and select the User Mailbox to be converted
+####Step 1 - Go to the Admin console in Office 365 and select Exchange from the options to the left of the screen
 
-###Step 3 - Click On Convert under the Convert to Shared Mailbox option to the right of the screen.  A warning will be shown, click Yes to continue.
+![admin console in office 365]({{site.baseurl}}/assets/2016-01-12/admin console in office 365.jpg)
 
-###Step 4 - Your regular mailbox has been converted into shared mailbox.  Click Close to continue.   
+![office 365 exchange]({{site.baseurl}}/assets/2016-01-12/office 365 exchange.jpg)
+
+####Step 2 - Click On mailboxes under reciptients
+
+![mailboxes under reciptients]({{site.baseurl}}/assets/2016-01-12/office 365 mailboxes under reciptients.jpg)
+
+####Step 3 - Select the User Mailbox to be converted  and click on Convert under the Convert to Shared Mailbox option to the right of the screen.  A warning will be shown, click Yes to continue.
+
+![mailbox to convert to shared]({{site.baseurl}}/assets/2016-01-12/office 365 mailbox to convert to shared.jpg)
+
+![warning]({{site.baseurl}}/assets/2016-01-12/warning.jpg)
+
+####Step 4 - Your regular mailbox has been converted into shared mailbox.  Click Close to continue.   
+
+![regular mailbox converted to shared.jpg]({{site.baseurl}}/assets/2016-01-12/regular mailbox converted to shared.jpg)
 
 ## Remove Unused Office 365 License
-###Step 5 - Go to the Admin console in Office 365 and Select Active Users under the Users option on the left 
 
-###Step 6 - Select the User and Click Edit under Assigned license on the right of the screen
+####Step 5 - Go to the Admin console in Office 365 and Select Active Users under the Users option on the left 
 
-###Step 7 - Uncheck the Office 365 Business Essentials license and Click Save 
+![office 365 active users.jpg]({{site.baseurl}}/assets/2016-01-12/office 365 active users.jpg)
 
-###Step 8 - Go to the Admin console in Office 365 and select Subscriptions under the Billing option on the left of the screen
+####Step 6 - Select the User and Click Edit under Assigned license on the right of the screen
 
-###Step 9 - Click Add/Remove users and reduce the number of Total licenses by 1 (notice that there are currently two purchased, and one assigned)
+![office 365 assigned user license.jpg]({{site.baseurl}}/assets/2016-01-12/office 365 assigned user license.jpg)
 
-###Step 10 - Click Submit to confirm
+####Step 7 - Uncheck the Office 365 Business Essentials license and Click Save 
+
+![Uncheck Office 365 Business Essentials license.jpg]({{site.baseurl}}/assets/2016-01-12/Uncheck Office 365 Business Essentials license.jpg)
+
+####Step 8 - Go to the Admin console in Office 365 and select Subscriptions under the Billing option on the left of the screen and click Add/Remove users.  Notice that there are currently two purchased, and one assigned.
+
+![office 365 remove user subscription.jpg]({{site.baseurl}}/assets/2016-01-12/office 365 remove user subscription.jpg)
+
+####Step 9 - Reduce the number of Total licenses and click Submit to confirm
+
+![office 365 reduce the number of licenses.jpg]({{site.baseurl}}/assets/2016-01-12/office 365 reduce the number of licenses.jpg)
 
 This subscription's quantity was successfully updated.  Done!
 

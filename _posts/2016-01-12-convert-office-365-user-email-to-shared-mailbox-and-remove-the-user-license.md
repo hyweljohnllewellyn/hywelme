@@ -40,7 +40,7 @@ In order to keep the emails for future reference and/ or for the same staff memb
 ![regular mailbox converted to shared.jpg]({{site.baseurl}}/assets/2016-01-12/regular mailbox converted to shared.jpg)
 
 
-## Remove Unused Office 365 License
+## Unsubscribe from Unused Office 365 License
 
 
 ####Step 5 - Go to the Admin console in Office 365 and Select Active Users under the Users option on the left 

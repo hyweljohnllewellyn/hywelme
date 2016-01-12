@@ -36,4 +36,6 @@ In order to keep the emails for future reference and/ or for the same staff memb
 ###Step 10 - Click Submit to confirm
 
 This subscription's quantity was successfully updated.  Done!
-Note that you could now provide access to the new shared mailbox to other users.  I discuss this in a related post.
+Note that you could now provide access to the new shared mailbox to other users see [Open and Used a Shared Mailbox](https://support.office.com/en-my/article/Open-and-use-a-shared-mailbox-in-Outlook-Web-App-bc127866-42be-4de7-92ae-1ef2f787fd5c?ui=en-US&rs=en-MY&ad=MY#__migbm_0).  
+
+I also describe [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html).

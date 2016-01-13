@@ -6,98 +6,181 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Dec 2015 20:16:18 +0000</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 20:16:18 +0000</lastBuildDate>
+    <pubDate>Wed, 13 Jan 2016 18:15:36 +0000</pubDate>
+    <lastBuildDate>Wed, 13 Jan 2016 18:15:36 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Convert Office 365 User Email to Shared Mailbox and Remove the User License</title>
+        <description>&lt;h2 id=&quot;what-is-the-scenario&quot;&gt;What is the Scenario?&lt;/h2&gt;
+&lt;p&gt;A temporary member of admin staff was provided with a dedicated user mailbox and therefore an Office 365 License.  Now the staff member is no longer required, the License can be released.&lt;/p&gt;
+
+&lt;p&gt;In order to keep the email for future reference and/ or for the same staff member to return,  converting the user email to a shared mailbox is the best option.  It would then be possible to unsubscribe from the Office 365 license.&lt;/p&gt;
+
+&lt;h2 id=&quot;convert-user-mailbox-to-a-shared-mailbox&quot;&gt;Convert User Mailbox to a Shared Mailbox&lt;/h2&gt;
+
+&lt;h4 id=&quot;step-1---go-to-the-admin-console-in-office-365-and-select-exchange-from-the-options-to-the-left-of-the-screen&quot;&gt;Step 1 - Go to the Admin console in Office 365 and select Exchange from the options to the left of the screen&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/admin console in office 365.jpg&quot; alt=&quot;admin console in office 365&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 exchange.jpg&quot; alt=&quot;office 365 exchange&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2---click-on-mailboxes-under-reciptients&quot;&gt;Step 2 - Click On mailboxes under reciptients&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 mailboxes under reciptients.jpg&quot; alt=&quot;mailboxes under reciptients&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-3---select-the-user-mailbox-to-be-converted--and-click-on-convert-under-the-convert-to-shared-mailbox-option-to-the-right-of-the-screen--a-warning-will-be-shown-click-yes-to-continue&quot;&gt;Step 3 - Select the User Mailbox to be converted  and click on Convert under the Convert to Shared Mailbox option to the right of the screen.  A warning will be shown, click Yes to continue.&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 mailbox to convert to shared.jpg&quot; alt=&quot;mailbox to convert to shared&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/warning.jpg&quot; alt=&quot;warning&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4---your-regular-mailbox-has-been-converted-into-shared-mailbox--click-close-to-continue&quot;&gt;Step 4 - Your regular mailbox has been converted into shared mailbox.  Click Close to continue.&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/regular mailbox converted to shared.jpg&quot; alt=&quot;regular mailbox converted to shared.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;unsubscribe-from-unused-office-365-license&quot;&gt;Unsubscribe from Unused Office 365 License&lt;/h2&gt;
+
+&lt;h4 id=&quot;step-5---go-to-the-admin-console-in-office-365-and-select-active-users-under-the-users-option-on-the-left&quot;&gt;Step 5 - Go to the Admin console in Office 365 and Select Active Users under the Users option on the left&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 active users.jpg&quot; alt=&quot;office 365 active users.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-6---select-the-user-and-click-edit-under-assigned-license-on-the-right-of-the-screen&quot;&gt;Step 6 - Select the User and Click Edit under Assigned license on the right of the screen&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 assigned user license.jpg&quot; alt=&quot;office 365 assigned user license.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-7---uncheck-the-office-365-business-essentials-license-and-click-save&quot;&gt;Step 7 - Uncheck the Office 365 Business Essentials license and Click Save&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/Uncheck Office 365 Business Essentials license.jpg&quot; alt=&quot;Uncheck Office 365 Business Essentials license.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-8---in-the-admin-console-of-office-365-select-subscriptions-under-the-billing-option-on-the-left-of-the-screen--then-click-addremove-users--notice-that-there-are-currently-two-purchased-and-one-assigned&quot;&gt;Step 8 - In the Admin console of Office 365, select Subscriptions under the Billing option on the left of the screen.  Then click Add/Remove users.  Notice that there are currently two purchased, and one assigned.&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 remove user subscription.jpg&quot; alt=&quot;office 365 remove user subscription.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-9---reduce-the-number-of-total-licenses-and-click-submit-to-confirm&quot;&gt;Step 9 - Reduce the number of Total licenses and click Submit to confirm&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 reduce the number of licenses.jpg&quot; alt=&quot;office 365 reduce the number of licenses.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This subscription’s quantity was successfully updated.  Done!&lt;/p&gt;
+
+&lt;p&gt;Note that you could now provide access to the new shared mailbox to other users,  see &lt;a href=&quot;https://support.office.com/en-my/article/Open-and-use-a-shared-mailbox-in-Outlook-Web-App-bc127866-42be-4de7-92ae-1ef2f787fd5c?ui=en-US&amp;amp;rs=en-MY&amp;amp;ad=MY#__migbm_0&quot;&gt;Open and Use a Shared Mailbox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I also describe &lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html&quot;&gt;How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Jan 2016 20:43:00 +0000</pubDate>
+        <link>http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html</guid>
+        
+        
+        <category>small</category>
+        
+        <category>business</category>
+        
+        <category>email</category>
+        
+      </item>
     
       <item>
         <title>Netgear Arlo Home Security Camera Unboxing and Basic Setup</title>
         <description>&lt;h2 id=&quot;some-research&quot;&gt;Some Research&lt;/h2&gt;
 
-&lt;p&gt;Following online research of home security camera options, I had narrowed my choices to Nest and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from about £8 / month, so this extra cost should be considered when making a decision.&lt;/p&gt;
+&lt;p&gt;Following online research of home security camera options, I had narrowed my choices to &lt;a href=&quot;https://store.nest.com/uk/product/camera/&quot;&gt;Nest&lt;/a&gt; and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from  £6.49/ month, so this extra cost should be considered when making a decision.&lt;/p&gt;
 
-&lt;p&gt;As Arlo currently comes with a free basic service, providing 1Gb storage, 10 days history and up to 5 cameras, this was good enough - even though the camera has a higher initial cost.&lt;/p&gt;
+&lt;p&gt;As Arlo currently comes with a free basic service, providing 1Gb storage, 7 days history and up to 5 cameras, this was good enough - even though the camera has a higher initial cost.&lt;/p&gt;
 
-&lt;p&gt;Note that the key downsides to Arlo are that there is no microphone or speaker, so you cannot hear or speak - so as a baby or pet monitor, the Arlo may not be the best choice.&lt;/p&gt;
+&lt;p&gt;Note that the key downsides to Arlo are that there is no microphone or speaker, so you cannot hear or speak, concequently the Arlo may not be the best choice  as a baby or pet monitor.&lt;/p&gt;
 
 &lt;p&gt;I eventually bought the 2-camera package for £279.99 at &lt;a href=&quot;http://www.pcworld.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-home-monitoring-and-power/netgear-arlo-smart-home-security-system-10125398-pdt.html?gclid=CjwKEAiA18mzBRCo1e_-y_KLpXISJACEsANGZ_90KxxzCCYcAMPsuoIdvKzYpJ5t-Tzy4RiGtLZ2ZxoCzrfw_wcB&amp;amp;srcid=198&amp;amp;cmpid=ppc~gg~~~Exact&amp;amp;mctag=gg_goog_7904&amp;amp;s_kwcid=AL!3391!3!68396508140!!!g!114416079860!&amp;amp;istCompanyId=9a35962d-802d-4e67-9721-0a3328ca1f02&amp;amp;istItemId=ltpxmmqxr&amp;amp;istBid=tztx&amp;amp;ef_id=VgB68AAAAda8ZfDl:20151217142418:s&quot;&gt;PC World Arlo Camera&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;unboxing&quot;&gt;Unboxing&lt;/h2&gt;
-&lt;p&gt;Here is the boxed arlo smart home security two camera system:
-&lt;img src=&quot;/assets/2015-12-17/1 arlo smart home security camera boxed.jpg&quot; alt=&quot;arlo smart home security camera boxed&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Here is the boxed arlo smart home security two camera system:&lt;/p&gt;
 
-&lt;h3 id=&quot;contents-1&quot;&gt;Contents 1&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/1 arlo smart home security camera boxed.jpg&quot; alt=&quot;arlo smart home security camera boxed&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;contents-1&quot;&gt;Contents 1&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;US power plug with UK and EU adapter&lt;/li&gt;
   &lt;li&gt;Ethernet cable&lt;/li&gt;
-  &lt;li&gt;Wall plugs
-&lt;img src=&quot;/assets/2015-12-17/2 arlo unboxed contents.jpg&quot; alt=&quot;arlo unboxed contents&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Wall plugs&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;contents-2&quot;&gt;Contents 2&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/2 arlo unboxed contents.jpg&quot; alt=&quot;arlo unboxed contents&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;contents-2&quot;&gt;Contents 2&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;8 lithium 123 batteries &lt;em&gt;(notice the extra battery compartment for systems with a third camera)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;4 wall mounts )I thought providing extra mounts, was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)
-&lt;img src=&quot;/assets/2015-12-17/4 arlo unboxed batteries and wall mount.jpg&quot; alt=&quot;arlo unboxed batteries and wall mount&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;4 wall mounts &lt;em&gt;(I thought providing extra mounts was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;contents-3&quot;&gt;Contents 3&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/4 arlo unboxed batteries and wall mount.jpg&quot; alt=&quot;arlo unboxed batteries and wall mount&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;contents-3&quot;&gt;Contents 3&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;the netgear base station for the cameras
-&lt;img src=&quot;/assets/2015-12-17//3 arlo unboxed router.jpg&quot; alt=&quot;3 arlo unboxed base station&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;the netgear base station for the cameras&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;contents-4&quot;&gt;Contents 4&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17//3 arlo unboxed router.jpg&quot; alt=&quot;3 arlo unboxed base station&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;contents-4&quot;&gt;Contents 4&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;the two cameras - notice the standard camera mount at the base of the cameras, that could be used as an alternative to the magnetic mount
-&lt;img src=&quot;/assets/2015-12-17/5 arlo unboxed cameras.jpg&quot; alt=&quot;arlo unboxed cameras&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;the two cameras - notice the standard camera mount at the base of the cameras, that could be used as an alternative to the magnetic mount&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As there were no instructions included I Used &lt;a href=&quot;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&quot; title=&quot;Arlo Instructions Oct 2015&quot;&gt;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&lt;/a&gt;.  The instructions were very clear and it worked…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/5 arlo unboxed cameras.jpg&quot; alt=&quot;arlo unboxed cameras&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As there were no instructions included I used &lt;a href=&quot;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&quot; title=&quot;Arlo Instructions Oct 2015&quot;&gt;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&lt;/a&gt;.  The instructions were very clear and it worked…&lt;/p&gt;
 
 &lt;h2 id=&quot;connect-base-station-to-router-and-register-account&quot;&gt;Connect Base Station to Router and Register Account&lt;/h2&gt;
 
-&lt;h3 id=&quot;connect-base-station-to-home-or-work-router&quot;&gt;Connect Base Station to home or work router&lt;/h3&gt;
+&lt;h4 id=&quot;step-1-connect-base-station-to-home-or-work-router&quot;&gt;Step 1: Connect Base Station to home or work router&lt;/h4&gt;
 &lt;p&gt;So, following the instructions, I connected the base station directly to a free ethernet port on my BT Home Hub 3 and then powered on the base station.&lt;/p&gt;
 
-&lt;h3 id=&quot;arlo-login-page&quot;&gt;Arlo Login Page&lt;/h3&gt;
-&lt;p&gt;Next, was to register an account at arlo.com/login:
-&lt;img src=&quot;/assets/2015-12-17/10 arlo login page.jpg&quot; alt=&quot;arlo new system setup page&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;step-2-arlo-login-page&quot;&gt;Step 2: Arlo Login Page&lt;/h4&gt;
+&lt;p&gt;Next, was to register an account at arlo.com/login:&lt;/p&gt;
 
-&lt;h3 id=&quot;system-setup-page&quot;&gt;System Setup Page&lt;/h3&gt;
-&lt;p&gt;Amazingly, the browser defaulted the base station serial number, I just selected my timezone.
-&lt;img src=&quot;/assets/2015-12-17/11 arlo system setup page.jpg&quot; alt=&quot;arlo system setup page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/10 arlo login page.jpg&quot; alt=&quot;arlo new system setup page&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;account-setup-page&quot;&gt;Account Setup Page&lt;/h3&gt;
-&lt;p&gt;Just some basic information required for the account setup
-&lt;img src=&quot;/assets/2015-12-17/12 arlo account setup page.jpg&quot; alt=&quot;arlo account setup page&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;step-3-system-setup-page&quot;&gt;Step 3: System Setup Page&lt;/h4&gt;
+&lt;p&gt;Amazingly, the browser defaulted the base station serial number, I just selected my timezone.&lt;/p&gt;
 
-&lt;h3 id=&quot;service-selection-page&quot;&gt;Service Selection Page&lt;/h3&gt;
-&lt;p&gt;Next the all important service selection.  I selected the free Basic plan.
-&lt;img src=&quot;/assets/2015/12-17/13 arlo service selection page.jpg&quot; alt=&quot;arlo service selection page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/11 arlo system setup page.jpg&quot; alt=&quot;arlo system setup page&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4-account-setup-page&quot;&gt;Step 4: Account Setup Page&lt;/h4&gt;
+&lt;p&gt;Just some basic information required for the account setup&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/12 arlo account setup page.jpg&quot; alt=&quot;arlo account setup page&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-5-service-selection-page&quot;&gt;Step 5: Service Selection Page&lt;/h4&gt;
+&lt;p&gt;Next the all important service selection.  I selected the free Basic plan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/13 arlo service selection page.jpg&quot; alt=&quot;arlo service selection page&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;sync-cameras-to-base-station&quot;&gt;Sync Cameras to Base Station&lt;/h2&gt;
 
-&lt;h3 id=&quot;a-insert-batteries&quot;&gt;A Insert Batteries&lt;/h3&gt;
-&lt;p&gt;Slightly tricky to open the battery compartment as there is a lock and it slides out and then hinges up… here are the batteries…
-&lt;img src=&quot;/assets/2015-12-17/6 arlo unboxed camera open with batteries.jpg&quot; alt=&quot;arlo unboxed camera open with batteries&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;step-6-insert-batteries&quot;&gt;Step 6: Insert Batteries&lt;/h4&gt;
+&lt;p&gt;Slightly tricky to open the battery compartment as there is a lock and it slides out and then hinges up… here are the batteries…&lt;/p&gt;
 
-&lt;h3 id=&quot;b-press-the-base-station-sync-button&quot;&gt;B Press the Base Station Sync Button&lt;/h3&gt;
-&lt;p&gt;Note that the instructions mention that the sync status LED should light up - it did not for me, though strategy the USB light lit up… regardless, I continued with the next step
-&lt;img src=&quot;/assets/2015-12-17/7 arlo sync button on router.jpg&quot; alt=&quot;arlo sync button on router&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/6 arlo unboxed camera open with batteries.jpg&quot; alt=&quot;arlo unboxed camera open with batteries&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;c-press-the-camera-sync-button&quot;&gt;C Press the Camera Sync Button&lt;/h3&gt;
+&lt;h4 id=&quot;step-7-press-the-base-station-sync-button&quot;&gt;Step 7: Press the Base Station Sync Button&lt;/h4&gt;
+&lt;p&gt;Note that the instructions mention that the sync status LED should light up - it did not for me, though strangely, the USB light lit up… regardless, I continued with the next step&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/7 arlo sync button on router.jpg&quot; alt=&quot;arlo sync button on router&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-8-press-the-camera-sync-button&quot;&gt;Step 8: Press the Camera Sync Button&lt;/h4&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/8 arlo camera sync button.jpg&quot; alt=&quot;arlo camera sync button&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;d-streaming-video&quot;&gt;D Streaming Video!&lt;/h3&gt;
+&lt;h4 id=&quot;streaming-video&quot;&gt;Streaming Video!&lt;/h4&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/15 camera streaming.jpg&quot; alt=&quot;camera streaming&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I repeated steps A to D for the second camera&lt;/p&gt;
+&lt;p&gt;I repeated steps 6 to 8 for the second camera&lt;/p&gt;
 
-&lt;h3 id=&quot;base-station-with-camera-sync-light&quot;&gt;Base Station with Camera Sync Light&lt;/h3&gt;
+&lt;h4 id=&quot;base-station-with-camera-sync-light&quot;&gt;Base Station with Camera Sync Light&lt;/h4&gt;
+
 &lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/9 arlo router sync light on.jpg&quot; alt=&quot;arlo router sync light on&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;That’s it..I will describe some more advanced configuration in an upcoming post.  I would recommend these little cameras for usability..&lt;/p&gt;
+&lt;p&gt;That’s it..I will describe some more advanced configuration in an upcoming post.  I would recommend these little cameras because of the simplicity of setup and positioning.&lt;/p&gt;
 </description>
         <pubDate>Thu, 17 Dec 2015 17:10:00 +0000</pubDate>
         <link>http://www.hywel.me/gadgets/2015/12/17/netgear-arlo-home-security-camera-unboxing-setup.html</link>
@@ -105,6 +188,51 @@
         
         
         <category>gadgets</category>
+        
+      </item>
+    
+      <item>
+        <title>GitHub Pages Custom Domain Names with CloudFlare</title>
+        <description>&lt;h2 id=&quot;why-use-a-custom-domain-name&quot;&gt;Why Use a Custom Domain Name&lt;/h2&gt;
+
+&lt;p&gt;Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.&lt;/p&gt;
+
+&lt;p&gt;If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.&lt;/p&gt;
+
+&lt;p&gt;The domain name was purchased through &lt;a href=&quot;http://namecheap.com&quot;&gt;Name Cheap&lt;/a&gt;, which is great value for money for domains, though I have struggled somewhat with managing settings through it’s administration console.&lt;/p&gt;
+
+&lt;p&gt;Therefore, I generally use CloudFlare, which is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_delivery_network&quot;&gt;Content Delivery Network&lt;/a&gt; to administer &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_Name_System&quot;&gt;Domain Name System&lt;/a&gt; settings.&lt;/p&gt;
+
+&lt;h2 id=&quot;github-pages-custom-domain-names&quot;&gt;GitHub Pages Custom Domain Names&lt;/h2&gt;
+
+&lt;p&gt;GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the &lt;em&gt;‘www’&lt;/em&gt;, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the &lt;em&gt;‘www’&lt;/em&gt;, as described by GitHub at &lt;a href=&quot;https://help.github.com/articles/about-custom-domains-for-github-pages-sites/&quot;&gt;About Custom Domains&lt;/a&gt;.  Briefly, using GitHub Pages subdomains will make the pages load faster.&lt;/p&gt;
+
+&lt;p&gt;GitHub has a great guide to configuring &lt;a href=&quot;https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/&quot;&gt;Custom Subdomains&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub’s own Content Delivery, but for now it seems to work for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-create-a-cname-file&quot;&gt;Step 1: Create a CNAME file&lt;/h3&gt;
+&lt;p&gt;The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case &lt;strong&gt;www.victoriancarolsingershire.uk&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/cname file github pages custom subdomain.jpg&quot; alt=&quot;CNAME GitHub Pages&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-cloudflare-cname&quot;&gt;Step 2: CloudFlare CNAME&lt;/h3&gt;
+&lt;p&gt;Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2015/-12-06/cloudflare cname github subdomain.jpg&quot; alt=&quot;cloudflare cname github subdomain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All Done, your page is published at the new subdomain:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/published.jpg&quot; alt=&quot;published.jpg&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Dec 2015 20:17:00 +0000</pubDate>
+        <link>http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</guid>
+        
+        
+        <category>static</category>
+        
+        <category>sites</category>
         
       </item>
     
@@ -191,51 +319,6 @@
         <category>static</category>
         
         <category>site</category>
-        
-      </item>
-    
-      <item>
-        <title>GitHub Pages Custom Domain Names with CloudFlare</title>
-        <description>## Why Use a Custom Domain Name
-
-Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.
-
-If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.
-
-The domain name was purchased through [Name Cheap](http://namecheap.com), which is great value for money for domains, though I have struggled somewhat with managing settings through it&#39;s administration console.
-
-Therefore, I generally use CloudFlare, which is a [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network) to administer [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) settings.
-
-## GitHub Pages Custom Domain Names
-
-GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the _&#39;www&#39;_, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the _&#39;www&#39;_, as described by GitHub at [About Custom Domains](https://help.github.com/articles/about-custom-domains-for-github-pages-sites/).  Briefly, using GitHub Pages subdomains will make the pages load faster.
-
-GitHub has a great guide to configuring [Custom Subdomains](https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/).
-
-Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub&#39;s own Content Delivery, but for now it seems to work for me.
-
-### Step 1: Create a CNAME file
-The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case **www.victoriancarolsingershire.uk**
-
-![CNAME GitHub Pages](/assets/2015-12-06/cname file github pages custom subdomain.jpg)
-
-### Step 2: CloudFlare CNAME
-Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.
-
-![cloudflare cname github subdomain](/assets/2015/-12-06/cloudflare cname github subdomain.jpg)
-
-All Done, your page is published at the new subdomain:
-
-![published.jpg](/assets/published.jpg)
-</description>
-        <pubDate>Sun, 06 Dec 2015 14:10:00 +0000</pubDate>
-        <link>http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</guid>
-        
-        
-        <category>static</category>
-        
-        <category>sites</category>
         
       </item>
     
@@ -701,137 +784,6 @@ All Done, your page is published at the new subdomain:
         <category>static</category>
         
         <category>site</category>
-        
-      </item>
-    
-      <item>
-        <title> Moving a WordPress site from GoDaddy to DigitalOcean - Part 2</title>
-        <description>&lt;h3 id=&quot;create-the-site&quot;&gt;Create the Site&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;/digitalocean/wordpress/2015/03/05/moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I wanted to move my site from GoDaddy to DigitalOcean.&lt;/p&gt;
-
-&lt;p&gt;I will describe how I moved an existing site from GoDaddy to DigitalOcean hosting via ServerPilot.io. The steps to install and migrate WordPress content and database to DigitalOcean.  Finally, moving the domain name server to DigitalOcean.&lt;/p&gt;
-
-&lt;p&gt;The site I am moving is &lt;a href=&quot;http://operascool.org&quot;&gt;operascool.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/0operascoolorg_godaddy.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On my DigitalOcean server I use ServerPilot.io to manage the server as mentioned in part 1 of this blog.&lt;/p&gt;
-
-&lt;p&gt;So login to the ServerPilot.io account and create a new app called operascoolorg&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/1serverpilot_create_app.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This creates a new public folder for my new operascoolorg app.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/2serverpilot_app_directory.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;and it is instantly available on the web:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/3serverpilot_app_setup.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;migrate-wordpress-folders&quot;&gt;Migrate WordPress Folders&lt;/h3&gt;
-
-&lt;p&gt;Next, SSH to the apps public directory on the DigitalOcean server.  My app is located in apps/operascoolorg/public folder.&lt;/p&gt;
-
-&lt;p&gt;Then download the latest Wordpress version using the following:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget https://wordpress.org/latest.tar.gz
-tar xzf latest.tar.gz
-mv wordpress/* .
-rm latest.tar.gz
-rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Browsing the sites domain URL will show the WordPress installer:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/4wordpress_installer.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As I am migrating an existing WordPress site, I am not going to continue with the install.&lt;/p&gt;
-
-&lt;p&gt;Now, using Filezilla, download the operascool WordPress files from GoDaddy to a local folder on my Mac.&lt;/p&gt;
-
-&lt;p&gt;The only content that I want to keep from the GoDaddy server are in the wp-content folder: a custom theme “wpcartoons” and the uploads folder with the images for the site.&lt;/p&gt;
-
-&lt;p&gt;Again using Filezilla, I upload these folders to the wp-content folder on the DigitalOcean server:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/5ftp_wpcontent_to_newsite.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;migrate-wordpress-database&quot;&gt;Migrate WordPress Database&lt;/h3&gt;
-
-&lt;p&gt;Going back to ServerPilot.io, a database is created for the operascoolorg app.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/6serverpilot_create_database.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Using my favorite MySQL database software &lt;a href=&quot;http://www.sequelpro.com/&quot;&gt;SequelPro&lt;/a&gt;, I export the database from GoDaddy and Import to the newly created operascoolorg database.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/7sequelpro_export_database.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Whilst still in SequelPro, I need to update the post id’s as they have moved folder location (you may not need to do this):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wp_posts&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;guid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;guid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://operascool.org/operascoolwp/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://operascool.org&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now we need to update the database credentials in the WordPress config file.&lt;/p&gt;
-
-&lt;p&gt;SSH back to to the apps public directory on the DigitalOcean server and type the following:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mv wp-config-sample.php wp-config.php
-nano wp-config.php&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/8nano_wpconfig.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This will allow me to update the database configuration to that created by ServerPilot.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_NAME&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;database_name_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_USER&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;username_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_PASSWORD&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;password_here&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-define&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;DB_HOST&amp;#39;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that the localhost for my server is 127.0.0.1.  Save the file.&lt;/p&gt;
-
-&lt;h3 id=&quot;move-domain-name-server-to-digitalocean&quot;&gt;Move Domain Name Server to DigitalOcean&lt;/h3&gt;
-
-&lt;p&gt;Firstly, I will add the operascool.org domain to my operascoolorg app in ServerPilot.io:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/10Aserverpilot_add_domain.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now to add the operascool.org DNS to my DigitalOcean server:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/9digitalocean_add_domain.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/10digitalocean_add_cname.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Login to the GoDaddy account and go to the operascool.org Domain settings to manage the Nameservers:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/11godaddy_nameserver.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Select Custom and enter the DigitalOcean domain servers:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ns1.digitalocean.com
-ns2.digitalocean.com
-ns3.digitalocean.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-03-07/12godaddy_costom_nameserver.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Wait the usual time for the details to propagate across the world.&lt;/p&gt;
-
-&lt;p&gt;Lastly, I synchronise the file from the DigitalOcean server to my local Mac as a backup:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.&lt;/p&gt;
-
-&lt;p&gt;More details on Creating DigitalOcean droplets and ServerPilot.io accounts can be found at this useful blog by &lt;a href=&quot;http://blog.thepascalbecker.com/2015/01/05/getting-started-with-a-vps/&quot;&gt;Pascal Becker&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 07 Mar 2015 21:51:00 +0000</pubDate>
-        <link>http://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html</guid>
-        
-        
-        <category>digitalocean</category>
-        
-        <category>wordpress</category>
         
       </item>
     

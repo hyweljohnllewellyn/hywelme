@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title >GitHub Pages Custom Domain Names with CloudFlare </title>
+  <title >Convert Office 365 User Email to Shared Mailbox and Remove the User License </title>
 
-  <meta name="description" content="GitHub allows the configuring of Apex Domains, however is it recommended to use a subdomain’.The CNAME file should be placed in your repository and there sho...">
+  <meta name="description" content="A temporary member of admin staff was provided with a dedicated user mailbox and therefore an Office 365 License.  Now the staff member is no longer required...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html">
+  <link rel="canonical" href="http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html">
   <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
 </head>
 
@@ -63,8 +63,8 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">GitHub Pages Custom Domain Names with CloudFlare</h1>
-    <p class="post-meta">Dec 6, 2015 ✎ Hywel • CloudFlare GitHub Pages CNAME subdomain DNS</p>
+    <h1 class="post-title">Convert Office 365 User Email to Shared Mailbox and Remove the User License</h1>
+    <p class="post-meta">Jan 12, 2016 ✎ Hywel • Office 365 small business email remove license</p>
   </header>
 
   
@@ -73,37 +73,59 @@
 
 
   <article class="post-content">
-    <h2 id="why-use-a-custom-domain-name">Why Use a Custom Domain Name</h2>
+    <h2 id="what-is-the-scenario">What is the Scenario?</h2>
+<p>A temporary member of admin staff was provided with a dedicated user mailbox and therefore an Office 365 License.  Now the staff member is no longer required, the License can be released.</p>
 
-<p>Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.</p>
+<p>In order to keep the email for future reference and/ or for the same staff member to return,  converting the user email to a shared mailbox is the best option.  It would then be possible to unsubscribe from the Office 365 license.</p>
 
-<p>If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.</p>
+<h2 id="convert-user-mailbox-to-a-shared-mailbox">Convert User Mailbox to a Shared Mailbox</h2>
 
-<p>The domain name was purchased through <a href="http://namecheap.com">Name Cheap</a>, which is great value for money for domains, though I have struggled somewhat with managing settings through it’s administration console.</p>
+<h4 id="step-1---go-to-the-admin-console-in-office-365-and-select-exchange-from-the-options-to-the-left-of-the-screen">Step 1 - Go to the Admin console in Office 365 and select Exchange from the options to the left of the screen</h4>
 
-<p>Therefore, I generally use CloudFlare, which is a <a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Network</a> to administer <a href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name System</a> settings.</p>
+<p><img src="/assets/2016-01-12/admin console in office 365.jpg" alt="admin console in office 365" /></p>
 
-<h2 id="github-pages-custom-domain-names">GitHub Pages Custom Domain Names</h2>
+<p><img src="/assets/2016-01-12/office 365 exchange.jpg" alt="office 365 exchange" /></p>
 
-<p>GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the <em>‘www’</em>, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the <em>‘www’</em>, as described by GitHub at <a href="https://help.github.com/articles/about-custom-domains-for-github-pages-sites/">About Custom Domains</a>.  Briefly, using GitHub Pages subdomains will make the pages load faster.</p>
+<h4 id="step-2---click-on-mailboxes-under-reciptients">Step 2 - Click On mailboxes under reciptients</h4>
 
-<p>GitHub has a great guide to configuring <a href="https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/">Custom Subdomains</a>.</p>
+<p><img src="/assets/2016-01-12/office 365 mailboxes under reciptients.jpg" alt="mailboxes under reciptients" /></p>
 
-<p>Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub’s own Content Delivery, but for now it seems to work for me.</p>
+<h4 id="step-3---select-the-user-mailbox-to-be-converted--and-click-on-convert-under-the-convert-to-shared-mailbox-option-to-the-right-of-the-screen--a-warning-will-be-shown-click-yes-to-continue">Step 3 - Select the User Mailbox to be converted  and click on Convert under the Convert to Shared Mailbox option to the right of the screen.  A warning will be shown, click Yes to continue.</h4>
 
-<h3 id="step-1-create-a-cname-file">Step 1: Create a CNAME file</h3>
-<p>The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case <strong>www.victoriancarolsingershire.uk</strong></p>
+<p><img src="/assets/2016-01-12/office 365 mailbox to convert to shared.jpg" alt="mailbox to convert to shared" /></p>
 
-<p><img src="/assets/2015-12-06/cname file github pages custom subdomain.jpg" alt="CNAME GitHub Pages" /></p>
+<p><img src="/assets/2016-01-12/warning.jpg" alt="warning" /></p>
 
-<h3 id="step-2-cloudflare-cname">Step 2: CloudFlare CNAME</h3>
-<p>Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.</p>
+<h4 id="step-4---your-regular-mailbox-has-been-converted-into-shared-mailbox--click-close-to-continue">Step 4 - Your regular mailbox has been converted into shared mailbox.  Click Close to continue.</h4>
+<p><img src="/assets/2016-01-12/regular mailbox converted to shared.jpg" alt="regular mailbox converted to shared.jpg" /></p>
 
-<p><img src="/assets/2015/-12-06/cloudflare cname github subdomain.jpg" alt="cloudflare cname github subdomain" /></p>
+<h2 id="unsubscribe-from-unused-office-365-license">Unsubscribe from Unused Office 365 License</h2>
 
-<p>All Done, your page is published at the new subdomain:</p>
+<h4 id="step-5---go-to-the-admin-console-in-office-365-and-select-active-users-under-the-users-option-on-the-left">Step 5 - Go to the Admin console in Office 365 and Select Active Users under the Users option on the left</h4>
 
-<p><img src="/assets/published.jpg" alt="published.jpg" /></p>
+<p><img src="/assets/2016-01-12/office 365 active users.jpg" alt="office 365 active users.jpg" /></p>
+
+<h4 id="step-6---select-the-user-and-click-edit-under-assigned-license-on-the-right-of-the-screen">Step 6 - Select the User and Click Edit under Assigned license on the right of the screen</h4>
+
+<p><img src="/assets/2016-01-12/office 365 assigned user license.jpg" alt="office 365 assigned user license.jpg" /></p>
+
+<h4 id="step-7---uncheck-the-office-365-business-essentials-license-and-click-save">Step 7 - Uncheck the Office 365 Business Essentials license and Click Save</h4>
+
+<p><img src="/assets/2016-01-12/Uncheck Office 365 Business Essentials license.jpg" alt="Uncheck Office 365 Business Essentials license.jpg" /></p>
+
+<h4 id="step-8---in-the-admin-console-of-office-365-select-subscriptions-under-the-billing-option-on-the-left-of-the-screen--then-click-addremove-users--notice-that-there-are-currently-two-purchased-and-one-assigned">Step 8 - In the Admin console of Office 365, select Subscriptions under the Billing option on the left of the screen.  Then click Add/Remove users.  Notice that there are currently two purchased, and one assigned.</h4>
+
+<p><img src="/assets/2016-01-12/office 365 remove user subscription.jpg" alt="office 365 remove user subscription.jpg" /></p>
+
+<h4 id="step-9---reduce-the-number-of-total-licenses-and-click-submit-to-confirm">Step 9 - Reduce the number of Total licenses and click Submit to confirm</h4>
+
+<p><img src="/assets/2016-01-12/office 365 reduce the number of licenses.jpg" alt="office 365 reduce the number of licenses.jpg" /></p>
+
+<p>This subscription’s quantity was successfully updated.  Done!</p>
+
+<p>Note that you could now provide access to the new shared mailbox to other users,  see <a href="https://support.office.com/en-my/article/Open-and-use-a-shared-mailbox-in-Outlook-Web-App-bc127866-42be-4de7-92ae-1ef2f787fd5c?ui=en-US&amp;rs=en-MY&amp;ad=MY#__migbm_0">Open and Use a Shared Mailbox</a>.</p>
+
+<p>I also describe <a href="http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html">How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox</a>.</p>
 
   </article>
 
@@ -115,7 +137,7 @@
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
        */
       var disqus_config = function () {
-          this.page.url =  "http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.url =  "http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html";  // Replace PAGE_URL with your page's canonical URL variable
 
           //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };

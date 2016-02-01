@@ -26,16 +26,16 @@ There are several choices available, some are polished and have several function
 {% highlight html %}
 <img src="http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg" class="entry-feature-image" alt="London's Premier Victorian Carolers" usemap="#my_image" style="margin-top:0;">
 <audio id="sound1">
-    <source src="{{ site.url }}/audio/joy to the world.mp3" type="audio/mpeg" />
+    <source src="http://victoriancarolsingershire.uk/audio/joy to the world.mp3" type="audio/mpeg" />
 </audio>
 <audio id="sound2">
-    <source src="{{ site.url }}/audio/jingle bells.mp3" type="audio/mpeg" />
+    <source src="http://victoriancarolsingershire.uk/audio/jingle bells.mp3" type="audio/mpeg" />
 </audio>
 <audio id="sound3">
-    <source src="{{ site.url }}/audio/silent night short.mp3" type="audio/mpeg" />
+    <source src="http://victoriancarolsingershire.uk/audio/silent night short.mp3" type="audio/mpeg" />
 </audio>
 <audio id="sound4">
-    <source src="{{ site.url }}/audio/deck the halls.mp3" type="audio/mpeg" />
+    <source src="http://victoriancarolsingershire.uk/audio/deck the halls.mp3" type="audio/mpeg" />
 </audio>
 <map name="my_image" id ="my_image">
 <area shape="rect" coords="408,556,660,996" id="area1" />
@@ -84,7 +84,7 @@ $.each($('audio'), function () {
 this was then was called from the page
 
 {% highlight html %}
-<script type="text/javascript" src="{{ site.url }}/assets/js/audioplay.js"></script>
+<script type="text/javascript" src="http://victoriancarolsingershire.uk/assets/js/audioplay.js"></script>
 {% endhighlight %}
 
 Thanks to the following resources for their inspiration:

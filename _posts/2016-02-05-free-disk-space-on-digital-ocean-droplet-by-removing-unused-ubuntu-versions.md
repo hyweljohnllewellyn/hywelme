@@ -27,7 +27,7 @@ uname -r
 and the newest version.
 
 
-###Update and  Delete old Kernels
+###Delete old Kernels using sudo apt-get remove 
 This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet. 
 
 [how-to-update-a-digitalocean-server-s-kernel](https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel)
@@ -48,4 +48,6 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic
 
 sudo apt-get remove linux-image-3.13.0-32-generic
 
+###Delete old Kernels using sudo apt-get autoremove
 
+[RemoveOldKernels](https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels)

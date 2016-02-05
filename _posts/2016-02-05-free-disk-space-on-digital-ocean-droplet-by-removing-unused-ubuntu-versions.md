@@ -34,7 +34,7 @@ This is a great article on Digital Ocean to show how to change the kernel that i
 
 Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.
 
-As I am using a great service from serverplot.io, I received this great confirmation regarding deleting old kernels:
+As I am using a great service from serverpilot.io, I received this great confirmation regarding deleting old kernels:
 
 > Justin Samuel (ServerPilot Support)
 Feb 4, 13:55

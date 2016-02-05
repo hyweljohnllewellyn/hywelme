@@ -49,7 +49,9 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic
 sudo apt-get remove linux-image-3.13.0-32-generic
 
 ###Delete old Kernels using sudo apt-get autoremove
-The above method though good, still did not remove all the redundant packages and dependencies. Further reading, I foun the following useful link: [RemoveOldKernels](https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels).
+The above method though good, still did not remove all the redundant packages and dependencies. It would also be slow and tedious.
+
+Further reading, I found the following useful link: [RemoveOldKernels](https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels).
 
 Simply  using sudo apt-get autoremove according to this link:
 

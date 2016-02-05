@@ -26,14 +26,14 @@ uname -r
 
 and the newest version.
 
-
-###Delete old Kernels using sudo apt-get remove 
+###Use the latest Ubunte kernel through Digital Ocean Control Panel 
 This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet. 
 
 [how-to-update-a-digitalocean-server-s-kernel](https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel)
 
 Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.
 
+###Delete old Kernels using sudo apt-get remove
 As I am using a great service from serverpilot.io, I received this great confirmation regarding deleting old kernels:
 
 > Justin Samuel (ServerPilot Support)
@@ -55,5 +55,5 @@ Simply  using sudo apt-get autoremove according to this link:
 
 > The system keeps track of which kernels are older and marks them eligible for removal using this method. Most users should run autoremove every few months or so. Systems with a separate /boot partition should run autoremove every two-four weeks. Mark your calendar, make it a routine. Autoremove can be run as often as you like - running it more often will **not** harm your system
 
-According to this, I cold fre up over 7Gb.....
+According to sudo apt-get autoremove, I cold free up over 7Gb.....here goes...
 

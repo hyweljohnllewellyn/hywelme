@@ -18,6 +18,32 @@ It took a while to learn some useful linux commands to investigate.  A key comma
 
 sudo du -h / --max-depth 1 
 
+So, as you can see, there were many old kernel versions taking a total of 5.8Gb.
 
- 
+Ideally, i will keep the currently running kernel  - confirm by 
+
+uname -r
+
+and the newest version.
+
+
+###Update and  Delete old Kernels
+This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet. 
+
 [how-to-update-a-digitalocean-server-s-kernel](https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel)
+
+Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.
+
+As I am using a great service from serverplot.io, I received this great confirmation regarding deleting old kernels:
+
+> Justin Samuel (ServerPilot Support)
+Feb 4, 13:55
+Hi Hywel,
+You're welcome to remove any kernel versions you don't intend to use again. What you should check before removing any version is that:
+1) It isn't the most recent kernel version installed.
+2) It isn't the same kernel version that's currently running according to uname -r
+3) It isn't the kernel you have selected in your server settings in DigitalOcean.
+You can then remove a specific kernel with this command:
+sudo apt-get remove linux-image-X.Y.Z-XX-generic
+
+

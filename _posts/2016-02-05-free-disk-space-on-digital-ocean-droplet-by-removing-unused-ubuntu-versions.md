@@ -46,4 +46,6 @@ You're welcome to remove any kernel versions you don't intend to use again. What
 You can then remove a specific kernel with this command:
 sudo apt-get remove linux-image-X.Y.Z-XX-generic
 
+sudo apt-get remove linux-image-3.13.0-32-generic
+
 

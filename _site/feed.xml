@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Feb 2016 09:45:09 +0000</pubDate>
-    <lastBuildDate>Sat, 06 Feb 2016 09:45:09 +0000</lastBuildDate>
+    <pubDate>Sat, 06 Feb 2016 09:49:32 +0000</pubDate>
+    <lastBuildDate>Sat, 06 Feb 2016 09:49:32 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -71,9 +71,7 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
 
 &lt;p&gt;The above method though good, still did not remove all the redundant packages and dependencies. It would also be slow and tedious.&lt;/p&gt;
 
-&lt;p&gt;Further reading, I found the following useful link: &lt;a href=&quot;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&quot;&gt;RemoveOldKernels&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Simply using sudo apt-get autoremove according to this link:&lt;/p&gt;
+&lt;p&gt;Further reading, I found the following useful link &lt;a href=&quot;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&quot;&gt;RemoveOldKernels&lt;/a&gt; which describes the use of sudo apt-get autoremove:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;The system keeps track of which kernels are older and marks them eligible for removal using this method. Most users should run autoremove every few months or so. Systems with a separate /boot partition should run autoremove every two-four weeks. Mark your calendar, make it a routine. Autoremove can be run as often as you like - running it more often will &lt;strong&gt;not&lt;/strong&gt; harm your system&lt;/p&gt;

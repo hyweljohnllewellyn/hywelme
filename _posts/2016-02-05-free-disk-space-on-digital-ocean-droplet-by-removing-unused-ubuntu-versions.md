@@ -45,11 +45,17 @@ I was running linux-image-3.13.0-37-generic  - that was an old one....so wanted 
 
 This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions
 
-[how-to-update-a-digitalocean-server-s-kernel](https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel)
+[how to update a digitalocean server  kernel](https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel)
+
+After following the instructions to change the kernel through the DigitalOcean Control Panel I powered off the droplet.
+
+{% highlight bash %}
+sudo poweroff
+{% endhighlight %}
+
+Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.  This also restarts the droplet once the image is taken.  The droplet kernel was now updated.
 
 ![digital ocean droplet now running newer version.png]({{site.baseurl}}/assets/2016-02-05/digital ocean droplet now running newer version.png)
-
-Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.
 
 ### Delete old Kernels using sudo apt-get remove
 

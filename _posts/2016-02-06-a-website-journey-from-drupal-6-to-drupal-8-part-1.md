@@ -25,7 +25,7 @@ I expect this journey to have issues along the way as I am a novice Drupal admin
 
 > As announced in the Drupal 6 extended support policy, 3 months after Drupal 8 comes out, Drupal 6 will be end-of-life (EOL).
 
-**> On February 24th 2016, Drupal 6 will reach end of life and no longer be supported.**
+> On February 24th 2016, Drupal 6 will reach end of life and no longer be supported.
 
 > Drupal 8 core provides a Migration path directly from Drupal 6 as an experimental feature, so sites can update directly to Drupal 8 using either a user interface or with Drush.
 

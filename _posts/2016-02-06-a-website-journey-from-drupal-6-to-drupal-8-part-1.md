@@ -29,11 +29,11 @@ I expect this journey to have issues along the way as I am a novice Drupal admin
 
 > Drupal 8 core provides a Migration path directly from Drupal 6 as an experimental feature, so sites can update directly to Drupal 8 using either a user interface or with Drush.
 
-This improved migration path is one of the main reasons why I have waited for Drupal 8, but by far the main reason is [Google Rankings](https://googlewebmastercentral.blogspot.co.uk/2015/02/finding-more-mobile-friendly-search.html) 
+This improved migration path is one of the main reasons why I have waited for Drupal 8, but by far the main reason is [Google Rankings](https://googlewebmastercentral.blogspot.co.uk/2015/02/finding-more-mobile-friendly-search.html)
 
-> Starting April 21, we will be expanding our use of mobile-friendliness as a ranking signal. This change will affect mobile searches in all languages worldwide and will have a significant impact in our search results. Consequently, users will find it easier to get relevant, high quality search results that are optimized for their devices. 
+> Starting April 21, we will be expanding our use of mobile-friendliness as a ranking signal. This change will affect mobile searches in all languages worldwide and will have a significant impact in our search results. Consequently, users will find it easier to get relevant, high quality search results that are optimized for their devices.
 
-Drupal 8 was designed with mobile devices first in mind, this article by [Axelerant](https://axelerant.com/not-magic-drupal-8-mobile-global-reach/)  describes some of the philosophy behind Drupal 8.  However, DRupal 8 is still in it's infancy, so I will be doing my best to find resources during the upgrade, for example 
+Drupal 8 was designed with mobile devices first in mind, this article by [Axelerant](https://axelerant.com/not-magic-drupal-8-mobile-global-reach/)  describes some of the philosophy behind Drupal 8.  However, Drupal 8 is still in its infancy, so I will be doing my best to find resources during the upgrade, for example
 [27 Questions (and Answers) from My First Drupal 8 Site Build](https://www.drupal.org/node/2360331).
 
 ## Getting Ready - Installing a Local Development Environment
@@ -44,7 +44,7 @@ Drupal 8 was designed with mobile devices first in mind, this article by [Axeler
 
 Using HomeBrew, all the packages would need to be installed from the command line.  Some tutorials include:
 
-- [blog.frd.mn](http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/) 
+- [blog.frd.mn](http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/)
 - [discreteunits.com](http://discreteunits.com/homebrew-nginx-php-fpm-mysql-on-osx-mavericks/)
 - [easyengine.io](https://easyengine.io/tutorials/mac/osx-brew-php-mysql-nginx/)
 
@@ -57,15 +57,15 @@ Once MAMP was Installed I used the usual phpmyadmin to create a Drupal 8 MySQL d
 
 ##  Download Drupal and Follow Core Drupal "standard" Installation Profile
 
-There are many tutorials describing how to install the standard Drupal 8, for example [Drupal 8 Video Installation Guide on Mac OS X](https://www.youtube.com/watch?v=bthkQCkrH30).  Essentially the installation involves: 
+There are many tutorials describing how to install the standard Drupal 8, for example [Drupal 8 Video Installation Guide on Mac OS X](https://www.youtube.com/watch?v=bthkQCkrH30).  Essentially the installation involves:
 
-[Download Drupal 8 Files](https://www.drupal.org/start) 
+[Download Drupal 8 Files](https://www.drupal.org/start)
 
 Put Drupal download into the MAMP htdocs and browse to that folder, in my case http://localhost:7888/drupal8/
 
 ![drupal 8 core install]({{site.baseurl}}/assets/2016-02-05/drupal 8 core install.jpg)
 
-After defining the usual settings during installation, for example timezone you are done... 
+After defining the usual settings during installation, for example timezone you are done...
 
 ![drupal 8 core website]({{site.baseurl}}/assets/2016-02-05/drupal 8 core website.jpg)
 

@@ -34,8 +34,7 @@ This improved migration path is one of the main reasons why I have waited for Dr
 > Starting April 21, we will be expanding our use of mobile-friendliness as a ranking signal. This change will affect mobile searches in all languages worldwide and will have a significant impact in our search results. Consequently, users will find it easier to get relevant, high quality search results that are optimized for their devices. 
 
 Drupal 8 was designed with mobile devices first in mind, this article by [Axelerant](https://axelerant.com/not-magic-drupal-8-mobile-global-reach/)  describes some of the philosophy behind Drupal 8.  However, DRupal 8 is still in it's infancy, so I will be doing my best to find resources during the upgrade, for example 
-[27 Questions (and Answers) from My First Drupal 8 Site Build](https://www.drupal.org/node/2360331)
-https://www.drupal.org/node/2360331.
+[27 Questions (and Answers) from My First Drupal 8 Site Build](https://www.drupal.org/node/2360331).
 
 ## Getting Ready - Installing a Local Development Environment
 [Drupal 8 Requirements](https://www.drupal.org/requirements) include a Web server, typically Apache, Database, typically MySQL and PHP.  In order to develop Drupal locally, these need to be available. As I am developing on an Apple Mac Mini, a convenient way to ensure all the dependencies are available are by using a package manager.   The choices for me were either:

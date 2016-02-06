@@ -51,7 +51,7 @@ This is a great article on Digital Ocean to show how to change the kernel that i
 
 Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.
 
-###Delete old Kernels using sudo apt-get remove
+### Delete old Kernels using sudo apt-get remove
 
 As I am using a service from [Serverpilot.io](https://www.serverpilot.io/?refcode=c2131f64db72 ), which is a simple  management system for DigitalOcean servers, I contacted them and received this confirmation regarding deleting old kernels:
 
@@ -69,7 +69,7 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic
 
 ![sudo apt get remove continue.png]({{site.baseurl}}/assets/2016-02-05/sudo apt get remove continue.png)
 
-###Delete old Kernels using sudo apt-get autoremove
+### Delete old Kernels using sudo apt-get autoremove
 
 The above method though good, still did not remove all the redundant packages and dependencies. It would also be slow and tedious.
 

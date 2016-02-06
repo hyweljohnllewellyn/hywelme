@@ -60,9 +60,9 @@ Once MAMP was Installed I used the usual phpmyadmin to create a Drupal 8 MySQL d
 
 There are many tutorials describing how to install the standard Drupal 8, for example [Drupal 8 Video Installation Guide on Mac OS X](https://www.youtube.com/watch?v=bthkQCkrH30).  Essentially the installation involves: 
 
-1.[Download Drupal 8 Files](https://www.drupal.org/start) 
+1. [Download Drupal 8 Files](https://www.drupal.org/start) 
 
-2. Put Drupal download into the MAMP htdocs and browse to that folder, in my case > http://localhost:7888/drupal8/
+2. Put Drupal download into the MAMP htdocs and browse to that folder, in my case http://localhost:7888/drupal8/
 
 ![drupal 8 core install]({{site.baseurl}}/assets/2016-02-05/drupal 8 core install.jpg)
 

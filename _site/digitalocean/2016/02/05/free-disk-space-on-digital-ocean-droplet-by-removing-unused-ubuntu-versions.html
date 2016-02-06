@@ -74,6 +74,7 @@
 
   <article class="post-content">
     <h2 id="running-out-of-disk-space">Running out of Disk Space</h2>
+
 <p>It has reached a point where the disk usage of a Digital Ocean droplet has reached 69.4% of 19.56Gb.</p>
 
 <p><img src="/assets/2016-02-05/running out of disk space.png" alt="running out of disk space.png" /></p>
@@ -100,13 +101,18 @@
 <p>I was running linux-image-3.13.0-37-generic  - that was an old one….so wanted to use the latest.</p>
 
 <h3 id="use-the-latest-ubuntu-kernel-through-digital-ocean-control-panel">Use the latest Ubuntu kernel through Digital Ocean Control Panel</h3>
+
 <p>This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions</p>
 
-<p><a href="https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel">how-to-update-a-digitalocean-server-s-kernel</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel">how to update a digitalocean server  kernel</a></p>
+
+<p>After following the instructions to change the kernel through the DigitalOcean Control Panel I powered off the droplet.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo poweroff</code></pre></figure>
+
+<p>Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.  This also restarts the droplet once the image is taken.  The droplet kernel was now updated.</p>
 
 <p><img src="/assets/2016-02-05/digital ocean droplet now running newer version.png" alt="digital ocean droplet now running newer version.png" /></p>
-
-<p>Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.</p>
 
 <h3 id="delete-old-kernels-using-sudo-apt-get-remove">Delete old Kernels using sudo apt-get remove</h3>
 

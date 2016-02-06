@@ -7,7 +7,7 @@ meta: DigitalOcean WordPress ServerPilot.io
 categories: DigitalOcean WordPress
 excerpt: How I moved an existing site from GoDaddy to DigitalOcean hosting via ServerPilot.io. The steps to install and migrate WordPress content and database to Digital Ocean.  Finally, moving the domain name server to DigitalOcean.
 ---
-###Create the Site  
+### Create the Site  
 
 [In my previous post,]({% post_url 2015-03-05-moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1 %}) I described why I wanted to move my site from GoDaddy to DigitalOcean.  
 
@@ -33,7 +33,7 @@ and it is instantly available on the web:
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/3serverpilot_app_setup.png
 )
 
-###Migrate WordPress Folders
+### Migrate WordPress Folders
 
 Next, SSH to the apps public directory on the DigitalOcean server.  My app is located in apps/operascoolorg/public folder.
 
@@ -63,7 +63,7 @@ Again using Filezilla, I upload these folders to the wp-content folder on the Di
 ![My helpful screenshot]({{ site.url }}/assets/2015-03-07/5ftp_wpcontent_to_newsite.png
 )
 
-###Migrate WordPress Database
+### Migrate WordPress Database
 
 Going back to ServerPilot.io, a database is created for the operascoolorg app.
 
@@ -105,7 +105,7 @@ define('DB_HOST', 'localhost');
 
 Note that the localhost for my server is 127.0.0.1.  Save the file.
 
-###Move Domain Name Server to DigitalOcean
+### Move Domain Name Server to DigitalOcean
 
 Firstly, I will add the operascool.org domain to my operascoolorg app in ServerPilot.io:
 

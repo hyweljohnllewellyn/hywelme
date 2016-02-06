@@ -7,7 +7,7 @@ meta: Office 365 small business email shared mailbox configure mac mail client
 categories: small business email
 excerpt: Assuming you have already setup your shared mailbox through the Office 365 Admin, here are the steps to set up Mac Mail to receive and send email using the shared mailbox.
 ---
-###Microsoft Office 365 for Email
+### Microsoft Office 365 for Email
 
 Email is an essential part of managing a small business.  In our experience, we found that [Zoho Mail](https://www.zoho.com/mail/) was allowing too much spam content through to the inbox, hiding essential emails from clients.  
 
@@ -22,11 +22,11 @@ There are several guides to using Office 365 and comparison with other productiv
 
 The key reason we chose Office 365 over Google Apps was that we already had a Google Email for the business, but Google would not allow this account to be *converted* to a Google Apps account.
 
-###Setting up a Mac Mail Client for the Shared Mailbox
+### Setting up a Mac Mail Client for the Shared Mailbox
 
 In this example  hywel@customdomain.co.uk is the active user with an assigned Office 365 license.  A shared mail box of info@customdomain.co.uk has been setup through [Office 365 Admin](https://support.office.com/en-in/article/Create-shared-mailboxes-in-Office-365-for-Small-Business-ecacf5b0-b5c8-449f-a89a-b7e87dcb55d4?ui=en-US&rs=en-IN&ad=IN).  Here are the steps to set up Mac Mail client to receive and send mail using the new shared mailbox.
 
-####Receiving Mail
+#### Receiving Mail
 
 1. Go to Mac Mail -> Preferences
 ![step 1 go to mail preferences]({{ site.url }}/assets/2015-11-21/step 1 go to mail preferences.jpg)
@@ -61,7 +61,7 @@ Outgoing Mail Server: **smtp.office365.com**
 7. Your new *Shared Inbox* is ready and should be receiving email
 ![step 7 Receiving Email]({{ site.url }}/assets/2015-11-21/step 7 Receiving Email.jpg)
 
-####Sending Mail
+#### Sending Mail
 
 8. Go to Mac Mail -> Preferences and under *Outgoing Mail Server (SMTP)* select **Edit SMTP Server List...**
 ![step 8 edit SMTP server list]({{ site.url }}/assets/2015-11-21/step 8 edit SMTP server list.jpg)

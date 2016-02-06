@@ -6,13 +6,14 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Feb 2016 09:52:23 +0000</pubDate>
-    <lastBuildDate>Sat, 06 Feb 2016 09:52:23 +0000</lastBuildDate>
+    <pubDate>Sat, 06 Feb 2016 14:56:35 +0000</pubDate>
+    <lastBuildDate>Sat, 06 Feb 2016 14:56:35 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
         <title>Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versions</title>
         <description>&lt;h2 id=&quot;running-out-of-disk-space&quot;&gt;Running out of Disk Space&lt;/h2&gt;
+
 &lt;p&gt;It has reached a point where the disk usage of a Digital Ocean droplet has reached 69.4% of 19.56Gb.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/running out of disk space.png&quot; alt=&quot;running out of disk space.png&quot; /&gt;&lt;/p&gt;
@@ -39,13 +40,18 @@
 &lt;p&gt;I was running linux-image-3.13.0-37-generic  - that was an old one….so wanted to use the latest.&lt;/p&gt;
 
 &lt;h3 id=&quot;use-the-latest-ubuntu-kernel-through-digital-ocean-control-panel&quot;&gt;Use the latest Ubuntu kernel through Digital Ocean Control Panel&lt;/h3&gt;
+
 &lt;p&gt;This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel&quot;&gt;how-to-update-a-digitalocean-server-s-kernel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel&quot;&gt;how to update a digitalocean server  kernel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After following the instructions to change the kernel through the DigitalOcean Control Panel I powered off the droplet.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo poweroff&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.  This also restarts the droplet once the image is taken.  The droplet kernel was now updated.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/digital ocean droplet now running newer version.png&quot; alt=&quot;digital ocean droplet now running newer version.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.&lt;/p&gt;
 
 &lt;h3 id=&quot;delete-old-kernels-using-sudo-apt-get-remove&quot;&gt;Delete old Kernels using sudo apt-get remove&lt;/h3&gt;
 
@@ -113,9 +119,9 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 exchange.jpg&quot; alt=&quot;office 365 exchange&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;step-2---click-on-mailboxes-under-reciptients&quot;&gt;Step 2 - Click On mailboxes under reciptients&lt;/h4&gt;
+&lt;h4 id=&quot;step-2---click-on-mailboxes-under-recipients&quot;&gt;Step 2 - Click On mailboxes under recipients&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 mailboxes under reciptients.jpg&quot; alt=&quot;mailboxes under reciptients&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 mailboxes under reciptients.jpg&quot; alt=&quot;mailboxes under recipients&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;step-3---select-the-user-mailbox-to-be-converted--and-click-on-convert-under-the-convert-to-shared-mailbox-option-to-the-right-of-the-screen--a-warning-will-be-shown-click-yes-to-continue&quot;&gt;Step 3 - Select the User Mailbox to be converted  and click on Convert under the Convert to Shared Mailbox option to the right of the screen.  A warning will be shown, click Yes to continue.&lt;/h4&gt;
 

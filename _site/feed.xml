@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Feb 2016 09:49:32 +0000</pubDate>
-    <lastBuildDate>Sat, 06 Feb 2016 09:49:32 +0000</lastBuildDate>
+    <pubDate>Sat, 06 Feb 2016 09:52:23 +0000</pubDate>
+    <lastBuildDate>Sat, 06 Feb 2016 09:52:23 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/running out of disk space.png&quot; alt=&quot;running out of disk space.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I know that the total number of applications I use is broadly 2Gb - so where us the rest?&lt;/p&gt;
+&lt;p&gt;I know that the total number of applications I use is broadly 2Gb - so what is using up all that disk space?&lt;/p&gt;
 
 &lt;p&gt;It took a while to learn some useful linux commands to investigate.  A good resource describing &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-top-netstat-du-other-tools-to-monitor-server-resources#df&quot;&gt;tools to monitor server resources&lt;/a&gt; at &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;
 

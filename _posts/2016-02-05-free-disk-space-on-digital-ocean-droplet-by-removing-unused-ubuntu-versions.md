@@ -15,7 +15,7 @@ It has reached a point where the disk usage of a Digital Ocean droplet has reach
 
 ![running out of disk space.png]({{site.baseurl}}/assets/2016-02-05/running out of disk space.png)
 
-I know that the total number of applications I use is broadly 2Gb - so where us the rest?
+I know that the total number of applications I use is broadly 2Gb - so what is using up all that disk space?
 
 It took a while to learn some useful linux commands to investigate.  A good resource describing [tools to monitor server resources](https://www.digitalocean.com/community/tutorials/how-to-use-top-netstat-du-other-tools-to-monitor-server-resources#df) at [Digital Ocean](https://www.digitalocean.com/?refcode=92e12787bf7a).  
 

@@ -87,25 +87,25 @@
 
 <p>There are several choices available, some are polished and have several functions such as <a href="http://www.coffeecup.com/image-mapper/">coffee cup</a>, but as I only wanted a basic map I found this simple, effective <a href="http://www.maschek.hu/imagemap/imgmap">Online Image Map Editor</a> by Adam Maschek.    I chose a simple rectangle shape for the area co-ordinates.  Here’s the finished HTML:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg&quot;</span> <span class="na">class=</span><span class="s">&quot;entry-feature-image&quot;</span> <span class="na">alt=</span><span class="s">&quot;London&#39;s Premier Victorian Carolers&quot;</span> <span class="na">usemap=</span><span class="s">&quot;#my_image&quot;</span> <span class="na">style=</span><span class="s">&quot;margin-top:0;&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">&quot;sound1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;http://www.hywel.me/audio/joy to the world.mp3&quot;</span> <span class="na">type=</span><span class="s">&quot;audio/mpeg&quot;</span> <span class="nt">/&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg"</span> <span class="na">class=</span><span class="s">"entry-feature-image"</span> <span class="na">alt=</span><span class="s">"London's Premier Victorian Carolers"</span> <span class="na">usemap=</span><span class="s">"#my_image"</span> <span class="na">style=</span><span class="s">"margin-top:0;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">"sound1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"http://victoriancarolsingershire.uk/audio/joy to the world.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/audio&gt;</span>
-<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">&quot;sound2&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;http://www.hywel.me/audio/jingle bells.mp3&quot;</span> <span class="na">type=</span><span class="s">&quot;audio/mpeg&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">"sound2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"http://victoriancarolsingershire.uk/audio/jingle bells.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/audio&gt;</span>
-<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">&quot;sound3&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;http://www.hywel.me/audio/silent night short.mp3&quot;</span> <span class="na">type=</span><span class="s">&quot;audio/mpeg&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">"sound3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"http://victoriancarolsingershire.uk/audio/silent night short.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/audio&gt;</span>
-<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">&quot;sound4&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;http://www.hywel.me/audio/deck the halls.mp3&quot;</span> <span class="na">type=</span><span class="s">&quot;audio/mpeg&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;audio</span> <span class="na">id=</span><span class="s">"sound4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"http://victoriancarolsingershire.uk/audio/deck the halls.mp3"</span> <span class="na">type=</span><span class="s">"audio/mpeg"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/audio&gt;</span>
-<span class="nt">&lt;map</span> <span class="na">name=</span><span class="s">&quot;my_image&quot;</span> <span class="na">id =</span><span class="s">&quot;my_image&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">&quot;rect&quot;</span> <span class="na">coords=</span><span class="s">&quot;408,556,660,996&quot;</span> <span class="na">id=</span><span class="s">&quot;area1&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">&quot;rect&quot;</span> <span class="na">coords=</span><span class="s">&quot;880,552,1096,852&quot;</span> <span class="na">id=</span><span class="s">&quot;area2&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">&quot;rect&quot;</span> <span class="na">coords=</span><span class="s">&quot;1120,428,1360,732&quot;</span> <span class="na">id=</span><span class="s">&quot;area3&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">&quot;rect&quot;</span> <span class="na">coords=</span><span class="s">&quot;1712,544,2444,1160&quot;</span> <span class="na">id=</span><span class="s">&quot;area4&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/map&gt;</span></code></pre></div>
+<span class="nt">&lt;map</span> <span class="na">name=</span><span class="s">"my_image"</span> <span class="na">id =</span><span class="s">"my_image"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">"rect"</span> <span class="na">coords=</span><span class="s">"408,556,660,996"</span> <span class="na">id=</span><span class="s">"area1"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">"rect"</span> <span class="na">coords=</span><span class="s">"880,552,1096,852"</span> <span class="na">id=</span><span class="s">"area2"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">"rect"</span> <span class="na">coords=</span><span class="s">"1120,428,1360,732"</span> <span class="na">id=</span><span class="s">"area3"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;area</span> <span class="na">shape=</span><span class="s">"rect"</span> <span class="na">coords=</span><span class="s">"1712,544,2444,1160"</span> <span class="na">id=</span><span class="s">"area4"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/map&gt;</span></code></pre></figure>
 
 <p>There is the image with the usemap=”#my_image”, the four HTML5 audio files along with the map of areas and their co-ordinates.</p>
 
@@ -113,35 +113,35 @@
 
 <p>In my page scripts, as well as loading the jQuery files, these are included;</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.hywel.me/assets/js/imagemapresizer/imageMapResizer.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="nt">&gt;</span><span class="nx">imageMapResize</span><span class="p">();</span><span class="nt">&lt;/script&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://www.hywel.me/assets/js/imagemapresizer/imageMapResizer.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="nt">&gt;</span><span class="nx">imageMapResize</span><span class="p">();</span><span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
 <h2 id="using-jquery-to-control-the-audio">Using jQuery to Control the Audio</h2>
 
 <p>The controls I wanted to achieve were to play or pause the audio on click of object and pause any other audio that may be playing.  This script was placed in a file called audioplay.js:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;map[name=my_image] area&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-<span class="c1">//$(&quot;#my_image area&quot;).on(&#39;click&#39;, function () {</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">"map[name=my_image] area"</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="c1">//$("#my_image area").on('click', function () {</span>
 <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
- <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/area/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+ <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'id'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/area/</span><span class="p">,</span> <span class="s1">''</span><span class="p">);</span>
 
-<span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;audio&#39;</span><span class="p">),</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'audio'</span><span class="p">),</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
    <span class="k">this</span><span class="p">.</span><span class="nx">pause</span><span class="p">();</span>
 <span class="p">});</span>
 
-    <span class="nx">$this</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">$this</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">)){</span>
-        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;pause&#39;</span><span class="p">);</span>
-      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;audio[id^=&quot;sound&quot;]&#39;</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">play</span><span class="p">();</span>
+    <span class="nx">$this</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">$this</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">)){</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">'pause'</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'audio[id^="sound"]'</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">play</span><span class="p">();</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;play&#39;</span><span class="p">);</span>
-      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;audio[id^=&quot;sound&quot;]&#39;</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">pause</span><span class="p">();</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">'play'</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'audio[id^="sound"]'</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">pause</span><span class="p">();</span>
     <span class="p">}</span>
-<span class="p">});</span></code></pre></div>
+<span class="p">});</span></code></pre></figure>
 
 <p>this was then was called from the page</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.hywel.me/assets/js/audioplay.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://victoriancarolsingershire.uk/assets/js/audioplay.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <p>Thanks to the following resources for their inspiration:</p>
 

@@ -81,42 +81,43 @@
 
 <p>The basic prose configuration is added to the _config.yml file of my Jekyll site</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">prose</span><span class="p-Indicator">:</span>
-  <span class="l-Scalar-Plain">rooturl</span><span class="p-Indicator">:</span> <span class="s">&#39;&#39;</span>
-  <span class="l-Scalar-Plain">siteurl</span><span class="p-Indicator">:</span> <span class="s">&#39;http://www.hywel.me&#39;</span>
-  <span class="l-Scalar-Plain">media</span><span class="p-Indicator">:</span> <span class="s">&#39;assets&#39;</span>
-  <span class="l-Scalar-Plain">metadata</span><span class="p-Indicator">:</span>
-    <span class="l-Scalar-Plain">_posts</span><span class="p-Indicator">:</span>
-      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="s">&quot;layout&quot;</span>
-        <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
-          <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="s">&quot;layout&quot;</span>
-          <span class="l-Scalar-Plain">element</span><span class="p-Indicator">:</span> <span class="s">&quot;text&quot;</span>
-          <span class="l-Scalar-Plain">value</span><span class="p-Indicator">:</span> <span class="s">&quot;post&quot;</span>
-      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="s">&quot;date&quot;</span>
-        <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
-          <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="s">&quot;date&quot;</span>
-          <span class="l-Scalar-Plain">element</span><span class="p-Indicator">:</span> <span class="s">&quot;text&quot;</span>
-          <span class="l-Scalar-Plain">value</span><span class="p-Indicator">:</span> <span class="s">&quot;CURRENT_DATETIME&quot;</span>
-      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="s">&quot;author&quot;</span>
-        <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
-          <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="s">&quot;author&quot;</span>
-          <span class="l-Scalar-Plain">element</span><span class="p-Indicator">:</span> <span class="s">&quot;text&quot;</span>
-          <span class="l-Scalar-Plain">value</span><span class="p-Indicator">:</span> <span class="s">&quot;Hywel&quot;</span>
-      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="s">&quot;categories&quot;</span>
-        <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
-          <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="s">&quot;categories&quot;</span>
-          <span class="l-Scalar-Plain">element</span><span class="p-Indicator">:</span> <span class="s">&quot;text&quot;</span>
-          <span class="l-Scalar-Plain">placeholder</span><span class="p-Indicator">:</span> <span class="s">&quot;Enter</span><span class="nv"> </span><span class="s">categories&quot;</span>
-      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="s">&quot;excerpt&quot;</span>
-        <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
-          <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="s">&quot;excerpt&quot;</span>
-          <span class="l-Scalar-Plain">element</span><span class="p-Indicator">:</span> <span class="s">&quot;text&quot;</span>
-          <span class="l-Scalar-Plain">placeholder</span><span class="p-Indicator">:</span> <span class="s">&quot;Enter</span><span class="nv"> </span><span class="s">excerpt&quot;</span>
-      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="s">&quot;meta&quot;</span>
-        <span class="l-Scalar-Plain">field</span><span class="p-Indicator">:</span>
-          <span class="l-Scalar-Plain">label</span><span class="p-Indicator">:</span> <span class="s">&quot;meta&quot;</span>
-          <span class="l-Scalar-Plain">element</span><span class="p-Indicator">:</span> <span class="s">&quot;text&quot;</span>
-          <span class="l-Scalar-Plain">placeholder</span><span class="p-Indicator">:</span> <span class="s">&quot;Enter</span><span class="nv"> </span><span class="s">metadata&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">prose</span><span class="pi">:</span>
+  <span class="s">rooturl</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+  <span class="s">siteurl</span><span class="pi">:</span> <span class="s1">'</span><span class="s">http://www.hywel.me'</span>
+  <span class="s">media</span><span class="pi">:</span> <span class="s1">'</span><span class="s">assets'</span>
+  <span class="s">metadata</span><span class="pi">:</span>
+    <span class="s">_posts</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">layout"</span>
+        <span class="s">field</span><span class="pi">:</span>
+          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">layout"</span>
+          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="s">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">post"</span>
+      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">date"</span>
+        <span class="s">field</span><span class="pi">:</span>
+          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">date"</span>
+          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="s">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">CURRENT_DATETIME"</span>
+      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">author"</span>
+        <span class="s">field</span><span class="pi">:</span>
+          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">author"</span>
+          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="s">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hywel"</span>
+      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">categories"</span>
+        <span class="s">field</span><span class="pi">:</span>
+          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">categories"</span>
+          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="s">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">categories"</span>
+      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">excerpt"</span>
+        <span class="s">field</span><span class="pi">:</span>
+          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">excerpt"</span>
+          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="s">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">excerpt"</span>
+      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">meta"</span>
+        <span class="s">field</span><span class="pi">:</span>
+          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">meta"</span>
+          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="s">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">metadata"</span>
+      </code></pre></figure>
 
 <p>Note that I have defined my media folder with today’s date.  I keep my media sorted into date folders.  I have not found out how to configure this as yet.</p>
 

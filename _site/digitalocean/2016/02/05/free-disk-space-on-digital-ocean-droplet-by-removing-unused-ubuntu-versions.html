@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title >Welcome to Jekyll! </title>
+  <title >Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versions </title>
 
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.hywel.me/jekyll/update/2015/03/01/welcome-to-jekyll.html">
+  <link rel="canonical" href="http://www.hywel.me/digitalocean/2016/02/05/free-disk-space-on-digital-ocean-droplet-by-removing-unused-ubuntu-versions.html">
   <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
 </head>
 
@@ -63,8 +63,8 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Welcome to Jekyll!</h1>
-    <p class="post-meta">Mar 1, 2015</p>
+    <h1 class="post-title">Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versions</h1>
+    <p class="post-meta">Feb 5, 2016 ✎ Hywel • digital ocean droplet Ubuntu sudo apt-get autoremove</p>
   </header>
 
   
@@ -73,20 +73,84 @@
 
 
   <article class="post-content">
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <h2 id="running-out-of-disk-space">Running out of Disk Space</h2>
+<p>It has reached a point where the disk usage of a Digital Ocean droplet has reached 69.4% of 19.56Gb.</p>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p><img src="/assets/2016-02-05/running out of disk space.png" alt="running out of disk space.png" /></p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>I know that the total number of applications I use is broadly 2Gb - so where us the rest?</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>It took a while to learn some useful linux commands to investigate.  A good resource describing <a href="https://www.digitalocean.com/community/tutorials/how-to-use-top-netstat-du-other-tools-to-monitor-server-resources#df">tools to monitor server resources</a> at <a href="https://www.digitalocean.com/?refcode=92e12787bf7a">Digital Ocean</a>.</p>
 
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
+<p>The most useful command for my investigation shows the usage of folders:</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo du -h  --max-depth 1</code></pre></figure>
+
+<p><img src="/assets/2016-02-05/sudo du max depth 1.png" alt="sudo du max depth 1.png" />
+<img src="/assets/2016-02-05/sudo du lib.png" alt="sudo du lib.png" />
+<img src="/assets/2016-02-05/sudo du modules.png" alt="sudo du modules.png" />
+<img src="/assets/2016-02-05/too many old unused kernels.png" alt="too many old unused kernels.png" /></p>
+
+<p>As you can see in the /lib/modules folder, there were many old kernel versions taking a total of 5.8Gb.</p>
+
+<p>I verified the currently running kernel using</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">uname -r</code></pre></figure>
+
+<p>I was running linux-image-3.13.0-37-generic  - that was an old one….so wanted to use the latest.</p>
+
+<h3 id="use-the-latest-ubuntu-kernel-through-digital-ocean-control-panel">Use the latest Ubuntu kernel through Digital Ocean Control Panel</h3>
+<p>This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions</p>
+
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel">how-to-update-a-digitalocean-server-s-kernel</a></p>
+
+<p><img src="/assets/2016-02-05/digital ocean droplet now running newer version.png" alt="digital ocean droplet now running newer version.png" /></p>
+
+<p>Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.</p>
+
+<h3 id="delete-old-kernels-using-sudo-apt-get-remove">Delete old Kernels using sudo apt-get remove</h3>
+
+<p>As I am using a service from <a href="https://www.serverpilot.io/?refcode=c2131f64db72">Serverpilot.io</a>, which is a simple  management system for DigitalOcean servers, I contacted them and received this confirmation regarding deleting old kernels:</p>
+
+<blockquote>
+  <p>Justin Samuel (ServerPilot Support)
+Feb 4, 13:55
+Hi Hywel,
+You’re welcome to remove any kernel versions you don’t intend to use again. What you should check before removing any version is that:
+1) It isn’t the most recent kernel version installed.
+2) It isn’t the same kernel version that’s currently running according to uname -r
+3) It isn’t the kernel you have selected in your server settings in DigitalOcean.
+You can then remove a specific kernel with this command:
+sudo apt-get remove linux-image-X.Y.Z-XX-generic</p>
+</blockquote>
+
+<p><img src="/assets/2016-02-05/sudo apt get remove.png" alt="sudo apt get remove.png" /></p>
+
+<p><img src="/assets/2016-02-05/sudo apt get remove continue.png" alt="sudo apt get remove continue.png" /></p>
+
+<h3 id="delete-old-kernels-using-sudo-apt-get-autoremove">Delete old Kernels using sudo apt-get autoremove</h3>
+
+<p>The above method though good, still did not remove all the redundant packages and dependencies. It would also be slow and tedious.</p>
+
+<p>Further reading, I found the following useful link: <a href="https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels">RemoveOldKernels</a>.</p>
+
+<p>Simply using sudo apt-get autoremove according to this link:</p>
+
+<blockquote>
+  <p>The system keeps track of which kernels are older and marks them eligible for removal using this method. Most users should run autoremove every few months or so. Systems with a separate /boot partition should run autoremove every two-four weeks. Mark your calendar, make it a routine. Autoremove can be run as often as you like - running it more often will <strong>not</strong> harm your system</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get autoremove</code></pre></figure>
+
+<p><img src="/assets/2016-02-05/sudo apt get auto remove continue.png" alt="sudo apt get auto remove continue.png" /></p>
+
+<p>According to sudo apt-get autoremove, I cold free up over 7Gb…..here goes…</p>
+
+<p><img src="/assets/2016-02-05/sudo du after removing old files.png" alt="sudo du after removing old files.png" /></p>
+
+<p><img src="/assets/2016-02-05/system information after.png" alt="system information after.png" /></p>
+
+<p>The disk usage of a Digital Ocean droplet is now 20.5% of 19.56Gb.  That has reduced the disk usage by almost 50%..I’d say a success.</p>
 
   </article>
 
@@ -98,7 +162,7 @@
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
        */
       var disqus_config = function () {
-          this.page.url =  "http://www.hywel.me/jekyll/update/2015/03/01/welcome-to-jekyll.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.url =  "http://www.hywel.me/digitalocean/2016/02/05/free-disk-space-on-digital-ocean-droplet-by-removing-unused-ubuntu-versions.html";  // Replace PAGE_URL with your page's canonical URL variable
 
           //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };

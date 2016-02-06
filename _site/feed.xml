@@ -6,9 +6,99 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jan 2016 18:15:36 +0000</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2016 18:15:36 +0000</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Sat, 06 Feb 2016 09:45:09 +0000</pubDate>
+    <lastBuildDate>Sat, 06 Feb 2016 09:45:09 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versions</title>
+        <description>&lt;h2 id=&quot;running-out-of-disk-space&quot;&gt;Running out of Disk Space&lt;/h2&gt;
+&lt;p&gt;It has reached a point where the disk usage of a Digital Ocean droplet has reached 69.4% of 19.56Gb.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/running out of disk space.png&quot; alt=&quot;running out of disk space.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I know that the total number of applications I use is broadly 2Gb - so where us the rest?&lt;/p&gt;
+
+&lt;p&gt;It took a while to learn some useful linux commands to investigate.  A good resource describing &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-top-netstat-du-other-tools-to-monitor-server-resources#df&quot;&gt;tools to monitor server resources&lt;/a&gt; at &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The most useful command for my investigation shows the usage of folders:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo du -h  --max-depth 1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo du max depth 1.png&quot; alt=&quot;sudo du max depth 1.png&quot; /&gt;
+&lt;img src=&quot;/assets/2016-02-05/sudo du lib.png&quot; alt=&quot;sudo du lib.png&quot; /&gt;
+&lt;img src=&quot;/assets/2016-02-05/sudo du modules.png&quot; alt=&quot;sudo du modules.png&quot; /&gt;
+&lt;img src=&quot;/assets/2016-02-05/too many old unused kernels.png&quot; alt=&quot;too many old unused kernels.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see in the /lib/modules folder, there were many old kernel versions taking a total of 5.8Gb.&lt;/p&gt;
+
+&lt;p&gt;I verified the currently running kernel using&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;uname -r&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I was running linux-image-3.13.0-37-generic  - that was an old one….so wanted to use the latest.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-the-latest-ubuntu-kernel-through-digital-ocean-control-panel&quot;&gt;Use the latest Ubuntu kernel through Digital Ocean Control Panel&lt;/h3&gt;
+&lt;p&gt;This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel&quot;&gt;how-to-update-a-digitalocean-server-s-kernel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/digital ocean droplet now running newer version.png&quot; alt=&quot;digital ocean droplet now running newer version.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.&lt;/p&gt;
+
+&lt;h3 id=&quot;delete-old-kernels-using-sudo-apt-get-remove&quot;&gt;Delete old Kernels using sudo apt-get remove&lt;/h3&gt;
+
+&lt;p&gt;As I am using a service from &lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt;, which is a simple  management system for DigitalOcean servers, I contacted them and received this confirmation regarding deleting old kernels:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Justin Samuel (ServerPilot Support)
+Feb 4, 13:55
+Hi Hywel,
+You’re welcome to remove any kernel versions you don’t intend to use again. What you should check before removing any version is that:
+1) It isn’t the most recent kernel version installed.
+2) It isn’t the same kernel version that’s currently running according to uname -r
+3) It isn’t the kernel you have selected in your server settings in DigitalOcean.
+You can then remove a specific kernel with this command:
+sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo apt get remove.png&quot; alt=&quot;sudo apt get remove.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo apt get remove continue.png&quot; alt=&quot;sudo apt get remove continue.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;delete-old-kernels-using-sudo-apt-get-autoremove&quot;&gt;Delete old Kernels using sudo apt-get autoremove&lt;/h3&gt;
+
+&lt;p&gt;The above method though good, still did not remove all the redundant packages and dependencies. It would also be slow and tedious.&lt;/p&gt;
+
+&lt;p&gt;Further reading, I found the following useful link: &lt;a href=&quot;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&quot;&gt;RemoveOldKernels&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Simply using sudo apt-get autoremove according to this link:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The system keeps track of which kernels are older and marks them eligible for removal using this method. Most users should run autoremove every few months or so. Systems with a separate /boot partition should run autoremove every two-four weeks. Mark your calendar, make it a routine. Autoremove can be run as often as you like - running it more often will &lt;strong&gt;not&lt;/strong&gt; harm your system&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get autoremove&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo apt get auto remove continue.png&quot; alt=&quot;sudo apt get auto remove continue.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;According to sudo apt-get autoremove, I cold free up over 7Gb…..here goes…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo du after removing old files.png&quot; alt=&quot;sudo du after removing old files.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/system information after.png&quot; alt=&quot;system information after.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The disk usage of a Digital Ocean droplet is now 20.5% of 19.56Gb.  That has reduced the disk usage by almost 50%..I’d say a success.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 05 Feb 2016 06:04:00 +0000</pubDate>
+        <link>http://www.hywel.me/digitalocean/2016/02/05/free-disk-space-on-digital-ocean-droplet-by-removing-unused-ubuntu-versions.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/digitalocean/2016/02/05/free-disk-space-on-digital-ocean-droplet-by-removing-unused-ubuntu-versions.html</guid>
+        
+        
+        <category>digitalocean</category>
+        
+      </item>
     
       <item>
         <title>Convert Office 365 User Email to Shared Mailbox and Remove the User License</title>
@@ -273,40 +363,40 @@
 &lt;h3 id=&quot;step-4-add-the-disqus-code-to-my-post-pages&quot;&gt;Step 4: Add the Disqus code to my post pages&lt;/h3&gt;
 &lt;p&gt;In my post.html after the closing article tag, I’ve added the Disqus code:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;article&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;post-content&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;article&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/article&amp;gt;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Hywel Start Disqus Comments --&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;disqus_thread&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;disqus_thread&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;cm&quot;&gt;/**&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;       */&lt;/span&gt;
+      &lt;span class=&quot;cm&quot;&gt;/**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */&lt;/span&gt;
       &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;disqus_config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Replace PAGE_URL with your page&amp;#39;s canonical URL variable&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Replace PAGE_URL with your page&#39;s canonical URL variable&lt;/span&gt;
 
-          &lt;span class=&quot;c1&quot;&gt;//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&amp;#39;s unique identifier variable&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// DON&amp;#39;T EDIT BELOW THIS LINE&lt;/span&gt;
-          &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// DON&#39;T EDIT BELOW THIS LINE&lt;/span&gt;
+          &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;script&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-          &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;//hywelme.disqus.com/embed.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;//hywelme.disqus.com/embed.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-          &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data-timestamp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;data-timestamp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
           &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;})();&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;noscript&amp;gt;&lt;/span&gt;Please enable JavaScript to view the &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://disqus.com/?ref_noscript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;nofollow&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;comments powered by Disqus.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;noscript&amp;gt;&lt;/span&gt;Please enable JavaScript to view the &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://disqus.com/?ref_noscript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nofollow&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;comments powered by Disqus.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Hywel End Disqus Comments --&amp;gt;&lt;/span&gt;
 
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Note that I used the canonical URL variable as defined in Jekyll’s head.html&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;canonical&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;canonical&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;step-5-check-that-the-comments-are-shown&quot;&gt;Step 5: Check that the comments are shown..&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/discus comments on hywelme site.jpg&quot; alt=&quot;Disqus comments on hywel.me&quot; /&gt;&lt;/p&gt;
@@ -338,25 +428,25 @@
 
 &lt;p&gt;There are several choices available, some are polished and have several functions such as &lt;a href=&quot;http://www.coffeecup.com/image-mapper/&quot;&gt;coffee cup&lt;/a&gt;, but as I only wanted a basic map I found this simple, effective &lt;a href=&quot;http://www.maschek.hu/imagemap/imgmap&quot;&gt;Online Image Map Editor&lt;/a&gt; by Adam Maschek.    I chose a simple rectangle shape for the area co-ordinates.  Here’s the finished HTML:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;entry-feature-image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;London&amp;#39;s Premier Victorian Carolers&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;usemap=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#my_image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin-top:0;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound1&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/joy to the world.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;entry-feature-image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;London&#39;s Premier Victorian Carolers&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;usemap=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#my_image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;margin-top:0;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sound1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://victoriancarolsingershire.uk/audio/joy to the world.mp3&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;audio/mpeg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound2&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/jingle bells.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sound2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://victoriancarolsingershire.uk/audio/jingle bells.mp3&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;audio/mpeg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound3&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/silent night short.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sound3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://victoriancarolsingershire.uk/audio/silent night short.mp3&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;audio/mpeg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sound4&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/audio/deck the halls.mp3&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;audio/mpeg&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sound4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://victoriancarolsingershire.uk/audio/deck the halls.mp3&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;audio/mpeg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/audio&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;map&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;my_image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;my_image&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;408,556,660,996&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area1&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;880,552,1096,852&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area2&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1120,428,1360,732&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area3&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1712,544,2444,1160&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area4&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/map&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;map&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;my_image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id =&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;my_image&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rect&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;408,556,660,996&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area1&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rect&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;880,552,1096,852&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area2&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rect&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1120,428,1360,732&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area3&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;area&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;shape=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rect&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;coords=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1712,544,2444,1160&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area4&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/map&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;There is the image with the usemap=”#my_image”, the four HTML5 audio files along with the map of areas and their co-ordinates.&lt;/p&gt;
 
@@ -364,35 +454,35 @@
 
 &lt;p&gt;In my page scripts, as well as loading the jQuery files, these are included;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/assets/js/imagemapresizer/imageMapResizer.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imageMapResize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.hywel.me/assets/js/imagemapresizer/imageMapResizer.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imageMapResize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;using-jquery-to-control-the-audio&quot;&gt;Using jQuery to Control the Audio&lt;/h2&gt;
 
 &lt;p&gt;The controls I wanted to achieve were to play or pause the audio on click of object and pause any other audio that may be playing.  This script was placed in a file called audioplay.js:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;map[name=my_image] area&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;click&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//$(&amp;quot;#my_image area&amp;quot;).on(&amp;#39;click&amp;#39;, function () {&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;map[name=my_image] area&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;click&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//$(&quot;#my_image area&quot;).on(&#39;click&#39;, function () {&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/area/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;id&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/area/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;audio&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;audio&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pause&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 
-    &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggleClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;active&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;pause&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;audio[id^=&amp;quot;sound&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toggleClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;active&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;active&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;pause&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;audio[id^=&quot;sound&quot;]&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;play&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;audio[id^=&amp;quot;sound&amp;quot;]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pause&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;play&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;audio[id^=&quot;sound&quot;]&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pause&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;this was then was called from the page&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.hywel.me/assets/js/audioplay.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://victoriancarolsingershire.uk/assets/js/audioplay.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Thanks to the following resources for their inspiration:&lt;/p&gt;
 
@@ -409,11 +499,11 @@
         <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html</guid>
         
         
-        <category>jekyll</category>
+        <category>Jekyll</category>
         
-        <category>static</category>
+        <category>Static</category>
         
-        <category>site</category>
+        <category>Site</category>
         
       </item>
     
@@ -427,42 +517,43 @@
 
 &lt;p&gt;The basic prose configuration is added to the _config.yml file of my Jekyll site&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;prose&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;rooturl&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;siteurl&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;http://www.hywel.me&amp;#39;&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;assets&amp;#39;&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;l-Scalar-Plain&quot;&gt;_posts&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;layout&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;layout&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;CURRENT_DATETIME&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;author&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Hywel&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;excerpt&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;excerpt&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;meta&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;l-Scalar-Plain&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;meta&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;
-          &lt;span class=&quot;l-Scalar-Plain&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;metadata&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;prose&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;rooturl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;siteurl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://www.hywel.me&#39;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;assets&#39;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;_posts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;layout&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;layout&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;post&quot;&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;date&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;date&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;CURRENT_DATETIME&quot;&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;author&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;author&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Hywel&quot;&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&quot;&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&quot;&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;meta&quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;meta&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
+          &lt;span class=&quot;s&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;metadata&quot;&lt;/span&gt;
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Note that I have defined my media folder with today’s date.  I keep my media sorted into date folders.  I have not found out how to configure this as yet.&lt;/p&gt;
 
@@ -592,8 +683,8 @@
 &lt;p&gt;All done, you should now be able to send and receive email using the shared mail box.&lt;/p&gt;
 </description>
         <pubDate>Sat, 21 Nov 2015 13:45:00 +0000</pubDate>
-        <link>http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html</guid>
+        <link>http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html</guid>
         
         
         <category>small</category>
@@ -712,78 +803,11 @@
         <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/16/applications-used-for-writing-jekyll-static-sites.html</guid>
         
         
-        <category>jekyll</category>
+        <category>Jekyll</category>
         
-        <category>static</category>
+        <category>Static</category>
         
-        <category>site</category>
-        
-      </item>
-    
-      <item>
-        <title>Installing Jekyll Locally on a Mac</title>
-        <description>&lt;h3 id=&quot;static-sites-with-jekyll&quot;&gt;Static Sites with Jekyll&lt;/h3&gt;
-
-&lt;p&gt;Static sites are fast to load and are particularly suited to blog style pages written with &lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot;&gt;markdown&lt;/a&gt;.  They also don’t require a database, so provide many benefits compared with Wordpress or Drupal.  I considered &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;, but decided to try &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; because of the effectively &lt;strong&gt;free&lt;/strong&gt; hosting and native integration on &lt;a href=&quot;http://jgithub.com/&quot;&gt;GitHub&lt;/a&gt;.  Also, there are more &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Themes&lt;/a&gt; readily available.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A note of caution…&lt;/strong&gt;,sites using Jekyll are written locally on your computer and then pushed to the host.   Therefore, Jekyll and all it’s pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly and can result is some teething problems..&lt;/p&gt;
-
-&lt;h3 id=&quot;some-problems-installing-jekyll-locally-on-a-mac&quot;&gt;Some Problems Installing Jekyll Locally on a Mac&lt;/h3&gt;
-
-&lt;p&gt;After cloning the So Simple Theme, by &lt;a href=&quot;http://mademistakes.com&quot;&gt;Michael Rose&lt;/a&gt;, I tried to install Jekyll locally as described on &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install Jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;However, I received the following error&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;You don&amp;#39;t have write permissions for the /Library/Ruby/Gems/2.0.0 directory&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This error has been described on the Jekyll forums &lt;a href=&quot;https://github.com/jekyll/jekyll/issues/3984&quot;&gt;gem-install-jekyll-failed-on-Mac-OS-X&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The steps taken to resolve these were as follows:&lt;/p&gt;
-
-&lt;p&gt;Install &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt; using&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Install a user specific version of Ruby using&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install ruby&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Create a user specific bash profile as described at &lt;a href=&quot;http://hathaway.cc/post/69201163472/how-to-edit-your-path-environment-variables-on-mac&quot;&gt;How To Edit Your PATH Environment Variables On Mac OS X&lt;/a&gt; using&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Inside the .bash_profile add the line so it can find the updated path to the ruby as described &lt;a href=&quot;http://stackoverflow.com/questions/11025980/how-to-add-usr-local-bin-in-path-on-mac&quot;&gt;How to add /usr/local/bin in $PATH on Mac&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/usr/local/git/bin:/usr/local/bin&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To ensure that all the Jekyll dependencies were installed I installed &lt;a href=&quot;http://bundler.io/&quot;&gt;Bundler&lt;/a&gt; using&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install bundler&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and then  within the directory having the Jekyll/ Github repository I ran&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bundle install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Finally, as I was using Bundler to manager my dependencies, in order to run Jekyll locally, I needed to use&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now my site was successfully being served locally  at http://127.0.0.1:4000/ using the built in web server provided by Jekyll.&lt;/p&gt;
-
-&lt;p&gt;It is worth noting that there is a great resource at &lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages/&quot;&gt;GitHub Using Jekyll with Pages&lt;/a&gt;, which may be a simpler way to install Jekyll.  I may try that next time…&lt;/p&gt;
-</description>
-        <pubDate>Sun, 15 Nov 2015 12:56:00 +0000</pubDate>
-        <link>http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>static</category>
-        
-        <category>site</category>
+        <category>Site</category>
         
       </item>
     

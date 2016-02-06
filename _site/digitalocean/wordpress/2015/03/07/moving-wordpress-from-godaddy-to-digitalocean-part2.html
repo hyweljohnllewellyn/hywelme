@@ -103,11 +103,11 @@
 
 <p>Then download the latest Wordpress version using the following:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget https://wordpress.org/latest.tar.gz
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">wget https://wordpress.org/latest.tar.gz
 tar xzf latest.tar.gz
-mv wordpress/* .
+mv wordpress/<span class="k">*</span> .
 rm latest.tar.gz
-rmdir wordpress</code></pre></div>
+rmdir wordpress</code></pre></figure>
 
 <p>Browsing the sites domain URL will show the WordPress installer:</p>
 
@@ -135,23 +135,23 @@ rmdir wordpress</code></pre></div>
 
 <p>Whilst still in SequelPro, I need to update the post id’s as they have moved folder location (you may not need to do this):</p>
 
-<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">update</span> <span class="n">wp_posts</span> <span class="k">set</span> <span class="n">guid</span> <span class="o">=</span> <span class="k">replace</span><span class="p">(</span><span class="n">guid</span><span class="p">,</span> <span class="s1">&#39;http://operascool.org/operascoolwp/&#39;</span><span class="p">,</span><span class="s1">&#39;http://operascool.org&#39;</span><span class="p">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">update</span> <span class="n">wp_posts</span> <span class="k">set</span> <span class="n">guid</span> <span class="o">=</span> <span class="k">replace</span><span class="p">(</span><span class="n">guid</span><span class="p">,</span> <span class="s1">'http://operascool.org/operascoolwp/'</span><span class="p">,</span><span class="s1">'http://operascool.org'</span><span class="p">);</span></code></pre></figure>
 
 <p>Now we need to update the database credentials in the WordPress config file.</p>
 
 <p>SSH back to to the apps public directory on the DigitalOcean server and type the following:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">mv wp-config-sample.php wp-config.php
-nano wp-config.php</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mv wp-config-sample.php wp-config.php
+nano wp-config.php</code></pre></figure>
 
 <p><img src="http://www.hywel.me/assets/2015-03-07/8nano_wpconfig.png" alt="My helpful screenshot" /></p>
 
 <p>This will allow me to update the database configuration to that created by ServerPilot.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">define<span class="o">(</span><span class="s1">&#39;DB_NAME&#39;</span>, <span class="s1">&#39;database_name_here&#39;</span><span class="o">)</span><span class="p">;</span>
-define<span class="o">(</span><span class="s1">&#39;DB_USER&#39;</span>, <span class="s1">&#39;username_here&#39;</span><span class="o">)</span><span class="p">;</span>
-define<span class="o">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span>, <span class="s1">&#39;password_here&#39;</span><span class="o">)</span><span class="p">;</span>
-define<span class="o">(</span><span class="s1">&#39;DB_HOST&#39;</span>, <span class="s1">&#39;localhost&#39;</span><span class="o">)</span><span class="p">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">define<span class="o">(</span><span class="s1">'DB_NAME'</span>, <span class="s1">'database_name_here'</span><span class="o">)</span>;
+define<span class="o">(</span><span class="s1">'DB_USER'</span>, <span class="s1">'username_here'</span><span class="o">)</span>;
+define<span class="o">(</span><span class="s1">'DB_PASSWORD'</span>, <span class="s1">'password_here'</span><span class="o">)</span>;
+define<span class="o">(</span><span class="s1">'DB_HOST'</span>, <span class="s1">'localhost'</span><span class="o">)</span>;</code></pre></figure>
 
 <p>Note that the localhost for my server is 127.0.0.1.  Save the file.</p>
 
@@ -175,9 +175,9 @@ define<span class="o">(</span><span class="s1">&#39;DB_HOST&#39;</span>, <span c
 
 <p>Select Custom and enter the DigitalOcean domain servers:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">ns1.digitalocean.com
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ns1.digitalocean.com
 ns2.digitalocean.com
-ns3.digitalocean.com</code></pre></div>
+ns3.digitalocean.com</code></pre></figure>
 
 <p><img src="http://www.hywel.me/assets/2015-03-07/12godaddy_costom_nameserver.png" alt="My helpful screenshot" /></p>
 
@@ -185,7 +185,7 @@ ns3.digitalocean.com</code></pre></div>
 
 <p>Lastly, I synchronise the file from the DigitalOcean server to my local Mac as a backup:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">rsync -avP serverpilot@178.62.78.182:/srv/users/serverpilot/apps/operascoolorg/public/ /Users/Hywel/operascoolorg/public</code></pre></figure>
 
 <p>That is it, for now.  In my last post in this series, I will add the site to CloudFlare CDN.</p>
 

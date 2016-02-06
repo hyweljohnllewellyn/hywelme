@@ -83,11 +83,11 @@
 
 <p>After cloning the So Simple Theme, by <a href="http://mademistakes.com">Michael Rose</a>, I tried to install Jekyll locally as described on <a href="http://jekyllrb.com/">Jekyll</a></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem install Jekyll</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install Jekyll</code></pre></figure>
 
 <p>However, I received the following error</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="s2">&quot;You don&#39;t have write permissions for the /Library/Ruby/Gems/2.0.0 directory&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="s2">"You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory"</span></code></pre></figure>
 
 <p>This error has been described on the Jekyll forums <a href="https://github.com/jekyll/jekyll/issues/3984">gem-install-jekyll-failed-on-Mac-OS-X</a>.</p>
 
@@ -95,31 +95,32 @@
 
 <p>Install <a href="http://brew.sh/">HomeBrew</a> using</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  
+ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span></code></pre></figure>
 
 <p>Install a user specific version of Ruby using</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install ruby</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew install ruby</code></pre></figure>
 
 <p>Create a user specific bash profile as described at <a href="http://hathaway.cc/post/69201163472/how-to-edit-your-path-environment-variables-on-mac">How To Edit Your PATH Environment Variables On Mac OS X</a> using</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">nano .bash_profile</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nano .bash_profile  </code></pre></figure>
 
 <p>Inside the .bash_profile add the line so it can find the updated path to the ruby as described <a href="http://stackoverflow.com/questions/11025980/how-to-add-usr-local-bin-in-path-on-mac">How to add /usr/local/bin in $PATH on Mac</a></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/git/bin:/usr/local/bin</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/git/bin:/usr/local/bin</code></pre></figure>
 
 <p>To ensure that all the Jekyll dependencies were installed I installed <a href="http://bundler.io/">Bundler</a> using</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem install bundler</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install bundler</code></pre></figure>
 
 <p>and then  within the directory having the Jekyll/ Github repository I ran</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">bundle install</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bundle install</code></pre></figure>
 
 <p>Finally, as I was using Bundler to manager my dependencies, in order to run Jekyll locally, I needed to use</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">bundle <span class="nb">exec </span>jekyll serve</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bundle <span class="nb">exec </span>jekyll serve</code></pre></figure>
 
 <p>Now my site was successfully being served locally  at http://127.0.0.1:4000/ using the built in web server provided by Jekyll.</p>
 

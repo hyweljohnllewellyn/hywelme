@@ -41,7 +41,7 @@ uname -r
 
 I was running linux-image-3.13.0-37-generic  - that was an old one....so wanted to use the latest.
 
-###Use the latest Ubuntu kernel through Digital Ocean Control Panel
+### Use the latest Ubuntu kernel through Digital Ocean Control Panel
 
 This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions
 

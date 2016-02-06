@@ -19,13 +19,13 @@ I have decided try out the *do it yourself* cloud hosting option provided by [Di
 
 After a quick search online, I found a promotional code to get 2 months free hosting with DigitalOcean.com, so at least I could try before I buy.
 
-As a member, DigitalOcean offer a referal scheme - please click my link if you'd like to try it for free:
+As a member, DigitalOcean offer a referral scheme - please click my link if you'd like to try it for free:
 
 [$10 credit at Digital Ocean](https://www.digitalocean.com/?refcode=92e12787bf7a)
 
-DigitalOcean's documentation and user forums are very active and I found it quite straight forward as a tech-savvy person to get a basic Ubuntu operating system insalled on a *droplet* .
+DigitalOcean's documentation and user forums are very active and I found it quite straight forward as a tech-savvy person to get a basic Ubuntu operating system installed on a *droplet* .
 
-DigitalOcean is managed through a command line terminal, so if you are slightly allergic to the thought of typing commands, it's propably not for you.
+DigitalOcean is managed through a command line terminal, so if you are slightly allergic to the thought of typing commands, it's probably not for you.
 
 [Serverpilot.io](https://www.serverpilot.io/?refcode=c2131f64db72 ) is a simple  management system for DigitalOcean servers. Even their free plan takes care automatically of basic server security and PHP application management.  
 

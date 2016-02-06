@@ -11,6 +11,7 @@ title: Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versio
 
 
 ## Running out of Disk Space
+
 It has reached a point where the disk usage of a Digital Ocean droplet has reached 69.4% of 19.56Gb.  
 
 ![running out of disk space.png]({{site.baseurl}}/assets/2016-02-05/running out of disk space.png)
@@ -41,6 +42,7 @@ uname -r
 I was running linux-image-3.13.0-37-generic  - that was an old one....so wanted to use the latest.
 
 ###Use the latest Ubuntu kernel through Digital Ocean Control Panel
+
 This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions
 
 [how-to-update-a-digitalocean-server-s-kernel](https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel)

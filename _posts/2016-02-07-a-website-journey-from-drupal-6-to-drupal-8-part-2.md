@@ -40,9 +40,10 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-### Step 2 - Add Composer to my Profile
+### Step 2 - Add Composer to my bash_profile
 
 {% highlight bash %}
+cd /Users/hywel
 nano .bash_profile
 {% endhighlight %}
 
@@ -52,9 +53,9 @@ Add the following line
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 {% endhighlight %}
 
-Start a new Terminal session to emsure th path is updated
+Start a new Terminal session to ensure th path is updated
 
-### Step 3 - Install Drush using Composer and verify Drush Status
+### Step 3 - Install Drush using Composer and verify Status
 
 {% highlight bash %}
 cd /Sites/drupal8

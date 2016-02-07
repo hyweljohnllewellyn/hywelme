@@ -70,7 +70,7 @@ Start a new Terminal session to ensure th path is updated
 ### Step 3 - Install Drush using Composer and verify Status
 
 {% highlight bash %}
-cd /Sites/drupal8
+cd /Users/hywel/Sites/drupal8
 composer global require drush/drush
 drush status
 {% endhighlight %}
@@ -132,6 +132,16 @@ Now to retry..
 cd /Users/hywel/Sites/drupal8
 drush en migrate_upgrade
 {% endhighlight %}
+
+**Issue: Drush still could not connect - I determined that the mysql command was not available from /Users/hywel/Sites/drupal8 with MAMP**
+Following the instructions at [Solving mysql command not found" on MAMP](http://www.webbykat.com/2012/06/solving-sh-mysql-command-not-found-mamp-pro-2) 
+
+{% highlight bash %}
+cd /Users/hywel
+nano .bash_profile
+{% endhighlight %}
+
+Add this line to .bash_profile: export PATH=$PATH:/Applications/MAMP/Library/bin 
 
 http://mikeryan.name/blog/mikeryan/upgrading-to-drupal-8-using-drush
 

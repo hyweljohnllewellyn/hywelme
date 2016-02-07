@@ -101,6 +101,7 @@ export PATH="$MAMP_PHP:$PATH"
 [Executing an upgrade using Drush](https://www.drupal.org/node/2350651) describes:
 
 > To migrate using Drush you need to download and enable the Migrate Upgrade contributed module. You will also need Migrate Tools if you plan on doing more than running a one-time complete upgrade.
+
 Drush has extensive functionality to install and maintain Drupal - see the [Drush Site](https://github.com/drush-ops/drush) and [Drush Commands](http://drushcommands.com/).
 
 [To install and enable the contributed modules](https://www.drupal.org/documentation/install/modules-themes/modules-8) :

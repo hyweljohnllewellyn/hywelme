@@ -13,7 +13,7 @@ title: "A Website Journey from Drupal 6 to Drupal 8 - Part 2"
 
 [In my previous post,]({% post_url 2016-02-06-a-website-journey-from-drupal-6-to-drupal-8-part-1 %}) I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.
 
-For this post, I will install the Drupal Migration Modules and upgrade the core content.
+For this post, I will install the Drupal Migration Modules.
 
 From [Praparing an Upgrade](https://www.drupal.org/node/2350603) I will check:
 
@@ -133,7 +133,7 @@ cd /Users/hywel/Sites/drupal8
 drush en migrate_upgrade
 {% endhighlight %}
 
-**Issue: Drush still could not connect - I determined that the mysql command was not available from /Users/hywel/Sites/drupal8 with MAMP**
+**Issue: Drush still could not connect with the same error as before - I determined that the mysql command was not available from /Users/hywel/Sites/drupal8 with MAMP**
 Following the instructions at [Solving mysql command not found" on MAMP](http://www.webbykat.com/2012/06/solving-sh-mysql-command-not-found-mamp-pro-2) 
 
 {% highlight bash %}
@@ -141,10 +141,18 @@ cd /Users/hywel
 nano .bash_profile
 {% endhighlight %}
 
-Add this line to .bash_profile: export PATH=$PATH:/Applications/MAMP/Library/bin 
+Add this line to .bash_profile: 
 
-http://mikeryan.name/blog/mikeryan/upgrading-to-drupal-8-using-drush
+export PATH=$PATH:/Applications/MAMP/Library/bin 
 
+Now to retry..
 
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush en migrate_upgrade
+{% endhighlight %}
 
+![migrate upgrade enable success]({{site.baseurl}}/assets/2016-02-07/migrate upgrade enable success.png)
+
+Success - Do you want to continue... yes I think so!  See you next time.
 

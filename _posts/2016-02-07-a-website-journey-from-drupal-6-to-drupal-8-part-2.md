@@ -25,13 +25,13 @@ From [Praparing an Upgrade](https://www.drupal.org/node/2350603) I will check:
 
 ## [Executing an upgrade using Drush](https://www.drupal.org/node/2350651)
 
-_I will install Drush using Homebrew package manager as described in [Install Drush on a Mac](https://www.drupal.org/node/1674222)
+_ I will install Drush using Homebrew package manager as described in [Install Drush on a Mac](https://www.drupal.org/node/1674222)
 
-I already have Homebrew installed, otherwise I followed the commands on [Installing Drush on Mac using Homebrew](https://www.drupal.org/node/954766)_
+I already have Homebrew installed, otherwise I followed the commands on [Installing Drush on Mac using Homebrew](https://www.drupal.org/node/954766) _
 
-**Update that the above methods may not be the best way for Drush 8 or Drupal 8 as described at [Installing Drush 8 using Composer](http://whaaat.com/installing-drush-8-using-composer) and [Install a global Drush via Composer](http://docs.drush.org/en/master/install-alternative/) ** 
+** The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at [Installing Drush 8 using Composer](http://whaaat.com/installing-drush-8-using-composer)  ** 
 
-Following instructions from these sites:
+So I decided to Install Drush using Composer using instruction at [Install a global Drush via Composer](http://docs.drush.org/en/master/install-alternative/) :
 
 ### Step 1 - Install Composer Globally
 {% highlight bash %}

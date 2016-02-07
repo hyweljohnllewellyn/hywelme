@@ -54,9 +54,10 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 Start a new Terminal session to emsure th path is updated
 
-### Step 3 - Install Drush using Composer
+### Step 3 - Install Drush using Composer and verify Drush Status
 
 {% highlight bash %}
 cd /Sites/drupal8
 composer global require drush/drush
+drush status
 {% endhighlight %}

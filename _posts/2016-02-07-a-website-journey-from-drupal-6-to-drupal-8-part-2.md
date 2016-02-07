@@ -124,7 +124,14 @@ sudo mkdir /var/mysql
 sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock
 {% endhighlight %}
 
+![MAMP mysql sock]({{site.baseurl}}/assets/2016-02-07/MAMP mysql sock.png)
 
+Now to retry..
+
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush en migrate_upgrade
+{% endhighlight %}
 
 http://mikeryan.name/blog/mikeryan/upgrading-to-drupal-8-using-drush
 

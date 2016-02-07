@@ -25,13 +25,21 @@ From [Praparing an Upgrade](https://www.drupal.org/node/2350603) I will check:
 
 ## [Executing an upgrade using Drush](https://www.drupal.org/node/2350651)
 
-_ I will install Drush using Homebrew package manager as described in [Install Drush on a Mac](https://www.drupal.org/node/1674222)
+~~I will install Drush using Homebrew package manager as described in [Install Drush on a Mac](https://www.drupal.org/node/1674222)~~
 
-I already have Homebrew installed, otherwise I followed the commands on [Installing Drush on Mac using Homebrew](https://www.drupal.org/node/954766) _
+~~I already have Homebrew installed, otherwise I followed the commands on [Installing Drush on Mac using Homebrew](https://www.drupal.org/node/954766)~~
 
-** The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at [Installing Drush 8 using Composer](http://whaaat.com/installing-drush-8-using-composer)  ** 
+**The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at [Installing Drush 8 using Composer](http://whaaat.com/installing-drush-8-using-composer)** 
 
-So I decided to Install Drush using Composer using instruction at [Install a global Drush via Composer](http://docs.drush.org/en/master/install-alternative/) :
+Before installing, I decided to change the default MAMP document folder to be in my usual /Sites/ folder :
+
+![updated MAMP site root folder]({{site.baseurl}}/assets/2016-02-07/updated MAMP site root folder.png)
+
+The local URL now looked like this:
+
+![updated drupal 8 local URL]({{site.baseurl}}/assets/2016-02-07/updated drupal 8 local URL.png)
+
+Drush was then installed with Composer using instruction at [Install a global Drush via Composer](http://docs.drush.org/en/master/install-alternative/) :
 
 ### Step 1 - Install Composer Globally
 {% highlight bash %}
@@ -39,6 +47,8 @@ cd /Sites/drupal8
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
+
+![installing composer]({{site.baseurl}}/assets/2016-02-07/installing composer.png)
 
 ### Step 2 - Add Composer to my bash_profile
 
@@ -62,3 +72,5 @@ cd /Sites/drupal8
 composer global require drush/drush
 drush status
 {% endhighlight %}
+
+![installing drush with composer]({{site.baseurl}}/assets/2016-02-07/installing drush with composer.png)

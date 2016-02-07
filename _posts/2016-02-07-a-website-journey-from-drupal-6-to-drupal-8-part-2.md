@@ -77,4 +77,17 @@ drush status
 
 ![drush 8 status]({{site.baseurl}}/assets/2016-02-07/drush 8 status.png)
 
+### Step 4 - [Update Path to ensure systems uses the MAMP version of PHP](http://stackoverflow.com/questions/4145667/how-to-override-the-path-of-php-to-use-the-mamp-path/10653443#10653443)  
+
+{% highlight bash %}
+cd /Users/hywel
+nano .bash_profile
+{% endhighlight %}
+
+Add the following lines:
+
+export MAMP_PHP=/Applications/MAMP/bin/php/php7.0.0/bin
+export PATH="$MAMP_PHP:$PATH"
+
+![update path to MAMP php]({{site.baseurl}}/assets/2016-02-07/update path to MAMP php.png)
 

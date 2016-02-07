@@ -74,3 +74,7 @@ drush status
 {% endhighlight %}
 
 ![installing drush with composer]({{site.baseurl}}/assets/2016-02-07/installing drush with composer.png)
+
+![drush 8 status]({{site.baseurl}}/assets/2016-02-07/drush 8 status.png)
+
+

@@ -4,7 +4,7 @@ date: "2016-02-07 10:00 +0000"
 author: Hywel
 categories: drupal
 excerpt: ""
-meta: Drupal 8 Migration Upgrade from Drupal 6 Drush
+meta: Drupal 8 Migration Upgrade from Drupal 6 using Drush
 published: true
 title: "A Website Journey from Drupal 6 to Drupal 8 - Part 2"
 ---
@@ -16,7 +16,7 @@ title: "A Website Journey from Drupal 6 to Drupal 8 - Part 2"
 
 For this post, I will install the Drupal Migration Modules.
 
-From [Praparing an Upgrade](https://www.drupal.org/node/2350603) I will check:
+From [Preparing an Upgrade](https://www.drupal.org/node/2350603) I will check:
 
 > A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.
     
@@ -40,7 +40,7 @@ Before installing, I decided to change the default MAMP document folder to be in
 
 The local URL now looked like this:
 
-![updated drupal 8 local URL]({{site.baseurl}}/assets/2016-02-07/updated drupal 8 local URL.png)
+![updated Drupal 8 local URL]({{site.baseurl}}/assets/2016-02-07/updated drupal 8 local URL.png)
 
 Drush was then installed with Composer using instruction at [Install a global Drush via Composer](http://docs.drush.org/en/master/install-alternative/) :
 
@@ -66,7 +66,7 @@ Add the following line
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 {% endhighlight %}
 
-Start a new Terminal session to ensure th path is updated
+Start a new Terminal session to ensure the path is updated
 
 ### Step 3 - Install Drush using Composer and verify Status
 
@@ -89,18 +89,19 @@ nano .bash_profile
 
 Add the following lines:
 
+{% highlight bash %}
 export MAMP_PHP=/Applications/MAMP/bin/php/php7.0.0/bin
 export PATH="$MAMP_PHP:$PATH"
+{% endhighlight %}
 
 ![update path to MAMP php]({{site.baseurl}}/assets/2016-02-07/update path to MAMP php.png)
 
-## Download and Enable the Migrate 
+### Step 5 - Install the Migration Modules
+
 [Executing an upgrade using Drush](https://www.drupal.org/node/2350651) describes:
 
 > To migrate using Drush you need to download and enable the Migrate Upgrade contributed module. You will also need Migrate Tools if you plan on doing more than running a one-time complete upgrade.
-
-### Step 5 - Install the Migration Modules
-Drush has extensive funxtionality to install and maintain Drupal - see the [Drush Site](https://github.com/drush-ops/drush) and [Drush Commands](http://drushcommands.com/).
+Drush has extensive functionality to install and maintain Drupal - see the [Drush Site](https://github.com/drush-ops/drush) and [Drush Commands](http://drushcommands.com/).
 
 [To install and enable the contributed modules](https://www.drupal.org/documentation/install/modules-themes/modules-8) :
 
@@ -119,7 +120,7 @@ The first part worked:
 
 [julianlmedina](http://julianlmedina.com/getting-drush-working-with-mamp-3-on-mac/)  and [Installing Drush on Mac using Homebrew](https://www.drupal.org/node/954766) have described
 
-> If you are running your Drupal sites with MAMP, you need to tell drush to use MAMP's mysql.sock or you will run into the following error.  Easiest way to do this is by creating a symlink
+> If you are running your Drupal sites with MAMP, you need to tell Drush to use MAMP's mysql.sock or you will run into the following error.  Easiest way to do this is by creating a symlink
 
 {% highlight bash %}
 sudo mkdir /var/mysql
@@ -145,7 +146,9 @@ nano .bash_profile
 
 Add this line to .bash_profile: 
 
+{% highlight bash %}
 export PATH=$PATH:/Applications/MAMP/Library/bin 
+{% endhighlight %}
 
 Now to retry..
 

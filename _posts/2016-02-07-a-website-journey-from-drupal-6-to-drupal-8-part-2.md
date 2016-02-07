@@ -9,6 +9,7 @@ published: true
 title: "A Website Journey from Drupal 6 to Drupal 8 - Part 2"
 ---
 
+
 ## Preparing for Upgrade 
 
 [In my previous post,]({% post_url 2016-02-06-a-website-journey-from-drupal-6-to-drupal-8-part-1 %}) I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.
@@ -110,6 +111,7 @@ drush en migrate_upgrade
 {% endhighlight %}
 
 The first part worked:
+
 ![drush dl migrate_upgrade]({{site.baseurl}}/assets/2016-02-07/drush dl migrate_upgrade.png)
 
 **Issue: Drush was not able to start (bootstrap) the Drupal database**
@@ -154,5 +156,12 @@ drush en migrate_upgrade
 
 ![migrate upgrade enable success]({{site.baseurl}}/assets/2016-02-07/migrate upgrade enable success.png)
 
-Success - Do you want to continue... yes I think so!  See you next time.
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush dl migrate_tools 
+drush en migrate_tools
+{% endhighlight %}
 
+![migrate tools success]({{site.baseurl}}/assets/2016-02-07/migrate tools success.png)
+
+Success - Do you want to continue... yes I think so!  See you next time.

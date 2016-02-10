@@ -20,7 +20,16 @@ The obvious module that stands out is the [XML Sitemap](https://www.drupal.org/p
 
 To install that module, again using Drush
 
+{% highlight bash %}
 cd /Users/hywel/Sites/drupal8
-drush dl simple_sitemap 
+drush dl simple_sitemap
 drush en simple_sitemap
+{% endhighlight %}
 
+
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush en simplesitemap
+{% endhighlight %}
+
+**Issue Note that the command was simplesitemap not simple_sitemap**

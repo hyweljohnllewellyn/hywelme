@@ -10,7 +10,7 @@ title: "A Website Journey from Drupal 6 to Drupal 8 - Part 2"
 ---
 
 
-## Preparing for Upgrade 
+## Preparing for Upgrade
 
 [In my previous post,]({% post_url 2016-02-06-a-website-journey-from-drupal-6-to-drupal-8-part-1 %}) I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.
 
@@ -19,9 +19,9 @@ For this post, I will install the Drupal Migration Modules.
 From [Preparing an Upgrade](https://www.drupal.org/node/2350603) I will check:
 
 > A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.
-    
+
 > Access to the Drupal 6 database and site files from the Drupal 8 site.
-    
+
 > The Migrate Upgrade module installed and enabled on the Drupal 8 site.  If you plan on running the upgrade from Drush, you’ll need Drush 8 and the module Migrate tools.  Using Drush is more robust and allows selective migration. But it requires an additional module and it must be run from the command line.
 
 ## Installing Drush 8 Locally
@@ -32,7 +32,7 @@ From [Preparing an Upgrade](https://www.drupal.org/node/2350603) I will check:
 
 ~~I already have Homebrew installed, otherwise I followed the commands on [Installing Drush on Mac using Homebrew](https://www.drupal.org/node/954766)~~
 
-**Issue - The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at [Installing Drush 8 using Composer](http://whaaat.com/installing-drush-8-using-composer)** 
+**Issue - The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at [Installing Drush 8 using Composer](http://whaaat.com/installing-drush-8-using-composer)**
 
 Before installing, I decided to change the default MAMP document folder to be in my usual /Sites/ folder :
 
@@ -45,6 +45,7 @@ The local URL now looked like this:
 Drush was then installed with Composer using instruction at [Install a global Drush via Composer](http://docs.drush.org/en/master/install-alternative/) :
 
 ### Step 1 - Install Composer Globally
+
 {% highlight bash %}
 cd /Sites/drupal8
 curl -sS https://getcomposer.org/installer | php
@@ -60,7 +61,7 @@ cd /Users/hywel
 nano .bash_profile
 {% endhighlight %}
 
-Add the following line 
+Add the following line
 
 {% highlight bash %}
 export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -108,7 +109,7 @@ Drush has extensive functionality to install and maintain Drupal - see the [Drus
 
 {% highlight bash %}
 cd /Users/hywel/Sites/drupal8
-drush dl migrate_upgrade 
+drush dl migrate_upgrade
 drush en migrate_upgrade
 {% endhighlight %}
 
@@ -138,17 +139,17 @@ drush en migrate_upgrade
 {% endhighlight %}
 
 **Issue: Drush still could not connect with the same error as before - I determined that the mysql command was not available from /Users/hywel/Sites/drupal8 with MAMP**
-Following the instructions at [Solving mysql command not found" on MAMP](http://www.webbykat.com/2012/06/solving-sh-mysql-command-not-found-mamp-pro-2) 
+Following the instructions at [Solving mysql command not found" on MAMP](http://www.webbykat.com/2012/06/solving-sh-mysql-command-not-found-mamp-pro-2)
 
 {% highlight bash %}
 cd /Users/hywel
 nano .bash_profile
 {% endhighlight %}
 
-Add this line to .bash_profile: 
+Add this line to .bash_profile:
 
 {% highlight bash %}
-export PATH=$PATH:/Applications/MAMP/Library/bin 
+export PATH=$PATH:/Applications/MAMP/Library/bin
 {% endhighlight %}
 
 Now to retry..
@@ -162,7 +163,7 @@ drush en migrate_upgrade
 
 {% highlight bash %}
 cd /Users/hywel/Sites/drupal8
-drush dl migrate_tools 
+drush dl migrate_tools
 drush en migrate_tools
 {% endhighlight %}
 

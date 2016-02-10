@@ -11,6 +11,7 @@ title: "A Website Journey from Drupal 6 to Drupal 8 - Part 3"
 
 
 
+
 ## Drupal 6 Modules
 
 A review of the currently installed modules on the Drupal 6 showed that most are now part of Drupal 8 Core, in particular:
@@ -25,7 +26,6 @@ To install that module, again using Drush
 {% highlight bash %}
 cd /Users/hywel/Sites/drupal8
 drush dl simple_sitemap
-drush en simple_sitemap
 {% endhighlight %}
 
 ![drush dl simple_sitemap]({{site.baseurl}}/assets/2016-02-10/drush dl simple_sitemap.png)

@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Feb 2016 21:15:15 +0000</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2016 21:15:15 +0000</lastBuildDate>
+    <pubDate>Thu, 11 Feb 2016 21:16:56 +0000</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 21:16:56 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -128,7 +128,7 @@ drush en simplesitemap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 2</title>
         <description>&lt;h2 id=&quot;preparing-for-upgrade&quot;&gt;Preparing for Upgrade&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.  Note that many of these are likely required to upgrade from Drupal 7.&lt;/p&gt;
 
 &lt;p&gt;For this post, I will install the Drupal Migration Modules.&lt;/p&gt;
 

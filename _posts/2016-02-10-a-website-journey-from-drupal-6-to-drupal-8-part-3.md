@@ -9,6 +9,7 @@ published: true
 title: "A Website Journey from Drupal 6 to Drupal 8 - Part 3"
 ---
 
+
 ## Drupal 6 Modules
 
 A review of the currently installed modules on the Drupal 6 showed that most are now part of Drupal 8 Core, in particular:
@@ -39,3 +40,8 @@ drush en simplesitemap
 ## MAMP Nginx 404 error - Switch to Apache
 
 I have had to switch, hopefully temporarily to using the Apache Server with MAMP because although the main page (homepage) works fine, all others give 404 errors.
+
+![404 drupal page not found mamp with nginx]({{site.baseurl}}/assets/2016-02-10/404 drupal page not found mamp with nginx .png)
+
+![drupal user login page mamp with apache]({{site.baseurl}}/assets/2016-02-10/drupal user login page mamp with apache.png)
+

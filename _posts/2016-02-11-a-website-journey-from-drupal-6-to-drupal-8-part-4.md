@@ -52,4 +52,4 @@ This was a bit more interesting and summarised what migration was available from
 
 ![drush 8 migrate status from drupal 6]({{site.baseurl}}/assets/2016-02-11/drush 8 migrate status from drupal 6.png)
 
-
+I will carry on soon...

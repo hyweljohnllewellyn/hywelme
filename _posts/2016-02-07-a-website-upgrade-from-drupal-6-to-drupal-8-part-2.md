@@ -6,13 +6,13 @@ categories: drupal
 excerpt: ""
 meta: Drupal 8 Migration Upgrade from Drupal 6 using Drush
 published: true
-title: "A Website Journey from Drupal 6 to Drupal 8 - Part 2"
+title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 2"
 ---
 
 
 ## Preparing for Upgrade
 
-[In my previous post,]({% post_url 2016-02-06-a-website-journey-from-drupal-6-to-drupal-8-part-1 %}) I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.
+[In my previous post,]({% post_url 2016-02-06-a-website-upgrade-from-drupal-6-to-drupal-8-part-1 %}) I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.
 
 For this post, I will install the Drupal Migration Modules.
 

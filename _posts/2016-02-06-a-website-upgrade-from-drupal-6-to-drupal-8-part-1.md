@@ -6,7 +6,7 @@ categories: drupal
 excerpt: ""
 meta: Migrate Drupal 8 Migration Upgrade  Drupal 6 end of life local drupal development environment
 published: true
-title: "A Website Journey from Drupal 6 to Drupal 8 - Part 1"
+title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 1"
 ---
 
 

@@ -6,9 +6,365 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Feb 2016 14:56:35 +0000</pubDate>
-    <lastBuildDate>Sat, 06 Feb 2016 14:56:35 +0000</lastBuildDate>
-    <generator>Jekyll v3.0.2</generator>
+    <pubDate>Thu, 11 Feb 2016 21:13:39 +0000</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 21:13:39 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 4</title>
+        <description>&lt;h2 id=&quot;preparing-an-upgrade-to-drupal-8httpswwwdrupalorgnode2350603&quot;&gt;&lt;a href=&quot;https://www.drupal.org/node/2350603&quot;&gt;Preparing an upgrade to Drupal 8&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;According to this link, the requirements are:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Migrate Upgrade module installed and enabled on the Drupal 8 site.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you plan on running the upgrade from Drush, you’ll need Drush 8.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;These are covered in &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html&quot;&gt;Part 1&lt;/a&gt; and &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html&quot;&gt;Part 2&lt;/a&gt;. Screenshot showing enabled modules in Drupal 8:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drupal 8 migrate modules enabled.jpg&quot; alt=&quot;drupal 8 migrate modules enabled&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Access to the Drupal 6 or 7 database from the host where your new Drupal 8 site is.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Access to the source site’s files.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The Drupal upgrade will be carried out locally on a Mac.  The Drupal 6 database and files are locally installed.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Enable required modules.  The migration process does not install modules on the Drupal 8 destination site and only migrations relevant for modules installed on both the source and destination site are run. Therefore prior to running the migration, you need to enable all modules on the Drupal 8 site for which you want configuration and content upgraded from the source site&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The above statement is a bit confusing, and suggests that it is necessary to identify all Modules used in Drupal 6, their equivalent in Drupal 8 and install them in Drupal 8 prior to upgrade.  In &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html&quot;&gt;Part 3&lt;/a&gt;, I carried our a cursory analysis of the modules and installed an XML sitemap module.&lt;/p&gt;
+
+&lt;h2 id=&quot;executing-an-upgrade-using-drushhttpswwwdrupalorgnode2350651&quot;&gt;&lt;a href=&quot;https://www.drupal.org/node/2350651&quot;&gt;Executing an upgrade using Drush&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For more control, you will probably want to pass the –configure-only option to migrate-upgrade, so it will only perform the first step of creating the migrations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush migrate-upgrade --legacy-db-url&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Users/hywel/Sites/hartleyvoicescms --configure-only&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Nothing much happened, it just returned to the prompt.  To some extent, this was expected as the configure-only option was used.  So next was:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;drush migrate-status&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This was a bit more interesting and summarised what migration was available from Drupal 6.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drush 8 migrate status from drupal 6.png&quot; alt=&quot;drush 8 migrate status from drupal 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I will carry on soon…&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Feb 2016 19:42:00 +0000</pubDate>
+        <link>http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</guid>
+        
+        
+        <category>drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>A Website Journey from Drupal 6 to Drupal 8 - Part 3</title>
+        <description>&lt;h2 id=&quot;drupal-6-modules&quot;&gt;Drupal 6 Modules&lt;/h2&gt;
+
+&lt;p&gt;A review of the currently installed modules on the Drupal 6 showed that most are now part of Drupal 8 Core, in particular:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ostraining.com/blog/drupal/drupal-8-contact-forms/&quot;&gt;Contact Forms&lt;/a&gt; instead of Webform&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.drupal.org/node/2606836&quot;&gt;Content Construction Kit (CCK)&lt;/a&gt; is now in Core Drupal 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The obvious module that stands out is the &lt;a href=&quot;https://www.drupal.org/project/simple_sitemap&quot;&gt;XML Sitemap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To install that module, again using Drush&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush dl simple_sitemap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/drush dl simple_sitemap.png&quot; alt=&quot;drush dl simple_sitemap&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush en simplesitemap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/drush en simplesitemap.png&quot; alt=&quot;drush en simplesitemap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Issue Note that the command was simplesitemap not simple_sitemap&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mamp-nginx-404-error---switch-to-apache&quot;&gt;MAMP Nginx 404 error - Switch to Apache&lt;/h2&gt;
+
+&lt;p&gt;I have had to switch, hopefully temporarily to using the Apache Server with MAMP because although the main page (homepage) works fine, all others give 404 errors.&lt;/p&gt;
+
+&lt;p&gt;Running Nginx:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/404 drupal page not found mamp with nginx .png&quot; alt=&quot;404 drupal page not found mamp with nginx&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Running Apache:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/drupal user login page mamp with apache.png&quot; alt=&quot;drupal user login page mamp with apache&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Feb 2016 20:15:00 +0000</pubDate>
+        <link>http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html</guid>
+        
+        
+        <category>drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 2</title>
+        <description>&lt;h2 id=&quot;preparing-for-upgrade&quot;&gt;Preparing for Upgrade&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.&lt;/p&gt;
+
+&lt;p&gt;For this post, I will install the Drupal Migration Modules.&lt;/p&gt;
+
+&lt;p&gt;From &lt;a href=&quot;https://www.drupal.org/node/2350603&quot;&gt;Preparing an Upgrade&lt;/a&gt; I will check:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Access to the Drupal 6 database and site files from the Drupal 8 site.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Migrate Upgrade module installed and enabled on the Drupal 8 site.  If you plan on running the upgrade from Drush, you’ll need Drush 8 and the module Migrate tools.  Using Drush is more robust and allows selective migration. But it requires an additional module and it must be run from the command line.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;installing-drush-8-locally&quot;&gt;Installing Drush 8 Locally&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/node/2350651&quot;&gt;Executing an upgrade using Drush&lt;/a&gt; describes that the latest Drush needs to be used to upgrade - so lets’ get it.&lt;/p&gt;
+
+&lt;p&gt;~~I will install Drush using Homebrew package manager as described in &lt;a href=&quot;https://www.drupal.org/node/1674222&quot;&gt;Install Drush on a Mac&lt;/a&gt;~~&lt;/p&gt;
+
+&lt;p&gt;~~I already have Homebrew installed, otherwise I followed the commands on &lt;a href=&quot;https://www.drupal.org/node/954766&quot;&gt;Installing Drush on Mac using Homebrew&lt;/a&gt;~~&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Issue - The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at &lt;a href=&quot;http://whaaat.com/installing-drush-8-using-composer&quot;&gt;Installing Drush 8 using Composer&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Before installing, I decided to change the default MAMP document folder to be in my usual /Sites/ folder :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/updated MAMP site root folder.png&quot; alt=&quot;updated MAMP site root folder&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The local URL now looked like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/updated drupal 8 local URL.png&quot; alt=&quot;updated Drupal 8 local URL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Drush was then installed with Composer using instruction at &lt;a href=&quot;http://docs.drush.org/en/master/install-alternative/&quot;&gt;Install a global Drush via Composer&lt;/a&gt; :&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1---install-composer-globally&quot;&gt;Step 1 - Install Composer Globally&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Sites/drupal8
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/installing composer.png&quot; alt=&quot;installing composer&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2---add-composer-to-my-bashprofile&quot;&gt;Step 2 - Add Composer to my bash_profile&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel
+nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Add the following line&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.composer/vendor/bin:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Start a new Terminal session to ensure the path is updated&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3---install-drush-using-composer-and-verify-status&quot;&gt;Step 3 - Install Drush using Composer and verify Status&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+composer global require drush/drush
+drush status&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/installing drush with composer.png&quot; alt=&quot;installing drush with composer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/drush 8 status.png&quot; alt=&quot;drush 8 status&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4---update-path-to-ensure-systems-uses-the-mamp-version-of-phphttpstackoverflowcomquestions4145667how-to-override-the-path-of-php-to-use-the-mamp-path1065344310653443&quot;&gt;Step 4 - &lt;a href=&quot;http://stackoverflow.com/questions/4145667/how-to-override-the-path-of-php-to-use-the-mamp-path/10653443#10653443&quot;&gt;Update Path to ensure systems uses the MAMP version of PHP&lt;/a&gt;&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel
+nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Add the following lines:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;MAMP_PHP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Applications/MAMP/bin/php/php7.0.0/bin
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MAMP_PHP&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/update path to MAMP php.png&quot; alt=&quot;update path to MAMP php&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5---install-the-migration-modules&quot;&gt;Step 5 - Install the Migration Modules&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/node/2350651&quot;&gt;Executing an upgrade using Drush&lt;/a&gt; describes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To migrate using Drush you need to download and enable the Migrate Upgrade contributed module. You will also need Migrate Tools if you plan on doing more than running a one-time complete upgrade.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Drush has extensive functionality to install and maintain Drupal - see the &lt;a href=&quot;https://github.com/drush-ops/drush&quot;&gt;Drush Site&lt;/a&gt; and &lt;a href=&quot;http://drushcommands.com/&quot;&gt;Drush Commands&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/documentation/install/modules-themes/modules-8&quot;&gt;To install and enable the contributed modules&lt;/a&gt; :&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush dl migrate_upgrade
+drush en migrate_upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The first part worked:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/drush dl migrate_upgrade.png&quot; alt=&quot;drush dl migrate_upgrade&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Issue: Drush was not able to start (bootstrap) the Drupal database&lt;/strong&gt;
+&lt;img src=&quot;/assets/2016-02-07/drush en migrate_upgrade issue.png&quot; alt=&quot;drush en migrate_upgrade issue&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://julianlmedina.com/getting-drush-working-with-mamp-3-on-mac/&quot;&gt;julianlmedina&lt;/a&gt;  and &lt;a href=&quot;https://www.drupal.org/node/954766&quot;&gt;Installing Drush on Mac using Homebrew&lt;/a&gt; have described&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are running your Drupal sites with MAMP, you need to tell Drush to use MAMP’s mysql.sock or you will run into the following error.  Easiest way to do this is by creating a symlink&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mkdir /var/mysql
+sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/MAMP mysql sock.png&quot; alt=&quot;MAMP mysql sock&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now to retry..&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush en migrate_upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Issue: Drush still could not connect with the same error as before - I determined that the mysql command was not available from /Users/hywel/Sites/drupal8 with MAMP&lt;/strong&gt;
+Following the instructions at &lt;a href=&quot;http://www.webbykat.com/2012/06/solving-sh-mysql-command-not-found-mamp-pro-2&quot;&gt;Solving mysql command not found” on MAMP&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel
+nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Add this line to .bash_profile:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/Applications/MAMP/Library/bin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now to retry..&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush en migrate_upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/migrate upgrade enable success.png&quot; alt=&quot;migrate upgrade enable success&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush dl migrate_tools
+drush en migrate_tools&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/migrate tools success.png&quot; alt=&quot;migrate tools success&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Success - Do you want to continue… yes I think so!  See you next time.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Feb 2016 10:00:00 +0000</pubDate>
+        <link>http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html</guid>
+        
+        
+        <category>drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 1</title>
+        <description>&lt;h2 id=&quot;why---drupal-8httpswwwdrupalorgnewsdrupal-800-released&quot;&gt;Why? - &lt;a href=&quot;https://www.drupal.org/news/drupal-8.0.0-released&quot;&gt;Drupal 8&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;I hope to capture the essence and learnings of migrating a website from Drupal 6 to Drupal 8, which is formally released as production ready.&lt;/p&gt;
+
+&lt;p&gt;I expect this journey to have issues along the way as I am a novice Drupal administrator and have no experience in Theming.  Some key considerations during this migration:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mobile Friendly Theme&lt;/li&gt;
+  &lt;li&gt;Google Search Ranking (it is an existing site)&lt;/li&gt;
+  &lt;li&gt;Audio and Video Playback Capability&lt;/li&gt;
+  &lt;li&gt;Easy to Maintain Content&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;drupal-6-end-of-lifehttpswwwdrupalorgdrupal-6-eol&quot;&gt;&lt;a href=&quot;https://www.drupal.org/drupal-6-eol&quot;&gt;Drupal 6 End Of Life&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As announced in the Drupal 6 extended support policy, 3 months after Drupal 8 comes out, Drupal 6 will be end-of-life (EOL).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;On February 24th 2016, Drupal 6 will reach end of life and no longer be supported.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Drupal 8 core provides a Migration path directly from Drupal 6 as an experimental feature, so sites can update directly to Drupal 8 using either a user interface or with Drush.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This improved migration path is one of the main reasons why I have waited for Drupal 8, but by far the main reason is &lt;a href=&quot;https://googlewebmastercentral.blogspot.co.uk/2015/02/finding-more-mobile-friendly-search.html&quot;&gt;Google Rankings&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Starting April 21, we will be expanding our use of mobile-friendliness as a ranking signal. This change will affect mobile searches in all languages worldwide and will have a significant impact in our search results. Consequently, users will find it easier to get relevant, high quality search results that are optimized for their devices.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Drupal 8 was designed with mobile devices first in mind, this article by &lt;a href=&quot;https://axelerant.com/not-magic-drupal-8-mobile-global-reach/&quot;&gt;Axelerant&lt;/a&gt;  describes some of the philosophy behind Drupal 8.  However, Drupal 8 is still in its infancy, so I will be doing my best to find resources during the upgrade, for example
+&lt;a href=&quot;https://www.drupal.org/node/2360331&quot;&gt;27 Questions (and Answers) from My First Drupal 8 Site Build&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-ready---installing-a-local-development-environment&quot;&gt;Getting Ready - Installing a Local Development Environment&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/requirements&quot;&gt;Drupal 8 Requirements&lt;/a&gt; include a Web server, typically Apache, Database, typically MySQL and PHP.  In order to develop Drupal locally, these need to be available. As I am developing on an Apple Mac Mini, a convenient way to ensure all the dependencies are available are by using a package manager.   The choices for me were either:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mamp.info/en/downloads/&quot;&gt;MAMP&lt;/a&gt; - installs a local server environment in a matter of seconds on your Mac&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;  - the missing package manager for OS X&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Using HomeBrew, all the packages would need to be installed from the command line.  Some tutorials include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/&quot;&gt;blog.frd.mn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://discreteunits.com/homebrew-nginx-php-fpm-mysql-on-osx-mavericks/&quot;&gt;discreteunits.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://easyengine.io/tutorials/mac/osx-brew-php-mysql-nginx/&quot;&gt;easyengine.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I decided to use  MAMP as it is a much simpler installation process and ultimately i would generally not be developing much locally once the migration to Drupal 8 is complete.  However, I chose Nginx as the web server as my production hosts &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;DigitalOcean.com&lt;/a&gt; and &lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt; use Nginx as default.  I also ensured that MAMP was using PHP 7.0.0.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/MAMP screenshot.png&quot; alt=&quot;MAMP screenshot&quot; /&gt;
+&lt;img src=&quot;/assets/2016-02-05/MAMP with Nginx.png&quot; alt=&quot;MAMP with Nginx&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once MAMP was Installed I used the usual phpmyadmin to create a Drupal 8 MySQL database and user with the &lt;a href=&quot;https://www.drupal.org/requirements/database&quot;&gt;recommended database permissions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;download-drupal-and-follow-core-drupal-standard-installation-profile&quot;&gt;Download Drupal and Follow Core Drupal “standard” Installation Profile&lt;/h2&gt;
+
+&lt;p&gt;There are many tutorials describing how to install the standard Drupal 8, for example &lt;a href=&quot;https://www.youtube.com/watch?v=bthkQCkrH30&quot;&gt;Drupal 8 Video Installation Guide on Mac OS X&lt;/a&gt;.  Essentially the installation involves:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/start&quot;&gt;Download Drupal 8 Files&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Put Drupal download into the MAMP htdocs and browse to that folder, in my case http://localhost:7888/drupal8/&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/drupal 8 core install.jpg&quot; alt=&quot;drupal 8 core install&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After defining the usual settings during installation, for example timezone you are done…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/drupal 8 core website.jpg&quot; alt=&quot;drupal 8 core website&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the next part, I will install the Drupal migration modules and use Drush to migrate the Drupal 6 database to Drupal 8.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Feb 2016 18:53:00 +0000</pubDate>
+        <link>http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html</guid>
+        
+        
+        <category>drupal</category>
+        
+      </item>
     
       <item>
         <title>Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versions</title>
@@ -501,310 +857,6 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
         <pubDate>Sat, 28 Nov 2015 21:26:00 +0000</pubDate>
         <link>http://www.hywel.me/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html</link>
         <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html</guid>
-        
-        
-        <category>Jekyll</category>
-        
-        <category>Static</category>
-        
-        <category>Site</category>
-        
-      </item>
-    
-      <item>
-        <title>Create Jekyll Static Site Posts Using Prose.io</title>
-        <description>&lt;h2 id=&quot;proseio-and-jekyll-static-sites&quot;&gt;Prose.io and Jekyll Static Sites&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://prose.io&quot;&gt;Prose.io&lt;/a&gt;&lt;/strong&gt; is a web application that allows editing of Github Repositories through your browser.  This has great potential, particularly when used with the website hosting offered by &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;, providing &lt;em&gt;a CMS-like experience for a generated static site&lt;/em&gt;, as described by &lt;a href=&quot;http://blog.crushingpennies.com/a-static-site-generator-with-gulp-proseio-and-travis-ci.html&quot;&gt;Daniel Nabb&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Prose.io has some powerful configuration capability to simplify the user editing experience, which I will be exploring in upcoming posts.&lt;/p&gt;
-
-&lt;p&gt;The basic prose configuration is added to the _config.yml file of my Jekyll site&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;prose&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;rooturl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;siteurl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://www.hywel.me&#39;&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;assets&#39;&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;_posts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;layout&quot;&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;layout&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;post&quot;&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;date&quot;&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;date&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;CURRENT_DATETIME&quot;&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;author&quot;&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;author&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Hywel&quot;&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&quot;&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;categories&quot;&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&quot;&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;excerpt&quot;&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;meta&quot;&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;meta&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text&quot;&lt;/span&gt;
-          &lt;span class=&quot;s&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Enter&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;metadata&quot;&lt;/span&gt;
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Note that I have defined my media folder with today’s date.  I keep my media sorted into date folders.  I have not found out how to configure this as yet.&lt;/p&gt;
-
-&lt;h2 id=&quot;create-the-post&quot;&gt;Create the Post&lt;/h2&gt;
-
-&lt;h3 id=&quot;log-in-to-proseio-using-your-github-credentials-and-navigate-to-your-posts-folder-click-new-file-to-start-a-new-post&quot;&gt;1. Log in to prose.io using your Github credentials and navigate to your _posts folder. Click ‘New File’ to start a new post.&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/step 1 login to proseio and go to posts folder.JPG&quot; alt=&quot;step 1 log in to prose.io and navigate to your posts folder&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;write-your-post&quot;&gt;2. Write your post&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/step 2 write your post using prose io.JPG&quot; alt=&quot;write your post using prose io&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;select-medatata-to-edit&quot;&gt;3. Select Medatata to edit&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/select metadata to edit.JPG&quot; alt=&quot;select metadata option to edit&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;edit-your-metadata--note-that-the-default-options-from-the-configuration-are-shown&quot;&gt;4. Edit your metadata.  Note that the default options from the configuration are shown&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/enter metadata.JPG&quot; alt=&quot;enter metadata default options are shown&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;insert-an-image-using-proseio-note-that-the-image-is-uploaded-and-inserted-to-the-post-automatically&quot;&gt;5. Insert an image using prose.io, note that the image is uploaded and inserted to the post automatically&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-11-23/step 3 insert an image using prose io.JPG&quot; alt=&quot;select image for upload to prose.io&quot; /&gt;
-&lt;img src=&quot;/assets/2015-11-23/step 3a image code automatically generated by prose io.JPG&quot; alt=&quot;insert an image using prose io&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 23 Nov 2015 16:24:00 +0000</pubDate>
-        <link>http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox</title>
-        <description>&lt;h3 id=&quot;microsoft-office-365-for-email&quot;&gt;Microsoft Office 365 for Email&lt;/h3&gt;
-
-&lt;p&gt;Email is an essential part of managing a small business.  In our experience, we found that &lt;a href=&quot;https://www.zoho.com/mail/&quot;&gt;Zoho Mail&lt;/a&gt; was allowing too much spam content through to the inbox, hiding essential emails from clients.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://products.office.com/en-gb/business/compare-office-365-for-business-plans&quot;&gt;Microsoft Office 365&lt;/a&gt; is a full productivity suite.   The business essentials subscription of £3.10 per user per month provides:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1 Microsoft Exchange user email account - 50 Gb&lt;/li&gt;
-  &lt;li&gt;1 Tb of cloud storage&lt;/li&gt;
-  &lt;li&gt;Online (cloud) versions of Word, Excel and Powerpoint&lt;/li&gt;
-  &lt;li&gt;Unlimited Online meetings through Skype&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are several guides to using Office 365 and comparison with other productivity solutions, notably  &lt;a href=&quot;https://www.zoho.com/mail/&quot;&gt;Zoho&lt;/a&gt; and &lt;a href=&quot;https://apps.google.com/intx/en_uk/&quot;&gt;Google Apps&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The key reason we chose Office 365 over Google Apps was that we already had a Google Email for the business, but Google would not allow this account to be &lt;em&gt;converted&lt;/em&gt; to a Google Apps account.&lt;/p&gt;
-
-&lt;h3 id=&quot;setting-up-a-mac-mail-client-for-the-shared-mailbox&quot;&gt;Setting up a Mac Mail Client for the Shared Mailbox&lt;/h3&gt;
-
-&lt;p&gt;In this example  hywel@customdomain.co.uk is the active user with an assigned Office 365 license.  A shared mail box of info@customdomain.co.uk has been setup through &lt;a href=&quot;https://support.office.com/en-in/article/Create-shared-mailboxes-in-Office-365-for-Small-Business-ecacf5b0-b5c8-449f-a89a-b7e87dcb55d4?ui=en-US&amp;amp;rs=en-IN&amp;amp;ad=IN&quot;&gt;Office 365 Admin&lt;/a&gt;.  Here are the steps to set up Mac Mail client to receive and send mail using the new shared mailbox.&lt;/p&gt;
-
-&lt;h4 id=&quot;receiving-mail&quot;&gt;Receiving Mail&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Go to Mac Mail -&amp;gt; Preferences
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 1 go to mail preferences.jpg&quot; alt=&quot;step 1 go to mail preferences&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add new account by selecting the plus icon
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 2 add new account.jpg&quot; alt=&quot;step 2 add new account&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Choose the &lt;em&gt;Other Mail Account&lt;/em&gt; radio button
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 3 choose other mail account.jpg&quot; alt=&quot;step 3 choose other mail account&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enter the &lt;em&gt;shared&lt;/em&gt; mailbox email address, info@customdomain.co.uk and password of hywel@customdomain.co.uk (the user with an assigned Office 365 license)
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 4 fill in email of shared mailbox.jpg&quot; alt=&quot;step 4 fill in email of shared mailbox&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t worry if you see the error &lt;em&gt;Unable to verify account name of password&lt;/em&gt;. Enter the following:&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Email Address: &lt;strong&gt;info@customdomain.co.uk&lt;/strong&gt;  &lt;em&gt;(the shared mailbox email address)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;User Name: &lt;strong&gt;hywel@customdomain.co.uk/info&lt;/strong&gt;  &lt;em&gt;(the user email address with the shared mailbox name after a trailing slash)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Account Type: &lt;strong&gt;IMAP&lt;/strong&gt;  &lt;em&gt;(POP is available, but I prefer IMAP)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Incoming Mail Server: &lt;strong&gt;outlook.office365.com&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Outgoing Mail Server: &lt;strong&gt;smtp.office365.com&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 5 set username and mail servers.jpg&quot; alt=&quot;step 5 set username and mail servers&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click ‘Sign In’ button and then select ‘Mail’ as the app to use
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 6a sign in.jpg&quot; alt=&quot;step 6a sign in&quot; /&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 6b select mail as the app to use.jpg&quot; alt=&quot;step 6b select mail as the app to use&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Your new &lt;em&gt;Shared Inbox&lt;/em&gt; is ready and should be receiving email
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 7 Receiving Email.jpg&quot; alt=&quot;step 7 Receiving Email&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;sending-mail&quot;&gt;Sending Mail&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Go to Mac Mail -&amp;gt; Preferences and under &lt;em&gt;Outgoing Mail Server (SMTP)&lt;/em&gt; select &lt;strong&gt;Edit SMTP Server List…&lt;/strong&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 8 edit SMTP server list.jpg&quot; alt=&quot;step 8 edit SMTP server list&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select &lt;em&gt;Advanvced&lt;/em&gt; button and under &lt;em&gt;Authentication&lt;/em&gt; select &lt;strong&gt;Password&lt;/strong&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 9 click advanced authentication password.jpg&quot; alt=&quot;step 9 click advanced authentication password&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Set &lt;em&gt;Port&lt;/em&gt; to &lt;strong&gt;25&lt;/strong&gt; and enter:&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;User Name:  &lt;strong&gt;hywel@customdomain.co.uk&lt;/strong&gt; &lt;em&gt;(the user email address)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Password:  the user’s password&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.hywel.me/assets/2015-11-21/step 10 set port to 25 username and password of primary user.jpg&quot; alt=&quot;step 10 set port to 25 username and password of primary user&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;All done, you should now be able to send and receive email using the shared mail box.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 21 Nov 2015 13:45:00 +0000</pubDate>
-        <link>http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html</guid>
-        
-        
-        <category>small</category>
-        
-        <category>business</category>
-        
-        <category>email</category>
-        
-      </item>
-    
-      <item>
-        <title>Microsoft Office 365 Catch-all using Additional Alias Email Addresses</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://products.office.com/en-gb/business/compare-office-365-for-business-plans&quot;&gt;Microsoft Office 365 Business Essentials&lt;/a&gt; costs from £3.10 per ‘Exchange’ user per month&lt;/p&gt;
-
-&lt;p&gt;An ‘Exchange’ user is a single email account for a specified domain, with 50 Gb of storage and highly configurable mail server rules.&lt;/p&gt;
-
-&lt;p&gt;Some mail providers provide multiple email accounts for a given domain, so Office 365 can get quite expensive with multiple users, just for email.&lt;/p&gt;
-
-&lt;p&gt;Though it has to be said - the email service we have experienced for the last 4 months from Office 365 has been great for spam protection and reliability.  You get what you pay for.&lt;/p&gt;
-
-&lt;p&gt;Office 365 by default does not support &lt;a href=&quot;https://en.wikipedia.org/wiki/Catch-all&quot;&gt;catch-all&lt;/a&gt;, that is email addresses not specifically defined in the mail server.&lt;/p&gt;
-
-&lt;p&gt;Additional alias addresses can be created to re-direct email to a specified user as a simple and safe substitute to catch-all.&lt;/p&gt;
-
-&lt;p&gt;Note that an additional alias address is distinct to a shared mailbox, which appears as a separate mail box from the user.  Setting up shared mailboxes on Office 365 will be described in an upcoming post.&lt;/p&gt;
-
-&lt;p&gt;For this example, the ‘Exchange’ user will be hywel@customdomain.co.uk.  Additional  ‘catch-all’ email addresses for howell@customdomain.co.uk and contact@customdomain.co.uk will be configured.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Login to Office 365
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step1_office365_login.jpg&quot; alt=&quot;step1_office365_login&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click the little box icons at the top left of the screen, then select the Admin icon
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step2_office365_select_admin.jpg&quot; alt=&quot;step2_office365_select_admin&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Under ‘USERS’ on the left hand pane, select ‘Active Users’
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step3_office365_active_users.jpg&quot; alt=&quot;step3_office365_active_users&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select the user and click ‘EDIT’, on the right hand side
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step4_office365_edit_active_user.jpg&quot; alt=&quot;step4_office365_edit_active_user&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select ‘Email addresses’
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step5_office365_user_email_addresses.jpg&quot; alt=&quot;step5_office365_user_email_addresses&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Click &lt;strong&gt;Add new&lt;/strong&gt; under &lt;strong&gt;Other email addresses&lt;/strong&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step6_office365_add_new_email_address.jpg&quot; alt=&quot;step6_office365_add_new_email_address&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Enter ‘howell’ in the space before the @ sign and click ‘Add’.&lt;br /&gt;
-&lt;img src=&quot;http://www.hywel.me/assets/2015-11-19/step7_office365_add_additional_address.jpg&quot; alt=&quot;step7_office365_add_additional_address&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Repeat steps 6 and 7 to add ‘contact’ as an alias&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;That’s it, this method provides functionality similar to catch-all,  whilst maintaining the excellent service from Office 365 email.&lt;/p&gt;
-
-&lt;p&gt;If you really do want a catch-all in Office 365 Business Essentials, then there is a good post by &lt;a href=&quot;http://www.yourithelp.co.uk/office-365-create-catchall-wildcard-address-office-365/&quot;&gt;yourithelp.co.uk&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 19 Nov 2015 21:23:00 +0000</pubDate>
-        <link>http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html</guid>
-        
-        
-        <category>small</category>
-        
-        <category>business</category>
-        
-        <category>email</category>
-        
-      </item>
-    
-      <item>
-        <title> Applications used for Writing Jekyll Static Sites</title>
-        <description>&lt;h3 id=&quot;web-hosting-servicehttpsenwikipediaorgwikiwebhostingservice&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_hosting_service&quot;&gt;Web Hosting Service&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;In my post on &lt;a href=&quot;/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;installing Jekyll locally on a mac&lt;/a&gt; I gave a brief description on why I chose to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; for writing static web sites and the software needed by Jekyll.&lt;/p&gt;
-
-&lt;p&gt;In this post, I will share some of the applications used for managing Jekyll static sites, including the web hosting service, web browser, text editor and version control.  Most of this is managed using Github.&lt;/p&gt;
-
-&lt;p&gt;OK, so hosting may not be seen as an application, but without the host application serving web site pages then no one would see them.&lt;/p&gt;
-
-&lt;p&gt;My host application of choice for static sites is &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt;.  This provides sites “hosted directly from your GitHub repository”.  This is fantastic as I get to benefit from the scalable Github infrastructure, without spending a penny.  Note that the source code in the repository is public, unless you upgrade to a paid plan, starting from about £4.60 a month &lt;a href=&quot;https://github.com/pricing&quot;&gt;Github Pricing&lt;/a&gt;.  As web site content is generally public, having a public repository is a minor concern for static site pages.&lt;/p&gt;
-
-&lt;p&gt;I think gh-pages are perfect, in particular as my static site projects are relatively small.  Thank you Github!&lt;/p&gt;
-
-&lt;h3 id=&quot;web-browserhttpsenwikipediaorgwikiwebbrowser&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_browser&quot;&gt;Web Browser&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Not much to say here, except that I have recently switched to using &lt;a href=&quot;https://www.mozilla.org/en-US/firefox/new/&quot;&gt;Firefox&lt;/a&gt; from &lt;a href=&quot;https://www.google.com/chrome&quot;&gt;Chrome&lt;/a&gt; as Chrome is very slow on my computer. Google Chrome.app is 393.4Mb, whereas Firefox.app is 185.3Mb - that’s over twice the size - why?&lt;/p&gt;
-
-&lt;h3 id=&quot;text-editorhttpsenwikipediaorgwikitexteditor&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Text_editor&quot;&gt;Text Editor&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;On searching the web for a text editor, the most popular results are likely to be &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; or &lt;a href=&quot;https://notepad-plus-plus.org/&quot;&gt;Notepad++&lt;/a&gt;.  I have used both, but am currently using &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt;.  It is &lt;strong&gt;free&lt;/strong&gt; and is written by those lovely people at &lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;, so should be well integrated with Jekyll and other Github software.&lt;/p&gt;
-
-&lt;p&gt;I do like Atom, though it is relatively slow to startup in comparison with other editors, particularly running on my 2010 Mac Mini.  If I was not using all of the Github ecosystem, I may try something else, for example &lt;a href=&quot;http://macromates.com&quot;&gt;Text Mate&lt;/a&gt; or even  &lt;a href=&quot;http://www.vim.org&quot;&gt;Vim&lt;/a&gt;, the Macintosh version is on Github at &lt;a href=&quot;https://github.com/macvim-dev/macvim&quot;&gt;macvim&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;version-controlhttpsenwikipediaorgwikiversioncontrol&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;Version Control&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Interestingly, since I have chosen &lt;a href=&quot;https://pages.github.com&quot;&gt;Github Pages&lt;/a&gt; as my host, by implication I am probably using one of the most well known web software version control applications in the world.&lt;/p&gt;
-
-&lt;p&gt;In order to manage the version control and deployment of my site to the host, I’m using the relatively straight forward &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;.  I am still a novice at using Github, so keep my usage to typing a summary, committing and syncing the changes to the GitHub repository.&lt;/p&gt;
-
-&lt;h3 id=&quot;command-line-interfacehttpsenwikipediaorgwikicommand-lineinterface&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Command-line_interface&quot;&gt;Command line Interface&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Terminal_%28OS_X%29&quot;&gt;Apple Macintosh Terminal Emulator&lt;/a&gt;.  I discuss some of the commands used, primarily “jekyll serve” more at &lt;a href=&quot;/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;installing Jekyll locally on a mac&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 16 Nov 2015 21:50:00 +0000</pubDate>
-        <link>http://www.hywel.me/jekyll/static/site/2015/11/16/applications-used-for-writing-jekyll-static-sites.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/jekyll/static/site/2015/11/16/applications-used-for-writing-jekyll-static-sites.html</guid>
         
         
         <category>Jekyll</category>

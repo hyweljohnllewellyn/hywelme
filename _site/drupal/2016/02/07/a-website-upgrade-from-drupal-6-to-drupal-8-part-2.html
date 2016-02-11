@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title >A Website Upgrade from Drupal 6 to Drupal 8 - Part 2 </title>
+
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/" ><img src="http://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+  
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <!--analytics.google.com tracking code-->
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">A Website Upgrade from Drupal 6 to Drupal 8 - Part 2</h1>
+    <p class="post-meta">Feb 7, 2016 ✎ Hywel • Drupal 8 Migration Upgrade from Drupal 6 using Drush</p>
+  </header>
+
+  
+  <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
+  
+
+
+  <article class="post-content">
+    <h2 id="preparing-for-upgrade">Preparing for Upgrade</h2>
+
+<p><a href="/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html">In my previous post,</a> I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.</p>
+
+<p>For this post, I will install the Drupal Migration Modules.</p>
+
+<p>From <a href="https://www.drupal.org/node/2350603">Preparing an Upgrade</a> I will check:</p>
+
+<blockquote>
+  <p>A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.</p>
+</blockquote>
+
+<blockquote>
+  <p>Access to the Drupal 6 database and site files from the Drupal 8 site.</p>
+</blockquote>
+
+<blockquote>
+  <p>The Migrate Upgrade module installed and enabled on the Drupal 8 site.  If you plan on running the upgrade from Drush, you’ll need Drush 8 and the module Migrate tools.  Using Drush is more robust and allows selective migration. But it requires an additional module and it must be run from the command line.</p>
+</blockquote>
+
+<h2 id="installing-drush-8-locally">Installing Drush 8 Locally</h2>
+
+<p><a href="https://www.drupal.org/node/2350651">Executing an upgrade using Drush</a> describes that the latest Drush needs to be used to upgrade - so lets’ get it.</p>
+
+<p>~~I will install Drush using Homebrew package manager as described in <a href="https://www.drupal.org/node/1674222">Install Drush on a Mac</a>~~</p>
+
+<p>~~I already have Homebrew installed, otherwise I followed the commands on <a href="https://www.drupal.org/node/954766">Installing Drush on Mac using Homebrew</a>~~</p>
+
+<p><strong>Issue - The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at <a href="http://whaaat.com/installing-drush-8-using-composer">Installing Drush 8 using Composer</a></strong></p>
+
+<p>Before installing, I decided to change the default MAMP document folder to be in my usual /Sites/ folder :</p>
+
+<p><img src="/assets/2016-02-07/updated MAMP site root folder.png" alt="updated MAMP site root folder" /></p>
+
+<p>The local URL now looked like this:</p>
+
+<p><img src="/assets/2016-02-07/updated drupal 8 local URL.png" alt="updated Drupal 8 local URL" /></p>
+
+<p>Drush was then installed with Composer using instruction at <a href="http://docs.drush.org/en/master/install-alternative/">Install a global Drush via Composer</a> :</p>
+
+<h3 id="step-1---install-composer-globally">Step 1 - Install Composer Globally</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Sites/drupal8
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer</code></pre></figure>
+
+<p><img src="/assets/2016-02-07/installing composer.png" alt="installing composer" /></p>
+
+<h3 id="step-2---add-composer-to-my-bashprofile">Step 2 - Add Composer to my bash_profile</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel
+nano .bash_profile</code></pre></figure>
+
+<p>Add the following line</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.composer/vendor/bin:</span><span class="nv">$PATH</span><span class="s2">"</span></code></pre></figure>
+
+<p>Start a new Terminal session to ensure the path is updated</p>
+
+<h3 id="step-3---install-drush-using-composer-and-verify-status">Step 3 - Install Drush using Composer and verify Status</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+composer global require drush/drush
+drush status</code></pre></figure>
+
+<p><img src="/assets/2016-02-07/installing drush with composer.png" alt="installing drush with composer" /></p>
+
+<p><img src="/assets/2016-02-07/drush 8 status.png" alt="drush 8 status" /></p>
+
+<h3 id="step-4---update-path-to-ensure-systems-uses-the-mamp-version-of-phphttpstackoverflowcomquestions4145667how-to-override-the-path-of-php-to-use-the-mamp-path1065344310653443">Step 4 - <a href="http://stackoverflow.com/questions/4145667/how-to-override-the-path-of-php-to-use-the-mamp-path/10653443#10653443">Update Path to ensure systems uses the MAMP version of PHP</a></h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel
+nano .bash_profile</code></pre></figure>
+
+<p>Add the following lines:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">MAMP_PHP</span><span class="o">=</span>/Applications/MAMP/bin/php/php7.0.0/bin
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$MAMP_PHP</span><span class="s2">:</span><span class="nv">$PATH</span><span class="s2">"</span></code></pre></figure>
+
+<p><img src="/assets/2016-02-07/update path to MAMP php.png" alt="update path to MAMP php" /></p>
+
+<h3 id="step-5---install-the-migration-modules">Step 5 - Install the Migration Modules</h3>
+
+<p><a href="https://www.drupal.org/node/2350651">Executing an upgrade using Drush</a> describes:</p>
+
+<blockquote>
+  <p>To migrate using Drush you need to download and enable the Migrate Upgrade contributed module. You will also need Migrate Tools if you plan on doing more than running a one-time complete upgrade.</p>
+</blockquote>
+
+<p>Drush has extensive functionality to install and maintain Drupal - see the <a href="https://github.com/drush-ops/drush">Drush Site</a> and <a href="http://drushcommands.com/">Drush Commands</a>.</p>
+
+<p><a href="https://www.drupal.org/documentation/install/modules-themes/modules-8">To install and enable the contributed modules</a> :</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush dl migrate_upgrade
+drush en migrate_upgrade</code></pre></figure>
+
+<p>The first part worked:</p>
+
+<p><img src="/assets/2016-02-07/drush dl migrate_upgrade.png" alt="drush dl migrate_upgrade" /></p>
+
+<p><strong>Issue: Drush was not able to start (bootstrap) the Drupal database</strong>
+<img src="/assets/2016-02-07/drush en migrate_upgrade issue.png" alt="drush en migrate_upgrade issue" /></p>
+
+<p><a href="http://julianlmedina.com/getting-drush-working-with-mamp-3-on-mac/">julianlmedina</a>  and <a href="https://www.drupal.org/node/954766">Installing Drush on Mac using Homebrew</a> have described</p>
+
+<blockquote>
+  <p>If you are running your Drupal sites with MAMP, you need to tell Drush to use MAMP’s mysql.sock or you will run into the following error.  Easiest way to do this is by creating a symlink</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo mkdir /var/mysql
+sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock</code></pre></figure>
+
+<p><img src="/assets/2016-02-07/MAMP mysql sock.png" alt="MAMP mysql sock" /></p>
+
+<p>Now to retry..</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush en migrate_upgrade</code></pre></figure>
+
+<p><strong>Issue: Drush still could not connect with the same error as before - I determined that the mysql command was not available from /Users/hywel/Sites/drupal8 with MAMP</strong>
+Following the instructions at <a href="http://www.webbykat.com/2012/06/solving-sh-mysql-command-not-found-mamp-pro-2">Solving mysql command not found” on MAMP</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel
+nano .bash_profile</code></pre></figure>
+
+<p>Add this line to .bash_profile:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/Applications/MAMP/Library/bin</code></pre></figure>
+
+<p>Now to retry..</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush en migrate_upgrade</code></pre></figure>
+
+<p><img src="/assets/2016-02-07/migrate upgrade enable success.png" alt="migrate upgrade enable success" /></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush dl migrate_tools
+drush en migrate_tools</code></pre></figure>
+
+<p><img src="/assets/2016-02-07/migrate tools success.png" alt="migrate tools success" /></p>
+
+<p>Success - Do you want to continue… yes I think so!  See you next time.</p>
+
+  </article>
+
+<!-- Hywel Start Disqus Comments -->
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      var disqus_config = function () {
+          this.page.url =  "http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html";  // Replace PAGE_URL with your page's canonical URL variable
+
+          //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//hywelme.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Hywel End Disqus Comments -->
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Have You Wandered Every Land</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <!--li>Have You Wandered Every Land</li-->
+          <li><a href="mailto:hywel.llewellyn@gmail.com">hywel.llewellyn@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/hyweljohnllewellyn">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">hyweljohnllewellyn</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/hywel_llewellyn">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">hywel_llewellyn</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">A personal blog site, with musings about technology and documenting what I learn.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

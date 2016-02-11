@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Feb 2016 21:13:39 +0000</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2016 21:13:39 +0000</lastBuildDate>
+    <pubDate>Thu, 11 Feb 2016 21:15:15 +0000</pubDate>
+    <lastBuildDate>Thu, 11 Feb 2016 21:15:15 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -77,7 +77,7 @@ drush migrate-upgrade --legacy-db-url&lt;span class=&quot;o&quot;&gt;=&lt;/span&
       </item>
     
       <item>
-        <title>A Website Journey from Drupal 6 to Drupal 8 - Part 3</title>
+        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 3</title>
         <description>&lt;h2 id=&quot;drupal-6-modules&quot;&gt;Drupal 6 Modules&lt;/h2&gt;
 
 &lt;p&gt;A review of the currently installed modules on the Drupal 6 showed that most are now part of Drupal 8 Core, in particular:&lt;/p&gt;

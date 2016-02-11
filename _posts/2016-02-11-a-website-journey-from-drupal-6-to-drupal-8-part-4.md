@@ -38,6 +38,18 @@ The above statement is a bit confusing, and suggests that it is necessary to ide
 > For more control, you will probably want to pass the --configure-only option to migrate-upgrade, so it will only perform the first step of creating the migrations.
 
 {% highlight bash %}
+cd /Users/hywel/Sites/drupal8
 drush migrate-upgrade --legacy-db-url=mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root=/Users/hywel/Sites/hartleyvoicescms --configure-only
 {% endhighlight %}
+
+Nothing much happened, it just returned to the prompt.  To some extent, this was expected as the configure-only option was used.  So next was:
+
+{% highlight bash %}
+drush migrate-status
+{% endhighlight %}
+
+This was a bit more interesting and summarised what migration was available from Drupal 6.
+
+![drush 8 migrate status from drupal 6]({{site.baseurl}}/assets/2016-02-11/drush 8 migrate status from drupal 6.png)
+
 

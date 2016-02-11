@@ -6,7 +6,7 @@ categories: drupal
 excerpt: ""
 meta: "migrate Drupal 8 Migration Upgrade from Drupal 6 "
 published: true
-title: "A Website Journey from Drupal 6 to Drupal 8 - Part 3"
+title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 3"
 ---
 
 

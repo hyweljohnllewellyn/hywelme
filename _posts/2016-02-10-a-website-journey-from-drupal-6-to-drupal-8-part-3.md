@@ -4,7 +4,7 @@ date: "2016-02-10 20:15 +0000"
 author: Hywel
 categories: drupal
 excerpt: ""
-meta: "Drupal 8 Migration Upgrade from Drupal 6 "
+meta: "migrate Drupal 8 Migration Upgrade from Drupal 6 "
 published: true
 title: "A Website Journey from Drupal 6 to Drupal 8 - Part 3"
 ---

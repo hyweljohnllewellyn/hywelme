@@ -11,6 +11,7 @@ title: "A Website Journey from Drupal 6 to Drupal 8 - Part 3"
 
 
 
+
 ## Drupal 6 Modules
 
 A review of the currently installed modules on the Drupal 6 showed that most are now part of Drupal 8 Core, in particular:

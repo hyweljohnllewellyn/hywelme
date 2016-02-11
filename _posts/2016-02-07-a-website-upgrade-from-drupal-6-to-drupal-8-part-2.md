@@ -12,7 +12,7 @@ title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 2"
 
 ## Preparing for Upgrade
 
-[In my previous post,]({% post_url 2016-02-06-a-website-upgrade-from-drupal-6-to-drupal-8-part-1 %}) I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.
+[In my previous post,]({% post_url 2016-02-06-a-website-upgrade-from-drupal-6-to-drupal-8-part-1 %}) I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.  Note that many of these are likely required to upgrade from Drupal 7.
 
 For this post, I will install the Drupal Migration Modules.
 

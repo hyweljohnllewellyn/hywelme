@@ -4,10 +4,11 @@ date: "2016-02-06 18:53 +0000"
 author: Hywel
 categories: drupal
 excerpt: ""
-meta: "Drupal 8 Migration "
+meta: "Migrate Drupal 8 Migration Upgrade "
 published: true
 title: "A Website Journey from Drupal 6 to Drupal 8 - Part 1"
 ---
+
 
 
 ## Why? - [Drupal 8](https://www.drupal.org/news/drupal-8.0.0-released)

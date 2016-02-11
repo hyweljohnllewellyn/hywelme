@@ -16,6 +16,19 @@ title: Create Jekyll Static Site Posts Using Prose.io
 
 Prose.io has some powerful configuration capability to simplify the user editing experience, which I will be exploring in upcoming posts.  
 
+## Update as of February 2016
+I have been using Prose.io regularly to create posts on this website now for a couple of months.  I would recommend it. 
+
+**Pros**
+- it is very quick to start a post 
+- you can edit posts through the web - even on my mobile
+- adding an image to the post is also super fast 
+
+**Cons**
+- no spell checker
+
+## Basic Prose.io Configuration
+
 The basic prose configuration is added to the _config.yml file of my Jekyll site
 
 {% highlight yaml %}

@@ -93,7 +93,19 @@ As shown the Drupal 6 filter in node body table was called full_html 1:
 Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8:
 
 {% highlight bash %}
-update node__body set body_format ='full_html';
+
+drush dl formats_updater
+drush en formats_updater
+
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+update `node__body` set body_format ='full_html';
+update `node__field_sidebar` set field_sidebar_format ='full_html';
+update `node__field_sidebar2` set field_sidebar2_format ='full_html';
+update  `node_revision__body` set body_format ='full_html';
+update `node_revision__field_sidebar` set field_sidebar_format ='full_html';
+update `node_revision__field_sidebar2` set field_sidebar2_format ='full_html';
+drush cache-rebuild
 {% endhighlight %}
 
 

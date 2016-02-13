@@ -62,7 +62,7 @@ drush migrate-import --all
 
 ![drush migrate-import all]({{site.baseurl}}/assets/2016-02-11/drush migrate-import all.png)
 
-## Drupal 8 First Upgrade Attempt: Some Text Format Issues
+## Drupal 8 First Upgrade Attempt:  Text Format Issues
 
 The _Missing filter plugin: filternull_ was shown several times during the import process.  
 
@@ -74,7 +74,7 @@ As you can see, some of the menu structure exists, but the layout and body text 
 
 **Issue On investigation seems that a second Full_HTML Text format was created during the import that had a broken text filter.**
 
-As shown, there are two vversions of the Full HTML text format:
+As shown, there are two versions of the Full HTML text format:
 ![full HTML imported from drupal 6]({{site.baseurl}}/assets/2016-02-11/full HTML imported from drupal 6.png)
 
 The Full HTML text format imported from Drupal 6 was showing a filter null error:
@@ -97,7 +97,6 @@ As shown the Drupal 6 filter in node body table was called full_html 1:
 Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8.  
 
 {% highlight bash %}
-cd /Users/hywel/Sites/drupal8
 update `node__body` set body_format ='full_html';
 update `node__field_sidebar` set field_sidebar_format ='full_html';
 update `node__field_sidebar2` set field_sidebar2_format ='full_html';
@@ -112,3 +111,29 @@ Followed by rebuilding the Drupal 8 cache :
 cd /Users/hywel/Sites/drupal8
 drush cache-rebuild
 {% endhighlight %}
+
+## Drupal 8 URL Alias Issues
+
+As shown in previous screenshots, the URL was showing the node ID, rather that the human readable URL alias.
+
+On investigation it seemed that the language code was not defined on the url_alias table:
+
+![url_alias drupal 8 lang code not defined following upgrade]({{site.baseurl}}/assets/2016-02-11/url_alias drupal 8 lang code not defined following upgrade.png)
+
+Back to trusty SQL update and cache rebuild:
+
+{% highlight bash %}
+update  `url_alias` set langcode = 'und';
+{% endhighlight %}
+
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush cache-rebuild
+{% endhighlight %}
+
+Much better - it almost looks like a website:
+
+![drupal 8 first migation after url_alias fix]({{site.baseurl}}/assets/2016-02-11/drupal 8 first migation after url_alias fix.jpg)
+
+
+

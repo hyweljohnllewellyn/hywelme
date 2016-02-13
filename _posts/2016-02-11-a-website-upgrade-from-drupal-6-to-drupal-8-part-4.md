@@ -4,7 +4,7 @@ date: "2016-02-11 19:42 +0000"
 author: Hywel
 categories: drupal
 excerpt: ""
-meta: migrate Drupal 8 Migration Upgrade from Drupal 6 prepare
+meta: " Drupal 8 migration upgrade full HTML filter null  text format"
 published: true
 title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 4"
 ---
@@ -53,7 +53,7 @@ This was a bit more interesting and summarised what migration was available from
 
 ![drush 8 migrate status from drupal 6]({{site.baseurl}}/assets/2016-02-11/drush 8 migrate status from drupal 6.png)
 
-Import the whole list of possiblr migrations:
+Import the whole list of possible migrations:
 
 {% highlight bash %}
 cd /Users/hywel/Sites/drupal8
@@ -62,9 +62,11 @@ drush migrate-import --all
 
 ![drush migrate-import all]({{site.baseurl}}/assets/2016-02-11/drush migrate-import all.png)
 
-The _Missing filter plugin: filternull_ was shown seveal times during the import process.  
+## Fixing some Text Format Issues
 
-Here is the homepage following the first part of teh migrate and update to Drupal 8:
+The _Missing filter plugin: filternull_ was shown several times during the import process.  
+
+Here is the homepage following the first part of the migrate and update to Drupal 8:
 
 ![first migrate result homepage]({{site.baseurl}}/assets/2016-02-11/first migrate result homepage.png)
 
@@ -76,12 +78,12 @@ As shown, there are two vversions of the Full HTML text format:
 ![full HTML imported from drupal 6]({{site.baseurl}}/assets/2016-02-11/full HTML imported from drupal 6.png)
 
 The Full HTML text format imported from Drupal 6 was showing a filter null error:
-![filter null error from drupal 6 text format]({{site.baseurl}}/assets/2016-02-11/filter null error from drupal 6 text format.png)
+![filter null error from Drupal 6 text format]({{site.baseurl}}/assets/2016-02-11/filter null error from drupal 6 text format.png)
 
 So the Drupal 6 filter was disabled:
-![disable the full html drupal 6 filter confirm]({{site.baseurl}}/assets/2016-02-11/disable the full html drupal 6 filter confirm.png)
+![disable the full html Drupal 6 filter confirm]({{site.baseurl}}/assets/2016-02-11/disable the full html drupal 6 filter confirm.png)
 
-After selecting the DRupal 8 Full HTML filter:
+After selecting the Drupal 8 Full HTML filter:
 ![select drupal 8 full html text filter]({{site.baseurl}}/assets/2016-02-11/select drupal 8 full html text filter.png)
 
 The text was showing formattet correctly:
@@ -90,12 +92,9 @@ The text was showing formattet correctly:
 As shown the Drupal 6 filter in node body table was called full_html 1:
 ![full_html1 in the node body table]({{site.baseurl}}/assets/2016-02-11/full_html1 in the node body table.png)
 
-Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8:
+### Remove the Drupal 6 Text Format and Update the Drupal 8 Text format to Full HTML
 
-{% highlight bash %}
-
-drush dl formats_updater
-drush en formats_updater
+Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8.  
 
 {% highlight bash %}
 cd /Users/hywel/Sites/drupal8
@@ -105,8 +104,11 @@ update `node__field_sidebar2` set field_sidebar2_format ='full_html';
 update  `node_revision__body` set body_format ='full_html';
 update `node_revision__field_sidebar` set field_sidebar_format ='full_html';
 update `node_revision__field_sidebar2` set field_sidebar2_format ='full_html';
-drush cache-rebuild
 {% endhighlight %}
 
+Followed by rebuilding the Drupal 8 cache :
 
-
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush cache-rebuild
+{% endhighlight %}

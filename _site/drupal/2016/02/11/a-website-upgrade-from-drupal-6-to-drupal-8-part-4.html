@@ -64,7 +64,7 @@
 
   <header class="post-header">
     <h1 class="post-title">A Website Upgrade from Drupal 6 to Drupal 8 - Part 4</h1>
-    <p class="post-meta">Feb 11, 2016 ✎ Hywel • migrate Drupal 8 Migration Upgrade from Drupal 6 prepare</p>
+    <p class="post-meta">Feb 11, 2016 ✎ Hywel •  Drupal 8 migration upgrade full HTML filter null  text format</p>
   </header>
 
   
@@ -126,7 +126,90 @@ drush migrate-upgrade --legacy-db-url<span class="o">=</span>mysql://hartleyvoic
 
 <p><img src="/assets/2016-02-11/drush 8 migrate status from drupal 6.png" alt="drush 8 migrate status from drupal 6" /></p>
 
-<p>I will carry on soon…</p>
+<p>Import the whole list of possible migrations:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush migrate-import --all</code></pre></figure>
+
+<p><img src="/assets/2016-02-11/drush migrate-import all.png" alt="drush migrate-import all" /></p>
+
+<h2 id="drupal-8-first-upgrade-attempt--text-format-issues">Drupal 8 First Upgrade Attempt:  Text Format Issues</h2>
+
+<p>The <em>Missing filter plugin: filternull</em> was shown several times during the import process.</p>
+
+<p>Here is the homepage following the first part of the migrate and update to Drupal 8:</p>
+
+<p><img src="/assets/2016-02-11/first migrate result homepage.png" alt="first migrate result homepage" /></p>
+
+<p>As you can see, some of the menu structure exists, but the layout and body text was not showing at all.</p>
+
+<p><strong>Issue On investigation seems that a second Full_HTML Text format was created during the import that had a broken text filter.</strong></p>
+
+<p>As shown, there are two versions of the Full HTML text format:
+<img src="/assets/2016-02-11/full HTML imported from drupal 6.png" alt="full HTML imported from drupal 6" /></p>
+
+<p>The Full HTML text format imported from Drupal 6 was showing a filter null error:
+<img src="/assets/2016-02-11/filter null error from drupal 6 text format.png" alt="filter null error from Drupal 6 text format" /></p>
+
+<p>So the Drupal 6 filter was disabled:
+<img src="/assets/2016-02-11/disable the full html drupal 6 filter confirm.png" alt="disable the full html Drupal 6 filter confirm" /></p>
+
+<p>After selecting the Drupal 8 Full HTML filter:
+<img src="/assets/2016-02-11/select drupal 8 full html text filter.png" alt="select drupal 8 full html text filter" /></p>
+
+<p>The text was showing formattet correctly:
+<img src="/assets/2016-02-11/drupal 8 full html text filter working.png" alt="drupal 8 full html text filter working" /></p>
+
+<p>As shown the Drupal 6 filter in node body table was called full_html 1:
+<img src="/assets/2016-02-11/full_html1 in the node body table.png" alt="full_html1 in the node body table" /></p>
+
+<h3 id="remove-the-drupal-6-text-format-and-update-the-drupal-8-text-format-to-full-html">Remove the Drupal 6 Text Format and Update the Drupal 8 Text format to Full HTML</h3>
+
+<p>Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">update <span class="sb">`</span>node__body<span class="sb">`</span> <span class="nb">set </span>body_format <span class="o">=</span><span class="s1">'full_html'</span>;
+update <span class="sb">`</span>node__field_sidebar<span class="sb">`</span> <span class="nb">set </span>field_sidebar_format <span class="o">=</span><span class="s1">'full_html'</span>;
+update <span class="sb">`</span>node__field_sidebar2<span class="sb">`</span> <span class="nb">set </span>field_sidebar2_format <span class="o">=</span><span class="s1">'full_html'</span>;
+update  <span class="sb">`</span>node_revision__body<span class="sb">`</span> <span class="nb">set </span>body_format <span class="o">=</span><span class="s1">'full_html'</span>;
+update <span class="sb">`</span>node_revision__field_sidebar<span class="sb">`</span> <span class="nb">set </span>field_sidebar_format <span class="o">=</span><span class="s1">'full_html'</span>;
+update <span class="sb">`</span>node_revision__field_sidebar2<span class="sb">`</span> <span class="nb">set </span>field_sidebar2_format <span class="o">=</span><span class="s1">'full_html'</span>;</code></pre></figure>
+
+<p>Followed by rebuilding the Drupal 8 cache :</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush cache-rebuild</code></pre></figure>
+
+<h2 id="drupal-8-url-alias-issues">Drupal 8 URL Alias Issues</h2>
+
+<p>As shown in previous screenshots, the URL was showing the node ID, rather that the human readable URL alias.</p>
+
+<p>On investigation it seemed that the language code was not defined on the url_alias table:</p>
+
+<p><img src="/assets/2016-02-11/url_alias drupal 8 lang code not defined following upgrade.png" alt="url_alias drupal 8 lang code not defined following upgrade" /></p>
+
+<p>Back to trusty SQL update and cache rebuild:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">update  <span class="sb">`</span>url_alias<span class="sb">`</span> <span class="nb">set </span>langcode <span class="o">=</span> <span class="s1">'und'</span>;</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush cache-rebuild</code></pre></figure>
+
+<p>Much better - it almost looks like a website:</p>
+
+<p><img src="/assets/2016-02-11/drupal 8 first migation after url_alias fix.jpg" alt="drupal 8 first migation after url_alias fix" /></p>
+
+<h2 id="drupal-6-versus-drupal-8---where-are-the-images-and-audio">Drupal 6 versus Drupal 8 - Where are the images and audio?</h2>
+
+<p><strong>Drupal 6 - Live Site:</strong></p>
+
+<p><img src="/assets/2016-02-11/three tenors drupal 6.jpg" alt="three tenors drupal 6.jpg" /></p>
+
+<p><strong>Drupal 8 - First Upgrade:</strong></p>
+
+<p><img src="/assets/2016-02-11/three tenors drupal 8.jpg" alt="three tenors drupal 8.jpg" /></p>
+
+<p>So next will be identifying where the asset files are and starting to look at formatting the site.</p>
+
 
   </article>
 

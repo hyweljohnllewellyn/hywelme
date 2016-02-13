@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Feb 2016 20:23:24 +0000</pubDate>
-    <lastBuildDate>Sat, 13 Feb 2016 20:23:24 +0000</lastBuildDate>
+    <pubDate>Sat, 13 Feb 2016 20:24:45 +0000</pubDate>
+    <lastBuildDate>Sat, 13 Feb 2016 20:24:45 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -65,7 +65,90 @@ drush migrate-upgrade --legacy-db-url&lt;span class=&quot;o&quot;&gt;=&lt;/span&
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drush 8 migrate status from drupal 6.png&quot; alt=&quot;drush 8 migrate status from drupal 6&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I will carry on soon…&lt;/p&gt;
+&lt;p&gt;Import the whole list of possible migrations:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush migrate-import --all&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drush migrate-import all.png&quot; alt=&quot;drush migrate-import all&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;drupal-8-first-upgrade-attempt--text-format-issues&quot;&gt;Drupal 8 First Upgrade Attempt:  Text Format Issues&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;Missing filter plugin: filternull&lt;/em&gt; was shown several times during the import process.&lt;/p&gt;
+
+&lt;p&gt;Here is the homepage following the first part of the migrate and update to Drupal 8:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/first migrate result homepage.png&quot; alt=&quot;first migrate result homepage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, some of the menu structure exists, but the layout and body text was not showing at all.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Issue On investigation seems that a second Full_HTML Text format was created during the import that had a broken text filter.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As shown, there are two versions of the Full HTML text format:
+&lt;img src=&quot;/assets/2016-02-11/full HTML imported from drupal 6.png&quot; alt=&quot;full HTML imported from drupal 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Full HTML text format imported from Drupal 6 was showing a filter null error:
+&lt;img src=&quot;/assets/2016-02-11/filter null error from drupal 6 text format.png&quot; alt=&quot;filter null error from Drupal 6 text format&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So the Drupal 6 filter was disabled:
+&lt;img src=&quot;/assets/2016-02-11/disable the full html drupal 6 filter confirm.png&quot; alt=&quot;disable the full html Drupal 6 filter confirm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After selecting the Drupal 8 Full HTML filter:
+&lt;img src=&quot;/assets/2016-02-11/select drupal 8 full html text filter.png&quot; alt=&quot;select drupal 8 full html text filter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The text was showing formattet correctly:
+&lt;img src=&quot;/assets/2016-02-11/drupal 8 full html text filter working.png&quot; alt=&quot;drupal 8 full html text filter working&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As shown the Drupal 6 filter in node body table was called full_html 1:
+&lt;img src=&quot;/assets/2016-02-11/full_html1 in the node body table.png&quot; alt=&quot;full_html1 in the node body table&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;remove-the-drupal-6-text-format-and-update-the-drupal-8-text-format-to-full-html&quot;&gt;Remove the Drupal 6 Text Format and Update the Drupal 8 Text format to Full HTML&lt;/h3&gt;
+
+&lt;p&gt;Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
+update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Followed by rebuilding the Drupal 8 cache :&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush cache-rebuild&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;drupal-8-url-alias-issues&quot;&gt;Drupal 8 URL Alias Issues&lt;/h2&gt;
+
+&lt;p&gt;As shown in previous screenshots, the URL was showing the node ID, rather that the human readable URL alias.&lt;/p&gt;
+
+&lt;p&gt;On investigation it seemed that the language code was not defined on the url_alias table:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/url_alias drupal 8 lang code not defined following upgrade.png&quot; alt=&quot;url_alias drupal 8 lang code not defined following upgrade&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Back to trusty SQL update and cache rebuild:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;url_alias&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;langcode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;und&#39;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
+drush cache-rebuild&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Much better - it almost looks like a website:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drupal 8 first migation after url_alias fix.jpg&quot; alt=&quot;drupal 8 first migation after url_alias fix&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;drupal-6-versus-drupal-8---where-are-the-images-and-audio&quot;&gt;Drupal 6 versus Drupal 8 - Where are the images and audio?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Drupal 6 - Live Site:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/three tenors drupal 6.jpg&quot; alt=&quot;three tenors drupal 6.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Drupal 8 - First Upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/three tenors drupal 8.jpg&quot; alt=&quot;three tenors drupal 8.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So next will be identifying where the asset files are and starting to look at formatting the site.&lt;/p&gt;
+
 </description>
         <pubDate>Thu, 11 Feb 2016 19:42:00 +0000</pubDate>
         <link>http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</link>

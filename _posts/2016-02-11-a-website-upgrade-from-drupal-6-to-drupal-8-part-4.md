@@ -86,7 +86,7 @@ So the Drupal 6 filter was disabled:
 After selecting the Drupal 8 Full HTML filter:
 ![select drupal 8 full html text filter]({{site.baseurl}}/assets/2016-02-11/select drupal 8 full html text filter.png)
 
-The text was showing formattet correctly:
+The text was showing formatted correctly:
 ![drupal 8 full html text filter working]({{site.baseurl}}/assets/2016-02-11/drupal 8 full html text filter working.png)
 
 As shown the Drupal 6 filter in node body table was called full_html 1:
@@ -146,7 +146,3 @@ Much better - it almost looks like a website:
 ![three tenors drupal 8.jpg]({{site.baseurl}}/assets/2016-02-11/three tenors drupal 8.jpg)
 
 So next will be identifying where the asset files are and starting to look at formatting the site.
-
-
-
-

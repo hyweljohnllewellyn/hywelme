@@ -62,7 +62,7 @@ drush migrate-import --all
 
 ![drush migrate-import all]({{site.baseurl}}/assets/2016-02-11/drush migrate-import all.png)
 
-## Fixing some Text Format Issues
+## Drupal 8 First Upgrade Attempt: Some Text Format Issues
 
 The _Missing filter plugin: filternull_ was shown several times during the import process.  
 

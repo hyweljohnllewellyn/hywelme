@@ -62,6 +62,39 @@ drush migrate-import --all
 
 ![drush migrate-import all]({{site.baseurl}}/assets/2016-02-11/drush migrate-import all.png)
 
-The _Missing filter plugin: filternull_ was shown seveal times during the import process.  It seems that a new Full_HTML Text format was created during the import that had a broken text filter.
+The _Missing filter plugin: filternull_ was shown seveal times during the import process.  
+
+Here is the homepage following the first part of teh migrate and update to Drupal 8:
+
+![first migrate result homepage]({{site.baseurl}}/assets/2016-02-11/first migrate result homepage.png)
+
+As you can see, some of the menu structure exists, but the layout and body text was not showing at all.
+
+**Issue On investigation seems that a second Full_HTML Text format was created during the import that had a broken text filter.**
+
+As shown, there are two vversions of the Full HTML text format:
+![full HTML imported from drupal 6]({{site.baseurl}}/assets/2016-02-11/full HTML imported from drupal 6.png)
+
+The Full HTML text format imported from Drupal 6 was showing a filter null error:
+![filter null error from drupal 6 text format]({{site.baseurl}}/assets/2016-02-11/filter null error from drupal 6 text format.png)
+
+So the Drupal 6 filter was disabled:
+![disable the full html drupal 6 filter confirm]({{site.baseurl}}/assets/2016-02-11/disable the full html drupal 6 filter confirm.png)
+
+After selecting the DRupal 8 Full HTML filter:
+![select drupal 8 full html text filter]({{site.baseurl}}/assets/2016-02-11/select drupal 8 full html text filter.png)
+
+The text was showing formattet correctly:
+![drupal 8 full html text filter working]({{site.baseurl}}/assets/2016-02-11/drupal 8 full html text filter working.png)
+
+As shown the Drupal 6 filter in node body table was called full_html 1:
+![full_html1 in the node body table]({{site.baseurl}}/assets/2016-02-11/full_html1 in the node body table.png)
+
+Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8:
+
+{% highlight bash %}
+update node__body set body_format ='full_html';
+{% endhighlight %}
+
 
 

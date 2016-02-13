@@ -9,6 +9,7 @@ published: true
 title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 4"
 ---
 
+
 ## [Preparing an upgrade to Drupal 8](https://www.drupal.org/node/2350603)
 
 According to this link, the requirements are:
@@ -52,4 +53,15 @@ This was a bit more interesting and summarised what migration was available from
 
 ![drush 8 migrate status from drupal 6]({{site.baseurl}}/assets/2016-02-11/drush 8 migrate status from drupal 6.png)
 
-I will carry on soon...
+Import the whole list of possiblr migrations:
+
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush migrate-import --all
+{% endhighlight %}
+
+![drush migrate-import all]({{site.baseurl}}/assets/2016-02-11/drush migrate-import all.png)
+
+The _Missing filter plugin: filternull_ was shown seveal times during the import process.  It seems that a new Full_HTML Text format was created during the import that had a broken text filter.
+
+

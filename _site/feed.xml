@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Feb 2016 21:16:56 +0000</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2016 21:16:56 +0000</lastBuildDate>
+    <pubDate>Sat, 13 Feb 2016 20:23:24 +0000</pubDate>
+    <lastBuildDate>Sat, 13 Feb 2016 20:23:24 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -514,7 +514,7 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
 
 &lt;p&gt;Note that you could now provide access to the new shared mailbox to other users,  see &lt;a href=&quot;https://support.office.com/en-my/article/Open-and-use-a-shared-mailbox-in-Outlook-Web-App-bc127866-42be-4de7-92ae-1ef2f787fd5c?ui=en-US&amp;amp;rs=en-MY&amp;amp;ad=MY#__migbm_0&quot;&gt;Open and Use a Shared Mailbox&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I also describe &lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox%20mac-email-client.html&quot;&gt;How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also describe &lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html&quot;&gt;How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Jan 2016 20:43:00 +0000</pubDate>
         <link>http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html</link>

@@ -135,5 +135,12 @@ Much better - it almost looks like a website:
 
 ![drupal 8 first migation after url_alias fix]({{site.baseurl}}/assets/2016-02-11/drupal 8 first migation after url_alias fix.jpg)
 
+## Drupal 6 versus Drupal 8 - Where are the images and audio?
+
+![three tenors drupal 6.jpg]({{site.baseurl}}/assets/2016-02-11/three tenors drupal 6.jpg)![three tenors drupal 8.jpg]({{site.baseurl}}/assets/2016-02-11/three tenors drupal 8.jpg)
+
+So next will be identifying where the asset files are and starting to look at formatting the site.
+
+
 
 

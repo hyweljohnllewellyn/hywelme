@@ -10,6 +10,7 @@ title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 4"
 ---
 
 
+
 ## [Preparing an upgrade to Drupal 8](https://www.drupal.org/node/2350603)
 
 According to this link, the requirements are:
@@ -146,3 +147,15 @@ Much better - it almost looks like a website:
 ![three tenors drupal 8.jpg]({{site.baseurl}}/assets/2016-02-11/three tenors drupal 8.jpg)
 
 So next will be identifying where the asset files are and starting to look at formatting the site.
+
+### Drupal 8 - Asset Files Error
+
+So I noticed that there was an error in the original Drush migate upgrade command - the path to local legacy root folder was incorrect.  After some time investigating, I could not find any way to change this - so decided to start all over again - A Second attempt, repeating the steps from [Part 1](http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html) onward, but  with the corrected local folder:
+
+{% highlight bash %}
+cd /Users/hywel/Sites/drupal8
+drush migrate-upgrade --legacy-db-url=mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root=/Users/hywel/Sites/hartleyvoicescouk/public 
+{% endhighlight %}
+
+**Drupal 8 - Second Upgrade - with images:**
+![three tenors after second upgrade attempt]({{site.baseurl}}/assets/2016-02-11/three tenors after second upgrade attempt.jpg)

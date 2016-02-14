@@ -7,10 +7,8 @@ excerpt: ""
 meta: Migrate Drupal 8 Migration Upgrade  Drupal 6 end of life local drupal development environment
 published: true
 title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 1"
+redirect_from: "/drupal/2016/02/06/a-website-journey-from-drupal-6-to-drupal-8-part-1.html"
 ---
-
-
-
 ## Why? - [Drupal 8](https://www.drupal.org/news/drupal-8.0.0-released)
 
 I hope to capture the essence and learnings of migrating a website from Drupal 6 to Drupal 8, which is formally released as production ready.

@@ -11,6 +11,11 @@ github_username:  hyweljohnllewellyn
 # Build settings
 markdown: kramdown
 
+# Github Pages Redirect - https://help.github.com/articles/redirects-on-github-pages/
+gems:
+  - jekyll-redirect-from
+
+# Prose.io settings
 prose:
   rooturl: ''
   siteurl: 'http://www.hywel.me'

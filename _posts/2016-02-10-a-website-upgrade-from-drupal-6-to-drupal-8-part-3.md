@@ -7,10 +7,8 @@ excerpt: ""
 meta: "migrate Drupal 8 Migration Upgrade from Drupal 6 "
 published: true
 title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 3"
+redirect_from: "/drupal/2016/02/10/a-website-journey-from-drupal-6-to-drupal-8-part-3.html"
 ---
-
-
-
 
 ## Drupal 6 Modules
 

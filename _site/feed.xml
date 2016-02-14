@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Feb 2016 20:24:45 +0000</pubDate>
-    <lastBuildDate>Sat, 13 Feb 2016 20:24:45 +0000</lastBuildDate>
+    <pubDate>Sun, 14 Feb 2016 10:39:58 +0000</pubDate>
+    <lastBuildDate>Sun, 14 Feb 2016 10:39:58 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -96,7 +96,7 @@ drush migrate-import --all&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;After selecting the Drupal 8 Full HTML filter:
 &lt;img src=&quot;/assets/2016-02-11/select drupal 8 full html text filter.png&quot; alt=&quot;select drupal 8 full html text filter&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The text was showing formattet correctly:
+&lt;p&gt;The text was showing formatted correctly:
 &lt;img src=&quot;/assets/2016-02-11/drupal 8 full html text filter working.png&quot; alt=&quot;drupal 8 full html text filter working&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As shown the Drupal 6 filter in node body table was called full_html 1:
@@ -148,7 +148,6 @@ drush cache-rebuild&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/three tenors drupal 8.jpg&quot; alt=&quot;three tenors drupal 8.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So next will be identifying where the asset files are and starting to look at formatting the site.&lt;/p&gt;
-
 </description>
         <pubDate>Thu, 11 Feb 2016 19:42:00 +0000</pubDate>
         <link>http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</link>

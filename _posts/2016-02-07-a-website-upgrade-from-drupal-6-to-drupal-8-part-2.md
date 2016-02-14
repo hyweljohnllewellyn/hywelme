@@ -7,6 +7,7 @@ excerpt: ""
 meta: Drupal 8 Migration Upgrade from Drupal 6 using Drush
 published: true
 title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 2"
+redirect_from: "/drupal/2016/02/07/a-website-journey-from-drupal-6-to-drupal-8-part-2.html"
 ---
 
 

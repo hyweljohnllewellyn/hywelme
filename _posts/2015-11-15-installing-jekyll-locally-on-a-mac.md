@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Installing Jekyll Locally on a Mac"
-date:   2015-11-15 12:56:00
+title: Installing Jekyll Locally on a Mac
+date: "Sun Nov 15 2015 12:56:00 GMT+0000 (GMT)"
 author: Hywel
 meta: jekyll homebrew brew gem bundle bash profile ruby static site github
 categories: Jekyll Static Site
-excerpt: Installing Jekyll locally on a Mac can result is some teething problems because all it's pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly.
+excerpt: "Installing Jekyll locally on a Mac can result is some teething problems because all it's pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly."
+published: true
 ---
+
 ### Static Sites with Jekyll  
 
 Static sites are fast to load and are particularly suited to blog style pages written with [markdown](https://help.github.com/articles/markdown-basics/).  They also don't require a database, so provide many benefits compared with Wordpress or Drupal.  I considered [Hugo](https://gohugo.io/), but decided to try [Jekyll](http://jekyllrb.com/) because of the effectively **free** hosting and native integration on [GitHub](http://jgithub.com/).  Also, there are more [Themes](http://jekyllthemes.org/) readily available.
@@ -29,7 +31,7 @@ The steps taken to resolve these were as follows:
 
 Install [HomeBrew](http://brew.sh/) using
 {% highlight bash %}  
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
 Install a user specific version of Ruby using  
 {% highlight bash %}

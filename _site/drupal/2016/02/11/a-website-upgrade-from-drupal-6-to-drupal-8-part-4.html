@@ -216,6 +216,16 @@ drush cache-rebuild</code></pre></figure>
 
 <p>So next will be identifying where the asset files are and starting to look at formatting the site.</p>
 
+<h3 id="drupal-8---asset-files-error">Drupal 8 - Asset Files Error</h3>
+
+<p>So I noticed that there was an error in the original Drush migate upgrade command - the path to local legacy root folder was incorrect.  After some time investigating, I could not find any way to change this - so decided to start all over again - A Second attempt, repeating the steps from <a href="http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html">Part 1</a> onward, but  with the corrected local folder:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
+drush migrate-upgrade --legacy-db-url<span class="o">=</span>mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root<span class="o">=</span>/Users/hywel/Sites/hartleyvoicescouk/public </code></pre></figure>
+
+<p><strong>Drupal 8 - Second Upgrade - with images:</strong>
+<img src="/assets/2016-02-11/three tenors after second upgrade attempt.jpg" alt="three tenors after second upgrade attempt" /></p>
+
   </article>
 
 <!-- Hywel Start Disqus Comments -->

@@ -10,7 +10,7 @@ title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 5"
 ---
 
 
-## Fixing Final Migration Issues 
+## Fixing Final Migration Issues
 
 So, this will be the final post specifically related to the migration of data and files from Drupal 6 to Drupal 8.
 
@@ -27,7 +27,7 @@ I have tried searching the forums online but as far as I can tell, unless my met
 
 Other than raising a support ticket, I decided to identify the Drupal 8 tables that were needed and write a SQL script using PHP to migrate the data.
 
-To make the process a bit simpler, first the Drupal 6 'upload' table was exported and imported to the Drupal 8 Database - named _'d6upload'_ 
+To make the process a bit simpler, first the Drupal 6 'upload' table was exported and imported to the Drupal 8 Database - named _'d6upload'_
 
 Then a File named d6_upload_to_d8.php was created in the Drupal 8 root directory with the following:
 
@@ -99,11 +99,9 @@ So there were now the following Page Fields - _File Upload, Sidebar or Sidebar2_
 
 However, these were not being shown on the webpage.  Again, this may be a specific issue or limitation of the migration, though to resolve this Drupal 8 Views need to be created and added to the Block Layout.
 
-### Creating Drupal 8 Views to display additional Page Fields 
+### Creating Drupal 8 Views to display additional Page Fields
 
 ![add drupal 8 view step 1]({{site.baseurl}}/assets/2016-02-17/add drupal 8 view step 1.png)
-
-![add drupal 8 view step 2]({{site.baseurl}}/assets/2016-02-17/add drupal 8 view step 2.png)
 
 ![add drupal 8 view step 3]({{site.baseurl}}/assets/2016-02-17/add drupal 8 view step 3.png)
 
@@ -136,13 +134,3 @@ However, these were not being shown on the webpage.  Again, this may be a specif
 ![add drupal 8 view to block step 3]({{site.baseurl}}/assets/2016-02-17/add drupal 8 view to block step 3.png)
 
 ![add drupal 8 view to block step 4]({{site.baseurl}}/assets/2016-02-17/add drupal 8 view to block step 4.png)
-
-
-
-
-
-
-
-
-
-

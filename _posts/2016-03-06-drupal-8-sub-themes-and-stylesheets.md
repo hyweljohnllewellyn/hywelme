@@ -90,9 +90,7 @@ within the hartleyvoicescouk css folder a [style.css](https://github.com/hyweljo
 
 ### Hartley Voices with Drupal 8
 
-
-
-![Hartley Voices with Drupal 8]({{site.baseurl}}/2016-03-06/drupal 8 hartleyvoicescouk with css.jpg)
+![Hartley Voices with Drupal 8]({{site.baseurl}}/assets/2016-03-06/drupal%208%20hartleyvoicescouk%20with%20css.jpg)
 
 This was quite good..... but....
 

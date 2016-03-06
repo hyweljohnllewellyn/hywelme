@@ -99,7 +99,7 @@ This was quite good..... but....
 
 I came across a shortcoming with the Drupal 8 that I cannot resolve.  [Hartley Voices](http://www.hartleyvoices.co.uk) is a live music events agency and so there is a need to support audio / mp3.  
 
-Currently, the Hartley Voices site is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the [Yahoo Media Player at my Git Page](https://github.com/hyweljohnllewellyn/yahoomediaplayer).  The simplicity and minimalism is I feel still unsurpassed.
+Currently, the Hartley Voices site is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the [Yahoo Media Player at my Git Page](https://github.com/hyweljohnllewellyn/yahoomediaplayer).  The simplicity and minimalism is, I feel still unsurpassed.
 
 I was very surprised that Drupal, as a 'modern' CMS does not support standard HTML5 <audio> elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account for the [Mini embedded player](http://help.soundcloud.com/customer/en/portal/articles/2167181-the-mini-embedded-player) or revert to Drupal 7.
 

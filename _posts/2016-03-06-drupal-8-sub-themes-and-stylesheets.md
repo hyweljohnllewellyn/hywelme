@@ -17,7 +17,7 @@ title: Drupal 8 Sub Themes and Stylesheets
 
 It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.
 
-In the time since my last [post](http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html) on the subject, I have been concentrating on updating the look and feel of the theme.
+In the time since my last [post](http://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html) on the subject, I have been concentrating on updating the look and feel of the theme.
 
 I have to say that I am impressed with the ability in Drupal 8 to create a Child Theme of an existing Theme and then create separate libraries for the stylesheets and javascript that then enhance the base theme without compromising the integrity or upgrade path of the base theme.
 

@@ -31,6 +31,10 @@ The basic configuration requires:
 - an info file to which describes the sub theme region structure, libraries and parent theme
 - a library file, which will describe the stylesheets and any javascript used
 
+
+I used [Adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 theme](https://www.drupal.org/theme-guide/8/assets)  as a reference.
+
+
 *[hartleyvoicescouk sub theme folder structure](https://github.com/hyweljohnllewellyn/hywelme/tree/gh-pages/assets/2016-03-06/hartleyvoicescouk)*
 ![drupal 8 sub theme folders]({{site.baseurl}}/2016-03-06/drupal 8 sub theme folders.png)
 
@@ -100,7 +104,3 @@ I was very surprised that Drupal, as a 'modern' CMS does not support standard HT
 ## Options Going Forward
 
 Since using [Jekyll](http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html) as a static site generators and [prose.io](http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html) as an online editor, I am now seriously considering converting the entire Drupal 6 site to [Jekyll](http://jekyllrb.com/) or potentially [Hugo](https://gohugo.io/).
-
-
-
-

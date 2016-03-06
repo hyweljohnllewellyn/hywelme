@@ -79,10 +79,7 @@ global-styling:
 
 ### Activate the Sub Theme
 
-
-
-![drupal 8 activated sub theme]({{site.baseurl}}/2016-03-06/drupal 8 activated sub theme.jpg)
-
+![drupal 8 activated sub theme]({{site.baseurl}}/assets/2016-03-06/drupal%208%20activated%20sub%20theme.jpg)
 
 ### Sub Theme Stylesheet - [style.css](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css)
 
@@ -92,6 +89,9 @@ This was the tricky and time consuming part, mainly as for each of the style ele
 within the hartleyvoicescouk css folder a [style.css](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css) file contained all the custom css for the sub theme.
 
 ### Hartley Voices with Drupal 8
+
+
+
 ![Hartley Voices with Drupal 8]({{site.baseurl}}/2016-03-06/drupal 8 hartleyvoicescouk with css.jpg)
 
 This was quite good..... but....

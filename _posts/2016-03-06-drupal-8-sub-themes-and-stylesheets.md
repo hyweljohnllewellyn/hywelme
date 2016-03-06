@@ -82,3 +82,16 @@ This was the tricky and time consuming part, mainly as for each of the style ele
 *bartik -> css -> components* folder
 
 within the hartleyvoicescouk css folder a [style.css](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css) file contained all the custom css for the sub theme.
+
+### Hartley Voices with Drupal 8
+![Hartley Voices with Drupal 8]({{site.baseurl}}/2016-03-06/drupal 8 hartleyvoicescouk with css.jpg)
+
+This was quite good..... but....
+
+## Drupal 8 Shortcoming - Standard Support for Basic HTML 5 Elements - <audio>
+
+I came across a shortcoming with the Drupal 8 that I cannot resolve.  http://www.hartleyvoices.co.uk is a live music events agency and so there is a need to support audio / mp3.
+
+Currently, hartleyvoices is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the Yahoo Media Player at my Git Page.
+
+I was very surprised that Drupal, as a 'modern' CMS does not support standard HTML5 elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account or revert to Drupal 7.  

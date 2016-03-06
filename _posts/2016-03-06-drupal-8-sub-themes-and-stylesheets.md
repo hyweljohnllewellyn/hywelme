@@ -11,6 +11,7 @@ title: Drupal 8 Sub Themes and Stylesheets
 
 
 
+
 ## Creating a Drupal 8 Sub Theme
 
 It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.
@@ -36,8 +37,8 @@ I used [Adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 theme](https:
 
 
 *[hartleyvoicescouk sub theme folder structure](https://github.com/hyweljohnllewellyn/hywelme/tree/gh-pages/assets/2016-03-06/hartleyvoicescouk)*
-![drupal 8 sub theme folders]({{site.baseurl}}/2016-03-06/drupal 8 sub theme folders.png)
 
+![drupal 8 sub theme folders]({{site.baseurl}}/assets/2016-03-06/drupal%208%20sub%20theme%20folders.png)
 
 The Bartik base theme was used as a basis for this Sub theme.
 
@@ -77,6 +78,8 @@ global-styling:
 {% endhighlight %}
 
 ### Activate the Sub Theme
+
+
 
 ![drupal 8 activated sub theme]({{site.baseurl}}/2016-03-06/drupal 8 activated sub theme.jpg)
 

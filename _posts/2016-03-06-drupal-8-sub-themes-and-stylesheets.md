@@ -4,10 +4,11 @@ date: "2016-03-06 08:34 +0000"
 author: Hywel
 categories: drupal
 excerpt: ""
-meta: "child or sub theme stylesheets css javascript library HTML 5 audio element Drupal 8"
-published: false
-title: "Drupal 8 Sub Themes and Stylesheets"
+meta: child or sub theme stylesheets css javascript library HTML 5 audio element Drupal 8
+published: true
+title: Drupal 8 Sub Themes and Stylesheets
 ---
+
 
 ## Creating a Drupal 8 Sub Theme
 
@@ -29,13 +30,13 @@ The basic configuration requires:
 - an info file to which describes the sub theme region structure, libraries and parent theme
 - a library file, which will describe the stylesheets and any javascript used
 
-*hartleyvoicescouk sub theme folder structure*
+*[hartleyvoicescouk sub theme folder structure](https://github.com/hyweljohnllewellyn/hywelme/tree/gh-pages/assets/2016-03-06/hartleyvoicescouk)*
 ![drupal 8 sub theme folders]({{site.baseurl}}/2016-03-06/drupal 8 sub theme folders.png)
 
 
 The Bartik base theme was used as a basis for this Sub theme.
 
-*hartleyvoicescouk.info.yml file*
+*[hartleyvoicescouk.info.yml](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.info.yml) file*
 
 {% highlight yml %}
 name: hartleyvoicescouk
@@ -60,7 +61,7 @@ regions:
   footer: Footer
 {% end highlight %}
 
-*hartleyvoicescouk.libraries.yml file*
+*[hartleyvoicescouk.libraries.yml](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.libraries.yml) file*
 {% highlight yml %}
 global-styling:
   css:
@@ -75,9 +76,9 @@ global-styling:
 ![drupal 8 activated sub theme]({{site.baseurl}}/2016-03-06/drupal 8 activated sub theme.jpg)
 
 
-### Edit the Stylesheet - style.css
+### Sub Theme Stylesheet - [style.css](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css)
 
 This was the tricky and time consuming part, mainly as for each of the style elements I wanted to customise, I needed to find the related element in the Parent Theme.  These were generally found in one of the css files in the
 *bartik -> css -> components* folder
 
-within the hartleyvoicescouk css folder a style.css file contained all the custom css for the sub theme.
+within the hartleyvoicescouk css folder a [style.css](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css) file contained all the custom css for the sub theme.

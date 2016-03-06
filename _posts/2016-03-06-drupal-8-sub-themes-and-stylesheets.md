@@ -12,6 +12,7 @@ title: Drupal 8 Sub Themes and Stylesheets
 
 
 
+
 ## Creating a Drupal 8 Sub Theme
 
 It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.
@@ -94,9 +95,9 @@ within the hartleyvoicescouk css folder a [style.css](https://github.com/hyweljo
 
 This was quite good..... but....
 
-## Drupal 8 Shortcoming - Standard Support for Basic HTML 5 Elements - <audio>
+## Drupal 8 Shortcoming - Standard Support for Basic HTML 5 Elements <audio>
 
-I came across a shortcoming with the Drupal 8 that I cannot resolve.  http://www.hartleyvoices.co.uk is a live music events agency and so there is a need to support audio / mp3.  
+I came across a shortcoming with the Drupal 8 that I cannot resolve.  [Hartley Voices](http://www.hartleyvoices.co.uk) is a live music events agency and so there is a need to support audio / mp3.  
 
 Currently, the Hartley Voices site is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the [Yahoo Media Player at my Git Page](https://github.com/hyweljohnllewellyn/yahoomediaplayer).  The simplicity and minimalism is I feel still unsurpassed.
 

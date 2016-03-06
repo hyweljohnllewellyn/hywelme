@@ -10,6 +10,7 @@ title: Drupal 8 Sub Themes and Stylesheets
 ---
 
 
+
 ## Creating a Drupal 8 Sub Theme
 
 It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.
@@ -90,8 +91,16 @@ This was quite good..... but....
 
 ## Drupal 8 Shortcoming - Standard Support for Basic HTML 5 Elements - <audio>
 
-I came across a shortcoming with the Drupal 8 that I cannot resolve.  http://www.hartleyvoices.co.uk is a live music events agency and so there is a need to support audio / mp3.
+I came across a shortcoming with the Drupal 8 that I cannot resolve.  http://www.hartleyvoices.co.uk is a live music events agency and so there is a need to support audio / mp3.  
 
-Currently, hartleyvoices is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the Yahoo Media Player at my Git Page.
+Currently, hartleyvoices is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the [Yahoo Media Player at my Git Page](https://github.com/hyweljohnllewellyn/yahoomediaplayer).  The simplicity and minimalism is I feel still unsurpassed.
 
-I was very surprised that Drupal, as a 'modern' CMS does not support standard HTML5 elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account or revert to Drupal 7.  
+I was very surprised that Drupal, as a 'modern' CMS does not support standard HTML5 <audio> elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account for the [Mini embedded player](http://help.soundcloud.com/customer/en/portal/articles/2167181-the-mini-embedded-player) or revert to Drupal 7.
+
+## Options Going Forward
+
+Since using [Jekyll](http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html) as a static site generators and [prose.io](http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html) as an online editor, I am now seriously considering converting the entire Drupal 6 site to [Jekyll](http://jekyllrb.com/) or potentially [Hugo](https://gohugo.io/).
+
+
+
+

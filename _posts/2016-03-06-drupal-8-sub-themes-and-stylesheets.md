@@ -16,9 +16,9 @@ title: Drupal 8 Sub Themes and Stylesheets
 
 It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.
 
-In the time since my last [post](http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html) on the subjet, I have been concentrating on updating the look and feel of the theme.
+In the time since my last [post](http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html) on the subject, I have been concentrating on updating the look and feel of the theme.
 
-I have to say that I am impressed with the ability in Drupal 8 to create a Child Theme of an existing Theme and then create seperate libreries for the stylesheets and javascript that then enhance the base theme without comprimising the integrity or upgrade path of the base theme.
+I have to say that I am impressed with the ability in Drupal 8 to create a Child Theme of an existing Theme and then create separate libraries for the stylesheets and javascript that then enhance the base theme without compromising the integrity or upgrade path of the base theme.
 
 [Creating a Sub Theme](https://www.drupal.org/theme-guide/8/creating-a-sub-theme) was one of the resources I used.
 
@@ -98,7 +98,7 @@ This was quite good..... but....
 
 I came across a shortcoming with the Drupal 8 that I cannot resolve.  http://www.hartleyvoices.co.uk is a live music events agency and so there is a need to support audio / mp3.  
 
-Currently, hartleyvoices is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the [Yahoo Media Player at my Git Page](https://github.com/hyweljohnllewellyn/yahoomediaplayer).  The simplicity and minimalism is I feel still unsurpassed.
+Currently, the Hartley Voices site is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it's media player.  Details of how I use the [Yahoo Media Player at my Git Page](https://github.com/hyweljohnllewellyn/yahoomediaplayer).  The simplicity and minimalism is I feel still unsurpassed.
 
 I was very surprised that Drupal, as a 'modern' CMS does not support standard HTML5 <audio> elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account for the [Mini embedded player](http://help.soundcloud.com/customer/en/portal/articles/2167181-the-mini-embedded-player) or revert to Drupal 7.
 

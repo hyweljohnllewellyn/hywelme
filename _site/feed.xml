@@ -6,9 +6,108 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Feb 2016 18:27:21 +0000</pubDate>
-    <lastBuildDate>Thu, 18 Feb 2016 18:27:21 +0000</lastBuildDate>
+    <pubDate>Sun, 06 Mar 2016 10:53:05 +0000</pubDate>
+    <lastBuildDate>Sun, 06 Mar 2016 10:53:05 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>Drupal 8 Sub Themes and Stylesheets</title>
+        <description>&lt;h2 id=&quot;creating-a-drupal-8-sub-theme&quot;&gt;Creating a Drupal 8 Sub Theme&lt;/h2&gt;
+
+&lt;p&gt;It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.&lt;/p&gt;
+
+&lt;p&gt;In the time since my last &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html&quot;&gt;post&lt;/a&gt; on the subjet, I have been concentrating on updating the look and feel of the theme.&lt;/p&gt;
+
+&lt;p&gt;I have to say that I am impressed with the ability in Drupal 8 to create a Child Theme of an existing Theme and then create seperate libreries for the stylesheets and javascript that then enhance the base theme without comprimising the integrity or upgrade path of the base theme.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/theme-guide/8/creating-a-sub-theme&quot;&gt;Creating a Sub Theme&lt;/a&gt; was one of the resources I used.&lt;/p&gt;
+
+&lt;p&gt;For this example , the sub theme will be called hartleyvoicescouk&lt;/p&gt;
+
+&lt;h3 id=&quot;create-sub-theme-info-and-library-files&quot;&gt;Create Sub Theme Info and Library Files&lt;/h3&gt;
+
+&lt;p&gt;The basic configuration requires:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a sub theme folder in the Drupal ‘Themes’ Folder (Note this is &lt;em&gt;not&lt;/em&gt; in the ‘Core’ folders)&lt;/li&gt;
+  &lt;li&gt;an info file to which describes the sub theme region structure, libraries and parent theme&lt;/li&gt;
+  &lt;li&gt;a library file, which will describe the stylesheets and any javascript used&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I used &lt;a href=&quot;https://www.drupal.org/theme-guide/8/assets&quot;&gt;Adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 theme&lt;/a&gt;  as a reference.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/tree/gh-pages/assets/2016-03-06/hartleyvoicescouk&quot;&gt;hartleyvoicescouk sub theme folder structure&lt;/a&gt;&lt;/em&gt;
+&lt;img src=&quot;/2016-03-06/drupal 8 sub theme folders.png&quot; alt=&quot;drupal 8 sub theme folders&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Bartik base theme was used as a basis for this Sub theme.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.info.yml&quot;&gt;hartleyvoicescouk.info.yml&lt;/a&gt; file&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;hartleyvoicescouk&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;This is a hartleyvoices sub theme of Bartik&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8.x&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Defines the base theme&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;base theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bartik&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Defines libraries group in which we can add css/js.&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;libraries&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;hartleyvoicescouk/global-styling&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Regions&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;regions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Header&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;primary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Primary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu&#39;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;secondary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Secondary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu&#39;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Content&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;sidebar_first&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;First sidebar&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;sidebar_second&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Second sidebar&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;featured&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Featured bottom first&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Footer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.libraries.yml&quot;&gt;hartleyvoicescouk.libraries.yml&lt;/a&gt; file&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;global-styling&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;css/style.css&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;{}&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;js/yahoomedia/hartleyvoicescouk.js&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;activate-the-sub-theme&quot;&gt;Activate the Sub Theme&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/2016-03-06/drupal 8 activated sub theme.jpg&quot; alt=&quot;drupal 8 activated sub theme&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sub-theme-stylesheet---stylecsshttpsgithubcomhyweljohnllewellynhywelmeblobgh-pagesassets2016-03-06hartleyvoicescoukcssstylecss&quot;&gt;Sub Theme Stylesheet - &lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css&quot;&gt;style.css&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;This was the tricky and time consuming part, mainly as for each of the style elements I wanted to customise, I needed to find the related element in the Parent Theme.  These were generally found in one of the css files in the
+&lt;em&gt;bartik -&amp;gt; css -&amp;gt; components&lt;/em&gt; folder&lt;/p&gt;
+
+&lt;p&gt;within the hartleyvoicescouk css folder a &lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css&quot;&gt;style.css&lt;/a&gt; file contained all the custom css for the sub theme.&lt;/p&gt;
+
+&lt;h3 id=&quot;hartley-voices-with-drupal-8&quot;&gt;Hartley Voices with Drupal 8&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/2016-03-06/drupal 8 hartleyvoicescouk with css.jpg&quot; alt=&quot;Hartley Voices with Drupal 8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was quite good….. but….&lt;/p&gt;
+
+&lt;h2 id=&quot;drupal-8-shortcoming---standard-support-for-basic-html-5-elements---audio&quot;&gt;Drupal 8 Shortcoming - Standard Support for Basic HTML 5 Elements - &lt;audio&gt;&lt;/audio&gt;&lt;/h2&gt;
+
+&lt;p&gt;I came across a shortcoming with the Drupal 8 that I cannot resolve.  http://www.hartleyvoices.co.uk is a live music events agency and so there is a need to support audio / mp3.&lt;/p&gt;
+
+&lt;p&gt;Currently, hartleyvoices is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it’s media player.  Details of how I use the &lt;a href=&quot;https://github.com/hyweljohnllewellyn/yahoomediaplayer&quot;&gt;Yahoo Media Player at my Git Page&lt;/a&gt;.  The simplicity and minimalism is I feel still unsurpassed.&lt;/p&gt;
+
+&lt;p&gt;I was very surprised that Drupal, as a ‘modern’ CMS does not support standard HTML5 &lt;audio&gt; elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account for the [Mini embedded player](http://help.soundcloud.com/customer/en/portal/articles/2167181-the-mini-embedded-player) or revert to Drupal 7.&lt;/audio&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;options-going-forward&quot;&gt;Options Going Forward&lt;/h2&gt;
+
+&lt;p&gt;Since using &lt;a href=&quot;http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;Jekyll&lt;/a&gt; as a static site generators and &lt;a href=&quot;http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html&quot;&gt;prose.io&lt;/a&gt; as an online editor, I am now seriously considering converting the entire Drupal 6 site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; or potentially &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Mar 2016 08:34:00 +0000</pubDate>
+        <link>http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
+        
+        
+        <category>drupal</category>
+        
+      </item>
     
       <item>
         <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 5</title>
@@ -907,92 +1006,6 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
         <category>static</category>
         
         <category>sites</category>
-        
-      </item>
-    
-      <item>
-        <title>Adding a Comment System to a Jekyll Static Site with Disqus</title>
-        <description>&lt;h2 id=&quot;so-i-received-feedback-through-github&quot;&gt;So I Received feedback through GitHub&lt;/h2&gt;
-&lt;p&gt;Well, I was amazed to receive some feedback through GitHub regarding a post I made regarding &lt;a href=&quot;http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html&quot;&gt;prose.io&lt;/a&gt; from &lt;a href=&quot;https://github.com/Phlow&quot;&gt;Phlow&lt;/a&gt;.  As a side project and to allow comments, I have decided to add Disqus to this website and include as a step by step guide - just in case it’s tricky…&lt;a href=&quot;https://help.disqus.com/customer/portal/articles/466179-what-is-disqus-&quot;&gt;so, what is Disqus?&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-1-add-disqus-to-your-site&quot;&gt;Step 1: Add Disqus to your site&lt;/h3&gt;
-&lt;p&gt;Once you have found an unique username and entered your email, Disqus will ask for your site details.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/disqus add site.jpg&quot; alt=&quot;Add Disqus to your site&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-2-choose-your-platform&quot;&gt;Step 2: Choose your Platform&lt;/h3&gt;
-&lt;p&gt;The list of platforms are :
-- Universal Code
-- Wordpress
-- Blogger
-- Tumblr
-- Squarespace
-- TypePad
-- MovableType
-- Drupal
-- Joomla&lt;/p&gt;
-
-&lt;p&gt;As my site is static, I’ve chosen Universal Code
-&lt;img src=&quot;/assets/2015-12-06/disqus choose your platform.jpg&quot; alt=&quot;Disqus choose your platform&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-3-disqus-setup-instructions-for-universal-code&quot;&gt;Step 3: Disqus Setup Instructions.. for Universal Code&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Place the following code where you’d like Disqus to load&lt;/li&gt;
-  &lt;li&gt;Edit the RECOMMENDED CONFIGURATION VARIABLES section using your CMS or platform’s dynamic values &lt;em&gt;(I will come back to this)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;How to display comment count..&lt;/li&gt;
-  &lt;li&gt;Additional customization….
-&lt;img src=&quot;/assets/2015-12-06/disqus setup instruction.jpg&quot; alt=&quot;Disqus setup instructions&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;step-4-add-the-disqus-code-to-my-post-pages&quot;&gt;Step 4: Add the Disqus code to my post pages&lt;/h3&gt;
-&lt;p&gt;In my post.html after the closing article tag, I’ve added the Disqus code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;article&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;post-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/article&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Hywel Start Disqus Comments --&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;disqus_thread&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;cm&quot;&gt;/**
-       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-       */&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;disqus_config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Replace PAGE_URL with your page&#39;s canonical URL variable&lt;/span&gt;
-
-          &lt;span class=&quot;c1&quot;&gt;//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// DON&#39;T EDIT BELOW THIS LINE&lt;/span&gt;
-          &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;script&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-          &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;//hywelme.disqus.com/embed.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-          &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;data-timestamp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-          &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;})();&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;noscript&amp;gt;&lt;/span&gt;Please enable JavaScript to view the &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://disqus.com/?ref_noscript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nofollow&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;comments powered by Disqus.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Hywel End Disqus Comments --&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Note that I used the canonical URL variable as defined in Jekyll’s head.html&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;canonical&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;step-5-check-that-the-comments-are-shown&quot;&gt;Step 5: Check that the comments are shown..&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/discus comments on hywelme site.jpg&quot; alt=&quot;Disqus comments on hywel.me&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 06 Dec 2015 19:20:00 +0000</pubDate>
-        <link>http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/static/site/2015/12/06/adding-a-comment-system-to-a-jekyll-static-site-with-disqus.html</guid>
-        
-        
-        <category>static</category>
-        
-        <category>site</category>
         
       </item>
     

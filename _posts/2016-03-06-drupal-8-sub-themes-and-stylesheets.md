@@ -43,7 +43,7 @@ The Bartik base theme was used as a basis for this Sub theme.
 
 *[hartleyvoicescouk.info.yml](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.info.yml) file*
 
-{% highlight yml %}
+{% highlight yaml %}
 name: hartleyvoicescouk
 type: theme
 description: This is a hartleyvoices sub theme of Bartik
@@ -53,7 +53,6 @@ base theme: bartik
 # Defines libraries group in which we can add css/js.
 libraries:
   - hartleyvoicescouk/global-styling
-
 # Regions
 regions:
   header: Header
@@ -64,17 +63,18 @@ regions:
   sidebar_second: Second sidebar
   featured: Featured bottom first
   footer: Footer
-{% end highlight %}
+{% endhighlight %}
 
 *[hartleyvoicescouk.libraries.yml](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.libraries.yml) file*
-{% highlight yml %}
+
+{% highlight yaml %}
 global-styling:
   css:
     theme:
       css/style.css: {}
   js:
       js/yahoomedia/hartleyvoicescouk.js: {}
-{% end highlight %}
+{% endhighlight %}
 
 ### Activate the Sub Theme
 

@@ -1,0 +1,12 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+      js/yahoomedia/hartleyvoicescouk.js: {}
+      js/yahoomedia/ylc_1.9.js: {}
+      js/yahoomedia/music-player.min.js: {}
+      js/yahoomedia/yahoo-webplayer.js: {}
+      js/yahoomedia/js/player.min.js: {}
+  dependencies:
+    - core/jquery

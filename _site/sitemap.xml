@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</loc>
+<lastmod>2016-03-06T08:34:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</loc>
 <lastmod>2016-02-17T20:02:00+00:00</lastmod>
 </url>
@@ -81,5 +85,9 @@
 </url>
 <url>
 <loc>http://www.hywel.me/</loc>
+</url>
+<url>
+<loc>http://www.hywel.me/assets/2016-03-06/hartleyvoicescouk/js/yahoomedia/download.html</loc>
+<lastmod>2015-02-03T21:16:55+00:00</lastmod>
 </url>
 </urlset>

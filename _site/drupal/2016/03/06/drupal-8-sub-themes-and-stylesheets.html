@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title >Drupal 8 Sub Themes and Stylesheets </title>
+
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/" ><img src="http://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+  
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <!--analytics.google.com tracking code-->
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Drupal 8 Sub Themes and Stylesheets</h1>
+    <p class="post-meta">Mar 6, 2016 ✎ Hywel • child or sub theme stylesheets css javascript library HTML 5 audio element Drupal 8</p>
+  </header>
+
+  
+  <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
+  
+
+
+  <article class="post-content">
+    <h2 id="creating-a-drupal-8-sub-theme">Creating a Drupal 8 Sub Theme</h2>
+
+<p>It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.</p>
+
+<p>In the time since my last <a href="http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html">post</a> on the subjet, I have been concentrating on updating the look and feel of the theme.</p>
+
+<p>I have to say that I am impressed with the ability in Drupal 8 to create a Child Theme of an existing Theme and then create seperate libreries for the stylesheets and javascript that then enhance the base theme without comprimising the integrity or upgrade path of the base theme.</p>
+
+<p><a href="https://www.drupal.org/theme-guide/8/creating-a-sub-theme">Creating a Sub Theme</a> was one of the resources I used.</p>
+
+<p>For this example , the sub theme will be called hartleyvoicescouk</p>
+
+<h3 id="create-sub-theme-info-and-library-files">Create Sub Theme Info and Library Files</h3>
+
+<p>The basic configuration requires:</p>
+
+<ul>
+  <li>a sub theme folder in the Drupal ‘Themes’ Folder (Note this is <em>not</em> in the ‘Core’ folders)</li>
+  <li>an info file to which describes the sub theme region structure, libraries and parent theme</li>
+  <li>a library file, which will describe the stylesheets and any javascript used</li>
+</ul>
+
+<p>I used <a href="https://www.drupal.org/theme-guide/8/assets">Adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 theme</a>  as a reference.</p>
+
+<p><em><a href="https://github.com/hyweljohnllewellyn/hywelme/tree/gh-pages/assets/2016-03-06/hartleyvoicescouk">hartleyvoicescouk sub theme folder structure</a></em>
+<img src="/2016-03-06/drupal 8 sub theme folders.png" alt="drupal 8 sub theme folders" /></p>
+
+<p>The Bartik base theme was used as a basis for this Sub theme.</p>
+
+<p><em><a href="https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.info.yml">hartleyvoicescouk.info.yml</a> file</em></p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">name</span><span class="pi">:</span> <span class="s">hartleyvoicescouk</span>
+<span class="s">type</span><span class="pi">:</span> <span class="s">theme</span>
+<span class="s">description</span><span class="pi">:</span> <span class="s">This is a hartleyvoices sub theme of Bartik</span>
+<span class="s">core</span><span class="pi">:</span> <span class="s">8.x</span>
+<span class="c1"># Defines the base theme</span>
+<span class="s">base theme</span><span class="pi">:</span> <span class="s">bartik</span>
+<span class="c1"># Defines libraries group in which we can add css/js.</span>
+<span class="s">libraries</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">hartleyvoicescouk/global-styling</span>
+<span class="c1"># Regions</span>
+<span class="s">regions</span><span class="pi">:</span>
+  <span class="s">header</span><span class="pi">:</span> <span class="s">Header</span>
+  <span class="s">primary_menu</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Primary</span><span class="nv"> </span><span class="s">menu'</span>
+  <span class="s">secondary_menu</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Secondary</span><span class="nv"> </span><span class="s">menu'</span>
+  <span class="s">content</span><span class="pi">:</span> <span class="s">Content</span>
+  <span class="s">sidebar_first</span><span class="pi">:</span> <span class="s">First sidebar</span>
+  <span class="s">sidebar_second</span><span class="pi">:</span> <span class="s">Second sidebar</span>
+  <span class="s">featured</span><span class="pi">:</span> <span class="s">Featured bottom first</span>
+  <span class="s">footer</span><span class="pi">:</span> <span class="s">Footer</span></code></pre></figure>
+
+<p><em><a href="https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.libraries.yml">hartleyvoicescouk.libraries.yml</a> file</em></p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">global-styling</span><span class="pi">:</span>
+  <span class="s">css</span><span class="pi">:</span>
+    <span class="s">theme</span><span class="pi">:</span>
+      <span class="s">css/style.css</span><span class="pi">:</span> <span class="pi">{}</span>
+  <span class="s">js</span><span class="pi">:</span>
+      <span class="s">js/yahoomedia/hartleyvoicescouk.js</span><span class="pi">:</span> <span class="pi">{}</span></code></pre></figure>
+
+<h3 id="activate-the-sub-theme">Activate the Sub Theme</h3>
+
+<p><img src="/2016-03-06/drupal 8 activated sub theme.jpg" alt="drupal 8 activated sub theme" /></p>
+
+<h3 id="sub-theme-stylesheet---stylecsshttpsgithubcomhyweljohnllewellynhywelmeblobgh-pagesassets2016-03-06hartleyvoicescoukcssstylecss">Sub Theme Stylesheet - <a href="https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css">style.css</a></h3>
+
+<p>This was the tricky and time consuming part, mainly as for each of the style elements I wanted to customise, I needed to find the related element in the Parent Theme.  These were generally found in one of the css files in the
+<em>bartik -&gt; css -&gt; components</em> folder</p>
+
+<p>within the hartleyvoicescouk css folder a <a href="https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css">style.css</a> file contained all the custom css for the sub theme.</p>
+
+<h3 id="hartley-voices-with-drupal-8">Hartley Voices with Drupal 8</h3>
+<p><img src="/2016-03-06/drupal 8 hartleyvoicescouk with css.jpg" alt="Hartley Voices with Drupal 8" /></p>
+
+<p>This was quite good….. but….</p>
+
+<h2 id="drupal-8-shortcoming---standard-support-for-basic-html-5-elements---audio">Drupal 8 Shortcoming - Standard Support for Basic HTML 5 Elements - <audio></audio></h2>
+
+<p>I came across a shortcoming with the Drupal 8 that I cannot resolve.  http://www.hartleyvoices.co.uk is a live music events agency and so there is a need to support audio / mp3.</p>
+
+<p>Currently, hartleyvoices is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it’s media player.  Details of how I use the <a href="https://github.com/hyweljohnllewellyn/yahoomediaplayer">Yahoo Media Player at my Git Page</a>.  The simplicity and minimalism is I feel still unsurpassed.</p>
+
+<p>I was very surprised that Drupal, as a ‘modern’ CMS does not support standard HTML5 <audio> elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account for the [Mini embedded player](http://help.soundcloud.com/customer/en/portal/articles/2167181-the-mini-embedded-player) or revert to Drupal 7.</audio></p>
+
+<h2 id="options-going-forward">Options Going Forward</h2>
+
+<p>Since using <a href="http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html">Jekyll</a> as a static site generators and <a href="http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html">prose.io</a> as an online editor, I am now seriously considering converting the entire Drupal 6 site to <a href="http://jekyllrb.com/">Jekyll</a> or potentially <a href="https://gohugo.io/">Hugo</a>.</p>
+
+  </article>
+
+<!-- Hywel Start Disqus Comments -->
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      var disqus_config = function () {
+          this.page.url =  "http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html";  // Replace PAGE_URL with your page's canonical URL variable
+
+          //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//hywelme.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Hywel End Disqus Comments -->
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Have You Wandered Every Land</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <!--li>Have You Wandered Every Land</li-->
+          <li><a href="mailto:hywel.llewellyn@gmail.com">hywel.llewellyn@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/hyweljohnllewellyn">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">hyweljohnllewellyn</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/hywel_llewellyn">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">hywel_llewellyn</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">A personal blog site, with musings about technology and documenting what I learn.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

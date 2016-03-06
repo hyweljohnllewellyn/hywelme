@@ -1,0 +1,83 @@
+---
+layout: post
+date: "2016-03-06 08:34 +0000"
+author: Hywel
+categories: drupal
+excerpt: ""
+meta: "child or sub theme stylesheets css javascript library HTML 5 audio element Drupal 8"
+published: false
+title: "Drupal 8 Sub Themes and Stylesheets"
+---
+
+## Creating a Drupal 8 Sub Theme
+
+It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.
+
+In the time since my last [post](http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html) on the subjet, I have been concentrating on updating the look and feel of the theme.
+
+I have to say that I am impressed with the ability in Drupal 8 to create a Child Theme of an existing Theme and then create seperate libreries for the stylesheets and javascript that then enhance the base theme without comprimising the integrity or upgrade path of the base theme.
+
+[Creating a Sub Theme](https://www.drupal.org/theme-guide/8/creating-a-sub-theme) was one of the resources I used.
+
+For this example , the sub theme will be called hartleyvoicescouk
+
+### Create Sub Theme Info and Library Files
+
+The basic configuration requires:
+
+- a sub theme folder in the Drupal 'Themes' Folder (Note this is *not* in the 'Core' folders)
+- an info file to which describes the sub theme region structure, libraries and parent theme
+- a library file, which will describe the stylesheets and any javascript used
+
+*hartleyvoicescouk sub theme folder structure*
+![drupal 8 sub theme folders]({{site.baseurl}}/2016-03-06/drupal 8 sub theme folders.png)
+
+
+The Bartik base theme was used as a basis for this Sub theme.
+
+*hartleyvoicescouk.info.yml file*
+
+{% highlight yml %}
+name: hartleyvoicescouk
+type: theme
+description: This is a hartleyvoices sub theme of Bartik
+core: 8.x
+# Defines the base theme
+base theme: bartik
+# Defines libraries group in which we can add css/js.
+libraries:
+  - hartleyvoicescouk/global-styling
+
+# Regions
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  featured: Featured bottom first
+  footer: Footer
+{% end highlight %}
+
+*hartleyvoicescouk.libraries.yml file*
+{% highlight yml %}
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+      js/yahoomedia/hartleyvoicescouk.js: {}
+{% end highlight %}
+
+### Activate the Sub Theme
+
+![drupal 8 activated sub theme]({{site.baseurl}}/2016-03-06/drupal 8 activated sub theme.jpg)
+
+
+### Edit the Stylesheet - style.css
+
+This was the tricky and time consuming part, mainly as for each of the style elements I wanted to customise, I needed to find the related element in the Parent Theme.  These were generally found in one of the css files in the
+*bartik -> css -> components* folder
+
+within the hartleyvoicescouk css folder a style.css file contained all the custom css for the sub theme.

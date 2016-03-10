@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Mar 2016 11:28:35 +0000</pubDate>
-    <lastBuildDate>Sun, 06 Mar 2016 11:28:35 +0000</lastBuildDate>
+    <pubDate>Thu, 10 Mar 2016 20:30:50 +0000</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2016 20:30:50 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -16,7 +16,7 @@
 
 &lt;p&gt;It has been about a month since I started an exercise to upgrade to migrate from Drupal 6 to Drupal 8 using the migration tools provided in Drupal.&lt;/p&gt;
 
-&lt;p&gt;In the time since my last &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html&quot;&gt;post&lt;/a&gt; on the subject, I have been concentrating on updating the look and feel of the theme.&lt;/p&gt;
+&lt;p&gt;In the time since my last &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html&quot;&gt;post&lt;/a&gt; on the subject, I have been concentrating on updating the look and feel of the theme.  Note that you can see a listing of all my posts &lt;a href=&quot;http://www.hywel.me/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I have to say that I am impressed with the ability in Drupal 8 to create a Child Theme of an existing Theme and then create separate libraries for the stylesheets and javascript that then enhance the base theme without compromising the integrity or upgrade path of the base theme.&lt;/p&gt;
 
@@ -94,7 +94,7 @@
 
 &lt;p&gt;I came across a shortcoming with the Drupal 8 that I cannot resolve.  &lt;a href=&quot;http://www.hartleyvoices.co.uk&quot;&gt;Hartley Voices&lt;/a&gt; is a live music events agency and so there is a need to support audio / mp3.&lt;/p&gt;
 
-&lt;p&gt;Currently, the Hartley Voices site is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it’s media player.  Details of how I use the &lt;a href=&quot;https://github.com/hyweljohnllewellyn/yahoomediaplayer&quot;&gt;Yahoo Media Player at my Git Page&lt;/a&gt;.  The simplicity and minimalism is I feel still unsurpassed.&lt;/p&gt;
+&lt;p&gt;Currently, the Hartley Voices site is running a version of the Yahoo Media Player that I customised to use since Yahoo ended support of it’s media player.  Details of how I use the &lt;a href=&quot;https://github.com/hyweljohnllewellyn/yahoomediaplayer&quot;&gt;Yahoo Media Player at my Git Page&lt;/a&gt;.  The simplicity and minimalism is, I feel still unsurpassed.&lt;/p&gt;
 
 &lt;p&gt;I was very surprised that Drupal, as a ‘modern’ CMS does not support standard HTML5 &lt;audio&gt; elements.  Why they would need to be developed as a Module escapes me and the only real option at the moment would be to use a paid SoundCloud account for the [Mini embedded player](http://help.soundcloud.com/customer/en/portal/articles/2167181-the-mini-embedded-player) or revert to Drupal 7.&lt;/audio&gt;&lt;/p&gt;
 

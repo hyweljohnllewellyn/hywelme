@@ -4,7 +4,7 @@ date: "2015-12-06 19:20 +0000"
 author: Hywel
 categories: static site
 excerpt: "Well, I was amazed to receive some feedback through GitHub regarding a post I made regarding prose.io from Phlow. As a side project and to allow comments, I have decided to add Disqus to this website and include as a step by step guide - just in case it’s tricky…so, what is Disqus?"
-meta: Disqus Comments Canonical URL Jekyll
+meta: Disqus Jekyll Comment System uCanonical URL 
 published: true
 title: Adding a Comment System to a Jekyll Static Site with Disqus
 ---

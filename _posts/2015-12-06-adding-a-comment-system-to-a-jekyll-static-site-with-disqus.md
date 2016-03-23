@@ -10,6 +10,7 @@ title: Adding a Comment System to a Jekyll Static Site with Disqus
 ---
 
 
+
 ## So I Received feedback through GitHub
 Well, I was amazed to receive some feedback through GitHub regarding a post I made regarding [prose.io](http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html) from [Phlow](https://github.com/Phlow).  As a side project and to allow comments, I have decided to add Disqus to this website and include as a step by step guide - just in case it's tricky...[so, what is Disqus?](https://help.disqus.com/customer/portal/articles/466179-what-is-disqus-).
 
@@ -83,6 +84,8 @@ Note that I used the canonical URL variable as defined in Jekyll's head.html
 {% highlight html %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 {% endhighlight %}
+
+Here is a [link to my post.html file on GitHub](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/_layouts/post.html)
 
 ###Step 5: Check that the comments are shown..
 ![Disqus comments on hywel.me]({{site.baseurl}}/assets/2015-12-06/discus comments on hywelme site.jpg)

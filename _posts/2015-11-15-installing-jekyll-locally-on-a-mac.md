@@ -2,7 +2,7 @@
 layout: post
 title: Installing Jekyll Locally on a Mac
 date: "Sun Nov 15 2015 12:56:00 GMT+0000 (GMT)"
-author: Hywel
+author: hywel
 meta: jekyll homebrew brew gem bundle bash profile ruby static site github
 categories: Jekyll Static Site
 excerpt: "Installing Jekyll locally on a Mac can result is some teething problems because all it's pre-requisite software, for example Ruby, needs to be installed using the command line (terminal), which is not so user friendly."

@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2016-02-10 20:15 +0000"
-author: Hywel
+author: hywel
 categories: drupal
 excerpt: ""
 meta: "migrate Drupal 8 Migration Upgrade from Drupal 6 "

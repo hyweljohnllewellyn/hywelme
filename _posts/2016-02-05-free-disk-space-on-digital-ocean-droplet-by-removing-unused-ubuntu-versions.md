@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2016-02-05 06:04 +0000"
-author: Hywel
+author: hywel
 categories: digitalocean
 excerpt: ""
 meta: "digital ocean droplet Ubuntu sudo apt-get autoremove"

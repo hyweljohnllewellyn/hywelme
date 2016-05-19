@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2016-01-12 20:43 +0000"
-author: Hywel
+author: hywel
 categories: small business email
 excerpt: "A temporary member of admin staff was provided with a dedicated user mailbox and therefore an Office 365 License.  Now the staff member is no longer required, the License can be released."
 meta: Office 365 small business email remove license

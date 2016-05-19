@@ -2,7 +2,7 @@
 published: true
 layout: post
 date: "2015-11-23 16:24 +0000"
-author: Hywel
+author: hywel
 categories: ""
 excerpt: A CMS editing experience using Prose.io to write Jekyll posts
 meta: jekyll static site posts prose.io

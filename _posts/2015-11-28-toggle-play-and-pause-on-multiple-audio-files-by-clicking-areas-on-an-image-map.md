@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2015-11-28 21:26 +0000"
-author: Hywel
+author: hywel
 categories: Jekyll Static Site
 excerpt: "I wanted to add a bit of fun to a website by allowing users to play audio by clicking on objects in an image.  I know that this is not new, but I have not found any resource that ties up creating an image map linked to multiple areas and audio, controlled using jQuery."
 meta: "HTML5 image map jQuery audio area play pause "

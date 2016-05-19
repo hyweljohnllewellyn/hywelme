@@ -2,7 +2,7 @@
 layout: post
 title:  " Moving a WordPress site from GoDaddy to DigitalOcean - Part 2"
 date:   2015-03-07 21:51:00
-author: Hywel
+author: hywel
 meta: DigitalOcean WordPress ServerPilot.io
 categories: DigitalOcean WordPress
 excerpt: How I moved an existing site from GoDaddy to DigitalOcean hosting via ServerPilot.io. The steps to install and migrate WordPress content and database to Digital Ocean.  Finally, moving the domain name server to DigitalOcean.

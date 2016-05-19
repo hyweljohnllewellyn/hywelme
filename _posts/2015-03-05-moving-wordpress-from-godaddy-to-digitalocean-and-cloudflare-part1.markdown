@@ -2,7 +2,7 @@
 layout: post
 title:  " Moving a WordPress site from GoDaddy to DigitalOcean - Part 1"
 date:   2015-03-05 21:31:00
-author: Hywel
+author: hywel
 meta: DigitalOcean WordPress ServerPilot.io
 categories: DigitalOcean WordPress
 excerpt: The response time for all my websites hosted with GoDaddy had become disappointing.  I have decided try out the do it yourself cloud hosting option provided by DigitalOcean.com partly to learn some new skills and also they have had some great reviews.  I found a promotional code to get 2 months free hosting with DigitalOcean, so at least I could try before I buy.  [$10 credit at Digital Ocean](https://www.digitalocean.com/?refcode=92e12787bf7a)

@@ -2,7 +2,7 @@
 layout: post
 title:  " Applications used for Writing Jekyll Static Sites"
 date:   2015-11-16 21:50:00
-author: Hywel
+author: hywel
 meta: jekyll atom.io atom static site github terminal mac mini firefox chrome gh-pages
 categories: Jekyll Static Site
 excerpt: I will share some of the applications used for managing Jekyll static sites, including the web hosting service, web browser, text editor and version control.  Most of this is managed using Github.

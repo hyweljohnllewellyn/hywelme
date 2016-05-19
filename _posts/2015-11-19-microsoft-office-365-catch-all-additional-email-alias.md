@@ -2,7 +2,7 @@
 layout: post
 title:  "Microsoft Office 365 Catch-all using Additional Alias Email Addresses"
 date:   2015-11-19 21:23:00
-author: Hywel
+author: hywel
 meta: Microsoft Office 365 small business email setup catch-all alias  admin alternative
 categories: small business email
 excerpt: Office 365 does by default not support catch all email, that is addresses not specifically defined in the mail server.  Additional alias addresses can be created to re-direct email to a specified user as a simple and safe substitute to catch-all.

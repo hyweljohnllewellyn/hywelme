@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox"
 date:   2015-11-21 13:45:00
-author: Hywel
+author: hywel
 meta: Office 365 small business email shared mailbox configure mac mail client
 categories: small business email
 excerpt: Assuming you have already setup your shared mailbox through the Office 365 Admin, here are the steps to set up Mac Mail to receive and send email using the shared mailbox.

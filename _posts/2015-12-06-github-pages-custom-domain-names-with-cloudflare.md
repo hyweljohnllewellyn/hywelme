@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2015-12-06 20:17 +0000"
-author: Hywel
+author: hywel
 categories: static sites
 excerpt: "GitHub allows the configuring of Apex Domains, however is it recommended to use a subdomain’.The CNAME file should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain.  Add the www CNAME record within the CloudFlare account."
 meta: CloudFlare GitHub Pages CNAME subdomain DNS

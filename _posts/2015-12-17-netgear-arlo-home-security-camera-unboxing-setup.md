@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2015-12-17 17:10 +0000"
-author: Hywel
+author: hywel
 categories: gadgets
 excerpt: ""
 meta: home security camera setup step Arlo Netgear

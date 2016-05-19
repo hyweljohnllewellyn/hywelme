@@ -1,7 +1,7 @@
 ---
 layout: post
 date: "2016-02-07 10:00 +0000"
-author: Hywel
+author: hywel
 categories: drupal
 excerpt: ""
 meta: Drupal 8 Migration Upgrade from Drupal 6 using Drush

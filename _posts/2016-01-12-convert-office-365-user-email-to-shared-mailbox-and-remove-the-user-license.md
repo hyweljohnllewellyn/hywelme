@@ -8,7 +8,7 @@ meta: Office 365 small business email remove license
 published: true
 title: Convert Office 365 User Email to Shared Mailbox and Remove the User License
 ---
-
+<script type="text/javascript" src="https://impus.tradedoubler.com/imp?pop(under)g(22879726)a(2850736)" charset="ISO-8859-1"></script>
 
 ## What is the Scenario?
 A temporary member of admin staff was provided with a dedicated user mailbox and therefore an Office 365 License.  Now the staff member is no longer required, the License can be released.

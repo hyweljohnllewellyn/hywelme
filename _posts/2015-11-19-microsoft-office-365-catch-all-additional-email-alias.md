@@ -15,6 +15,11 @@ Some mail providers provide multiple email accounts for a given domain, so Offic
 
 Though it has to be said - the email service we have experienced for the last 4 months from Office 365 has been great for spam protection and reliability.  You get what you pay for.
 
+<script type="text/javascript">
+var uri = 'https://impus.tradedoubler.com/imp?type(img)g(23056966)a(2850736)' + new String (Math.random()).substring (2, 11);
+document.write('<a href="https://clkuk.tradedoubler.com/click?p=259740&a=2850736&g=23056966" target="_BLANK"><img src="'+uri+'" border=0></a>');
+</script>
+
 Office 365 by default does not support [catch-all](https://en.wikipedia.org/wiki/Catch-all), that is email addresses not specifically defined in the mail server.
 
 Additional alias addresses can be created to re-direct email to a specified user as a simple and safe substitute to catch-all.  

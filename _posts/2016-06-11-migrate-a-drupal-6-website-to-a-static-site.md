@@ -11,7 +11,7 @@ meta: Drupal 6 Jekyll Hugo CMS functionality for static site
 
 Following my attempt to Migrate from Drupal 6 to Drupal 8, I found the whole experience disappointing.  I also found Drupal over complicated for what is a relatively simlpe website.
 
-I have been using [Jekyll](http://jekyllrb.com/) and [Prose.io](https://prose.io) for this blog for some time and have enjoyed using them.  I was inspired to try migrating to a static site generator after reading the [CMS is dead](http://atchai.com/blog/the-cms-is-dead-long-live-hugo-wercker-proseio-and-cloudfront/), a key quote being 
+I have been using [Jekyll](http://jekyllrb.com/) and [Prose.io](https://prose.io) for this blog for some time and have enjoyed using them.  I was inspired to try migrating to a static site generator after reading the [CMS is dead](http://atchai.com/blog/the-cms-is-dead-long-live-hugo-wercker-proseio-and-cloudfront/), from [Atchai](http://atchai.com/), a digital consultancy and development house based in London... 
 
 > "we realised with significant joy that we could jettison our 5-year old CMS (Drupal) in favour of a Static Site Generator".
 

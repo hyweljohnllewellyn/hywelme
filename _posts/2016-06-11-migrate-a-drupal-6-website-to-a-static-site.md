@@ -19,7 +19,9 @@ There is an increasing trend of sites are moving to static site generators, see 
 
 This is driven by mobile and the need for simple streamlined and fast content, which database driven sites that generate "content on the fly” are over engineered and slow in comparison to static sites.
 
-Some static site services are now available such as [bowtie.io](https://bowtie.io/)  which > "helps you deploy websites that are faster, easier to maintain, and more secure than a traditional content management system - without losing convenience.”  See their [cms for static html websites article](https://bowtie.io/news/cms-for-static-html-websites/).
+Some static site services are now available such as [bowtie.io](https://bowtie.io/), which describes in their [cms for static html websites article](https://bowtie.io/news/cms-for-static-html-websites/)
+
+> "helps you deploy websites that are faster, easier to maintain, and more secure than a traditional content management system - without losing convenience.”  .
 
 Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manages the content and integrates using API's to static site generators, from their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/) 
 

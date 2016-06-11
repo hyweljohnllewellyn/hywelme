@@ -21,11 +21,9 @@ This is driven by mobile and the need for simple streamlined and fast content, w
 
 Some static site services are now available such as [bowtie.io](https://bowtie.io/)  which > "helps you deploy websites that are faster, easier to maintain, and more secure than a traditional content management system - without losing convenience.”  See their [cms for static html websites article](https://bowtie.io/news/cms-for-static-html-websites/).
 
-Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manages the content and integrates using API's to static site generators 
+Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manages the content and integrates using API's to static site generators, from their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/) 
 
-> "That way, you get the all the benefits of content management features while still being able to embrace the static site generator mantra."
-
-, see their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/).  
+> "you get the all the benefits of content management features while still being able to embrace the static site generator mantra."
 
 My goal is to convert the Drupal 6 CMS to a **responsive**, **mobile friendly**, **static site**, that can be **easily maintained by a non-technical user**.
 

@@ -23,7 +23,7 @@ Some static site services are now available such as [bowtie.io](https://bowtie.i
 
 > "helps you deploy websites that are faster, easier to maintain, and more secure than a traditional content management system - without losing convenience.”  .
 
-Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manages the content and integrates using API's to static site generators, from their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/) 
+Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manage the content and integrates using API's to static site generators, from their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/) 
 
 > "you get the all the benefits of content management features while still being able to embrace the static site generator mantra."
 

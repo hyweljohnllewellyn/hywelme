@@ -11,15 +11,19 @@ meta: Drupal 6 Jekyll Hugo CMS functionality for static site
 
 Following my attempt to Migrate from Drupal 6 to Drupal 8, I found the whole experience disappointing.  I also found Drupal over complicated for what is a relatively simlpe website.
 
-I have been using [Jekyll](http://jekyllrb.com/) and [Prose.io](https://prose.io) for this blog for some time and have enjoyed using them.  I was inspired to try migrating to a static site generator after reading the [CMS is dead](http://atchai.com/blog/the-cms-is-dead-long-live-hugo-wercker-proseio-and-cloudfront/), a key quote being > "we realised with significant joy that we could jettison our 5-year old CMS (Drupal) in favour of a Static Site Generator".
+I have been using [Jekyll](http://jekyllrb.com/) and [Prose.io](https://prose.io) for this blog for some time and have enjoyed using them.  I was inspired to try migrating to a static site generator after reading the [CMS is dead](http://atchai.com/blog/the-cms-is-dead-long-live-hugo-wercker-proseio-and-cloudfront/), a key quote being 
+> "we realised with significant joy that we could jettison our 5-year old CMS (Drupal) in favour of a Static Site Generator".
 
-There is an increasing trend of sites are moving to static site generators, see [modern static website generators the next big thing](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/ )  including  https://healthcare.gov, see [healthcare gov is cms free](https://developmentseed.org/blog/new-healthcare-gov-is-open-and-cms-free/)  and https://mailchimp.com , see [building the new mailchimp](https://blog.mailchimp.com/building-the-new-mailchimp/).
+There is an increasing trend of sites are moving to static site generators, see [modern static website generators the next big thing](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/ )  including  [healthcare.gov](https://www.healthcare.gov/), see [healthcare gov is cms free](https://developmentseed.org/blog/new-healthcare-gov-is-open-and-cms-free/)  and https://mailchimp.com , see [building the new mailchimp](https://blog.mailchimp.com/building-the-new-mailchimp/).
 
 This is driven by mobile and the need for simple streamlined and fast content, which database driven sites that generate "content on the fly” are over engineered and slow in comparison to static sites.
 
 Some static site services are now available such as [bowtie.io](https://bowtie.io/)  which > "helps you deploy websites that are faster, easier to maintain, and more secure than a traditional content management system - without losing convenience.”  See their [cms for static html websites article](https://bowtie.io/news/cms-for-static-html-websites/).
 
-Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manages the content and integrates using API's to static site generators > "That way, you get the all the benefits of content management features while still being able to embrace the static site generator mantra.", see their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/).  
+Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manages the content and integrates using API's to static site generators 
+> "That way, you get the all the benefits of content management features while still being able to embrace the static site generator mantra."
+
+, see their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/).  
 
 My goal is to convert the Drupal 6 CMS to a **responsive**, **mobile friendly**, **static site**, that can be **easily maintained by a non-technical user**.
 

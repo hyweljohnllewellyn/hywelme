@@ -45,61 +45,58 @@ Some of the steps carried out to convert from Drupal 6 to Jekyll or Hugo are des
 
 ## Drupal 6 to Jekyll 
 
-To begin, I will convert the Drupal 6 “nodes” to static content using  an Importer provided by Jekyll https://import.jekyllrb.com/.  I will be using the Drupal 6 Importer https://import.jekyllrb.com/docs/drupal6/
+To begin, I will convert the Drupal 6 “nodes” to static content using  a [Drupal 6 Importer](https://import.jekyllrb.com/docs/drupal6/) provided by [Jekyll](https://import.jekyllrb.com/).
 
 Note that I am a Mac user and already have Jekyll installed.
 
 ### Step 1 Create a new Jekyll Site and install the jekyll-import
 
+{% highlight bash %}
 ~/Sites> jekyll new hartleyvoices_jekyll
-
 New jekyll site installed in /Users/hywel/Sites/hartleyvoices_jekyll. 
-
 ~/Sites> cd hartleyvoices_jekyll
-
 ~/Sites/hartleyvoices_jekyll> gem install jekyll-import
-
 Successfully installed jekyll-import-0.10.0
-
 Parsing documentation for jekyll-import-0.10.0
-
 Done installing documentation for jekyll-import after 1 seconds
-
 1 gem installed
-
 ~/Sites/hartleyvoices_jekyll> 
+{% endhighlight %}
 
 ### Step 2 Export the Production Drupal 6 Database 
 
-Generally, it is a good idea to  develop using a local version of data and files to protect production.  
-
-Using Sequel Pro http://www.sequelpro.com/, log into the production data base and Export as a SQL file
-
-Note Ensure the SQL is unzipped.
+Generally, it is a good idea to  develop using a local version of data and files to protect production.  Using Sequel Pro http://www.sequelpro.com/, log into the production data base and Export as a SQL file.
+Note Ensure that the SQL is unzipped.
 
 ### Step 3 Create a local MySQL user and database and Import the Drupal 6 Database
 
-brew install mysql
-mysql.server restart
-mysql_secure_installation
+As I already have [MAMP](https://www.mamp.info/en/) and the excellent [phpMyAdmin](https://www.phpmyadmin.net/).
 
-mysql.server start
- mysql -uroot
-mysql> CREATE USER 'hartleyvoices'@'localhost’;
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'hartleyvoices'@'localhost’;
-mysql> create database hartleyvoices;
+Add a MySQL user and creeate database with all privileges:
 
-~/Google Drive/websitebackup> mysql -uhartleyvoices  hartleyvoices < hartleyvoicescms13-03-201608-35.sql
-https://coolestguidesontheplanet.com/import-a-mysql-database-into-os-x-10-6-via-terminal/
+![add mysql user and create database]({{site.baseurl}}/assets/Add mysql server user and create database with all privileges.jpg)
+
+Select the SQL database file to import from Step 2:
+
+![select sql file to import]({{site.baseurl}}/assets/2016-06-11/select to import.jpg)
+
+Import:
+
+![import the sql database file]({{site.baseurl}}/assets/2016-06-11/import the file.jpg)
+
+
+Success:
+![success]({{site.baseurl}}/assets/2016-06-11/success.jpg)
 
 ### Step 5 Execute the Jekyll Import
 
-Following the instructions https://import.jekyllrb.com/docs/drupal6/
+Following the [Jekyll Drupal 6 Import](https://import.jekyllrb.com/docs/drupal6/) instructions: 
 
-By default, the Jekyll importer will pull in nodes of type blog, story, and article. To specify custom types, you can use the types option when you run the importer.  
+> "By default, the Jekyll importer will pull in nodes of type blog, story, and article. To specify custom types, you can use the types option when you run the importer."
 
-The node types in my site are “page", “talent”,”testimonial”.  Enter the Drupal 6 database credentials created in Step 3
+The node types in my site are “page", “talent”,”testimonial”.  Enter the Drupal 6 database credentials created in Step 3:
 
+{% highlight bash %}
 ruby -rubygems -e 'require "jekyll-import";
     JekyllImport::Importers::Drupal6.run({
       "dbname"   => "hartleyvoices",
@@ -109,47 +106,66 @@ ruby -rubygems -e 'require "jekyll-import";
       "prefix"   => "",
       "types"    =>  ["page", "talent", "testimonial"]
     })’
+{% endhighlight %}
 
+I received the error "Whoops! Looks like you need to install 'sequel' before you can use this importer."
 
-Whoops! Looks like you need to install 'sequel' before you can use this importer. 
-If you're using bundler: 
+![whoops need to install sequel]({{site.baseurl}}/assets/2016-06-11/whoops need to install sequel.png)
 
-  1. Add 'gem "sequel"' to your Gemfile 
-
-  2. Run 'bundle install'                  
-
-If you're not using bundler: 
-
-  1. Run 'gem install sequel’.
-
-`require': LoadError: cannot load such file -- mysql (Sequel::AdapterNotFound)
+{% highlight bash %}
 gem install sequel
+{% endhighlight %}
 
+![gem install sequel]({{site.baseurl}}/assets/2016-06-11/gem install sequel.png)
+
+{% highlight bash %}
 sudo gem install mysql
+{% endhighlight %}
+
+![sudo gem install mysql]({{site.baseurl}}/assets/2016-01-11/sudo gem install mysql.png)
+
+{% highlight bash %}
+mysql.server start
+{% endhighlight %}
+
+![mysql server start]({{site.baseurl}}/assets/2016-06-11/mysql server start.png)
+
+{% highlight bash %}
+ruby -rubygems -e 'require "jekyll-import";
+    JekyllImport::Importers::Drupal6.run({
+      "dbname"   => "hartleyvoices",
+      "user"     => "hartleyvoices",
+      "password" => "",
+      "host"     => "localhost",
+      "prefix"   => "",
+      "types"    =>  ["page", "talent", "testimonial"]
+    })’
+{% endhighlight %}
+
+![drupal 6 to jekyll import no errors]({{site.baseurl}}/assets/2016-06-11/drupal 6 to jekyll import no errors.png)
+
+{% highlight bash %}
 mysql.server stop
+{% endhighlight %}
 
+Now to run Jekyll and hopefully see something..
+
+
+{% highlight bash %}
 ~/Sites/hartleyvoices_jekyll> jekyll serve
-
 Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
-
             Source: /Users/hywel/Sites/hartleyvoices_jekyll
-
        Destination: /Users/hywel/Sites/hartleyvoices_jekyll/_site
-
  Incremental build: disabled. Enable with --incremental
-
       Generating... 
-
                     done in 14.248 seconds.
-
  Auto-regeneration: enabled for '/Users/hywel/Sites/hartleyvoices_jekyll'
-
 Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
-
     Server address: http://127.0.0.1:4000/
-
   Server running... press ctrl-c to stop.
+{% endhighlight %}
 
+![jekyll post imported from drupal 6]({{site.baseurl}}/assets/2016-06-11/jekyll post imported from drupal 6.png)
 
 
 ### Step 6 Execute the Hugo Import

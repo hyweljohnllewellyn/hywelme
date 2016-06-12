@@ -175,6 +175,8 @@ Here is one of the Drupal 6 posts imported to Jekyll.  Not too bad, though is mi
 
 Now, granted I am cheating here as I will be importing the Drupal 6 Post vial Jekyll to Hugo, the reason was I didn't find any alternative to convert directly from Drupal 6 to Hugo.
 
+If you have not installed [Hugo](https://gohugo.io/overview/introduction/), please follow the [Installing Hugo on a Mac](https://gohugo.io/tutorials/installing-on-mac/) instructions first.
+
 Following the instructions at [Hugo import Jekyll](http://gohugo.io/commands/hugo_import_jekyll/): 
 
 Import the posts:

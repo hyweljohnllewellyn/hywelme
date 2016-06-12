@@ -37,9 +37,11 @@ Ready?....
 
 ##  Migrate the Website Database from Drupal 6 to WordPress 4.5
 
-After some research, I found the following resource by Scott Anderson in 2010 for [migrating a blog from Drupal to WordPress 3.0](http://blog.room34.com/archives/4530) 
+After some research, I found the following conversion to migrate from Drupal to WordPress, last updated by by [Scott Anderson](http://blog.room34.com/archives/4530).
 
 Primarily it provides a SQL script, which I used as a basis and modified.   My modified script [drupal-to-wordpress.sql can be found at GitHub](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-06-12/drupal-to-wordpress.sql) 
+
+Detailed instructions are also described in a post by [Sam Michael](http://toodlepip.co.uk/2014/migrating-drupal-6-wordpress-part-2-drupal-wordpress/#References).
 
 For your use please:
 

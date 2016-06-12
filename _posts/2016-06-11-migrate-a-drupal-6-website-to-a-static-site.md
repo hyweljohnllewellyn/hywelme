@@ -86,6 +86,7 @@ Import:
 
 
 Success:
+
 ![success]({{site.baseurl}}/assets/2016-06-11/success.jpg)
 
 ### Step 5 Execute the Jekyll Import
@@ -165,24 +166,35 @@ Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
   Server running... press ctrl-c to stop.
 {% endhighlight %}
 
+Here is one of the Drupal 6 posts imported to Jekyll.  Not too bad, though is missing all the images:
+
 ![jekyll post imported from drupal 6]({{site.baseurl}}/assets/2016-06-11/jekyll post imported from drupal 6.png)
 
 
-### Step 6 Execute the Hugo Import
-Following the instructions at http://gohugo.io/commands/hugo_import_jekyll/
+## Jekyll to Hugo
 
+Now, granted I am cheating here as I will be importing the Drupal 6 Post vial Jekyll to Hugo, the reason was I didn't find any alternative to convert directly from Drupal 6 to Hugo.
+
+Following the instructions at [Hugo import Jekyll](http://gohugo.io/commands/hugo_import_jekyll/): 
+
+Import the posts:
+
+{% highlight bash %}
 ~/Sites/hartleyvoices_hugo> hugo import jekyll ~/Sites/hartleyvoices_jekyll ~/Sites/hartleyvoices_hugo
-
 Importing...
-
 Congratulations! 137 posts imported!
+{% endhighlight %}
 
+Clone a Hugo theme:
+
+{% highlight bash %}
 cd /Users/hywel/Sites/hartleyvoices_hugo/themes/
-
 git clone https://github.com/spf13/herring-cove.git 
+{% endhighlight %}
 
-cd ..
+Run the Hugo Server:
 
+{% highlight bash %}
 ~/Sites/hartleyvoices_hugo> hugo server -w --theme=herring-cove
 0 of 2 drafts rendered
 0 future content
@@ -194,13 +206,11 @@ in 568 ms
 Watching for changes in /Users/hywel/Sites/hartleyvoices_hugo/{data,content,layouts,static,themes}
 Serving pages from memory
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+{% endhighlight %}
 
-### Remove the date part in filename
+Here is the Drupal 6 post imported to Hugo (via Jekyll):
 
-brew install rename
-
-rename -n 's/(.{11})(.*)$/$2/' *.md
-The -n is for simulating; remove it to get the actual result.
+![hugo post imported from jekyll]({{site.baseurl}}/assets/2016-06-11/hugo import jekyll.png)
 
 
 ### Jekyll or Hugo….?

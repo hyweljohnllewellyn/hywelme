@@ -215,8 +215,7 @@ Here is the Drupal 6 post imported to Hugo (via Jekyll):
 ![hugo post imported from jekyll]({{site.baseurl}}/assets/2016-06-11/hugo post imported from jekyll.png)
 
 
-
-### Jekyll or Hugo….?
+## Jekyll or Hugo….?
 
 Well, here’s the decision - Continue with Jekyll or Hugo?
 

@@ -9,7 +9,7 @@ meta: Drupal 6 Jekyll Hugo CMS functionality for static site
 ---
 ## The End of Database CMS - Rise of Static Sites?
 
-Following my attempt to Migrate from Drupal 6 to Drupal 8, I found the whole experience disappointing.  I also found Drupal over complicated for what is a relatively simlpe website.
+Following my attempt to Migrate from Drupal 6 to Drupal 8, I found the whole experience disappointing.  I also found Drupal over complicated for what is a relatively simple website.
 
 I have been using [Jekyll](http://jekyllrb.com/) and [Prose.io](https://prose.io) for this blog for some time and have enjoyed using them.  I was inspired to try migrating to a static site generator after reading the [CMS is dead](http://atchai.com/blog/the-cms-is-dead-long-live-hugo-wercker-proseio-and-cloudfront/), from [Atchai](http://atchai.com/), a digital consultancy and development house based in London... 
 
@@ -23,23 +23,23 @@ Some static site services are now available such as [bowtie.io](https://bowtie.i
 
 > "helps you deploy websites that are faster, easier to maintain, and more secure than a traditional content management system - without losing convenience.”  .
 
-Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manage the content and integrates using API's to static site generators, from their [static site atricle](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/) 
+Another interesting approach is taken by [contentful.com](https://www.contentful.com/), in which they manage the content and integrates using API's to static site generators, from their [static site article](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/) 
 
 > "you get the all the benefits of content management features while still being able to embrace the static site generator mantra."
 
 My goal is to convert the Drupal 6 CMS to a **responsive**, **mobile friendly**, **static site**, that can be **easily maintained by a non-technical user**.
 
-This is not as easy as it sounds as static site geneator tend to be developer, not user freiendly.
+This is not as easy as it sounds as static site generator tend to be developer, not user friendly.
 
 The contenders to be explored in this article are Jekyll and Hugo.  
 
 ## Summary of Findings (cut to the chase)
 
-As expected, neither Jekyll or Hugo are fit for the purpose - they are great static site generators and are mobile friendly BUT mainianing them and adding content is just too technical.
+As expected, neither Jekyll or Hugo are fit for the purpose - they are great static site generators and are mobile friendly BUT maintaining them and adding content is just too technical.
 
-Though I am interested in investigating a servive such as [contentful.com](https://www.contentful.com), however, I am steering away because of a potential lock in to their proprietary technology and ultimately their fees.
+Though I am interested in investigating a service such as [contentful.com](https://www.contentful.com), however, I am steering away because of a potential lock in to their proprietary technology and ultimately their fees.
 
-I think the idea of _"best of both wordls"_ between a classic CMS such as [Wordpress](https://wordpress.org/) to create the content and then generate statc HTML is the current best option for my needs....See next post..
+I think the idea of _"best of both worlds"_ between a classic CMS such as [Wordpress](https://wordpress.org/) to create the content and then generate static HTML is the current best option for my needs....See next post..
 
 Some of the steps carried out to convert from Drupal 6 to Jekyll or Hugo are described below...
 
@@ -72,7 +72,7 @@ Note Ensure that the SQL is unzipped.
 
 As I already have [MAMP](https://www.mamp.info/en/) and the excellent [phpMyAdmin](https://www.phpmyadmin.net/).
 
-Add a MySQL user and creeate database with all privileges:
+Add a MySQL user and create database with all privileges:
 
 ![add mysql user and create database]({{site.baseurl}}/assets/Add mysql server user and create database with all privileges.jpg)
 
@@ -168,7 +168,7 @@ Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
 
 Here is one of the Drupal 6 posts imported to Jekyll.  Not too bad, though is missing all the images:
 
-![jekyll post imported from drupal 6]({{site.baseurl}}/assets/2016-06-11/jekyll post imported from drupal 6.png)
+![jekyll post imported from Drupal 6]({{site.baseurl}}/assets/2016-06-11/jekyll post imported from drupal 6.png)
 
 
 ## Jekyll to Hugo
@@ -221,7 +221,7 @@ Here is the Drupal 6 post imported to Hugo (via Jekyll):
 
 Well, here’s the decision - Continue with Jekyll or Hugo?
 
-Both generators have benefits, and If it were purely my choice alone, I would proceed with Hugo because of its speed and pure environment (no dependencies inlace Jekyll).
+Both generators have benefits, and If it were purely my choice alone, I would proceed with Hugo because of its speed and pure environment (no dependencies unlike Jekyll).
 
 However, at the moment neither offer a really simple way for a user without development background to add content - unlike CMS - The primary user of the site is not a developer.
 

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</loc>
+<lastmod>2016-06-12T13:18:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</loc>
+<lastmod>2016-06-11T20:05:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</loc>
 <lastmod>2016-03-06T08:34:00+00:00</lastmod>
 </url>

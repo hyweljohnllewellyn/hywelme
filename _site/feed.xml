@@ -6,9 +6,376 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Jun 2016 19:27:32 +0100</pubDate>
-    <lastBuildDate>Fri, 10 Jun 2016 19:27:32 +0100</lastBuildDate>
+    <pubDate>Sun, 12 Jun 2016 15:12:18 +0100</pubDate>
+    <lastBuildDate>Sun, 12 Jun 2016 15:12:18 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Migrate a Drupal 6 Website to WordPress 4.5</title>
+        <description>&lt;h2 id=&quot;introduction---cms-functionality-for-a-static-site-using-wordpress&quot;&gt;Introduction - CMS Functionality for a Static Site using WordPress&lt;/h2&gt;
+
+&lt;p&gt;In this post I will be describing the steps to migrate a Drupal 6 website to WordPress 4.5.&lt;/p&gt;
+
+&lt;p&gt;Drupal 6 is end of life and other upgrade migration options investigated, have not been successful&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Upgrade to Drupal 8&lt;/li&gt;
+  &lt;li&gt;Migration to Static Site Generators, Jekyll and Hugo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The key limitations of the previous methods have been&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Drupal 8  - No (as of writing) support of standard Audio HTML5 tags&lt;/li&gt;
+  &lt;li&gt;Jekyll and Hugo - Too technical for a normal user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My goal is to convert the Drupal 6 CMS to a responsive, mobile friendly, static site, that can be easily maintained by a non-technical user.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wordpress.org/&quot;&gt;WordPress&lt;/a&gt; has a great user graphical interface for adding content and is in my experience is very easy to install, maintain and upgrade.  Note that I not referring to &lt;a href=&quot;https://wordpress.com/&quot;&gt;Wordpress.com&lt;/a&gt;, the on-line website service.&lt;/p&gt;
+
+&lt;p&gt;In upcoming posts I will describe some other aspects of the upgrade, including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use a WordPress plug-in to convert the site to static files (HTML and javascript)&lt;/li&gt;
+  &lt;li&gt;Host the static files on GitHub&lt;/li&gt;
+  &lt;li&gt;Create a WordPress Child Theme to customise the look and feel&lt;/li&gt;
+  &lt;li&gt;Create a contact us page using Goggle App engine - to send enquiries via email&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ready?….&lt;/p&gt;
+
+&lt;h2 id=&quot;migrate-the-website-database-from-drupal-6-to-wordpress-45&quot;&gt;Migrate the Website Database from Drupal 6 to WordPress 4.5&lt;/h2&gt;
+
+&lt;p&gt;After some research, I found the following resource by Scott Anderson in 2010 for &lt;a href=&quot;http://blog.room34.com/archives/4530&quot;&gt;migrating a blog from Drupal to WordPress 3.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Primarily it provides a SQL script, which I used as a basis and modified.   My modified script &lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-06-12/drupal-to-wordpress.sql&quot;&gt;drupal-to-wordpress.sql can be found at GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For your use please:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Update my Drupal and WordPress database names ‘drupal_wp’ and ‘wordpress_wp’ with your own&lt;/li&gt;
+  &lt;li&gt;Update the Drupal content types with your own..see line 80 in the sql..&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;	&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Add&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;more&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Drupal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;types&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applicable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;talent&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;page&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;testimonial&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;webform&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-1-export-the-production-drupal-6-database-to-a-local-mysql&quot;&gt;Step 1 Export the Production Drupal 6 Database to a Local MySQL&lt;/h3&gt;
+
+&lt;p&gt;Generally, it is a good idea to  develop using a local version of data and files to protect production.  Using Sequel Pro http://www.sequelpro.com/, log into the production data base and Export as a SQL file.
+Note Ensure that the SQL is unzipped.&lt;/p&gt;
+
+&lt;p&gt;Note that I have created a local instance of the database called ‘drupal_wp’ with password ‘n3FKn32TDPBySBYD’ and then imported the production sql data&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-create-your-local-wordpress-database-and-install-wordpress&quot;&gt;Step 2 Create your local WordPress Database and Install WordPress&lt;/h3&gt;
+
+&lt;p&gt;As a pre-requisite, I installed  MAMP](https://www.mamp.info/en/) and the included &lt;a href=&quot;https://www.phpmyadmin.net/&quot;&gt;phpMyAdmin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;From phoMyAdmin, add a MySQL user and create database with all privileges.  As there are many resources that already describe this, I won’t go into details.&lt;/p&gt;
+
+&lt;p&gt;But the easiest is to add new user with ‘Create database with same name and grant all privileges’ option.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-12/phpmyadmin create user with grand all privileges.jpg&quot; alt=&quot;phpmyadmin create user with grant privileges&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My WordPress mySQL database is ‘wordpress_wp’ with password ‘hB47Sn5mVbEtANRT’.&lt;/p&gt;
+
+&lt;p&gt;Now, create a folder locally for your WordPress Site , mine is ‘drupal2wordpress’.&lt;/p&gt;
+
+&lt;p&gt;I will use the command line to download and install the WordPress files.  Run each command in turn….&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;brew install wget
+&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;wget https://wordpress.org/latest.tar.gz
+&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;tar xzf latest.tar.gz
+&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;mv wordpress/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; .
+&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;rm latest.tar.gz
+&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Note that i needed to install wget, if you already have this installed you do not need this command.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;From MAMP, ensure that your WordPress site ‘document root’ folder is selected, in this case ‘drupal2wordpress’&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-12/MAMP document root.jpg&quot; alt=&quot;MAMP document root&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Open a web browser and go to the local WordPress URL, typically http://localhost:8888/&lt;/p&gt;
+
+&lt;p&gt;Enter the Database Credentials&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-12/wordpress database credentials.jpg&quot; alt=&quot;wordpress installation database credentials&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Complete the WordPress Installation..details covered much better on the web!&lt;/p&gt;
+
+&lt;p&gt;My WordPress user name is ‘hywel’ with password ‘bmq8ktFeuXK52S)Zm3’&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-12/wordpress user name.jpg&quot; alt=&quot;wordpress user name&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-run-the-drupal-6-to-wordpress-45-database-conversion-sql&quot;&gt;Step 3 Run the Drupal 6 To Wordpress 4.5 Database Conversion SQL&lt;/h3&gt;
+
+&lt;p&gt;Using the &lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-06-12/drupal-to-wordpress.sql&quot;&gt;drupal-to-wordpress.sql from my GitHub&lt;/a&gt; and ensuring the database names and drupal node types are updated.&lt;/p&gt;
+
+&lt;p&gt;Paste the script into a SQL application and run (I’m using phpmyadmin):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-12/drupal 6 to wordpress 4 conversion sql.jpg&quot; alt=&quot;drupal 6 to wordpress 4 conversion sql&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Drupal 6 content in the WordPress 4.5 posts table:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-12/drupal 6 content in the wordpress post table.jpg&quot; alt=&quot;drupal 6 content in the wordpress post table&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Navigate to http://localhost:8888/ shows a Drupal 6 post converted to a WordPress 4.5 post!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-12/drupal 6 post converted to wordpress 4.jpg&quot; alt=&quot;drupal 6 post converted to wordpress 4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Well that’s it, the Drupal 6 nodes have been migrated to WordPress 4.5 Posts.&lt;/p&gt;
+
+&lt;p&gt;However, some things that are still required:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Update internal links that may still be pointing to Drupal nodes&lt;/li&gt;
+  &lt;li&gt;Media files (images to be uploaded to WordPress)&lt;/li&gt;
+  &lt;li&gt;Review /Update post types (pages vs. posts)&lt;/li&gt;
+  &lt;li&gt;Update post excerpts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I will not be covering these points explicitly in future posts, unless there are requests! But I will describe:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using a WordPress plug-in to convert the site to static files (HTML and javascript)&lt;/li&gt;
+  &lt;li&gt;Host the WordPress static files on GitHub&lt;/li&gt;
+  &lt;li&gt;Create a WordPress Child Theme and style.css to customise the look and feel&lt;/li&gt;
+  &lt;li&gt;Create a contact us page using Goggle App engine - to send enquiries via email&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;let me know which to cover first!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 12 Jun 2016 13:18:00 +0100</pubDate>
+        <link>http://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</guid>
+        
+        
+        <category>static</category>
+        
+        <category>site</category>
+        
+        <category>wordpress</category>
+        
+      </item>
+    
+      <item>
+        <title>Migrate a Drupal 6 Website to a Static Site</title>
+        <description>&lt;h2 id=&quot;the-end-of-database-cms---rise-of-static-sites&quot;&gt;The End of Database CMS - Rise of Static Sites?&lt;/h2&gt;
+
+&lt;p&gt;Following my attempt to Migrate from Drupal 6 to Drupal 8, I found the whole experience disappointing.  I also found Drupal over complicated for what is a relatively simple website.&lt;/p&gt;
+
+&lt;p&gt;I have been using &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;https://prose.io&quot;&gt;Prose.io&lt;/a&gt; for this blog for some time and have enjoyed using them.  I was inspired to try migrating to a static site generator after reading the &lt;a href=&quot;http://atchai.com/blog/the-cms-is-dead-long-live-hugo-wercker-proseio-and-cloudfront/&quot;&gt;CMS is dead&lt;/a&gt;, from &lt;a href=&quot;http://atchai.com/&quot;&gt;Atchai&lt;/a&gt;, a digital consultancy and development house based in London…&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“we realised with significant joy that we could jettison our 5-year old CMS (Drupal) in favour of a Static Site Generator”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There is an increasing trend of sites are moving to static site generators, see &lt;a href=&quot;https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/&quot;&gt;modern static website generators the next big thing&lt;/a&gt;  including  &lt;a href=&quot;https://www.healthcare.gov/&quot;&gt;healthcare.gov&lt;/a&gt;, see &lt;a href=&quot;https://developmentseed.org/blog/new-healthcare-gov-is-open-and-cms-free/&quot;&gt;healthcare gov is cms free&lt;/a&gt;  and https://mailchimp.com , see &lt;a href=&quot;https://blog.mailchimp.com/building-the-new-mailchimp/&quot;&gt;building the new mailchimp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is driven by mobile and the need for simple streamlined and fast content, which database driven sites that generate “content on the fly” are over engineered and slow in comparison to static sites.&lt;/p&gt;
+
+&lt;p&gt;Some static site services are now available such as &lt;a href=&quot;https://bowtie.io/&quot;&gt;bowtie.io&lt;/a&gt;, which describes in their &lt;a href=&quot;https://bowtie.io/news/cms-for-static-html-websites/&quot;&gt;cms for static html websites article&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“helps you deploy websites that are faster, easier to maintain, and more secure than a traditional content management system - without losing convenience.”  .&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Another interesting approach is taken by &lt;a href=&quot;https://www.contentful.com/&quot;&gt;contentful.com&lt;/a&gt;, in which they manage the content and integrates using API’s to static site generators, from their &lt;a href=&quot;https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/&quot;&gt;static site article&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“you get the all the benefits of content management features while still being able to embrace the static site generator mantra.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;My goal is to convert the Drupal 6 CMS to a &lt;strong&gt;responsive&lt;/strong&gt;, &lt;strong&gt;mobile friendly&lt;/strong&gt;, &lt;strong&gt;static site&lt;/strong&gt;, that can be &lt;strong&gt;easily maintained by a non-technical user&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is not as easy as it sounds as static site generator tend to be developer, not user friendly.&lt;/p&gt;
+
+&lt;p&gt;The contenders to be explored in this article are Jekyll and Hugo.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary-of-findings-cut-to-the-chase&quot;&gt;Summary of Findings (cut to the chase)&lt;/h2&gt;
+
+&lt;p&gt;As expected, neither Jekyll or Hugo are fit for the purpose - they are great static site generators and are mobile friendly BUT maintaining them and adding content is just too technical.&lt;/p&gt;
+
+&lt;p&gt;Though I am interested in investigating a service such as &lt;a href=&quot;https://www.contentful.com&quot;&gt;contentful.com&lt;/a&gt;, I am steering away because of a potential lock in to their proprietary technology and ultimately their fees.&lt;/p&gt;
+
+&lt;p&gt;I think the idea of &lt;em&gt;“best of both worlds”&lt;/em&gt; between a classic CMS such as &lt;a href=&quot;https://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; to create the content and then generate static HTML is the current best option for my needs….See next post..&lt;/p&gt;
+
+&lt;p&gt;Some of the steps carried out to convert from Drupal 6 to Jekyll or Hugo are described below…&lt;/p&gt;
+
+&lt;h2 id=&quot;drupal-6-to-jekyll&quot;&gt;Drupal 6 to Jekyll&lt;/h2&gt;
+
+&lt;p&gt;To begin, I will convert the Drupal 6 “nodes” to static content using  a &lt;a href=&quot;https://import.jekyllrb.com/docs/drupal6/&quot;&gt;Drupal 6 Importer&lt;/a&gt; provided by &lt;a href=&quot;https://import.jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that I am a Mac user and already have Jekyll installed.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-create-a-new-jekyll-site-and-install-the-jekyll-import&quot;&gt;Step 1 Create a new Jekyll Site and install the jekyll-import&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites&amp;gt; &lt;/span&gt;jekyll new hartleyvoices_jekyll
+New jekyll site installed &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /Users/hywel/Sites/hartleyvoices_jekyll. 
+&lt;span class=&quot;gp&quot;&gt;~/Sites&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;hartleyvoices_jekyll
+&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_jekyll&amp;gt; &lt;/span&gt;gem install jekyll-import
+Successfully installed jekyll-import-0.10.0
+Parsing documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;jekyll-import-0.10.0
+Done installing documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;jekyll-import after 1 seconds
+1 gem installed
+&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_jekyll&amp;gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-2-export-the-production-drupal-6-database&quot;&gt;Step 2 Export the Production Drupal 6 Database&lt;/h3&gt;
+
+&lt;p&gt;Generally, it is a good idea to  develop using a local version of data and files to protect production.  Using Sequel Pro http://www.sequelpro.com/, log into the production data base and Export as a SQL file.
+Note Ensure that the SQL is unzipped.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-create-a-local-mysql-user-and-database-and-import-the-drupal-6-database&quot;&gt;Step 3 Create a local MySQL user and database and Import the Drupal 6 Database&lt;/h3&gt;
+
+&lt;p&gt;As I already have &lt;a href=&quot;https://www.mamp.info/en/&quot;&gt;MAMP&lt;/a&gt; and the excellent &lt;a href=&quot;https://www.phpmyadmin.net/&quot;&gt;phpMyAdmin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Add a MySQL user and create database with all privileges:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Add mysql server user and create database with all privileges.jpg&quot; alt=&quot;add mysql user and create database&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select the SQL database file to import from Step 2:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/select to import.jpg&quot; alt=&quot;select sql file to import&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Import:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/import the file.jpg&quot; alt=&quot;import the sql database file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Success:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/success.jpg&quot; alt=&quot;success&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5-execute-the-jekyll-import&quot;&gt;Step 5 Execute the Jekyll Import&lt;/h3&gt;
+
+&lt;p&gt;Following the &lt;a href=&quot;https://import.jekyllrb.com/docs/drupal6/&quot;&gt;Jekyll Drupal 6 Import&lt;/a&gt; instructions:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“By default, the Jekyll importer will pull in nodes of type blog, story, and article. To specify custom types, you can use the types option when you run the importer.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The node types in my site are “page”, “talent”,”testimonial”.  Enter the Drupal 6 database credentials created in Step 3:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;&#39;require &quot;jekyll-import&quot;;
+    JekyllImport::Importers::Drupal6.run({
+      &quot;dbname&quot;   =&amp;gt; &quot;hartleyvoices&quot;,
+      &quot;user&quot;     =&amp;gt; &quot;hartleyvoices&quot;,
+      &quot;password&quot; =&amp;gt; &quot;&quot;,
+      &quot;host&quot;     =&amp;gt; &quot;localhost&quot;,
+      &quot;prefix&quot;   =&amp;gt; &quot;&quot;,
+      &quot;types&quot;    =&amp;gt;  [&quot;page&quot;, &quot;talent&quot;, &quot;testimonial&quot;]
+    })’&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I received the error “Whoops! Looks like you need to install ‘sequel’ before you can use this importer.”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/whoops need to install sequel.png&quot; alt=&quot;whoops need to install sequel&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install sequel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/gem install sequel.png&quot; alt=&quot;gem install sequel&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo gem install mysql&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-01-11/sudo gem install mysql.png&quot; alt=&quot;sudo gem install mysql&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mysql.server start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/mysql server start.png&quot; alt=&quot;mysql server start&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;&#39;require &quot;jekyll-import&quot;;
+    JekyllImport::Importers::Drupal6.run({
+      &quot;dbname&quot;   =&amp;gt; &quot;hartleyvoices&quot;,
+      &quot;user&quot;     =&amp;gt; &quot;hartleyvoices&quot;,
+      &quot;password&quot; =&amp;gt; &quot;&quot;,
+      &quot;host&quot;     =&amp;gt; &quot;localhost&quot;,
+      &quot;prefix&quot;   =&amp;gt; &quot;&quot;,
+      &quot;types&quot;    =&amp;gt;  [&quot;page&quot;, &quot;talent&quot;, &quot;testimonial&quot;]
+    })’&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/drupal 6 to jekyll import no errors.png&quot; alt=&quot;drupal 6 to jekyll import no errors&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mysql.server stop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now to run Jekyll and hopefully see something..&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_jekyll&amp;gt; &lt;/span&gt;jekyll serve
+Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
+            Source: /Users/hywel/Sites/hartleyvoices_jekyll
+       Destination: /Users/hywel/Sites/hartleyvoices_jekyll/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    &lt;span class=&quot;k&quot;&gt;done in &lt;/span&gt;14.248 seconds.
+ Auto-regeneration: enabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/Users/hywel/Sites/hartleyvoices_jekyll&#39;&lt;/span&gt;
+Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is one of the Drupal 6 posts imported to Jekyll.  Not too bad, though is missing all the images:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/jekyll post imported from drupal 6.png&quot; alt=&quot;jekyll post imported from Drupal 6&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-to-hugo&quot;&gt;Jekyll to Hugo&lt;/h2&gt;
+
+&lt;p&gt;Now, granted I am cheating here as I will be importing the Drupal 6 Post vial Jekyll to Hugo, the reason was I didn’t find any alternative to convert directly from Drupal 6 to Hugo.&lt;/p&gt;
+
+&lt;p&gt;If you have not installed &lt;a href=&quot;https://gohugo.io/overview/introduction/&quot;&gt;Hugo&lt;/a&gt;, please follow the &lt;a href=&quot;https://gohugo.io/tutorials/installing-on-mac/&quot;&gt;Installing Hugo on a Mac&lt;/a&gt; instructions first.&lt;/p&gt;
+
+&lt;p&gt;Following the instructions at &lt;a href=&quot;http://gohugo.io/commands/hugo_import_jekyll/&quot;&gt;Hugo import Jekyll&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;Import the posts:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_hugo&amp;gt; &lt;/span&gt;hugo import jekyll ~/Sites/hartleyvoices_jekyll ~/Sites/hartleyvoices_hugo
+Importing...
+Congratulations! 137 posts imported!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/hugo import jekyll.png&quot; alt=&quot;hugo import jekyll&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Clone a Hugo theme:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/hartleyvoices_hugo/themes/
+git clone https://github.com/spf13/herring-cove.git &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Run the Hugo Server:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_hugo&amp;gt; &lt;/span&gt;hugo server -w --theme&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;herring-cove
+0 of 2 drafts rendered
+0 future content
+135 pages created
+0 paginator pages created
+0 tags created
+1 categories created
+&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;568 ms
+Watching &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;changes &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /Users/hywel/Sites/hartleyvoices_hugo/&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;data,content,layouts,static,themes&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+Serving pages from memory
+Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bind &lt;/span&gt;address 127.0.0.1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is the Drupal 6 post imported to Hugo (via Jekyll):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/hugo post imported from jekyll.png&quot; alt=&quot;hugo post imported from jekyll&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll-or-hugo&quot;&gt;Jekyll or Hugo….?&lt;/h2&gt;
+
+&lt;p&gt;Well, here’s the decision - Continue with Jekyll or Hugo?&lt;/p&gt;
+
+&lt;p&gt;Both generators have benefits, and If it were purely my choice alone, I would proceed with Hugo because of its speed and pure environment (no dependencies unlike Jekyll).&lt;/p&gt;
+
+&lt;p&gt;However, at the moment neither offer a really simple way for a user without development background to add content - unlike CMS - The primary user of the site is not a developer.&lt;/p&gt;
+
+&lt;p&gt;So in my next post, I will be investigating options to use a CMS locally and then generate static site content to be published to the web - possible best of both worlds for now… time will tell.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 11 Jun 2016 20:05:00 +0100</pubDate>
+        <link>http://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</guid>
+        
+        
+        <category>static</category>
+        
+        <category>site</category>
+        
+      </item>
     
       <item>
         <title>Drupal 8 Sub Themes and Stylesheets</title>
@@ -853,171 +1220,6 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
         <category>business</category>
         
         <category>email</category>
-        
-      </item>
-    
-      <item>
-        <title>Netgear Arlo Home Security Camera Unboxing and Basic Setup</title>
-        <description>&lt;h2 id=&quot;some-research&quot;&gt;Some Research&lt;/h2&gt;
-
-&lt;p&gt;Following online research of home security camera options, I had narrowed my choices to &lt;a href=&quot;https://store.nest.com/uk/product/camera/&quot;&gt;Nest&lt;/a&gt; and Arlo.  One thing I had found was that all cameras pretty much seem to require the user to sign up to a subscription cloud service in order to view recorded video.  These services start from  £6.49/ month, so this extra cost should be considered when making a decision.&lt;/p&gt;
-
-&lt;p&gt;As Arlo currently comes with a free basic service, providing 1Gb storage, 7 days history and up to 5 cameras, this was good enough - even though the camera has a higher initial cost.&lt;/p&gt;
-
-&lt;p&gt;Note that the key downsides to Arlo are that there is no microphone or speaker, so you cannot hear or speak, concequently the Arlo may not be the best choice  as a baby or pet monitor.&lt;/p&gt;
-
-&lt;p&gt;I eventually bought the 2-camera package for £279.99 at &lt;a href=&quot;http://www.pcworld.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-home-monitoring-and-power/netgear-arlo-smart-home-security-system-10125398-pdt.html?gclid=CjwKEAiA18mzBRCo1e_-y_KLpXISJACEsANGZ_90KxxzCCYcAMPsuoIdvKzYpJ5t-Tzy4RiGtLZ2ZxoCzrfw_wcB&amp;amp;srcid=198&amp;amp;cmpid=ppc~gg~~~Exact&amp;amp;mctag=gg_goog_7904&amp;amp;s_kwcid=AL!3391!3!68396508140!!!g!114416079860!&amp;amp;istCompanyId=9a35962d-802d-4e67-9721-0a3328ca1f02&amp;amp;istItemId=ltpxmmqxr&amp;amp;istBid=tztx&amp;amp;ef_id=VgB68AAAAda8ZfDl:20151217142418:s&quot;&gt;PC World Arlo Camera&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Also available from Amazon:&lt;/p&gt;
-&lt;iframe style=&quot;width:120px;height:240px;&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; src=&quot;//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&amp;amp;OneJS=1&amp;amp;Operation=GetAdHtml&amp;amp;MarketPlace=GB&amp;amp;source=ac&amp;amp;ref=qf_sp_asin_til&amp;amp;ad_type=product_link&amp;amp;tracking_id=hywelme-21&amp;amp;marketplace=amazon&amp;amp;region=GB&amp;amp;placement=B00TDNYOB6&amp;amp;asins=B00TDNYOB6&amp;amp;linkId=&amp;amp;show_border=true&amp;amp;link_opens_in_new_window=true&quot;&gt;
-&lt;/iframe&gt;
-&lt;iframe style=&quot;width:120px;height:240px;&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; src=&quot;//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&amp;amp;OneJS=1&amp;amp;Operation=GetAdHtml&amp;amp;MarketPlace=GB&amp;amp;source=ac&amp;amp;ref=qf_sp_asin_til&amp;amp;ad_type=product_link&amp;amp;tracking_id=hywelme-21&amp;amp;marketplace=amazon&amp;amp;region=GB&amp;amp;placement=B00TDNYNP8&amp;amp;asins=B00TDNYNP8&amp;amp;linkId=&amp;amp;show_border=true&amp;amp;link_opens_in_new_window=true&quot;&gt;
-&lt;/iframe&gt;
-&lt;iframe style=&quot;width:120px;height:240px;&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; src=&quot;//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&amp;amp;OneJS=1&amp;amp;Operation=GetAdHtml&amp;amp;MarketPlace=GB&amp;amp;source=ac&amp;amp;ref=qf_sp_asin_til&amp;amp;ad_type=product_link&amp;amp;tracking_id=hywelme-21&amp;amp;marketplace=amazon&amp;amp;region=GB&amp;amp;placement=B00TDNYNN0&amp;amp;asins=B00TDNYNN0&amp;amp;linkId=&amp;amp;show_border=true&amp;amp;link_opens_in_new_window=true&quot;&gt;
-&lt;/iframe&gt;
-
-&lt;h2 id=&quot;unboxing&quot;&gt;Unboxing&lt;/h2&gt;
-&lt;p&gt;Here is the boxed arlo smart home security two camera system:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/1 arlo smart home security camera boxed.jpg&quot; alt=&quot;arlo smart home security camera boxed&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;contents-1&quot;&gt;Contents 1&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;US power plug with UK and EU adapter&lt;/li&gt;
-  &lt;li&gt;Ethernet cable&lt;/li&gt;
-  &lt;li&gt;Wall plugs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/2 arlo unboxed contents.jpg&quot; alt=&quot;arlo unboxed contents&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;contents-2&quot;&gt;Contents 2&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;8 lithium 123 batteries &lt;em&gt;(notice the extra battery compartment for systems with a third camera)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;4 wall mounts &lt;em&gt;(I thought providing extra mounts was very useful as the rear of the cameras are magnetic and so could easily be moved to alternative mounts as required)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/4 arlo unboxed batteries and wall mount.jpg&quot; alt=&quot;arlo unboxed batteries and wall mount&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;contents-3&quot;&gt;Contents 3&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;the netgear base station for the cameras&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17//3 arlo unboxed router.jpg&quot; alt=&quot;3 arlo unboxed base station&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;contents-4&quot;&gt;Contents 4&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;the two cameras - notice the standard camera mount at the base of the cameras, that could be used as an alternative to the magnetic mount&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/5 arlo unboxed cameras.jpg&quot; alt=&quot;arlo unboxed cameras&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As there were no instructions included I used &lt;a href=&quot;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&quot; title=&quot;Arlo Instructions Oct 2015&quot;&gt;http://www.downloads.netgear.com/files/arlo/Arlo_UM_02Oct2015.pdf&lt;/a&gt;.  The instructions were very clear and it worked…&lt;/p&gt;
-
-&lt;h2 id=&quot;connect-base-station-to-router-and-register-account&quot;&gt;Connect Base Station to Router and Register Account&lt;/h2&gt;
-
-&lt;h4 id=&quot;step-1-connect-base-station-to-home-or-work-router&quot;&gt;Step 1: Connect Base Station to home or work router&lt;/h4&gt;
-&lt;p&gt;So, following the instructions, I connected the base station directly to a free ethernet port on my BT Home Hub 3 and then powered on the base station.&lt;/p&gt;
-
-&lt;h4 id=&quot;step-2-arlo-login-page&quot;&gt;Step 2: Arlo Login Page&lt;/h4&gt;
-&lt;p&gt;Next, was to register an account at arlo.com/login:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/10 arlo login page.jpg&quot; alt=&quot;arlo new system setup page&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-3-system-setup-page&quot;&gt;Step 3: System Setup Page&lt;/h4&gt;
-&lt;p&gt;Amazingly, the browser defaulted the base station serial number, I just selected my timezone.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/11 arlo system setup page.jpg&quot; alt=&quot;arlo system setup page&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-4-account-setup-page&quot;&gt;Step 4: Account Setup Page&lt;/h4&gt;
-&lt;p&gt;Just some basic information required for the account setup&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/12 arlo account setup page.jpg&quot; alt=&quot;arlo account setup page&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-5-service-selection-page&quot;&gt;Step 5: Service Selection Page&lt;/h4&gt;
-&lt;p&gt;Next the all important service selection.  I selected the free Basic plan.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/13 arlo service selection page.jpg&quot; alt=&quot;arlo service selection page&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;sync-cameras-to-base-station&quot;&gt;Sync Cameras to Base Station&lt;/h2&gt;
-
-&lt;h4 id=&quot;step-6-insert-batteries&quot;&gt;Step 6: Insert Batteries&lt;/h4&gt;
-&lt;p&gt;Slightly tricky to open the battery compartment as there is a lock and it slides out and then hinges up… here are the batteries…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/6 arlo unboxed camera open with batteries.jpg&quot; alt=&quot;arlo unboxed camera open with batteries&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-7-press-the-base-station-sync-button&quot;&gt;Step 7: Press the Base Station Sync Button&lt;/h4&gt;
-&lt;p&gt;Note that the instructions mention that the sync status LED should light up - it did not for me, though strangely, the USB light lit up… regardless, I continued with the next step&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/7 arlo sync button on router.jpg&quot; alt=&quot;arlo sync button on router&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-8-press-the-camera-sync-button&quot;&gt;Step 8: Press the Camera Sync Button&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/8 arlo camera sync button.jpg&quot; alt=&quot;arlo camera sync button&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;streaming-video&quot;&gt;Streaming Video!&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/15 camera streaming.jpg&quot; alt=&quot;camera streaming&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I repeated steps 6 to 8 for the second camera&lt;/p&gt;
-
-&lt;h4 id=&quot;base-station-with-camera-sync-light&quot;&gt;Base Station with Camera Sync Light&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-17/9 arlo router sync light on.jpg&quot; alt=&quot;arlo router sync light on&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That’s it..I will describe some more advanced configuration in an upcoming post.  I would recommend these little cameras because of the simplicity of setup and positioning.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 17 Dec 2015 17:10:00 +0000</pubDate>
-        <link>http://www.hywel.me/gadgets/2015/12/17/netgear-arlo-home-security-camera-unboxing-setup.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/gadgets/2015/12/17/netgear-arlo-home-security-camera-unboxing-setup.html</guid>
-        
-        
-        <category>gadgets</category>
-        
-      </item>
-    
-      <item>
-        <title>GitHub Pages Custom Domain Names with CloudFlare</title>
-        <description>&lt;h2 id=&quot;why-use-a-custom-domain-name&quot;&gt;Why Use a Custom Domain Name&lt;/h2&gt;
-
-&lt;p&gt;Static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/victoriancarolsingershire/, with the Github username followed by the repository name.&lt;/p&gt;
-
-&lt;p&gt;If the purpose of the website is for marketing a brand, service or product, then a custom domain would provide a better identity, for example, http://www.victoriancarolsingershire.uk.  This custom domain name describes the service being offered as well as the location.&lt;/p&gt;
-
-&lt;p&gt;The domain name was purchased through &lt;a href=&quot;http://namecheap.com&quot;&gt;Name Cheap&lt;/a&gt;, which is great value for money for domains, though I have struggled somewhat with managing settings through it’s administration console.&lt;/p&gt;
-
-&lt;p&gt;Therefore, I generally use CloudFlare, which is a &lt;a href=&quot;https://en.wikipedia.org/wiki/Content_delivery_network&quot;&gt;Content Delivery Network&lt;/a&gt; to administer &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_Name_System&quot;&gt;Domain Name System&lt;/a&gt; settings.&lt;/p&gt;
-
-&lt;h2 id=&quot;github-pages-custom-domain-names&quot;&gt;GitHub Pages Custom Domain Names&lt;/h2&gt;
-
-&lt;p&gt;GitHub allows the use of of Apex domains, for example http://victoriancarolsingershire.uk i.e without the &lt;em&gt;‘www’&lt;/em&gt;, however  GitHub recommends using a subdomain, for example http://www.victoriancarolsingershire.uk, i.e with the &lt;em&gt;‘www’&lt;/em&gt;, as described by GitHub at &lt;a href=&quot;https://help.github.com/articles/about-custom-domains-for-github-pages-sites/&quot;&gt;About Custom Domains&lt;/a&gt;.  Briefly, using GitHub Pages subdomains will make the pages load faster.&lt;/p&gt;
-
-&lt;p&gt;GitHub has a great guide to configuring &lt;a href=&quot;https://help.github.com/articles/tips-for-configuring-a-cname-record-with-your-dns-provider/&quot;&gt;Custom Subdomains&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note that I am aware that by using CloudFlare, then I may be losing some benefits of GitHub’s own Content Delivery, but for now it seems to work for me.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-1-create-a-cname-file&quot;&gt;Step 1: Create a CNAME file&lt;/h3&gt;
-&lt;p&gt;The CNAME File should be placed in your repository and there should only be one thing in the file, namely the name of you custom subdomain, in this case &lt;strong&gt;www.victoriancarolsingershire.uk&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015-12-06/cname file github pages custom subdomain.jpg&quot; alt=&quot;CNAME GitHub Pages&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-2-cloudflare-cname&quot;&gt;Step 2: CloudFlare CNAME&lt;/h3&gt;
-&lt;p&gt;Add the www CNAME record within the victoriancarolsingershire.uk account in CloudFlare.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2015/-12-06/cloudflare cname github subdomain.jpg&quot; alt=&quot;cloudflare cname github subdomain&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;All Done, your page is published at the new subdomain:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/published.jpg&quot; alt=&quot;published.jpg&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 06 Dec 2015 20:17:00 +0000</pubDate>
-        <link>http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html</guid>
-        
-        
-        <category>static</category>
-        
-        <category>sites</category>
         
       </item>
     

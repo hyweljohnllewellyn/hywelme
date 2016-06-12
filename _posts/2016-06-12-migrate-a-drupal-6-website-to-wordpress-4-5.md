@@ -51,7 +51,6 @@ For your use please:
 	WHERE n.type IN ('talent', 'page', 'testimonial', 'webform')
 {% endhighlight %}
 
-
 ### Step 1 Export the Production Drupal 6 Database to a Local MySQL
 
 Generally, it is a good idea to  develop using a local version of data and files to protect production.  Using Sequel Pro http://www.sequelpro.com/, log into the production data base and Export as a SQL file.
@@ -67,10 +66,11 @@ From phoMyAdmin, add a MySQL user and create database with all privileges.  As t
 
 But the easiest is to add new user with 'Create database with same name and grant all privileges' option. 
 
-My WordPress mySQL database is 'wordpress_wp' with password 'c2KJxAACuvS7AuUB'.
+![phpmyadmin create user with grant privileges]({{site.baseurl}}/assets/2016-06-12/phpmyadmin create user with grand all privileges.jpg)
 
+My WordPress mySQL database is 'wordpress_wp' with password 'hB47Sn5mVbEtANRT'.
 
-Now, create a Folder locally for your WordPress Site , mines is 'drupal2wordpress'.
+Now, create a folder locally for your WordPress Site , mine is 'drupal2wordpress'.
 
 I will use the command line to download and install the WordPress files.  Run each command in turn....  
 
@@ -84,3 +84,21 @@ I will use the command line to download and install the WordPress files.  Run ea
 {% endhighlight %}
 
 _Note that i needed to install wget, if you already have this installed you do not need this command._
+
+From MAMP, ensure that your WordPress site 'document root' folder is selected, in this case 'drupal2wordpress'
+
+![MAMP document root]({{site.baseurl}}/assets/2016-06-12/MAMP document root.jpg)
+
+Open a web browser and go to the local WordPress URL, typically http://localhost:8888/
+
+Enter the Database Credentials
+
+![wordpress installation database credentials]({{site.baseurl}}/assets/2016-06-12/wordpress database credentials.jpg)
+
+Complete the WordPress Installation..details covered much better on the web!
+
+My WordPress user name is 'hywel' with password 'bmq8ktFeuXK52S)Zm3'
+
+![wordpress user name]({{site.baseurl}}/assets/2016-06-12/wordpress user name.jpg)
+
+

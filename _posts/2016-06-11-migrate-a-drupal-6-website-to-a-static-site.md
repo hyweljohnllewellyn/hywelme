@@ -37,7 +37,7 @@ The contenders to be explored in this article are Jekyll and Hugo.
 
 As expected, neither Jekyll or Hugo are fit for the purpose - they are great static site generators and are mobile friendly BUT maintaining them and adding content is just too technical.
 
-Though I am interested in investigating a service such as [contentful.com](https://www.contentful.com), however, I am steering away because of a potential lock in to their proprietary technology and ultimately their fees.
+Though I am interested in investigating a service such as [contentful.com](https://www.contentful.com), I am steering away because of a potential lock in to their proprietary technology and ultimately their fees.
 
 I think the idea of _"best of both worlds"_ between a classic CMS such as [Wordpress](https://wordpress.org/) to create the content and then generate static HTML is the current best option for my needs....See next post..
 

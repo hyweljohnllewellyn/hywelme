@@ -43,7 +43,7 @@ Primarily it provides a SQL script, which I used as a basis and modified.   My m
 
 For your use please:
 
-1. Update the Drupal and WordPress database names with your own
+1. Update my Drupal and WordPress database names 'drupal_wp' and 'wordpress_wp' with your own
 2. Update the Drupal content types with your own..see line 80 in the sql..
 
 {% highlight sql %}
@@ -51,14 +51,36 @@ For your use please:
 	WHERE n.type IN ('talent', 'page', 'testimonial', 'webform')
 {% endhighlight %}
 
-### Step 1 Create your local WordPress Database and Install WordPress
+
+### Step 1 Export the Production Drupal 6 Database to a Local MySQL
+
+Generally, it is a good idea to  develop using a local version of data and files to protect production.  Using Sequel Pro http://www.sequelpro.com/, log into the production data base and Export as a SQL file.
+Note Ensure that the SQL is unzipped.
+
+Note that I have created a local instance of the database called 'drupal_wp' with password 'n3FKn32TDPBySBYD' and then imported the production sql data
+
+### Step 2 Create your local WordPress Database and Install WordPress
 
 As a pre-requisite, I installed  MAMP](https://www.mamp.info/en/) and the included [phpMyAdmin](https://www.phpmyadmin.net/).
 
-From phoMyAdmin, add a MySQL user and create database with all privileges:
+From phoMyAdmin, add a MySQL user and create database with all privileges.  As there are many resources that already describe this, I won't go into details.
 
-![phpmyadmin add new mysql user]({{site.baseurl}}/assets/2016-06-12/phpmyadmin add new mysql user.jpg)
+But the easiest is to add new user with 'Create database with same name and grant all privileges' option. 
+
+My WordPress mySQL database is 'wordpress_wp' with password 'c2KJxAACuvS7AuUB'.
 
 
-I will use the command 
+Now, create a Folder locally for your WordPress Site , mines is 'drupal2wordpress'.
 
+I will use the command line to download and install the WordPress files.  Run each command in turn....  
+
+{% highlight bash %}
+~/Sites/drupal2wordpress> brew install wget
+~/Sites/drupal2wordpress> wget https://wordpress.org/latest.tar.gz
+~/Sites/drupal2wordpress> tar xzf latest.tar.gz
+~/Sites/drupal2wordpress> mv wordpress/* .
+~/Sites/drupal2wordpress> rm latest.tar.gz
+~/Sites/drupal2wordpress> rmdir wordpress
+{% endhighlight %}
+
+_Note that i needed to install wget, if you already have this installed you do not need this command._

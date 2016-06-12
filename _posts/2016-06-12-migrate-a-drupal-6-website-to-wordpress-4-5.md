@@ -51,6 +51,7 @@ For your use please:
 	WHERE n.type IN ('talent', 'page', 'testimonial', 'webform')
 {% endhighlight %}
 
+
 ### Step 1 Export the Production Drupal 6 Database to a Local MySQL
 
 Generally, it is a good idea to  develop using a local version of data and files to protect production.  Using Sequel Pro http://www.sequelpro.com/, log into the production data base and Export as a SQL file.
@@ -101,4 +102,37 @@ My WordPress user name is 'hywel' with password 'bmq8ktFeuXK52S)Zm3'
 
 ![wordpress user name]({{site.baseurl}}/assets/2016-06-12/wordpress user name.jpg)
 
+### Step 3 Run the Drupal 6 To Wordpress 4.5 Database Conversion SQL
 
+Using the drupal-to-wordpress.sql from my GitHub and ensuring the database names and drupal node types are updated.
+
+Paste the script into a SQL application and run (I'm using phpmyadmin):
+
+![drupal 6 to wordpress 4 conversion sql]({{site.baseurl}}/assets/2016-06-12/drupal 6 to wordpress 4 conversion sql.jpg)
+
+Drupal 6 content in the WordPress 4.5 posts table:
+
+![drupal 6 content in the wordpress post table]({{site.baseurl}}/assets/2016-06-12/drupal 6 content in the wordpress post table.jpg)
+
+Navigate to http://localhost:8888/ shows a Drupal 6 post converted to a WordPress 4.5 post!
+
+![drupal 6 post converted to wordpress 4]({{site.baseurl}}/assets/2016-06-12/drupal 6 post converted to wordpress 4.jpg)
+
+## Summary
+
+Well that's it, the Drupal 6 nodes have been migrated to WordPress 4.5 Posts.
+
+However, some things that are still required:
+- Update internal links that may still be pointing to Drupal nodes
+- Media files (images to be uploaded to WordPress)
+- Review /Update post types (pages vs. posts)
+- Update post excerpts
+
+I will not be covering these points explicitly in future posts, unless there are requests! But I will describe:
+
+- Using a WordPress plug-in to convert the site to static files (HTML and javascript)
+- Host the WordPress static files on GitHub
+- Create a WordPress Child Theme and style.css to customise the look and feel 
+- Create a contact us page using Goggle App engine - to send enquiries via email
+
+let me know which to cover first!

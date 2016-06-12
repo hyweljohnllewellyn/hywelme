@@ -185,6 +185,8 @@ Importing...
 Congratulations! 137 posts imported!
 {% endhighlight %}
 
+![hugo import jekyll]({{site.baseurl}}/assets/2016-06-11/hugo import jekyll.png)
+
 Clone a Hugo theme:
 
 {% highlight bash %}
@@ -210,7 +212,8 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 
 Here is the Drupal 6 post imported to Hugo (via Jekyll):
 
-![hugo post imported from jekyll]({{site.baseurl}}/assets/2016-06-11/hugo import jekyll.png)
+![hugo post imported from jekyll]({{site.baseurl}}/assets/2016-06-11/hugo post imported from jekyll.png)
+
 
 
 ### Jekyll or Hugo….?

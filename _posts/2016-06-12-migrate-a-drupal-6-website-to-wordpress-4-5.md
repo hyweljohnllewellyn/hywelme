@@ -39,7 +39,7 @@ Ready?....
 
 After some research, I found the following resource by Scott Anderson in 2010 for [migrating a blog from Drupal to WordPress 3.0](http://blog.room34.com/archives/4530) 
 
-Primarily it provides a SQL script, which I used as a basis and modified.   My modified script drupal-to-wordpress.sql can be found at GitHub 
+Primarily it provides a SQL script, which I used as a basis and modified.   My modified script [drupal-to-wordpress.sql can be found at GitHub](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-06-12/drupal-to-wordpress.sql) 
 
 For your use please:
 
@@ -104,7 +104,7 @@ My WordPress user name is 'hywel' with password 'bmq8ktFeuXK52S)Zm3'
 
 ### Step 3 Run the Drupal 6 To Wordpress 4.5 Database Conversion SQL
 
-Using the drupal-to-wordpress.sql from my GitHub and ensuring the database names and drupal node types are updated.
+Using the [drupal-to-wordpress.sql from my GitHub](https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-06-12/drupal-to-wordpress.sql) and ensuring the database names and drupal node types are updated.
 
 Paste the script into a SQL application and run (I'm using phpmyadmin):
 
@@ -123,6 +123,7 @@ Navigate to http://localhost:8888/ shows a Drupal 6 post converted to a WordPres
 Well that's it, the Drupal 6 nodes have been migrated to WordPress 4.5 Posts.
 
 However, some things that are still required:
+
 - Update internal links that may still be pointing to Drupal nodes
 - Media files (images to be uploaded to WordPress)
 - Review /Update post types (pages vs. posts)

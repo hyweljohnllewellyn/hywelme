@@ -42,6 +42,59 @@ So, to summarise for this guide, we will create a GitHub Pages Repository, Gener
 
 # Create a Github Pages Repository to Host the Static WordPress Site 
 
+## Step 1 - Create a New GitHub Repository
+
+### Step 1a Once you have logged into your GitHub account, click the Repositories tab and select New.
+
+![New GitHub Repository]({{site.baseurl}}/assets/2016-07-17/New GitHub Repository.jpg)
+
+### Step 1b Give your repository a name and ensure to select "Initialize this repository with a Readme"
+
+![GitHub Repository Name]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Name.jpg)
+
+## Step 2 - Create gh-pages Branch Set as Default and Delete master Branch
+
+For Hosting your static content, GitHub Pages requires that the content be in the gh-pages branch of the repository.  I feel that this makes the master branch redundant, so I delete this to keep things simple.  There are a few clicks, but it is quite simple.
+
+### Step 2a Create gh-pages branch:
+
+![GitHub Repository Create gh-pages branch]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Create gh-pages branch.jpg)
+
+### Step 2b Go to Settings:
+
+![GitHub Repository Settings]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Settings.jpg)
+
+### Step 2c Go to Branches:
+
+![Click GitHub Branches]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Branches.jpg)
+
+### Step 2d GitHub repository select default branch:
+
+![GitHub repository select default branch]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Default Branches.jpg)
+
+### Step 2e GitHub confirm default repository:
+
+![GitHub confirm default repository]({{site.baseurl}}/assets/2016-07-17/GitHub%20Repository%20Default%20Branch%20Confirm.jpg)
+
+### Step 2f GitHub Repository select the 2 branches icon:
+
+![GitHub Repository select the 2 branches ]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Branches 2.jpg)
+
+### Step 2g GitHub delete master branch:
+
+![GitHub delete master branch]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Delete master Branch.jpg)
+
+
+## Step 3 - Clone GitHub Repository to your Local Machine 
+
+If like me you are relatively new to the world of Git repositories, the idea of cloning, pushing and merging is a bit uncomfortable.  But thankfully, there is a great App available [GitHub Desktop](https://desktop.github.com/) to make it a bit easier.  
+
+So select "clone or download" and "Open in Desktop"
+
+![GitHub Repository Clone Open in Desktop]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Clone - Open in Desktop.jpg)
+
+Click the "Launch Application" or equivalent message to confirm
+
 # Create a Static Site from WordPress
 
 So, after some research and trial and error, my preferred WordPress plugin to generate static content is https://en-gb.wordpress.org/plugins/simply-static/.  Not only it work, but it is kept up to date and it has top ratings.

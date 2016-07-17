@@ -103,14 +103,16 @@ Repository in Local Folder:
 ![Local Folder Showing readme]({{site.baseurl}}/assets/2016-07-17/Repository Cloned to Local Folder.jpg)
 
 
-
 ## Create a Static Site from WordPress
 
 So, after some research and trial and error, my preferred WordPress plugin to generate static content is https://en-gb.wordpress.org/plugins/simply-static/.  Not only it work, but it is kept up to date and it has top ratings.
 
+**Work in progress!**
+
+
 ### Step 1 - Update Simply Static Settings
 
-##3 Step 2 - Generate Content
+### Step 2 - Generate Content
 
 ## Publish Static Site to Github Pages
 

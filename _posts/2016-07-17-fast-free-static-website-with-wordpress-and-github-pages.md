@@ -7,7 +7,7 @@ title: Fast Free Static Website with WordPress and GitHub Pages
 categories: static site wordpress
 meta: github pages wordpress static plugin
 ---
-# WordPress is Great, But what about Static Sites
+## WordPress is Great, But what about Static Sites
 
 If you would do a search, WordPress.org is used by more that 20% of sites on the public internet.  
 
@@ -17,7 +17,7 @@ Also, many WordPress sites are not as fast as they should be because it is gener
 
 So, as described in the migrate a Drupal 6 Website to a Static Site post, I have  investigated Static Site Generators such as [Jekyll](https://jekyllrb.com/) and [Hugo](http://gohugo.io/).   However, I found that these generators are currently too technical for most users.
 
-# Best of Both?
+## Best of Both?
 
 What about installing WordPress on a local computer, writing the site and publishing only static content to the public web?  This would provide:
 
@@ -40,47 +40,47 @@ My favourite is an amusing look at using WordPress to generate static content is
 
 So, to summarise for this guide, we will create a GitHub Pages Repository, Generate Static Content from WordPress and then Publish to GitHub.
 
-# Create a Github Pages Repository to Host the Static WordPress Site 
+## Create a Github Pages Repository to Host the Static WordPress Site
 
-## Step 1 - Create a New GitHub Repository
+### Step 1 - Create a New GitHub Repository
 
-### Step 1a Once you have logged into your GitHub account, click the Repositories tab and select New.
+**Step 1a** Once you have logged into your GitHub account, click the Repositories tab and select New.
 
 ![New GitHub Repository]({{site.baseurl}}/assets/2016-07-17/New GitHub Repository.jpg)
 
-### Step 1b Give your repository a name and ensure to select "Initialize this repository with a Readme"
+**Step 1b** Give your repository a name and ensure to select "Initialize this repository with a Readme"
 
 ![GitHub Repository Name]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Name.jpg)
 
-## Step 2 - Create gh-pages Branch Set as Default and Delete master Branch
+### Step 2 - Create gh-pages Branch Set as Default and Delete master Branch
 
 For Hosting your static content, GitHub Pages requires that the content be in the gh-pages branch of the repository.  I feel that this makes the master branch redundant, so I delete this to keep things simple.  There are a few clicks, but it is quite simple.
 
-### Step 2a Create gh-pages branch:
+**Step 2a** Create gh-pages branch:
 
 ![GitHub Repository Create gh-pages branch]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Create gh-pages branch.jpg)
 
-### Step 2b Go to Settings:
+**Step 2b** Go to Settings:
 
 ![GitHub Repository Settings]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Settings.jpg)
 
-### Step 2c Go to Branches:
+**Step 2c** Go to Branches:
 
 ![Click GitHub Branches]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Branches.jpg)
 
-### Step 2d GitHub repository select default branch:
+**Step 2d** GitHub repository select default branch:
 
 ![GitHub repository select default branch]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Default Branches.jpg)
 
-### Step 2e GitHub confirm default repository:
+**Step 2e** GitHub confirm default repository:
 
 ![GitHub confirm default repository]({{site.baseurl}}/assets/2016-07-17/GitHub%20Repository%20Default%20Branch%20Confirm.jpg)
 
-### Step 2f GitHub Repository select the 2 branches icon:
+Step 2f GitHub Repository select the 2 branches icon:
 
 ![GitHub Repository select the 2 branches ]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Branches 2.jpg)
 
-### Step 2g GitHub delete master branch:
+#### Step 2g GitHub delete master branch:
 
 ![GitHub delete master branch]({{site.baseurl}}/assets/2016-07-17/GitHub Repository Delete master Branch.jpg)
 

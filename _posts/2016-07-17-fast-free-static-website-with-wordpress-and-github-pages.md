@@ -105,17 +105,87 @@ Repository in Local Folder:
 
 ## Create a Static Site from WordPress
 
-So, after some research and trial and error, my preferred WordPress plugin to generate static content is https://en-gb.wordpress.org/plugins/simply-static/.  Not only it work, but it is kept up to date and it has top ratings.
+So, after some research and trial and error, my preferred WordPress plugin to generate static content is [Simply Static](https://en-gb.wordpress.org/plugins/simply-static/).  Not only it work, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the plugin to WordPress as usual.
 
-**Work in progress!**
+### Step 4 - Update Simply Static Settings
 
+The static website URL hosted with Github Pages is shown on the Settings Page of your repository (see step 2b for the GitHub settings), it is the GitHub username followed by the repository name. For example; Your site is published at https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.  
 
-### Step 1 - Update Simply Static Settings
+#### Step 4a Go To Simply Static Settings
 
-### Step 2 - Generate Content
+![Wordpress Simply Static Plugin Settings]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Settings.jpg)
+
+#### Step 4b Set the Destination URL
+
+The Destination URL is where the site will be published on the public world wide web.  Note that the Origin URL will usually be localhost:8888 if WordPress is installed locally.
+
+![Simply Static Destination URL]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Destination URL.jpg)
+
+#### Step 4c Set the Local Directory
+
+The Local Directory is where the Static Site plugin will write its generated folders and files. This should be the location of the **GitHub Repository Folder** created previously in **Step 3b**. This will be used later to publish the site to GitHub Pages.
+
+![WordPress Simply Static Set Local Directory]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Local Directory.jpg)
+
+Remember to press Save.
+
+#### Step 4c Static Site Plugin - Advanced Tab
+
+In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab
+
+![Static Site Advanced Tab]({{site.baseurl}}/assets/20116-07-17/WordPress Simply Static Advanced Tab.jpg)
+
+#### Step 4d Static Site Plugin - Enter Uploads Folder Location in Additional Folders
+
+Remember to press Save.
+
+![Static Site Additional Folder]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Additional Folders.jpg)
+
+### Step 5 - Simply Static Plugin - Generate Content
+
+Great, now that the settings are all saved, we can now generate the static content.
+
+#### Step 5a Navigate to Simply Static -> Generate and Click the Generate Button
+
+![WordPress Simply Static Plugin Generate]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Generate.jpg)
+
+#### Step 5a Simply Static Review Generated Log
+
+It may take a while to generate your static content, depending on the size of your site - I would recommend using a local machine with Solid State Disk.  You may see some errors, but hopefully nothing significant - this one is OK and only took 13 seconds.
+
+![Simply Static Plugin Done]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Done.jpg)
 
 ## Publish Static Site to Github Pages
 
-### Step 1 - 
+### Step 6 - Commit Changes and Sync to Origin (GitHub Pages)
 
-The static websites hosted with Github Pages by default are shown in the form https://hyweljohnllewellyn.github.io/carolsingershire/ , with the Github username followed by the repository name. If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html)
+Open the GitHub Desktop Application and you will see uncommitted changes - lots if this is the first time you generate content for a new site.  It is worth noting that if you regenerate and synchronise that **only changed** files will be committed and synced - github keeps track of changes.  This is a major benefit of using GitHub - version control!
+
+#### Step 6a GitHub Desktop - Enter a Meaningful Commit Summary 
+
+![GitHub Dektop Commit Summary Message]({{site.baseurl}}/assets/2016-07-17/GitHub Desktop Commit Static Content.jpg)
+
+#### Step 6b GitHub Desktop - Press Sync
+
+![GitHub Desktop Sync]({{site.baseurl}}/assets/2016-07-17/GitHub Desktop Sync Button.jpg)
+
+Note that you may be asked for your GitHub credentials:
+
+![GitHub Credentials Log In]({{site.baseurl}}/assets/2016-07-17/GitHub Desktop Sign In.jpg)
+
+If it is your initial commit for a new site, the sync may take some time.  
+
+#### Step 6c GitHub Pages - Check your Repository
+
+Particularly following an initial commit and sync for a new webisite, check the GitHub Pages Repository Online
+![GitHub Pages Repository Online]({{site.baseurl}}/assets/2016-07-17/GitHub Pages Onlie Repository.jpg)
+
+## Enjoy a Fast Free Static Website Generated from WordPress and Hosted on GitHub
+
+Go to your URL, see my [https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/](https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/) example.
+
+## Some Closing Thoughts 
+
+If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html)
+
+Note that I have not discussed SEO or any other optimisation considerations. 

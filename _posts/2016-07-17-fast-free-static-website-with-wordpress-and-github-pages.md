@@ -86,7 +86,7 @@ For Hosting your static content, GitHub Pages requires that the content be in th
 
 ### Step 3 - Clone GitHub Repository to your Local Machine 
 
-If like me you are relatively new to the world of Git repositories, the idea of cloning, pushing and merging is a bit uncomfortable.  But thankfully, there is a great App available [GitHub Desktop](https://desktop.github.com/) to make it a bit easier.  
+If like me you are relatively new to the world of Git repositories, the idea of cloning, pushing and merging is a bit uncomfortable.  But thankfully, there is a great App available [GitHub Desktop](https://desktop.github.com/) to make it a bit easier.  Download this to follow the rest of this guide.
 
 #### Step 3a Select "clone or download" and "Open in Desktop"
 

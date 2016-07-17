@@ -133,7 +133,7 @@ Remember to press Save.
 
 In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab
 
-![Static Site Advanced Tab]({{site.baseurl}}/assets/20116-07-17/WordPress Simply Static Advanced Tab.jpg)
+![Static Site Advanced Tab]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Advanced Tab.jpg)
 
 #### Step 4d Static Site Plugin - Enter Uploads Folder Location in Additional Folders
 
@@ -191,4 +191,4 @@ Go to your URL, see my [https://hyweljohnllewellyn.github.io/carol-singers-hire-
 
 If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html)
 
-Note that I have not discussed SEO or any other optimisation considerations. 
+Note that I have not discussed SEO or any other optimisation considerations.

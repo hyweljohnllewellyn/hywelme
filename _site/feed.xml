@@ -6,9 +6,214 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Jun 2016 15:12:18 +0100</pubDate>
-    <lastBuildDate>Sun, 12 Jun 2016 15:12:18 +0100</lastBuildDate>
+    <pubDate>Sun, 17 Jul 2016 20:03:33 +0100</pubDate>
+    <lastBuildDate>Sun, 17 Jul 2016 20:03:33 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Fast Free Static Website with WordPress and GitHub Pages</title>
+        <description>&lt;h2 id=&quot;wordpress-is-great-but-what-about-static-sites&quot;&gt;WordPress is Great, But what about Static Sites&lt;/h2&gt;
+
+&lt;p&gt;If you would do a search, WordPress.org is used by more that 20% of sites on the public internet.&lt;/p&gt;
+
+&lt;p&gt;However, I find that maintaining multiple sites, with constant maintenance for security and plugin updates can be tedious.  There are also hosting fees to consider if using &lt;a href=&quot;https://wordpress.org/&quot;&gt;WordPress.org&lt;/a&gt;, though I can recommend &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;Digital Ocean&lt;/a&gt; for this - starting at $5 a month it has provided me with a great service.&lt;/p&gt;
+
+&lt;p&gt;Also, many WordPress sites are not as fast as they should be because it is generating content dynamically as the user requests it, unless using a cache plugin, which is effectively saving a “static” copy of the site.&lt;/p&gt;
+
+&lt;p&gt;So, as described in the migrate a Drupal 6 Website to a Static Site post, I have  investigated Static Site Generators such as &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.   However, I found that these generators are currently too technical for most users.&lt;/p&gt;
+
+&lt;h2 id=&quot;best-of-both&quot;&gt;Best of Both?&lt;/h2&gt;
+
+&lt;p&gt;What about installing WordPress on a local computer, writing the site and publishing only static content to the public web?  This would provide:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;free hosting for static websites with &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the speed and security of a static site&lt;/li&gt;
+  &lt;li&gt;the usability and resourcefulness of WordPress&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What do others on the web say?&lt;/p&gt;
+
+&lt;p&gt;As as described in and old post on &lt;a href=&quot;https://www.quora.com/How-do-you-export-a-WordPress-site-to-a-static-HTML/&quot;&gt;How to export a WordPress site to a static HTML&lt;/a&gt; , the drawbacks of static sites are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no comments functionality. Using third party commenting systems such as Disqus is suggested.&lt;/li&gt;
+  &lt;li&gt;dynamically generated content such as recent posts, recent comments, related posts, would be saved as static (if used)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, the speed increase of a static site, even over a cache’d site is well described by &lt;a href=&quot;https://www.futurehosting.com/blog/building-a-static-site-with-wordpress/&quot;&gt;Building a Static Site with Wordpress&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My favourite is an amusing look at using WordPress to generate static content is by &lt;a href=&quot;https://timnash.co.uk/using-wordpress-static-site-generator/&quot;&gt;Tim Nash&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Now you can do the same with Drupal and there are dedicated Static Site Generators that are more then capable of doing all that but they don’t have the level of resources, the ease of training and all the usual benefits of WordPress – in effect, it allows the best of both worlds. I don’t want to use yet another CMS when WordPress will do an excellent job for me.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, to summarise for this guide, we will create a GitHub Pages Repository, Generate Static Content from WordPress and then Publish to GitHub.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-a-github-pages-repository-to-host-the-static-wordpress-site&quot;&gt;Create a Github Pages Repository to Host the Static WordPress Site&lt;/h2&gt;
+
+&lt;h3 id=&quot;step-1---create-a-new-github-repository&quot;&gt;Step 1 - Create a New GitHub Repository&lt;/h3&gt;
+
+&lt;h4 id=&quot;step-1a-once-you-have-logged-into-your-github-account-click-the-repositories-tab-and-select-new&quot;&gt;Step 1a Once you have logged into your GitHub account, click the Repositories tab and select New.&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/New GitHub Repository.jpg&quot; alt=&quot;New GitHub Repository&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-1b-give-your-repository-a-name-and-ensure-to-select-initialize-this-repository-with-a-readme&quot;&gt;Step 1b Give your repository a name and ensure to select “Initialize this repository with a Readme”&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Name.jpg&quot; alt=&quot;GitHub Repository Name&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2---create-gh-pages-branch-set-as-default-and-delete-master-branch&quot;&gt;Step 2 - Create gh-pages Branch Set as Default and Delete master Branch&lt;/h3&gt;
+
+&lt;p&gt;For Hosting your static content, GitHub Pages requires that the content be in the gh-pages branch of the repository.  I feel that this makes the master branch redundant, so I delete this to keep things simple.  There are a few clicks, but it is quite simple.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2a-create-gh-pages-branch&quot;&gt;Step 2a Create gh-pages branch:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Create gh-pages branch.jpg&quot; alt=&quot;GitHub Repository Create gh-pages branch&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2b-go-to-settings&quot;&gt;Step 2b Go to Settings:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Settings.jpg&quot; alt=&quot;GitHub Repository Settings&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2c-go-to-branches&quot;&gt;Step 2c Go to Branches:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Branches.jpg&quot; alt=&quot;Click GitHub Branches&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2d-github-repository-select-default-branch&quot;&gt;Step 2d GitHub repository select default branch:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Default Branches.jpg&quot; alt=&quot;GitHub repository select default branch&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2e-github-confirm-default-repository&quot;&gt;Step 2e GitHub confirm default repository:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub%20Repository%20Default%20Branch%20Confirm.jpg&quot; alt=&quot;GitHub confirm default repository&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2f-github-repository-select-the-2-branches-icon&quot;&gt;Step 2f GitHub Repository select the 2 branches icon:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Branches 2.jpg&quot; alt=&quot;GitHub Repository select the 2 branches &quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2g-github-delete-master-branch&quot;&gt;Step 2g GitHub delete master branch:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Delete master Branch.jpg&quot; alt=&quot;GitHub delete master branch&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3---clone-github-repository-to-your-local-machine&quot;&gt;Step 3 - Clone GitHub Repository to your Local Machine&lt;/h3&gt;
+
+&lt;p&gt;If like me you are relatively new to the world of Git repositories, the idea of cloning, pushing and merging is a bit uncomfortable.  But thankfully, there is a great App available &lt;a href=&quot;https://desktop.github.com/&quot;&gt;GitHub Desktop&lt;/a&gt; to make it a bit easier.  Download this to follow the rest of this guide.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-3a-select-clone-or-download-and-open-in-desktop&quot;&gt;Step 3a Select “clone or download” and “Open in Desktop”&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Repository Clone - Open in Desktop.jpg&quot; alt=&quot;GitHub Repository Clone Open in Desktop&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click the “Launch Application” or equivalent message to confirm&lt;/p&gt;
+
+&lt;h4 id=&quot;step-3b-confirm-folder-location-to-clone-repository&quot;&gt;Step 3b Confirm Folder location to Clone Repository&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Desktop Location to Clone.jpg&quot; alt=&quot;Location to Clone Repository&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Repository in Local Folder:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/Repository Cloned to Local Folder.jpg&quot; alt=&quot;Local Folder Showing readme&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;create-a-static-site-from-wordpress&quot;&gt;Create a Static Site from WordPress&lt;/h2&gt;
+
+&lt;p&gt;So, after some research and trial and error, my preferred WordPress plugin to generate static content is &lt;a href=&quot;https://en-gb.wordpress.org/plugins/simply-static/&quot;&gt;Simply Static&lt;/a&gt;.  Not only it work, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the plugin to WordPress as usual.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4---update-simply-static-settings&quot;&gt;Step 4 - Update Simply Static Settings&lt;/h3&gt;
+
+&lt;p&gt;The static website URL hosted with Github Pages is shown on the Settings Page of your repository (see step 2b for the GitHub settings), it is the GitHub username followed by the repository name. For example; Your site is published at https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4a-go-to-simply-static-settings&quot;&gt;Step 4a Go To Simply Static Settings&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Settings.jpg&quot; alt=&quot;Wordpress Simply Static Plugin Settings&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4b-set-the-destination-url&quot;&gt;Step 4b Set the Destination URL&lt;/h4&gt;
+
+&lt;p&gt;The Destination URL is where the site will be published on the public world wide web.  Note that the Origin URL will usually be localhost:8888 if WordPress is installed locally.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Destination URL.jpg&quot; alt=&quot;Simply Static Destination URL&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4c-set-the-local-directory&quot;&gt;Step 4c Set the Local Directory&lt;/h4&gt;
+
+&lt;p&gt;The Local Directory is where the Static Site plugin will write its generated folders and files. This should be the location of the &lt;strong&gt;GitHub Repository Folder&lt;/strong&gt; created previously in &lt;strong&gt;Step 3b&lt;/strong&gt;. This will be used later to publish the site to GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Local Directory.jpg&quot; alt=&quot;WordPress Simply Static Set Local Directory&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember to press Save.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4c-static-site-plugin---advanced-tab&quot;&gt;Step 4c Static Site Plugin - Advanced Tab&lt;/h4&gt;
+
+&lt;p&gt;In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Advanced Tab.jpg&quot; alt=&quot;Static Site Advanced Tab&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-4d-static-site-plugin---enter-uploads-folder-location-in-additional-folders&quot;&gt;Step 4d Static Site Plugin - Enter Uploads Folder Location in Additional Folders&lt;/h4&gt;
+
+&lt;p&gt;Remember to press Save.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Additional Folders.jpg&quot; alt=&quot;Static Site Additional Folder&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5---simply-static-plugin---generate-content&quot;&gt;Step 5 - Simply Static Plugin - Generate Content&lt;/h3&gt;
+
+&lt;p&gt;Great, now that the settings are all saved, we can now generate the static content.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-5a-navigate-to-simply-static---generate-and-click--generate-static-files&quot;&gt;Step 5a Navigate to Simply Static -&amp;gt; Generate and Click  “Generate Static Files”&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Generate.jpg&quot; alt=&quot;WordPress Simply Static Plugin Generate&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-5a-simply-static-review-generated-log&quot;&gt;Step 5a Simply Static Review Generated Log&lt;/h4&gt;
+
+&lt;p&gt;It may take a while to generate your static content, depending on the size of your site - I would recommend using a local machine with Solid State Disk.  You may see some errors, but hopefully nothing significant - this one is OK and only took 13 seconds.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Done.jpg&quot; alt=&quot;Simply Static Plugin Done&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;publish-static-site-to-github-pages&quot;&gt;Publish Static Site to Github Pages&lt;/h2&gt;
+
+&lt;h3 id=&quot;step-6---commit-changes-and-sync-to-origin-github-pages&quot;&gt;Step 6 - Commit Changes and Sync to Origin (GitHub Pages)&lt;/h3&gt;
+
+&lt;p&gt;Open the GitHub Desktop Application and you will see uncommitted changes - lots if this is the first time you generate content for a new site.  It is worth noting that if you regenerate and synchronise that &lt;strong&gt;only changed&lt;/strong&gt; files will be committed and synced - github keeps track of changes.  This is a major benefit of using GitHub - version control!&lt;/p&gt;
+
+&lt;h4 id=&quot;step-6a-github-desktop---enter-a-meaningful-commit-summary-and-click-commit-to-gh-pages&quot;&gt;Step 6a GitHub Desktop - Enter a Meaningful Commit Summary and Click “Commit to gh-pages”&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Desktop Commit Static Content.jpg&quot; alt=&quot;GitHub Dektop Commit Summary Message&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-6b-github-desktop---press-sync&quot;&gt;Step 6b GitHub Desktop - Press Sync&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Desktop Sync Button.jpg&quot; alt=&quot;GitHub Desktop Sync&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that you may be asked for your GitHub credentials:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/GitHub Desktop Sign In.jpg&quot; alt=&quot;GitHub Credentials Log In&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If it is your initial commit for a new site, the sync may take some time.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-6c-github-pages---check-your-repository&quot;&gt;Step 6c GitHub Pages - Check your Repository&lt;/h4&gt;
+
+&lt;p&gt;Particularly following an initial commit and sync for a new webisite, check the GitHub Pages Repository Online
+&lt;img src=&quot;/assets/2016-07-17/GitHub Pages Onlie Repository.jpg&quot; alt=&quot;GitHub Pages Repository Online&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;enjoy-a-fast-free-static-website-generated-from-wordpress-and-hosted-on-github&quot;&gt;Enjoy a Fast Free Static Website Generated from WordPress and Hosted on GitHub&lt;/h2&gt;
+
+&lt;p&gt;Go to your URL, see my &lt;a href=&quot;https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/&quot;&gt;https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/&lt;/a&gt; example.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/Static Website Live Hosted on GitHub Pages.jpg&quot; alt=&quot;Static Website Generated from Wordpress Hosted on GitHub Pages&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;some-closing-thoughts&quot;&gt;Some Closing Thoughts&lt;/h2&gt;
+
+&lt;p&gt;If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at &lt;a href=&quot;http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html&quot;&gt;GitHub Pages Custom Domain Names with CloudFlare&lt;/a&gt;.  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example &lt;a href=&quot;https://www.carolsingershire.uk/&quot;&gt;https://www.carolsingershire.uk&lt;/a&gt; instead of the github reposirory URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.&lt;/p&gt;
+
+&lt;p&gt;Note that I have not discussed SEO or any other optimisation considerations.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Jul 2016 10:28:00 +0100</pubDate>
+        <link>http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</guid>
+        
+        
+        <category>static</category>
+        
+        <category>site</category>
+        
+        <category>wordpress</category>
+        
+      </item>
     
       <item>
         <title>Migrate a Drupal 6 Website to WordPress 4.5</title>
@@ -47,9 +252,11 @@
 
 &lt;h2 id=&quot;migrate-the-website-database-from-drupal-6-to-wordpress-45&quot;&gt;Migrate the Website Database from Drupal 6 to WordPress 4.5&lt;/h2&gt;
 
-&lt;p&gt;After some research, I found the following resource by Scott Anderson in 2010 for &lt;a href=&quot;http://blog.room34.com/archives/4530&quot;&gt;migrating a blog from Drupal to WordPress 3.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After some research, I found the following conversion to migrate from Drupal to WordPress, last updated by by &lt;a href=&quot;http://blog.room34.com/archives/4530&quot;&gt;Scott Anderson&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Primarily it provides a SQL script, which I used as a basis and modified.   My modified script &lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-06-12/drupal-to-wordpress.sql&quot;&gt;drupal-to-wordpress.sql can be found at GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Detailed instructions are also described in a post by &lt;a href=&quot;http://toodlepip.co.uk/2014/migrating-drupal-6-wordpress-part-2-drupal-wordpress/#References&quot;&gt;Sam Michael&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For your use please:&lt;/p&gt;
 
@@ -147,7 +354,7 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
   &lt;li&gt;Create a contact us page using Goggle App engine - to send enquiries via email&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;let me know which to cover first!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit 17th July&lt;/strong&gt;- Please see my guide - &lt;a href=&quot;http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html&quot;&gt;Free Fast Sites Generated from WordPress &lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 12 Jun 2016 13:18:00 +0100</pubDate>
         <link>http://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
@@ -1149,77 +1356,6 @@ sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
         
         
         <category>digitalocean</category>
-        
-      </item>
-    
-      <item>
-        <title>Convert Office 365 User Email to Shared Mailbox and Remove the User License</title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;https://impus.tradedoubler.com/imp?pop(under)g(22879726)a(2850736)&quot; charset=&quot;ISO-8859-1&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;what-is-the-scenario&quot;&gt;What is the Scenario?&lt;/h2&gt;
-&lt;p&gt;A temporary member of admin staff was provided with a dedicated user mailbox and therefore an Office 365 License.  Now the staff member is no longer required, the License can be released.&lt;/p&gt;
-
-&lt;p&gt;In order to keep the email for future reference and/ or for the same staff member to return,  converting the user email to a shared mailbox is the best option.  It would then be possible to unsubscribe from the Office 365 license.&lt;/p&gt;
-
-&lt;h2 id=&quot;convert-user-mailbox-to-a-shared-mailbox&quot;&gt;Convert User Mailbox to a Shared Mailbox&lt;/h2&gt;
-
-&lt;h4 id=&quot;step-1---go-to-the-admin-console-in-office-365-and-select-exchange-from-the-options-to-the-left-of-the-screen&quot;&gt;Step 1 - Go to the Admin console in Office 365 and select Exchange from the options to the left of the screen&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/admin console in office 365.jpg&quot; alt=&quot;admin console in office 365&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 exchange.jpg&quot; alt=&quot;office 365 exchange&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-2---click-on-mailboxes-under-recipients&quot;&gt;Step 2 - Click On mailboxes under recipients&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 mailboxes under reciptients.jpg&quot; alt=&quot;mailboxes under recipients&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-3---select-the-user-mailbox-to-be-converted--and-click-on-convert-under-the-convert-to-shared-mailbox-option-to-the-right-of-the-screen--a-warning-will-be-shown-click-yes-to-continue&quot;&gt;Step 3 - Select the User Mailbox to be converted  and click on Convert under the Convert to Shared Mailbox option to the right of the screen.  A warning will be shown, click Yes to continue.&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 mailbox to convert to shared.jpg&quot; alt=&quot;mailbox to convert to shared&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/warning.jpg&quot; alt=&quot;warning&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-4---your-regular-mailbox-has-been-converted-into-shared-mailbox--click-close-to-continue&quot;&gt;Step 4 - Your regular mailbox has been converted into shared mailbox.  Click Close to continue.&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/regular mailbox converted to shared.jpg&quot; alt=&quot;regular mailbox converted to shared.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;unsubscribe-from-unused-office-365-license&quot;&gt;Unsubscribe from Unused Office 365 License&lt;/h2&gt;
-
-&lt;h4 id=&quot;step-5---go-to-the-admin-console-in-office-365-and-select-active-users-under-the-users-option-on-the-left&quot;&gt;Step 5 - Go to the Admin console in Office 365 and Select Active Users under the Users option on the left&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 active users.jpg&quot; alt=&quot;office 365 active users.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-6---select-the-user-and-click-edit-under-assigned-license-on-the-right-of-the-screen&quot;&gt;Step 6 - Select the User and Click Edit under Assigned license on the right of the screen&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 assigned user license.jpg&quot; alt=&quot;office 365 assigned user license.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-7---uncheck-the-office-365-business-essentials-license-and-click-save&quot;&gt;Step 7 - Uncheck the Office 365 Business Essentials license and Click Save&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/Uncheck Office 365 Business Essentials license.jpg&quot; alt=&quot;Uncheck Office 365 Business Essentials license.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-8---in-the-admin-console-of-office-365-select-subscriptions-under-the-billing-option-on-the-left-of-the-screen--then-click-addremove-users--notice-that-there-are-currently-two-purchased-and-one-assigned&quot;&gt;Step 8 - In the Admin console of Office 365, select Subscriptions under the Billing option on the left of the screen.  Then click Add/Remove users.  Notice that there are currently two purchased, and one assigned.&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 remove user subscription.jpg&quot; alt=&quot;office 365 remove user subscription.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;step-9---reduce-the-number-of-total-licenses-and-click-submit-to-confirm&quot;&gt;Step 9 - Reduce the number of Total licenses and click Submit to confirm&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-01-12/office 365 reduce the number of licenses.jpg&quot; alt=&quot;office 365 reduce the number of licenses.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This subscription’s quantity was successfully updated.  Done!&lt;/p&gt;
-
-&lt;p&gt;Note that you could now provide access to the new shared mailbox to other users,  see &lt;a href=&quot;https://support.office.com/en-my/article/Open-and-use-a-shared-mailbox-in-Outlook-Web-App-bc127866-42be-4de7-92ae-1ef2f787fd5c?ui=en-US&amp;amp;rs=en-MY&amp;amp;ad=MY#__migbm_0&quot;&gt;Open and Use a Shared Mailbox&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also describe &lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html&quot;&gt;How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 12 Jan 2016 20:43:00 +0000</pubDate>
-        <link>http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html</guid>
-        
-        
-        <category>small</category>
-        
-        <category>business</category>
-        
-        <category>email</category>
         
       </item>
     

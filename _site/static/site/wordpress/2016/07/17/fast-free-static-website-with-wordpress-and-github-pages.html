@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title >Fast Free Static Website with WordPress and GitHub Pages </title>
+
+  <meta name="description" content="WordPress is Great, But what about Static Sites">
+
+  <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />  
+  <link rel="author" href="https://plus.google.com/u/0/116119715872022757453"/>
+</head>
+
+
+  <body>
+    <!--Adsense Page Level Adverts-->
+
+
+    
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/" ><img src="http://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+  
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <!--analytics.google.com tracking code-->
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Fast Free Static Website with WordPress and GitHub Pages</h1>
+    <p class="post-meta">Jul 17, 2016 ✎ Hywel • github pages wordpress static plugin</p>
+  </header>
+
+  
+  <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
+  
+
+
+  <article class="post-content">
+    <h2 id="wordpress-is-great-but-what-about-static-sites">WordPress is Great, But what about Static Sites</h2>
+
+<p>If you would do a search, WordPress.org is used by more that 20% of sites on the public internet.</p>
+
+<p>However, I find that maintaining multiple sites, with constant maintenance for security and plugin updates can be tedious.  There are also hosting fees to consider if using <a href="https://wordpress.org/">WordPress.org</a>, though I can recommend <a href="https://www.digitalocean.com/?refcode=92e12787bf7a">Digital Ocean</a> for this - starting at $5 a month it has provided me with a great service.</p>
+
+<p>Also, many WordPress sites are not as fast as they should be because it is generating content dynamically as the user requests it, unless using a cache plugin, which is effectively saving a “static” copy of the site.</p>
+
+<p>So, as described in the migrate a Drupal 6 Website to a Static Site post, I have  investigated Static Site Generators such as <a href="https://jekyllrb.com/">Jekyll</a> and <a href="http://gohugo.io/">Hugo</a>.   However, I found that these generators are currently too technical for most users.</p>
+
+<h2 id="best-of-both">Best of Both?</h2>
+
+<p>What about installing WordPress on a local computer, writing the site and publishing only static content to the public web?  This would provide:</p>
+
+<ol>
+  <li>free hosting for static websites with <a href="https://pages.github.com/">Github Pages</a></li>
+  <li>the speed and security of a static site</li>
+  <li>the usability and resourcefulness of WordPress</li>
+</ol>
+
+<p>What do others on the web say?</p>
+
+<p>As as described in and old post on <a href="https://www.quora.com/How-do-you-export-a-WordPress-site-to-a-static-HTML/">How to export a WordPress site to a static HTML</a> , the drawbacks of static sites are:</p>
+
+<ul>
+  <li>no comments functionality. Using third party commenting systems such as Disqus is suggested.</li>
+  <li>dynamically generated content such as recent posts, recent comments, related posts, would be saved as static (if used)</li>
+</ul>
+
+<p>However, the speed increase of a static site, even over a cache’d site is well described by <a href="https://www.futurehosting.com/blog/building-a-static-site-with-wordpress/">Building a Static Site with Wordpress</a></p>
+
+<p>My favourite is an amusing look at using WordPress to generate static content is by <a href="https://timnash.co.uk/using-wordpress-static-site-generator/">Tim Nash</a>:</p>
+
+<blockquote>
+  <p>“Now you can do the same with Drupal and there are dedicated Static Site Generators that are more then capable of doing all that but they don’t have the level of resources, the ease of training and all the usual benefits of WordPress – in effect, it allows the best of both worlds. I don’t want to use yet another CMS when WordPress will do an excellent job for me.</p>
+</blockquote>
+
+<p>So, to summarise for this guide, we will create a GitHub Pages Repository, Generate Static Content from WordPress and then Publish to GitHub.</p>
+
+<h2 id="create-a-github-pages-repository-to-host-the-static-wordpress-site">Create a Github Pages Repository to Host the Static WordPress Site</h2>
+
+<h3 id="step-1---create-a-new-github-repository">Step 1 - Create a New GitHub Repository</h3>
+
+<h4 id="step-1a-once-you-have-logged-into-your-github-account-click-the-repositories-tab-and-select-new">Step 1a Once you have logged into your GitHub account, click the Repositories tab and select New.</h4>
+
+<p><img src="/assets/2016-07-17/New GitHub Repository.jpg" alt="New GitHub Repository" /></p>
+
+<h4 id="step-1b-give-your-repository-a-name-and-ensure-to-select-initialize-this-repository-with-a-readme">Step 1b Give your repository a name and ensure to select “Initialize this repository with a Readme”</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Name.jpg" alt="GitHub Repository Name" /></p>
+
+<h3 id="step-2---create-gh-pages-branch-set-as-default-and-delete-master-branch">Step 2 - Create gh-pages Branch Set as Default and Delete master Branch</h3>
+
+<p>For Hosting your static content, GitHub Pages requires that the content be in the gh-pages branch of the repository.  I feel that this makes the master branch redundant, so I delete this to keep things simple.  There are a few clicks, but it is quite simple.</p>
+
+<h4 id="step-2a-create-gh-pages-branch">Step 2a Create gh-pages branch:</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Create gh-pages branch.jpg" alt="GitHub Repository Create gh-pages branch" /></p>
+
+<h4 id="step-2b-go-to-settings">Step 2b Go to Settings:</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Settings.jpg" alt="GitHub Repository Settings" /></p>
+
+<h4 id="step-2c-go-to-branches">Step 2c Go to Branches:</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Branches.jpg" alt="Click GitHub Branches" /></p>
+
+<h4 id="step-2d-github-repository-select-default-branch">Step 2d GitHub repository select default branch:</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Default Branches.jpg" alt="GitHub repository select default branch" /></p>
+
+<h4 id="step-2e-github-confirm-default-repository">Step 2e GitHub confirm default repository:</h4>
+
+<p><img src="/assets/2016-07-17/GitHub%20Repository%20Default%20Branch%20Confirm.jpg" alt="GitHub confirm default repository" /></p>
+
+<h4 id="step-2f-github-repository-select-the-2-branches-icon">Step 2f GitHub Repository select the 2 branches icon:</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Branches 2.jpg" alt="GitHub Repository select the 2 branches " /></p>
+
+<h4 id="step-2g-github-delete-master-branch">Step 2g GitHub delete master branch:</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Delete master Branch.jpg" alt="GitHub delete master branch" /></p>
+
+<h3 id="step-3---clone-github-repository-to-your-local-machine">Step 3 - Clone GitHub Repository to your Local Machine</h3>
+
+<p>If like me you are relatively new to the world of Git repositories, the idea of cloning, pushing and merging is a bit uncomfortable.  But thankfully, there is a great App available <a href="https://desktop.github.com/">GitHub Desktop</a> to make it a bit easier.  Download this to follow the rest of this guide.</p>
+
+<h4 id="step-3a-select-clone-or-download-and-open-in-desktop">Step 3a Select “clone or download” and “Open in Desktop”</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Repository Clone - Open in Desktop.jpg" alt="GitHub Repository Clone Open in Desktop" /></p>
+
+<p>Click the “Launch Application” or equivalent message to confirm</p>
+
+<h4 id="step-3b-confirm-folder-location-to-clone-repository">Step 3b Confirm Folder location to Clone Repository</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Desktop Location to Clone.jpg" alt="Location to Clone Repository" /></p>
+
+<p>Repository in Local Folder:</p>
+
+<p><img src="/assets/2016-07-17/Repository Cloned to Local Folder.jpg" alt="Local Folder Showing readme" /></p>
+
+<h2 id="create-a-static-site-from-wordpress">Create a Static Site from WordPress</h2>
+
+<p>So, after some research and trial and error, my preferred WordPress plugin to generate static content is <a href="https://en-gb.wordpress.org/plugins/simply-static/">Simply Static</a>.  Not only it work, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the plugin to WordPress as usual.</p>
+
+<h3 id="step-4---update-simply-static-settings">Step 4 - Update Simply Static Settings</h3>
+
+<p>The static website URL hosted with Github Pages is shown on the Settings Page of your repository (see step 2b for the GitHub settings), it is the GitHub username followed by the repository name. For example; Your site is published at https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.</p>
+
+<h4 id="step-4a-go-to-simply-static-settings">Step 4a Go To Simply Static Settings</h4>
+
+<p><img src="/assets/2016-07-17/WordPress Simply Static Settings.jpg" alt="Wordpress Simply Static Plugin Settings" /></p>
+
+<h4 id="step-4b-set-the-destination-url">Step 4b Set the Destination URL</h4>
+
+<p>The Destination URL is where the site will be published on the public world wide web.  Note that the Origin URL will usually be localhost:8888 if WordPress is installed locally.</p>
+
+<p><img src="/assets/2016-07-17/WordPress Simply Static Destination URL.jpg" alt="Simply Static Destination URL" /></p>
+
+<h4 id="step-4c-set-the-local-directory">Step 4c Set the Local Directory</h4>
+
+<p>The Local Directory is where the Static Site plugin will write its generated folders and files. This should be the location of the <strong>GitHub Repository Folder</strong> created previously in <strong>Step 3b</strong>. This will be used later to publish the site to GitHub Pages.</p>
+
+<p><img src="/assets/2016-07-17/WordPress Simply Static Local Directory.jpg" alt="WordPress Simply Static Set Local Directory" /></p>
+
+<p>Remember to press Save.</p>
+
+<h4 id="step-4c-static-site-plugin---advanced-tab">Step 4c Static Site Plugin - Advanced Tab</h4>
+
+<p>In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab</p>
+
+<p><img src="/assets/2016-07-17/WordPress Simply Static Advanced Tab.jpg" alt="Static Site Advanced Tab" /></p>
+
+<h4 id="step-4d-static-site-plugin---enter-uploads-folder-location-in-additional-folders">Step 4d Static Site Plugin - Enter Uploads Folder Location in Additional Folders</h4>
+
+<p>Remember to press Save.</p>
+
+<p><img src="/assets/2016-07-17/WordPress Simply Static Additional Folders.jpg" alt="Static Site Additional Folder" /></p>
+
+<h3 id="step-5---simply-static-plugin---generate-content">Step 5 - Simply Static Plugin - Generate Content</h3>
+
+<p>Great, now that the settings are all saved, we can now generate the static content.</p>
+
+<h4 id="step-5a-navigate-to-simply-static---generate-and-click--generate-static-files">Step 5a Navigate to Simply Static -&gt; Generate and Click  “Generate Static Files”</h4>
+
+<p><img src="/assets/2016-07-17/WordPress Simply Static Generate.jpg" alt="WordPress Simply Static Plugin Generate" /></p>
+
+<h4 id="step-5a-simply-static-review-generated-log">Step 5a Simply Static Review Generated Log</h4>
+
+<p>It may take a while to generate your static content, depending on the size of your site - I would recommend using a local machine with Solid State Disk.  You may see some errors, but hopefully nothing significant - this one is OK and only took 13 seconds.</p>
+
+<p><img src="/assets/2016-07-17/WordPress Simply Static Done.jpg" alt="Simply Static Plugin Done" /></p>
+
+<h2 id="publish-static-site-to-github-pages">Publish Static Site to Github Pages</h2>
+
+<h3 id="step-6---commit-changes-and-sync-to-origin-github-pages">Step 6 - Commit Changes and Sync to Origin (GitHub Pages)</h3>
+
+<p>Open the GitHub Desktop Application and you will see uncommitted changes - lots if this is the first time you generate content for a new site.  It is worth noting that if you regenerate and synchronise that <strong>only changed</strong> files will be committed and synced - github keeps track of changes.  This is a major benefit of using GitHub - version control!</p>
+
+<h4 id="step-6a-github-desktop---enter-a-meaningful-commit-summary-and-click-commit-to-gh-pages">Step 6a GitHub Desktop - Enter a Meaningful Commit Summary and Click “Commit to gh-pages”</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Desktop Commit Static Content.jpg" alt="GitHub Dektop Commit Summary Message" /></p>
+
+<h4 id="step-6b-github-desktop---press-sync">Step 6b GitHub Desktop - Press Sync</h4>
+
+<p><img src="/assets/2016-07-17/GitHub Desktop Sync Button.jpg" alt="GitHub Desktop Sync" /></p>
+
+<p>Note that you may be asked for your GitHub credentials:</p>
+
+<p><img src="/assets/2016-07-17/GitHub Desktop Sign In.jpg" alt="GitHub Credentials Log In" /></p>
+
+<p>If it is your initial commit for a new site, the sync may take some time.</p>
+
+<h4 id="step-6c-github-pages---check-your-repository">Step 6c GitHub Pages - Check your Repository</h4>
+
+<p>Particularly following an initial commit and sync for a new webisite, check the GitHub Pages Repository Online
+<img src="/assets/2016-07-17/GitHub Pages Onlie Repository.jpg" alt="GitHub Pages Repository Online" /></p>
+
+<h2 id="enjoy-a-fast-free-static-website-generated-from-wordpress-and-hosted-on-github">Enjoy a Fast Free Static Website Generated from WordPress and Hosted on GitHub</h2>
+
+<p>Go to your URL, see my <a href="https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/">https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/</a> example.</p>
+
+<p><img src="/assets/2016-07-17/Static Website Live Hosted on GitHub Pages.jpg" alt="Static Website Generated from Wordpress Hosted on GitHub Pages" /></p>
+
+<h2 id="some-closing-thoughts">Some Closing Thoughts</h2>
+
+<p>If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at <a href="http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html">GitHub Pages Custom Domain Names with CloudFlare</a>.  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example <a href="https://www.carolsingershire.uk/">https://www.carolsingershire.uk</a> instead of the github reposirory URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.</p>
+
+<p>Note that I have not discussed SEO or any other optimisation considerations.</p>
+
+  </article>
+
+<!-- Hywel Start Disqus Comments -->
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      var disqus_config = function () {
+          this.page.url =  "http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html";  // Replace PAGE_URL with your page's canonical URL variable
+
+          //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//hywelme.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Hywel End Disqus Comments -->
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Have You Wandered Every Land</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <!--li>Have You Wandered Every Land</li-->
+          <li><a href="mailto:hywel.llewellyn@gmail.com">hywel.llewellyn@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/hyweljohnllewellyn">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">hyweljohnllewellyn</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/hywel_llewellyn">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">hywel_llewellyn</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">A personal blog site, with musings about technology and documenting what I learn.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

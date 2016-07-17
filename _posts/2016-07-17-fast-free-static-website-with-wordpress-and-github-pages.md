@@ -145,7 +145,7 @@ Remember to press Save.
 
 Great, now that the settings are all saved, we can now generate the static content.
 
-#### Step 5a Navigate to Simply Static -> Generate and Click the Generate Button
+#### Step 5a Navigate to Simply Static -> Generate and Click  "Generate Static Files"
 
 ![WordPress Simply Static Plugin Generate]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Generate.jpg)
 

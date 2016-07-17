@@ -189,6 +189,6 @@ Go to your URL, see my [https://hyweljohnllewellyn.github.io/carol-singers-hire-
 
 ## Some Closing Thoughts 
 
-If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html).  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example [https://carolsingershire.uk](https://www.carolsingershire.uk/) instead of the github reposirory URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.  
+If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html).  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example [https://www.carolsingershire.uk](https://www.carolsingershire.uk/) instead of the github reposirory URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.  
 
 Note that I have not discussed SEO or any other optimisation considerations.

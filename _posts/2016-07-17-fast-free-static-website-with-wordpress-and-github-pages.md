@@ -149,7 +149,7 @@ Great, now that the settings are all saved, we can now generate the static conte
 
 ![WordPress Simply Static Plugin Generate]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Generate.jpg)
 
-#### Step 5b Simply Static Review Generated Log
+#### Step 5a Simply Static Review Generated Log
 
 It may take a while to generate your static content, depending on the size of your site - I would recommend using a local machine with Solid State Disk.  You may see some errors, but hopefully nothing significant - this one is OK and only took 13 seconds.
 
@@ -161,7 +161,7 @@ It may take a while to generate your static content, depending on the size of yo
 
 Open the GitHub Desktop Application and you will see uncommitted changes - lots if this is the first time you generate content for a new site.  It is worth noting that if you regenerate and synchronise that **only changed** files will be committed and synced - github keeps track of changes.  This is a major benefit of using GitHub - version control!
 
-#### Step 6a GitHub Desktop - Enter a Meaningful Commit Summary 
+#### Step 6a GitHub Desktop - Enter a Meaningful Commit Summary and Click "Commit to gh-pages"
 
 ![GitHub Dektop Commit Summary Message]({{site.baseurl}}/assets/2016-07-17/GitHub Desktop Commit Static Content.jpg)
 

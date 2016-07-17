@@ -133,9 +133,9 @@ However, some things that are still required:
 
 I will not be covering these points explicitly in future posts, unless there are requests! But I will describe:
 
-- Using a WordPress plug-in to convert the site to static files (HTML and javascript)
+- Using a WordPress plug-in to convert the site to static files (HTML and javascript) 
 - Host the WordPress static files on GitHub
 - Create a WordPress Child Theme and style.css to customise the look and feel 
 - Create a contact us page using Goggle App engine - to send enquiries via email
 
-let me know which to cover first!
+**Edit 17th July**- Please see my guide - [Free Fast Sites Generated from WordPress ](http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html)

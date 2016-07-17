@@ -96,11 +96,12 @@ Click the "Launch Application" or equivalent message to confirm
 
 #### Step 3b Confirm Folder location to Clone Repository
 
-![Github Desktop Folder Location to Clone Repository Localy]({{site.baseurl}}/assets/2016/-7-17/GitHub Desktop Location to Clone.jpg)
+![Location to Clone Repository]({{site.baseurl}}/assets/2016-07-17/GitHub Desktop Location to Clone.jpg)
 
 Repository in Local Folder:
 
-![Repository in Local Folder]({{site.baseurl}}/assets/2016/-7-17/Repository Cloned to Local Folder.jpg)
+![Local Folder Showing readme]({{site.baseurl}}/assets/2016-07-17/Repository Cloned to Local Folder.jpg)
+
 
 
 ## Create a Static Site from WordPress

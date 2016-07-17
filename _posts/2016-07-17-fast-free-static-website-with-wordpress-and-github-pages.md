@@ -11,7 +11,7 @@ meta: github pages wordpress static plugin
 
 If you would do a search, WordPress.org is used by more that 20% of sites on the public internet.  
 
-However, I find that maintaining multiple sites, with constant maintenance for security and plugin updates can be tedious.  There are also hosting fees to consider if using [WordPress.org](https://wordpress.org/), though I can recommend Digital Ocean for this - starting at $5 a month it has provided me with a great service.
+However, I find that maintaining multiple sites, with constant maintenance for security and plugin updates can be tedious.  There are also hosting fees to consider if using [WordPress.org](https://wordpress.org/), though I can recommend [Digital Ocean](https://www.digitalocean.com/?refcode=92e12787bf7a ) for this - starting at $5 a month it has provided me with a great service.
 
 Also, many WordPress sites are not as fast as they should be because it is generating content dynamically as the user requests it, unless using a cache plugin, which is effectively saving a "static" copy of the site.
 

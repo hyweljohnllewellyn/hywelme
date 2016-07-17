@@ -184,6 +184,9 @@ Particularly following an initial commit and sync for a new webisite, check the 
 
 Go to your URL, see my [https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/](https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/) example.
 
+![Static Website Generated from Wordpress Hosted on GitHub Pages]({{site.baseurl}}/assets/2016-07-17/Static Website Live Hosted on GitHub Pages.jpg)
+
+
 ## Some Closing Thoughts 
 
 If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html)

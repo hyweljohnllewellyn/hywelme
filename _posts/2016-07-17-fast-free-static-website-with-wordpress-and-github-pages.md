@@ -105,7 +105,7 @@ Repository in Local Folder:
 
 ## Create a Static Site from WordPress
 
-So, after some research and trial and error, my preferred WordPress plugin to generate static content is [Simply Static](https://en-gb.wordpress.org/plugins/simply-static/).  Not only it work, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the plugin to WordPress as usual.
+So, after some research and trial and error, my preferred WordPress plugin to generate static content is [Simply Static](https://en-gb.wordpress.org/plugins/simply-static/).  Not only dies it work well, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the Simply Static plugin as usual.
 
 ### Step 4 - Update Simply Static Settings
 

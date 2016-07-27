@@ -21,7 +21,7 @@ From their website:
 
 Their pricing is comparable to Apple iCloud at $4.99 for 200Gb and are currently offering a 3 month trial.
 
-I share my experience of using this groundbreaking service - to begin...
+I will share my experience of using this groundbreaking service - to begin...
 
 ## Signing Up and Adding Content from Mac
 

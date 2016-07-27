@@ -33,7 +33,7 @@ It is worth noting that all data is currently stored in US datacentres.
 
 ![Welcome upthere]({{site.baseurl}}/assets/2016-07-27/welcome to upthere.jpg)
 
-After downloading the Apple Mac App from their website, I added Photo Services - which added photos taken using Photobooth.
+After downloading the Apple Mac App from their website, I clicked _Connect to photo libraries_ - which added photos taken using Photobooth.
 
 Adding files was simple, just drag the file onto the app.
 

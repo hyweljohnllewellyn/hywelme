@@ -13,10 +13,9 @@ In my previous post on [Unlimited Device Storage Space]({{site.baseurl}}/cloud/s
 
 However at the time of writing this post, the only service available is much like any other - needing to synchronise your device or PC to their cloud.   
 
-During Beta, Upthere provided a camera app that would write photos directly to the Upthere Storage, but it seems to have been discontinued:
+During Beta, Upthere provided a camera app that would write photos directly to the Upthere Storage, but it seems to have been discontinued as posted in [so long for now from upthere camera](http://shutdownlikeaboss.com/post/146893037120/so-long-for-now-from-upthere-camera):
 
 ![The End of Upthere Camera App]({{site.baseurl}}/assets/2016-07-30/end of up there camera.jpg)
-
 
 I wrote to the Upthere support team and this was their response:
 

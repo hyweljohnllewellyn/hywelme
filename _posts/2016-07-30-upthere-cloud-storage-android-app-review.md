@@ -9,11 +9,11 @@ meta: cloud storage service upthere device mobile review
 ---
 ## Unlimited Cloud Storage on your Device - Not Quite Yet
 
-In my previous post on [Unlimited Device Storage Space]({{site.baseurl}}/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html), I installed the new service from [Upthere.com](https://upthere.com/) onto my Mac.  The service promises to write data directly to the cloud - in theroy meaning your device has virtually unlimited storage available.  
+In my previous post on [Unlimited Device Storage Space]({{site.baseurl}}/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html), I installed the new service from [Upthere.com](https://upthere.com/) onto my Mac.  The service promises to write data directly to the cloud - in theory meaning your device has virtually unlimited storage available.  
 
-However at the time of writing this post, the only service available is much like any other - needing to synchronise your device or PC to their cloud.   
+However, currently, the Upthere service is much like any other - needing to synchronise your device or PC to their cloud.   
 
-During Beta, Upthere provided a camera app that would write photos directly to the Upthere Storage, but it seems to have been discontinued as posted in [so long for now from upthere camera](http://shutdownlikeaboss.com/post/146893037120/so-long-for-now-from-upthere-camera):
+During _beta_, Upthere provided a camera app that would write photos directly to the Upthere storage, but it seems to have been discontinued as posted in [so long for now from upthere camera](http://shutdownlikeaboss.com/post/146893037120/so-long-for-now-from-upthere-camera):
 
 ![The End of Upthere Camera App]({{site.baseurl}}/assets/2016-07-30/end of up there camera.jpg)
 

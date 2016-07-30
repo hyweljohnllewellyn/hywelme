@@ -43,4 +43,4 @@ Their _Flow_ shows a history of what has changed
 
 First impressions are that it is an easy to use and well thought out app.
 
-Next time, I will try using the app from my phone.  This is the real test and most likely scenario of taking photos and video without using device storage.
+ In my next post, [upthere cloud storage android app review]({{site.baseurl}}/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html), I will try using the app from my phone.  This is the real test and most likely scenario of taking photos and video without using device storage.

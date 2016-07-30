@@ -57,4 +57,4 @@ This option seemed to have no effect.
 
 This possible bug and the fact that I could not the Upthere service to save camera photos direct to the cloud meant that it was not for me. 
 
-I will certainly be keen to try their service again - when they have a camera app - Until then I will continue to look other providers such as [Google Photos](https://photos.google.com/) or [Apple iCloud](https://www.icloud.com/).
+I will certainly be keen to try their service again - when they have a camera app - Until then I will continue to look to other providers such as [Google Photos](https://photos.google.com/) or [Apple iCloud](https://www.icloud.com/).

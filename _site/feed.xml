@@ -6,9 +6,129 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Jul 2016 20:03:33 +0100</pubDate>
-    <lastBuildDate>Sun, 17 Jul 2016 20:03:33 +0100</lastBuildDate>
+    <pubDate>Sun, 31 Jul 2016 19:36:59 +0100</pubDate>
+    <lastBuildDate>Sun, 31 Jul 2016 19:36:59 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Upthere Cloud Storage Android App Review</title>
+        <description>&lt;h2 id=&quot;unlimited-cloud-storage-on-your-device---not-quite-yet&quot;&gt;Unlimited Cloud Storage on your Device - Not Quite Yet&lt;/h2&gt;
+
+&lt;p&gt;In my previous post on &lt;a href=&quot;/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html&quot;&gt;Unlimited Device Storage Space&lt;/a&gt;, I installed the new service from &lt;a href=&quot;https://upthere.com/&quot;&gt;Upthere.com&lt;/a&gt; onto my Mac.  The service promises to write data directly to the cloud - in theory meaning your device has virtually unlimited storage available.&lt;/p&gt;
+
+&lt;p&gt;However, currently, the Upthere service is much like any other - needing to synchronise your device or PC to their cloud.&lt;/p&gt;
+
+&lt;p&gt;During &lt;em&gt;beta&lt;/em&gt;, Upthere provided a camera app that would write photos directly to the Upthere storage, but it seems to have been discontinued as posted in &lt;a href=&quot;http://shutdownlikeaboss.com/post/146893037120/so-long-for-now-from-upthere-camera&quot;&gt;so long for now from upthere camera&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/end of up there camera.jpg&quot; alt=&quot;The End of Upthere Camera App&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wrote to the Upthere support team and this was their response:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Upthere Support via helpscout.net 
+28 Jul (2 days ago)
+Hi Hywel, 
+Upthere camera is a feature that is currently being worked on and will be available to users at some point in the future. In the meantime you will have to delete pictures that you have uploaded manually from the phone. Hope this helps! 
+–
+Zareena Anwar
+support@upthere.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I guess the promise of unlimited device storage is &lt;em&gt;“at some point in the future”&lt;/em&gt;.  It is just a matter of time.&lt;/p&gt;
+
+&lt;h2 id=&quot;upthere-android-app-installation&quot;&gt;Upthere Android App Installation&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/upthere android mobile install 1.jpg&quot; alt=&quot;upthere android mobile install 1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/upthere android mobile install 2.jpg&quot; alt=&quot;upthere android mobile install 2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/upthere android mobile install 3.jpg&quot; alt=&quot;upthere android mobile install 3.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/upthere android mobile install 4.jpg&quot; alt=&quot;upthere android mobile install 4.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;upthere-android-app-first-impressions&quot;&gt;Upthere Android App First Impressions&lt;/h2&gt;
+
+&lt;p&gt;A good feature is Flow, showing your most recent activity:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/upthere flow mobile recent activity mobile android.jpg&quot; alt=&quot;upthere flow mobile recent activity mobile android.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a potential to import your Music library to stream from the cloud in high fidelity:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/upthere stream music.jpg&quot; alt=&quot;upthere stream music.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I did allow the app to connect to my device’s Gallery, but when I realised it was importing over 1000 photos and videos, I tried to cancel by unselecting the &lt;em&gt;Connect your gallery option&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-30/U there gallery sync turned off.jpg&quot; alt=&quot;U there gallery sync turned off.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This option seemed to have no effect.&lt;/p&gt;
+
+&lt;p&gt;This possible bug and the fact that I could not the Upthere service to save camera photos direct to the cloud meant that it was not for me.&lt;/p&gt;
+
+&lt;p&gt;I will certainly be keen to try their service again - when they have a camera app - Until then I will continue to look to other providers such as &lt;a href=&quot;https://photos.google.com/&quot;&gt;Google Photos&lt;/a&gt; or &lt;a href=&quot;https://www.icloud.com/&quot;&gt;Apple iCloud&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 Jul 2016 11:25:00 +0100</pubDate>
+        <link>http://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</guid>
+        
+        
+        <category>cloud</category>
+        
+        <category>storage</category>
+        
+      </item>
+    
+      <item>
+        <title>Unlimited Storage Space For Your Device </title>
+        <description>&lt;h2 id=&quot;the-future-of-the-cloud&quot;&gt;The Future of the Cloud&lt;/h2&gt;
+
+&lt;p&gt;I have just read about the true potential of the cloud.  A new service has been launched where files are &lt;strong&gt;only&lt;/strong&gt; stored in a Cloud platform from &lt;a href=&quot;https://upthere.com/&quot;&gt;https://upthere.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The implication is fantastic, particularly for devices - no more running out of storage space when taking video  -  there is no local storage, everything is in the cloud, &lt;em&gt;upthere&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-27/upthere home page.jpg&quot; alt=&quot;upthere cloud storage platform&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From their website:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We believe that the time has come for the world to live off of the cloud on a day-to-day basis, not merely treat it as a secondary backup or sync location. This means, however, that writing to and reading from the cloud needs to be robust and fast enough to replace local storage. Rather than juggling multiple copies of a file between devices, our direct write technology keeps everything in the cloud, freeing the device to do what it does best — creating and consuming content.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Their pricing is comparable to Apple iCloud at $4.99 for 200Gb and are currently offering a 3 month trial.&lt;/p&gt;
+
+&lt;p&gt;I will share my experience of using this groundbreaking service - to begin…&lt;/p&gt;
+
+&lt;h2 id=&quot;signing-up-and-adding-content-from-mac&quot;&gt;Signing Up and Adding Content from Mac&lt;/h2&gt;
+
+&lt;p&gt;The usual create an account with email verification.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-27/upthere sign up page.jpg&quot; alt=&quot;Upthere sign up&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is worth noting that all data is currently stored in US datacentres.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-27/welcome to upthere.jpg&quot; alt=&quot;Welcome upthere&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After downloading the Apple Mac App from their website, I clicked &lt;em&gt;Connect to photo libraries&lt;/em&gt; - which added photos taken using Photobooth.&lt;/p&gt;
+
+&lt;p&gt;Adding files was simple, just drag the file onto the app.&lt;/p&gt;
+
+&lt;p&gt;Their &lt;em&gt;Flow&lt;/em&gt; shows a history of what has changed&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-07-27/upthere flow.jpg&quot; alt=&quot;Upthere Flow&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First impressions are that it is an easy to use and well thought out app.&lt;/p&gt;
+
+&lt;p&gt;In my next post, &lt;a href=&quot;/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html&quot;&gt;upthere cloud storage android app review&lt;/a&gt;, I will try using the app from my phone.  This is the real test and most likely scenario of taking photos and video without using device storage.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Jul 2016 19:56:00 +0100</pubDate>
+        <link>http://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</guid>
+        
+        
+        <category>cloud</category>
+        
+        <category>storage</category>
+        
+      </item>
     
       <item>
         <title>Fast Free Static Website with WordPress and GitHub Pages</title>
@@ -115,7 +235,7 @@
 
 &lt;h2 id=&quot;create-a-static-site-from-wordpress&quot;&gt;Create a Static Site from WordPress&lt;/h2&gt;
 
-&lt;p&gt;So, after some research and trial and error, my preferred WordPress plugin to generate static content is &lt;a href=&quot;https://en-gb.wordpress.org/plugins/simply-static/&quot;&gt;Simply Static&lt;/a&gt;.  Not only it work, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the plugin to WordPress as usual.&lt;/p&gt;
+&lt;p&gt;So, after some research and trial and error, my preferred WordPress plugin to generate static content is &lt;a href=&quot;https://en-gb.wordpress.org/plugins/simply-static/&quot;&gt;Simply Static&lt;/a&gt;.  Not only dies it work well, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the Simply Static plugin as usual.&lt;/p&gt;
 
 &lt;h3 id=&quot;step-4---update-simply-static-settings&quot;&gt;Step 4 - Update Simply Static Settings&lt;/h3&gt;
 
@@ -1176,186 +1296,6 @@ drush en migrate_tools&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         
         
         <category>drupal</category>
-        
-      </item>
-    
-      <item>
-        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 1</title>
-        <description>&lt;h2 id=&quot;why---drupal-8httpswwwdrupalorgnewsdrupal-800-released&quot;&gt;Why? - &lt;a href=&quot;https://www.drupal.org/news/drupal-8.0.0-released&quot;&gt;Drupal 8&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;I hope to capture the essence and learnings of migrating a website from Drupal 6 to Drupal 8, which is formally released as production ready.&lt;/p&gt;
-
-&lt;p&gt;I expect this journey to have issues along the way as I am a novice Drupal administrator and have no experience in Theming.  Some key considerations during this migration:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mobile Friendly Theme&lt;/li&gt;
-  &lt;li&gt;Google Search Ranking (it is an existing site)&lt;/li&gt;
-  &lt;li&gt;Audio and Video Playback Capability&lt;/li&gt;
-  &lt;li&gt;Easy to Maintain Content&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;drupal-6-end-of-lifehttpswwwdrupalorgdrupal-6-eol&quot;&gt;&lt;a href=&quot;https://www.drupal.org/drupal-6-eol&quot;&gt;Drupal 6 End Of Life&lt;/a&gt;&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;As announced in the Drupal 6 extended support policy, 3 months after Drupal 8 comes out, Drupal 6 will be end-of-life (EOL).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;On February 24th 2016, Drupal 6 will reach end of life and no longer be supported.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Drupal 8 core provides a Migration path directly from Drupal 6 as an experimental feature, so sites can update directly to Drupal 8 using either a user interface or with Drush.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This improved migration path is one of the main reasons why I have waited for Drupal 8, but by far the main reason is &lt;a href=&quot;https://googlewebmastercentral.blogspot.co.uk/2015/02/finding-more-mobile-friendly-search.html&quot;&gt;Google Rankings&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Starting April 21, we will be expanding our use of mobile-friendliness as a ranking signal. This change will affect mobile searches in all languages worldwide and will have a significant impact in our search results. Consequently, users will find it easier to get relevant, high quality search results that are optimized for their devices.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Drupal 8 was designed with mobile devices first in mind, this article by &lt;a href=&quot;https://axelerant.com/not-magic-drupal-8-mobile-global-reach/&quot;&gt;Axelerant&lt;/a&gt;  describes some of the philosophy behind Drupal 8.  However, Drupal 8 is still in its infancy, so I will be doing my best to find resources during the upgrade, for example
-&lt;a href=&quot;https://www.drupal.org/node/2360331&quot;&gt;27 Questions (and Answers) from My First Drupal 8 Site Build&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-ready---installing-a-local-development-environment&quot;&gt;Getting Ready - Installing a Local Development Environment&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/requirements&quot;&gt;Drupal 8 Requirements&lt;/a&gt; include a Web server, typically Apache, Database, typically MySQL and PHP.  In order to develop Drupal locally, these need to be available. As I am developing on an Apple Mac Mini, a convenient way to ensure all the dependencies are available are by using a package manager.   The choices for me were either:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.mamp.info/en/downloads/&quot;&gt;MAMP&lt;/a&gt; - installs a local server environment in a matter of seconds on your Mac&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;  - the missing package manager for OS X&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Using HomeBrew, all the packages would need to be installed from the command line.  Some tutorials include:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/&quot;&gt;blog.frd.mn&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://discreteunits.com/homebrew-nginx-php-fpm-mysql-on-osx-mavericks/&quot;&gt;discreteunits.com&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://easyengine.io/tutorials/mac/osx-brew-php-mysql-nginx/&quot;&gt;easyengine.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I decided to use  MAMP as it is a much simpler installation process and ultimately i would generally not be developing much locally once the migration to Drupal 8 is complete.  However, I chose Nginx as the web server as my production hosts &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;DigitalOcean.com&lt;/a&gt; and &lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt; use Nginx as default.  I also ensured that MAMP was using PHP 7.0.0.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/MAMP screenshot.png&quot; alt=&quot;MAMP screenshot&quot; /&gt;
-&lt;img src=&quot;/assets/2016-02-05/MAMP with Nginx.png&quot; alt=&quot;MAMP with Nginx&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once MAMP was Installed I used the usual phpmyadmin to create a Drupal 8 MySQL database and user with the &lt;a href=&quot;https://www.drupal.org/requirements/database&quot;&gt;recommended database permissions&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;download-drupal-and-follow-core-drupal-standard-installation-profile&quot;&gt;Download Drupal and Follow Core Drupal “standard” Installation Profile&lt;/h2&gt;
-
-&lt;p&gt;There are many tutorials describing how to install the standard Drupal 8, for example &lt;a href=&quot;https://www.youtube.com/watch?v=bthkQCkrH30&quot;&gt;Drupal 8 Video Installation Guide on Mac OS X&lt;/a&gt;.  Essentially the installation involves:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/start&quot;&gt;Download Drupal 8 Files&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Put Drupal download into the MAMP htdocs and browse to that folder, in my case http://localhost:7888/drupal8/&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/drupal 8 core install.jpg&quot; alt=&quot;drupal 8 core install&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After defining the usual settings during installation, for example timezone you are done…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/drupal 8 core website.jpg&quot; alt=&quot;drupal 8 core website&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the next part, I will install the Drupal migration modules and use Drush to migrate the Drupal 6 database to Drupal 8.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 06 Feb 2016 18:53:00 +0000</pubDate>
-        <link>http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html</guid>
-        
-        
-        <category>drupal</category>
-        
-      </item>
-    
-      <item>
-        <title>Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versions</title>
-        <description>&lt;h2 id=&quot;running-out-of-disk-space&quot;&gt;Running out of Disk Space&lt;/h2&gt;
-
-&lt;p&gt;It has reached a point where the disk usage of a Digital Ocean droplet has reached 69.4% of 19.56Gb.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/running out of disk space.png&quot; alt=&quot;running out of disk space.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I know that the total number of applications I use is broadly 2Gb - so what is using up all that disk space?&lt;/p&gt;
-
-&lt;p&gt;It took a while to learn some useful linux commands to investigate.  A good resource describing &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-top-netstat-du-other-tools-to-monitor-server-resources#df&quot;&gt;tools to monitor server resources&lt;/a&gt; at &lt;a href=&quot;https://www.digitalocean.com/?refcode=92e12787bf7a&quot;&gt;Digital Ocean&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The most useful command for my investigation shows the usage of folders:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo du -h  --max-depth 1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo du max depth 1.png&quot; alt=&quot;sudo du max depth 1.png&quot; /&gt;
-&lt;img src=&quot;/assets/2016-02-05/sudo du lib.png&quot; alt=&quot;sudo du lib.png&quot; /&gt;
-&lt;img src=&quot;/assets/2016-02-05/sudo du modules.png&quot; alt=&quot;sudo du modules.png&quot; /&gt;
-&lt;img src=&quot;/assets/2016-02-05/too many old unused kernels.png&quot; alt=&quot;too many old unused kernels.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see in the /lib/modules folder, there were many old kernel versions taking a total of 5.8Gb.&lt;/p&gt;
-
-&lt;p&gt;I verified the currently running kernel using&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;uname -r&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I was running linux-image-3.13.0-37-generic  - that was an old one….so wanted to use the latest.&lt;/p&gt;
-
-&lt;h3 id=&quot;use-the-latest-ubuntu-kernel-through-digital-ocean-control-panel&quot;&gt;Use the latest Ubuntu kernel through Digital Ocean Control Panel&lt;/h3&gt;
-
-&lt;p&gt;This is a great article on Digital Ocean to show how to change the kernel that is used by your server droplet.  I was not aware of needing to do this so was pleased to find the instructions&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel&quot;&gt;how to update a digitalocean server  kernel&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After following the instructions to change the kernel through the DigitalOcean Control Panel I powered off the droplet.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo poweroff&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Note that whilst my droplet was powered off, I took the opportunity to take a snapshot Image.  This also restarts the droplet once the image is taken.  The droplet kernel was now updated.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/digital ocean droplet now running newer version.png&quot; alt=&quot;digital ocean droplet now running newer version.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;delete-old-kernels-using-sudo-apt-get-remove&quot;&gt;Delete old Kernels using sudo apt-get remove&lt;/h3&gt;
-
-&lt;p&gt;As I am using a service from &lt;a href=&quot;https://www.serverpilot.io/?refcode=c2131f64db72&quot;&gt;Serverpilot.io&lt;/a&gt;, which is a simple  management system for DigitalOcean servers, I contacted them and received this confirmation regarding deleting old kernels:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Justin Samuel (ServerPilot Support)
-Feb 4, 13:55
-Hi Hywel,
-You’re welcome to remove any kernel versions you don’t intend to use again. What you should check before removing any version is that:
-1) It isn’t the most recent kernel version installed.
-2) It isn’t the same kernel version that’s currently running according to uname -r
-3) It isn’t the kernel you have selected in your server settings in DigitalOcean.
-You can then remove a specific kernel with this command:
-sudo apt-get remove linux-image-X.Y.Z-XX-generic&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo apt get remove.png&quot; alt=&quot;sudo apt get remove.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo apt get remove continue.png&quot; alt=&quot;sudo apt get remove continue.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;delete-old-kernels-using-sudo-apt-get-autoremove&quot;&gt;Delete old Kernels using sudo apt-get autoremove&lt;/h3&gt;
-
-&lt;p&gt;The above method though good, still did not remove all the redundant packages and dependencies. It would also be slow and tedious.&lt;/p&gt;
-
-&lt;p&gt;Further reading, I found the following useful link &lt;a href=&quot;https://help.ubuntu.com/community/Lubuntu/Documentation/RemoveOldKernels&quot;&gt;RemoveOldKernels&lt;/a&gt; which describes the use of sudo apt-get autoremove:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The system keeps track of which kernels are older and marks them eligible for removal using this method. Most users should run autoremove every few months or so. Systems with a separate /boot partition should run autoremove every two-four weeks. Mark your calendar, make it a routine. Autoremove can be run as often as you like - running it more often will &lt;strong&gt;not&lt;/strong&gt; harm your system&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get autoremove&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo apt get auto remove continue.png&quot; alt=&quot;sudo apt get auto remove continue.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;According to sudo apt-get autoremove, I cold free up over 7Gb…..here goes…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/sudo du after removing old files.png&quot; alt=&quot;sudo du after removing old files.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-05/system information after.png&quot; alt=&quot;system information after.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The disk usage of a Digital Ocean droplet is now 20.5% of 19.56Gb.  That has reduced the disk usage by almost 50%..I’d say a success.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 05 Feb 2016 06:04:00 +0000</pubDate>
-        <link>http://www.hywel.me/digitalocean/2016/02/05/free-disk-space-on-digital-ocean-droplet-by-removing-unused-ubuntu-versions.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/digitalocean/2016/02/05/free-disk-space-on-digital-ocean-droplet-by-removing-unused-ubuntu-versions.html</guid>
-        
-        
-        <category>digitalocean</category>
         
       </item>
     

@@ -49,7 +49,7 @@ Screen Shot 2016-09-17 at 19.10.21
 ### 2.5 Copy the TXT value shown under the Verify domain screen
 Screen Shot 2016-09-17 at 19.11.43
 
-## Step 3: Verify Domain for Office 365 - Cloudflare DNS is used in this example
+## Step 3: Verify Domain for Office 365 - CloudFlare DNS is used in this example
 
 Open a new browser window, go to your domain within your DNS host. You will be adding a TXT record with the verify value provided by Office 365.
 

@@ -11,7 +11,7 @@ categories: small business email
 ---
 ## Free Email for Additional Domains in Office 365
 
-For small business adding user licences to Office 365 can get costly.  If you already have a domain that is licenced for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licences and so are Free.
+For small business, adding user licences to Office 365 can get costly.  If you already have a domain that is licenced for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licences and so are Free.
 
 There are two parts, Configuring DNS for the Additional Domain, which is described in this post... and Configuring the Office 365 Shared Mailbox for Additional Domains, which will be covered in an upcoming post.
 

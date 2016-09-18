@@ -23,10 +23,10 @@ See other Office 365 tips in my previous articles:
 
 ## Step 1 Identify Required Office 365 DNS for Email 
 
-Using the following, it was worth identifying DNS records that are needed for email using Office 365
-https://support.office.com/en-gb/article/Create-DNS-records-for-Office-365-using-Windows-based-DNS-9eec911d-5773-422c-9593-40e1147ffbde
+Using this link; [Create DNS records for Office 365](https://support.office.com/en-gb/article/Create-DNS-records-for-Office-365-using-Windows-based-DNS-9eec911d-5773-422c-9593-40e1147ffbde),  DNS records that are needed for email using Office 365 were identified
 
 These are:
+
 - An MX record so email for your domain will come to Office 365
 - An Autodiscover CNAME record for the email (Exchange)
 - An SPF TXT record for your domain to help prevent email spam

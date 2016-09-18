@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title >Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in Cloudflare Host </title>
+
+  <meta name="description" content="Free Email for Additional Domains in Office 365">
+
+  <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />  
+  <link rel="author" href="https://plus.google.com/u/0/116119715872022757453"/>
+</head>
+
+
+  <body>
+    <!--Adsense Page Level Adverts-->
+
+
+    
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/" ><img src="http://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+  
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <!--analytics.google.com tracking code-->
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in Cloudflare Host</h1>
+    <p class="post-meta">Sep 18, 2016 ✎ Hywel • Office 365 small business email free</p>
+  </header>
+
+  
+  <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
+  
+
+
+  <article class="post-content">
+    <h2 id="free-email-for-additional-domains-in-office-365">Free Email for Additional Domains in Office 365</h2>
+
+<p>For small business, adding user licences to Office 365 can get costly.  If you already have a domain that is licenced for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licences and so are Free.</p>
+
+<p>There are two parts, Configuring DNS for the Additional Domain, which is described in this post… and Configuring the Office 365 Shared Mailbox for Additional Domains, which will be covered in an upcoming post.</p>
+
+<p>See other Office 365 tips in my previous articles:</p>
+
+<ul>
+  <li><a href="http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html">Convert Office 365 User Email to Shared Mailbox and Remove the User License</a></li>
+  <li><a href="http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html">How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox</a></li>
+  <li><a href="http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html">Microsoft Office 365 Catch-all using Additional Alias Email Addresses</a></li>
+</ul>
+
+<h2 id="step-1-identify-required-office-365-dns-for-email">Step 1 Identify Required Office 365 DNS for Email</h2>
+
+<p>Using this link; <a href="https://support.office.com/en-gb/article/Create-DNS-records-for-Office-365-using-Windows-based-DNS-9eec911d-5773-422c-9593-40e1147ffbde">Create DNS records for Office 365</a>,  DNS records that are needed for email using Office 365 were identified.</p>
+
+<p>These are:</p>
+
+<ul>
+  <li>An MX record so email for your domain will come to Office 365</li>
+  <li>An Autodiscover CNAME record for the email (Exchange)</li>
+  <li>An SPF TXT record for your domain to help prevent email spam</li>
+</ul>
+
+<h2 id="step-2-add-domain-to-office-365">Step 2: Add Domain to Office 365</h2>
+
+<h3 id="login-to-office-365-and-select-admin">2.1 Login to Office 365 and select Admin</h3>
+
+<p><img src="/assets/2016-09-182.1 Login to Office 365 and select Admin 2.jpg" alt="2.1 Login to Office 365 and select Admin" /></p>
+
+<h3 id="under-settings-click-domains">2.2 Under Settings click Domains</h3>
+
+<p><img src="/assets/2016-09-18/2.2 Under Office 365 Settings click Domains.jpg" alt="2.2 Under Office 365 Settings click Domains" /></p>
+
+<h3 id="click---add-domain">2.3 Click  + Add Domain</h3>
+
+<p><img src="/assets/2016-09-18/2.3 Click Add Domain in Office 365.jpg" alt="2.3 Click Add Domain in Office 365" /></p>
+
+<h3 id="type-your-new-additional-domain-and-click-next">2.4 Type your new additional domain and click Next</h3>
+
+<p><img src="/assets/2016-09-18/2.4 Type your new additional domain and click Next.jpg" alt="2.4 Type your new Office 365 additional domain and click Next" /></p>
+
+<h3 id="copy-the-txt-value-shown-under-the-verify-domain-screen">2.5 Copy the TXT value shown under the Verify domain screen</h3>
+
+<p><img src="/assets/2016-09-18/2.5 Copy the TXT value shown under the Verify domain screen.jpg" alt="2.5 Copy the TXT value shown under the Verify domain screen Office 365" /></p>
+
+<h2 id="step-3-verify-domain-for-office-365---cloudflare-dns-is-used-in-this-example">Step 3: Verify Domain for Office 365 - CloudFlare DNS is used in this example</h2>
+
+<p>Open a new browser window, go to your domain within your DNS host. You will be adding a TXT record with the verify value provided by Office 365.</p>
+
+<h3 id="select-txt">3.1 Select TXT</h3>
+
+<p><img src="/assets/2016-09-18/3.1 Select TXT in CloudFlare DNS.jpg" alt="3.1 Select TXT in CloudFlare DNS" /></p>
+
+<h3 id="paste-the-office-365-txt-value---from-step-25-to-txt-content-and-save">3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save</h3>
+
+<p><img src="/assets/2016-09-18/3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save.jpg" alt="3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save" /></p>
+
+<h3 id="click-add-record">3.3 Click Add Record</h3>
+
+<p><img src="/assets/2016-09-18/3.3 Click Add Record to add TXT for Office 365 domain validation.jpg" alt="3.3 Click Add Record to add TXT for Office 365 domain validation" /></p>
+
+<p>Note there are some detailed step by step instructions provided to <a href="https://support.office.com/en-US/article/Create-DNS-records-at-Cloudflare-for-Office-365-84acd4fc-6eec-4d00-8bed-568f036ae2af#BKMK_add_CNAME">Create DNS records at Cloudflare for Office 365</a>, which may help.</p>
+
+<h3 id="back-in-the-office-365-browser-window-click-verify">3.4 Back in the Office 365 browser window, Click Verify</h3>
+
+<p><img src="/assets/2016-09-18/3.4 Back in the Office 365 browser window Click Verify.jpg" alt="3.4 Back in the Office 365 browser window Click Verify" /></p>
+
+<h2 id="step-4-add-mx-record-to-direct-email-for-your-domain-to-office-365">Step 4: Add MX Record To Direct Email for your Domain to Office 365</h2>
+
+<h3 id="select-ill-my-own-dns-records-and-click-next">4.1 Select I’ll my own DNS records and click Next</h3>
+
+<p><img src="/assets/2016-09-18/4.1 Select I'll my own DNS records and click Next.jpg" alt="4.1 Select I'll my own DNS records and click Next in Office 365" /></p>
+
+<h3 id="copy-the-mail-protection-text-to-clipboard">4.2 Copy the mail protection text to clipboard</h3>
+
+<p><img src="/assets/2016-09-18/4.2 Copy the Office 365 mail protection text to clipboard.jpg" alt="4.2 Copy the Office 365 mail protection text to clipboard" /></p>
+
+<h3 id="in-a-separate-browser-for-your-dns-host-select-a-new-mx-record-and-paste-the-text-in-this-case-cloudflare">4.3 In a separate browser for your DNS Host select a new MX Record and paste the text, in this case CloudFlare</h3>
+
+<p><img src="/assets/2016-09-18/4.3 In CloudFlare select a new MX Record and paste the Office 365 mail protection .jpg" alt="4.3 In CloudFlare select a new MX Record and paste the Office 365 mail protection " /></p>
+
+<h3 id="click-add-record-to-add-the-mx-record">4.4 Click Add Record to add the MX record</h3>
+
+<p><img src="/assets/2016-09-18/4.4 Click Add Record to add the MX record to CloudFlare.jpg" alt="4.4 Click Add Record to add the MX record to CloudFlare" /></p>
+
+<h2 id="step-5-add-autodiscover-cname-record-for-the-email-exchange">Step 5: Add Autodiscover CNAME record for the email (Exchange)</h2>
+
+<h3 id="from-the-the-office-365-browser-copy-the-autodiscoveroutlookcom-to-clipboard">5.1 From the the Office 365 browser, copy the autodiscover.outlook.com to clipboard</h3>
+
+<p><img src="/assets/2016-09-18/5.1 From the the Office 365 browser copy the autodiscover.outlook.com to clipboard.jpg" alt="5.1 From the the Office 365 browser copy the autodiscover.outlook.com to clipboard" /></p>
+
+<h3 id="in-the-cloudflare-browser-window-add-a-cname-record-for-autodiscover-as-shown-remember-to-click-add-record">5.2 In the CloudFlare browser window add a CNAME record for autodiscover as shown, remember to click Add Record</h3>
+
+<p><img src="/assets/2016-09-18/5.2 CloudFlare add a CNAME record for outlook autodiscover as shown remember to click Add Record.jpg" alt="5.2 CloudFlare add a CNAME record for outlook autodiscover as shown remember to click Add Record" /></p>
+
+<h2 id="step-6-add-spf-txt-record-in-dns-host-for-your-domain-to-help-prevent-email-spam">Step 6: Add SPF TXT record in DNS Host for your domain to help prevent email spam</h2>
+
+<h3 id="from-the-the-office-365-browser-copy-the-txt-value-for-spf-to-clipboard">6.1 From the the Office 365 browser, copy the TXT value for SPF to clipboard</h3>
+
+<p><img src="/assets/2016-09-18/6.1 From Office 365 copy the TXT value for SPF to clipboard.jpg" alt="6.1 From Office 365 copy the TXT value for SPF to clipboard" /></p>
+
+<h3 id="in-the-cloudflare-browser-window-add-a-txt-pasting-the-spf-text-from-step-61">6.2 In the CloudFlare browser window add a TXT, pasting the SPF text from step 6.1</h3>
+
+<p><img src="/assets/2016-09-18/6.2 CloudFlare add a TXT pasting the SPF.jpg" alt="6.2 CloudFlare add a TXT pasting the SPF for Outlook Spam prevention" /></p>
+
+<h3 id="click-add-record-1">6.3 Click Add Record</h3>
+
+<p><img src="/assets/2016-09-18/6.3 Click Add Record to add the TXT CloudFlare SPF record for outlook .jpg" alt="6.3 Click Add Record to add the TXT CloudFlare SPF record for outlook " /></p>
+
+<h2 id="step-7-verify-the-new-domain-dns-settings-in-office-365-and-finish">Step 7: Verify the new Domain DNS Settings in Office 365 and Finish</h2>
+
+<h3 id="in-the-office-365-browser---update-dns-settings-window-click-verify">7.1 In the Office 365 Browser - Update DNS Settings window, click Verify</h3>
+
+<p><img src="/assets/2016-09-18/7.1 Office 365 - Update DNS Settings window click Verify.jpg" alt="7.1 Office 365 - Update DNS Settings window click Verify" /></p>
+
+<h3 id="you-may-see-some-warning-triangles-against-cname-and-srv-thats-because-we-only-configured-dns-for-email-not-all-office-365-services--just-click-skip">7.2 You may see some warning triangles against CNAME and SRV, that’s because we only configured DNS for email, not all Office 365 services.  Just click Skip</h3>
+
+<p><img src="/assets/2016-09-18/7.2 You may see some warning triangles against CNAME and SRV -not all Office 365 services selected click Skip.jpg" alt="7.2 You may see some warning triangles against CNAME and SRV -not all Office 365 services selected click Skip" /></p>
+
+<h3 id="click-finish">7.3 Click Finish</h3>
+
+<p><img src="/assets/2016-09-18/7.3 Verify the new Domain DNS Settings in Office 365 and Finish.jpg" alt="7.3 Verify the new Domain DNS Settings in Office 365 and Finish" /></p>
+
+<h2 id="summary">Summary</h2>
+<p>We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In my next post I will describe how to configure Office 365 to use this additional domain for email.</p>
+
+  </article>
+
+<!-- Hywel Start Disqus Comments -->
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      var disqus_config = function () {
+          this.page.url =  "http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html";  // Replace PAGE_URL with your page's canonical URL variable
+
+          //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//hywelme.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<!-- Hywel End Disqus Comments -->
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Have You Wandered Every Land</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <!--li>Have You Wandered Every Land</li-->
+          <li><a href="mailto:hywel.llewellyn@gmail.com">hywel.llewellyn@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/hyweljohnllewellyn">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">hyweljohnllewellyn</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/hywel_llewellyn">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">hywel_llewellyn</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">A personal blog site, with musings about technology and documenting what I learn.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

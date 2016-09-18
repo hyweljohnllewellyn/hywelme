@@ -6,9 +6,153 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jul 2016 19:36:59 +0100</pubDate>
-    <lastBuildDate>Sun, 31 Jul 2016 19:36:59 +0100</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Sun, 18 Sep 2016 15:18:38 +0100</pubDate>
+    <lastBuildDate>Sun, 18 Sep 2016 15:18:38 +0100</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in Cloudflare Host</title>
+        <description>&lt;h2 id=&quot;free-email-for-additional-domains-in-office-365&quot;&gt;Free Email for Additional Domains in Office 365&lt;/h2&gt;
+
+&lt;p&gt;For small business, adding user licences to Office 365 can get costly.  If you already have a domain that is licenced for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licences and so are Free.&lt;/p&gt;
+
+&lt;p&gt;There are two parts, Configuring DNS for the Additional Domain, which is described in this post… and Configuring the Office 365 Shared Mailbox for Additional Domains, which will be covered in an upcoming post.&lt;/p&gt;
+
+&lt;p&gt;See other Office 365 tips in my previous articles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html&quot;&gt;Convert Office 365 User Email to Shared Mailbox and Remove the User License&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html&quot;&gt;How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html&quot;&gt;Microsoft Office 365 Catch-all using Additional Alias Email Addresses&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-1-identify-required-office-365-dns-for-email&quot;&gt;Step 1 Identify Required Office 365 DNS for Email&lt;/h2&gt;
+
+&lt;p&gt;Using this link; &lt;a href=&quot;https://support.office.com/en-gb/article/Create-DNS-records-for-Office-365-using-Windows-based-DNS-9eec911d-5773-422c-9593-40e1147ffbde&quot;&gt;Create DNS records for Office 365&lt;/a&gt;,  DNS records that are needed for email using Office 365 were identified.&lt;/p&gt;
+
+&lt;p&gt;These are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An MX record so email for your domain will come to Office 365&lt;/li&gt;
+  &lt;li&gt;An Autodiscover CNAME record for the email (Exchange)&lt;/li&gt;
+  &lt;li&gt;An SPF TXT record for your domain to help prevent email spam&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-2-add-domain-to-office-365&quot;&gt;Step 2: Add Domain to Office 365&lt;/h2&gt;
+
+&lt;h3 id=&quot;login-to-office-365-and-select-admin&quot;&gt;2.1 Login to Office 365 and select Admin&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-182.1 Login to Office 365 and select Admin 2.jpg&quot; alt=&quot;2.1 Login to Office 365 and select Admin&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;under-settings-click-domains&quot;&gt;2.2 Under Settings click Domains&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.2 Under Office 365 Settings click Domains.jpg&quot; alt=&quot;2.2 Under Office 365 Settings click Domains&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click---add-domain&quot;&gt;2.3 Click  + Add Domain&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.3 Click Add Domain in Office 365.jpg&quot; alt=&quot;2.3 Click Add Domain in Office 365&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;type-your-new-additional-domain-and-click-next&quot;&gt;2.4 Type your new additional domain and click Next&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.4 Type your new additional domain and click Next.jpg&quot; alt=&quot;2.4 Type your new Office 365 additional domain and click Next&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;copy-the-txt-value-shown-under-the-verify-domain-screen&quot;&gt;2.5 Copy the TXT value shown under the Verify domain screen&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.5 Copy the TXT value shown under the Verify domain screen.jpg&quot; alt=&quot;2.5 Copy the TXT value shown under the Verify domain screen Office 365&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-verify-domain-for-office-365---cloudflare-dns-is-used-in-this-example&quot;&gt;Step 3: Verify Domain for Office 365 - CloudFlare DNS is used in this example&lt;/h2&gt;
+
+&lt;p&gt;Open a new browser window, go to your domain within your DNS host. You will be adding a TXT record with the verify value provided by Office 365.&lt;/p&gt;
+
+&lt;h3 id=&quot;select-txt&quot;&gt;3.1 Select TXT&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.1 Select TXT in CloudFlare DNS.jpg&quot; alt=&quot;3.1 Select TXT in CloudFlare DNS&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;paste-the-office-365-txt-value---from-step-25-to-txt-content-and-save&quot;&gt;3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save.jpg&quot; alt=&quot;3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-add-record&quot;&gt;3.3 Click Add Record&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.3 Click Add Record to add TXT for Office 365 domain validation.jpg&quot; alt=&quot;3.3 Click Add Record to add TXT for Office 365 domain validation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note there are some detailed step by step instructions provided to &lt;a href=&quot;https://support.office.com/en-US/article/Create-DNS-records-at-Cloudflare-for-Office-365-84acd4fc-6eec-4d00-8bed-568f036ae2af#BKMK_add_CNAME&quot;&gt;Create DNS records at Cloudflare for Office 365&lt;/a&gt;, which may help.&lt;/p&gt;
+
+&lt;h3 id=&quot;back-in-the-office-365-browser-window-click-verify&quot;&gt;3.4 Back in the Office 365 browser window, Click Verify&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.4 Back in the Office 365 browser window Click Verify.jpg&quot; alt=&quot;3.4 Back in the Office 365 browser window Click Verify&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-add-mx-record-to-direct-email-for-your-domain-to-office-365&quot;&gt;Step 4: Add MX Record To Direct Email for your Domain to Office 365&lt;/h2&gt;
+
+&lt;h3 id=&quot;select-ill-my-own-dns-records-and-click-next&quot;&gt;4.1 Select I’ll my own DNS records and click Next&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.1 Select I'll my own DNS records and click Next.jpg&quot; alt=&quot;4.1 Select I'll my own DNS records and click Next in Office 365&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;copy-the-mail-protection-text-to-clipboard&quot;&gt;4.2 Copy the mail protection text to clipboard&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.2 Copy the Office 365 mail protection text to clipboard.jpg&quot; alt=&quot;4.2 Copy the Office 365 mail protection text to clipboard&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;in-a-separate-browser-for-your-dns-host-select-a-new-mx-record-and-paste-the-text-in-this-case-cloudflare&quot;&gt;4.3 In a separate browser for your DNS Host select a new MX Record and paste the text, in this case CloudFlare&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.3 In CloudFlare select a new MX Record and paste the Office 365 mail protection .jpg&quot; alt=&quot;4.3 In CloudFlare select a new MX Record and paste the Office 365 mail protection &quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-add-record-to-add-the-mx-record&quot;&gt;4.4 Click Add Record to add the MX record&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.4 Click Add Record to add the MX record to CloudFlare.jpg&quot; alt=&quot;4.4 Click Add Record to add the MX record to CloudFlare&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-5-add-autodiscover-cname-record-for-the-email-exchange&quot;&gt;Step 5: Add Autodiscover CNAME record for the email (Exchange)&lt;/h2&gt;
+
+&lt;h3 id=&quot;from-the-the-office-365-browser-copy-the-autodiscoveroutlookcom-to-clipboard&quot;&gt;5.1 From the the Office 365 browser, copy the autodiscover.outlook.com to clipboard&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/5.1 From the the Office 365 browser copy the autodiscover.outlook.com to clipboard.jpg&quot; alt=&quot;5.1 From the the Office 365 browser copy the autodiscover.outlook.com to clipboard&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;in-the-cloudflare-browser-window-add-a-cname-record-for-autodiscover-as-shown-remember-to-click-add-record&quot;&gt;5.2 In the CloudFlare browser window add a CNAME record for autodiscover as shown, remember to click Add Record&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/5.2 CloudFlare add a CNAME record for outlook autodiscover as shown remember to click Add Record.jpg&quot; alt=&quot;5.2 CloudFlare add a CNAME record for outlook autodiscover as shown remember to click Add Record&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-add-spf-txt-record-in-dns-host-for-your-domain-to-help-prevent-email-spam&quot;&gt;Step 6: Add SPF TXT record in DNS Host for your domain to help prevent email spam&lt;/h2&gt;
+
+&lt;h3 id=&quot;from-the-the-office-365-browser-copy-the-txt-value-for-spf-to-clipboard&quot;&gt;6.1 From the the Office 365 browser, copy the TXT value for SPF to clipboard&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/6.1 From Office 365 copy the TXT value for SPF to clipboard.jpg&quot; alt=&quot;6.1 From Office 365 copy the TXT value for SPF to clipboard&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;in-the-cloudflare-browser-window-add-a-txt-pasting-the-spf-text-from-step-61&quot;&gt;6.2 In the CloudFlare browser window add a TXT, pasting the SPF text from step 6.1&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/6.2 CloudFlare add a TXT pasting the SPF.jpg&quot; alt=&quot;6.2 CloudFlare add a TXT pasting the SPF for Outlook Spam prevention&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-add-record-1&quot;&gt;6.3 Click Add Record&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/6.3 Click Add Record to add the TXT CloudFlare SPF record for outlook .jpg&quot; alt=&quot;6.3 Click Add Record to add the TXT CloudFlare SPF record for outlook &quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-7-verify-the-new-domain-dns-settings-in-office-365-and-finish&quot;&gt;Step 7: Verify the new Domain DNS Settings in Office 365 and Finish&lt;/h2&gt;
+
+&lt;h3 id=&quot;in-the-office-365-browser---update-dns-settings-window-click-verify&quot;&gt;7.1 In the Office 365 Browser - Update DNS Settings window, click Verify&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/7.1 Office 365 - Update DNS Settings window click Verify.jpg&quot; alt=&quot;7.1 Office 365 - Update DNS Settings window click Verify&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;you-may-see-some-warning-triangles-against-cname-and-srv-thats-because-we-only-configured-dns-for-email-not-all-office-365-services--just-click-skip&quot;&gt;7.2 You may see some warning triangles against CNAME and SRV, that’s because we only configured DNS for email, not all Office 365 services.  Just click Skip&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/7.2 You may see some warning triangles against CNAME and SRV -not all Office 365 services selected click Skip.jpg&quot; alt=&quot;7.2 You may see some warning triangles against CNAME and SRV -not all Office 365 services selected click Skip&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-finish&quot;&gt;7.3 Click Finish&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/7.3 Verify the new Domain DNS Settings in Office 365 and Finish.jpg&quot; alt=&quot;7.3 Verify the new Domain DNS Settings in Office 365 and Finish&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In my next post I will describe how to configure Office 365 to use this additional domain for email.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 18 Sep 2016 09:55:00 +0100</pubDate>
+        <link>http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</guid>
+        
+        
+        <category>small</category>
+        
+        <category>business</category>
+        
+        <category>email</category>
+        
+      </item>
     
       <item>
         <title>Upthere Cloud Storage Android App Review</title>
@@ -386,7 +530,7 @@ support@upthere.com&lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;	&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Add&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;more&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Drupal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;types&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;below&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;applicable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;talent&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;page&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;testimonial&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;webform&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;IN&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'talent'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'page'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'testimonial'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'webform'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;step-1-export-the-production-drupal-6-database-to-a-local-mysql&quot;&gt;Step 1 Export the Production Drupal 6 Database to a Local MySQL&lt;/h3&gt;
 
@@ -586,7 +730,7 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;p&gt;The node types in my site are “page”, “talent”,”testimonial”.  Enter the Drupal 6 database credentials created in Step 3:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;&#39;require &quot;jekyll-import&quot;;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;'require &quot;jekyll-import&quot;;
     JekyllImport::Importers::Drupal6.run({
       &quot;dbname&quot;   =&amp;gt; &quot;hartleyvoices&quot;,
       &quot;user&quot;     =&amp;gt; &quot;hartleyvoices&quot;,
@@ -612,7 +756,7 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/mysql server start.png&quot; alt=&quot;mysql server start&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;&#39;require &quot;jekyll-import&quot;;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;'require &quot;jekyll-import&quot;;
     JekyllImport::Importers::Drupal6.run({
       &quot;dbname&quot;   =&amp;gt; &quot;hartleyvoices&quot;,
       &quot;user&quot;     =&amp;gt; &quot;hartleyvoices&quot;,
@@ -635,7 +779,7 @@ Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
  Incremental build: disabled. Enable with --incremental
       Generating... 
                     &lt;span class=&quot;k&quot;&gt;done in &lt;/span&gt;14.248 seconds.
- Auto-regeneration: enabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/Users/hywel/Sites/hartleyvoices_jekyll&#39;&lt;/span&gt;
+ Auto-regeneration: enabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/Users/hywel/Sites/hartleyvoices_jekyll'&lt;/span&gt;
 Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -750,8 +894,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;span class=&quot;c1&quot;&gt;# Regions&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;regions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Header&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;primary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Primary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu&#39;&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;secondary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Secondary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu&#39;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;primary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Primary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu'&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;secondary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Secondary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu'&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Content&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;sidebar_first&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;First sidebar&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;sidebar_second&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Second sidebar&lt;/span&gt;
@@ -831,7 +975,7 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;span class=&quot;cm&quot;&gt;/* migrate files linked to nodes from Drupal 6 Upload Table to Drupal 8 */&lt;/span&gt;
 
 &lt;span class=&quot;cm&quot;&gt;/* Connect to the Drupal 8 Database */&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysqli_connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;localhost&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;username&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;password&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;drupal8&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysqli_connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'localhost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'username'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'drupal8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;nv&quot;&gt;$filetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$nodetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -857,13 +1001,13 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;, node&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;p&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;span class=&quot;nv&quot;&gt;$query1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;insert into file_usage (fid,module, type, id, count) values (&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,&quot;file&quot;,&quot;node&quot;,&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,1)&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$query1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'insert into file_usage (fid,module, type, id, count) values ('&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',&quot;file&quot;,&quot;node&quot;,'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',1)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;nv&quot;&gt;$query2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;insert into node__upload (bundle, deleted,entity_id, revision_id, langcode, delta, upload_target_id, upload_display, upload_description) values (&quot;page&quot;,0,&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$versionid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,&quot;und&quot;, &#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,1,&quot;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;&quot;)&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$query2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'insert into node__upload (bundle, deleted,entity_id, revision_id, langcode, delta, upload_target_id, upload_display, upload_description) values (&quot;page&quot;,0,'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$versionid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',&quot;und&quot;, '&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',1,&quot;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&quot;)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;nv&quot;&gt;$query3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;insert into node_revision__upload (bundle, deleted,entity_id, revision_id, langcode, delta, upload_target_id, upload_display, upload_description) values (&quot;page&quot;,0,&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$versionid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,&quot;und&quot;, &#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;,1,&quot;&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;&quot;)&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$query3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'insert into node_revision__upload (bundle, deleted,entity_id, revision_id, langcode, delta, upload_target_id, upload_display, upload_description) values (&quot;page&quot;,0,'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$versionid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',&quot;und&quot;, '&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',1,&quot;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&quot;)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -1033,12 +1177,12 @@ drush migrate-import --all&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
-update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;full_html&#39;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
+update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
+update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Followed by rebuilding the Drupal 8 cache :&lt;/p&gt;
 
@@ -1055,7 +1199,7 @@ drush cache-rebuild&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Back to trusty SQL update and cache rebuild:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;url_alias&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;langcode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;und&#39;&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;url_alias&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;langcode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'und'&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
 drush cache-rebuild&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -1137,162 +1281,6 @@ drush en simplesitemap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         <pubDate>Wed, 10 Feb 2016 20:15:00 +0000</pubDate>
         <link>http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html</link>
         <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html</guid>
-        
-        
-        <category>drupal</category>
-        
-      </item>
-    
-      <item>
-        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 2</title>
-        <description>&lt;h2 id=&quot;preparing-for-upgrade&quot;&gt;Preparing for Upgrade&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html&quot;&gt;In my previous post,&lt;/a&gt; I described why I was upgrading a website from Drupal 6 to Drupal 8 and some of the key considerations.  Note that many of these are likely required to upgrade from Drupal 7.&lt;/p&gt;
-
-&lt;p&gt;For this post, I will install the Drupal Migration Modules.&lt;/p&gt;
-
-&lt;p&gt;From &lt;a href=&quot;https://www.drupal.org/node/2350603&quot;&gt;Preparing an Upgrade&lt;/a&gt; I will check:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Access to the Drupal 6 database and site files from the Drupal 8 site.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The Migrate Upgrade module installed and enabled on the Drupal 8 site.  If you plan on running the upgrade from Drush, you’ll need Drush 8 and the module Migrate tools.  Using Drush is more robust and allows selective migration. But it requires an additional module and it must be run from the command line.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;installing-drush-8-locally&quot;&gt;Installing Drush 8 Locally&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/node/2350651&quot;&gt;Executing an upgrade using Drush&lt;/a&gt; describes that the latest Drush needs to be used to upgrade - so lets’ get it.&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;I will install Drush using Homebrew package manager as described in &lt;a href=&quot;https://www.drupal.org/node/1674222&quot;&gt;Install Drush on a Mac&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;del&gt;I already have Homebrew installed, otherwise I followed the commands on &lt;a href=&quot;https://www.drupal.org/node/954766&quot;&gt;Installing Drush on Mac using Homebrew&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Issue - The above methods caused all kinds of errors on install and may not be the best way for Drush 8 or Drupal 8 as described at &lt;a href=&quot;http://whaaat.com/installing-drush-8-using-composer&quot;&gt;Installing Drush 8 using Composer&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Before installing, I decided to change the default MAMP document folder to be in my usual /Sites/ folder :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/updated MAMP site root folder.png&quot; alt=&quot;updated MAMP site root folder&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The local URL now looked like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/updated drupal 8 local URL.png&quot; alt=&quot;updated Drupal 8 local URL&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Drush was then installed with Composer using instruction at &lt;a href=&quot;http://docs.drush.org/en/master/install-alternative/&quot;&gt;Install a global Drush via Composer&lt;/a&gt; :&lt;/p&gt;
-
-&lt;h3 id=&quot;step-1---install-composer-globally&quot;&gt;Step 1 - Install Composer Globally&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Sites/drupal8
-curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/installing composer.png&quot; alt=&quot;installing composer&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-2---add-composer-to-my-bashprofile&quot;&gt;Step 2 - Add Composer to my bash_profile&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel
-nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Add the following line&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.composer/vendor/bin:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Start a new Terminal session to ensure the path is updated&lt;/p&gt;
-
-&lt;h3 id=&quot;step-3---install-drush-using-composer-and-verify-status&quot;&gt;Step 3 - Install Drush using Composer and verify Status&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-composer global require drush/drush
-drush status&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/installing drush with composer.png&quot; alt=&quot;installing drush with composer&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/drush 8 status.png&quot; alt=&quot;drush 8 status&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-4---update-path-to-ensure-systems-uses-the-mamp-version-of-phphttpstackoverflowcomquestions4145667how-to-override-the-path-of-php-to-use-the-mamp-path1065344310653443&quot;&gt;Step 4 - &lt;a href=&quot;http://stackoverflow.com/questions/4145667/how-to-override-the-path-of-php-to-use-the-mamp-path/10653443#10653443&quot;&gt;Update Path to ensure systems uses the MAMP version of PHP&lt;/a&gt;&lt;/h3&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel
-nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Add the following lines:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;MAMP_PHP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Applications/MAMP/bin/php/php7.0.0/bin
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MAMP_PHP&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/update path to MAMP php.png&quot; alt=&quot;update path to MAMP php&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-5---install-the-migration-modules&quot;&gt;Step 5 - Install the Migration Modules&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/node/2350651&quot;&gt;Executing an upgrade using Drush&lt;/a&gt; describes:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;To migrate using Drush you need to download and enable the Migrate Upgrade contributed module. You will also need Migrate Tools if you plan on doing more than running a one-time complete upgrade.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Drush has extensive functionality to install and maintain Drupal - see the &lt;a href=&quot;https://github.com/drush-ops/drush&quot;&gt;Drush Site&lt;/a&gt; and &lt;a href=&quot;http://drushcommands.com/&quot;&gt;Drush Commands&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.drupal.org/documentation/install/modules-themes/modules-8&quot;&gt;To install and enable the contributed modules&lt;/a&gt; :&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush dl migrate_upgrade
-drush en migrate_upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The first part worked:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/drush dl migrate_upgrade.png&quot; alt=&quot;drush dl migrate_upgrade&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Issue: Drush was not able to start (bootstrap) the Drupal database&lt;/strong&gt;
-&lt;img src=&quot;/assets/2016-02-07/drush en migrate_upgrade issue.png&quot; alt=&quot;drush en migrate_upgrade issue&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://julianlmedina.com/getting-drush-working-with-mamp-3-on-mac/&quot;&gt;julianlmedina&lt;/a&gt;  and &lt;a href=&quot;https://www.drupal.org/node/954766&quot;&gt;Installing Drush on Mac using Homebrew&lt;/a&gt; have described&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If you are running your Drupal sites with MAMP, you need to tell Drush to use MAMP’s mysql.sock or you will run into the following error.  Easiest way to do this is by creating a symlink&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo mkdir /var/mysql
-sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /var/mysql/mysql.sock&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/MAMP mysql sock.png&quot; alt=&quot;MAMP mysql sock&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now to retry..&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush en migrate_upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Issue: Drush still could not connect with the same error as before - I determined that the mysql command was not available from /Users/hywel/Sites/drupal8 with MAMP&lt;/strong&gt;
-Following the instructions at &lt;a href=&quot;http://www.webbykat.com/2012/06/solving-sh-mysql-command-not-found-mamp-pro-2&quot;&gt;Solving mysql command not found” on MAMP&lt;/a&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel
-nano .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Add this line to .bash_profile:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/Applications/MAMP/Library/bin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now to retry..&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush en migrate_upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/migrate upgrade enable success.png&quot; alt=&quot;migrate upgrade enable success&quot; /&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush dl migrate_tools
-drush en migrate_tools&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-07/migrate tools success.png&quot; alt=&quot;migrate tools success&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Success - Do you want to continue… yes I think so!  See you next time.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 07 Feb 2016 10:00:00 +0000</pubDate>
-        <link>http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html</guid>
         
         
         <category>drupal</category>

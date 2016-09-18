@@ -17,9 +17,10 @@ There are two parts, Configuring DNS for the Additional Domain, which is describ
 
 See other Office 365 tips in my previous articles:
 
-[Convert Office 365 User Email to Shared Mailbox and Remove the User License](http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html)
-[How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
-[Microsoft Office 365 Catch-all using Additional Alias Email Addresses](http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
+- [Convert Office 365 User Email to Shared Mailbox and Remove the User License](http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html)
+- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
+- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses](http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
+
 
 ## Step 1 Identify Required Office 365 DNS for Email 
 

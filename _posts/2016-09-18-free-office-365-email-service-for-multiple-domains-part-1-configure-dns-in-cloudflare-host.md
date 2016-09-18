@@ -35,7 +35,7 @@ These are:
 ## Step 2: Add Domain to Office 365
 
 ### 2.1 Login to Office 365 and select Admin 
-Screen Shot 2016-09-17 at 19.03.50
+![2.1 Login to Office 365 and select Admin]({{site.baseurl}}/assets/2016-09-18/2.1%20Login%20to%20Office%20365%20and%20select%20Admin.jpg)
 
 ### 2.2 Under Settings click Domains 
 Screen Shot 2016-09-17 at 19.08.50

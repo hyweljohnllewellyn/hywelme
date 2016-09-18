@@ -66,3 +66,50 @@ Note there are some detailed step by step instructions provided to [Create DNS r
 
 ### 3.4 Back in the Office 365 browser window, Click Verify
 Screen Shot 2016-09-17 at 19.13.48
+
+## Step 4: Add MX Record To Direct Email for your Domain to Office 365 from DNS Host
+
+### 4.1 Select I'll my own DNS records and click Next
+Screen Shot 2016-09-17 at 19.14.39
+
+### 4.2 Copy the mail protection text to clipboard
+Screen Shot 2016-09-17 at 19.30.20
+
+### 4.3 In a separate browser for your DNS Host select a new MX Record and paste the text, in this case CloudFlare
+Screen Shot 2016-09-17 at 19.30.20
+
+### 4.4 Click Add Record to add the MX record
+Screen Shot 2016-09-17 at 19.31.35
+
+## Step 5: Add Autodiscover CNAME record for the email (Exchange) from DNS Host
+
+### 5.1 From the the Office 365 browser, copy the autodiscover.outlook.com to clipboard
+Screen Shot 2016-09-17 at 19.32.14
+
+### 5.2 In the CloudFlare browser window add a CNAME record for autodiscover as shown, remember to click Add Record
+Screen Shot 2016-09-17 at 19.37.04
+
+## Step 6: Add SPF TXT record in DNS Host for your domain to help prevent email spam
+
+### 6.1 From the the Office 365 browser, copy the TXT value for SPF to clipboard
+Screen Shot 2016-09-17 at 19.38.02
+
+### 6.2 In the CloudFlare browser window add a TXT, pasting the SPF text from step 6.1
+Screen Shot 2016-09-17 at 19.39.22
+
+### 6.3 Click Add Record
+Screen Shot 2016-09-17 at 19.39.34
+
+## Step 7: Verify the new Domain DNS Settings in Office 365 and Finish
+
+### 7.1 In the Office 365 Browser - Update DNS Settings window, click Verify
+Screen Shot 2016-09-17 at 19.40.28
+
+### 7.2 You may see some warning triangles against CNAME and SRV, that's because we only configured DNS for email, not all Office 365 services.  Just click Skip
+Screen Shot 2016-09-17 at 19.41.37
+
+### 7.3 Click Finish
+Screen Shot 2016-09-17 at 19.41.48
+
+## Summary
+We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In my next post I will describe how to configure Office 365 to use this additional domain for email.

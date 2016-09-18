@@ -23,7 +23,7 @@ See other Office 365 tips in my previous articles:
 
 ## Step 1 Identify Required Office 365 DNS for Email 
 
-Using this link; [Create DNS records for Office 365](https://support.office.com/en-gb/article/Create-DNS-records-for-Office-365-using-Windows-based-DNS-9eec911d-5773-422c-9593-40e1147ffbde),  DNS records that are needed for email using Office 365 were identified
+Using this link; [Create DNS records for Office 365](https://support.office.com/en-gb/article/Create-DNS-records-for-Office-365-using-Windows-based-DNS-9eec911d-5773-422c-9593-40e1147ffbde),  DNS records that are needed for email using Office 365 were identified.  
 
 These are:
 
@@ -31,7 +31,7 @@ These are:
 - An Autodiscover CNAME record for the email (Exchange)
 - An SPF TXT record for your domain to help prevent email spam
 
-## Step 2 Add Domain to Office 365
+## Step 2: Add Domain to Office 365
 
 ### 2.1 Login to Office 365 and select Admin 
 Screen Shot 2016-09-17 at 19.03.50
@@ -48,7 +48,7 @@ Screen Shot 2016-09-17 at 19.10.21
 ### 2.5 Copy the TXT value shown under the Verify domain screen
 Screen Shot 2016-09-17 at 19.11.43
 
-## Step 3 Verify Domain for Office 365 - Cloudflare DNS is used in this example
+## Step 3: Verify Domain for Office 365 - Cloudflare DNS is used in this example
 
 Open a new browser window, go to your domain within your DNS host. You will be adding a TXT record with the verify value provided by Office 365.
 

@@ -67,7 +67,7 @@ Note there are some detailed step by step instructions provided to [Create DNS r
 ### 3.4 Back in the Office 365 browser window, Click Verify
 Screen Shot 2016-09-17 at 19.13.48
 
-## Step 4: Add MX Record To Direct Email for your Domain to Office 365 from DNS Host
+## Step 4: Add MX Record To Direct Email for your Domain to Office 365
 
 ### 4.1 Select I'll my own DNS records and click Next
 Screen Shot 2016-09-17 at 19.14.39
@@ -81,7 +81,7 @@ Screen Shot 2016-09-17 at 19.30.20
 ### 4.4 Click Add Record to add the MX record
 Screen Shot 2016-09-17 at 19.31.35
 
-## Step 5: Add Autodiscover CNAME record for the email (Exchange) from DNS Host
+## Step 5: Add Autodiscover CNAME record for the email (Exchange)
 
 ### 5.1 From the the Office 365 browser, copy the autodiscover.outlook.com to clipboard
 Screen Shot 2016-09-17 at 19.32.14

@@ -10,11 +10,11 @@ meta: Office 365 small business email free
 ---
 ## Free Outlook Email for Secondary or More Domains in Office 365
 
-In my previous post I described how to [Configure CloudFlare DNS for an Additional Domain to use Office 365 for email](http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html).  If you already have a domain that is licensed for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licenses and so are Free.
+In my previous post I described how to [Configure CloudFlare DNS for an Additional Domain to use Office 365 for email]({{site.baseurl}}/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html).  If you already have a domain that is licensed for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licenses and so are Free.
 
 In this post I will describe how to configure the Office 365 shared mailbox for a an additional domain, effectively giving a free Office 365 email service.
 
-Steps 1 to 7 from [Part 1](http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html) cover setting up the Office 365 DNS for email on the DNS Host.  As this is a continuation, I will start with Step 8.
+Steps 1 to 7 from [Part 1]({{site.baseurl}}/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html) cover setting up the Office 365 DNS for email on the DNS Host.  As this is a continuation, I will start with Step 8.
 
 ## Step 8: Add the Basic Exchange Shared Mailbox for the New Domain
 
@@ -26,9 +26,9 @@ Steps 1 to 7 from [Part 1](http://www.hywel.me/small/business/email/2016/09/18/f
 
 ![8.2 Click Shared under Recipients of Office Exchange Admin]({{site.baseurl}}/assets/2016-09-19/8.2 Click Shared under Recipients of Office Exchange Admin.jpg)
 
-### 8.3 Click the plus + icon to addd a new Shared Mailbox
+### 8.3 Click the plus + icon to add a new Shared Mailbox
 
-![8.3 Click the plus icon to addd a new Shared Mailbox]({{site.baseurl}}/assets/2016-09-19/8.3 Click the plus icon to addd a new Shared Mailbox.jpg)
+![8.3 Click the plus icon to add a new Shared Mailbox]({{site.baseurl}}/assets/2016-09-19/8.3 Click the plus icon to addd a new Shared Mailbox.jpg)
 
 ### 8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com
 
@@ -83,12 +83,12 @@ I want to use this domain email as a catch all email info@domain2.com, rather th
 
 ## Summary - Free Office 365 Email Service for Secondary, or More Domains
 
-Together, [Part 1](http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html) and Part 2 of this tutorial, show how to add secondary, or more additional custom domains to Office 365 and use the outlook email service for _free_*.  As long as you only need a relatively basic catch-all type email for the additional domain.  
+Together, [Part 1]({{site.baseurl}}/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html) and Part 2 of this tutorial, show how to add secondary, or more additional custom domains to Office 365 and use the outlook email service for _free_*.  As long as you only need a relatively basic catch-all type email for the additional domain.  
 
-_* note that you still need at least one licenced Office 365 account_
+_* note that you still need at least one licensed Office 365 account_
 
 You may also find my other Office 365 tips useful:
 
-- [Convert Office 365 User Email to Shared Mailbox and Remove the User License](http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html)
-- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
-- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses](http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
+- [Convert Office 365 User Email to Shared Mailbox and Remove the User License]({{site.baseurl}}/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html)
+- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox]({{site.baseurl}}/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
+- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses]({{site.baseurl}}/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)

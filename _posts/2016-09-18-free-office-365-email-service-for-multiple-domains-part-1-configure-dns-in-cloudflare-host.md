@@ -5,21 +5,21 @@ author: Hywel
 published: true
 title: >-
   Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in
-  Cloudflare Host
+  CloudFlare Host
 meta: Office 365 small business email free
 categories: small business email
 ---
 ## Free Email for Additional Domains in Office 365
 
-For small business, adding user licences to Office 365 can get costly.  If you already have a domain that is licenced for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licences and so are Free.
+For small business, adding user licences to Office 365 can get costly.  If you already have a domain that is licensed for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licences and so are Free.
 
-There are two parts, Configuring DNS for the Additional Domain, which is described in this post... and Configuring the Office 365 Shared Mailbox for Additional Domains, which will be covered in an upcoming post.
+There are two parts, Configuring DNS for the Additional Domain, which is described in this post... and [Configuring the Office 365 Shared Mailbox for Additional Domains]({{site.baseurl}}/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html), which will be covered in an upcoming post.
 
 See other Office 365 tips in my previous articles:
 
-- [Convert Office 365 User Email to Shared Mailbox and Remove the User License](http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html)
-- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
-- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses](http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
+- [Convert Office 365 User Email to Shared Mailbox and Remove the User License]({{site.baseurl}}/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html)
+- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox]({{site.baseurl}}/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
+- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses]({{site.baseurl}}/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
 
 
 ## Step 1 Identify Required Office 365 DNS for Email 
@@ -71,7 +71,7 @@ Open a new browser window, go to your domain within your DNS host. You will be a
 
 ![3.3 Click Add Record to add TXT for Office 365 domain validation]({{site.baseurl}}/assets/2016-09-18/3.3 Click Add Record to add TXT for Office 365 domain validation.jpg)
 
-Note there are some detailed step by step instructions provided to [Create DNS records at Cloudflare for Office 365](https://support.office.com/en-US/article/Create-DNS-records-at-Cloudflare-for-Office-365-84acd4fc-6eec-4d00-8bed-568f036ae2af#BKMK_add_CNAME), which may help.
+Note there are some detailed step by step instructions provided to [Create DNS records at CloudFlare for Office 365](https://support.office.com/en-US/article/Create-DNS-records-at-Cloudflare-for-Office-365-84acd4fc-6eec-4d00-8bed-568f036ae2af#BKMK_add_CNAME), which may help.
 
 ### 3.4 Back in the Office 365 browser window, Click Verify
 
@@ -139,4 +139,4 @@ Note there are some detailed step by step instructions provided to [Create DNS r
 
 
 ## Summary
-We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In my next post I will describe how to configure Office 365 to use this additional domain for email.
+We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In [Part 2]({{site.baseurl}}/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html)) I will describe how to configure Office 365 to use this additional domain for email.

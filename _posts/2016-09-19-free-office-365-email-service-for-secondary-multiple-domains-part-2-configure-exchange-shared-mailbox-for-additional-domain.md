@@ -6,6 +6,7 @@ published: true
 title: >-
   Free Office 365 Email Service for Secondary - Multiple Domains - Part 2
   Configure Exchange Shared Mailbox for Additional Domain
+meta: Office 365 small business email free
 ---
 ## Free Outlook Email for Secondary or More Domains in Office 365
 

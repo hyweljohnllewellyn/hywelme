@@ -6,9 +6,105 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 18 Sep 2016 15:18:38 +0100</pubDate>
-    <lastBuildDate>Sun, 18 Sep 2016 15:18:38 +0100</lastBuildDate>
+    <pubDate>Mon, 19 Sep 2016 18:51:15 +0100</pubDate>
+    <lastBuildDate>Mon, 19 Sep 2016 18:51:15 +0100</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Free Office 365 Email Service for Secondary - Multiple Domains - Part 2 Configure Exchange Shared Mailbox for Additional Domain</title>
+        <description>&lt;h2 id=&quot;free-outlook-email-for-secondary-or-more-domains-in-office-365&quot;&gt;Free Outlook Email for Secondary or More Domains in Office 365&lt;/h2&gt;
+
+&lt;p&gt;In my previous post I described how to &lt;a href=&quot;http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html&quot;&gt;Configure CloudFlare DNS for an Additional Domain to use Office 365 for email&lt;/a&gt;.  If you already have a domain that is licensed for Office 365 services, then there is an option to configure additional domains for email using the shared mailbox feature.  The email for these extra domains do not require new user licenses and so are Free.&lt;/p&gt;
+
+&lt;p&gt;In this post I will describe how to configure the Office 365 shared mailbox for a an additional domain, effectively giving a free Office 365 email service.&lt;/p&gt;
+
+&lt;p&gt;Steps 1 to 7 from &lt;a href=&quot;http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html&quot;&gt;Part 1&lt;/a&gt; cover setting up the Office 365 DNS for email on the DNS Host.  As this is a continuation, I will start with Step 8.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-8-add-the-basic-exchange-shared-mailbox-for-the-new-domain&quot;&gt;Step 8: Add the Basic Exchange Shared Mailbox for the New Domain&lt;/h2&gt;
+
+&lt;h3 id=&quot;under-office-365-admin-centre-click-exchange-login-from--step-21httpwwwhywelmesmallbusinessemail20160918free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-hosthtml&quot;&gt;8.1 Under Office 365 Admin Centre, Click Exchange (login from  &lt;a href=&quot;http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html&quot;&gt;step 2.1&lt;/a&gt;)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.1 Under Office 365 Admin Centre Click Exchange.jpg&quot; alt=&quot;8.1 Under Office 365 Admin Centre Click Exchange&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-shared-under-recipients-of-office-exchange-admin&quot;&gt;8.2 Click Shared under Recipients of Office Exchange Admin&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.2 Click Shared under Recipients of Office Exchange Admin.jpg&quot; alt=&quot;8.2 Click Shared under Recipients of Office Exchange Admin&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-the-plus--icon-to-addd-a-new-shared-mailbox&quot;&gt;8.3 Click the plus + icon to addd a new Shared Mailbox&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.3 Click the plus icon to addd a new Shared Mailbox.jpg&quot; alt=&quot;8.3 Click the plus icon to addd a new Shared Mailbox&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;enter-the-display-name-and-email-address-for-the-new-domain-name-domain2com&quot;&gt;8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com&lt;/h3&gt;
+
+&lt;p&gt;Note that the primary/ licensed domain for this tutorial is customdomain.com.  The name given for the new domain, before the @ sign should be unique even for the primary domain.&lt;/p&gt;
+
+&lt;p&gt;The simplest option is to use the name of the second domain as the shared mailbox email in this step.  Therefore I will use domain2@domain2.com as the email address.  Note that this step will also create a new Active user of domain2@customdomain.com.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com.jpg&quot; alt=&quot;8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-the-plus--icon-to-add-existing-to-access-this-new-shared-mailbox&quot;&gt;8.5 Click the Plus + icon to add existing to access this new Shared Mailbox&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.5 Click the Plus icon to add existing to access this new Shared Mailbox.jpg&quot; alt=&quot;8.5 Click the Plus icon to add existing to access this new Shared Mailbox&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;select-shared-mailbox-users-click-add-and-then-click-ok&quot;&gt;8.6 Select Shared Mailbox Users, click Add and then click OK&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.6 Select Shared Mailbox Users click Add and then click OK.jpg&quot; alt=&quot;8.6 Select Shared Mailbox Users click Add and then click OK&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-save-to-add-the-new-shared-mailbox-domain2domain2com&quot;&gt;8.7 Click Save to add the New Shared Mailbox domain2@domain2.com&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.7 Click Save to add the New Shared Mailbox domain2@domain2.com.jpg&quot; alt=&quot;8.7 Click Save to add the New Shared Mailbox domain2@domain2.com&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-9-edit-the-shared-mailbox-for-the-new-domain&quot;&gt;Step 9: Edit the Shared Mailbox for the New Domain&lt;/h2&gt;
+&lt;p&gt;I want to use this domain email as a catch all email info@domain2.com, rather than domain2@domain2.com.  I can now update the email for this shared mailbox.&lt;/p&gt;
+
+&lt;h3 id=&quot;highlight-the-new-shared-mailbox-and-click-the-pencil-icon-to-edit&quot;&gt;9.1 Highlight the new Shared Mailbox and click the pencil icon to Edit&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.1 Highlight the new Shared Mailbox and click the pencil icon to Edit .jpg&quot; alt=&quot;9.1 Highlight the new Shared Mailbox and click the pencil icon to Edit &quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-email-address-for-the-domain2com-shared-mailbox&quot;&gt;9.2 Click email address for the domain2.com shared mailbox&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.2 Click email address for the domain2.com shared mailbox.jpg&quot; alt=&quot;9.2 Click email address for the domain2.com shared mailbox&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ensure-that-domain2domain2com-email-is-highlighted-and-click-the-pencil-icon-to-edit&quot;&gt;9.3 Ensure that domain2@domain2.com email is highlighted and Click the pencil icon to edit&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.3 Ensure that domain2@domain2.com email is highlighted and Click the pencil icon to edit.jpg&quot; alt=&quot;9.3 Ensure that domain2@domain2.com email is highlighted and Click the pencil icon to edit&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;update-the-email-address-from-domain2domain2com-to-infodomain2com-and-click-ok&quot;&gt;9.4 Update the email address from domain2@domain2.com to info@domain2.com and click OK&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.4 Update the email address from domain2@domain2.com.jpg&quot; alt=&quot;9.4 Update the email address from domain2@domain2.com&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.4 Update the email address to info@domain2.com and click OK.jpg&quot; alt=&quot;9.4 Update the email address to info@domain2.com and click OK&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;click-save-to-confirm-the-shared-office-365-email&quot;&gt;9.5 Click Save to confirm the shared Office 365 email&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.5 Click Save to confirm the shared Office 365 email.jpg&quot; alt=&quot;9.5 Click Save to confirm the shared Office 365 email&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-shared-mailbox-email-is-now-infodomain2com-and-there-is-a-domain2customdomaincom-active-user&quot;&gt;The Shared Mailbox email is now info@domain2.com and there is a domain2@customdomain.com active user&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.6 The Shared Mailbox email is now info@domain2.com.jpg&quot; alt=&quot;9.6 The Shared Mailbox email is now info@domain2.com&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.7 there is a domain2@customdomain.com active user.jpg&quot; alt=&quot;9.7 there is a domain2@customdomain.com active user&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;summary---free-office-365-email-service-for-secondary-or-more-domains&quot;&gt;Summary - Free Office 365 Email Service for Secondary, or More Domains&lt;/h2&gt;
+
+&lt;p&gt;Together, &lt;a href=&quot;http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html&quot;&gt;Part 1&lt;/a&gt; and Part 2 of this tutorial, show how to add secondary, or more additional custom domains to Office 365 and use the outlook email service for &lt;em&gt;free&lt;/em&gt;*.  As long as you only need a relatively basic catch-all type email for the additional domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;* note that you still need at least one licenced Office 365 account&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You may also find my other Office 365 tips useful:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hywel.me/small/business/email/2016/01/12/convert-office-365-user-email-to-shared-mailbox-and-remove-the-user-license.html&quot;&gt;Convert Office 365 User Email to Shared Mailbox and Remove the User License&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html&quot;&gt;How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html&quot;&gt;Microsoft Office 365 Catch-all using Additional Alias Email Addresses&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 19 Sep 2016 13:52:00 +0100</pubDate>
+        <link>http://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</link>
+        <guid isPermaLink="true">http://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in Cloudflare Host</title>
@@ -1233,54 +1329,6 @@ drush migrate-upgrade --legacy-db-url&lt;span class=&quot;o&quot;&gt;=&lt;/span&
         <pubDate>Thu, 11 Feb 2016 19:42:00 +0000</pubDate>
         <link>http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</link>
         <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</guid>
-        
-        
-        <category>drupal</category>
-        
-      </item>
-    
-      <item>
-        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 3</title>
-        <description>&lt;h2 id=&quot;drupal-6-modules&quot;&gt;Drupal 6 Modules&lt;/h2&gt;
-
-&lt;p&gt;A review of the currently installed modules on the Drupal 6 showed that most are now part of Drupal 8 Core, in particular:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ostraining.com/blog/drupal/drupal-8-contact-forms/&quot;&gt;Contact Forms&lt;/a&gt; instead of Webform&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.drupal.org/node/2606836&quot;&gt;Content Construction Kit (CCK)&lt;/a&gt; is now in Core Drupal 8&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The obvious module that stands out is the &lt;a href=&quot;https://www.drupal.org/project/simple_sitemap&quot;&gt;XML Sitemap&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To install that module, again using Drush&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush dl simple_sitemap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/drush dl simple_sitemap.png&quot; alt=&quot;drush dl simple_sitemap&quot; /&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush en simplesitemap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/drush en simplesitemap.png&quot; alt=&quot;drush en simplesitemap&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Issue Note that the command was simplesitemap not simple_sitemap&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;mamp-nginx-404-error---switch-to-apache&quot;&gt;MAMP Nginx 404 error - Switch to Apache&lt;/h2&gt;
-
-&lt;p&gt;I have had to switch, hopefully temporarily to using the Apache Server with MAMP because although the main page (homepage) works fine, all others give 404 errors.&lt;/p&gt;
-
-&lt;p&gt;Running Nginx:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/404 drupal page not found mamp with nginx .png&quot; alt=&quot;404 drupal page not found mamp with nginx&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Running Apache:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-10/drupal user login page mamp with apache.png&quot; alt=&quot;drupal user login page mamp with apache&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 10 Feb 2016 20:15:00 +0000</pubDate>
-        <link>http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html</guid>
         
         
         <category>drupal</category>

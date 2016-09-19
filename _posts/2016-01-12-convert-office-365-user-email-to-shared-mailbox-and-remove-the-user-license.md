@@ -1,9 +1,12 @@
 ---
 layout: post
-date: "2016-01-12 20:43 +0000"
+date: '2016-01-12 20:43 +0000'
 author: hywel
 categories: small business email
-excerpt: "A temporary member of admin staff was provided with a dedicated user mailbox and therefore an Office 365 License.  Now the staff member is no longer required, the License can be released."
+excerpt: >-
+  A temporary member of admin staff was provided with a dedicated user mailbox
+  and therefore an Office 365 License.  Now the staff member is no longer
+  required, the License can be released.
 meta: Office 365 small business email remove license
 published: true
 title: Convert Office 365 User Email to Shared Mailbox and Remove the User License
@@ -76,4 +79,10 @@ This subscription's quantity was successfully updated.  Done!
 
 Note that you could now provide access to the new shared mailbox to other users,  see [Open and Use a Shared Mailbox](https://support.office.com/en-my/article/Open-and-use-a-shared-mailbox-in-Outlook-Web-App-bc127866-42be-4de7-92ae-1ef2f787fd5c?ui=en-US&rs=en-MY&ad=MY#__migbm_0).  
 
-I also describe [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html).
+## My other Office 365 tips:
+
+- [Free Office 365 Email Service for Secondary - Multiple Domains - Part 2 Configure Exchange Shared Mailbox for Additional Domain](http://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html)
+- [Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in Cloudflare Host](http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html)
+- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
+- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses](http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
+

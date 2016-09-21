@@ -15,7 +15,7 @@ However, I find that maintaining multiple sites, with constant maintenance for s
 
 Also, many WordPress sites are not as fast as they should be because it is generating content dynamically as the user requests it, unless using a cache plugin, which is effectively saving a "static" copy of the site.
 
-So, as described in the migrate a Drupal 6 Website to a Static Site post, I have  investigated Static Site Generators such as [Jekyll](https://jekyllrb.com/) and [Hugo](http://gohugo.io/).   However, I found that these generators are currently too technical for most users.
+So, as described in the [Migrate a Drupal 6 Website to a Static Site]({{site.baseurl}}/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html) post, I have  investigated Static Site Generators such as [Jekyll](https://jekyllrb.com/) and [Hugo](http://gohugo.io/).   However, I found that these generators are currently too technical for most users.
 
 ## Best of Both?
 
@@ -105,11 +105,11 @@ Repository in Local Folder:
 
 ## Create a Static Site from WordPress
 
-So, after some research and trial and error, my preferred WordPress plugin to generate static content is [Simply Static](https://en-gb.wordpress.org/plugins/simply-static/).  Not only dies it work well, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the Simply Static plugin as usual.
+So, after some research and trial and error, my preferred WordPress plugin to generate static content is [Simply Static](https://en-gb.wordpress.org/plugins/simply-static/).  Not only does it work well, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the Simply Static plugin as usual.
 
 ### Step 4 - Update Simply Static Settings
 
-The static website URL hosted with Github Pages is shown on the Settings Page of your repository (see step 2b for the GitHub settings), it is the GitHub username followed by the repository name. For example; Your site is published at https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.  
+The static website URL hosted with Github Pages is shown on the Settings Page of your repository (see step 2b for the GitHub settings), it is the GitHub username followed by the repository name. For example; Your site is published at [https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/](https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/) 
 
 #### Step 4a Go To Simply Static Settings
 
@@ -189,6 +189,6 @@ Go to your URL, see my [https://hyweljohnllewellyn.github.io/carol-singers-hire-
 
 ## Some Closing Thoughts 
 
-If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html).  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example [https://www.carolsingershire.uk](https://www.carolsingershire.uk/) instead of the github reposirory URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.  
+If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at [GitHub Pages Custom Domain Names with CloudFlare](http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html).  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example [https://www.carolsingershire.uk](https://www.carolsingershire.uk/) instead of the Github repository URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.  
 
 Note that I have not discussed SEO or any other optimisation considerations.

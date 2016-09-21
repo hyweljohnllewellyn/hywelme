@@ -6,8 +6,8 @@
 </description>
     <link>http://www.hywel.me/</link>
     <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Sep 2016 19:03:09 +0100</pubDate>
-    <lastBuildDate>Mon, 19 Sep 2016 19:03:09 +0100</lastBuildDate>
+    <pubDate>Wed, 21 Sep 2016 19:10:57 +0100</pubDate>
+    <lastBuildDate>Wed, 21 Sep 2016 19:10:57 +0100</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -380,7 +380,7 @@ support@upthere.com&lt;/p&gt;
 
 &lt;p&gt;Also, many WordPress sites are not as fast as they should be because it is generating content dynamically as the user requests it, unless using a cache plugin, which is effectively saving a “static” copy of the site.&lt;/p&gt;
 
-&lt;p&gt;So, as described in the migrate a Drupal 6 Website to a Static Site post, I have  investigated Static Site Generators such as &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.   However, I found that these generators are currently too technical for most users.&lt;/p&gt;
+&lt;p&gt;So, as described in the &lt;a href=&quot;/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html&quot;&gt;Migrate a Drupal 6 Website to a Static Site&lt;/a&gt; post, I have  investigated Static Site Generators such as &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.   However, I found that these generators are currently too technical for most users.&lt;/p&gt;
 
 &lt;h2 id=&quot;best-of-both&quot;&gt;Best of Both?&lt;/h2&gt;
 
@@ -475,11 +475,11 @@ support@upthere.com&lt;/p&gt;
 
 &lt;h2 id=&quot;create-a-static-site-from-wordpress&quot;&gt;Create a Static Site from WordPress&lt;/h2&gt;
 
-&lt;p&gt;So, after some research and trial and error, my preferred WordPress plugin to generate static content is &lt;a href=&quot;https://en-gb.wordpress.org/plugins/simply-static/&quot;&gt;Simply Static&lt;/a&gt;.  Not only dies it work well, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the Simply Static plugin as usual.&lt;/p&gt;
+&lt;p&gt;So, after some research and trial and error, my preferred WordPress plugin to generate static content is &lt;a href=&quot;https://en-gb.wordpress.org/plugins/simply-static/&quot;&gt;Simply Static&lt;/a&gt;.  Not only does it work well, but it is kept up to date and it has top ratings.  To follow this guide, install and activate the Simply Static plugin as usual.&lt;/p&gt;
 
 &lt;h3 id=&quot;step-4---update-simply-static-settings&quot;&gt;Step 4 - Update Simply Static Settings&lt;/h3&gt;
 
-&lt;p&gt;The static website URL hosted with Github Pages is shown on the Settings Page of your repository (see step 2b for the GitHub settings), it is the GitHub username followed by the repository name. For example; Your site is published at https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.&lt;/p&gt;
+&lt;p&gt;The static website URL hosted with Github Pages is shown on the Settings Page of your repository (see step 2b for the GitHub settings), it is the GitHub username followed by the repository name. For example; Your site is published at &lt;a href=&quot;https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/&quot;&gt;https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;step-4a-go-to-simply-static-settings&quot;&gt;Step 4a Go To Simply Static Settings&lt;/h4&gt;
 
@@ -558,7 +558,7 @@ support@upthere.com&lt;/p&gt;
 
 &lt;h2 id=&quot;some-closing-thoughts&quot;&gt;Some Closing Thoughts&lt;/h2&gt;
 
-&lt;p&gt;If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at &lt;a href=&quot;http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html&quot;&gt;GitHub Pages Custom Domain Names with CloudFlare&lt;/a&gt;.  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example &lt;a href=&quot;https://www.carolsingershire.uk/&quot;&gt;https://www.carolsingershire.uk&lt;/a&gt; instead of the github reposirory URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.&lt;/p&gt;
+&lt;p&gt;If you would like to use a Custom Domain Name, which is recommended for markeking and SEO for you business, then you can see my related blog at &lt;a href=&quot;http://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html&quot;&gt;GitHub Pages Custom Domain Names with CloudFlare&lt;/a&gt;.  You would then simply use your custom domain name in the Destiation URL (see Step 4b), for example &lt;a href=&quot;https://www.carolsingershire.uk/&quot;&gt;https://www.carolsingershire.uk&lt;/a&gt; instead of the Github repository URL https://hyweljohnllewellyn.github.io/carol-singers-hire-uk/.&lt;/p&gt;
 
 &lt;p&gt;Note that I have not discussed SEO or any other optimisation considerations.&lt;/p&gt;
 </description>

@@ -81,8 +81,8 @@ Note that you could now provide access to the new shared mailbox to other users,
 
 ## My other Office 365 tips:
 
-- [Free Office 365 Email Service for Secondary - Multiple Domains - Part 2 Configure Exchange Shared Mailbox for Additional Domain](http://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html)
-- [Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in Cloudflare Host](http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html)
-- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox](http://www.hywel.me/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
-- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses](http://www.hywel.me/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
+- [Free Office 365 Email Service for Secondary - Multiple Domains - Part 2 Configure Exchange Shared Mailbox for Additional Domain]({{site.baseurl}}/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html)
+- [Free Office 365 Email Service for Multiple Domains - Part 1 Configure DNS in CloudFlare Host]({{site.baseurl}}/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html)
+- [How to Configure Mac Mail Client for Sending and Receiving Email from Office 365 Shared Mailbox]({{site.baseurl}}/small/business/email/2015/11/21/office-365-configure-shared-mailbox-mac-email-client.html)
+- [Microsoft Office 365 Catch-all using Additional Alias Email Addresses]({{site.baseurl}}/small/business/email/2015/11/19/microsoft-office-365-catch-all-additional-email-alias.html)
 

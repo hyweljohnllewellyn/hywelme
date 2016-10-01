@@ -43,7 +43,13 @@ cd /Users/hywel/Sites/drupal8
 drush migrate-upgrade --legacy-db-url=mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root=/Users/hywel/Sites/hartleyvoicescms --configure-only
 {% endhighlight %}
 
-Nothing much happened, it just returned to the prompt.  To some extent, this was expected as the configure-only option was used.  So next was:
+
+
+Nothing much happened, it just returned to the prompt.  To some extent, this was expected as the configure-only option was used.  From [Upgrade using Drush](https://www.drupal.org/node/2350651):
+
+> "After running migrate-drupal with the --configure-only parameter, you run migrate-status to see the list of possible migrations"
+
+So next was to run:
 
 {% highlight bash %}
 drush migrate-status

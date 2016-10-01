@@ -1,19 +1,18 @@
 ---
 layout: post
-date: "2016-02-11 19:42 +0000"
+date: '2016-02-11 19:42 +0000'
 author: hywel
 categories: drupal
-excerpt: ""
-meta: " Drupal 8 migration upgrade full HTML filter null  text format"
+meta: ' Drupal 8 migration upgrade full HTML filter null  text format'
 published: true
-title: "A Website Upgrade from Drupal 6 to Drupal 8 - Part 4"
+title: A Website Upgrade from Drupal 6 to Drupal 8 - Part 4
 ---
 
 
 
 ## [Preparing an upgrade to Drupal 8](https://www.drupal.org/node/2350603)
 
-According to this link, the requirements are:
+According to drupal.org at [Upgrade using Drush](https://www.drupal.org/node/2350651) , the requirements are:
 
 > A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.
 

@@ -32,7 +32,7 @@
 
 <script type="text/javascript">
 function AutoQuoteFunction() {
-var body = JSON.stringify("#AutoQuoteForm".serializeArray());
+var body = JSON.stringify("#AutoQuoteForm");
 var apigClient = apigClientFactory.newClient();
 
 apigClient.AutoQuoteAPI(params, body, additionalParams)

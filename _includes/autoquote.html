@@ -41,7 +41,7 @@ var additionalParams = {
 };
 var apigClient = apigClientFactory.newClient();
 
-apigClient.autoquote(params, body, additionalParams)
+apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
                 alert(JSON.stringify(result));
             }).catch(function(result){

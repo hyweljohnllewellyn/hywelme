@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Contact us</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+
+<body style="color: #000000">
+
+<form  role="form" action="#" onsubmit="AutoQuoteFunction()" name="AutoQuoteForm">
+
+<input type="hidden" class="form-control" name="subject" value="Victorian Carol Singers Hire UK Enquiry" />
+
+<div class="form-group row ">
+<label class="col-sm-3 form-control-label" for="people">Number of People:  <span class="text-info">(required)</span></label>
+  <div class="col-sm-9">
+ <input type='text' id ='people' class="form-control"  name='people' required/>
+  </div>
+</div>
+
+<input class="btn btn-primary" type="submit" value="Send">
+</form>
+
+<script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+<script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+<script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+<script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+<script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+<script type="text/javascript" src="lib/url-template/url-template.js"></script>
+<script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+<script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+<script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+<script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+<script type="text/javascript" src="apigClient.js"></script>
+
+<script type="text/javascript">
+function AutoQuoteFunction() {
+```
+  var params = {
+    // This is where any modeled request parameters should be added.
+    // The key is the parameter name, as it is defined in the API in API Gateway.
+  };
+
+  var additionalParams = {
+    // If there are any unmodeled query parameters or headers that must be
+    //   sent with the request, add them here.
+    headers: {},
+    queryParams: {}
+  };
+```
+var body = JSON.stringify($("#AutoQuoteForm").serializeArray());
+// var body = document.getElementById("people").value;
+
+var apigClient = apigClientFactory.newClient();
+
+apigClient.AutoQuoteAPI(params, body, additionalParams)
+                .then(function(result){
+                res.innerHTML = JSON.stringify(result);
+            }).catch(function(result){
+                res.innerHTML = "Sorry, API Gateway is not responding";
+            });
+}
+</script>
+
+</body>
+</html>

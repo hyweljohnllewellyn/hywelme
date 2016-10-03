@@ -33,6 +33,12 @@
 <script type="text/javascript">
 function AutoQuoteFunction() {
 var body = JSON.stringify("#AutoQuoteForm");
+var params = {
+    //This is where any header, path, or querystring request params go. The key is the parameter named as defined in the API
+};
+var additionalParams = {
+    //If there are any unmodeled query parameters or headers that need to be sent with the request you can add them here
+};
 var apigClient = apigClientFactory.newClient();
 
 apigClient.AutoQuoteAPI(params, body, additionalParams)

@@ -53,7 +53,7 @@ apigClientFactory.newClient = function (config) {
 
     
     // extract endpoint and path from url
-    var invokeUrl = 'https://nw1ryiksz3.execute-api.eu-west-1.amazonaws.com/victoriancarolsingers';
+    var invokeUrl = 'https://nw1ryiksz3.execute-api.eu-west-1.amazonaws.com/hywelme';
     var endpoint = /(^https?:\/\/[^\/]+)/g.exec(invokeUrl)[1];
     var pathComponent = invokeUrl.substring(endpoint.length);
 
@@ -83,24 +83,6 @@ apigClientFactory.newClient = function (config) {
     
     
     
-    apigClient.rootPost = function (params, body, additionalParams) {
-        if(additionalParams === undefined) { additionalParams = {}; }
-        
-        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
-        
-        var rootPostRequest = {
-            verb: 'post'.toUpperCase(),
-            path: pathComponent + uritemplate('/').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
-            headers: apiGateway.core.utils.parseParametersToObject(params, []),
-            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
-            body: body
-        };
-        
-        
-        return apiGatewayClient.makeRequest(rootPostRequest, authType, additionalParams, config.apiKey);
-    };
-    
-    
     apigClient.rootOptions = function (params, body, additionalParams) {
         if(additionalParams === undefined) { additionalParams = {}; }
         
@@ -116,6 +98,24 @@ apigClientFactory.newClient = function (config) {
         
         
         return apiGatewayClient.makeRequest(rootOptionsRequest, authType, additionalParams, config.apiKey);
+    };
+    
+    
+    apigClient.autoquotePost = function (params, body, additionalParams) {
+        if(additionalParams === undefined) { additionalParams = {}; }
+        
+        apiGateway.core.utils.assertParametersDefined(params, [], ['body']);
+        
+        var autoquotePostRequest = {
+            verb: 'post'.toUpperCase(),
+            path: pathComponent + uritemplate('/autoquote').expand(apiGateway.core.utils.parseParametersToObject(params, [])),
+            headers: apiGateway.core.utils.parseParametersToObject(params, []),
+            queryParams: apiGateway.core.utils.parseParametersToObject(params, []),
+            body: body
+        };
+        
+        
+        return apiGatewayClient.makeRequest(autoquotePostRequest, authType, additionalParams, config.apiKey);
     };
     
 

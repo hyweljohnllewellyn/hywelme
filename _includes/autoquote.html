@@ -18,11 +18,13 @@
 <input class="btn btn-primary" type="submit" value="Send">
 </form>
 
-<p id="temp">9</p>
+<p id="temp">10</p>
 
 <script type="text/javascript">
 function AutoQuoteFunction() {
-var body = JSON.stringify(1);
+var frm = $(document.AutoQuoteForm);
+var body = JSON.stringify(frm.serializeArray());
+//var body = JSON.stringify(1);
 var params = {
 };
 var additionalParams = {

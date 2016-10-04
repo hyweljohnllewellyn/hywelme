@@ -18,6 +18,7 @@
 <input class="btn btn-primary" type="submit" value="Send">
 </form>
 
+<p id="result"></p>
 <!--script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
 <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
 <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
@@ -41,9 +42,11 @@ var apigClient = apigClientFactory.newClient();
 
 apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
-                alert(JSON.stringify(result));
+                  document.getElementById("result").innerHTML = JSON.stringify(result);
+                //alert(JSON.stringify(result));
             }).catch(function(result){
-                alert("Sorry, API Gateway is not responding");
+              document.getElementById("result").innerHTML = result.message;
+                //alert("Sorry, API Gateway is not responding");
             });
 }
 </script>

@@ -22,8 +22,7 @@
 
 <script type="text/javascript">
 function AutoQuoteFunction() {
-var frm = $(document.AutoQuoteForm);
-var body = JSON.stringify(frm.serializeArray());
+var body = JSON.stringify(serialize(document.AutoQuoteForm));
 //var body = JSON.stringify(1);
 var params = {
 };

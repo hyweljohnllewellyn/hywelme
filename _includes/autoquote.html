@@ -18,7 +18,7 @@
 <input class="btn btn-primary" type="submit" value="Send">
 </form>
 
-<p id="temp">3</p>
+<p id="temp">4</p>
 <!--script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
 <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
 <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
@@ -33,7 +33,7 @@
 
 <script type="text/javascript">
 function AutoQuoteFunction() {
-var body = 1;
+var body = JSON.stringify(1);
 var params = {'ContentType' : 'application/json','Access-Control-Allow-Headers' : 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'};
 var additionalParams = {
     //If there are any unmodeled query parameters or headers that need to be sent with the request you can add them here

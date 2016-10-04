@@ -34,7 +34,7 @@
 <script type="text/javascript">
 function AutoQuoteFunction() {
 var body = 1;
-var params = { 'ContentType' : 'application/json','Access-Control-Allow-Headers' : 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'};
+var params = {'Access-Control-Allow-Origin', 'ContentType' : 'application/json','Access-Control-Allow-Headers' : 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'};
 var additionalParams = {
     //If there are any unmodeled query parameters or headers that need to be sent with the request you can add them here
 };
@@ -42,10 +42,10 @@ var apigClient = apigClientFactory.newClient();
 
 apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
-                  document.getElementById("people").innerHTML = JSON.stringify(result);
+                  document.getElementById("temp").innerHTML = JSON.stringify(result);
                 alert(JSON.stringify(result));
             }).catch(function(result){
-              document.getElementById("people").innerHTML = JSON.stringify(result);
+              document.getElementById("temp").innerHTML = JSON.stringify(result);
                 alert("Sorry, API Gateway is not responding");
             });
 }

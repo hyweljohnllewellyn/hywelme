@@ -11,8 +11,10 @@
 </div>
 
 <input class="btn btn-primary" type="submit" value="Send">
-
-<p id="temp">19</p>
+<br>
+<br>
+<hl>
+<h3 id="result" class="bg-success" >20</h3>
 
 <script type="text/javascript">
 function AutoQuoteFunction() {
@@ -31,10 +33,10 @@ var apigClient = apigClientFactory.newClient();
 
 apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
-                  document.getElementById("temp").innerHTML = result.data;
+                  document.getElementById("result").innerHTML = result.data;
                 //alert(JSON.stringify(result));
             }).catch(function(result){
-              document.getElementById("temp").innerHTML = JSON.stringify(result);
+              document.getElementById("result").innerHTML = JSON.stringify(result);
                 //alert("Sorry, API Gateway is not responding");
             });
 }

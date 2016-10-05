@@ -15,7 +15,7 @@ custom_js:
 - /javascript/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js
 - /javascript/apiGateway-js-sdk/lib/apiGatewayCore/utils.js
 - /javascript/apiGateway-js-sdk/apigClient.js
-- /javascript/serialize-0.2.min.js
+- /javascript/serialize-brettz9.js
 title: Java AWS Lambda API Gateway using Javascript Client - Auto Quote
 ---
 {% if page.custom_js %}

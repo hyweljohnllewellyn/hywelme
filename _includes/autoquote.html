@@ -18,7 +18,9 @@
 <input class="btn btn-primary" type="submit" value="Send">
 </form>
 
-<p id="temp">16</p>
+<div class="col-sm-9">
+<p id="temp">17</p>
+</div>
 
 <script type="text/javascript">
 function AutoQuoteFunction() {
@@ -37,7 +39,7 @@ var apigClient = apigClientFactory.newClient();
 
 apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
-                  document.getElementById("temp").innerHTML = JSON.stringify(result.data);
+                  document.getElementById("temp").innerHTML = JSON.parse(result.data);
                 //alert(JSON.stringify(result));
             }).catch(function(result){
               document.getElementById("temp").innerHTML = JSON.stringify(result);

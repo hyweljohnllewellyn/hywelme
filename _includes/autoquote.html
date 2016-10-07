@@ -22,13 +22,38 @@
 <input class="btn btn-primary" type="submit" value="Calculate">
 <br>
 <br>
-<h3 id="dist" class="bg-success" >Distance to Event... </h3>
-
+<div id="output">
+<h3  class="bg-success" >Distance to Event... </h3>
+</div>
 <!-- GOOGLE API START -->
 <!-- https://developers.google.com/maps/documentation/javascript/examples/distance-matrix -->
-<strong>Results</strong>
-  <div id="output"></div>
+
+<style>
+      #right-panel {
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+      #map {
+        height: 100%;
+        width: 50%;
+      }
+      #right-panel {
+        float: right;
+        width: 48%;
+        padding-left: 2%;
+      }
+    </style>
+<div id="right-panel">
    <div id="map"></div>
+</div>
    <script>
      function initMap() {
        var bounds = new google.maps.LatLngBounds;

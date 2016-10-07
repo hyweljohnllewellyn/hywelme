@@ -40,7 +40,6 @@
        } else {
          var destinationA = "King's Cross St. Pancras, Euston Road, London";
        }
-       var destinationB= "King's Cross St. Pancras, Euston Road, London";
 /*
        var destinationIcon = 'https://chart.googleapis.com/chart?' +
            'chst=d_map_pin_letter&chld=D|FF0000|000000';
@@ -55,7 +54,7 @@
        var service = new google.maps.DistanceMatrixService;
        service.getDistanceMatrix({
          origins: [origin1],
-         destinations: [destinationA,destinationB],
+         destinations: [destinationA],
          travelMode: 'DRIVING',
          unitSystem: google.maps.UnitSystem.IMPERIAL,
          avoidHighways: false,
@@ -94,7 +93,9 @@
               // geocoder.geocode({'address': destinationList[j]},
               //     showGeocodedAddressOnMap(true));
                 if (results[j].distance.text !='1 ft') {
-                  outputDiv.innerHTML += results[j].distance.text;
+                  // round trip convert to miles
+                       var totaldistance = (results[j].distance.value * 2)/ 5280 + "miles";
+                  outputDiv.innerHTML += totaldistance;
                 }
              }
            }

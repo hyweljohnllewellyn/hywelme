@@ -94,7 +94,7 @@
               //     showGeocodedAddressOnMap(true));
                 if (results[j].distance.text !='1 ft') {
                   // round trip convert to miles
-                       var totaldistance = (results[j].distance.value * 2)/ 1609.34 + " miles";
+                       var totaldistance = ((results[j].distance.value * 2)/ 1609.34).toFixed(1) + " miles";
                   outputDiv.innerHTML += totaldistance;
                 }
              }

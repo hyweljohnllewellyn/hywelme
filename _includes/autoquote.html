@@ -13,7 +13,7 @@
 </div>
 
 <div class="form-group row ">
-<label class="col-sm-3 form-control-label" for="people">Event Postcode:  <span class="text-info">(required)</span></label>
+<label class="col-sm-3 form-control-label" for="people">Event Location or Postcode:  <span class="text-info">(required)</span></label>
   <div class="col-sm-4">
  <input type='text' id ='postcode' class="form-control"  name='postcode' required onchange="initMap()" />
 
@@ -34,11 +34,11 @@
        var bounds = new google.maps.LatLngBounds;
        var markersArray = [];
 
-       var origin1 = 'E1 0AA';
+       var origin1 = "King's Cross St. Pancras, Euston Road, London";
        if (document.getElementById("postcode").value !='') {
          var destinationA = document.getElementById("postcode").value;
        } else {
-         var destinationA = 'E1 0AA'
+         var destinationA = "King's Cross St. Pancras, Euston Road, London";
        }
 
        var destinationIcon = 'https://chart.googleapis.com/chart?' +

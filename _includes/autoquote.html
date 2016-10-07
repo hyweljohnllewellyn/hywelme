@@ -14,8 +14,9 @@
 
 <div class="form-group row ">
 <label class="col-sm-3 form-control-label" for="people">Event Location or Postcode:  <span class="text-info">(required)</span></label>
-  <div class="col-sm-4">
+  <div class="col-sm-6">
  <input type='text' id ='postcode' class="form-control"  name='postcode' required onchange="initMap()" />
+ <input type='hidden' id ='miles' class="form-control"  name='miles'  />
 
   </div>
 </div>
@@ -24,7 +25,7 @@
 <br>
 <br>
 <!--div id="map"></div-->
-<h3><div class="bg-success" id="output">1</div></h3>
+<h3><div class="bg-success" id="output2"></div></h3>
 
 <!-- GOOGLE API START -->
 <!-- https://developers.google.com/maps/documentation/javascript/examples/distance-matrix -->
@@ -65,8 +66,9 @@
          } else {
            var originList = response.originAddresses;
            var destinationList = response.destinationAddresses;
-           var outputDiv = document.getElementById('output');
+           var outputDiv = document.getElementById('miles');
            outputDiv.innerHTML = '';
+
 /*           deleteMarkers(markersArray);
 
            var showGeocodedAddressOnMap = function(asDestination) {
@@ -94,8 +96,10 @@
               //     showGeocodedAddressOnMap(true));
                 if (results[j].distance.text !='1 ft') {
                   // round trip convert to miles
-                       var totaldistance = ((results[j].distance.value * 2)/ 1609.34).toFixed(1) + " miles";
+                       var totaldistance = ((results[j].distance.value * 2)/ 1609.34);
+                       var totaldistancetext = totaldistance.toFixed(1) + " miles";
                   outputDiv.innerHTML += totaldistance;
+                  document.getElementById('miles2').innerHTML = totaldistancetext;
                 }
              }
            }

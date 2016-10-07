@@ -20,7 +20,7 @@
 </div>
 
 <div class="form-group row ">
-<label class="col-sm-3 form-control-label" for="people">Miles:</label>
+<label class="col-sm-3 form-control-label" for="miles">Miles:</label>
   <div class="col-sm-3">
     <input type='text' id ='miles' class="form-control"  name='miles'  />
   </div>
@@ -101,9 +101,8 @@
               //     showGeocodedAddressOnMap(true));
                 if (results[j].distance.text !='1 ft') {
                   // round trip convert to miles
-                       var totaldistance = ((results[j].distance.value * 2)/ 1609.34);
+                       outputDiv.innerHTML += ((results[j].distance.value * 2)/ 1609.34);
                        var totaldistancetext = ((results[j].distance.value * 2)/ 1609.34).toFixed(1) + " miles";
-                  outputDiv.innerHTML += totaldistance;
                   document.getElementById('infomiles').innerHTML = totaldistancetext;
                 }
              }

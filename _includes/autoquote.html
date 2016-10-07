@@ -22,9 +22,7 @@
 <input class="btn btn-primary" type="submit" value="Calculate">
 <br>
 <br>
-<div id="output">
-<h3  class="bg-success" >Distance to Event... </h3>
-</div>
+<h3><div class="bg-success" id="output"></div></h3>
 <!-- GOOGLE API START -->
 <!-- https://developers.google.com/maps/documentation/javascript/examples/distance-matrix -->
 
@@ -114,9 +112,7 @@
              for (var j = 0; j < results.length; j++) {
                geocoder.geocode({'address': destinationList[j]},
                    showGeocodedAddressOnMap(true));
-               outputDiv.innerHTML += originList[i] + ' to ' + destinationList[j] +
-                   ': ' + results[j].distance.text + ' in ' +
-                   results[j].duration.text + '<br>';
+               outputDiv.innerHTML += results[j].distance.text;
              }
            }
          }

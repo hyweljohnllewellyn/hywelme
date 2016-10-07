@@ -23,8 +23,9 @@
 <input class="btn btn-primary" type="submit" value="Calculate">
 <br>
 <br>
-<h3><div class="bg-success" id="output"></div></h3>
 <div id="map"></div>
+<h3><div class="bg-success" id="output"></div></h3>
+
 <!-- GOOGLE API START -->
 <!-- https://developers.google.com/maps/documentation/javascript/examples/distance-matrix -->
 
@@ -91,7 +92,9 @@
              for (var j = 0; j < results.length; j++) {
                geocoder.geocode({'address': destinationList[j]},
                    showGeocodedAddressOnMap(true));
-               outputDiv.innerHTML += results[j].distance.text;
+                if (results[j].distance.text !='1 ft') {
+                  outputDiv.innerHTML += results[j].distance.text;
+                }
              }
            }
          }

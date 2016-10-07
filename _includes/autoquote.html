@@ -40,7 +40,8 @@
        } else {
          var destinationA = "King's Cross St. Pancras, Euston Road, London";
        }
-
+       var destinationB= "King's Cross St. Pancras, Euston Road, London";
+/*
        var destinationIcon = 'https://chart.googleapis.com/chart?' +
            'chst=d_map_pin_letter&chld=D|FF0000|000000';
        var originIcon = 'https://chart.googleapis.com/chart?' +
@@ -50,11 +51,11 @@
          zoom: 10
        });
        var geocoder = new google.maps.Geocoder;
-
+*/
        var service = new google.maps.DistanceMatrixService;
        service.getDistanceMatrix({
          origins: [origin1],
-         destinations: [destinationA],
+         destinations: [destinationA,destinationB],
          travelMode: 'DRIVING',
          unitSystem: google.maps.UnitSystem.IMPERIAL,
          avoidHighways: false,
@@ -67,7 +68,7 @@
            var destinationList = response.destinationAddresses;
            var outputDiv = document.getElementById('output');
            outputDiv.innerHTML = '';
-           deleteMarkers(markersArray);
+/*           deleteMarkers(markersArray);
 
            var showGeocodedAddressOnMap = function(asDestination) {
              var icon = asDestination ? destinationIcon : originIcon;
@@ -84,14 +85,14 @@
                }
              };
            };
-
+*/
            for (var i = 0; i < originList.length; i++) {
              var results = response.rows[i].elements;
-             geocoder.geocode({'address': originList[i]},
-                 showGeocodedAddressOnMap(false));
+             // geocoder.geocode({'address': originList[i]},
+             //     showGeocodedAddressOnMap(false));
              for (var j = 0; j < results.length; j++) {
-               geocoder.geocode({'address': destinationList[j]},
-                   showGeocodedAddressOnMap(true));
+              // geocoder.geocode({'address': destinationList[j]},
+              //     showGeocodedAddressOnMap(true));
                 if (results[j].distance.text !='1 ft') {
                   outputDiv.innerHTML += results[j].distance.text;
                 }
@@ -100,13 +101,14 @@
          }
        });
      }
-
+/*
      function deleteMarkers(markersArray) {
        for (var i = 0; i < markersArray.length; i++) {
          markersArray[i].setMap(null);
        }
        markersArray = [];
      }
+*/
    </script>
    <script async defer
    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDilQ5RIw097e0co1x4khlKpoToVnCr7o4&callback=initMap">

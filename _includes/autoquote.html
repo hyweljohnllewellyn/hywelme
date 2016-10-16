@@ -61,6 +61,7 @@ apigClient.autoquotePost(params, body, additionalParams)
                   var jobject = JSON.parse(result.data);
                   document.getElementById("result").innerHTML = jobject.quote;
                 //alert(JSON.stringify(result));
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
             }).catch(function(result){
               document.getElementById("result").innerHTML = jobject;
                 //alert("Sorry, API Gateway is not responding");
@@ -72,6 +73,7 @@ apigClient.autoquotePost(params, body, additionalParams)
 <!--GOOGLE API START -->
 <!--https://developers.google.com/maps/documentation/javascript/examples/directions-simple-->
 <script>
+
       function initMap() {
 
         var directionsService = new google.maps.DirectionsService;
@@ -84,10 +86,8 @@ apigClient.autoquotePost(params, body, additionalParams)
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-          //origin: jobject.origin,
-          //destination: jobject.destination,
-          origin: 'AL7 3PL',
-          destination: 'SG4 8YA',
+          origin: jobject.origin,
+          destination: jobject.destination,
           travelMode: 'DRIVING'
         }, function(response, status) {
           if (status === 'OK') {

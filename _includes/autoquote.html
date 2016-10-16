@@ -38,7 +38,7 @@
   </div>
 </div><div class="form-group row ">
   <div class="col-sm-3">
-    <input type='hidden' id ='end' class="form-control"  name='end' value= 'SG4 8YA'  />
+    <input type='text' id ='end' class="form-control"  name='end' value= 'SG4 8YA'  />
   </div>
 </div>
 <input class="btn btn-primary" type="submit" value="Calculate">
@@ -97,7 +97,7 @@ apigClient.autoquotePost(params, body, additionalParams)
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     };
     document.getElementById('start').addEventListener('change', onChangeHandler);
-    //document.getElementById('end').addEventListener('change', onChangeHandler);
+    document.getElementById('end').addEventListener('change', onChangeHandler);
   }
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {

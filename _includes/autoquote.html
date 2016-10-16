@@ -6,9 +6,7 @@
 <h3  id = "text1" class="bg-info" >Calculate a quote...</h3>
 
 <form  role="form" action="javascript:void(0);" onsubmit="AutoQuoteFunction()" id ="AutoQuoteForm" name="AutoQuoteForm">
-  <div id="locationField">
-        <input id="autocomplete" placeholder="Enter a city" type="text" />
-      </div>
+
 <div class="form-group row ">
 <label class="col-sm-3 form-control-label" for="destination">Event Location or Postcode:  <span class="text-info">(required)</span></label>
   <div class="col-sm-6">
@@ -74,6 +72,12 @@ apigClient.autoquotePost(params, body, additionalParams)
       center: {lat: 51.5, lng: -0.2}
     });
     directionsDisplay.setMap(map);
+
+    var input = /** @type {!HTMLInputElement} */(
+               document.getElementById('pac-input'));
+
+    var autocomplete = new google.maps.places.Autocomplete(input);
+       autocomplete.bindTo('bounds', map);
 
     var onChangeHandler = function() {
       if(document.getElementById('info').value!=""){

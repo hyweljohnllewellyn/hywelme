@@ -61,11 +61,27 @@ apigClient.autoquotePost(params, body, additionalParams)
                   var jobject = JSON.parse(result.data);
                   document.getElementById("result").innerHTML = jobject.quote;
                   document.getElementById("miles").value = jobject.miles;
+                  calculateAndDisplayRoute(directionsService, directionsDisplay);
                 //alert(JSON.stringify(result));
             }).catch(function(result){
               document.getElementById("result").innerHTML = result.data;
                 //alert("Sorry, API Gateway is not responding");
             });
+
+
+            function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+              directionsService.route({
+                origin: jobject.origin,
+                destination: jobject.destination,
+                travelMode: 'DRIVING'
+              }, function(response, status) {
+                if (status === 'OK') {
+                  directionsDisplay.setDirections(response);
+                } else {
+                  window.alert('Directions request failed due to ' + status);
+                }
+              });
+            }
             var onChangeHandler = function() {
               calculateAndDisplayRoute(directionsService, directionsDisplay);
             };
@@ -90,19 +106,7 @@ apigClient.autoquotePost(params, body, additionalParams)
 
       }
 
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        directionsService.route({
-          origin: jobject.origin,
-          destination: jobject.destination,
-          travelMode: 'DRIVING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
-      }
+
 
 </script>
    <script async defer

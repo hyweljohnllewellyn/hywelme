@@ -59,7 +59,7 @@ var apigClient = apigClientFactory.newClient();
 apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
                   var jobject = JSON.parse(result.data);
-                  document.getElementById("result").innerHTML = jobject.quote.value;
+                  document.getElementById("result").innerHTML = jobject.quote;
                 //alert(JSON.stringify(result));
             }).catch(function(result){
               document.getElementById("result").innerHTML = JSON.stringify(result);

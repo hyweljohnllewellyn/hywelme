@@ -34,11 +34,11 @@
 </div>
 <div class="form-group row ">
   <div class="col-sm-3">
-    <input type='text' id ='start' class="form-control"  name='start'  />
+    <input type='hidden' id ='start' class="form-control"  name='start'  />
   </div>
 </div><div class="form-group row ">
   <div class="col-sm-3">
-    <input type='text' id ='end' class="form-control"  name='end' value= 'SG4 8YA'  />
+    <input type='hidden' id ='end' class="form-control"  name='end' value= 'SG4 8YA'  />
   </div>
 </div>
 <input class="btn btn-primary" type="submit" value="Calculate">
@@ -69,10 +69,10 @@ apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
                   var jobject = JSON.parse(result.data);
                   document.getElementById("result").innerHTML = jobject.quote;
-                  document.getElementById("miles").value = jobject.miles;
-                  document.getElementById("start").value = jobject.origin;
-                  document.getElementById("end").value = jobject.destination;
-                  document.getElementById("start").focus();
+                  //document.getElementById("miles").value = jobject.miles;
+                  //document.getElementById("start").value = jobject.origin;
+                  //document.getElementById("end").value = jobject.destination;
+                  document.getElementById("destination").focus();
                 //alert(JSON.stringify(result));
             }).catch(function(result){
               document.getElementById("result").innerHTML = JSON.stringify(result.data);
@@ -97,7 +97,7 @@ apigClient.autoquotePost(params, body, additionalParams)
     var onChangeHandler = function() {
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     };
-    document.getElementById('start').addEventListener('focus', onChangeHandler);
+    document.getElementById('destination').addEventListener('focus', onChangeHandler);
     //document.getElementById('end').addEventListener('input', onChangeHandler);
   }
 

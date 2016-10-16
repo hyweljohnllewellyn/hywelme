@@ -52,7 +52,7 @@ apigClient.autoquotePost(params, body, additionalParams)
                   document.getElementById("miles").value = jobject.miles;
                   document.getElementById("start").value = jobject.origin;
                   document.getElementById("end").value = jobject.destination;
-                  document.getElementById("info").innerHTML = "Your personalised quote " + jobject.quote + "\n for a performance of: " + jobject.performance;
+                  document.getElementById("info").innerHTML = "Your personalised quote: " + jobject.quote + "<br><br> For a performance of: " + jobject.performance;
                   document.getElementById("info").focus();
             }).catch(function(result){
               document.getElementById("result").innerHTML = JSON.stringify(result);

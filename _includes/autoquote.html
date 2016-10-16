@@ -72,7 +72,7 @@ apigClient.autoquotePost(params, body, additionalParams)
                   document.getElementById("miles").value = jobject.miles;
                   document.getElementById("start").value = jobject.origin;
                   document.getElementById("end").value = jobject.destination;
-                  document.getElementById("result").focus();
+                  document.getElementById("start").focus();
                 //alert(JSON.stringify(result));
             }).catch(function(result){
               document.getElementById("result").innerHTML = JSON.stringify(result.data);
@@ -97,7 +97,7 @@ apigClient.autoquotePost(params, body, additionalParams)
     var onChangeHandler = function() {
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     };
-    document.getElementById('result').addEventListener('focus', onChangeHandler);
+    document.getElementById('start').addEventListener('focus', onChangeHandler);
     //document.getElementById('end').addEventListener('input', onChangeHandler);
   }
 

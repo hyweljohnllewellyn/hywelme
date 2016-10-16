@@ -30,98 +30,12 @@
 <br>
 <!--div id="map"></div-->
 <h3><div class="bg-success" id="infomiles"></div></h3>
-
-<!-- GOOGLE API START -->
-<!-- https://developers.google.com/maps/documentation/javascript/examples/distance-matrix -->
-
-   <script>
-     function initMap() {
-       var bounds = new google.maps.LatLngBounds;
-       var markersArray = [];
-
-       var origin1 = "King's Cross St. Pancras, Euston Road, London";
-       if (document.getElementById("postcode").value !='') {
-         var destinationA = document.getElementById("postcode").value;
-       } else {
-         var destinationA = "King's Cross St. Pancras, Euston Road, London";
-       }
-/*
-       var destinationIcon = 'https://chart.googleapis.com/chart?' +
-           'chst=d_map_pin_letter&chld=D|FF0000|000000';
-       var originIcon = 'https://chart.googleapis.com/chart?' +
-           'chst=d_map_pin_letter&chld=O|FFFF00|000000';
-       var map = new google.maps.Map(document.getElementById('map'), {
-         center: {lat: 55.53, lng: 9.4},
-         zoom: 10
-       });
-       var geocoder = new google.maps.Geocoder;
-*/
-       var service = new google.maps.DistanceMatrixService;
-       service.getDistanceMatrix({
-         origins: [origin1],
-         destinations: [destinationA],
-         travelMode: 'DRIVING',
-         unitSystem: google.maps.UnitSystem.IMPERIAL,
-         avoidHighways: false,
-         avoidTolls: false
-       }, function(response, status) {
-         if (status !== 'OK') {
-           alert('Error was: ' + status);
-         } else {
-           var originList = response.originAddresses;
-           var destinationList = response.destinationAddresses;
-           var outputDiv = document.getElementById('miles');
-           outputDiv.innerHTML = '';
-
-/*           deleteMarkers(markersArray);
-
-           var showGeocodedAddressOnMap = function(asDestination) {
-             var icon = asDestination ? destinationIcon : originIcon;
-             return function(results, status) {
-               if (status === 'OK') {
-                 map.fitBounds(bounds.extend(results[0].geometry.location));
-                 markersArray.push(new google.maps.Marker({
-                   map: map,
-                   position: results[0].geometry.location,
-                   icon: icon
-                 }));
-               } else {
-                 alert('Geocode was not successful due to: ' + status);
-               }
-             };
-           };
-*/
-           for (var i = 0; i < originList.length; i++) {
-             var results = response.rows[i].elements;
-             // geocoder.geocode({'address': originList[i]},
-             //     showGeocodedAddressOnMap(false));
-             for (var j = 0; j < results.length; j++) {
-              // geocoder.geocode({'address': destinationList[j]},
-              //     showGeocodedAddressOnMap(true));
-                if (results[j].distance.text !='1 ft') {
-                  // round trip convert to miles
-                       outputDiv.value = ((results[j].distance.value * 2)/ 1609.34);
-                       var totaldistancetext = ((results[j].distance.value * 2)/ 1609.34).toFixed(1) + " miles";
-                  document.getElementById('infomiles').innerHTML = totaldistancetext;
-                }
-             }
-           }
-         }
-       });
-     }
-/*
-     function deleteMarkers(markersArray) {
-       for (var i = 0; i < markersArray.length; i++) {
-         markersArray[i].setMap(null);
-       }
-       markersArray = [];
-     }
-*/
-   </script>
-   <script async defer
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDilQ5RIw097e0co1x4khlKpoToVnCr7o4&callback=initMap">
-   </script>
-<!-- GOOGLE API END -->
+<style>
+      #map {
+        height: 100%;
+      }
+</style>
+<div id="map"></div>
 <!---------------------------->
 <!-- Amazon Gateway API START -->
 <script type="text/javascript">
@@ -141,7 +55,8 @@ var apigClient = apigClientFactory.newClient();
 
 apigClient.autoquotePost(params, body, additionalParams)
                 .then(function(result){
-                  document.getElementById("result").innerHTML = result.data;
+                  var JSONObject = JSON.parse(result.data);
+                  document.getElementById("result").innerHTML = JSONObject["quote"];
                 //alert(JSON.stringify(result));
             }).catch(function(result){
               document.getElementById("result").innerHTML = JSON.stringify(result);
@@ -151,3 +66,35 @@ apigClient.autoquotePost(params, body, additionalParams)
 </script>
 <!---------------------------->
 <!-- Amazon Gateway API END -->
+<!-- GOOGLE API START -->
+<!--https://developers.google.com/maps/documentation/javascript/examples/directions-simple-->
+<script>
+      function initMap() {
+
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: {lat: 55.12, lng: 5.30}
+        });
+        directionsDisplay.setMap(map);
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: JSONObject["origin"],
+          destination: JSONObject["destination"],
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    }
+</script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDilQ5RIw097e0co1x4khlKpoToVnCr7o4&callback=initMap">
+   </script>
+<!-- GOOGLE API END -->

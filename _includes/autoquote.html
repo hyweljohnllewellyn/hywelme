@@ -61,17 +61,17 @@ apigClient.autoquotePost(params, body, additionalParams)
                   var jobject = JSON.parse(result.data);
                   document.getElementById("result").innerHTML = jobject.quote;
                 //alert(JSON.stringify(result));
-                calculateAndDisplayRoute(directionsService, directionsDisplay);
             }).catch(function(result){
               document.getElementById("result").innerHTML = result.data;
                 //alert("Sorry, API Gateway is not responding");
             });
 
-
-//Amazon Gateway API END -->
-//GOOGLE API START -->
-//https://developers.google.com/maps/documentation/javascript/examples/directions-simple-->
-
+}
+</script>
+<!--Amazon Gateway API END -->
+<!--GOOGLE API START -->
+<!--https://developers.google.com/maps/documentation/javascript/examples/directions-simple-->
+<script>
 
       function initMap() {
 
@@ -83,7 +83,11 @@ apigClient.autoquotePost(params, body, additionalParams)
         });
         directionsDisplay.setMap(map);
 
-
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('result').addEventListener('change', onChangeHandler);
+      }
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
@@ -99,7 +103,6 @@ apigClient.autoquotePost(params, body, additionalParams)
         });
       }
     }
-  }
 </script>
    <script async defer
    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDilQ5RIw097e0co1x4khlKpoToVnCr7o4&callback=initMap">

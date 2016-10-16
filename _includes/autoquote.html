@@ -3,15 +3,9 @@
 <br>
 <br>
 
-<h3  id = "result" class="bg-info" >Calculate a quote based on £1.50 per person</h3>
+<h3  id = "result" class="bg-info" >Calculate a quote...</h3>
 
 <form  role="form" action="javascript:void(0);" onsubmit="AutoQuoteFunction()" id ="AutoQuoteForm" name="AutoQuoteForm">
-  <div class="form-group row ">
-  <!--label class="col-sm-3 form-control-label" for="people">Event Location or Postcode:  <span class="text-info">(required)</span></label-->
-    <div class="col-sm-6">
-   <input type='hidden' id ='people' class="form-control"  name='people' value="4"/>
-    </div>
-  </div>
 
 <div class="form-group row ">
 <label class="col-sm-3 form-control-label" for="destination">Event Location or Postcode:  <span class="text-info">(required)</span></label>
@@ -20,9 +14,8 @@
   </div>
 </div>
 
+    <input type='hidden' id ='people' class="form-control"  name='people' value="4"/>
     <input type='hidden' id ='performance' class="form-control"  name='performance' value="Barbershop Quartet"/>
-
-
     <input type='hidden' id ='miles' class="form-control"  name='miles'  />
     <input type='hidden' id ='start' class="form-control"  name='start'  />
     <input type='hidden' id ='end'   class="form-control"  name='end'    />
@@ -32,7 +25,7 @@
 <br>
 <br>
 <!--div id="map"></div-->
-<h3><div class="bg-success" id="infomiles"></div></h3>
+<h3><div class="bg-success" id="info"></div></h3>
 <div id="map" style="width:100%;height:500px"></div>
 <!---------------------------->
 <!-- Amazon Gateway API START -->
@@ -58,10 +51,12 @@ apigClient.autoquotePost(params, body, additionalParams)
                   document.getElementById("miles").value = jobject.miles;
                   document.getElementById("start").value = jobject.origin;
                   document.getElementById("end").value = jobject.destination;
-                  document.getElementById("destination").focus();
+                  document.getElementById("info");.innerHTML = "Your Quote " + jobject.quote + " for: " + jobject.performance + " distance: " + jobject.miles +  " expenses: " + jobject.expenses;
+                  document.getElementById("info").focus();
+
                 //alert(JSON.stringify(result));
             }).catch(function(result){
-              document.getElementById("result").innerHTML = JSON.stringify(result.data);
+              document.getElementById("result").innerHTML = JSON.stringify(result);
                 //alert("Sorry, API Gateway is not responding");
             });
 
@@ -81,12 +76,12 @@ apigClient.autoquotePost(params, body, additionalParams)
     directionsDisplay.setMap(map);
 
     var onChangeHandler = function() {
-      if(document.getElementById('destination').value!=""){
+      if(document.getElementById('info').value!=""){
       calculateAndDisplayRoute(directionsService, directionsDisplay);
        }
     };
 
-    document.getElementById('destination').addEventListener('focus', onChangeHandler);
+    document.getElementById('info').addEventListener('focus', onChangeHandler);
     //document.getElementById('end').addEventListener('input', onChangeHandler);
   }
 

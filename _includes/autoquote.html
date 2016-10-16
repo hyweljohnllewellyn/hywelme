@@ -96,8 +96,8 @@ apigClient.autoquotePost(params, body, additionalParams)
     var onChangeHandler = function() {
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     };
-    document.getElementById('start').addEventListener('change', onChangeHandler);
-    document.getElementById('end').addEventListener('change', onChangeHandler);
+    document.getElementById('start').addEventListener('input', onChangeHandler);
+    //document.getElementById('end').addEventListener('input', onChangeHandler);
   }
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {

@@ -63,7 +63,7 @@ apigClient.autoquotePost(params, body, additionalParams)
                 //alert(JSON.stringify(result));
                 calculateAndDisplayRoute(directionsService, directionsDisplay);
             }).catch(function(result){
-              document.getElementById("result").innerHTML = jobject;
+              document.getElementById("result").innerHTML = JSON.stringify(result.data);
                 //alert("Sorry, API Gateway is not responding");
             });
 

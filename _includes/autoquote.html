@@ -66,7 +66,10 @@ apigClient.autoquotePost(params, body, additionalParams)
               document.getElementById("result").innerHTML = result.data;
                 //alert("Sorry, API Gateway is not responding");
             });
-
+            var onChangeHandler = function() {
+              calculateAndDisplayRoute(directionsService, directionsDisplay);
+            };
+            document.getElementById('miles').addEventListener('change', alert("changed"));
 }
 </script>
 <!--Amazon Gateway API END -->
@@ -84,10 +87,7 @@ apigClient.autoquotePost(params, body, additionalParams)
         });
         directionsDisplay.setMap(map);
 
-        var onChangeHandler = function() {
-          calculateAndDisplayRoute(directionsService, directionsDisplay);
-        };
-        document.getElementById('miles').addEventListener('change', alert("changed"));
+
       }
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {

@@ -2,9 +2,9 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <br>
 <br>
-<div id = "result">
-<h3  class="bg-info" >Calculate a quote based on £1.50 per person</h3>
-</div>
+
+<h3  id = "result" class="bg-info" >Calculate a quote based on £1.50 per person</h3>
+
 <form  role="form" action="javascript:void(0);" onsubmit="AutoQuoteFunction()" id ="AutoQuoteForm" name="AutoQuoteForm">
   <div class="form-group row ">
   <!--label class="col-sm-3 form-control-label" for="people">Event Location or Postcode:  <span class="text-info">(required)</span></label-->
@@ -96,8 +96,8 @@ apigClient.autoquotePost(params, body, additionalParams)
     var onChangeHandler = function() {
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     };
-    document.getElementById('result').addEventListener('change', alert('Change Happened'));
-    document.getElementById('end').addEventListener('change', onChangeHandler);
+    document.getElementById('start').addEventListener('change', onChangeHandler);
+    //document.getElementById('end').addEventListener('change', onChangeHandler);
   }
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {

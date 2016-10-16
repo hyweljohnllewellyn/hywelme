@@ -95,8 +95,11 @@ apigClient.autoquotePost(params, body, additionalParams)
     directionsDisplay.setMap(map);
 
     var onChangeHandler = function() {
+      if(document.getElementById('destination').value!=""){
       calculateAndDisplayRoute(directionsService, directionsDisplay);
+       }
     };
+
     document.getElementById('destination').addEventListener('focus', onChangeHandler);
     //document.getElementById('end').addEventListener('input', onChangeHandler);
   }

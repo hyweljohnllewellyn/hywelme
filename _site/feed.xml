@@ -4,11 +4,209 @@
     <title>Have You Wandered Every Land</title>
     <description>A personal blog site, with musings about technology and documenting what I learn.
 </description>
-    <link>http://www.hywel.me/</link>
-    <atom:link href="http://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Sep 2016 19:04:15 +0100</pubDate>
-    <lastBuildDate>Thu, 22 Sep 2016 19:04:15 +0100</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 31 Dec 2016 21:31:14 +0000</pubDate>
+    <lastBuildDate>Sat, 31 Dec 2016 21:31:14 +0000</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Java AWS Lambda API Gateway using Javascript Client - Auto Quote</title>
+        <description>
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/axios/dist/axios.standalone.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/components/hmac.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/url-template/url-template.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/utils.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/apiGateway-js-sdk/apigClient.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/jquery-3.1.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/javascript/jquery.serialize-object.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7&quot; crossorigin=&quot;anonymous&quot; /&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;text1&quot; class=&quot;bg-info&quot;&gt;Calculate a quote...&lt;/h3&gt;
+
+&lt;form role=&quot;form&quot; action=&quot;javascript:void(0);&quot; onsubmit=&quot;AutoQuoteFunction()&quot; id=&quot;AutoQuoteForm&quot; name=&quot;AutoQuoteForm&quot;&gt;
+
+&lt;div class=&quot;form-group row &quot;&gt;
+&lt;!--label class=&quot;col-sm-3 form-control-label&quot; for=&quot;destination&quot;&gt;Event Location or Postcode:  &lt;span class=&quot;text-info&quot;&gt;(required)&lt;/span&gt;&lt;/label--&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;
+ &lt;input type=&quot;text&quot; id=&quot;destination&quot; class=&quot;form-control&quot; name=&quot;destination&quot; placeholder=&quot;Enter a location&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;input type=&quot;hidden&quot; id=&quot;people&quot; class=&quot;form-control&quot; name=&quot;people&quot; value=&quot;4&quot; /&gt;
+    &lt;input type=&quot;hidden&quot; id=&quot;performance&quot; class=&quot;form-control&quot; name=&quot;performance&quot; value=&quot;Barbershop Quartet&quot; /&gt;
+    &lt;input type=&quot;hidden&quot; id=&quot;miles&quot; class=&quot;form-control&quot; name=&quot;miles&quot; /&gt;
+    &lt;input type=&quot;hidden&quot; id=&quot;start&quot; class=&quot;form-control&quot; name=&quot;start&quot; /&gt;
+    &lt;input type=&quot;hidden&quot; id=&quot;end&quot; class=&quot;form-control&quot; name=&quot;end&quot; /&gt;
+
+&lt;input class=&quot;btn btn-primary&quot; type=&quot;submit&quot; value=&quot;Calculate&quot; /&gt;
+&lt;/form&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;!--div id=&quot;map&quot;&gt;&lt;/div--&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;div class=&quot;bg-success&quot; id=&quot;info&quot; tabindex=&quot;1&quot;&gt;&lt;/div&gt;&lt;/h3&gt;
+&lt;div id=&quot;map&quot; style=&quot;width:100%;height:400px&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&quot;bg-info&quot; id=&quot;result&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;!----------------------------&gt;
+&lt;!-- Amazon Gateway API START --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function AutoQuoteFunction() {
+//https://github.com/macek/jquery-serialize-object
+var body = $('form#AutoQuoteForm').serializeJSON();
+
+//var body = JSON.stringify(1);
+var params = {
+};
+var additionalParams = {
+    //If there are any unmodeled query parameters or headers that need to be sent with the request you can add them here
+};
+
+var apigClient = apigClientFactory.newClient();
+
+apigClient.autoquotePost(params, body, additionalParams)
+                .then(function(result){
+                  var jobject = JSON.parse(result.data);
+                  //document.getElementById(&quot;result&quot;).innerHTML = JSON.stringify(result);
+                  document.getElementById(&quot;miles&quot;).value = jobject.miles;
+                  document.getElementById(&quot;start&quot;).value = jobject.origin;
+                  document.getElementById(&quot;end&quot;).value = jobject.destination;
+                  document.getElementById(&quot;info&quot;).innerHTML = &quot;Your personalised quote: &quot; + jobject.quote + &quot;&lt;br&gt;&lt;br&gt; For a performance of: &quot; + jobject.performance;
+                  document.getElementById(&quot;info&quot;).focus();
+            }).catch(function(result){
+              document.getElementById(&quot;result&quot;).innerHTML = JSON.stringify(result);
+            });
+
+}
+&lt;/script&gt;
+
+&lt;!--Amazon Gateway API END --&gt;
+&lt;!--GOOGLE API START --&gt;
+&lt;!--https://developers.google.com/maps/documentation/javascript/examples/directions-simple--&gt;
+&lt;script&gt;
+  function initMap() {
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 5,
+      center: {lat: 54.7, lng: -4.4}  // London lat: 51.5, lng: -0.2
+    });
+    directionsDisplay.setMap(map);
+
+    var input = /** @type {!HTMLInputElement} */(document.getElementById('destination'));
+
+    var autocomplete = new google.maps.places.Autocomplete(input);
+       autocomplete.bindTo('bounds', map);
+
+       var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+          map: map,
+          anchorPoint: new google.maps.Point(0, -29)
+        });
+
+        autocomplete.addListener('place_changed', function() {
+          infowindow.close();
+          marker.setVisible(false);
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            window.alert(&quot;Autocomplete's returned place contains no geometry&quot;);
+            return;
+          }
+
+          // If the place has a geometry, then present it on a map.
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);  // Why 17? Because it looks good.
+          }
+          marker.setIcon(/** @type {google.maps.Icon} */({
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(35, 35)
+          }));
+          marker.setPosition(place.geometry.location);
+          marker.setVisible(true);
+
+          var address = '';
+          if (place.address_components) {
+            address = [
+              (place.address_components[0] &amp;&amp; place.address_components[0].short_name || ''),
+              (place.address_components[1] &amp;&amp; place.address_components[1].short_name || ''),
+              (place.address_components[2] &amp;&amp; place.address_components[2].short_name || '')
+            ].join(' ');
+          }
+
+          infowindow.setContent('&lt;div&gt;&lt;strong&gt;' + place.name + '&lt;/strong&gt;&lt;br&gt;' + address);
+          infowindow.open(map, marker);
+        });
+
+}
+/*
+// Display Route  - REMOVED
+    var onChangeHandler = function() {
+      if(document.getElementById('info').value!=&quot;&quot;){
+      calculateAndDisplayRoute(directionsService, directionsDisplay);
+       }
+    };
+
+    document.getElementById('info').addEventListener('focus', onChangeHandler);
+  }
+
+  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    directionsService.route({
+      origin: document.getElementById('start').value,
+      destination: document.getElementById('end').value,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+
+  }
+*/
+&lt;/script&gt;
+
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;https://maps.googleapis.com/maps/api/js?key=AIzaSyDilQ5RIw097e0co1x4khlKpoToVnCr7o4&amp;amp;libraries=places&amp;amp;callback=initMap&quot;&gt;
+   &lt;/script&gt;
+
+&lt;!-- GOOGLE API END --&gt;
+
+&lt;p&gt;http://mattgemmell.com/page-specific-assets-with-jekyll/&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Oct 2016 16:14:00 +0100</pubDate>
+        <link>http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Free Office 365 Email Service for Secondary - Multiple Domains - Part 2 Configure Exchange Shared Mailbox for Additional Domain</title>
@@ -100,8 +298,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 19 Sep 2016 13:52:00 +0100</pubDate>
-        <link>http://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</guid>
+        <link>http://localhost:4000/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</guid>
         
         
       </item>
@@ -238,8 +436,8 @@
 &lt;p&gt;We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In &lt;a href=&quot;/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html&quot;&gt;Part 2&lt;/a&gt;) I will describe how to configure Office 365 to use this additional domain for email.&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Sep 2016 09:55:00 +0100</pubDate>
-        <link>http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</guid>
+        <link>http://localhost:4000/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</link>
+        <guid isPermaLink="true">http://localhost:4000/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</guid>
         
         
         <category>small</category>
@@ -307,8 +505,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;I will certainly be keen to try their service again - when they have a camera app - Until then I will continue to look to other providers such as &lt;a href=&quot;https://photos.google.com/&quot;&gt;Google Photos&lt;/a&gt; or &lt;a href=&quot;https://www.icloud.com/&quot;&gt;Apple iCloud&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 Jul 2016 11:25:00 +0100</pubDate>
-        <link>http://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</guid>
+        <link>http://localhost:4000/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</guid>
         
         
         <category>cloud</category>
@@ -360,8 +558,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;In my next post, &lt;a href=&quot;/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html&quot;&gt;upthere cloud storage android app review&lt;/a&gt;, I will try using the app from my phone.  This is the real test and most likely scenario of taking photos and video without using device storage.&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 Jul 2016 19:56:00 +0100</pubDate>
-        <link>http://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</guid>
+        <link>http://localhost:4000/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</guid>
         
         
         <category>cloud</category>
@@ -563,8 +761,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;Note that I have not discussed SEO or any other optimisation considerations.&lt;/p&gt;
 </description>
         <pubDate>Sun, 17 Jul 2016 10:28:00 +0100</pubDate>
-        <link>http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</guid>
+        <link>http://localhost:4000/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</link>
+        <guid isPermaLink="true">http://localhost:4000/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</guid>
         
         
         <category>static</category>
@@ -717,8 +915,8 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Edit 17th July&lt;/strong&gt;- Please see my guide - &lt;a href=&quot;http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html&quot;&gt;Free Fast Sites Generated from WordPress &lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 12 Jun 2016 13:18:00 +0100</pubDate>
-        <link>http://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</guid>
+        <link>http://localhost:4000/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</guid>
         
         
         <category>static</category>
@@ -934,8 +1132,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;So in my next post, I will be investigating options to use a CMS locally and then generate static site content to be published to the web - possible best of both worlds for now… time will tell.&lt;/p&gt;
 </description>
         <pubDate>Sat, 11 Jun 2016 20:05:00 +0100</pubDate>
-        <link>http://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</guid>
+        <link>http://localhost:4000/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</link>
+        <guid isPermaLink="true">http://localhost:4000/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</guid>
         
         
         <category>static</category>
@@ -1037,8 +1235,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;Since using &lt;a href=&quot;http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;Jekyll&lt;/a&gt; as a static site generators and &lt;a href=&quot;http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html&quot;&gt;prose.io&lt;/a&gt; as an online editor, I am now seriously considering converting the entire Drupal 6 site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; or potentially &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 06 Mar 2016 08:34:00 +0000</pubDate>
-        <link>http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
+        <link>http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
+        <guid isPermaLink="true">http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
         
         
         <category>drupal</category>
@@ -1169,166 +1367,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view to block step 4.png&quot; alt=&quot;add drupal 8 view to block step 4&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 17 Feb 2016 20:02:00 +0000</pubDate>
-        <link>http://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</guid>
-        
-        
-        <category>drupal</category>
-        
-      </item>
-    
-      <item>
-        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 4</title>
-        <description>&lt;h2 id=&quot;preparing-an-upgrade-to-drupal-8httpswwwdrupalorgnode2350603&quot;&gt;&lt;a href=&quot;https://www.drupal.org/node/2350603&quot;&gt;Preparing an upgrade to Drupal 8&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;According to this link, the requirements are:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The Migrate Upgrade module installed and enabled on the Drupal 8 site.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If you plan on running the upgrade from Drush, you’ll need Drush 8.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;These are covered in &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html&quot;&gt;Part 1&lt;/a&gt; and &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/07/a-website-upgrade-from-drupal-6-to-drupal-8-part-2.html&quot;&gt;Part 2&lt;/a&gt;. Screenshot showing enabled modules in Drupal 8:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drupal 8 migrate modules enabled.jpg&quot; alt=&quot;drupal 8 migrate modules enabled&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Access to the Drupal 6 or 7 database from the host where your new Drupal 8 site is.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Access to the source site’s files.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The Drupal upgrade will be carried out locally on a Mac.  The Drupal 6 database and files are locally installed.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Enable required modules.  The migration process does not install modules on the Drupal 8 destination site and only migrations relevant for modules installed on both the source and destination site are run. Therefore prior to running the migration, you need to enable all modules on the Drupal 8 site for which you want configuration and content upgraded from the source site&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The above statement is a bit confusing, and suggests that it is necessary to identify all Modules used in Drupal 6, their equivalent in Drupal 8 and install them in Drupal 8 prior to upgrade.  In &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/10/a-website-upgrade-from-drupal-6-to-drupal-8-part-3.html&quot;&gt;Part 3&lt;/a&gt;, I carried our a cursory analysis of the modules and installed an XML sitemap module.&lt;/p&gt;
-
-&lt;h2 id=&quot;executing-an-upgrade-using-drushhttpswwwdrupalorgnode2350651&quot;&gt;&lt;a href=&quot;https://www.drupal.org/node/2350651&quot;&gt;Executing an upgrade using Drush&lt;/a&gt;&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For more control, you will probably want to pass the –configure-only option to migrate-upgrade, so it will only perform the first step of creating the migrations.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush migrate-upgrade --legacy-db-url&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Users/hywel/Sites/hartleyvoicescms --configure-only&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Nothing much happened, it just returned to the prompt.  To some extent, this was expected as the configure-only option was used.  So next was:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;drush migrate-status&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This was a bit more interesting and summarised what migration was available from Drupal 6.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drush 8 migrate status from drupal 6.png&quot; alt=&quot;drush 8 migrate status from drupal 6&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Import the whole list of possible migrations:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush migrate-import --all&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drush migrate-import all.png&quot; alt=&quot;drush migrate-import all&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;drupal-8-first-upgrade-attempt--text-format-issues&quot;&gt;Drupal 8 First Upgrade Attempt:  Text Format Issues&lt;/h2&gt;
-
-&lt;p&gt;The &lt;em&gt;Missing filter plugin: filternull&lt;/em&gt; was shown several times during the import process.&lt;/p&gt;
-
-&lt;p&gt;Here is the homepage following the first part of the migrate and update to Drupal 8:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/first migrate result homepage.png&quot; alt=&quot;first migrate result homepage&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, some of the menu structure exists, but the layout and body text was not showing at all.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Issue On investigation seems that a second Full_HTML Text format was created during the import that had a broken text filter.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;As shown, there are two versions of the Full HTML text format:
-&lt;img src=&quot;/assets/2016-02-11/full HTML imported from drupal 6.png&quot; alt=&quot;full HTML imported from drupal 6&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Full HTML text format imported from Drupal 6 was showing a filter null error:
-&lt;img src=&quot;/assets/2016-02-11/filter null error from drupal 6 text format.png&quot; alt=&quot;filter null error from Drupal 6 text format&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So the Drupal 6 filter was disabled:
-&lt;img src=&quot;/assets/2016-02-11/disable the full html drupal 6 filter confirm.png&quot; alt=&quot;disable the full html Drupal 6 filter confirm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After selecting the Drupal 8 Full HTML filter:
-&lt;img src=&quot;/assets/2016-02-11/select drupal 8 full html text filter.png&quot; alt=&quot;select drupal 8 full html text filter&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The text was showing formatted correctly:
-&lt;img src=&quot;/assets/2016-02-11/drupal 8 full html text filter working.png&quot; alt=&quot;drupal 8 full html text filter working&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As shown the Drupal 6 filter in node body table was called full_html 1:
-&lt;img src=&quot;/assets/2016-02-11/full_html1 in the node body table.png&quot; alt=&quot;full_html1 in the node body table&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;remove-the-drupal-6-text-format-and-update-the-drupal-8-text-format-to-full-html&quot;&gt;Remove the Drupal 6 Text Format and Update the Drupal 8 Text format to Full HTML&lt;/h3&gt;
-
-&lt;p&gt;Running the following SQL to update remove the full_html 1 filter imported from Drupal 6 and replace with full_html in Drupal 8.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
-update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__body&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;body_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;
-update &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;node_revision__field_sidebar2&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;field_sidebar2_format &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'full_html'&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Followed by rebuilding the Drupal 8 cache :&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush cache-rebuild&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;drupal-8-url-alias-issues&quot;&gt;Drupal 8 URL Alias Issues&lt;/h2&gt;
-
-&lt;p&gt;As shown in previous screenshots, the URL was showing the node ID, rather that the human readable URL alias.&lt;/p&gt;
-
-&lt;p&gt;On investigation it seemed that the language code was not defined on the url_alias table:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/url_alias drupal 8 lang code not defined following upgrade.png&quot; alt=&quot;url_alias drupal 8 lang code not defined following upgrade&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Back to trusty SQL update and cache rebuild:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;update  &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;url_alias&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;langcode &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'und'&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush cache-rebuild&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Much better - it almost looks like a website:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/drupal 8 first migation after url_alias fix.jpg&quot; alt=&quot;drupal 8 first migation after url_alias fix&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;drupal-6-versus-drupal-8---where-are-the-images-and-audio&quot;&gt;Drupal 6 versus Drupal 8 - Where are the images and audio?&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Drupal 6 - Live Site:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/three tenors drupal 6.jpg&quot; alt=&quot;three tenors drupal 6.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Drupal 8 - First Upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/2016-02-11/three tenors drupal 8.jpg&quot; alt=&quot;three tenors drupal 8.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So next will be identifying where the asset files are and starting to look at formatting the site.&lt;/p&gt;
-
-&lt;h3 id=&quot;drupal-8---asset-files-error&quot;&gt;Drupal 8 - Asset Files Error&lt;/h3&gt;
-
-&lt;p&gt;So I noticed that there was an error in the original Drush migate upgrade command - the path to local legacy root folder was incorrect.  After some time investigating, I could not find any way to change this - so decided to start all over again - A Second attempt, repeating the steps from &lt;a href=&quot;http://www.hywel.me/drupal/2016/02/06/a-website-upgrade-from-drupal-6-to-drupal-8-part-1.html&quot;&gt;Part 1&lt;/a&gt; onward, but  with the corrected local folder:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /Users/hywel/Sites/drupal8
-drush migrate-upgrade --legacy-db-url&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/Users/hywel/Sites/hartleyvoicescouk/public &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Drupal 8 - Second Upgrade - with images:&lt;/strong&gt;
-&lt;img src=&quot;/assets/2016-02-11/three tenors after second upgrade attempt.jpg&quot; alt=&quot;three tenors after second upgrade attempt&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 11 Feb 2016 19:42:00 +0000</pubDate>
-        <link>http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</link>
-        <guid isPermaLink="true">http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html</guid>
+        <link>http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</guid>
         
         
         <category>drupal</category>

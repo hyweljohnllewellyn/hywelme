@@ -8,12 +8,12 @@
 
   <title >A Website Upgrade from Drupal 6 to Drupal 8 - Part 4 </title>
 
-  <meta name="description" content="">
+  <meta name="description" content="Preparing an upgrade to Drupal 8">
 
   <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html">
-  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://www.hywel.me/feed.xml" />  
+  <link rel="canonical" href="http://localhost:4000/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://localhost:4000/feed.xml" />  
   <link rel="author" href="https://plus.google.com/u/0/116119715872022757453"/>
 </head>
 
@@ -27,7 +27,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/" ><img src="http://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+    <a class="site-title" href="/" ><img src="http://localhost:4000/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
   
 
     <nav class="site-nav">
@@ -86,7 +86,7 @@
   <article class="post-content">
     <h2 id="preparing-an-upgrade-to-drupal-8httpswwwdrupalorgnode2350603"><a href="https://www.drupal.org/node/2350603">Preparing an upgrade to Drupal 8</a></h2>
 
-<p>According to this link, the requirements are:</p>
+<p>According to drupal.org at <a href="https://www.drupal.org/node/2350651">Upgrade using Drush</a> , the requirements are:</p>
 
 <blockquote>
   <p>A fresh installation of Drupal 8 with the core module Migrate Drupal enabled.</p>
@@ -129,7 +129,13 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /Users/hywel/Sites/drupal8
 drush migrate-upgrade --legacy-db-url<span class="o">=</span>mysql://hartleyvoicescms:MTwGCDT5Ah74smSW@localhost/hartleyvoicescms --legacy-root<span class="o">=</span>/Users/hywel/Sites/hartleyvoicescms --configure-only</code></pre></figure>
 
-<p>Nothing much happened, it just returned to the prompt.  To some extent, this was expected as the configure-only option was used.  So next was:</p>
+<p>Nothing much happened, it just returned to the prompt.  To some extent, this was expected as the configure-only option was used.  From <a href="https://www.drupal.org/node/2350651">Upgrade using Drush</a>:</p>
+
+<blockquote>
+  <p>“After running migrate-drupal with the –configure-only parameter, you run migrate-status to see the list of possible migrations”</p>
+</blockquote>
+
+<p>So next was to run:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">drush migrate-status</code></pre></figure>
 
@@ -241,7 +247,7 @@ drush migrate-upgrade --legacy-db-url<span class="o">=</span>mysql://hartleyvoic
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
        */
       var disqus_config = function () {
-          this.page.url =  "http://www.hywel.me/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.url =  "http://localhost:4000/drupal/2016/02/11/a-website-upgrade-from-drupal-6-to-drupal-8-part-4.html";  // Replace PAGE_URL with your page's canonical URL variable
 
           //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
@@ -310,11 +316,25 @@ drush migrate-upgrade --legacy-db-url<span class="o">=</span>mysql://hartleyvoic
         </ul>
       </div>
 
-      <div class="footer-col  footer-col-3">
+      <!--div class="footer-col  footer-col-3">
         <p class="text">A personal blog site, with musings about technology and documenting what I learn.
 </p>
-      </div>
-    </div>
+     </div-->
+      <!--  google advert hywelme start -->
+    <div class="footer-col  footer-col-3">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <!-- footer_hywelme -->
+        <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1549458855743321"
+         data-ad-slot="1092663097"
+         data-ad-format="auto"></ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <!--  google advert hywelme end -->
+  </div>
 
   </div>
 

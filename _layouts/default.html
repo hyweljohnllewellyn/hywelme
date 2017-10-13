@@ -5,13 +5,14 @@
 
   <body>
     {% include adsensepageadverts.html %}
-    
+
     {% include header.html %}
 
     {% include analyticstracking.html %}
 
     <div class="page-content">
       <div class="wrapper">
+        {% include googlesearch.html %}
         {{ content }}
       </div>
     </div>

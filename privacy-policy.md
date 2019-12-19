@@ -13,17 +13,18 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
 | **Data Protection Laws** | any applicable law relating to the processing of personal Data, including but not limited to the Directive 96/46/EC (Data Protection Directive) or the GDPR, and any national implementing laws, regulations and secondary legislation, for as long as the GDPR is effective in the UK; |
 | **GDPR** | the General Data Protection Regulation (EU) 2016/679; |
 | **Hywel Llewellyn,**
-  **we **or** **us** | Hywel Llewellyn of 23 Valley Road,  Codicote,   Hertfordshire,  SG4 8YA;   |
+  **we or us** | Hywel Llewellyn of 23 Valley Road,  Codicote,   Hertfordshire,  SG4 8YA;   |
 | **User**  or  **you** | any third party that accesses the Website and is not either (i) employed by Hywel Llewellyn and acting in the course of their employment or (ii) engaged as a consultant or otherwise providing services to Hywel Llewellyn and accessing the Website in connection with the provision of such services; and |
 | **Website** | the website that you are currently using, https://www.hywel.me, and any sub-domains of this site unless expressly excluded by their own terms and conditions. |
 
-1. In this privacy policy, unless the context requires a different interpretation:
-  1. the singular includes the plural and vice versa;
-  2. references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;
-  3. a reference to a person includes firms, companies, government entities, trusts and partnerships;
-  4. &quot;including&quot; is understood to mean &quot;including without limitation&quot;;
-  5. reference to any statutory provision includes any modification or amendment of it;
-  6. the headings and sub-headings do not form part of this privacy policy.
+
+2. In this privacy policy, unless the context requires a different interpretation:
+  a) the singular includes the plural and vice versa;
+  b) references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;
+  c) a reference to a person includes firms, companies, government entities, trusts and partnerships;
+  d) &quot;including&quot; is understood to mean &quot;including without limitation&quot;;
+  e) reference to any statutory provision includes any modification or amendment of it;
+  f) the headings and sub-headings do not form part of this privacy policy.
 
 **Scope of this privacy policy**
 
@@ -36,7 +37,7 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
 1. We may collect the following Data, which includes personal Data, from you:
   1. name;
   2. contact Information such as email addresses and telephone numbers;
-  3. Email;
+
 
 in each case, in accordance with this privacy policy.
 
@@ -70,7 +71,7 @@ in each case, in accordance with this privacy policy.
 
 1. For the delivery of direct marketing to you via e-mail, we&#39;ll need your consent, whether via an opt-in or soft-opt-in:
 
-1.
+
   1. soft opt-in consent is a specific type of consent which applies when you have previously engaged with us (for example, you contact us to ask us for more details about a particular product/service, and we are marketing similar products/services). Under &quot;soft opt-in&quot; consent, we will take your consent as given unless you opt-out.
   2. for other types of e-marketing, we are required to obtain your explicit consent; that is, you need to take positive and affirmative action when consenting by, for example, checking a tick box that we&#39;ll provide.
   3. if you are not satisfied about our approach to marketing, you have the right to withdraw consent at any time. To find out how to withdraw your consent, see the section headed &quot;Your rights&quot; below.

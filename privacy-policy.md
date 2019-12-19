@@ -6,7 +6,6 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
 
   **Definitions and interpretation**
 1. In this privacy policy, the following definitions are used:
-
  | **Data** | collectively all information that you submit to Hywel Llewellyn via the Website. This definition incorporates, where applicable, the definitions provided in the Data Protection Laws; |
 |-|-|
 |  **Data Protection Laws** | any applicable law relating to the processing of personal Data, including but not limited to the Directive 96/46/EC (Data Protection Directive) or the GDPR, and any national implementing laws, regulations and secondary legislation, for as long as the GDPR is effective in the UK; |
@@ -18,7 +17,6 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
  | **User**  or  **you** | any third party that accesses the Website and is not either (i) employed by Hywel Llewellyn and acting in the course of their employment or (ii) engaged as a consultant or otherwise providing services to Hywel Llewellyn and accessing the Website in connection with the provision of such services; and |
  |-|-|
  | **Website** | the website that you are currently using, https://www.hywel.me, and any sub-domains of this site unless expressly excluded by their own terms and conditions. |
- 
 2. In this privacy policy, unless the context requires a different interpretation:
   * a) the singular includes the plural and vice versa;
   * b) references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;
@@ -56,7 +54,7 @@ controller&quot;. This means that Hywel Llewellyn determines the purposes for wh
   * a) soft opt-in consent is a specific type of consent which applies when you have previously engaged with us (for example, you contact us to ask us for more details about a particular product/service, and we are marketing similar products/services). Under &quot;soft opt-in&quot; consent, we will take your consent as given unless you opt-out.
   * b) for other types of e-marketing, we are required to obtain your explicit consent; that is, you need to take positive and affirmative action when consenting by, for example, checking a tick box that we&#39;ll provide.
   * c) if you are not satisfied about our approach to marketing, you have the right to withdraw consent at any time. To find out how to withdraw your consent, see the section headed &quot;Your rights&quot; below.
-  **Who we share Data with**
+    **Who we share Data with**
 12. We may share your Data with the following groups of people for the following reasons:
   * a) third party service providers who provide services to us which require the processing of personal data - to help third party service providers in receipt of any shared data to perform functions on our behalf ;
 in each case, in accordance with this privacy policy.

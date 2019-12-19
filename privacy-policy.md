@@ -53,7 +53,7 @@ controller&quot;. This means that Hywel Llewellyn determines the purposes for wh
 7\. Hywel Llewellyn will collect your Data in a number of ways, for example:
   * a) when you contact us through the Website, by telephone, post, e-mail or through any other means;
   * b) when you elect to receive marketing communications from us;
- in each case, in accordance with this privacy policy.
+  in each case, in accordance with this privacy policy.
 
 **Data that is collected automatically**
 
@@ -77,7 +77,7 @@ controller&quot;. This means that Hywel Llewellyn determines the purposes for wh
 
 12\. We may share your Data with the following groups of people for the following reasons:
   * a) third party service providers who provide services to us which require the processing of personal data - to help third party service providers in receipt of any shared data to perform functions on our behalf ;
-in each case, in accordance with this privacy policy.
+  in each case, in accordance with this privacy policy.
 
 **Keeping Data secure**
 
@@ -139,6 +139,7 @@ in each case, in accordance with this privacy policy.
   You may contact Hywel Llewellyn by email at privacy@hywel.me
 
 **Attribution**
+
 31\. This privacy policy was originally created using a document from [Rocket Lawyer](https://www.rocketlawyer.com/gb/en/) (https://www.rocketlawyer.com/gb/en).
 
 **19 December 2019 **

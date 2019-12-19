@@ -1,5 +1,3 @@
-## Privacy policy
-
 This privacy policy applies between you, the User of this Website and Hywel Llewellyn, the owner and provider of this Website. Hywel Llewellyn takes the privacy of your information very seriously. This privacy policy applies to our use of any and all Data collected by us or provided by you in relation to your use of the Website.
 
 **Please read this privacy policy carefully**.
@@ -40,7 +38,7 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
 
 in each case, in accordance with this privacy policy.
 
- ## How we collect Data
+## How we collect Data
 
 6. We collect Data in the following ways:
   * a) data is given to us by you  ; and

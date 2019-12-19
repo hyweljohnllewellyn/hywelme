@@ -7,7 +7,7 @@ meta: Hywel Llewellyn technology
 
 This is a personal blog by Hywel Llewellyn, mainly about technology.
 
-![Hywel with Evelyn]({{ site.url }}/assets/hywel_with_evelyn_profile.png)
+![Hywel with Evelyn]({{ site.url }}/assets/hywel_speech.png)
 
 This site is currently using the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 

@@ -19,12 +19,12 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
 
 
 2. In this privacy policy, unless the context requires a different interpretation:
-  a) the singular includes the plural and vice versa;
-  b) references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;
-  c) a reference to a person includes firms, companies, government entities, trusts and partnerships;
-  d) &quot;including&quot; is understood to mean &quot;including without limitation&quot;;
-  e) reference to any statutory provision includes any modification or amendment of it;
-  f) the headings and sub-headings do not form part of this privacy policy.
+  * a) the singular includes the plural and vice versa;
+  * b) references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;
+  * c) a reference to a person includes firms, companies, government entities, trusts and partnerships;
+  * d) &quot;including&quot; is understood to mean &quot;including without limitation&quot;;
+  * e) reference to any statutory provision includes any modification or amendment of it;
+  * f) the headings and sub-headings do not form part of this privacy policy.
 
 ##Scope of this privacy policy
 
@@ -35,8 +35,8 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
 ##Data collected
 
 5. We may collect the following Data, which includes personal Data, from you:
-  a) name;
-  b) contact Information such as email addresses and telephone numbers;
+  * a) name;
+  * b) contact Information such as email addresses and telephone numbers;
 
 
 in each case, in accordance with this privacy policy.
@@ -44,52 +44,50 @@ in each case, in accordance with this privacy policy.
  ##How we collect Data
 
 6. We collect Data in the following ways:
-  a) data is given to us by you  ; and
-  b) data is collected automatically.
+  * a) data is given to us by you  ; and
+  * b) data is collected automatically.
 
 ##Data that is given to us by you
 
 7. Hywel Llewellyn will collect your Data in a number of ways, for example:
-  a) when you contact us through the Website, by telephone, post, e-mail or through any other means;
-  b) when you elect to receive marketing communications from us;
+  * a) when you contact us through the Website, by telephone, post, e-mail or through any other means;
+  * b) when you elect to receive marketing communications from us;
 
 in each case, in accordance with this privacy policy.
 
 ##Data that is collected automatically
 
 8. To the extent that you access the Website, we will collect your Data automatically, for example:
-  a) we automatically collect some information about your visit to the Website. This information helps us to make improvements to Website content and navigation, and includes your IP address, the date, times and frequency with which you access the Website and the way you use and interact with its content.
+  * a) we automatically collect some information about your visit to the Website. This information helps us to make improvements to Website content and navigation, and includes your IP address, the date, times and frequency with which you access the Website and the way you use and interact with its content.
 
 ##Our use of Data
 
 9. Any or all of the above Data may be required by us from time to time in order to provide you with the best possible service and experience when using our Website. Specifically, Data may be used by us for the following reasons:
-  a) transmission by email of marketing materials that may be of interest to you;
+  * a) transmission by email of marketing materials that may be of interest to you;
 
 in each case, in accordance with this privacy policy.
 
 10. We may use your Data for the above purposes if we deem it necessary to do so for our legitimate interests. If you are not satisfied with this, you have the right to object in certain circumstances (see the section headed &quot;Your rights&quot; below).
 
 11. For the delivery of direct marketing to you via e-mail, we&#39;ll need your consent, whether via an opt-in or soft-opt-in:
-
-
-  a) soft opt-in consent is a specific type of consent which applies when you have previously engaged with us (for example, you contact us to ask us for more details about a particular product/service, and we are marketing similar products/services). Under &quot;soft opt-in&quot; consent, we will take your consent as given unless you opt-out.
-  b) for other types of e-marketing, we are required to obtain your explicit consent; that is, you need to take positive and affirmative action when consenting by, for example, checking a tick box that we&#39;ll provide.
-  c) if you are not satisfied about our approach to marketing, you have the right to withdraw consent at any time. To find out how to withdraw your consent, see the section headed &quot;Your rights&quot; below.
+  * a) soft opt-in consent is a specific type of consent which applies when you have previously engaged with us (for example, you contact us to ask us for more details about a particular product/service, and we are marketing similar products/services). Under &quot;soft opt-in&quot; consent, we will take your consent as given unless you opt-out.
+  * b) for other types of e-marketing, we are required to obtain your explicit consent; that is, you need to take positive and affirmative action when consenting by, for example, checking a tick box that we&#39;ll provide.
+  * c) if you are not satisfied about our approach to marketing, you have the right to withdraw consent at any time. To find out how to withdraw your consent, see the section headed &quot;Your rights&quot; below.
 
 ##Who we share Data with
 
 12. We may share your Data with the following groups of people for the following reasons:
-  a) third party service providers who provide services to us which require the processing of personal data - to help third party service providers in receipt of any shared data to perform functions on our behalf ;
+  * a) third party service providers who provide services to us which require the processing of personal data - to help third party service providers in receipt of any shared data to perform functions on our behalf ;
 
 in each case, in accordance with this privacy policy.
 
 ##Keeping Data secure
 
 13. We will use technical and organisational measures to safeguard your Data, for example:
-  a) access to your account is controlled by a password and a user name that is unique to you.
-  b) we store your Data on secure servers.
+  * a) access to your account is controlled by a password and a user name that is unique to you.
+  * b) we store your Data on secure servers.
 
-14. Technical and organisational measures include measures to deal with any suspected data breach. If you suspect any misuse or loss or unauthorised access to your Data, please let us know immediately by contacting us via this e-mail address: llewellyn@gmail.com.
+14. Technical and organisational measures include measures to deal with any suspected data breach. If you suspect any misuse or loss or unauthorised access to your Data, please let us know immediately by contacting us via this e-mail address: privacy@hywel.me
 
 15. If you want detailed information from Get Safe Online on how to protect your information and your computers and devices against fraud, identity theft, viruses and many other online problems, please visit www.getsafeonline.org. Get Safe Online is supported by HM Government and leading businesses.
 
@@ -102,12 +100,12 @@ in each case, in accordance with this privacy policy.
 ##Your rights
 
 18. You have the following rights in relation to your Data:
-  a) **Right to access**  - the right to request (i) copies of the information we hold about you at any time, or (ii) that we modify, update or delete such information. If we provide you with access to the information we hold about you, we will not charge you for this, unless your request is &quot;manifestly unfounded or excessive.&quot; Where we are legally permitted to do so, we may refuse your request. If we refuse your request, we will tell you the reasons why.
-  b) **Right to correct**  - the right to have your Data rectified if it is inaccurate or incomplete.
-  c) **Right to erase**  - the right to request that we delete or remove your Data from our systems.
-  d) **Right to restrict our use of your Data**  - the right to &quot;block&quot; us from using your Data or limit the way in which we can use it.
-  e) **Right to data portability**  - the right to request that we move, copy or transfer your Data.
-  f) **Right to object**  - the right to object to our use of your Data including where we use it for our legitimate interests.
+  * a) **Right to access**  - the right to request (i) copies of the information we hold about you at any time, or (ii) that we modify, update or delete such information. If we provide you with access to the information we hold about you, we will not charge you for this, unless your request is &quot;manifestly unfounded or excessive.&quot; Where we are legally permitted to do so, we may refuse your request. If we refuse your request, we will tell you the reasons why.
+  * b) **Right to correct**  - the right to have your Data rectified if it is inaccurate or incomplete.
+  * c) **Right to erase**  - the right to request that we delete or remove your Data from our systems.
+  * d) **Right to restrict our use of your Data**  - the right to &quot;block&quot; us from using your Data or limit the way in which we can use it.
+  * e) **Right to data portability**  - the right to request that we move, copy or transfer your Data.
+  * f) **Right to object**  - the right to object to our use of your Data including where we use it for our legitimate interests.
 
 19. To make enquiries, exercise any of your rights set out above, or withdraw your consent to the processing of your Data (where consent is our legal basis for processing your Data), please contact us via this e-mail address: llewellyn@gmail.com.
 
@@ -141,7 +139,7 @@ in each case, in accordance with this privacy policy.
 
 30. Hywel Llewellyn reserves the right to change this privacy policy as we may deem necessary from time to time or as may be required by law. Any changes will be immediately posted on the Website and you are deemed to have accepted the terms of the privacy policy on your first use of the Website following the alterations.
 
-  You may contact Hywel Llewellyn by email at hywel.llewellyn@gmail.com.
+  You may contact Hywel Llewellyn by email at privacy@hywel.me
 
 ##Attribution
 

@@ -5,7 +5,8 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
  **Please read this privacy policy carefully**.
 
   **Definitions and interpretation**
-1. In this privacy policy, the following definitions are used:
+
+1\. In this privacy policy, the following definitions are used:
  | **Data** | collectively all information that you submit to Hywel Llewellyn via the Website. This definition incorporates, where applicable, the definitions provided in the Data Protection Laws; |
 |-|-|
 |  **Data Protection Laws** | any applicable law relating to the processing of personal Data, including but not limited to the Directive 96/46/EC (Data Protection Directive) or the GDPR, and any national implementing laws, regulations and secondary legislation, for as long as the GDPR is effective in the UK; |
@@ -17,33 +18,45 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
  | **User**  or  **you** | any third party that accesses the Website and is not either (i) employed by Hywel Llewellyn and acting in the course of their employment or (ii) engaged as a consultant or otherwise providing services to Hywel Llewellyn and accessing the Website in connection with the provision of such services; and |
  |-|-|
  | **Website** | the website that you are currently using, https://www.hywel.me, and any sub-domains of this site unless expressly excluded by their own terms and conditions. |
-2. In this privacy policy, unless the context requires a different interpretation:
+
+2\. In this privacy policy, unless the context requires a different interpretation:
   * a) the singular includes the plural and vice versa;
   * b) references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;
   * c) a reference to a person includes firms, companies, government entities, trusts and partnerships;
   * d) &quot;including&quot; is understood to mean &quot;including without limitation&quot;;
   * e) reference to any statutory provision includes any modification or amendment of it;
   * f) the headings and sub-headings do not form part of this privacy policy.
+
   **Scope of this privacy policy**
-3. This privacy policy applies only to the actions of Hywel Llewellyn and Users with respect to this Website. It does not extend to any websites that can be accessed from this Website including, but not limited to, any links we may provide to social media websites.
-4. For purposes of the applicable Data Protection Laws, Hywel Llewellyn is the &quot;data
+
+3\. This privacy policy applies only to the actions of Hywel Llewellyn and Users with respect to this Website. It does not extend to any websites that can be accessed from this Website including, but not limited to, any links we may provide to social media websites.
+
+4\. For purposes of the applicable Data Protection Laws, Hywel Llewellyn is the &quot;data
 controller&quot;. This means that Hywel Llewellyn determines the purposes for which, and the manner in which, your Data is processed.
+
   **Data collected**
-5. We may collect the following Data, which includes personal Data, from you:
+
+5\. We may collect the following Data, which includes personal Data, from you:
   * a) name;
   * b) contact Information such as email addresses and telephone numbers;
   in each case, in accordance with this privacy policy.
+
   **How we collect Data**
-6. We collect Data in the following ways:
+
+6\. We collect Data in the following ways:
   * a) data is given to us by you  ; and
   * b) data is collected automatically.
+
   **Data that is given to us by you**
-7. Hywel Llewellyn will collect your Data in a number of ways, for example:
+
+7\. Hywel Llewellyn will collect your Data in a number of ways, for example:
   * a) when you contact us through the Website, by telephone, post, e-mail or through any other means;
   * b) when you elect to receive marketing communications from us;
  in each case, in accordance with this privacy policy.
+
  **Data that is collected automatically**
-8. To the extent that you access the Website, we will collect your Data automatically, for example:
+
+8\. To the extent that you access the Website, we will collect your Data automatically, for example:
   * a) we automatically collect some information about your visit to the Website. This information helps us to make improvements to Website content and navigation, and includes your IP address, the date, times and frequency with which you access the Website and the way you use and interact with its content.
   **Our use of Data**
 9. Any or all of the above Data may be required by us from time to time in order to provide you with the best possible service and experience when using our Website. Specifically, Data may be used by us for the following reasons:

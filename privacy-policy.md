@@ -105,7 +105,7 @@ controller&quot;. This means that Hywel Llewellyn determines the purposes for wh
   * e) **Right to data portability**  - the right to request that we move, copy or transfer your Data.
   * f) **Right to object**  - the right to object to our use of your Data including where we use it for our legitimate interests.
 
-19\. To make enquiries, exercise any of your rights set out above, or withdraw your consent to the processing of your Data (where consent is our legal basis for processing your Data), please contact us via this e-mail address: llewellyn@gmail.com.
+19\. To make enquiries, exercise any of your rights set out above, or withdraw your consent to the processing of your Data (where consent is our legal basis for processing your Data), please contact us via this e-mail address: privacy@hywel.me
 
 20\. If you are not satisfied with the way a complaint you make in relation to your Data is handled by us, you may be able to refer your complaint to the relevant data protection authority. For the UK, this is the Information Commissioner&#39;s Office (ICO). The ICO&#39;s contact details can be found on their website at https://ico.org.uk/.
 

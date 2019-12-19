@@ -18,6 +18,7 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
  | **User**  or  **you** | any third party that accesses the Website and is not either (i) employed by Hywel Llewellyn and acting in the course of their employment or (ii) engaged as a consultant or otherwise providing services to Hywel Llewellyn and accessing the Website in connection with the provision of such services; and |
  |-|-|
  | **Website** | the website that you are currently using, https://www.hywel.me, and any sub-domains of this site unless expressly excluded by their own terms and conditions. |
+ 
 2. In this privacy policy, unless the context requires a different interpretation:
   * a) the singular includes the plural and vice versa;
   * b) references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;
@@ -34,7 +35,6 @@ controller&quot;. This means that Hywel Llewellyn determines the purposes for wh
   * a) name;
   * b) contact Information such as email addresses and telephone numbers;
   in each case, in accordance with this privacy policy.
-
   **How we collect Data**
 6. We collect Data in the following ways:
   * a) data is given to us by you  ; and

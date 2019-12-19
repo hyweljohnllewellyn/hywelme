@@ -93,7 +93,7 @@ controller&quot;. This means that Hywel Llewellyn determines the purposes for wh
 
 16\. Unless a longer retention period is required or permitted by law, we will only hold your Data on our systems for the period necessary to fulfil the purposes outlined in this privacy policy or until you request that the Data be deleted.
 
-17. Even if we delete your Data, it may persist on backup or archival media for legal, tax or regulatory purposes.
+17\. Even if we delete your Data, it may persist on backup or archival media for legal, tax or regulatory purposes.
 
 **Your rights**
 

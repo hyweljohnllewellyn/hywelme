@@ -12,8 +12,8 @@
 
   <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html">
-  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="https://www.hywel.me/feed.xml" />  
+  <link rel="canonical" href="http://localhost:4000/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://localhost:4000/feed.xml" />  
   <link rel="author" href="https://plus.google.com/u/0/116119715872022757453"/>
 </head>
 
@@ -27,7 +27,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/" ><img src="https://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+    <a class="site-title" href="/" ><img src="http://localhost:4000/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
 
 
     <nav class="site-nav">
@@ -116,7 +116,9 @@ img {
   </header>
 
   
-  <div style="width: 700px; height: 90px; background: grey;">Google Adsense</div>
+  <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#29abe0', 'Y8Y41G5YS');kofiwidget2.draw();</script> 
+
+  <!--div style="width: 700px; height: 90px; background: grey;">Google Adsense</div-->
   
 
 
@@ -129,21 +131,21 @@ img {
 
 <p>The site I am moving is <a href="http://operascool.org">operascool.org</a>.</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/0operascoolorg_godaddy.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/0operascoolorg_godaddy.png" alt="My helpful screenshot" /></p>
 
 <p>On my DigitalOcean server I use ServerPilot.io to manage the server as mentioned in part 1 of this blog.</p>
 
 <p>So login to the ServerPilot.io account and create a new app called operascoolorg</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/1serverpilot_create_app.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/1serverpilot_create_app.png" alt="My helpful screenshot" /></p>
 
 <p>This creates a new public folder for my new operascoolorg app.</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/2serverpilot_app_directory.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/2serverpilot_app_directory.png" alt="My helpful screenshot" /></p>
 
 <p>and it is instantly available on the web:</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/3serverpilot_app_setup.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/3serverpilot_app_setup.png" alt="My helpful screenshot" /></p>
 
 <h3 id="migrate-wordpress-folders">Migrate WordPress Folders</h3>
 
@@ -159,7 +161,7 @@ img {
 
 <p>Browsing the sites domain URL will show the WordPress installer:</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/4wordpress_installer.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/4wordpress_installer.png" alt="My helpful screenshot" /></p>
 
 <p>As I am migrating an existing WordPress site, I am not going to continue with the install.</p>
 
@@ -169,17 +171,17 @@ img {
 
 <p>Again using Filezilla, I upload these folders to the wp-content folder on the DigitalOcean server:</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/5ftp_wpcontent_to_newsite.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/5ftp_wpcontent_to_newsite.png" alt="My helpful screenshot" /></p>
 
 <h3 id="migrate-wordpress-database">Migrate WordPress Database</h3>
 
 <p>Going back to ServerPilot.io, a database is created for the operascoolorg app.</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/6serverpilot_create_database.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/6serverpilot_create_database.png" alt="My helpful screenshot" /></p>
 
 <p>Using my favorite MySQL database software <a href="http://www.sequelpro.com/">SequelPro</a>, I export the database from GoDaddy and Import to the newly created operascoolorg database.</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/7sequelpro_export_database.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/7sequelpro_export_database.png" alt="My helpful screenshot" /></p>
 
 <p>Whilst still in SequelPro, I need to update the post id’s as they have moved folder location (you may not need to do this):</p>
 
@@ -192,7 +194,7 @@ img {
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">mv </span>wp-config-sample.php wp-config.php
 nano wp-config.php</code></pre></figure>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/8nano_wpconfig.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/8nano_wpconfig.png" alt="My helpful screenshot" /></p>
 
 <p>This will allow me to update the database configuration to that created by ServerPilot.</p>
 
@@ -207,19 +209,19 @@ define<span class="o">(</span><span class="s1">'DB_HOST'</span>, <span class="s1
 
 <p>Firstly, I will add the operascool.org domain to my operascoolorg app in ServerPilot.io:</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/10Aserverpilot_add_domain.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/10Aserverpilot_add_domain.png" alt="My helpful screenshot" /></p>
 
 <p>Now to add the operascool.org DNS to my DigitalOcean server:</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/9digitalocean_add_domain.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/9digitalocean_add_domain.png" alt="My helpful screenshot" /></p>
 
 <p>and for good practice add the www. CNAME - remembering to put the ending dot in operascool.org. else it won’t work.</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/10digitalocean_add_cname.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/10digitalocean_add_cname.png" alt="My helpful screenshot" /></p>
 
 <p>Login to the GoDaddy account and go to the operascool.org Domain settings to manage the Nameservers:</p>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/11godaddy_nameserver.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/11godaddy_nameserver.png" alt="My helpful screenshot" /></p>
 
 <p>Select Custom and enter the DigitalOcean domain servers:</p>
 
@@ -227,7 +229,7 @@ define<span class="o">(</span><span class="s1">'DB_HOST'</span>, <span class="s1
 ns2.digitalocean.com
 ns3.digitalocean.com</code></pre></figure>
 
-<p><img src="https://www.hywel.me/assets/2015-03-07/12godaddy_costom_nameserver.png" alt="My helpful screenshot" /></p>
+<p><img src="http://localhost:4000/assets/2015-03-07/12godaddy_costom_nameserver.png" alt="My helpful screenshot" /></p>
 
 <p>Wait the usual time for the details to propagate across the world.</p>
 
@@ -243,7 +245,9 @@ ns3.digitalocean.com</code></pre></figure>
   
   <!--script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></!--script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"48b03903f0056c08b4b13ac15","lid":"c907802f48","uniqueMethods":true}) })</script-->
   
-  <b> Copyright © 2017 Hywel John Llewellyn </b>
+    <b> Copyright © 2017 Hywel John Llewellyn </b>
+    <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#29abe0', 'Y8Y41G5YS');kofiwidget2.draw();</script> 
+
 <!-- Hywel Start Disqus Comments -->
   <div id="disqus_thread"></div>
   <script>
@@ -252,7 +256,7 @@ ns3.digitalocean.com</code></pre></figure>
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
        */
       var disqus_config = function () {
-          this.page.url =  "https://www.hywel.me/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.url =  "http://localhost:4000/digitalocean/wordpress/2015/03/07/moving-wordpress-from-godaddy-to-digitalocean-part2.html";  // Replace PAGE_URL with your page's canonical URL variable
 
           //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
@@ -278,14 +282,12 @@ ns3.digitalocean.com</code></pre></figure>
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Have You Wandered Every Land</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
 
     
-          <li><a href="https://www.hywel.me/privacy-policy">Privacy Policy</a></li>
+          <li><a href="http://localhost:4000/privacy-policy">Privacy Policy</a></li>
           <!--li><a href="mailto:contact@hywel.me">contact@hywel.me</a> </li> -->
         </ul>
       </div>
@@ -310,12 +312,13 @@ ns3.digitalocean.com</code></pre></figure>
         </ul>
       </div>
 
-      <!--div class="footer-col  footer-col-3">
-        <p class="text">A personal blog site, with musings about technology and documenting what I learn.
-</p>
-     </div-->
+      <div class="footer-col  footer-col-3">
+         <p class="text">
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#29abe0', 'Y8Y41G5YS');kofiwidget2.draw();</script> 
+        </p>
+     </div>
       <!--  google advert hywelme start -->
-    <div class="footer-col  footer-col-3">
+    <!--div class="footer-col  footer-col-3">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle"
          style="display:block"
@@ -325,7 +328,7 @@ ns3.digitalocean.com</code></pre></figure>
     <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-  </div>
+  </div-->
    <!--google advert hywelme end -->
   </div>
 

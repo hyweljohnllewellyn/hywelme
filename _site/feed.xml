@@ -4,10 +4,10 @@
     <title>Have You Wandered Every Land</title>
     <description>A personal blog site, with musings about technology and documenting what I learn.
 </description>
-    <link>https://www.hywel.me/</link>
-    <atom:link href="https://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Apr 2020 11:54:49 +0100</pubDate>
-    <lastBuildDate>Sun, 12 Apr 2020 11:54:49 +0100</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 12 Apr 2020 16:22:09 +0100</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2020 16:22:09 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -202,8 +202,8 @@ apigClient.autoquotePost(params, body, additionalParams)
 &lt;p&gt;http://mattgemmell.com/page-specific-assets-with-jekyll/&lt;/p&gt;
 </description>
         <pubDate>Mon, 03 Oct 2016 16:14:00 +0100</pubDate>
-        <link>https://www.hywel.me/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</guid>
+        <link>http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</guid>
         
         
       </item>
@@ -298,8 +298,8 @@ apigClient.autoquotePost(params, body, additionalParams)
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 19 Sep 2016 13:52:00 +0100</pubDate>
-        <link>https://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</guid>
+        <link>http://localhost:4000/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</guid>
         
         
       </item>
@@ -436,8 +436,8 @@ apigClient.autoquotePost(params, body, additionalParams)
 &lt;p&gt;We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In &lt;a href=&quot;/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html&quot;&gt;Part 2&lt;/a&gt;) I will describe how to configure Office 365 to use this additional domain for email.&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Sep 2016 09:55:00 +0100</pubDate>
-        <link>https://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</guid>
+        <link>http://localhost:4000/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</link>
+        <guid isPermaLink="true">http://localhost:4000/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</guid>
         
         
         <category>small</category>
@@ -505,8 +505,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;I will certainly be keen to try their service again - when they have a camera app - Until then I will continue to look to other providers such as &lt;a href=&quot;https://photos.google.com/&quot;&gt;Google Photos&lt;/a&gt; or &lt;a href=&quot;https://www.icloud.com/&quot;&gt;Apple iCloud&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 Jul 2016 11:25:00 +0100</pubDate>
-        <link>https://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</guid>
+        <link>http://localhost:4000/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</guid>
         
         
         <category>cloud</category>
@@ -558,8 +558,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;In my next post, &lt;a href=&quot;/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html&quot;&gt;upthere cloud storage android app review&lt;/a&gt;, I will try using the app from my phone.  This is the real test and most likely scenario of taking photos and video without using device storage.&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 Jul 2016 19:56:00 +0100</pubDate>
-        <link>https://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</guid>
+        <link>http://localhost:4000/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</link>
+        <guid isPermaLink="true">http://localhost:4000/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</guid>
         
         
         <category>cloud</category>
@@ -761,8 +761,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;Note that I have not discussed SEO or any other optimisation considerations.&lt;/p&gt;
 </description>
         <pubDate>Sun, 17 Jul 2016 10:28:00 +0100</pubDate>
-        <link>https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</guid>
+        <link>http://localhost:4000/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</link>
+        <guid isPermaLink="true">http://localhost:4000/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</guid>
         
         
         <category>static</category>
@@ -915,8 +915,8 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Edit 17th July&lt;/strong&gt;- Please see my guide - &lt;a href=&quot;http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html&quot;&gt;Free Fast Sites Generated from WordPress &lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 12 Jun 2016 13:18:00 +0100</pubDate>
-        <link>https://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</guid>
+        <link>http://localhost:4000/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</guid>
         
         
         <category>static</category>
@@ -1132,8 +1132,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;So in my next post, I will be investigating options to use a CMS locally and then generate static site content to be published to the web - possible best of both worlds for now… time will tell.&lt;/p&gt;
 </description>
         <pubDate>Sat, 11 Jun 2016 20:05:00 +0100</pubDate>
-        <link>https://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</guid>
+        <link>http://localhost:4000/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</link>
+        <guid isPermaLink="true">http://localhost:4000/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</guid>
         
         
         <category>static</category>
@@ -1235,8 +1235,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;Since using &lt;a href=&quot;http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;Jekyll&lt;/a&gt; as a static site generators and &lt;a href=&quot;http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html&quot;&gt;prose.io&lt;/a&gt; as an online editor, I am now seriously considering converting the entire Drupal 6 site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; or potentially &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 06 Mar 2016 08:34:00 +0000</pubDate>
-        <link>https://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
+        <link>http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
+        <guid isPermaLink="true">http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
         
         
         <category>drupal</category>
@@ -1367,8 +1367,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view to block step 4.png&quot; alt=&quot;add drupal 8 view to block step 4&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 17 Feb 2016 20:02:00 +0000</pubDate>
-        <link>https://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</link>
-        <guid isPermaLink="true">https://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</guid>
+        <link>http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</guid>
         
         
         <category>drupal</category>

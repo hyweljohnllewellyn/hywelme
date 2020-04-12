@@ -1,4 +1,6 @@
-
+ ---
+ layout: blank
+ ---
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <br>
 <br>
@@ -150,8 +152,10 @@ apigClient.autoquotePost(params, body, additionalParams)
 
   }
 */
+
+{% assign apikey = {{ secrets.HYWELMEGIT_AUTOKEY }} %}
 </script>
    <script async defer
-   src= {{ "https://maps.googleapis.com/maps/api/js?key=" | append: ${{ secrets.HYWELMEGIT_AUTOKEY }} | append: "&libraries=places&callback=initMap" }}>
+   src= "https://maps.googleapis.com/maps/api/js?key=" {{ apikey | append: "&libraries=places&callback=initMap" }}>
    </script>
 <!-- GOOGLE API END -->

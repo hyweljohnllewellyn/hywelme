@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Apr 2020 16:22:09 +0100</pubDate>
-    <lastBuildDate>Sun, 12 Apr 2020 16:22:09 +0100</lastBuildDate>
+    <pubDate>Sun, 12 Apr 2020 20:26:51 +0100</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2020 20:26:51 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -39,6 +39,9 @@
 
 &lt;script src=&quot;/javascript/jquery.serialize-object.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 
+&lt;hr /&gt;
+&lt;p&gt;layout: blank
+ —&lt;/p&gt;
 &lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7&quot; crossorigin=&quot;anonymous&quot; /&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -192,12 +195,14 @@ apigClient.autoquotePost(params, body, additionalParams)
 
   }
 */
+
+
 &lt;/script&gt;
 
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;https://maps.googleapis.com/maps/api/js?key=AIzaSyDilQ5RIw097e0co1x4khlKpoToVnCr7o4&amp;amp;libraries=places&amp;amp;callback=initMap&quot;&gt;
-   &lt;/script&gt;
-
-&lt;!-- GOOGLE API END --&gt;
+&lt;p&gt;&amp;lt;script async defer
+   src= “https://maps.googleapis.com/maps/api/js?key=” &amp;amp;libraries=places&amp;amp;callback=initMap&amp;gt;
+   &amp;lt;/script&amp;gt;
+&lt;!-- GOOGLE API END --&gt;&lt;/p&gt;
 
 &lt;p&gt;http://mattgemmell.com/page-specific-assets-with-jekyll/&lt;/p&gt;
 </description>

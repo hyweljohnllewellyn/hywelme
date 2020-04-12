@@ -4,11 +4,11 @@
     <title>Have You Wandered Every Land</title>
     <description>A personal blog site, with musings about technology and documenting what I learn.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Dec 2016 21:31:14 +0000</pubDate>
-    <lastBuildDate>Sat, 31 Dec 2016 21:31:14 +0000</lastBuildDate>
-    <generator>Jekyll v3.3.1</generator>
+    <link>https://www.hywel.me/</link>
+    <atom:link href="https://www.hywel.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 12 Apr 2020 11:54:49 +0100</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2020 11:54:49 +0100</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Java AWS Lambda API Gateway using Javascript Client - Auto Quote</title>
@@ -202,8 +202,8 @@ apigClient.autoquotePost(params, body, additionalParams)
 &lt;p&gt;http://mattgemmell.com/page-specific-assets-with-jekyll/&lt;/p&gt;
 </description>
         <pubDate>Mon, 03 Oct 2016 16:14:00 +0100</pubDate>
-        <link>http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</guid>
+        <link>https://www.hywel.me/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</guid>
         
         
       </item>
@@ -220,19 +220,19 @@ apigClient.autoquotePost(params, body, additionalParams)
 
 &lt;h2 id=&quot;step-8-add-the-basic-exchange-shared-mailbox-for-the-new-domain&quot;&gt;Step 8: Add the Basic Exchange Shared Mailbox for the New Domain&lt;/h2&gt;
 
-&lt;h3 id=&quot;under-office-365-admin-centre-click-exchange-login-from--step-21httpwwwhywelmesmallbusinessemail20160918free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-hosthtml&quot;&gt;8.1 Under Office 365 Admin Centre, Click Exchange (login from  &lt;a href=&quot;http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html&quot;&gt;step 2.1&lt;/a&gt;)&lt;/h3&gt;
+&lt;h3 id=&quot;81-under-office-365-admin-centre-click-exchange-login-from--step-21&quot;&gt;8.1 Under Office 365 Admin Centre, Click Exchange (login from  &lt;a href=&quot;http://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html&quot;&gt;step 2.1&lt;/a&gt;)&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.1 Under Office 365 Admin Centre Click Exchange.jpg&quot; alt=&quot;8.1 Under Office 365 Admin Centre Click Exchange&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-shared-under-recipients-of-office-exchange-admin&quot;&gt;8.2 Click Shared under Recipients of Office Exchange Admin&lt;/h3&gt;
+&lt;h3 id=&quot;82-click-shared-under-recipients-of-office-exchange-admin&quot;&gt;8.2 Click Shared under Recipients of Office Exchange Admin&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.2 Click Shared under Recipients of Office Exchange Admin.jpg&quot; alt=&quot;8.2 Click Shared under Recipients of Office Exchange Admin&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-the-plus--icon-to-add-a-new-shared-mailbox&quot;&gt;8.3 Click the plus + icon to add a new Shared Mailbox&lt;/h3&gt;
+&lt;h3 id=&quot;83-click-the-plus--icon-to-add-a-new-shared-mailbox&quot;&gt;8.3 Click the plus + icon to add a new Shared Mailbox&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.3 Click the plus icon to addd a new Shared Mailbox.jpg&quot; alt=&quot;8.3 Click the plus icon to add a new Shared Mailbox&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;enter-the-display-name-and-email-address-for-the-new-domain-name-domain2com&quot;&gt;8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com&lt;/h3&gt;
+&lt;h3 id=&quot;84-enter-the-display-name-and-email-address-for-the-new-domain-name-domain2com&quot;&gt;8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com&lt;/h3&gt;
 
 &lt;p&gt;Note that the primary/ licensed domain for this tutorial is customdomain.com.  The name given for the new domain, before the @ sign should be unique even for the primary domain.&lt;/p&gt;
 
@@ -240,40 +240,40 @@ apigClient.autoquotePost(params, body, additionalParams)
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com.jpg&quot; alt=&quot;8.4 Enter the Display Name and Email Address for the new Domain Name domain2.com&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-the-plus--icon-to-add-existing-to-access-this-new-shared-mailbox&quot;&gt;8.5 Click the Plus + icon to add existing to access this new Shared Mailbox&lt;/h3&gt;
+&lt;h3 id=&quot;85-click-the-plus--icon-to-add-existing-to-access-this-new-shared-mailbox&quot;&gt;8.5 Click the Plus + icon to add existing to access this new Shared Mailbox&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.5 Click the Plus icon to add existing to access this new Shared Mailbox.jpg&quot; alt=&quot;8.5 Click the Plus icon to add existing to access this new Shared Mailbox&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;select-shared-mailbox-users-click-add-and-then-click-ok&quot;&gt;8.6 Select Shared Mailbox Users, click Add and then click OK&lt;/h3&gt;
+&lt;h3 id=&quot;86-select-shared-mailbox-users-click-add-and-then-click-ok&quot;&gt;8.6 Select Shared Mailbox Users, click Add and then click OK&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.6 Select Shared Mailbox Users click Add and then click OK.jpg&quot; alt=&quot;8.6 Select Shared Mailbox Users click Add and then click OK&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-save-to-add-the-new-shared-mailbox-domain2domain2com&quot;&gt;8.7 Click Save to add the New Shared Mailbox domain2@domain2.com&lt;/h3&gt;
+&lt;h3 id=&quot;87-click-save-to-add-the-new-shared-mailbox-domain2domain2com&quot;&gt;8.7 Click Save to add the New Shared Mailbox domain2@domain2.com&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/8.7 Click Save to add the New Shared Mailbox domain2@domain2.com.jpg&quot; alt=&quot;8.7 Click Save to add the New Shared Mailbox domain2@domain2.com&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;step-9-edit-the-shared-mailbox-for-the-new-domain&quot;&gt;Step 9: Edit the Shared Mailbox for the New Domain&lt;/h2&gt;
 &lt;p&gt;I want to use this domain email as a catch all email info@domain2.com, rather than domain2@domain2.com.  I can now update the email for this shared mailbox.&lt;/p&gt;
 
-&lt;h3 id=&quot;highlight-the-new-shared-mailbox-and-click-the-pencil-icon-to-edit&quot;&gt;9.1 Highlight the new Shared Mailbox and click the pencil icon to Edit&lt;/h3&gt;
+&lt;h3 id=&quot;91-highlight-the-new-shared-mailbox-and-click-the-pencil-icon-to-edit&quot;&gt;9.1 Highlight the new Shared Mailbox and click the pencil icon to Edit&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.1 Highlight the new Shared Mailbox and click the pencil icon to Edit .jpg&quot; alt=&quot;9.1 Highlight the new Shared Mailbox and click the pencil icon to Edit &quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-email-address-for-the-domain2com-shared-mailbox&quot;&gt;9.2 Click email address for the domain2.com shared mailbox&lt;/h3&gt;
+&lt;h3 id=&quot;92-click-email-address-for-the-domain2com-shared-mailbox&quot;&gt;9.2 Click email address for the domain2.com shared mailbox&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.2 Click email address for the domain2.com shared mailbox.jpg&quot; alt=&quot;9.2 Click email address for the domain2.com shared mailbox&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;ensure-that-domain2domain2com-email-is-highlighted-and-click-the-pencil-icon-to-edit&quot;&gt;9.3 Ensure that domain2@domain2.com email is highlighted and Click the pencil icon to edit&lt;/h3&gt;
+&lt;h3 id=&quot;93-ensure-that-domain2domain2com-email-is-highlighted-and-click-the-pencil-icon-to-edit&quot;&gt;9.3 Ensure that domain2@domain2.com email is highlighted and Click the pencil icon to edit&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.3 Ensure that domain2@domain2.com email is highlighted and Click the pencil icon to edit.jpg&quot; alt=&quot;9.3 Ensure that domain2@domain2.com email is highlighted and Click the pencil icon to edit&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;update-the-email-address-from-domain2domain2com-to-infodomain2com-and-click-ok&quot;&gt;9.4 Update the email address from domain2@domain2.com to info@domain2.com and click OK&lt;/h3&gt;
+&lt;h3 id=&quot;94-update-the-email-address-from-domain2domain2com-to-infodomain2com-and-click-ok&quot;&gt;9.4 Update the email address from domain2@domain2.com to info@domain2.com and click OK&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.4 Update the email address from domain2@domain2.com.jpg&quot; alt=&quot;9.4 Update the email address from domain2@domain2.com&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.4 Update the email address to info@domain2.com and click OK.jpg&quot; alt=&quot;9.4 Update the email address to info@domain2.com and click OK&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-save-to-confirm-the-shared-office-365-email&quot;&gt;9.5 Click Save to confirm the shared Office 365 email&lt;/h3&gt;
+&lt;h3 id=&quot;95-click-save-to-confirm-the-shared-office-365-email&quot;&gt;9.5 Click Save to confirm the shared Office 365 email&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-19/9.5 Click Save to confirm the shared Office 365 email.jpg&quot; alt=&quot;9.5 Click Save to confirm the shared Office 365 email&quot; /&gt;&lt;/p&gt;
 
@@ -298,8 +298,8 @@ apigClient.autoquotePost(params, body, additionalParams)
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 19 Sep 2016 13:52:00 +0100</pubDate>
-        <link>http://localhost:4000/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</guid>
+        <link>https://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html</guid>
         
         
       </item>
@@ -334,23 +334,23 @@ apigClient.autoquotePost(params, body, additionalParams)
 
 &lt;h2 id=&quot;step-2-add-domain-to-office-365&quot;&gt;Step 2: Add Domain to Office 365&lt;/h2&gt;
 
-&lt;h3 id=&quot;login-to-office-365-and-select-admin&quot;&gt;2.1 Login to Office 365 and select Admin&lt;/h3&gt;
+&lt;h3 id=&quot;21-login-to-office-365-and-select-admin&quot;&gt;2.1 Login to Office 365 and select Admin&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-182.1 Login to Office 365 and select Admin 2.jpg&quot; alt=&quot;2.1 Login to Office 365 and select Admin&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;under-settings-click-domains&quot;&gt;2.2 Under Settings click Domains&lt;/h3&gt;
+&lt;h3 id=&quot;22-under-settings-click-domains&quot;&gt;2.2 Under Settings click Domains&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.2 Under Office 365 Settings click Domains.jpg&quot; alt=&quot;2.2 Under Office 365 Settings click Domains&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click---add-domain&quot;&gt;2.3 Click  + Add Domain&lt;/h3&gt;
+&lt;h3 id=&quot;23-click---add-domain&quot;&gt;2.3 Click  + Add Domain&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.3 Click Add Domain in Office 365.jpg&quot; alt=&quot;2.3 Click Add Domain in Office 365&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;type-your-new-additional-domain-and-click-next&quot;&gt;2.4 Type your new additional domain and click Next&lt;/h3&gt;
+&lt;h3 id=&quot;24-type-your-new-additional-domain-and-click-next&quot;&gt;2.4 Type your new additional domain and click Next&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.4 Type your new additional domain and click Next.jpg&quot; alt=&quot;2.4 Type your new Office 365 additional domain and click Next&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;copy-the-txt-value-shown-under-the-verify-domain-screen&quot;&gt;2.5 Copy the TXT value shown under the Verify domain screen&lt;/h3&gt;
+&lt;h3 id=&quot;25-copy-the-txt-value-shown-under-the-verify-domain-screen&quot;&gt;2.5 Copy the TXT value shown under the Verify domain screen&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/2.5 Copy the TXT value shown under the Verify domain screen.jpg&quot; alt=&quot;2.5 Copy the TXT value shown under the Verify domain screen Office 365&quot; /&gt;&lt;/p&gt;
 
@@ -358,77 +358,77 @@ apigClient.autoquotePost(params, body, additionalParams)
 
 &lt;p&gt;Open a new browser window, go to your domain within your DNS host. You will be adding a TXT record with the verify value provided by Office 365.&lt;/p&gt;
 
-&lt;h3 id=&quot;select-txt&quot;&gt;3.1 Select TXT&lt;/h3&gt;
+&lt;h3 id=&quot;31-select-txt&quot;&gt;3.1 Select TXT&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.1 Select TXT in CloudFlare DNS.jpg&quot; alt=&quot;3.1 Select TXT in CloudFlare DNS&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;paste-the-office-365-txt-value---from-step-25-to-txt-content-and-save&quot;&gt;3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save&lt;/h3&gt;
+&lt;h3 id=&quot;32-paste-the-office-365-txt-value---from-step-25-to-txt-content-and-save&quot;&gt;3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save.jpg&quot; alt=&quot;3.2 Paste the Office 365 TXT value - from Step 2.5 to TXT Content and Save&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-add-record&quot;&gt;3.3 Click Add Record&lt;/h3&gt;
+&lt;h3 id=&quot;33-click-add-record&quot;&gt;3.3 Click Add Record&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.3 Click Add Record to add TXT for Office 365 domain validation.jpg&quot; alt=&quot;3.3 Click Add Record to add TXT for Office 365 domain validation&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Note there are some detailed step by step instructions provided to &lt;a href=&quot;https://support.office.com/en-US/article/Create-DNS-records-at-Cloudflare-for-Office-365-84acd4fc-6eec-4d00-8bed-568f036ae2af#BKMK_add_CNAME&quot;&gt;Create DNS records at CloudFlare for Office 365&lt;/a&gt;, which may help.&lt;/p&gt;
 
-&lt;h3 id=&quot;back-in-the-office-365-browser-window-click-verify&quot;&gt;3.4 Back in the Office 365 browser window, Click Verify&lt;/h3&gt;
+&lt;h3 id=&quot;34-back-in-the-office-365-browser-window-click-verify&quot;&gt;3.4 Back in the Office 365 browser window, Click Verify&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/3.4 Back in the Office 365 browser window Click Verify.jpg&quot; alt=&quot;3.4 Back in the Office 365 browser window Click Verify&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;step-4-add-mx-record-to-direct-email-for-your-domain-to-office-365&quot;&gt;Step 4: Add MX Record To Direct Email for your Domain to Office 365&lt;/h2&gt;
 
-&lt;h3 id=&quot;select-ill-my-own-dns-records-and-click-next&quot;&gt;4.1 Select I’ll my own DNS records and click Next&lt;/h3&gt;
+&lt;h3 id=&quot;41-select-ill-my-own-dns-records-and-click-next&quot;&gt;4.1 Select I’ll my own DNS records and click Next&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.1 Select I'll my own DNS records and click Next.jpg&quot; alt=&quot;4.1 Select I'll my own DNS records and click Next in Office 365&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;copy-the-mail-protection-text-to-clipboard&quot;&gt;4.2 Copy the mail protection text to clipboard&lt;/h3&gt;
+&lt;h3 id=&quot;42-copy-the-mail-protection-text-to-clipboard&quot;&gt;4.2 Copy the mail protection text to clipboard&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.2 Copy the Office 365 mail protection text to clipboard.jpg&quot; alt=&quot;4.2 Copy the Office 365 mail protection text to clipboard&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;in-a-separate-browser-for-your-dns-host-select-a-new-mx-record-and-paste-the-text-in-this-case-cloudflare&quot;&gt;4.3 In a separate browser for your DNS Host select a new MX Record and paste the text, in this case CloudFlare&lt;/h3&gt;
+&lt;h3 id=&quot;43-in-a-separate-browser-for-your-dns-host-select-a-new-mx-record-and-paste-the-text-in-this-case-cloudflare&quot;&gt;4.3 In a separate browser for your DNS Host select a new MX Record and paste the text, in this case CloudFlare&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.3 In CloudFlare select a new MX Record and paste the Office 365 mail protection .jpg&quot; alt=&quot;4.3 In CloudFlare select a new MX Record and paste the Office 365 mail protection &quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-add-record-to-add-the-mx-record&quot;&gt;4.4 Click Add Record to add the MX record&lt;/h3&gt;
+&lt;h3 id=&quot;44-click-add-record-to-add-the-mx-record&quot;&gt;4.4 Click Add Record to add the MX record&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/4.4 Click Add Record to add the MX record to CloudFlare.jpg&quot; alt=&quot;4.4 Click Add Record to add the MX record to CloudFlare&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;step-5-add-autodiscover-cname-record-for-the-email-exchange&quot;&gt;Step 5: Add Autodiscover CNAME record for the email (Exchange)&lt;/h2&gt;
 
-&lt;h3 id=&quot;from-the-the-office-365-browser-copy-the-autodiscoveroutlookcom-to-clipboard&quot;&gt;5.1 From the the Office 365 browser, copy the autodiscover.outlook.com to clipboard&lt;/h3&gt;
+&lt;h3 id=&quot;51-from-the-the-office-365-browser-copy-the-autodiscoveroutlookcom-to-clipboard&quot;&gt;5.1 From the the Office 365 browser, copy the autodiscover.outlook.com to clipboard&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/5.1 From the the Office 365 browser copy the autodiscover.outlook.com to clipboard.jpg&quot; alt=&quot;5.1 From the the Office 365 browser copy the autodiscover.outlook.com to clipboard&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;in-the-cloudflare-browser-window-add-a-cname-record-for-autodiscover-as-shown-remember-to-click-add-record&quot;&gt;5.2 In the CloudFlare browser window add a CNAME record for autodiscover as shown, remember to click Add Record&lt;/h3&gt;
+&lt;h3 id=&quot;52-in-the-cloudflare-browser-window-add-a-cname-record-for-autodiscover-as-shown-remember-to-click-add-record&quot;&gt;5.2 In the CloudFlare browser window add a CNAME record for autodiscover as shown, remember to click Add Record&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/5.2 CloudFlare add a CNAME record for outlook autodiscover as shown remember to click Add Record.jpg&quot; alt=&quot;5.2 CloudFlare add a CNAME record for outlook autodiscover as shown remember to click Add Record&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;step-6-add-spf-txt-record-in-dns-host-for-your-domain-to-help-prevent-email-spam&quot;&gt;Step 6: Add SPF TXT record in DNS Host for your domain to help prevent email spam&lt;/h2&gt;
 
-&lt;h3 id=&quot;from-the-the-office-365-browser-copy-the-txt-value-for-spf-to-clipboard&quot;&gt;6.1 From the the Office 365 browser, copy the TXT value for SPF to clipboard&lt;/h3&gt;
+&lt;h3 id=&quot;61-from-the-the-office-365-browser-copy-the-txt-value-for-spf-to-clipboard&quot;&gt;6.1 From the the Office 365 browser, copy the TXT value for SPF to clipboard&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/6.1 From Office 365 copy the TXT value for SPF to clipboard.jpg&quot; alt=&quot;6.1 From Office 365 copy the TXT value for SPF to clipboard&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;in-the-cloudflare-browser-window-add-a-txt-pasting-the-spf-text-from-step-61&quot;&gt;6.2 In the CloudFlare browser window add a TXT, pasting the SPF text from step 6.1&lt;/h3&gt;
+&lt;h3 id=&quot;62-in-the-cloudflare-browser-window-add-a-txt-pasting-the-spf-text-from-step-61&quot;&gt;6.2 In the CloudFlare browser window add a TXT, pasting the SPF text from step 6.1&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/6.2 CloudFlare add a TXT pasting the SPF.jpg&quot; alt=&quot;6.2 CloudFlare add a TXT pasting the SPF for Outlook Spam prevention&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-add-record-1&quot;&gt;6.3 Click Add Record&lt;/h3&gt;
+&lt;h3 id=&quot;63-click-add-record&quot;&gt;6.3 Click Add Record&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/6.3 Click Add Record to add the TXT CloudFlare SPF record for outlook .jpg&quot; alt=&quot;6.3 Click Add Record to add the TXT CloudFlare SPF record for outlook &quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;step-7-verify-the-new-domain-dns-settings-in-office-365-and-finish&quot;&gt;Step 7: Verify the new Domain DNS Settings in Office 365 and Finish&lt;/h2&gt;
 
-&lt;h3 id=&quot;in-the-office-365-browser---update-dns-settings-window-click-verify&quot;&gt;7.1 In the Office 365 Browser - Update DNS Settings window, click Verify&lt;/h3&gt;
+&lt;h3 id=&quot;71-in-the-office-365-browser---update-dns-settings-window-click-verify&quot;&gt;7.1 In the Office 365 Browser - Update DNS Settings window, click Verify&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/7.1 Office 365 - Update DNS Settings window click Verify.jpg&quot; alt=&quot;7.1 Office 365 - Update DNS Settings window click Verify&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;you-may-see-some-warning-triangles-against-cname-and-srv-thats-because-we-only-configured-dns-for-email-not-all-office-365-services--just-click-skip&quot;&gt;7.2 You may see some warning triangles against CNAME and SRV, that’s because we only configured DNS for email, not all Office 365 services.  Just click Skip&lt;/h3&gt;
+&lt;h3 id=&quot;72-you-may-see-some-warning-triangles-against-cname-and-srv-thats-because-we-only-configured-dns-for-email-not-all-office-365-services--just-click-skip&quot;&gt;7.2 You may see some warning triangles against CNAME and SRV, that’s because we only configured DNS for email, not all Office 365 services.  Just click Skip&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/7.2 You may see some warning triangles against CNAME and SRV -not all Office 365 services selected click Skip.jpg&quot; alt=&quot;7.2 You may see some warning triangles against CNAME and SRV -not all Office 365 services selected click Skip&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;click-finish&quot;&gt;7.3 Click Finish&lt;/h3&gt;
+&lt;h3 id=&quot;73-click-finish&quot;&gt;7.3 Click Finish&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-09-18/7.3 Verify the new Domain DNS Settings in Office 365 and Finish.jpg&quot; alt=&quot;7.3 Verify the new Domain DNS Settings in Office 365 and Finish&quot; /&gt;&lt;/p&gt;
 
@@ -436,8 +436,8 @@ apigClient.autoquotePost(params, body, additionalParams)
 &lt;p&gt;We have added the new domain2.com to Office 365 and configured the required DNS records for email in the CloudFlare DNS Host.  In &lt;a href=&quot;/2016/09/19/free-office-365-email-service-for-secondary-multiple-domains-part-2-configure-exchange-shared-mailbox-for-additional-domain.html&quot;&gt;Part 2&lt;/a&gt;) I will describe how to configure Office 365 to use this additional domain for email.&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Sep 2016 09:55:00 +0100</pubDate>
-        <link>http://localhost:4000/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</link>
-        <guid isPermaLink="true">http://localhost:4000/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</guid>
+        <link>https://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/small/business/email/2016/09/18/free-office-365-email-service-for-multiple-domains-part-1-configure-dns-in-cloudflare-host.html</guid>
         
         
         <category>small</category>
@@ -505,8 +505,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;I will certainly be keen to try their service again - when they have a camera app - Until then I will continue to look to other providers such as &lt;a href=&quot;https://photos.google.com/&quot;&gt;Google Photos&lt;/a&gt; or &lt;a href=&quot;https://www.icloud.com/&quot;&gt;Apple iCloud&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 Jul 2016 11:25:00 +0100</pubDate>
-        <link>http://localhost:4000/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</guid>
+        <link>https://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html</guid>
         
         
         <category>cloud</category>
@@ -558,8 +558,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;In my next post, &lt;a href=&quot;/cloud/storage/2016/07/30/upthere-cloud-storage-android-app-review.html&quot;&gt;upthere cloud storage android app review&lt;/a&gt;, I will try using the app from my phone.  This is the real test and most likely scenario of taking photos and video without using device storage.&lt;/p&gt;
 </description>
         <pubDate>Wed, 27 Jul 2016 19:56:00 +0100</pubDate>
-        <link>http://localhost:4000/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</link>
-        <guid isPermaLink="true">http://localhost:4000/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</guid>
+        <link>https://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html</guid>
         
         
         <category>cloud</category>
@@ -761,8 +761,8 @@ support@upthere.com&lt;/p&gt;
 &lt;p&gt;Note that I have not discussed SEO or any other optimisation considerations.&lt;/p&gt;
 </description>
         <pubDate>Sun, 17 Jul 2016 10:28:00 +0100</pubDate>
-        <link>http://localhost:4000/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</link>
-        <guid isPermaLink="true">http://localhost:4000/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</guid>
+        <link>https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html</guid>
         
         
         <category>static</category>
@@ -849,12 +849,12 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;p&gt;I will use the command line to download and install the WordPress files.  Run each command in turn….&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;brew install wget
-&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;wget https://wordpress.org/latest.tar.gz
-&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;tar xzf latest.tar.gz
-&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;mv wordpress/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; .
-&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;rm latest.tar.gz
-&lt;span class=&quot;gp&quot;&gt;~/Sites/drupal2wordpress&amp;gt; &lt;/span&gt;rmdir wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~/Sites/drupal2wordpress&amp;gt; brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;wget
+~/Sites/drupal2wordpress&amp;gt; wget https://wordpress.org/latest.tar.gz
+~/Sites/drupal2wordpress&amp;gt; &lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;xzf latest.tar.gz
+~/Sites/drupal2wordpress&amp;gt; &lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;wordpress/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+~/Sites/drupal2wordpress&amp;gt; &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;latest.tar.gz
+~/Sites/drupal2wordpress&amp;gt; &lt;span class=&quot;nb&quot;&gt;rmdir &lt;/span&gt;wordpress&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;em&gt;Note that i needed to install wget, if you already have this installed you do not need this command.&lt;/em&gt;&lt;/p&gt;
 
@@ -915,8 +915,8 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Edit 17th July&lt;/strong&gt;- Please see my guide - &lt;a href=&quot;http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html&quot;&gt;Free Fast Sites Generated from WordPress &lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 12 Jun 2016 13:18:00 +0100</pubDate>
-        <link>http://localhost:4000/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
-        <guid isPermaLink="true">http://localhost:4000/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</guid>
+        <link>https://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html</guid>
         
         
         <category>static</category>
@@ -979,15 +979,15 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;h3 id=&quot;step-1-create-a-new-jekyll-site-and-install-the-jekyll-import&quot;&gt;Step 1 Create a new Jekyll Site and install the jekyll-import&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites&amp;gt; &lt;/span&gt;jekyll new hartleyvoices_jekyll
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~/Sites&amp;gt; jekyll new hartleyvoices_jekyll
 New jekyll site installed &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /Users/hywel/Sites/hartleyvoices_jekyll. 
-&lt;span class=&quot;gp&quot;&gt;~/Sites&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;hartleyvoices_jekyll
-&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_jekyll&amp;gt; &lt;/span&gt;gem install jekyll-import
+~/Sites&amp;gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;hartleyvoices_jekyll
+~/Sites/hartleyvoices_jekyll&amp;gt; gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll-import
 Successfully installed jekyll-import-0.10.0
 Parsing documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;jekyll-import-0.10.0
 Done installing documentation &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;jekyll-import after 1 seconds
 1 gem installed
-&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_jekyll&amp;gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+~/Sites/hartleyvoices_jekyll&amp;gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;step-2-export-the-production-drupal-6-database&quot;&gt;Step 2 Export the Production Drupal 6 Database&lt;/h3&gt;
 
@@ -1024,7 +1024,7 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;p&gt;The node types in my site are “page”, “talent”,”testimonial”.  Enter the Drupal 6 database credentials created in Step 3:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;'require &quot;jekyll-import&quot;;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby &lt;span class=&quot;nt&quot;&gt;-rubygems&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'require &quot;jekyll-import&quot;;
     JekyllImport::Importers::Drupal6.run({
       &quot;dbname&quot;   =&amp;gt; &quot;hartleyvoices&quot;,
       &quot;user&quot;     =&amp;gt; &quot;hartleyvoices&quot;,
@@ -1038,11 +1038,11 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/whoops need to install sequel.png&quot; alt=&quot;whoops need to install sequel&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install sequel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;sequel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/gem install sequel.png&quot; alt=&quot;gem install sequel&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo gem install mysql&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mysql&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-01-11/sudo gem install mysql.png&quot; alt=&quot;sudo gem install mysql&quot; /&gt;&lt;/p&gt;
 
@@ -1050,7 +1050,7 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-06-11/mysql server start.png&quot; alt=&quot;mysql server start&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;'require &quot;jekyll-import&quot;;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby &lt;span class=&quot;nt&quot;&gt;-rubygems&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'require &quot;jekyll-import&quot;;
     JekyllImport::Importers::Drupal6.run({
       &quot;dbname&quot;   =&amp;gt; &quot;hartleyvoices&quot;,
       &quot;user&quot;     =&amp;gt; &quot;hartleyvoices&quot;,
@@ -1066,11 +1066,11 @@ Note Ensure that the SQL is unzipped.&lt;/p&gt;
 
 &lt;p&gt;Now to run Jekyll and hopefully see something..&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_jekyll&amp;gt; &lt;/span&gt;jekyll serve
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~/Sites/hartleyvoices_jekyll&amp;gt; jekyll serve
 Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
             Source: /Users/hywel/Sites/hartleyvoices_jekyll
        Destination: /Users/hywel/Sites/hartleyvoices_jekyll/_site
- Incremental build: disabled. Enable with --incremental
+ Incremental build: disabled. Enable with &lt;span class=&quot;nt&quot;&gt;--incremental&lt;/span&gt;
       Generating... 
                     &lt;span class=&quot;k&quot;&gt;done in &lt;/span&gt;14.248 seconds.
  Auto-regeneration: enabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/Users/hywel/Sites/hartleyvoices_jekyll'&lt;/span&gt;
@@ -1092,7 +1092,7 @@ Configuration file: /Users/hywel/Sites/hartleyvoices_jekyll/_config.yml
 
 &lt;p&gt;Import the posts:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_hugo&amp;gt; &lt;/span&gt;hugo import jekyll ~/Sites/hartleyvoices_jekyll ~/Sites/hartleyvoices_hugo
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~/Sites/hartleyvoices_hugo&amp;gt; hugo import jekyll ~/Sites/hartleyvoices_jekyll ~/Sites/hartleyvoices_hugo
 Importing...
 Congratulations! 137 posts imported!&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -1105,7 +1105,7 @@ git clone https://github.com/spf13/herring-cove.git &lt;/code&gt;&lt;/pre&gt;&lt
 
 &lt;p&gt;Run the Hugo Server:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;~/Sites/hartleyvoices_hugo&amp;gt; &lt;/span&gt;hugo server -w --theme&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;herring-cove
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~/Sites/hartleyvoices_hugo&amp;gt; hugo server &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--theme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;herring-cove
 0 of 2 drafts rendered
 0 future content
 135 pages created
@@ -1132,8 +1132,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;So in my next post, I will be investigating options to use a CMS locally and then generate static site content to be published to the web - possible best of both worlds for now… time will tell.&lt;/p&gt;
 </description>
         <pubDate>Sat, 11 Jun 2016 20:05:00 +0100</pubDate>
-        <link>http://localhost:4000/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</link>
-        <guid isPermaLink="true">http://localhost:4000/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</guid>
+        <link>https://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/static/site/2016/06/11/migrate-a-drupal-6-website-to-a-static-site.html</guid>
         
         
         <category>static</category>
@@ -1176,40 +1176,40 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 
 &lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.info.yml&quot;&gt;hartleyvoicescouk.info.yml&lt;/a&gt; file&lt;/em&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;hartleyvoicescouk&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;This is a hartleyvoices sub theme of Bartik&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8.x&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;hartleyvoicescouk&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;This is a hartleyvoices sub theme of Bartik&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8.x&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Defines the base theme&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;base theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bartik&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;base theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bartik&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Defines libraries group in which we can add css/js.&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;libraries&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;libraries&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;hartleyvoicescouk/global-styling&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Regions&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;regions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Header&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;primary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Primary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu'&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;secondary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Secondary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu'&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Content&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;sidebar_first&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;First sidebar&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;sidebar_second&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Second sidebar&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;featured&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Featured bottom first&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Footer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;na&quot;&gt;regions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Header&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;primary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Primary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu'&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;secondary_menu&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Secondary&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;menu'&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Content&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;sidebar_first&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;First sidebar&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;sidebar_second&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Second sidebar&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;featured&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Featured bottom first&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Footer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/hartleyvoicescouk.libraries.yml&quot;&gt;hartleyvoicescouk.libraries.yml&lt;/a&gt; file&lt;/em&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;global-styling&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;na&quot;&gt;global-styling&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;s&quot;&gt;css/style.css&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;{}&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;s&quot;&gt;js/yahoomedia/hartleyvoicescouk.js&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 id=&quot;activate-the-sub-theme&quot;&gt;Activate the Sub Theme&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-03-06/drupal%208%20activated%20sub%20theme.jpg&quot; alt=&quot;drupal 8 activated sub theme&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;sub-theme-stylesheet---stylecsshttpsgithubcomhyweljohnllewellynhywelmeblobgh-pagesassets2016-03-06hartleyvoicescoukcssstylecss&quot;&gt;Sub Theme Stylesheet - &lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css&quot;&gt;style.css&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;sub-theme-stylesheet---stylecss&quot;&gt;Sub Theme Stylesheet - &lt;a href=&quot;https://github.com/hyweljohnllewellyn/hywelme/blob/gh-pages/assets/2016-03-06/hartleyvoicescouk/css/style.css&quot;&gt;style.css&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;This was the tricky and time consuming part, mainly as for each of the style elements I wanted to customise, I needed to find the related element in the Parent Theme.  These were generally found in one of the css files in the
 &lt;em&gt;bartik -&amp;gt; css -&amp;gt; components&lt;/em&gt; folder&lt;/p&gt;
@@ -1235,8 +1235,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;Since using &lt;a href=&quot;http://www.hywel.me/jekyll/static/site/2015/11/15/installing-jekyll-locally-on-a-mac.html&quot;&gt;Jekyll&lt;/a&gt; as a static site generators and &lt;a href=&quot;http://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html&quot;&gt;prose.io&lt;/a&gt; as an online editor, I am now seriously considering converting the entire Drupal 6 site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; or potentially &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 06 Mar 2016 08:34:00 +0000</pubDate>
-        <link>http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
-        <guid isPermaLink="true">http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
+        <link>https://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
         
         
         <category>drupal</category>
@@ -1367,8 +1367,8 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
 &lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view to block step 4.png&quot; alt=&quot;add drupal 8 view to block step 4&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 17 Feb 2016 20:02:00 +0000</pubDate>
-        <link>http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</link>
-        <guid isPermaLink="true">http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</guid>
+        <link>https://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</link>
+        <guid isPermaLink="true">https://www.hywel.me/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</guid>
         
         
         <category>drupal</category>

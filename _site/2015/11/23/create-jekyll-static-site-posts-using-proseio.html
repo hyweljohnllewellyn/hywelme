@@ -12,23 +12,23 @@
 
   <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2015/11/23/create-jekyll-static-site-posts-using-proseio.html">
-  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://localhost:4000/feed.xml" />  
+  <link rel="canonical" href="https://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="https://www.hywel.me/feed.xml" />  
   <link rel="author" href="https://plus.google.com/u/0/116119715872022757453"/>
 </head>
 
 
   <body>
-    <!--Adsense Page Level Adverts-->
-
-
-    
+    <!-- Google  Ads 
+     
+ -->
+ 
     <header class="site-header">
 
   <div class="wrapper">
 
-    <a class="site-title" href="/" ><img src="http://localhost:4000/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
-  
+    <a class="site-title" href="/" ><img src="https://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -38,11 +38,16 @@
           <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
         </svg>
       </a>
+ 
 
       <div class="trigger">
         
           
           <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
           
         
           
@@ -70,7 +75,39 @@
 
 
     <div class="page-content">
+       <!-- REMOVE rapidmailer affiliate 
+        <style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+</style>
+ <p>
+<a href="https://4c1781zgmdub7l03qnfhj9t1uh.hop.clickbank.net/">
+<img alt="email marketing list autoresponder" src="/assets/email marketing list autoresponder.jpg">
+</a>
+</p>-->
+
       <div class="wrapper">
+        <!-- googlesearch 
+        <div>
+ <script>
+ (function() {
+   var cx = '018226365032954961489:hfjstmpp1nk';
+   var gcse = document.createElement('script');
+   gcse.type = 'text/javascript';
+   gcse.async = true;
+   gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+   var s = document.getElementsByTagName('script')[0];
+   s.parentNode.insertBefore(gcse, s);
+ })();
+ </script>
+ <gcse:search></gcse:search>
+</div>
+
+        -->
         <div class="post">
 
   <header class="post-header">
@@ -93,83 +130,90 @@
 <h2 id="update-as-of-february-2016">Update as of February 2016</h2>
 <p>I have been using Prose.io regularly to create posts on this website now for a couple of months.  I would recommend it.</p>
 
-<p><strong>Pros</strong>
-- it is very quick to start a post 
-- you can edit posts through the web - even on my mobile
-- adding an image to the post is also super fast</p>
+<p><strong>Pros</strong></p>
+<ul>
+  <li>it is very quick to start a post</li>
+  <li>you can edit posts through the web - even on my mobile</li>
+  <li>adding an image to the post is also super fast</li>
+</ul>
 
-<p><strong>Cons</strong>
-- no spell checker</p>
+<p><strong>Cons</strong></p>
+<ul>
+  <li>no spell checker</li>
+</ul>
 
 <h2 id="basic-proseio-configuration">Basic Prose.io Configuration</h2>
 
 <p>The basic prose configuration is added to the _config.yml file of my Jekyll site</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">prose</span><span class="pi">:</span>
-  <span class="s">rooturl</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
-  <span class="s">siteurl</span><span class="pi">:</span> <span class="s1">'</span><span class="s">http://www.hywel.me'</span>
-  <span class="s">media</span><span class="pi">:</span> <span class="s1">'</span><span class="s">assets'</span>
-  <span class="s">metadata</span><span class="pi">:</span>
-    <span class="s">_posts</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">layout"</span>
-        <span class="s">field</span><span class="pi">:</span>
-          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">layout"</span>
-          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
-          <span class="s">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">post"</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">date"</span>
-        <span class="s">field</span><span class="pi">:</span>
-          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">date"</span>
-          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
-          <span class="s">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">CURRENT_DATETIME"</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">author"</span>
-        <span class="s">field</span><span class="pi">:</span>
-          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">author"</span>
-          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
-          <span class="s">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hywel"</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">categories"</span>
-        <span class="s">field</span><span class="pi">:</span>
-          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">categories"</span>
-          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
-          <span class="s">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">categories"</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">excerpt"</span>
-        <span class="s">field</span><span class="pi">:</span>
-          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">excerpt"</span>
-          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
-          <span class="s">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">excerpt"</span>
-      <span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">meta"</span>
-        <span class="s">field</span><span class="pi">:</span>
-          <span class="s">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">meta"</span>
-          <span class="s">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
-          <span class="s">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">metadata"</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">prose</span><span class="pi">:</span>
+  <span class="na">rooturl</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+  <span class="na">siteurl</span><span class="pi">:</span> <span class="s1">'</span><span class="s">http://www.hywel.me'</span>
+  <span class="na">media</span><span class="pi">:</span> <span class="s1">'</span><span class="s">assets'</span>
+  <span class="na">metadata</span><span class="pi">:</span>
+    <span class="na">_posts</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">layout"</span>
+        <span class="na">field</span><span class="pi">:</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">layout"</span>
+          <span class="na">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">post"</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">date"</span>
+        <span class="na">field</span><span class="pi">:</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">date"</span>
+          <span class="na">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">CURRENT_DATETIME"</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">author"</span>
+        <span class="na">field</span><span class="pi">:</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">author"</span>
+          <span class="na">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hywel"</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">categories"</span>
+        <span class="na">field</span><span class="pi">:</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">categories"</span>
+          <span class="na">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="na">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">categories"</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">excerpt"</span>
+        <span class="na">field</span><span class="pi">:</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">excerpt"</span>
+          <span class="na">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="na">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">excerpt"</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">meta"</span>
+        <span class="na">field</span><span class="pi">:</span>
+          <span class="na">label</span><span class="pi">:</span> <span class="s2">"</span><span class="s">meta"</span>
+          <span class="na">element</span><span class="pi">:</span> <span class="s2">"</span><span class="s">text"</span>
+          <span class="na">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Enter</span><span class="nv"> </span><span class="s">metadata"</span>
       </code></pre></figure>
 
 <p>Note that I have defined my media folder with today’s date.  I keep my media sorted into date folders.  I have not found out how to configure this as yet.</p>
 
 <h2 id="create-the-post">Create the Post</h2>
 
-<h3 id="log-in-to-proseio-using-your-github-credentials-and-navigate-to-your-posts-folder-click-new-file-to-start-a-new-post">1. Log in to prose.io using your Github credentials and navigate to your _posts folder. Click ‘New File’ to start a new post.</h3>
+<h3 id="1-log-in-to-proseio-using-your-github-credentials-and-navigate-to-your-_posts-folder-click-new-file-to-start-a-new-post">1. Log in to prose.io using your Github credentials and navigate to your _posts folder. Click ‘New File’ to start a new post.</h3>
 
 <p><img src="/assets/2015-11-23/step 1 login to proseio and go to posts folder.JPG" alt="step 1 log in to prose.io and navigate to your posts folder" /></p>
 
-<h3 id="write-your-post">2. Write your post</h3>
+<h3 id="2-write-your-post">2. Write your post</h3>
 
 <p><img src="/assets/2015-11-23/step 2 write your post using prose io.JPG" alt="write your post using prose io" /></p>
 
-<h3 id="select-medatata-to-edit">3. Select Medatata to edit</h3>
+<h3 id="3-select-medatata-to-edit">3. Select Medatata to edit</h3>
 
 <p><img src="/assets/2015-11-23/select metadata to edit.JPG" alt="select metadata option to edit" /></p>
 
-<h3 id="edit-your-metadata--note-that-the-default-options-from-the-configuration-are-shown">4. Edit your metadata.  Note that the default options from the configuration are shown</h3>
+<h3 id="4-edit-your-metadata--note-that-the-default-options-from-the-configuration-are-shown">4. Edit your metadata.  Note that the default options from the configuration are shown</h3>
 
 <p><img src="/assets/2015-11-23/enter metadata.JPG" alt="enter metadata default options are shown" /></p>
 
-<h3 id="insert-an-image-using-proseio-note-that-the-image-is-uploaded-and-inserted-to-the-post-automatically">5. Insert an image using prose.io, note that the image is uploaded and inserted to the post automatically</h3>
+<h3 id="5-insert-an-image-using-proseio-note-that-the-image-is-uploaded-and-inserted-to-the-post-automatically">5. Insert an image using prose.io, note that the image is uploaded and inserted to the post automatically</h3>
 
 <p><img src="/assets/2015-11-23/step 3 insert an image using prose io.JPG" alt="select image for upload to prose.io" />
 <img src="/assets/2015-11-23/step 3a image code automatically generated by prose io.JPG" alt="insert an image using prose io" /></p>
 
   </article>
-
+  
+  <!--script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></!--script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"48b03903f0056c08b4b13ac15","lid":"c907802f48","uniqueMethods":true}) })</script-->
+  
+  <b> Copyright © 2017 Hywel John Llewellyn </b>
 <!-- Hywel Start Disqus Comments -->
   <div id="disqus_thread"></div>
   <script>
@@ -178,7 +222,7 @@
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
        */
       var disqus_config = function () {
-          this.page.url =  "http://localhost:4000/2015/11/23/create-jekyll-static-site-posts-using-proseio.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.url =  "https://www.hywel.me/2015/11/23/create-jekyll-static-site-posts-using-proseio.html";  // Replace PAGE_URL with your page's canonical URL variable
 
           //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
@@ -209,8 +253,10 @@
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <!--li>Have You Wandered Every Land</li-->
-          <li><a href="mailto:hywel.llewellyn@gmail.com">hywel.llewellyn@gmail.com</a></li>
+
+    
+          <li><a href="https://www.hywel.me/privacy-policy">Privacy Policy</a></li>
+          <!--li><a href="mailto:contact@hywel.me">contact@hywel.me</a> </li> -->
         </ul>
       </div>
 
@@ -231,19 +277,6 @@
           
 
           
-          <li>
-            <a href="https://twitter.com/hywel_llewellyn">
-              <span class="icon  icon--twitter">
-                <svg viewBox="0 0 16 16">
-                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
-                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
-                </svg>
-              </span>
-
-              <span class="username">hywel_llewellyn</span>
-            </a>
-          </li>
-          
         </ul>
       </div>
 
@@ -254,7 +287,6 @@
       <!--  google advert hywelme start -->
     <div class="footer-col  footer-col-3">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-     <!-- footer_hywelme -->
         <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1549458855743321"
@@ -264,7 +296,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-  <!--  google advert hywelme end -->
+   <!--google advert hywelme end -->
   </div>
 
   </div>

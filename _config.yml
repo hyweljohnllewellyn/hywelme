@@ -12,7 +12,7 @@ github_username:  hyweljohnllewellyn
 markdown: kramdown
 
 # Github Pages Redirect - https://help.github.com/articles/redirects-on-github-pages/
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
 

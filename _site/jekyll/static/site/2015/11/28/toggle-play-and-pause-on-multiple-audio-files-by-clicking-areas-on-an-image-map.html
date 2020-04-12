@@ -12,23 +12,23 @@
 
   <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html">
-  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="http://localhost:4000/feed.xml" />  
+  <link rel="canonical" href="https://www.hywel.me/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html">
+  <link rel="alternate" type="application/rss+xml" title="Have You Wandered Every Land" href="https://www.hywel.me/feed.xml" />  
   <link rel="author" href="https://plus.google.com/u/0/116119715872022757453"/>
 </head>
 
 
   <body>
-    <!--Adsense Page Level Adverts-->
-
-
-    
+    <!-- Google  Ads 
+     
+ -->
+ 
     <header class="site-header">
 
   <div class="wrapper">
 
-    <a class="site-title" href="/" ><img src="http://localhost:4000/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
-  
+    <a class="site-title" href="/" ><img src="https://www.hywel.me/assets/hywel_small.png" alt="Have You Wandered Every Land"></a>
+
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -38,11 +38,16 @@
           <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
         </svg>
       </a>
+ 
 
       <div class="trigger">
         
           
           <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
           
         
           
@@ -70,7 +75,39 @@
 
 
     <div class="page-content">
+       <!-- REMOVE rapidmailer affiliate 
+        <style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+</style>
+ <p>
+<a href="https://4c1781zgmdub7l03qnfhj9t1uh.hop.clickbank.net/">
+<img alt="email marketing list autoresponder" src="/assets/email marketing list autoresponder.jpg">
+</a>
+</p>-->
+
       <div class="wrapper">
+        <!-- googlesearch 
+        <div>
+ <script>
+ (function() {
+   var cx = '018226365032954961489:hfjstmpp1nk';
+   var gcse = document.createElement('script');
+   gcse.type = 'text/javascript';
+   gcse.async = true;
+   gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+   var s = document.getElementsByTagName('script')[0];
+   s.parentNode.insertBefore(gcse, s);
+ })();
+ </script>
+ <gcse:search></gcse:search>
+</div>
+
+        -->
         <div class="post">
 
   <header class="post-header">
@@ -124,29 +161,29 @@
 
 <p>In my page scripts, as well as loading the jQuery files, these are included;</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://localhost:4000/assets/js/imagemapresizer/imageMapResizer.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://www.hywel.me/assets/js/imagemapresizer/imageMapResizer.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="nt">&gt;</span><span class="nx">imageMapResize</span><span class="p">();</span><span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
 <h2 id="using-jquery-to-control-the-audio">Using jQuery to Control the Audio</h2>
 
 <p>The controls I wanted to achieve were to play or pause the audio on click of object and pause any other audio that may be playing.  This script was placed in a file called audioplay.js:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">"map[name=my_image] area"</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">map[name=my_image] area</span><span class="dl">"</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 <span class="c1">//$("#my_image area").on('click', function () {</span>
 <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
- <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'id'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/area/</span><span class="p">,</span> <span class="s1">''</span><span class="p">);</span>
+ <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/area/</span><span class="p">,</span> <span class="dl">''</span><span class="p">);</span>
 
-<span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'audio'</span><span class="p">),</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">audio</span><span class="dl">'</span><span class="p">),</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
    <span class="k">this</span><span class="p">.</span><span class="nx">pause</span><span class="p">();</span>
 <span class="p">});</span>
 
-    <span class="nx">$this</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">$this</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'active'</span><span class="p">)){</span>
-        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">'pause'</span><span class="p">);</span>
-      <span class="nx">$</span><span class="p">(</span><span class="s1">'audio[id^="sound"]'</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">play</span><span class="p">();</span>
+    <span class="nx">$this</span><span class="p">.</span><span class="nx">toggleClass</span><span class="p">(</span><span class="dl">'</span><span class="s1">active</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">$this</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="dl">'</span><span class="s1">active</span><span class="dl">'</span><span class="p">)){</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="dl">'</span><span class="s1">pause</span><span class="dl">'</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">audio[id^="sound"]</span><span class="dl">'</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">play</span><span class="p">();</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s1">'play'</span><span class="p">);</span>
-      <span class="nx">$</span><span class="p">(</span><span class="s1">'audio[id^="sound"]'</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">pause</span><span class="p">();</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="dl">'</span><span class="s1">play</span><span class="dl">'</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">audio[id^="sound"]</span><span class="dl">'</span><span class="p">)[</span><span class="nx">id</span><span class="o">-</span><span class="mi">1</span><span class="p">].</span><span class="nx">pause</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">});</span></code></pre></figure>
 
@@ -165,7 +202,10 @@
 <p>That’s it, the final result can be found at <a href="http://www.victoriancarolsingershire.uk/">Victorian Carol Singers Hire UK</a>.</p>
 
   </article>
-
+  
+  <!--script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></!--script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"48b03903f0056c08b4b13ac15","lid":"c907802f48","uniqueMethods":true}) })</script-->
+  
+  <b> Copyright © 2017 Hywel John Llewellyn </b>
 <!-- Hywel Start Disqus Comments -->
   <div id="disqus_thread"></div>
   <script>
@@ -174,7 +214,7 @@
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
        */
       var disqus_config = function () {
-          this.page.url =  "http://localhost:4000/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.url =  "https://www.hywel.me/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html";  // Replace PAGE_URL with your page's canonical URL variable
 
           //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
@@ -205,8 +245,10 @@
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <!--li>Have You Wandered Every Land</li-->
-          <li><a href="mailto:hywel.llewellyn@gmail.com">hywel.llewellyn@gmail.com</a></li>
+
+    
+          <li><a href="https://www.hywel.me/privacy-policy">Privacy Policy</a></li>
+          <!--li><a href="mailto:contact@hywel.me">contact@hywel.me</a> </li> -->
         </ul>
       </div>
 
@@ -227,19 +269,6 @@
           
 
           
-          <li>
-            <a href="https://twitter.com/hywel_llewellyn">
-              <span class="icon  icon--twitter">
-                <svg viewBox="0 0 16 16">
-                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
-                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
-                </svg>
-              </span>
-
-              <span class="username">hywel_llewellyn</span>
-            </a>
-          </li>
-          
         </ul>
       </div>
 
@@ -250,7 +279,6 @@
       <!--  google advert hywelme start -->
     <div class="footer-col  footer-col-3">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-     <!-- footer_hywelme -->
         <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1549458855743321"
@@ -260,7 +288,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-  <!--  google advert hywelme end -->
+   <!--google advert hywelme end -->
   </div>
 
   </div>

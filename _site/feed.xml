@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Apr 2020 13:06:54 +0100</pubDate>
-    <lastBuildDate>Mon, 13 Apr 2020 13:06:54 +0100</lastBuildDate>
+    <pubDate>Mon, 13 Apr 2020 13:17:06 +0100</pubDate>
+    <lastBuildDate>Mon, 13 Apr 2020 13:17:06 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -199,7 +199,7 @@ apigClient.autoquotePost(params, body, additionalParams)
 
 &lt;/script&gt;
 
-&lt;p&gt;&amp;lt;script async defer
+&lt;p&gt;&amp;lt;script defer
    src= “https://maps.googleapis.com/maps/api/js?key=” &amp;amp;libraries=places&amp;amp;callback=initMap&amp;gt;
    &amp;lt;/script&amp;gt;
 &lt;!-- GOOGLE API END --&gt;&lt;/p&gt;

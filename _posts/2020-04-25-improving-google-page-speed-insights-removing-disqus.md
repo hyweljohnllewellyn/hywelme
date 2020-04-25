@@ -23,7 +23,7 @@ Even on desktop, there is an opportunity to improve from a score of 93.
 
 ## Why I decided to remove Disqus comments system from my site?
 ​
-I have been using Disqus on this site since 2015. It is a great tool to add comments capability to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
+I have been using [Disqus](https://disqus.com/) on this site since 2015. It is a great tool to add comments capability to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
 ![Disqus Impacting Load Performance]({{site.baseurl}}/assets/Disqus impacting load performance .jpg)
 ​
 There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) of the Disqus scripts: [How to Prevent Disqus Comments System from Slowing Page Speed & Performance](https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed).

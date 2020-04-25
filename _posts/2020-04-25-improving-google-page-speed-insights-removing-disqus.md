@@ -15,23 +15,18 @@ This site has never been optimised for mobile. There hasn't been a need. However
 ​
 Using the fantactic [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), it can be seen where the site has potential for improvement. A score of 48 out of 100 is just awful for mobile.
 ​
-
 ![Google Page Speed Insights Before Removing Disqus on Mobile]({{site.baseurl}}/assets/google page speeds mobile score before.jpg)
 ​
 Even on desktop, there is an opportunity to improve from a score of 93.
 ​
-
 ![Google Page Speed Insights Before Removing Disqus on Desktop]({{site.baseurl}}/assets/google page speeds desktop score before.jpg)
 
-​
 ## Why I decided to remove Disqus comments system from my site?
 ​
 I have been using Disqus on this site since 2015. It is a great tool to add comments capablity to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
-​
-
 ![Disqus Impacting Load Performance]({{site.baseurl}}/assets/Disqus impacting load performance .jpg)
 ​
-There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) of the scripts [How to Prevent Disqus Comments System from Slowing Page Speed & Performance](https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed).
+There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) of the Disqus scripts [How to Prevent Disqus Comments System from Slowing Page Speed & Performance](https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed).
 ​
  I have had some good feedback through Disqus from users of this site, but I don't want to change the default Disqus script behaviour and I definitely don't want to compromose the user experience from mobile devices.
 ​
@@ -43,18 +38,11 @@ As you can see, after removing the Disqus comments script from the site, the mob
 ​
 Crucially, the Disqus script is no longer impacting the page load performance.
 ​
-
-
 ![third party code is not blocking page load]({{site.baseurl}}/assets/2020/third party code is not blocking page load.jpg)
-​
 ​
 And amazingly, the desktop performance is now at 100!
 ​
-
-
 ![Google Page Speed Insights After Removing Disqus on Desktop]({{site.baseurl}}/assets/2020/google page speeds desktop score after.jpg)
 ​
-
-
 I will investigate other static site comment systems in a later blog post, for example [staticman](https://staticman.net/), but for now, job done.
 ​

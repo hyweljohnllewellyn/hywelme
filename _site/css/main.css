@@ -11,11 +11,11 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 300;
-  color: #111;
+  font-weight: 400;
+  color: #444444;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; }
 
@@ -69,7 +69,7 @@ a {
   a:visited {
     color: #1756a9; }
   a:hover {
-    color: #111;
+    color: #444444;
     text-decoration: underline; }
 
 /**
@@ -166,7 +166,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: #444444;
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
@@ -258,7 +258,8 @@ pre {
  * Page content
  */
 .page-content {
-  padding: 30px 0; }
+  padding: 30px 0;
+  padding: 30px 30px 20px; }
 
 .page-heading {
   font-size: 20px; }
@@ -293,18 +294,24 @@ pre {
 
 .post-content {
   margin-bottom: 30px; }
+  .post-content img {
+    padding: 30px 0 30px; }
+  .post-content p {
+    font-size: 1.12rem;
+    line-height: 1.8;
+    padding: 5px 10px; }
   .post-content h2 {
-    font-size: 32px; }
+    font-weight: 700; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 28px; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-weight: 700; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 22px; } }
   .post-content h4 {
-    font-size: 20px; }
+    font-weight: 700; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }

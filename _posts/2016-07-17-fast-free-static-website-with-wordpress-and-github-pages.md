@@ -131,11 +131,13 @@ Remember to press Save.
 
 #### Step 4c Static Site Plugin - Advanced Tab
 
-In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab.  Some users have reported that the whole wp-content folder needs to be included, so that stylesheets and themes are processed to preserve the look of your site.
+In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab.  
 
 ![Static Site Advanced Tab]({{site.baseurl}}/assets/2016-07-17/WordPress Simply Static Advanced Tab.jpg)
 
 #### Step 4d Static Site Plugin - Enter Uploads Folder Location in Additional Folders
+
+Some users have reported that the whole wp-content folder needs to be included, so that stylesheets and themes are processed to preserve the look of your site.
 
 Remember to press Save.
 

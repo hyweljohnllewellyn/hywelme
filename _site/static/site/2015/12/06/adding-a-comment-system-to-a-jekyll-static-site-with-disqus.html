@@ -424,30 +424,30 @@ img {
 <span class="c">&lt;!-- END - We recommend to place the below code where you want the form in your website html  --&gt;</span>
 
 
-<span class="c">&lt;!-- Hywel Start Disqus Comments --&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"disqus_thread"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">defer</span> <span class="nt">&gt;</span>
-      <span class="cm">/**
+<span class="c">&lt;!-- REMOVE DISQUS Hywel Start Disqus Comments --&gt;</span>
+  <span class="c">&lt;!--div id="disqus_thread"&gt;&lt;/div&gt;
+  &lt;script defer &gt;
+      /**
        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-       */</span>
-       <span class="kd">var</span> <span class="nx">disqus_config</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-          <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span>  <span class="dl">"</span><span class="s2">http://localhost:4000/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html</span><span class="dl">"</span><span class="p">;</span>  <span class="c1">// Replace PAGE_URL with your page's canonical URL variable</span>
+       */
+       var disqus_config = function () {
+          this.page.url =  "http://localhost:4000/jekyll/static/site/2015/11/28/toggle-play-and-pause-on-multiple-audio-files-by-clicking-areas-on-an-image-map.html";  // Replace PAGE_URL with your page's canonical URL variable
 
-          <span class="c1">//this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable</span>
-      <span class="p">};</span>
+          //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
 
-      <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">// DON'T EDIT BELOW THIS LINE</span>
-          <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">script</span><span class="dl">'</span><span class="p">);</span>
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
 
-          <span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">//hywelme.disqus.com/embed.js</span><span class="dl">'</span><span class="p">;</span>
+          s.src = '//hywelme.disqus.com/embed.js';
 
-          <span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="dl">'</span><span class="s1">data-timestamp</span><span class="dl">'</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
-          <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
-      <span class="p">})();</span>
-  <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://disqus.com/?ref_noscript"</span> <span class="na">rel=</span><span class="s">"nofollow"</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span>
-<span class="c">&lt;!-- Hywel End Disqus Comments--&gt;</span>
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  &lt;/script&gt;
+  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href="https://disqus.com/?ref_noscript" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;Hywel End Disqus Comments--&gt;</span>
 
 
 <span class="nt">&lt;/div&gt;</span>
@@ -615,8 +615,8 @@ img {
 <!-- END - We recommend to place the below code where you want the form in your website html  -->
 
 
-<!-- Hywel Start Disqus Comments -->
-  <div id="disqus_thread"></div>
+<!-- REMOVE DISQUS Hywel Start Disqus Comments -->
+  <!--div id="disqus_thread"></div>
   <script defer >
       /**
        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -638,7 +638,7 @@ img {
       })();
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-<!-- Hywel End Disqus Comments-->
+<Hywel End Disqus Comments-->
 
 
 </div>

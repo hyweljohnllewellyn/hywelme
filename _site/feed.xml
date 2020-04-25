@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Apr 2020 20:38:48 +0100</pubDate>
-    <lastBuildDate>Mon, 20 Apr 2020 20:38:48 +0100</lastBuildDate>
+    <pubDate>Sat, 25 Apr 2020 16:43:28 +0100</pubDate>
+    <lastBuildDate>Sat, 25 Apr 2020 16:43:28 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -704,11 +704,13 @@ support@upthere.com&lt;/p&gt;
 
 &lt;h4 id=&quot;step-4c-static-site-plugin---advanced-tab&quot;&gt;Step 4c Static Site Plugin - Advanced Tab&lt;/h4&gt;
 
-&lt;p&gt;In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab&lt;/p&gt;
+&lt;p&gt;In order to ensure that all WordPress Content is generated, it is important to add the uploads folder through advanced settings tab.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/2016-07-17/WordPress Simply Static Advanced Tab.jpg&quot; alt=&quot;Static Site Advanced Tab&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;step-4d-static-site-plugin---enter-uploads-folder-location-in-additional-folders&quot;&gt;Step 4d Static Site Plugin - Enter Uploads Folder Location in Additional Folders&lt;/h4&gt;
+
+&lt;p&gt;Some users have reported that the whole wp-content folder needs to be included, so that stylesheets and themes are processed to preserve the look of your site.&lt;/p&gt;
 
 &lt;p&gt;Remember to press Save.&lt;/p&gt;
 

@@ -5,15 +5,15 @@ author: Hywel
 published: true
 title: Improving Google Page Speed Insights - Removing Disqus
 categories: disqus google page speed insights optimisation
-meta: disqus google page speed insights mobile boptimisation
+meta: disqus google page speed insights mobile optimisation
 excerpt: "This site has never been optimised for mobile. There hasn't been a need. However, 15% of traffic is now from mobile devices, compared with just 2% in 2016.
-Using the fantactic Google PageSpeed Insights, it can be seen where the site has potential for improvement. A score of 48 out of 100 is just awful for mobile."
+Using the fantastic Google PageSpeed Insights, it can be seen where the site has potential for improvement. A score of 48 out of 100 is just awful for mobile."
 ---
 ## A trend of increasing traffic to my site from mobile
 ​
 This site has never been optimised for mobile. There hasn't been a need. However, 15% of traffic is now from mobile devices, compared with just 2% in 2016.
 
-Using the fantactic [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), it can be seen where the site has potential for improvement. A score of 48 out of 100 is just awful for mobile.
+Using the fantastic [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), it can be seen where the site has potential for improvement. A score of 48 out of 100 is just awful for mobile.
 ​
 ![Google Page Speed Insights Before Removing Disqus on Mobile]({{site.baseurl}}/assets/google page speeds mobile score before.jpg)
 ​
@@ -23,7 +23,7 @@ Even on desktop, there is an opportunity to improve from a score of 93.
 
 ## Why I decided to remove Disqus comments system from my site?
 ​
-I have been using Disqus on this site since 2015. It is a great tool to add comments capablity to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
+I have been using Disqus on this site since 2015. It is a great tool to add comments capability to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
 ![Disqus Impacting Load Performance]({{site.baseurl}}/assets/Disqus impacting load performance .jpg)
 ​
 There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) of the Disqus scripts [How to Prevent Disqus Comments System from Slowing Page Speed & Performance](https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed).
@@ -45,4 +45,3 @@ And amazingly, the desktop performance is now at 100!
 ![Google Page Speed Insights After Removing Disqus on Desktop]({{site.baseurl}}/assets/2020/google page speeds desktop score after.jpg)
 ​
 I will investigate other static site comment systems in a later blog post, for example [staticman](https://staticman.net/), but for now, job done.
-​

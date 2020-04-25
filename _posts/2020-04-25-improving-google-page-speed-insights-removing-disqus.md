@@ -31,7 +31,7 @@ I have been using Disqus on this site since 2015. It is a great tool to add comm
 
 ![Disqus Impacting Load Performance]({{site.baseurl}}/assets/Disqus impacting load performance .jpg)
 ​
-There are options to potentially imrove the performance whilst keeping Disqus, for example this site shows how use [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) of the scripts [How to Prevent Disqus Comments System from Slowing Page Speed & Performance](https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed).
+There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use [lazy-loading](https://en.wikipedia.org/wiki/Lazy_loading) of the scripts [How to Prevent Disqus Comments System from Slowing Page Speed & Performance](https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed).
 ​
  I have had some good feedback through Disqus from users of this site, but I don't want to change the default Disqus script behaviour and I definitely don't want to compromose the user experience from mobile devices.
 ​
@@ -56,5 +56,5 @@ And amazingly, the desktop performance is now at 100!
 ​
 
 
-I will investigate other static site comment systems in a later blog, for example [staticman](https://staticman.net/), but for now, job done.
+I will investigate other static site comment systems in a later blog post, for example [staticman](https://staticman.net/), but for now, job done.
 ​

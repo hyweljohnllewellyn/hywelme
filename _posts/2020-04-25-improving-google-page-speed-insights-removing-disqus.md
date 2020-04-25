@@ -37,7 +37,7 @@ As you can see, after removing the Disqus comments script from the site, the mob
 ​
 ![Google Page Speed Insights After Removing Disqus on Mobile]({{site.baseurl}}/assets/2020/google page speeds mobile score after removing disqus.jpg)
 ​
-Crucially, the Disqus script is no longer impacting the page load performance.
+Crucially, the Disqus script is no longer impacting page load performance.
 ​
 ![third party code is not blocking page load]({{site.baseurl}}/assets/2020/third party code is not blocking page load.jpg)
 ​

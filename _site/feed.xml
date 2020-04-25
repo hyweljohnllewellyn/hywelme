@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Apr 2020 22:41:31 +0100</pubDate>
-    <lastBuildDate>Sat, 25 Apr 2020 22:41:31 +0100</lastBuildDate>
+    <pubDate>Sat, 25 Apr 2020 22:43:55 +0100</pubDate>
+    <lastBuildDate>Sat, 25 Apr 2020 22:43:55 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -29,9 +29,10 @@ Even on desktop, there is an opportunity to improve from a score of 93.
 I have been using Disqus on this site since 2015. It is a great tool to add comments capability to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
 &lt;img src=&quot;/assets/Disqus impacting load performance .jpg&quot; alt=&quot;Disqus Impacting Load Performance&quot; /&gt;
 ​
-There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use &lt;a href=&quot;https://en.wikipedia.org/wiki/Lazy_loading&quot;&gt;lazy-loading&lt;/a&gt; of the Disqus scripts &lt;a href=&quot;https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed&quot;&gt;How to Prevent Disqus Comments System from Slowing Page Speed &amp;amp; Performance&lt;/a&gt;.
-​
- I have had some good feedback through Disqus from users of this site, but I don’t want to change the default Disqus script behaviour and I definitely don’t want to compromose the user experience from mobile devices.
+There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use &lt;a href=&quot;https://en.wikipedia.org/wiki/Lazy_loading&quot;&gt;lazy-loading&lt;/a&gt; of the Disqus scripts: &lt;a href=&quot;https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed&quot;&gt;How to Prevent Disqus Comments System from Slowing Page Speed &amp;amp; Performance&lt;/a&gt;.
+​&lt;/p&gt;
+
+&lt;p&gt;I have had some good feedback through Disqus from users of this site, but I don’t want to change the default Disqus script behaviour and I definitely don’t want to compromose the user experience from mobile devices.
 ​&lt;/p&gt;
 &lt;h2 id=&quot;what-improvement-was-achieved-by-removing-disqus-from-the-static-site&quot;&gt;What Improvement Was Achieved by Removing Disqus from the Static Site?&lt;/h2&gt;
 &lt;p&gt;​

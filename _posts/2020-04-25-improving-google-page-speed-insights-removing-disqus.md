@@ -12,7 +12,7 @@ Using the fantactic Google PageSpeed Insights, it can be seen where the site has
 ## A trend of increasing traffic to my site from mobile
 ​
 This site has never been optimised for mobile. There hasn't been a need. However, 15% of traffic is now from mobile devices, compared with just 2% in 2016.
-​
+
 Using the fantactic [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), it can be seen where the site has potential for improvement. A score of 48 out of 100 is just awful for mobile.
 ​
 ![Google Page Speed Insights Before Removing Disqus on Mobile]({{site.baseurl}}/assets/google page speeds mobile score before.jpg)

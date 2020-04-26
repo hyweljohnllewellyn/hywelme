@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Have You Wandered Every Land</title>
-    <description>A personal blog site, with musings about technology and documenting what I learn.
-</description>
+    <title>hywel.me</title>
+    <description>I write about the things I learn so that others can benefit and be successful.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Apr 2020 22:43:55 +0100</pubDate>
-    <lastBuildDate>Sat, 25 Apr 2020 22:43:55 +0100</lastBuildDate>
+    <pubDate>Sun, 26 Apr 2020 09:32:46 +0100</pubDate>
+    <lastBuildDate>Sun, 26 Apr 2020 09:32:46 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -26,7 +25,7 @@ Even on desktop, there is an opportunity to improve from a score of 93.
 
 &lt;h2 id=&quot;why-i-decided-to-remove-disqus-comments-system-from-my-site&quot;&gt;Why I decided to remove Disqus comments system from my site?&lt;/h2&gt;
 &lt;p&gt;​
-I have been using Disqus on this site since 2015. It is a great tool to add comments capability to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
+I have been using &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt; on this site since 2015. It is a great tool to add comments capability to a static site, such as this. Analysing the potential opportunities, it can be seen that Disqus is the worst offender at impacting load performance.
 &lt;img src=&quot;/assets/Disqus impacting load performance .jpg&quot; alt=&quot;Disqus Impacting Load Performance&quot; /&gt;
 ​
 There are options to potentially improve the performance whilst keeping Disqus.  This site shows how use &lt;a href=&quot;https://en.wikipedia.org/wiki/Lazy_loading&quot;&gt;lazy-loading&lt;/a&gt; of the Disqus scripts: &lt;a href=&quot;https://usefulangle.com/post/251/disqus-comments-improve-page-load-speed&quot;&gt;How to Prevent Disqus Comments System from Slowing Page Speed &amp;amp; Performance&lt;/a&gt;.
@@ -40,7 +39,7 @@ As you can see, after removing the Disqus comments script from the site, the mob
 ​
 &lt;img src=&quot;/assets/2020/google page speeds mobile score after removing disqus.jpg&quot; alt=&quot;Google Page Speed Insights After Removing Disqus on Mobile&quot; /&gt;
 ​
-Crucially, the Disqus script is no longer impacting the page load performance.
+Crucially, the Disqus script is no longer impacting page load performance.
 ​
 &lt;img src=&quot;/assets/2020/third party code is not blocking page load.jpg&quot; alt=&quot;third party code is not blocking page load&quot; /&gt;
 ​
@@ -66,209 +65,6 @@ I will investigate other static site comment systems in a later blog post, for e
         <category>insights</category>
         
         <category>optimisation</category>
-        
-      </item>
-    
-      <item>
-        <title>Java AWS Lambda API Gateway using Javascript Client - Auto Quote</title>
-        <description>
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/axios/dist/axios.standalone.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/components/hmac.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/url-template/url-template.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/lib/apiGatewayCore/utils.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/apiGateway-js-sdk/apigClient.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/jquery-3.1.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/javascript/jquery.serialize-object.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;layout: blank
- —&lt;/p&gt;
-&lt;link href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7&quot; crossorigin=&quot;anonymous&quot; /&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;text1&quot; class=&quot;bg-info&quot;&gt;Calculate a quote...&lt;/h3&gt;
-
-&lt;form role=&quot;form&quot; action=&quot;javascript:void(0);&quot; onsubmit=&quot;AutoQuoteFunction()&quot; id=&quot;AutoQuoteForm&quot; name=&quot;AutoQuoteForm&quot;&gt;
-
-&lt;div class=&quot;form-group row &quot;&gt;
-&lt;!--label class=&quot;col-sm-3 form-control-label&quot; for=&quot;destination&quot;&gt;Event Location or Postcode:  &lt;span class=&quot;text-info&quot;&gt;(required)&lt;/span&gt;&lt;/label--&gt;
-  &lt;div class=&quot;col-sm-6&quot;&gt;
- &lt;input type=&quot;text&quot; id=&quot;destination&quot; class=&quot;form-control&quot; name=&quot;destination&quot; placeholder=&quot;Enter a location&quot; /&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-    &lt;input type=&quot;hidden&quot; id=&quot;people&quot; class=&quot;form-control&quot; name=&quot;people&quot; value=&quot;4&quot; /&gt;
-    &lt;input type=&quot;hidden&quot; id=&quot;performance&quot; class=&quot;form-control&quot; name=&quot;performance&quot; value=&quot;Barbershop Quartet&quot; /&gt;
-    &lt;input type=&quot;hidden&quot; id=&quot;miles&quot; class=&quot;form-control&quot; name=&quot;miles&quot; /&gt;
-    &lt;input type=&quot;hidden&quot; id=&quot;start&quot; class=&quot;form-control&quot; name=&quot;start&quot; /&gt;
-    &lt;input type=&quot;hidden&quot; id=&quot;end&quot; class=&quot;form-control&quot; name=&quot;end&quot; /&gt;
-
-&lt;input class=&quot;btn btn-primary&quot; type=&quot;submit&quot; value=&quot;Calculate&quot; /&gt;
-&lt;/form&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;!--div id=&quot;map&quot;&gt;&lt;/div--&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;div class=&quot;bg-success&quot; id=&quot;info&quot; tabindex=&quot;1&quot;&gt;&lt;/div&gt;&lt;/h3&gt;
-&lt;div id=&quot;map&quot; style=&quot;width:100%;height:400px&quot;&gt;&lt;/div&gt;
-&lt;p&gt;&lt;div class=&quot;bg-info&quot; id=&quot;result&quot;&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;!----------------------------&gt;
-&lt;!-- Amazon Gateway API START --&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-function AutoQuoteFunction() {
-//https://github.com/macek/jquery-serialize-object
-var body = $('form#AutoQuoteForm').serializeJSON();
-
-//var body = JSON.stringify(1);
-var params = {
-};
-var additionalParams = {
-    //If there are any unmodeled query parameters or headers that need to be sent with the request you can add them here
-};
-
-var apigClient = apigClientFactory.newClient();
-
-apigClient.autoquotePost(params, body, additionalParams)
-                .then(function(result){
-                  var jobject = JSON.parse(result.data);
-                  //document.getElementById(&quot;result&quot;).innerHTML = JSON.stringify(result);
-                  document.getElementById(&quot;miles&quot;).value = jobject.miles;
-                  document.getElementById(&quot;start&quot;).value = jobject.origin;
-                  document.getElementById(&quot;end&quot;).value = jobject.destination;
-                  document.getElementById(&quot;info&quot;).innerHTML = &quot;Your personalised quote: &quot; + jobject.quote + &quot;&lt;br&gt;&lt;br&gt; For a performance of: &quot; + jobject.performance;
-                  document.getElementById(&quot;info&quot;).focus();
-            }).catch(function(result){
-              document.getElementById(&quot;result&quot;).innerHTML = JSON.stringify(result);
-            });
-
-}
-&lt;/script&gt;
-
-&lt;!--Amazon Gateway API END --&gt;
-&lt;!--GOOGLE API START --&gt;
-&lt;!--https://developers.google.com/maps/documentation/javascript/examples/directions-simple--&gt;
-&lt;script&gt;
-  function initMap() {
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 5,
-      center: {lat: 54.7, lng: -4.4}  // London lat: 51.5, lng: -0.2
-    });
-    directionsDisplay.setMap(map);
-
-    var input = /** @type {!HTMLInputElement} */(document.getElementById('destination'));
-
-    var autocomplete = new google.maps.places.Autocomplete(input);
-       autocomplete.bindTo('bounds', map);
-
-       var infowindow = new google.maps.InfoWindow();
-        var marker = new google.maps.Marker({
-          map: map,
-          anchorPoint: new google.maps.Point(0, -29)
-        });
-
-        autocomplete.addListener('place_changed', function() {
-          infowindow.close();
-          marker.setVisible(false);
-          var place = autocomplete.getPlace();
-          if (!place.geometry) {
-            window.alert(&quot;Autocomplete's returned place contains no geometry&quot;);
-            return;
-          }
-
-          // If the place has a geometry, then present it on a map.
-          if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
-          } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(17);  // Why 17? Because it looks good.
-          }
-          marker.setIcon(/** @type {google.maps.Icon} */({
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(35, 35)
-          }));
-          marker.setPosition(place.geometry.location);
-          marker.setVisible(true);
-
-          var address = '';
-          if (place.address_components) {
-            address = [
-              (place.address_components[0] &amp;&amp; place.address_components[0].short_name || ''),
-              (place.address_components[1] &amp;&amp; place.address_components[1].short_name || ''),
-              (place.address_components[2] &amp;&amp; place.address_components[2].short_name || '')
-            ].join(' ');
-          }
-
-          infowindow.setContent('&lt;div&gt;&lt;strong&gt;' + place.name + '&lt;/strong&gt;&lt;br&gt;' + address);
-          infowindow.open(map, marker);
-        });
-
-}
-/*
-// Display Route  - REMOVED
-    var onChangeHandler = function() {
-      if(document.getElementById('info').value!=&quot;&quot;){
-      calculateAndDisplayRoute(directionsService, directionsDisplay);
-       }
-    };
-
-    document.getElementById('info').addEventListener('focus', onChangeHandler);
-  }
-
-  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    directionsService.route({
-      origin: document.getElementById('start').value,
-      destination: document.getElementById('end').value,
-      travelMode: 'DRIVING'
-    }, function(response, status) {
-      if (status === 'OK') {
-        directionsDisplay.setDirections(response);
-      } else {
-        window.alert('Directions request failed due to ' + status);
-      }
-    });
-
-  }
-*/
-
-
-&lt;/script&gt;
-
-&lt;p&gt;&amp;lt;script defer
-   src= “https://maps.googleapis.com/maps/api/js?key=” &amp;amp;libraries=places&amp;amp;callback=initMap&amp;gt;
-   &amp;lt;/script&amp;gt;
-&lt;!-- GOOGLE API END --&gt;&lt;/p&gt;
-
-&lt;p&gt;http://mattgemmell.com/page-specific-assets-with-jekyll/&lt;/p&gt;
-</description>
-        <pubDate>Mon, 03 Oct 2016 16:14:00 +0100</pubDate>
-        <link>http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/10/03/java-aws-lambda-api-gateway-using-javascript-client-auto-quote.html</guid>
-        
         
       </item>
     
@@ -1303,6 +1099,138 @@ Web Server is available at http://localhost:1313/ &lt;span class=&quot;o&quot;&g
         <pubDate>Sun, 06 Mar 2016 08:34:00 +0000</pubDate>
         <link>http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</link>
         <guid isPermaLink="true">http://localhost:4000/drupal/2016/03/06/drupal-8-sub-themes-and-stylesheets.html</guid>
+        
+        
+        <category>drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>A Website Upgrade from Drupal 6 to Drupal 8 - Part 5</title>
+        <description>&lt;h2 id=&quot;fixing-final-migration-issues&quot;&gt;Fixing Final Migration Issues&lt;/h2&gt;
+
+&lt;p&gt;So, this will be the final post specifically related to the migration of data and files from Drupal 6 to Drupal 8.&lt;/p&gt;
+
+&lt;p&gt;Further posts will be focussed on Drupal 8, specifically the Themes and Templates and any specific customisation that may be required.&lt;/p&gt;
+
+&lt;p&gt;Before that, There are some migration issues to resolve.&lt;/p&gt;
+
+&lt;h3 id=&quot;audio-files-linked-to-nodes-in-drupal-6-did-not-migrate-to-drupal-8&quot;&gt;Audio Files Linked to Nodes in Drupal 6 Did not Migrate to Drupal 8&lt;/h3&gt;
+
+&lt;p&gt;I am disappointed with this specific issue, mainly as I was expecting more from the drupal-upgrade functionality from Drupal 6 to 8.&lt;/p&gt;
+
+&lt;p&gt;I have tried searching the forums online but as far as I can tell, unless my method was at fault the migration of files linked to nodes under d6_upload is not supported at time of writing this post.&lt;/p&gt;
+
+&lt;p&gt;Other than raising a support ticket, I decided to identify the Drupal 8 tables that were needed and write a SQL script using PHP to migrate the data.&lt;/p&gt;
+
+&lt;p&gt;To make the process a bit simpler, first the Drupal 6 ‘upload’ table was exported and imported to the Drupal 8 Database - named &lt;em&gt;‘d6upload’&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Then a File named d6_upload_to_d8.php was created in the Drupal 8 root directory with the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/* migrate files linked to nodes from Drupal 6 Upload Table to Drupal 8 */&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* Connect to the Drupal 8 Database */&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysqli_connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'localhost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'username'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'drupal8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$filetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$nodetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/* Read the content of the Drupal 6 Upload Table */&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;select fid, nid, vid, description, weight from d6_upload order by 3 desc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mysqli_fetch_row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;$versionid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mysqli_real_escape_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* Handle Drupal 6 node revisions and weight 8 */&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$filetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nodetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;$filetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;$nodetest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;file&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;, node&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;p&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$query1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'insert into file_usage (fid,module, type, id, count) values ('&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',&quot;file&quot;,&quot;node&quot;,'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',1)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$query2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'insert into node__upload (bundle, deleted,entity_id, revision_id, langcode, delta, upload_target_id, upload_display, upload_description) values (&quot;page&quot;,0,'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$versionid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',&quot;und&quot;, '&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',1,&quot;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&quot;)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$query3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'insert into node_revision__upload (bundle, deleted,entity_id, revision_id, langcode, delta, upload_target_id, upload_display, upload_description) values (&quot;page&quot;,0,'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodeid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$versionid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',&quot;und&quot;, '&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',1,&quot;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&quot;)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/* close connection */&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mysqli_close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The main considerations in this code was converting the Drupal 6 Revisions and page node weight to the Drupal 8 equivalent.&lt;/p&gt;
+
+&lt;p&gt;The script was run by entering http://localhost:8888/d6_upload_to_d8.php in the browser.&lt;/p&gt;
+
+&lt;h3 id=&quot;configuring-drupal-8-file-upload-page-content-type-fields&quot;&gt;Configuring Drupal 8 File Upload Page Content Type Fields&lt;/h3&gt;
+
+&lt;p&gt;Within the Structure » Content Types » Page, a new Field ‘file upload’ was created to allow a Drupal 8 Content Author to upload specified files (mainly audio)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 page field file upload step1.png&quot; alt=&quot;add drupal 8 page field file upload step1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 page field file upload step2.png&quot; alt=&quot;add drupal 8 page field file upload step2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/create file upload content type.jpg&quot; alt=&quot;create file upload content type&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So there were now the following Page Fields - &lt;em&gt;File Upload, Sidebar or Sidebar2&lt;/em&gt; :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/drupal 8 page fields.png&quot; alt=&quot;drupal 8 page fields.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, these were not being shown on the webpage.  Again, this may be a specific issue or limitation of the migration, though to resolve this Drupal 8 Views need to be created and added to the Block Layout.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-drupal-8-views-to-display-additional-page-fields&quot;&gt;Creating Drupal 8 Views to display additional Page Fields&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 1.png&quot; alt=&quot;add drupal 8 view step 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 3.png&quot; alt=&quot;add drupal 8 view step 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 4.png&quot; alt=&quot;add drupal 8 view step 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 5.png&quot; alt=&quot;add drupal 8 view step 5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 6.png&quot; alt=&quot;add drupal 8 view step 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 7.png&quot; alt=&quot;add drupal 8 view step 7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 8.png&quot; alt=&quot;add drupal 8 view step 8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 9.png&quot; alt=&quot;add drupal 8 view step 9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 10.png&quot; alt=&quot;add drupal 8 view step 10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 11.png&quot; alt=&quot;add drupal 8 view step 11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 12.png&quot; alt=&quot;add drupal 8 view step 12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view step 13.png&quot; alt=&quot;add drupal 8 view step 13&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;adding-drupal-8-views-to-a-block-layout&quot;&gt;Adding Drupal 8 Views to a Block Layout&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view to block step 1.png&quot; alt=&quot;add drupal 8 view to block step 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view to block step 2.png&quot; alt=&quot;add drupal 8 view to block step 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view to block step 3.png&quot; alt=&quot;add drupal 8 view to block step 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2016-02-17/add drupal 8 view to block step 4.png&quot; alt=&quot;add drupal 8 view to block step 4&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 17 Feb 2016 20:02:00 +0000</pubDate>
+        <link>http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/drupal/2016/02/17/a-website-upgrade-from-drupal-6-to-drupal-8-part-5.html</guid>
         
         
         <category>drupal</category>

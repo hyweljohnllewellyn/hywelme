@@ -4,7 +4,6 @@ title: About
 permalink: /about/
 meta: Hywel Llewellyn technology
 ---
-![Hywel speech]({{ site.url }}/assets/hywel_speech.jpg)
 
 Hi, my name is Hywel Llewellyn. I write about the things I learn so that others can benefit and be successful. I have removed all Google advertising to keep my content as clean and easy to read as possible.
 

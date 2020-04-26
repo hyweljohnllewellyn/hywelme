@@ -146,24 +146,27 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
-  position: relative; }
+  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  background: #fff; }
 
 .site-title {
   font-weight: 700;
-  padding: 30px 0 0 30px;
+  padding: 10px 0 10px;
   float: left; }
   .site-title, .site-title:visited {
     color: #424242; }
-  .site-title img {
+  .site-title .favicon {
     margin-right: 1rem; }
 
 .site-nav {
   float: right;
-  padding: 50px 30px;
-  font-weight: 700; }
+  font-weight: 700;
+  padding: 30px 0; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
@@ -260,7 +263,7 @@ pre {
  */
 .page-content {
   padding: 30px 0;
-  padding: 30px 30px 20px; }
+  padding: 120px 30px 20px; }
 
 .page-heading {
   font-size: 20px; }

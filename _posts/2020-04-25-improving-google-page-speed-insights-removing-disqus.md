@@ -6,8 +6,7 @@ published: true
 title: Improving Google Page Speed Insights - Removing Disqus
 categories: disqus google page speed insights optimisation
 meta: disqus google page speed insights mobile optimisation
-excerpt: "This site has never been optimised for mobile. There hasn't been a need. However, 15% of traffic is now from mobile devices, compared with just 2% in 2016.
-Using the fantastic Google PageSpeed Insights, it can be seen where the site has potential for improvement. A score of 48 out of 100 is just awful for mobile."
+excerpt: "This site has never been optimised for mobile. There hasn't been a need. However, 15% of traffic is now from mobile devices, compared with just 2% in 2016."
 ---
 ## A trend of increasing traffic to my site from mobile
 ​

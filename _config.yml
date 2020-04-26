@@ -1,8 +1,9 @@
 # Site settings
-title: Have You Wandered Every Land
-email: contact@hywel.me
+title: hywel.me 
+email: hello@hywel.me
 description: > # this means to ignore newlines until "baseurl:"
-  A personal blog site, with musings about technology and documenting what I learn.
+  Hi, my name is Hywel Llewellyn. I write about the things I learn so that others can benefit and be successful. I have removed all Google advertising to keep my content as clean and easy to read as possible.
+I mainly write about website creation and the resources available, for example, GitHub, WordPress, and Netlify. I also write about other technology when they interest me.
 baseurl: "" # the subpath of your site - use "/hywelme" for GitPages and "" for Custom Domain
 url: "https://www.hywel.me" # the base hostname & protocol for your site
  #twitter_username: hywel_llewellyn
@@ -67,6 +68,6 @@ prose:
 # Author details.
 hywel:
     name: Hywel Llewellyn
-    email: hywel.llewellyn@gmail.com
+    email: hello@hywel.me
     web: https://www.hywel.me
-    google: https://plus.google.com/u/0/116119715872022757453
+    github: https://github.com/hyweljohnllewellyn

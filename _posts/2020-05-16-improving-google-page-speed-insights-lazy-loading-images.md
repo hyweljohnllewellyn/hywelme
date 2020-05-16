@@ -23,6 +23,8 @@ Before applying lazy loading of images to the test page, it achieved a mobile pa
 
 ## Including the lazysizes javascript in the Webpage
 
+According to the [ranvir blog](https://ranvir.xyz/blog/lazy-loading-your-images-in-jekyll-blog-improving-page-speed/), the best place to include the lazysizes script is the default.html.  I decided to add to the header.html and rather install locally reference the script from source: 
+
 {% highlight html %}
 <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
 {% endhighlight %}

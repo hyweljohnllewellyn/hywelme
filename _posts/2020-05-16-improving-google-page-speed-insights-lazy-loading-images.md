@@ -39,5 +39,5 @@ I then added _includes/lazyload.html as instricted on the ranvir blog, and final
 to this format:
 
 {% highlight html %}
-{% include lazyload.html image_src='{{site.baseurl}}/assets/Static Website Live Hosted on GitHub Pages.jpg' image_alt="Google Page Speed Insights Before Removing Disqus on Desktop" image_title="Google Page Speed Insights Before Removing Disqus on Desktop" %}
-{% endhighlight %}
+'{% include lazyload.html image_src='{{site.baseurl}}/assets/Static Website Live Hosted on GitHub Pages.jpg' image_alt="Google Page Speed Insights Before Removing Disqus on Desktop" image_title="Google Page Speed Insights Before Removing Disqus on Desktop" %}
+{% endhighlight %}'

@@ -29,8 +29,7 @@ According to the [ranvir blog](https://ranvir.xyz/blog/lazy-loading-your-images-
 <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
 {% endhighlight %}
 
-
-I then added _includes/lazyload.html as instricted on the ranvir blog, and finally updated the image referncees from:
+I then added _includes/lazyload.html as instricted on the ranvir blog, and finally updated the image refernces in the Jekyll markdoen from:
 
 {% highlight html %}
 ![Google Page Speed Insights Before Removing Disqus on Desktop]({{site.baseurl}}/assets/google page speeds desktop score before.jpg)
@@ -40,6 +39,16 @@ to this format:
 
 {% highlight html %}
 {% raw %}
-{% include lazyload.html image_src='{{site.baseurl}}/assets/Static Website Live Hosted on GitHub Pages.jpg' image_alt="Google Page Speed Insights Before Removing Disqus on Desktop" image_title="Google Page Speed Insights Before Removing Disqus on Desktop" %}
+{% include lazyload.html image_src="/assets/google page speeds desktop score before.jpg" image_alt="Google Page Speed Insights Before Removing Disqus on Desktop" image_title="Google Page Speed Insights Before Removing Disqus on Desktop" %}
 {% endraw %}
 {% endhighlight %}
+
+
+Now, when inspecting the html, the lazyloaded class is included
+
+{% highlight html %}
+<img data-src="/assets/google page speeds desktop score before.jpg" alt="Google Page Speed Insights Before Removing Disqus on Desktop" title="Google Page Speed Insights Before Removing Disqus on Desktop" class="blur-up ls-is-cached lazyloaded" src="/assets/google page speeds desktop score before.jpg">
+{% endhighlight %}
+
+
+

@@ -15,8 +15,15 @@ Lazy loading images is a way to only load the image when the user can see it on 
 
 The short answer is yes.  I wil be using the [ranvir blog](https://ranvir.xyz/blog/lazy-loading-your-images-in-jekyll-blog-improving-page-speed/) and the [lazysizes](https://github.com/aFarkas/lazysizes) lazy loader for images to see if it makes a difference to Google Page Speed Insights.     
  
-## Mobile Google Page Speed Insights - Before and After
+## Mobile Google Page Speed Insights - Before
 
 Before applying lazy loading of images to the test page, it achieved a mobile page speed score of 92, which is actually very good. Can lazy loading improve on this?
 
 ![google page speeds before lazy loading images]({{site.baseurl}}/assets/2020/google page speed before lazy loading images-min.jpg)
+
+## Including the lazysizes javascript in the Webpage
+
+{% highlight html %}
+<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
+{% endhighlight %}
+

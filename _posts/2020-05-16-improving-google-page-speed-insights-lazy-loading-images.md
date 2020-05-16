@@ -18,3 +18,5 @@ The short answer is yes.  I wil be using the [ranvir blog](https://ranvir.xyz/bl
 ## Mobile Google Page Speed Insights - Before and After
 
 Before applying lazy loading of images to the test page, it achieved a mobile page speed score of 92, which is actually very good. Can lazy loading improve on this?
+
+![google page speeds before lazy loading images]({{site.baseurl}}/assets/2020/google page speed before lazy loading images-min.jpg)

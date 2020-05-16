@@ -18,7 +18,8 @@ Using the fantastic [Google PageSpeed Insights](https://developers.google.com/sp
 ​
 Even on desktop, there is an opportunity to improve from a score of 93.
 ​
-![Google Page Speed Insights Before Removing Disqus on Desktop]({{site.baseurl}}/assets/google page speeds desktop score before.jpg)
+{% include lazyload.html image_src='{{site.baseurl}}/assets/Static Website Live Hosted on GitHub Pages.jpg' image_alt="Google Page Speed Insights Before Removing Disqus on Desktop" image_title="Google Page Speed Insights Before Removing Disqus on Desktop" %}
+
 
 ## Why I decided to remove Disqus comments system from my site?
 ​

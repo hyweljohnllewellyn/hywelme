@@ -50,5 +50,6 @@ Now, when inspecting the html, the lazyloaded class is included
 <img data-src="/assets/google page speeds desktop score before.jpg" alt="Google Page Speed Insights Before Removing Disqus on Desktop" title="Google Page Speed Insights Before Removing Disqus on Desktop" class="blur-up ls-is-cached lazyloaded" src="/assets/google page speeds desktop score before.jpg">
 {% endhighlight %}
 
+## Did Lazy Loading the images make a difference to Google Page Speed Insight?
 
 

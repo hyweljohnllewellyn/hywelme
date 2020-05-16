@@ -4,8 +4,8 @@ date: '2020-05-16 19:02 +0100'
 author: Hywel
 published: true
 title: Jekyll and GitHub Pages - Lazy Loading Images
-categories: optimising webpages  mobile
-meta: ejyll and githup pages google page speed insights lazy load
+categories: optimising webpages mobile
+meta: jekyll github pages optimising websites lazy load
 ---
 ## What is Lazy Loading Images?
 

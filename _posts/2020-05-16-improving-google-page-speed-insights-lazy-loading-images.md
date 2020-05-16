@@ -52,4 +52,8 @@ Now, when inspecting the html, the lazyloaded class is included
 
 ## Did Lazy Loading the images make a difference to Google Page Speed Insight?
 
+No.  The score was exactly the same.  However, I am not convinced that lazy loading is being implemented.  I have started exploring how to check   [how to check lazy loading](https://medium.com/pixboost/step-by-step-guide-to-test-your-off-screen-image-performance-lazy-loading-with-pixboost-js-ca4ce8f54f86/).
+ 
+ I'll update this post with my findings. 
+
 

@@ -29,3 +29,15 @@ According to the [ranvir blog](https://ranvir.xyz/blog/lazy-loading-your-images-
 <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
 {% endhighlight %}
 
+
+I then added _includes/lazyload.html as instricted on the ranvir blog, and finally updated the image referncees from:
+
+{% highlight html %}
+![Google Page Speed Insights Before Removing Disqus on Desktop]({{site.baseurl}}/assets/google page speeds desktop score before.jpg)
+{% endhighlight %}
+
+to this format:
+
+{% highlight html %}
+{% include lazyload.html image_src='{{site.baseurl}}/assets/Static Website Live Hosted on GitHub Pages.jpg' image_alt="Google Page Speed Insights Before Removing Disqus on Desktop" image_title="Google Page Speed Insights Before Removing Disqus on Desktop" %}
+{% endhighlight %}

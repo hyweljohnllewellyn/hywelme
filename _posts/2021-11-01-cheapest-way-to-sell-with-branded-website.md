@@ -4,8 +4,8 @@ date: '2021-11-01 06:02 +0100'
 author: Hywel
 published: true
 title: Cheapest way to Sell with a Branded Website
-categories: optimising webpages mobile
-meta: WordPress e-commerce hosting dropship Namecheap Cartflows landing sales
+categories: money
+meta: money WordPress e-commerce hosting dropship Namecheap Cartflows landing sales
 ---
 
 ## How to Sell?
@@ -20,6 +20,8 @@ Lastly there is drop-ship, where the products you are selling, are shipped direc
 ## Setting up WordPress with Woocommerce and Cartflows
 
 The cheapest way to sell a product online, whilst keeping control of branding I found uses a traditional WordPress hosted site.
+I have since found [Ecwid](https://open.ecwid.com/3B8cs6) has a free plan fore up to 10 products and allows customers to create simple sales landing page 'Instant Site'.  Leave a comment on my youtube video below if you'd like me to review Ecwid.
+
 
 In the video, I share the choice of hosts, between [WPEngine with 3 months free](https://shareasale.com/r.cfm?b=1343154&u=2265263&m=41388&urllink=&afftrack=) and  [Namecheap](https://namecheap.pxf.io/x9QKR3), the steps to install and set up WordPress with basic e-commerce capability, including Woocommerce and then describe setting up the simplest sales landing page using [Cartflows](https://cartflows.com/?cf=1614)
 

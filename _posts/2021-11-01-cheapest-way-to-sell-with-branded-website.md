@@ -15,7 +15,7 @@ You can use affiliate marketing, where content creators, publishers and bloggers
 
 There are traditional e-commerce where your products are sold to customers , for example [Shopify](https://www.shopify.com) 
 
-Lastly there is drop-ship, where the products you are selling, are shipped directly from a supplier to customer.
+Lastly there is drop-ship, where the products you are selling, are shipped directly from a supplier to customer, for example [Aliexpress](https://www.aliexpress.com) and the popular [Alidropship WordPress Plugin - GETPLUGIN25 code gives 25% OFF](https://alidropship.com/?via=15255).
 
 ## Setting up WordPress with Woocommerce and Cartflows
 
@@ -30,6 +30,6 @@ The static version of the site can be found at [Sales Landing Page](https://myst
 
 ## Is this the easiest way?
 
-I would not recommend using this method, as maintain a WordPress site is time consuming and relatively complex, even with plugins such as [Alidropship - GETPLUGIN25 gives 25% OFF](hhttps://alidropship.com/?via=15255).
+I would not recommend using this method, as maintain a WordPress site is time consuming and relatively complex, even with plugins such as [Cartflows](https://cartflows.com/?cf=1614) or [Alidropship](https://alidropship.com/?via=15255).
 
 If you were selling products or services as a business to make money, then I would recommend using a paid service such as  [GetResponse](https://www.getresponse.com/?a=kEqeQTKMpY) or [Shopify](https://www.shopify.com).

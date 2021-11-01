@@ -20,8 +20,6 @@ Lastly there is drop-ship, where the products you are selling, are shipped direc
 ## Setting up WordPress with Woocommerce and Cartflows
 
 The cheapest way to sell a product online, whilst keeping control of branding I found uses a traditional WordPress hosted site.
-I have since found [Ecwid](https://open.ecwid.com/3B8cs6) has a free plan fore up to 10 products and allows customers to create simple sales landing page 'Instant Site'.  Leave a comment on my youtube video below if you'd like me to review Ecwid.
-
 
 In the video, I share the choice of hosts, between [WPEngine with 3 months free](https://shareasale.com/r.cfm?b=1343154&u=2265263&m=41388&urllink=&afftrack=) and  [Namecheap](https://namecheap.pxf.io/x9QKR3), the steps to install and set up WordPress with basic e-commerce capability, including Woocommerce and then describe setting up the simplest sales landing page using [Cartflows](https://cartflows.com/?cf=1614)
 
@@ -30,8 +28,11 @@ In the video, I share the choice of hosts, between [WPEngine with 3 months free]
 
 The static version of the site can be found at [Sales Landing Page](https://mysterious-lion.netlify.app/) 
 
-## Is this the easiest way?
+
+## Is this the easiest, cheapest way?
 
 I would not recommend using this method, as maintain a WordPress site is time consuming and relatively complex, even with plugins such as [Cartflows](https://cartflows.com/?cf=1614) or [Alidropship](https://alidropship.com/?via=15255).
+
+I have also found [Ecwid](https://open.ecwid.com/3B8cs6) has a free plan fore up to 10 products and allows customers to create simple sales landing page 'Instant Site'.  This therefore might be cheaper and easier...leave a comment on my [youtube video](https://www.youtube.com/embed/5F4gUVgR_xs) if you'd like me to review Ecwid.
 
 If you were selling products or services as a business to make money, then I would recommend using a paid service such as  [GetResponse](https://www.getresponse.com/?a=kEqeQTKMpY) or [Shopify](https://www.shopify.com).

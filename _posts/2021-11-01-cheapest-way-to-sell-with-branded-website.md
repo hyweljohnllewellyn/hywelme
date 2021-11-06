@@ -3,7 +3,7 @@ layout: post
 date: '2021-11-01 06:02 +0100'
 author: Hywel
 published: true
-title: How to sell products cheaply online with a Wordpress hosted site and Cartflows landing page
+title: How to sell products cheaply online with a Wordpress hosted site and Cartflows checkout page
 categories: money
 meta: money WordPress e-commerce hosting dropship Namecheap Cartflows landing sales
 ---

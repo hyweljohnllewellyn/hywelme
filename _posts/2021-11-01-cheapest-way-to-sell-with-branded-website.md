@@ -36,3 +36,5 @@ I would not recommend using this method, maintaining a WordPress site is time-co
 I have also found [Ecwid](https://open.ecwid.com/3B8cs6) has a free plan for up to 10 products and allows customers to create a simple checkout landing page 'Instant Site'.  This therefore might be cheaper and easier...leave a comment on my [youtube video](https://www.youtube.com/embed/5F4gUVgR_xs) if you'd like me to review Ecwid.
 
 If you were selling products or services as a business to make money, then I would recommend using a paid service such as  [GetResponse](https://www.getresponse.com/?a=kEqeQTKMpY) or [Shopify](https://www.shopify.com).
+
+I was not paid to make this blog and all of the opinions expressed are my own. If there is a referral program available, please assume that you are clicking on a referral link.

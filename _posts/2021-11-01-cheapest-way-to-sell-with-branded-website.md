@@ -5,7 +5,7 @@ author: Hywel
 published: true
 title: How to sell products cheaply online with a WordPress hosted site and Cartflows checkout page
 categories: money
-meta: money WordPress e-commerce hosting dropship Namecheap Cartflows landing sales
+meta: WordPress e-commerce hosting dropship Namecheap Cartflows checkout page Elementor
 ---
 
 ## How to Sell?

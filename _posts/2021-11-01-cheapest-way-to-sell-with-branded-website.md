@@ -23,11 +23,11 @@ The cheapest way to sell a product online, whilst keeping control of branding I 
 
 In the video, I share the choice of hosts, between [WPEngine with 3 months free](https://shareasale.com/r.cfm?b=1343154&u=2265263&m=41388&urllink=&afftrack=) and  [Namecheap](https://namecheap.pxf.io/x9QKR3), the steps to install and set up WordPress with basic e-commerce capability, including Woocommerce, and then describe setting up the simplest checkout landing page using [Cartflows](https://cartflows.com/?cf=1614)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bg_V3P_zrIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5F4gUVgR_xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--iframe width="560" height="315" src="https://www.youtube.com/embed/5F4gUVgR_xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
 
 The static version of the site can be found at the [Checkout Landing Page](https://mysterious-lion.netlify.app/) 
-
 
 ## Is this the easiest, cheapest way?
 

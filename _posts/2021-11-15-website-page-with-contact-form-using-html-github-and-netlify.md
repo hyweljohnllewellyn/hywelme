@@ -11,11 +11,11 @@ meta: Hosting GitHub Netlify Contact Form HTML
 ## Using Netlify and GitHub to create a website with a contact form
 This is a step—by-step example showing how to create and deploy a website page with a contact form - from start to finish.
 
-I use the Netlify platform to host many  static sites and landing pages and Netlify’s contact forms are great for these sites.
+I use the [Netlify](https://www.netlify.com) platform to host many static sites and landing pages and Netlify’s contact forms are great for these sites.
 
 Netlify forms also includes free spam protection and a way to redirect to your own success page.
 
-Git hub is great as a place to store your site code - not only as it does the usual version control , but the interface is relatively friendly and there is seamless integration to Netlify 
+[GitHub](https://github.com) is great as a place to store your site code - not only as it does the usual version control , but the interface is relatively friendly and there is seamless integration to Netlify 
 
 You can think of GitHub repositories as folders to keep files. 
 
@@ -55,9 +55,11 @@ You can see the website address is not too friendly, so click on Site Setting an
 
 Note that it is possibly to use a custom domain, but I won’t cover that in this guide.
 
-Click on the Website address and you can see the live html page in the browser.
+Click on the website address and you can see the live html page at [html-form-example.netlify.app](https://html-form-example.netlify.app).
 
-### Step 5 - Create a contact form using bootstrapformbuilder.com
+### Step 5 - Create a contact form
+Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).
+
 Click Add a Text Field and change the Title to ‘name’.
 
 Repeat this for ‘email’, and check the ‘required’ option. This validates that any user has entered an email, else you cannot reply!
@@ -72,7 +74,7 @@ Paste the form code to the website page,  commit the change, refresh your page i
 Then add data=netlify=“true” to the form element so Netlify defects that there is a form and commit the change. 
 
 ### Step 7 - Configure Netlify to send email notifications for form submissions 
-In the Netlify Dashboard for the site, click Forms then Settings and Usage.
+In the Netlify dashboard for the site, click Forms then Settings and Usage.
 
 Under Form notifications, click Add Notifications and select Email Notifications.
 
@@ -90,5 +92,9 @@ I also later added a recaptcha, for added spam protection.
 Thank you for following along.
 
 ## Links
-- [GitHub repository with all code used in this how-to](https://github.com/hyweljohnllewellyn/html-form-netflify-example)
 - [Example website with contact form hosted by Netlify](https://html-form-example.netlify.app)
+- [GitHub repository with all code used in this how-to](https://github.com/hyweljohnllewellyn/html-form-netflify-example)
+- [Form builder](https://bootstrapformbuilder.com)
+- [How to setup Netlify forms](https://docs.netlify.com/forms/setup/)
+- [How to use Netlify forms spam filters](https://docs.netlify.com/forms/spam-filters/)
+- [Netlify forms pricing](https://www.netlify.com/pricing/?_ga=2.16704886.1902366666.1636880523-1782783829.1636880523#add-ons-forms)

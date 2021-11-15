@@ -91,4 +91,4 @@ Thank you for following along.
 
 ## Links
 - [GitHub Repository with all code used in this how-to](https://github.com/hyweljohnllewellyn/html-form-netflify-example)
-- [Example Website with Contact Form Hosted on Netlify](https://html-form-example.netlify.app)
+- [Example website with contact form hosted by Netlify](https://html-form-example.netlify.app)

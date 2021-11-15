@@ -1,6 +1,6 @@
 ---
 layout: post
-date: '2021-11-0151 20:02 +0100'
+date: '2021-11-15 20:02 +0100'
 author: Hywel
 published: true
 title: Website page with Contact Form using HTML GitHub and Netlify
@@ -8,7 +8,7 @@ categories: sites
 meta: Hosting GitHub Netlify Contact Form HTML
 ---
 
-## Introduction - Using Netlify and GitHub to create a website with a contact form
+## Using Netlify and GitHub to create a website with a contact form
 This is a step—by-step example showing how to create and deploy a website page with a contact form - from start to finish.
 
 I use the Netlify platform to host many  static sites and landing pages and Netlify’s contact forms are great for these sites.
@@ -23,6 +23,8 @@ If you are new to GitHub, register if you want to follow along.
 
 ### Step 1 - Create a new GitHub repository
 After logging in to GitHub, Click on New next to Repository, give it a name and click Create repository.
+
+
 
 I have used GitHub in a previous turorial on [how to create a static site from WordPress](https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html)
 
@@ -88,5 +90,5 @@ I also later added a recaptcha, for added spam protection.
 Thank you for following along.
 
 ## Links
-- [GitHub Repository with all code used in this how-to](https://github.com/hyweljohnllewellyn/html-form-netflify-example)
-- [Example Website with Contact Form Hosted on Netlify](https://html-form-example.netlify.app)
+> [GitHub Repository with all code used in this how-to](https://github.com/hyweljohnllewellyn/html-form-netflify-example)
+> [Example Website with Contact Form Hosted on Netlify](https://html-form-example.netlify.app)

@@ -33,11 +33,9 @@ Click add file, selecting Create new file, give it a name of index.html.
 
 This is important as this is a one-page site, Netlify looks for index.html as default. 
 
-A [basic html page](https://github.com/hyweljohnllewellyn/html-form-netflify-example/blob/main/index_without_form.html) is already coded, which can be used as a starting point. 
+A [basic html page is already coded](https://github.com/hyweljohnllewellyn/html-form-netflify-example/blob/main/index_without_form.html), which can be used as a starting point. 
 
-A link to the GitHub repository with all the code is also given.  
-
-Paste the code into the file and commit changes, in other words , save the file. 
+Paste the code into the file and commit changes, in other words, save the file. 
 
 ### Step 3 - Publish the html page using Netlify
 Log in to Netlify. 
@@ -46,9 +44,9 @@ If you don’t have an account then pause this video and sign up. I've used GitH
 
 Select New site from [Git](https://en.wikipedia.org/wiki/Git) and then GitHub, where the source code is hosted.
 
-Find the Repository created in step 2, select it and then scroll down and click Deploy site.
+Find the repository created in step 2, select it and then scroll down and click Deploy site.
 
-This is where Netlify finds the index.html in GitHub and creates a Website that is live to the internet.
+This is where Netlify finds the index.html in GitHub and creates a website that is live to the internet.
 
 ### Step 4 - Change site address
 You can see the website address is not too friendly, so click on Site Setting and change site name. 

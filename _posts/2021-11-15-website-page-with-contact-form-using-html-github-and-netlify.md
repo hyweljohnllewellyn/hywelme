@@ -8,18 +8,16 @@ categories: sites
 meta: Hosting GitHub Netlify Contact Form HTML
 ---
 
-## Using Netlify and GitHub to create a website with a contact form
+## Why Netlify and GitHub?
 This is a step—by-step example showing how to create and deploy a website page with a contact form - from start to finish.
 
-I use the [Netlify](https://www.netlify.com) platform to host many static sites and landing pages and Netlify’s contact forms are great for these sites.
+I use the [Netlify](https://www.netlify.com) platform to host many static sites and landing pages for free, and [Netlify's Forms](https://www.netlify.com/products/forms/) are great way to gather user responses and includes free spam protection.
 
-Netlify forms also includes free spam protection and a way to redirect to your own success page.
-
-[GitHub](https://github.com) is great as a place to store your site code - not only as it does the usual version control , but the interface is relatively friendly and there is seamless integration to Netlify 
+[GitHub](https://github.com) is great as a place to store your site code - not only as it does the usual version control , but the interface is relatively friendly and there is seamless integration to Netlify.
 
 You can think of GitHub repositories as folders to keep files. 
 
-If you are new to GitHub, register if you want to follow along. 
+If you are new to [GitHub, sign-up](https://github.com/signup) if you want to follow along. 
 
 ### Step 1 - Create a new GitHub repository
 After logging in to GitHub, Click on New next to Repository, give it a name and click Create repository.

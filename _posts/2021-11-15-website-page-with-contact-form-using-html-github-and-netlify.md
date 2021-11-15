@@ -90,5 +90,5 @@ I also later added a recaptcha, for added spam protection.
 Thank you for following along.
 
 ## Links
-- [GitHub Repository with all code used in this how-to](https://github.com/hyweljohnllewellyn/html-form-netflify-example)
+- [GitHub repository with all code used in this how-to](https://github.com/hyweljohnllewellyn/html-form-netflify-example)
 - [Example website with contact form hosted by Netlify](https://html-form-example.netlify.app)

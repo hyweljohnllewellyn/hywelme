@@ -24,8 +24,6 @@ If you are new to GitHub, register if you want to follow along.
 ### Step 1 - Create a new GitHub repository
 After logging in to GitHub, Click on New next to Repository, give it a name and click Create repository.
 
-
-
 I have used GitHub in a previous turorial on [how to create a static site from WordPress](https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html)
 
 ### Step 2 - Create a basic HTML page

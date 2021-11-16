@@ -1,5 +1,6 @@
 <header class="site-header">
-
+  
+  <!-- https://blog.christopherianmurphy.com/2017/05/expand-collapse-navbar/-->
   <div id="navBar" class="wrapper">
 
     <a class="site-title" href="{{ site.baseurl }}/" ><img class="favicon" src="{{ site.url}}/assets/hywel_speech.jpg" alt="{{ site.title }}">Hywel Llewellyn</a>
@@ -62,6 +63,87 @@
     border-width: px;
   }
 </style>
+
+<style>
+  // Collapse nav bar on scroll down
+.collapse {
+  animation: collapse .5s ease forwards;
+}
+
+// Open nav bar on scroll up
+.open {
+  animation: open .5s ease forwards;
+}
+
+@keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: -$navBar-height;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    top: -$navBar-height;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+</style>
+
+<script>
+  // Initial scroll position
+var scrollState = 0;
+
+// Store navbar classes
+var navClasses = document.getElementById('navBar').classList;
+
+// returns current scroll position
+var scrollTop = function() {
+  return window.scrollY;
+};
+
+// Primary scroll event function
+var scrollDetect = function(home, down, up) {
+  // Current scroll position
+  var currentScroll = scrollTop();
+  if (scrollTop() === 0) {
+    home();
+  } else if (currentScroll > scrollState) {
+    down();
+  } else {
+    up();
+  }
+  // Set previous scroll position
+  scrollState = scrollTop();
+};
+
+function homeAction() {
+  console.log("home");
+}
+
+function downAction() {
+  navClasses.remove('open');
+  navClasses.add('collapse');
+}
+
+function upAction() {
+  navClasses.remove('collapse');
+  navClasses.add('open');
+}
+
+window.addEventListener("scroll", function() {
+  scrollDetect(homeAction, downAction, upAction);
+});
+</script>
+
 <script src="/javascript/lazysizes.min.js" async=""></script>
 <link rel="stylesheet" href="https://assets.sendinblue.com/component/form/2ef8d8058c0694a305b0.css">
 <link rel="stylesheet" href="https://assets.sendinblue.com/component/clickable/b056d6397f4ba3108595.css">

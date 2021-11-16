@@ -65,14 +65,26 @@
 </style>
 
 <style>
-  // Collapse nav bar on scroll down
+ 
 .collapse {
-  animation: collapse .5s ease forwards;
+  -webkit-animation: collapse 0.5s ease forwards;
+          animation: collapse 0.5s ease forwards;
 }
 
-// Open nav bar on scroll up
 .open {
-  animation: open .5s ease forwards;
+  -webkit-animation: open 0.5s ease forwards;
+          animation: open 0.5s ease forwards;
+}
+
+@-webkit-keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: -73px;
+  }
 }
 
 @keyframes collapse {
@@ -82,14 +94,23 @@
   }
   to {
     opacity: 0;
-    top: -$navBar-height;
+    top: -73px;
   }
 }
-
+@-webkit-keyframes open {
+  from {
+    opacity: 0;
+    top: -73px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
 @keyframes open {
   from {
     opacity: 0;
-    top: -$navBar-height;
+    top: -73px;
   }
   to {
     opacity: 1;
@@ -99,7 +120,7 @@
 </style>
 
 <script>
-  // Initial scroll position
+// Initial scroll position
 var scrollState = 0;
 
 // Store navbar classes

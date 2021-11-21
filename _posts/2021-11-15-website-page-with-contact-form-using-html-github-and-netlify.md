@@ -21,67 +21,70 @@ If you are new to [GitHub, sign-up](https://github.com/signup) if you want to fo
 
 ### Step 1 - Create a new GitHub repository
 1a - After logging in to GitHub, click on New, next to Repository:
-![1a_new_GitHub_repository](https://ik.imagekit.io/hywelllewellyn/1a_new_GitHub_repository_JGyj_qbzf.png?updatedAt=1637492860896)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/3a_login_to_Netlify_toufEROMn.png?updatedAt=1637495642423" image_alt="1a_new_GitHub_repository" image_title="1a_new_GitHub_repository" %}
 
 1b - Give the repository a name, note it must be unique:
-![1b_name_GitHub_repository](https://ik.imagekit.io/hywelllewellyn/1b_name_GitHub_repository_h6zY0IZWx.png?updatedAt=1637492810318)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/1b_name_GitHub_repository_h6zY0IZWx.png?updatedAt=1637492810318" image_alt="1b_name_GitHub_repository" image_title="1b_name_GitHub_repository" %}
 
 1c - Click Create repository.
-![1c_create_GitHub_repository](https://ik.imagekit.io/hywelllewellyn/1c_create_GitHub_repository_iyLdN7CNr.png?updatedAt=1637492710345)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/1c_create_GitHub_repository_iyLdN7CNr.png?updatedAt=1637492710345" image_alt="1c_create_GitHub_repository" image_title="1c_create_GitHub_repository" %}
 
 I have used GitHub in a previous turorial on [how to create a static site from WordPress](https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html)
 
 ### Step 2 - Create a basic HTML page
 2a - Click add file, selecting Create new file:
-![2a_create_new_GitHub_file](https://ik.imagekit.io/hywelllewellyn/2a_create_new_GitHub_file_1ErpBpdIDI.png?updatedAt=1637492853585)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/2a_create_new_GitHub_file_1ErpBpdIDI.png?updatedAt=1637492853585" image_alt="2a_create_new_GitHub_file" image_title="2a_create_new_GitHub_file" %}
 
 2b - Give it a name of index.html: 
-![2b_give_GitHub_file_a_name_index](https://ik.imagekit.io/hywelllewellyn/2b_give_GitHub_file_a_name_index_Q4wSfYsMC.png?updatedAt=1637492837704)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/2b_give_GitHub_file_a_name_index_Q4wSfYsMC.png?updatedAt=1637492837704" image_alt="2b_give_GitHub_file_a_name_index" image_title="2b_give_GitHub_file_a_name_index" %}
+
 This is important as this is a one-page site, Netlify looks for index.html as default. 
 
 A [basic html page is already coded](https://github.com/hyweljohnllewellyn/html-form-netflify-example/blob/main/index_without_form.html), which can be used as a starting point. 
 
 2c - Paste the code into the file :
-![2c_paste_basic_html_page](https://ik.imagekit.io/hywelllewellyn/2c_paste_basic_html_page__gJ3T1dkf6.png?updatedAt=1637492845783)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/2c_paste_basic_html_page__gJ3T1dkf6.png?updatedAt=1637492845783" image_alt="2c_paste_basic_html_page" image_title="2c_paste_basic_html_page" %}
 
 2d - Commit changes, in other words, save the file:
-![2d_commit_changes_to_GitHub_file](https://ik.imagekit.io/hywelllewellyn/2d_commit_changes_to_GitHub_file_fYsX4_iQd.png?updatedAt=1637492826385)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/2d_commit_changes_to_GitHub_file_fYsX4_iQd.png?updatedAt=1637492826385" image_alt="2d_commit_changes_to_GitHub_file" image_title="2d_commit_changes_to_GitHub_file" %}
 
 ### Step 3 - Publish the html page using Netlify
 3a - Log in to Netlify:
-![3a_login_to_Netlify](https://ik.imagekit.io/hywelllewellyn/3a_login_to_Netlify_toufEROMn.png?updatedAt=1637495642423)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/3a_login_to_Netlify_toufEROMn.png?updatedAt=1637495642423" image_alt="3a_login_to_Netlify" image_title="3a_login_to_Netlify" %}
 
 If you don’t have an account then pause this video and sign up. I've used GitHub credentials for login. 
 
 3b - Select New site from [Git](https://en.wikipedia.org/wiki/Git):
-![3b_new_site_from_Git](https://ik.imagekit.io/hywelllewellyn/3b_new_site_from_Git_W-smh1i9X.png?updatedAt=1637495652292)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/3b_new_site_from_Git_W-smh1i9X.png?updatedAt=1637495652292" image_alt="3b_new_site_from_Git" image_title="3b_new_site_from_Git" %}
 
 and then GitHub, where the source code is hosted:
-![3b1_new_site_GitHub](https://ik.imagekit.io/hywelllewellyn/3b1_new_site_GitHub_QKJpXoPfF.png?updatedAt=1637495657760)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/3b1_new_site_GitHub_QKJpXoPfF.png?updatedAt=1637495657760" image_alt="3b1_new_site_GitHub" image_title="3b1_new_site_GitHub" %}
 
 3c - Find the repository created in step 2, select it:
-![3c_find_GitHub_repository](https://ik.imagekit.io/hywelllewellyn/3c_find_GitHub_repository__ynt1XMP6z.png?updatedAt=1637495663899)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/3c_find_GitHub_repository__ynt1XMP6z.png?updatedAt=1637495663899" image_alt="3c_find_GitHub_repository" image_title="3c_find_GitHub_repository" %}
 
 3d - Scroll down and click Deploy site:
-![3d_Deploy_Site_on_Netlify](https://ik.imagekit.io/hywelllewellyn/3d_Deploy_Site_on_Netlify_G9W6nmop_.png?updatedAt=1637495671665)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/3d_Deploy_Site_on_Netlify_G9W6nmop_.png?updatedAt=1637495671665" image_alt="3d_Deploy_Site_on_Netlif" image_title="3d_Deploy_Site_on_Netlif" %}
 
 This is where Netlify finds the index.html in GitHub and creates a website that is live to the internet.
 
 ### Step 4 - Change site address
-4a - You can see the website address is not too friendly, so click on Site Settings: 
-![4a_Netlify_Site_Settings](https://ik.imagekit.io/hywelllewellyn/4a_Netlify_Site_Settings_W-9atzYEB.png?updatedAt=1637496048758)
+4a - You can see the website address is not too friendly, so click on Site Settings:
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4a_Netlify_Site_Settings_W-9atzYEB.png?updatedAt=1637496048758" image_alt="4a_Netlify_Site_Settings" image_title="4a_Netlify_Site_Settings" %}
 
 4b - Change site name:
-![4b1_Change_Netlify_site_Name](https://ik.imagekit.io/hywelllewellyn/4b1_Change_Netlify_site_Name__oPzoahQ-.png?updatedAt=1637496231136)
-![4b2_change_Netlify_Site_name](https://ik.imagekit.io/hywelllewellyn/4b2_change_Netlify_Site_name_5WxJ1BUMm.png?updatedAt=1637496228341)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4b1_Change_Netlify_site_Name__oPzoahQ-.png?updatedAt=1637496231136" image_alt="54b1_Change_Netlify_site_name" image_title="4b1_Change_Netlify_site_name" %}
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4b2_change_Netlify_Site_name_5WxJ1BUMm.png?updatedAt=1637496228341" image_alt="4b2_change_Netlify_Site_name" image_title="4b2_change_Netlify_Site_name" %}
+
 
 Note that it is possibly to use a custom domain, but I won’t cover that in this guide.
 
 4c - Click on the website address:
-![4c_click_site_address](https://ik.imagekit.io/hywelllewellyn/4c_click_site_address_9rBlstWtD.png?updatedAt=1637496462811)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4c_click_site_address_9rBlstWtD.png?updatedAt=1637496462811" image_alt="4c_click_site_address" image_title="4c_click_site_address" %}
 
 4d - See the live html page at [html-form-example.netlify.app](https://html-form-example.netlify.app):
-![html-form-example.netlify.app](https://ik.imagekit.io/hywelllewellyn/4c2_Live_at_html-form-example_LU8-nzixK.png?updatedAt=1637496469154)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4c2_Live_at_html-form-example_LU8-nzixK.png?updatedAt=1637496469154" image_alt="html-form-example.netlify.app" image_title="html-form-example.netlify.app %}
 
 ### Step 5 - Create a contact form
 Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).

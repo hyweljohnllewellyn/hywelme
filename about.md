@@ -5,7 +5,7 @@ permalink: /about/
 meta: Hywel Llewellyn technology
 ---
 
-Hi, my name is Hywel Llewellyn. I write about the things I learn so that others can benefit and be successful. I have removed all Google advertising to keep my content as clean and easy to read as possible.
+Hi, my name is Hywel Llewellyn. I write about the things I learn so that others can benefit and be successful. 
 
 I mainly write about website creation and the resources available, for example, GitHub, WordPress, and Netlify.  I also write about other technology when they interest me. If you find my content useful, then please consider buying me a coffee, or two.    
 

@@ -22,6 +22,10 @@ If you are new to [GitHub, sign-up](https://github.com/signup) if you want to fo
 ### Step 1 - Create a new GitHub repository
 After logging in to GitHub, Click on New next to Repository, give it a name and click Create repository.
 
+![1a_new_GitHub_repository](https://ik.imagekit.io/hywelllewellyn/1a_new_GitHub_repository_JGyj_qbzf.png?updatedAt=1637492860896)
+![1b_name_GitHub_repository](https://ik.imagekit.io/hywelllewellyn/1b_name_GitHub_repository_h6zY0IZWx.png?updatedAt=1637492810318)
+![1c_create_GitHub_repository](https://ik.imagekit.io/hywelllewellyn/1c_create_GitHub_repository_iyLdN7CNr.png?updatedAt=1637492710345)
+
 I have used GitHub in a previous turorial on [how to create a static site from WordPress](https://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html)
 
 ### Step 2 - Create a basic HTML page

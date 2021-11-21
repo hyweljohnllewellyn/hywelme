@@ -124,10 +124,10 @@ Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).
 7b - Click Settings and usage:
 ![7b_click_settings_and_usage](https://ik.imagekit.io/hywelllewellyn/7b_click_settings_and_usage_Egz3B3iWE.png?updatedAt=16374988811803)
 
-7c - Under Form notifications, click Add Notifications and select Email Notifications:
+7c - Under Form notifications, click Add Notifications and select Email Notification:
 ![7c_add_form_email_notification](https://ik.imagekit.io/hywelllewellyn/7c_add_form_email_notification_Z51ku3CGi.png?updatedAt=1637498887151)
 
-7d - Enter the email address that to be notified, usually the owner of the website and Save:
+7d - Enter the email address to be notified, usually the owner of the website and Save:
 ![7d_enter_email_for_form_notification](https://ik.imagekit.io/hywelllewellyn/7d_enter_email_for_form_notification_j6cg5F4U5.png?updatedAt=1637498892788)
 
 ### Step 8 - Test the form!

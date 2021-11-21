@@ -93,7 +93,7 @@ Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).
 ![5b_change_title_to_name](https://ik.imagekit.io/hywelllewellyn/5b_change_title_to_name_u1BYYLhmy.png?updatedAt=1637496894674)
 
 5c - Repeat this for ‘email’, and check the ‘required’ option. This validates that any user has entered an email, else you cannot reply!
-![5c_repeat_for_email_with_required_field](https://ik.imagekit.io/hywelllewellyn/5c_repeat_for_email_with_required_field_0y6xgK_-e.png?updatedAt=1637497106743
+![5c_repeat_for_email_with_required_field](https://ik.imagekit.io/hywelllewellyn/5c_repeat_for_email_with_required_field_0y6xgK_-e.png?updatedAt=1637497106743)
 
 5d - Add a Text Area so that a user can enter why they are contacting:
 ![5d_add_Text_Area](https://ik.imagekit.io/hywelllewellyn/5d_add_Text_Area_CMPw_-Dipw.png?updatedAt=1637496904450)

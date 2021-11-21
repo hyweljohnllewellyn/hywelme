@@ -103,13 +103,13 @@ Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).
 
 ### Step 6 - Add form to your page with the required Netlify attribute
 6a - Click edit this file:
-![6a_edit_file](https://ik.imagekit.io/hywelllewellyn/6a_edit_file__4lnaMiZKv.png?updatedAt=1637497814344)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/6a_edit_file__4lnaMiZKv.png?updatedAt=1637497814344" image_alt="6a_edit_file" image_title="6a_edit_file" %}
 
 6b - Paste the form code to the website page:
-![6b_paste_the_form](https://ik.imagekit.io/hywelllewellyn/6b_paste_the_form_45hN7-vqV.png?updatedAt=1637497824227)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/6b_paste_the_form_45hN7-vqV.png?updatedAt=1637497824227" image_alt="6b_paste_the_form" image_title="6b_paste_the_form" %}
 
 6c - Add data=netlify=“true” to the form element so Netlify defects that there is a form:
-![6c_add_netlify_true](https://ik.imagekit.io/hywelllewellyn/6c_add_netlify_true_-Ga7E-yg4M.png?updatedAt=1637497831877)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/6c_add_netlify_true_-Ga7E-yg4M.png?updatedAt=1637497831877)" image_alt="6c_add_netlify_true" image_title="6c_add_netlify_true" %}
 
 6d - Commit the change:
 ![6d_commit_changes](https://ik.imagekit.io/hywelllewellyn/6d_commit_changes__bZItGd8oc.png?updatedAt=1637497837015)

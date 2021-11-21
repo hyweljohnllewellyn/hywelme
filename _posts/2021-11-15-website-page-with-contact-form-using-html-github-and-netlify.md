@@ -80,26 +80,26 @@ Note that it is possibly to use a custom domain, but I won’t cover that in thi
 4c - Click on the website address:
 ![4c_click_site_address](https://ik.imagekit.io/hywelllewellyn/4c_click_site_address_9rBlstWtD.png?updatedAt=1637496462811)
 
-See the live html page at [html-form-example.netlify.app](https://html-form-example.netlify.app):
+4d - See the live html page at [html-form-example.netlify.app](https://html-form-example.netlify.app):
 ![html-form-example.netlify.app](https://ik.imagekit.io/hywelllewellyn/4c2_Live_at_html-form-example_LU8-nzixK.png?updatedAt=1637496469154)
 
 ### Step 5 - Create a contact form
 Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).
 
 5a - Click Add a Text Field:
-![5a_form_builder_add_text_field](https://ik.imagekit.io/hywelllewellyn/5a_form_builder_add_text_field_h8LNDoqLL.png?updatedAt=1637496889870)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/5a_form_builder_add_text_field_h8LNDoqLL.png?updatedAt=1637496889870" image_alt="5a_form_builder_add_text_field" image_title="5a_form_builder_add_text_field" %}
 
 5b - Change the Title to ‘name’:
-![5b_change_title_to_name](https://ik.imagekit.io/hywelllewellyn/5b_change_title_to_name_u1BYYLhmy.png?updatedAt=1637496894674)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/5b_change_title_to_name_u1BYYLhmy.png?updatedAt=1637496894674" image_alt="5b_change_title_to_name" image_title="5b_change_title_to_name" %}
 
 5c - Repeat this for ‘email’, and check the ‘required’ option. This validates that any user has entered an email, else you cannot reply!
-![5c_repeat_for_email_with_required_field](https://ik.imagekit.io/hywelllewellyn/5c_repeat_for_email_with_required_field_0y6xgK_-e.png?updatedAt=1637497106743)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/5c_repeat_for_email_with_required_field_0y6xgK_-e.png?updatedAt=1637497106743" image_alt="5c_repeat_for_email_with_required_field" image_title="5c_repeat_for_email_with_required_field" %}
 
 5d - Add a Text Area so that a user can enter why they are contacting:
-![5d_add_Text_Area](https://ik.imagekit.io/hywelllewellyn/5d_add_Text_Area_CMPw_-Dipw.png?updatedAt=1637496904450)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/5d_add_Text_Area_CMPw_-Dipw.png?updatedAt=1637496904450" image_alt="5d_add_Text_Area" image_title="5d_add_Text_Area" %}
 
 5e - Copy the code to clipboard:
-![5e_copy_code_to_clipboard](https://ik.imagekit.io/hywelllewellyn/5e_copy_code_to_clipboard_SPZm56Ntw.png?updatedAt=1637496909435)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/5e_copy_code_to_clipboard_SPZm56Ntw.png?updatedAt=1637496909435" image_alt="5e_copy_code_to_clipboard" image_title="5e_copy_code_to_clipboard" %}
 
 ### Step 6 - Add form to your page with the required Netlify attribute
 6a - Click edit this file:

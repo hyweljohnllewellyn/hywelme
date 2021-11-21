@@ -84,7 +84,7 @@ Note that it is possibly to use a custom domain, but I won’t cover that in thi
 {% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4c_click_site_address_9rBlstWtD.png?updatedAt=1637496462811" image_alt="4c_click_site_address" image_title="4c_click_site_address" %}
 
 4d - See the live html page at [html-form-example.netlify.app](https://html-form-example.netlify.app):
-{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4c2_Live_at_html-form-example_LU8-nzixK.png?updatedAt=1637496469154" image_alt="html-form-example.netlify.app" image_title="html-form-example.netlify.app %}
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/4c2_Live_at_html-form-example_LU8-nzixK.png?updatedAt=1637496469154" image_alt="html-form-example.netlify.app" image_title="html-form-example.netlify.app" %}
 
 ### Step 5 - Create a contact form
 Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).

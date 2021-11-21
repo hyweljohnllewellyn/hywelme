@@ -112,30 +112,31 @@ Go to [bootstrapformbuilder.com](https://bootstrapformbuilder.com).
 {% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/6c_add_netlify_true_-Ga7E-yg4M.png?updatedAt=1637497831877)" image_alt="6c_add_netlify_true" image_title="6c_add_netlify_true" %}
 
 6d - Commit the change:
-![6d_commit_changes](https://ik.imagekit.io/hywelllewellyn/6d_commit_changes__bZItGd8oc.png?updatedAt=1637497837015)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/6d_commit_changes__bZItGd8oc.png?updatedAt=1637497837015)" image_alt="6d_commit_changes" image_title="6d_commit_changes" %}
 
 6e - Refresh your page in the browser to check the form is there:
-![6e_copy_code_to_clipboard](https://ik.imagekit.io/hywelllewellyn/6e_check_the_form_is_live_6ZXtjUsTx.png?updatedAt=1637497841532)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/6e_check_the_form_is_live_6ZXtjUsTx.png?updatedAt=1637497841532)" image_alt="6e_copy_code_to_clipboard" image_title="6e_copy_code_to_clipboard" %}
 
-### Step 7 - Configure Netlify to send email notifications for form submissions 
+### Step 7 - Configure Netlify to send email notifications for form submissions
 7a - In the Netlify dashboard for the site, click Forms:
-![7a_click_Netlify_forms](https://ik.imagekit.io/hywelllewellyn/7a_click_Netlify_forms_aN6ZnSV32.png?updatedAt=1637498470963)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/7a_click_Netlify_forms_aN6ZnSV32.png?updatedAt=1637498470963)" image_alt="7a_click_Netlify_forms" image_title="7a_click_Netlify_forms" %}
 
 7b - Click Settings and usage:
-![7b_click_settings_and_usage](https://ik.imagekit.io/hywelllewellyn/7b_click_settings_and_usage_Egz3B3iWE.png?updatedAt=16374988811803)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/7b_click_settings_and_usage_Egz3B3iWE.png?updatedAt=16374988811803)" image_alt="7b_click_settings_and_usage" image_title="7b_click_settings_and_usage" %}
+
 
 7c - Under Form notifications, click Add Notifications and select Email Notification:
-![7c_add_form_email_notification](https://ik.imagekit.io/hywelllewellyn/7c_add_form_email_notification_Z51ku3CGi.png?updatedAt=1637498887151)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/7c_add_form_email_notification_Z51ku3CGi.png?updatedAt=1637498887151)" image_alt="7c_add_form_email_notification" image_title="7c_add_form_email_notification" %}
 
 7d - Enter the email address to be notified, usually the owner of the website and Save:
-![7d_enter_email_for_form_notification](https://ik.imagekit.io/hywelllewellyn/7d_enter_email_for_form_notification_j6cg5F4U5.png?updatedAt=1637498892788)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/7d_enter_email_for_form_notification_j6cg5F4U5.png?updatedAt=1637498892788)" image_alt="7d_enter_email_for_form_notification" image_title="7d_enter_email_for_form_notification" %}
 
 ### Step 8 - Test the form!
 We are done. Refresh the page and enter a form submission:
-![enter a form submission](https://ik.imagekit.io/hywelllewellyn/8a_submit_form__VJUnAsiHT.png?updatedAt=1637499123259)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/8a_submit_form__VJUnAsiHT.png?updatedAt=1637499123259)" image_alt="enter a form submission" image_title="enter a form submission" %}
 
 You will receive an email to the address given in step 7:
-![8b_received_the_email_notification](https://ik.imagekit.io/hywelllewellyn/8b_received_the_email_notification_D9xl06HUZ.png?updatedAt=1637499127616)
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/8b_received_the_email_notification_D9xl06HUZ.png?updatedAt=1637499127616)" image_alt="8b_received_the_email_notification" image_title="8b_received_the_email_notification" %}
 
 Note that I went back to give the form a name =“contact” to more easily identify the source in the email notifications.
 

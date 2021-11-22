@@ -39,7 +39,7 @@ As expected, neither Jekyll or Hugo are fit for the purpose - they are great sta
 
 Though I am interested in investigating a service such as [contentful.com](https://www.contentful.com), I am steering away because of a potential lock in to their proprietary technology and ultimately their fees.
 
-I think the idea of _"best of both worlds"_ between a classic CMS such as [Wordpress](https://wordpress.org/) to create the content and then generate static HTML is the current best option for my needs....See next post..
+I think the idea of _"best of both worlds"_ between a classic CMS such as [Wordpress](https://wordpress.org/) to create the content and then generate static HTML is the current best option for my needs....See my next posts [migrate a drupal 6 website to wordpress](https://www.hywel.me/static/site/wordpress/2016/06/12/migrate-a-drupal-6-website-to-wordpress-4-5.html) and [Free Fast Sites Generated from WordPress ](http://www.hywel.me/static/site/wordpress/2016/07/17/fast-free-static-website-with-wordpress-and-github-pages.html)
 
 Some of the steps carried out to convert from Drupal 6 to Jekyll or Hugo are described below...
 

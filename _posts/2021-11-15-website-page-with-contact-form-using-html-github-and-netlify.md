@@ -11,7 +11,7 @@ meta: Hosting GitHub Netlify Contact Form HTML
 ## Why Netlify and GitHub?
 This is a step—by-step example showing how to create and deploy a website page with a contact form - from start to finish.
 
-I use the [Netlify](https://www.netlify.com) platform to host many static sites and landing pages for free, and [Netlify's Forms](https://www.netlify.com/products/forms/) are great way to gather user responses and includes free spam protection.
+I use the [Netlify](https://www.netlify.com) platform to host many static sites and landing pages for free for up to 100 submissions per month per site, and [Netlify's Forms](https://www.netlify.com/products/forms/) are great way to gather user responses and includes free spam protection.
 
 [GitHub](https://github.com) is great as a place to store your site code - not only as it does the usual version control , but the interface is relatively friendly and there is seamless integration to Netlify.
 

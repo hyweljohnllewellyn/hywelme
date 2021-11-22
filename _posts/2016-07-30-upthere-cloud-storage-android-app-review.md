@@ -9,6 +9,8 @@ meta: cloud storage service upthere device mobile review
 ---
 ## Unlimited Cloud Storage on your Device - Not Quite Yet
 
+**Edit November 2021 **- It looks like upthere.com is no longer trading.. less upthere, more nowhere.
+
 In my previous post on [Unlimited Device Storage Space]({{site.baseurl}}/cloud/storage/2016/07/27/unlimited-storage-space-for-your-device.html), I installed the new service from [Upthere.com](https://upthere.com/) onto my Mac.  The service promises to write data directly to the cloud - in theory meaning your device has virtually unlimited storage available.  
 
 However, currently, the Upthere service is much like any other - needing to synchronise your device or PC to their cloud.   

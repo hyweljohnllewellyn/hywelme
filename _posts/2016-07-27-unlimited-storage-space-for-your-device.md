@@ -9,6 +9,8 @@ meta: cloud storage upthere device
 ---
 ## The Future of the Cloud
 
+**Edit November 2021 **- It looks like upthere.com is no longer trading.. less upthere, more nowhere.
+
 I have just read about the true potential of the cloud.  A new service has been launched where files are **only** stored in a Cloud platform from [https://upthere.com/](https://upthere.com/)
 
 The implication is fantastic, particularly for devices - no more running out of storage space when taking video  -  there is no local storage, everything is in the cloud, _upthere_.

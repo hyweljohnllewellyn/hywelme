@@ -41,7 +41,7 @@ Also, when using their [Electroverse](https://electroverse.octopus.energy/sign-u
 
 [Octopus](https://share.octopus.energy/neat-bee-361) also have the best export tariff fo solar. On average I'm getting 12.86p/ KWh on their Agile Outgoing tariff.  Only Tesla Powerwalls offer more.
 
-I thoroughly recomend Octopus Energy and Electroverse app.
+I thoroughly recommend Octopus Energy and their Electroverse app.
 
 Get £50 credit when you sign up to [Octopus Energy using my referral](https://share.octopus.energy/neat-bee-361).  Disclosure that I wil also get £50.
 

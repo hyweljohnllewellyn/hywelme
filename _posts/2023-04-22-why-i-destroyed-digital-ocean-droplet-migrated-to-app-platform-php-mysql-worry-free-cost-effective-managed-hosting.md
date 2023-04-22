@@ -11,7 +11,7 @@ meta: Hosting PHP MySQL DigitalOcean Security
 ## DigitalOcean as a Host
 I have been using [DigitalOcean](https://m.do.co/c/92e12787bf7a) for 8 years to host various PHP MySQL websites.
 
-I feel that they strike a great balance between price and performanve and importantly, unlike other hosting providers the costs are easy to understand.  I feel you need a PhD to understand Amazon pricing.
+They strike a great balance between price and performance and importantly, unlike other hosting providers the costs are easy to understand.  You need to be a rocket scientist to understand Amazon cloud hosting pricing.
 
 I have been using a droplet, costing as little as $4 a month, which has been great.  However, as times change, I have been getting more concerned about security and wanted peace of mind, so started looking for more of a managed solution.
 

@@ -1,0 +1,47 @@
+---
+layout: post
+date: '2023-04-22 20:02 +0100'
+author: Hywel
+published: true
+title: Why I love Octopus Energy
+categories: Energy Solar Electric Vehicles 
+meta: Energy Solar Electric Vehicles Money
+---
+
+## Doing 'The Right Thing'
+I have kids and I am bought into the idea of financial freedom.
+
+Everyone in the UK has felt the 'cost of living' increase over the last 12 months and last August, I decided to do the right thing.
+
+The cost of electricity was spriralling out of control last year, and though the UK Government stepped in, there was no guarantee what would happen.
+
+I am completely opposed to the linking of the price of electricity to the prive of wholesale gas, which I only found out by [Octopus Energy's CEO](https://www.youtube.com/watch?v=K6ccUyWwz9g). That just seems backwards, the reliance on gas as an energy source is declining, with alternatives such as wind about to take over in terms of % in the UK. See the usage over the last 10 years in the UK:
+
+![Gas generation declining over last 10 years in UK]({{site.baseurl}}/assets/2023/energy-eneration-uk-10-years-gas-declining.png)
+
+Source from [National Grid Live](https://grid.iamkate.com)
+
+So we now have home solar PV with battery storage. We also needed to replace our falimy car and decided to go with a Kia Niro EV, which is a great family car, and a much better turning cirrcle than a Tesla Model Y!
+
+##  Octopus Energy and Electroverse
+
+The ethos and forward thinking of [Octopus Energy](https://share.octopus.energy/neat-bee-361) is just amazing.
+
+I am using their Intelligent EV tarriff, which recently reduced to 7.5p/ kWh between 23:30 and 05:30
+
+Just look at this email they sent me recently, just great!
+
+![Gas generation declining over last 10 years in UK]({{site.baseurl}}/assets/2023/octopus-energy-intelligent-price-reduction.png)
+
+Also, when using their [Electroverse](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361) app, the bill is consolidated anong with my home energy making it simple. Best of all, most of the chargers that are suported have an 8% discount as an Intelligent Octopus user.
+
+[Octopus](https://share.octopus.energy/neat-bee-361) also have the best export tarriff fo solar. On average I'm getting 12.86p/ KWh on their Agile Outgoing tarriff.  Only Tesla Powerwalls offer more.
+
+I thoroughly recomend Octopus Energy and Electroverse app.
+
+Get £50 credit when you sign up to [Octopus Energy using my referral](https://share.octopus.energy/neat-bee-361).  Disclosure that I wil also get £50.
+
+Get £25 when you sign up to [Octopus Electroverse using my referral and you complete one charge](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361).  Disclosure that I wil also get £25.
+
+Love and Power,
+Hywel.

@@ -13,15 +13,19 @@ I have kids and I am bought into the idea of financial freedom.
 
 Everyone in the UK has felt the 'cost of living' increase over the last 12 months and last August, I decided to do the right thing.
 
-The cost of electricity was spriralling out of control last year, and though the UK Government stepped in, there was no guarantee what would happen.
+The cost of electricity was spiralling out of control last year, and though the UK Government stepped in, there was no guarantee what would happen.
 
-I am completely opposed to the linking of the price of electricity to the prive of wholesale gas, which I only found out by [Octopus Energy's CEO](https://www.youtube.com/watch?v=K6ccUyWwz9g). That just seems backwards, the reliance on gas as an energy source is declining, with alternatives such as wind about to take over in terms of % in the UK. See the usage over the last 10 years in the UK:
+I am completely opposed to the linking of the price of electricity to the price of wholesale gas, which I only found out by [Octopus Energy's CEO](https://www.youtube.com/watch?v=K6ccUyWwz9g). 
 
-![Gas generation declining over last 10 years in UK]({{site.baseurl}}/assets/2023/energy-eneration-uk-10-years-gas-declining.png)
+It just seems backwards, particularly as alternatives such as wind are about to take over in terms of % generation in the UK. See the usage over the last 10 years in the UK:
+
+![Gas generation declining over last 10 years in UK]({{site.baseurl}}/assets/2023/energy-generation-uk-10-years-gas-declining.png)
+
+The orange line is gas and the green line is wind power.
 
 Source from [National Grid Live](https://grid.iamkate.com)
 
-So we now have home solar PV with battery storage. We also needed to replace our falimy car and decided to go with a Kia Niro EV, which is a great family car, and a much better turning cirrcle than a Tesla Model Y!
+So, we now have a home solar PV with battery storage. We also needed to replace our family car and decided to go with a Kia Niro EV, which is a great family car, and has a much better turning circle than a Tesla Model Y!
 
 ##  Octopus Energy and Electroverse
 
@@ -33,7 +37,7 @@ Just look at this email they sent me recently, just great!
 
 ![Gas generation declining over last 10 years in UK]({{site.baseurl}}/assets/2023/octopus-energy-intelligent-price-reduction.png)
 
-Also, when using their [Electroverse](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361) app, the bill is consolidated anong with my home energy making it simple. Best of all, most of the chargers that are suported have an 8% discount as an Intelligent Octopus user.
+Also, when using their [Electroverse](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361) app, the bill is consolidated anong with my home energy making it simple.   Best of all, most of the EV chargers have an 8% discount as an Intelligent Octopus user.
 
 [Octopus](https://share.octopus.energy/neat-bee-361) also have the best export tarriff fo solar. On average I'm getting 12.86p/ KWh on their Agile Outgoing tarriff.  Only Tesla Powerwalls offer more.
 

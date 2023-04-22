@@ -3,7 +3,7 @@ layout: post
 date: '2023-04-22 20:02 +0100'
 author: Hywel
 published: true
-title: Why I love Octopus Energy
+title: Why Octopus Energy is Great
 categories: Energy Solar Electric Vehicles 
 meta: Energy Solar Electric Vehicles Money
 ---

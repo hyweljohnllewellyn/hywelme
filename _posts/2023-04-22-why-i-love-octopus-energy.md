@@ -33,7 +33,7 @@ The ethos and forward thinking of [Octopus Energy](https://share.octopus.energy/
 
 I am using their Intelligent EV tariff, which recently reduced to 7.5p/ kWh between 23:30 and 05:30
 
-Just look at this email they sent me recently, just great!
+Look at this email they sent me recently, just great!
 
 ![Gas generation declining over last 10 years in UK]({{site.baseurl}}/assets/2023/octopus-energy-intelligent-price-reduction.png)
 

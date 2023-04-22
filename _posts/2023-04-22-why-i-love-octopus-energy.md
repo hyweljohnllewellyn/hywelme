@@ -31,7 +31,7 @@ So, we now have a home solar PV with battery storage. We also needed to replace 
 
 The ethos and forward thinking of [Octopus Energy](https://share.octopus.energy/neat-bee-361) is just amazing.
 
-I am using their Intelligent EV tarriff, which recently reduced to 7.5p/ kWh between 23:30 and 05:30
+I am using their Intelligent EV tariff, which recently reduced to 7.5p/ kWh between 23:30 and 05:30
 
 Just look at this email they sent me recently, just great!
 
@@ -39,7 +39,7 @@ Just look at this email they sent me recently, just great!
 
 Also, when using their [Electroverse](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361) app, the bill is consolidated anong with my home energy making it simple.   Best of all, most of the EV chargers have an 8% discount as an Intelligent Octopus user.
 
-[Octopus](https://share.octopus.energy/neat-bee-361) also have the best export tarriff fo solar. On average I'm getting 12.86p/ KWh on their Agile Outgoing tarriff.  Only Tesla Powerwalls offer more.
+[Octopus](https://share.octopus.energy/neat-bee-361) also have the best export tariff fo solar. On average I'm getting 12.86p/ KWh on their Agile Outgoing tariff.  Only Tesla Powerwalls offer more.
 
 I thoroughly recomend Octopus Energy and Electroverse app.
 

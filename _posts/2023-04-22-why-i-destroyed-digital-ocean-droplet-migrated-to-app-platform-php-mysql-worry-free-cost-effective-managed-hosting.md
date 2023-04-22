@@ -1,6 +1,6 @@
 ---
 layout: post
-date: '2023-02-22 19:02 +0100'
+date: '2023-04-22 19:02 +0100'
 author: Hywel
 published: true
 title: Why I destroyed Digital Ocean Droplet and Moved to the App Platform PHP MySQL Worry Free Cost Effective Managed Hosting

@@ -43,9 +43,9 @@ Also, when using their [Electroverse](https://electroverse.octopus.energy/sign-u
 
 I thoroughly recommend Octopus Energy and their Electroverse app.
 
-Get £50 credit when you sign up to [Octopus Energy using my referral](https://share.octopus.energy/neat-bee-361).  Disclosure that I wil also get £50.
+Get £50 credit when you sign up to [Octopus Energy using my referral](https://share.octopus.energy/neat-bee-361).  Disclosure that I will also receive £50.
 
-Get £25 when you sign up to [Octopus Electroverse using my referral and you complete one charge](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361).  Disclosure that I wil also get £25.
+Get £25 when you sign up to [Octopus Electroverse using my referral and you complete one charge](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361).  Disclosure that I will also receive £25.
 
 Love and Power,
 Hywel.

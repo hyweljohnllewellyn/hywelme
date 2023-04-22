@@ -35,7 +35,7 @@ I am using their Intelligent EV tariff, which recently reduced to 7.5p/ kWh betw
 
 Look at this email they sent me recently, just great!
 
-![Gas generation declining over last 10 years in UK]({{site.baseurl}}/assets/2023/octopus-energy-intelligent-price-reduction.png)
+![octopus-energy-intelligent-price-reduction]({{site.baseurl}}/assets/2023/octopus-energy-intelligent-price-reduction.png)
 
 Also, when using their [Electroverse](https://electroverse.octopus.energy/sign-up?referralCode=neat-bee-361) app, the bill is consolidated anong with my home energy making it simple.   Best of all, most of the EV chargers have an 8% discount as an Intelligent Octopus user.
 

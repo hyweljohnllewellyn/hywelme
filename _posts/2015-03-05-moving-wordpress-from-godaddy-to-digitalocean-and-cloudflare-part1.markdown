@@ -8,6 +8,8 @@ categories: DigitalOcean WordPress
 excerpt: The response time for all my websites hosted with GoDaddy had become disappointing.  I have decided try out the do it yourself cloud hosting option provided by DigitalOcean.com partly to learn some new skills and also they have had some great reviews.  I found a promotional code to get 2 months free hosting with DigitalOcean, so at least I could try before I buy.  [$10 credit at Digital Ocean](https://www.digitalocean.com/?refcode=92e12787bf7a)
 ---
 
+22 April 2023 - Update - I have just moved to [DigitalOcean App Platform, click to read.](https://www.hywel.me/php/mysql/hosting/2023/02/22/why-i-destroyed-digital-ocean-droplet-migrated-to-app-platform-php-mysql-worry-free-cost-effective-managed-hosting.html)
+
 
 It it time for a change.  I had a great deal for a 5 year ultimate hosting plan with free SSL at [GoDaddy.com](http://GoDaddy.com).  
 
@@ -34,3 +36,5 @@ DigitalOcean is managed through a command line terminal, so if you are slightly 
 I was also tempted with the [CloudFlare.com](https://www.cloudflare.com) service as it offers free SSL/ SDPY and static file cache - which is supposed to translate to faster and more Google friendly websites. Worth a try right?
 
 [In my next post,]({% post_url 2015-03-07-moving-wordpress-from-godaddy-to-digitalocean-part2 %}) I'll describe the steps to move the WordPress site to DigitalOcean using ServerPilot.io and then, hopefully CloudFlare!
+
+

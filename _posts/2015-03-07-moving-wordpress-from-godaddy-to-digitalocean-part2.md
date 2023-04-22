@@ -9,6 +9,8 @@ excerpt: How I moved an existing site from GoDaddy to DigitalOcean hosting via S
 ---
 ### Create the Site  
 
+22 April 2023 - Update - I have just moved to [DigitalOcean App Platform, click to read.](https://www.hywel.me/php/mysql/hosting/2023/02/22/why-i-destroyed-digital-ocean-droplet-migrated-to-app-platform-php-mysql-worry-free-cost-effective-managed-hosting.html)
+
 [In my previous post,]({% post_url 2015-03-05-moving-wordpress-from-godaddy-to-digitalocean-and-cloudflare-part1 %}) I described why I wanted to move my site from GoDaddy to DigitalOcean.  
 
 I will describe how I moved an existing site from GoDaddy to DigitalOcean hosting via ServerPilot.io. The steps to install and migrate WordPress content and database to DigitalOcean.  Finally, moving the domain name server to DigitalOcean.

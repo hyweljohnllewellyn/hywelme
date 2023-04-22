@@ -12,6 +12,8 @@ title: Free Disk Space on Digital Ocean Droplet by removing unused Ubuntu versio
 
 ## Running out of Disk Space
 
+22 April 2023 - Update - I have just moved to [DigitalOcean App Platform, click to read.](https://www.hywel.me/php/mysql/hosting/2023/02/22/why-i-destroyed-digital-ocean-droplet-migrated-to-app-platform-php-mysql-worry-free-cost-effective-managed-hosting.html)
+
 It has reached a point where the disk usage of a Digital Ocean droplet has reached 69.4% of 19.56Gb.  
 
 ![running out of disk space.png]({{site.baseurl}}/assets/2016-02-05/running out of disk space.png)

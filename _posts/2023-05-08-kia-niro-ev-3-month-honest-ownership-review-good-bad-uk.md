@@ -3,13 +3,13 @@ layout: post
 date: '2023-05-08 20:02 +0100'
 author: Hywel
 published: true
-title: Kia Niro EV 2023 3 month ownership review uk good and bad
+title: Kia Niro EV 2023 after 3 Months - The Good and Bad
 categories: Electric Vehicles Energy
 meta: Kia Niro EV 3 month ownership review UK charging efficiency energy
 ---
 
 ## Introduction 
-In this review, I will discuss what is good and bad about the Kia Niro EV 2023 model after more than three months of ownership.
+In this review, I will discuss what is good and bad about the Kia Niro EV 2023 after more than three months of ownership. Note that this is based on the [Level 4 Trim](https://www.drive-electric.co.uk/news/kia-niro-ev-trim-details-pricing-announced/), received in the UK January 2023.
 
 I will also mention charging. Spoiler alert, by far the cheapest way and the thing that makes the EV feasible is charging at home using [Octopus Energy Intelligent Tariff](https://share.octopus.energy/neat-bee-361). 
 

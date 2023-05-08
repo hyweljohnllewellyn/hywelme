@@ -62,7 +62,7 @@ Electric cars could be really simple, but somehow they're not, and the Kia Niro 
 The car is constantly beeping and pulls the steering wheel if it thinks that my driving is not up to scratch. In the UK, with our narrow road lanes , the lane keep assist gets really annoying very quickly, and can make it harder to drive safely. It is often a relief to get into an older car without any 'driver assistance' technology.
 
 ### Bad - Heating and Range in Cold Weather
-It is well known that the range of an EV drops in cold weather, but my Kia Niro EV, specified with a £700 optional heat pump travelled only 200 miles on a full charge in January on a trip to Wales averaging 3.1miles/kWh.  Granted, most of this was motorway driving, but given the claimed [up to 285 mile range](https://www.kia.com/uk/new-cars/niro/), I was disappointed.
+It is well known that the range of an EV drops in cold weather, but my Kia Niro EV, specified with a [£900 optional heat pump as of May 2023](https://www.kia.com/uk/new-cars/niro/pricing/) travelled only 200 miles on a full charge in January on a trip to Wales averaging 3.1miles/kWh.  Granted, most of this was motorway driving, but given the claimed [up to 285 mile range](https://www.kia.com/uk/new-cars/niro/), I was disappointed.  I'm not convived that the heat pump has any noticable effect on improving range.
 
 As of May 2023, it is worth noting that the average miles per kilowatt-hour is now more like 4.1.  Temperature has a huge impact on range of EVs in 2023.
 

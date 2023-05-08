@@ -47,7 +47,9 @@ I am really looking forward to using it in the winter to power my laundry tumble
 I just wish that I could power my entire home. With a 64kWh battery, the Kia Niro EV could power my home for almost a week.
 
 ### Good - Driver Assist
-One of the best things about the car is the heads up display, which along with auto highway assist adaptive cruise control and built-in navigation with live traffic data makes driving on the motorway almost relaxing.  Unlike [Kia Connect](https://www.kia.com/uk/dealers/citygatehighwycombe/owners/telematics/#:~:text=YOUR%20FREE%20SEVEN%2DYEAR%20CONNECTED,digital%20features%20in%20your%20car), which is free for 7 years in the UK,  [Tesla charge £9.99 monthly for live traffic data](https://www.tesla.com/en_gb/support/connectivity).
+One of the best things about the car is it makes driving on the motorway.  This is because of the many driver asists most notably, the heads up display, highway assist cruise control and built-in navigation with live traffic data. 
+
+Unlike [Kia Connect](https://www.kia.com/uk/dealers/citygatehighwycombe/owners/telematics/#:~:text=YOUR%20FREE%20SEVEN%2DYEAR%20CONNECTED,digital%20features%20in%20your%20car), which is free for 7 years in the UK,  [Tesla charge £9.99 monthly for live traffic data](https://www.tesla.com/en_gb/support/connectivity).
 
 In fact, after a 200 mile journey to Wales on the M4, I needed to remind myself that I was actually the driver, when eventually I came off the motorway.
 

@@ -24,14 +24,14 @@ As an example, the [Tesla Model Y has a turning circle of 12.1m compared to the 
 
 The car itself also doesn't feel like I'm driving a bus, the [Kia Niro Ev is 4.42m in length, compared to the Kia EV6 being 4.68m, Tesla Model Y 4.75m and Hyundai Ioniq 5 4.63m](https://www.myevreview.com/comparison-chart/length).
 
-You might think that the MG MG4 or Volkswagen ID3 would have been in the running for practicality, particularly as the MG4 is priced much lower compared to the Kia. That brings me onto the key criteria for our car, the trunk / boot space. 
+You might think that the MG MG4 or Volkswagen ID3 would have been in the running for practicality, particularly as they have similar or smaller turning circles, and you are rightm particularly as the MG4 is priced lower compared to the Kia. However, both the MG4 and ID3 failed our trunk / boot space needs.
 
 ### Good - Luggage Capacity - Trunk / Boot Space 
-I did test drive the MG4 and it is a nice car, but the boot space is only 363 litres, similar to the Volkswagen ID3 of 385 litres, Compared to the Kia Niro EV, which has a capacity of 475 litres along with a nice and square large opening. Interestingly, though the Kia EV6 technically has a bigger boot of 480 litres, I found the shape of the opening not so practical. [Reference for luggage capacity](https://www.myevreview.com/comparison-chart/luggage-capacity).   The headroom also feels better the back seats of the Kia Niro EV compared to the EV6, because of the Niro's more boxy shape.
+The boot space on the MG MG4 is only 363 litres, which is similar to the Volkswagen ID3 of 385 litres.  Whereas, the Kia Niro EV has a capacity of 475 litres and a nice and square large opening. 
 
-The key criteria for us selecting the car was can the car fit a pedal harp? Granted, this is a relatively unique ask of a car, but the question [which cars can carry a pedal harp](https://harp.fandom.com/wiki/Transporting_a_Pedal_Harp_by_Car) has been asked before. 
+Interestingly, though the Kia EV6 has a bigger boot of 480 litres, I found the shape of the opening not so practical. [Reference for luggage capacity](https://www.myevreview.com/comparison-chart/luggage-capacity).   The headroom also feels better in the back seats of the Kia Niro EV compared to the EV6, because of the Niro's more boxy shape.
 
-In fact as part of a test drive, we took the car into central London to a harp shop to ensure a harp would fit!
+We had a relatively unique ask of a car, [which EV can carry a pedal harp?](https://harp.fandom.com/wiki/Transporting_a_Pedal_Harp_by_Car).  In fact, as part of a test drive, we took the car into central London to a harp shop to ensure a harp would fit!
 
 ### Good - Vehicle to Load
 I really like the idea of the car being a mobile battery.

@@ -71,7 +71,7 @@ Also, when setting the desired internal temperature to 20-27 degrees Celsius, th
 This might be a fault with the specific car, but the only way to make the heating work consistently seems to be through using the 'auto climate' button.  Apparently, just 'setting the temperature' is not enough.
 
 ### Bad - Home Charging Efficiency - why it costs more? 
-When charging at home using a 7kWh charger, the best efficiency I have achieved is 88%. To make that clear, for evert 1kW added to the car, it takes 1.14kW of energy. 
+When charging at home using a 7kWh charger, the best efficiency I have achieved is 88%. To make that clear, for every 1kWh added to the car, it takes 1.14kWh of energy. 
 
 To achieve this efficiency, I needed to charge the battery from 40% to 80%, with the battery pre-conditioning turned off. 
 

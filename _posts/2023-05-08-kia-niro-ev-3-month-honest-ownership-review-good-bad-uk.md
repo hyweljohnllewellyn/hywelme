@@ -84,9 +84,7 @@ There are driver profiles that can be set in the car. Sometimes, randomly, the c
 
 
 ## Cheapest way to Charge Kia Niro EV 2023 - Octopus Energy and Electroverse
-It is a sad fact that the public charging network is woefully expensive and lacking in the UK. 
-
-Without a driveway and 7kWh home charger, it would not be financially practical to own an EV in my opinion in 2023.
+In my opinion, without a driveway and 7kWh home charger, it would not be financially practical to own an EV in  2023.
 
 Using [Octopus Energy](https://share.octopus.energy/neat-bee-361) and their Intelligent EV tariff, the car (and home) can use electricity at a rate of 7.5p/ kWh between 23:30 and 05:30 (as of May 2023)
 

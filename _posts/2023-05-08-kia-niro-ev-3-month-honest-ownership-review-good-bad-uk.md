@@ -36,9 +36,9 @@ In fact as part of a test drive, we took the car into central London to a harp s
 ### Good - Vehicle to Load
 I really like the idea of the car being a mobile battery.
 
-In the UK as of 2023, There are surprisingly few EV cars having an ability to use the battery to charge other things. I was surprised that neither Tesla nor Volkswagen have this feature available. Note that Volkswagen have mentioned making this available, but yet to make it real. See [bidirectional-cars-2023](https://www.dcbel.energy/blog/2023/01/04/new-year-new-bidirectional-cars-2023-edition/) for a list of cars with bi-directional charging as of January 2023. [This](https://zecar.com/resources/which-electric-cars-have-bidirectional-charging) is also useful reference.
+In the UK as of 2023, There are surprisingly few EV cars having an ability to use the battery to charge other things. I was surprised that neither Tesla nor Volkswagen have this feature available. Note that Volkswagen have mentioned making this available, but yet to make it real. See [bidirectional-cars-2023](https://www.dcbel.energy/blog/2023/01/04/new-year-new-bidirectional-cars-2023-edition/) for a list of cars with bi-directional charging as of January 2023. 
  
-The Kia Niro EV (level 3 and 4 trim in UK) come with this option, which effectively provides a 3-pin plug as standard, allowing drivers to power appliances directly from the car, with a maximum load up to 3.6kW.
+The Kia Niro EV (level 3 and 4 trim in UK) come with this option, which effectively provides a 3-pin plug as standard, allowing drivers to power appliances directly from the car, with a maximum load up to [3.6kW](https://zecar.com/resources/which-electric-cars-have-bidirectional-charging).
 
 This has been useful for plugging a laptop into the internal plug, located below the rear seats, giving a mobile office.
 

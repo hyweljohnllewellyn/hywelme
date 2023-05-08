@@ -22,7 +22,7 @@ For a family of four, living in rural UK on the outskirts of London where the ro
 
 As an example, the [Tesla Model Y has a turning circle of 12.1m compared to the Kia Niro EV's 10.6m](https://www.myevreview.com/comparison-chart/turning-circle?). This makes a huge difference on UK roads, especially in central London.
 
-The car itself also doesn't feel like I'm driving a bus, the Kia Niro Ev is 4.42m in length, compared to the [Kia EV6 being 4.68m, Tesla Model Y 4.75m and Hyundai Ioniq 5 4.63m](https://www.myevreview.com/comparison-chart/length).
+The car itself also doesn't feel like I'm driving a bus, the [Kia Niro Ev is 4.42m in length, compared to the Kia EV6 being 4.68m, Tesla Model Y 4.75m and Hyundai Ioniq 5 4.63m](https://www.myevreview.com/comparison-chart/length).
 
 You might think that the MG MG4 or Volkswagen ID3 would have been in the running for practicality, particularly as the MG4 is priced much lower compared to the Kia. That brings me onto the key criteria for our car, the trunk / boot space. 
 

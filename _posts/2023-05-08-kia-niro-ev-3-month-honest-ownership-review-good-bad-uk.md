@@ -31,12 +31,12 @@ The boot space on the MG MG4 is only 363 litres, which is similar to the Volkswa
 
 Interestingly, though the Kia EV6 has a bigger boot of 480 litres, I found the shape of the opening not so practical. [Reference for luggage capacity](https://www.myevreview.com/comparison-chart/luggage-capacity).   The headroom also feels better in the back seats of the Kia Niro EV compared to the EV6, because of the Niro's more boxy shape.
 
-We had a relatively unique ask of a car, [which EV can carry a pedal harp?](https://harp.fandom.com/wiki/Transporting_a_Pedal_Harp_by_Car).  In fact, as part of a test drive, we took the car into central London to a harp shop to ensure a harp would fit!
+We had a relatively unique ask of a car, [which EV can carry a pedal harp?](https://harp.fandom.com/wiki/Transporting_a_Pedal_Harp_by_Car)  In fact, as part of a test drive, we took the car into central London to a harp shop to ensure a harp would fit!
 
 ### Good - Vehicle to Load
 I really like the idea of the car being a mobile battery.
 
-In the UK as of 2023, There are surprisingly few EV cars having an ability to use the battery to charge other things. I was surprised that neither Tesla nor Volkswagen have this feature available. Note that Volkswagen have mentioned making this available, but yet to make it real. See [bidirectional-cars-2023](https://www.dcbel.energy/blog/2023/01/04/new-year-new-bidirectional-cars-2023-edition/) for a list of cars with bi-directional charging as of January 2023. 
+In the UK, as of 2023, there are surprisingly few EV cars having an ability to use the battery to charge other things. I was surprised that neither Tesla nor Volkswagen have this feature available. Note that Volkswagen have mentioned making this available, but yet to make it real. See [bidirectional-cars-2023](https://www.dcbel.energy/blog/2023/01/04/new-year-new-bidirectional-cars-2023-edition/) for a list of cars with bi-directional charging as of January 2023. 
  
 The Kia Niro EV (level 3 and 4 trim in UK) come with this option, which effectively provides a 3-pin plug as standard, allowing drivers to power appliances directly from the car, with a maximum load up to [3.6kW](https://zecar.com/resources/which-electric-cars-have-bidirectional-charging).
 

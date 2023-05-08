@@ -27,7 +27,7 @@ The car itself also doesn't feel like I'm driving a bus, the [Kia Niro Ev is 4.4
 You might think that the MG MG4 or Volkswagen ID3 would have been in the running for practicality, particularly as the MG4 is priced much lower compared to the Kia. That brings me onto the key criteria for our car, the trunk / boot space. 
 
 ### Good - Luggage Capacity - Trunk / Boot Space 
-I did test drive the MG4 and it is a nice car, but the boot space is only 363 litres, similar to the Volkswagen ID3 of 385 litres, Compared to the Kia Niro EV, which has a capacity of 475 litres and the opening is nice and square. Interestingly, though the Kia EV6 technically has a bigger boot of 480 litres, I found the shape of the opening not so practical. [Reference for luggage capacity](https://www.myevreview.com/comparison-chart/luggage-capacity).
+I did test drive the MG4 and it is a nice car, but the boot space is only 363 litres, similar to the Volkswagen ID3 of 385 litres, Compared to the Kia Niro EV, which has a capacity of 475 litres along with a nice and square large opening. Interestingly, though the Kia EV6 technically has a bigger boot of 480 litres, I found the shape of the opening not so practical. [Reference for luggage capacity](https://www.myevreview.com/comparison-chart/luggage-capacity). 
 
 The key criteria for us selecting the car was can the car fit a pedal harp? Granted, this is a relatively unique ask of a car, but the question [which cars can carry a pedal harp](https://harp.fandom.com/wiki/Transporting_a_Pedal_Harp_by_Car) has been asked before. 
 

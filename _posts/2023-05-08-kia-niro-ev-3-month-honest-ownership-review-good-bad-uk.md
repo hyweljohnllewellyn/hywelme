@@ -17,7 +17,7 @@ I will also mention charging. Spoiler alert, by far the cheapest way and the thi
 
 I feel that the Kia Niro has gone under the radar somewhat, being overshadowed by the likes of Tesla Model Y and Hyundai Ioniq 5.
 
-### - Practicality - Size & Turning Circle 
+### Good - Size & Turning Circle / Radius
 For a family of four, living in rural UK on the outskirts of London where the roads and car parks are narrow, most other 'family' EV cars in are just too big for day-to-day. 
 
 As an example, the [Tesla Model Y has a turning circle of 12.1m compared to the Kia Niro EV's 10.6m](https://www.myevreview.com/comparison-chart/turning-circle?). This makes a huge difference on UK roads, especially in central London.

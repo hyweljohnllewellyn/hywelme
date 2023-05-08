@@ -66,9 +66,9 @@ It is well known that the range of an EV drops in cold weather, but my Kia Niro 
 
 As of May 2023, it is worth noting that the average miles per kilowatt-hour is now more like 4.1.  Temperature has a huge impact on range of EVs in 2023.
 
-Mentioning the heat pump, it is worth saying that the internal heating controls are bad.  When setting the temperature to say 24 degrees Celsius, the car sometimes does not head at all, even after 20 minutes.
+Also, when setting the desired internal temperature to 20-27 degrees Celsius, the car sometimes does not head at all, even after 20 minutes.
 
-This might be a fault with the specific car, but the only way t make the heating work consistently is by using the 'auto climate' button. Apparently, just setting the temperature and turning on the fan/ blower is not enough.
+This might be a fault with the specific car, but the only way to make the heating work consistently seems to be through using the 'auto climate' button.  Apparently, just 'setting the temperature' is not enough.
 
 ### Bad - Home Charging Efficiency - why it costs more? 
 When charging at home using a 7kWh charger, the best efficiency I have achieved is 88%. To make that clear, for evert 1kW added to the car, it takes 1.14kW of energy. 

@@ -13,6 +13,11 @@ In this review, I will discuss what is good and bad about the Kia Niro EV 2023 a
 
 I will also mention charging. Spoiler alert, by far the cheapest way and the thing that makes the EV feasible is charging at home using [Octopus Energy Intelligent Tariff](https://share.octopus.energy/neat-bee-361). 
 
+Overall, as a family needing a good amount of usable space, without feeling out of place on UK roads, the Kia Niro EV 2023 vs MG4 or Tesla Model Y was the right choice for us.
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev__2023_charging_ionity_octopus_energy_electroverse_smX-gsP8O.jpg?updatedAt=1683923420079" image_alt="kia niro ev 2023 ionity octopus energy electroverse" image_title="kia niro ev 2023 ionity octopus energy electroverse" %}
+
+
 ## Kia Niro EV 2023 - What is Good?
 
 I feel that the Kia Niro has gone under the radar somewhat, being overshadowed by the likes of Tesla Model Y and Hyundai Ioniq 5.
@@ -24,7 +29,7 @@ As an example, the [Tesla Model Y has a turning circle of 12.1m compared to the 
 
 The car itself also doesn't feel like I'm driving a bus, the [Kia Niro Ev is 4.42m in length, compared to the Kia EV6 being 4.68m, Tesla Model Y 4.75m and Hyundai Ioniq 5 4.63m](https://www.myevreview.com/comparison-chart/length).
 
-You might think that the MG MG4 or Volkswagen ID3 would have been in the running for practicality, particularly as they have similar or smaller turning circles, and you are rightm particularly as the MG4 is priced lower compared to the Kia. However, both the MG4 and ID3 failed our trunk / boot space needs.
+You might think that the MG MG4 or Volkswagen ID3 would have been in the running for practicality, particularly as they have similar or smaller turning circles, and you are rightm particularly as the MG4 is priced lower versus the Kia. However, both the MG4 and ID3 failed our trunk / boot space needs.
 
 ### Good - Luggage Capacity - Trunk / Boot Space 
 The boot space on the MG MG4 is only 363 litres, which is similar to the Volkswagen ID3 of 385 litres.  Whereas, the Kia Niro EV has a capacity of 475 litres and a nice and square large opening. 
@@ -32,6 +37,9 @@ The boot space on the MG MG4 is only 363 litres, which is similar to the Volkswa
 Interestingly, though the Kia EV6 has a bigger boot of 480 litres, I found the shape of the opening not so practical. [Reference for luggage capacity](https://www.myevreview.com/comparison-chart/luggage-capacity).   The headroom also feels better in the back seats of the Kia Niro EV compared to the EV6, because of the Niro's more boxy shape.
 
 We had a relatively unique ask of a car, [which EV can carry a pedal harp?](https://harp.fandom.com/wiki/Transporting_a_Pedal_Harp_by_Car)  In fact, as part of a test drive, we took the car into central London to a harp shop to ensure a harp would fit!
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_boot_with_harp_KVrGMTJ6h.jpeg?updatedAt=1683923165715" image_alt="kia niro ev 2023 pedal harp in trunk boot" image_title="kia niro ev 2023 pedal harp in trunk boot" %}
+
 
 ### Good - Vehicle to Load
 I really like the idea of the car being a mobile battery.
@@ -46,12 +54,19 @@ I am really looking forward to using it in the winter to power my laundry tumble
 
 I just wish that I could power my entire home. With a 64kWh battery, the Kia Niro EV could power my home for almost a week.
 
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia-niro2023-v2l_dw3dy_L4b.jpg?updatedAt=1683923166508" image_alt="kia niro ev 2023 vehicle to load v2l" image_title="kia niro ev 2023 vehicle to load v2l" %}
+
 ### Good - Driver Assist
 One of the best things about the car is it makes driving on the motorway.  This is because of the many driver asists most notably, the heads up display, highway assist cruise control and built-in navigation with live traffic data. 
 
 Unlike [Kia Connect](https://www.kia.com/uk/dealers/citygatehighwycombe/owners/telematics/#:~:text=YOUR%20FREE%20SEVEN%2DYEAR%20CONNECTED,digital%20features%20in%20your%20car), which is free for 7 years in the UK,  [Tesla charge £9.99 monthly for live traffic data](https://www.tesla.com/en_gb/support/connectivity).
 
 In fact, after a 200 mile journey to Wales on the M4, I needed to remind myself that I was actually the driver, when eventually I came off the motorway.
+
+As a fun driver assist, the remote park assist could be useful if you have a small garage.  
+
+[![kia niro ev 2023 remote park assist](https://img.youtube.com/vi/mkM4FGMqsFUE/0.jpg)](https://www.youtube.com/watch?v=mkM4FGMqsFU)
+
 
 ## Kia Niro EV 2023 - What is Bad?
 Like most new, more premium that it expensive cars, they suffer from having too much technology.  Sometimes, a button is better, and if there is a button, it should do what it says, and the human driver should be more in control, not the car!
@@ -78,6 +93,8 @@ To achieve this efficiency, I needed to charge the battery from 40% to 80%, with
 In fact when charging the battery from [67% to 79% in February 2023, the Kia Niro EV 2023 wasted 40% of the energy](https://twitter.com/messageHal/status/1629417981716443137?s=20). This seems wrong.  I even tweeted at Kia UK.
 
 I really think that car manufacturers should improve this, and like when buying a fridge, cars should have a rating to indicate its charging efficiency as well as its range efficiency.
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_internal_dashboard_G4y6y5nrG.jpg?updatedAt=1683923165851" image_alt="kia niro ev 2023 internal dashboard delayed charging" image_title="kia niro ev 2023 internal dashboard delayed charging" %}
 
 ### Bad - Glitches
 There are driver profiles that can be set in the car. Sometimes, randomly, the car seems to get these 'mixed up' and the only way to recover is by using a pointy thing to reset the entertainment system.

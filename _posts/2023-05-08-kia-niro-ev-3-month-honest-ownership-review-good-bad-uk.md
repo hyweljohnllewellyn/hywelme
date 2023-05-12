@@ -65,7 +65,7 @@ In fact, after a 200 mile journey to Wales on the M4, I needed to remind myself 
 
 As a fun driver assist, the remote park assist could be useful if you have a small garage.  
 
-[![kia niro ev 2023 remote park assist](https://img.youtube.com/vi/mkM4FGMqsFUE/0.jpg)](https://www.youtube.com/watch?v=mkM4FGMqsFU)
+[![kia niro ev 2023 remote park assist](http://i3.ytimg.com/vi/mkM4FGMqsFU/hqdefault.jpg)](https://www.youtube.com/watch?v=mkM4FGMqsFU)
 
 
 ## Kia Niro EV 2023 - What is Bad?

@@ -5,7 +5,7 @@ author: Hywel
 published: true
 title: Kia Niro EV 2023 after 3 Months - The Good and Bad
 categories: Electric Vehicles Energy
-meta: Kia Niro EV 3 month ownership review UK charging efficiency energy
+meta: Kia Niro EV review 3 month ownership review UK charging efficiency energy
 ---
 
 ## Introduction 

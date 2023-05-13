@@ -15,8 +15,9 @@ I will also mention charging. Spoiler alert, by far the cheapest way and the thi
 
 Overall, as a family needing a good amount of usable space, without feeling out of place on UK roads, the Kia Niro EV 2023 vs MG4 or Tesla Model Y was the right choice for us.
 
-{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev__2023_charging_ionity_octopus_energy_electroverse_smX-gsP8O.jpg?updatedAt=1683923420079" image_alt="kia niro ev 2023 ionity octopus energy electroverse" image_title="kia niro ev 2023 ionity octopus energy electroverse" %}
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev__2023_charging_ionity_octopus_energy_electroverse_smX-gsP8O.jpg?updatedAt=1683984413956?updatedAt=1683923420079" image_alt="kia niro ev 2023 ionity octopus energy electroverse" image_title="kia niro ev 2023 ionity octopus energy electroverse" %}
 
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_driving_dashboard_view_w2XBpHMFJ.jpg?updatedAt=1683984333520" image_alt="kia_niro_ev_2023_driving_dashboard_view" image_title="kia_niro_ev_2023_driving_dashboard_view" %}
 
 ## Kia Niro EV 2023 - What is Good?
 
@@ -38,7 +39,9 @@ Interestingly, though the Kia EV6 has a bigger boot of 480 litres, I found the s
 
 We had a relatively unique ask of a car, [which EV can carry a pedal harp?](https://harp.fandom.com/wiki/Transporting_a_Pedal_Harp_by_Car)  In fact, as part of a test drive, we took the car into central London to a harp shop to ensure a harp would fit!
 
-{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_boot_with_harp_KVrGMTJ6h.jpeg?updatedAt=1683923165715" image_alt="kia niro ev 2023 pedal harp in trunk boot" image_title="kia niro ev 2023 pedal harp in trunk boot" %}
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_trunk_boot_with_pedal_harp_orjIdfTyp.jpg?updatedAt=1683984526751" image_alt="kia_niro_ev_2023_trunk_boot_with_pedal_harp rear view" image_title="kia_niro_ev_2023_trunk_boot_with_pedal_harp rear view" %}
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_boot_with_harp_KVrGMTJ6h.jpeg?updatedAt=1683923165715" image_alt="kia niro ev 2023 pedal harp in trunk boot side view" image_title="kia niro ev 2023 pedal harp in trunk boot side view" %}
 
 
 ### Good - Vehicle to Load
@@ -79,7 +82,13 @@ The car is constantly beeping and pulls the steering wheel if it thinks that my 
 ### Bad - Heating and Range in Cold Weather
 It is well known that the range of an EV drops in cold weather, but my Kia Niro EV, specified with a [£900 optional heat pump as of May 2023](https://www.kia.com/uk/new-cars/niro/pricing/) travelled only 200 miles on a full charge in January on a trip to Wales averaging 3.1miles/kWh.  Granted, most of this was motorway driving, but given the claimed [up to 285 mile range](https://www.kia.com/uk/new-cars/niro/), I was disappointed.  I'm not convived that the heat pump has any noticable effect on improving range.
 
-As of May 2023, it is worth noting that the average miles per kilowatt-hour is now more like 4.1.  Temperature has a huge impact on range of EVs in 2023.
+Between January 31 and May 13 2023 (102 days), the milage covered has been 3921 miles, with an average usage of 3.8 miles /kWh.
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days_EhPi7HCEK.jpg?updatedAt=1683984593518" image_alt="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" image_title="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" %}
+
+As of May 2023, it is worth noting that the average miles per kilowatt-hour is now more like 4.1.  Temperature has a huge impact on range of EVs in 2023.  Between 7th May and 13 May (6 days), since the last charge, the Lia Niro EV 2023 mileage covered was 109 miles, averaging 4.5 miles /kWh.
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_accumilated_mileage_range_7_May_to_13_May_6_days_BXJ5o9-dw.jpg?updatedAt=1683984574378" image_alt="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" image_title="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" %}
 
 Also, when setting the desired internal temperature to 20-27 degrees Celsius, the car sometimes does not heat at all, even after 20 minutes of cold air being blown, which is not nice when it's cold outside.
 

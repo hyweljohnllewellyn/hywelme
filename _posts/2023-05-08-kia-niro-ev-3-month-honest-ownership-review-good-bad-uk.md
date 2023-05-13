@@ -49,15 +49,16 @@ I really like the idea of the car being a mobile battery.
 
 In the UK, as of 2023, there are surprisingly few EV cars having an ability to use the battery to charge other things. I was surprised that neither Tesla nor Volkswagen have this feature available. Note that Volkswagen have mentioned making this available, but yet to make it real. See [bidirectional-cars-2023](https://www.dcbel.energy/blog/2023/01/04/new-year-new-bidirectional-cars-2023-edition/) for a list of cars with bi-directional charging as of January 2023. 
  
-The Kia Niro EV (level 3 and 4 trim in UK) come with this option, which effectively provides a 3-pin plug as standard, allowing drivers to power appliances directly from the car, with a maximum load up to [3.6kW](https://zecar.com/resources/which-electric-cars-have-bidirectional-charging).
+The Kia Niro EV (level 3 and 4 trim in UK) come with this option, which effectively provides a 3-pin 250 volt plug as standard, allowing drivers to power appliances directly from the car, with a maximum load up to [3.6kW](https://zecar.com/resources/which-electric-cars-have-bidirectional-charging).
 
 This has been useful for plugging a laptop into the internal plug, located below the rear seats, giving a mobile office.
 
-I am really looking forward to using it in the winter to power my laundry tumble dryer.
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_internal_power_outlet_250volt_CVRI7Vu8X.jpg?updatedAt=1683985906336" image_alt="kia_niro_ev_2023_internal_power_outlet_250volt" image_title="kia_niro_ev_2023_internal_power_outlet_250volt" %}
 
-I just wish that I could power my entire home. With a 64kWh battery, the Kia Niro EV could power my home for almost a week.
 
-{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia-niro2023-v2l_dw3dy_L4b.jpg?updatedAt=1683923166508" image_alt="kia niro ev 2023 vehicle to load v2l" image_title="kia niro ev 2023 vehicle to load v2l" %}
+I am really looking forward to using the external bi-directional vehicle to load (v2l) in the winter to power my laundry tumble dryer.  I just wish that I could power my entire home. With a 64kWh battery, the Kia Niro EV could power my home for almost a week.
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia-niro2023-v2l_dw3dy_L4b.jpg?updatedAt=1683984637633" image_alt="kia niro ev 2023 vehicle to load v2l" image_title="kia niro ev 2023 vehicle to load v2l" %}
 
 ### Good - Driver Assist
 One of the best things about the car is it makes driving on the motorway.  This is because of the many driver asists most notably, the heads up display, highway assist cruise control and built-in navigation with live traffic data. 
@@ -86,7 +87,7 @@ Between January 31 and May 13 2023 (102 days), the milage covered has been 3921 
 
 {% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days_EhPi7HCEK.jpg?updatedAt=1683984593518" image_alt="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" image_title="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" %}
 
-As of May 2023, it is worth noting that the average miles per kilowatt-hour is now more like 4.1.  Temperature has a huge impact on range of EVs in 2023.  Between 7th May and 13 May (6 days), since the last charge, the Lia Niro EV 2023 mileage covered was 109 miles, averaging 4.5 miles /kWh.
+As of May 2023, it is worth noting that the average miles per kilowatt-hour is now more like 4.1.  Temperature has a huge impact on range of EVs in 2023.  Between 7th May and 13 May (6 days), since the last charge, the Kia Niro EV 2023 mileage covered was 109 miles, averaging 4.5 miles /kWh.
 
 {% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/kianiro3monthreview/kia_niro_ev_2023_accumilated_mileage_range_7_May_to_13_May_6_days_BXJ5o9-dw.jpg?updatedAt=1683984574378" image_alt="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" image_title="kia_niro_ev_2023_accumilated_milage_range_31_jan_to_13_May_102_days" %}
 

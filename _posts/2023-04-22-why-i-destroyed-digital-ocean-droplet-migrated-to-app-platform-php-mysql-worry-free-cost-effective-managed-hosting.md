@@ -26,7 +26,13 @@ So, I decided to migrate to the [DigitalOcean](https://m.do.co/c/92e12787bf7a) A
 
 In the app platform, you can also define app-level environment variables and also forward logs to providers such as [papertrail.com](https://www.papertrail.com), which is great as I now receive daily emails about any errors in my PHP application
 
-For the database, [DigitalOcean's managed database]( https://www.digitalocean.com/blog/just-how-managed-are-digitaloceans-managed-databases) provides daily backups, data encryption at rest and in transit, and only allow-listed IP addresses can access the database.
+## How to secure MySQL database connection to Digital Ocean App Platform? 
+
+By defining the Digital Ocean App as a trusted source, this  creates a secure connection to the database whilst denying all other private or public connections, making the database more secure.
+
+{% include lazyload.html image_src="https://ik.imagekit.io/hywelllewellyn/digialoceanmanagedhostng/digital_ocean_managed_database_security_xf6rMszaO.png?updatedAt=1684078640177" image_alt="digital_ocean_managed_database_security_" image_title="digital_ocean_managed_database_security_" %}
+
+[DigitalOcean's managed database]( https://www.digitalocean.com/blog/just-how-managed-are-digitaloceans-managed-databases) also provides daily backups, data encryption at rest and in transit.
 
 ![DigitalOcean Managed Database Pricing]({{site.baseurl}}/assets/2023/digitalocean-managed-database-pricing.png)
 

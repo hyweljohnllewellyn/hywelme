@@ -24,20 +24,24 @@ There were four audio samples, each to be mapped to four objects.  I tried calcu
 There are several choices available, some are polished and have several functions such as [coffee cup](http://www.coffeecup.com/image-mapper/), but as I only wanted a basic map I found this simple, effective [Online Image Map Editor](http://www.maschek.hu/imagemap/imgmap) by Adam Maschek.    I chose a simple rectangle shape for the area co-ordinates.  Here's the finished HTML:
 
 {% highlight html %}
-<img src="http://victoriancarolsingershire.uk/images/Victorian Carol Singers Colourful Dresses and Top Hats.jpg" class="entry-feature-image" alt="London's Premier Victorian Carolers" usemap="#my_image" style="margin-top:0;">
+<!-- THE IMAGE THAT IS PART OF THE TURORIAL see usemap="#my_image" -->
+<img width="1200" height="519" src="/image/Victorian-Carol-Singers-Hire-UK-London.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Victorian Carol Singers Hire UK London"  usemap="#my_image" loading="lazy" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 88vw, 1200px">	
+</div><!-- .post-thumbnail -->
+
+<!-- THE AUDIO AND AREA MAP THAT ARE PART OF THE TURORIAL -->
 <audio id="sound1">
-    <source src="http://victoriancarolsingershire.uk/audio/joy to the world.mp3" type="audio/mpeg" />
+    <source src="/audio/joy to the world.mp3" type="audio/mpeg" />
 </audio>
 <audio id="sound2">
-    <source src="http://victoriancarolsingershire.uk/audio/jingle bells.mp3" type="audio/mpeg" />
+    <source src="/audio/jingle bells.mp3" type="audio/mpeg" />
 </audio>
 <audio id="sound3">
-    <source src="http://victoriancarolsingershire.uk/audio/silent night short.mp3" type="audio/mpeg" />
+    <source src="/audio/silent night short.mp3" type="audio/mpeg" />
 </audio>
 <audio id="sound4">
-    <source src="http://victoriancarolsingershire.uk/audio/deck the halls.mp3" type="audio/mpeg" />
+    <source src="/audio/deck the halls.mp3" type="audio/mpeg" />
 </audio>
-<map name="my_image" id ="my_image">
+<map name="my_image" id ="my_image" >
 <area shape="rect" coords="408,556,660,996" id="area1" />
 <area shape="rect" coords="880,552,1096,852" id="area2" />
 <area shape="rect" coords="1120,428,1360,732" id="area3" />
@@ -49,10 +53,12 @@ There is the image with the usemap="#my_image", the four HTML5 audio files along
 
 In order for the image map to be responsive by recalculating the area coordinates to match the actual image size  I need an image map re-sizer.  Note that some [re-sizers are not compatible with Chrome on iOS](http://stackoverflow.com/questions/28872555/image-map-is-not-working-on-chrome-for-ios).  I'm using [ imageMapResizer](https://github.com/davidjbradshaw/image-map-resizer) by David Bradshaw.  
 
-In my page scripts, as well as loading the jQuery files, these are included;
+In my page scripts, these are included. Note that jquery is required;
 
 {% highlight html %}
-<script type="text/javascript" src="{{ site.url }}/assets/js/imagemapresizer/imageMapResizer.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/audioplay.js"></script>
+<script type="text/javascript" src="/js/imageMapResizer.min.js"></script>
 <script type="text/javascript" >imageMapResize();</script>
 {% endhighlight %}
 

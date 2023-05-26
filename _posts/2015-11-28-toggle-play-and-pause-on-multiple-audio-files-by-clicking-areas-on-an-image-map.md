@@ -95,4 +95,23 @@ Thanks to the following resources for their inspiration:
 
 [Stopping all audio playing](http://stackoverflow.com/questions/9283656/stopping-html5-audio)
 
-That's it, the final result can be found at [Victorian Carol Singers Hire UK](http://www.victoriancarolsingershire.uk/).
+
+-- Updated 26 May 2023 --
+
+Special thanks to Don Wiss who contacted me to point out that the demo site was broken. See [greenportwalkingtour.org](http://greenportwalkingtour.org/audio-map.htm).
+
+That's it, the final result can be found at [audio image map play pause demo](https://audio-image-map-play-pause-demo.netlify.app).
+
+Source can be found at [GitHub](https://github.com/hyweljohnllewellyn/audioimagemapdemo).
+
+Please consider buying me a coffee for my efforts https://ko-fi.com/hywelllewellyn.
+
+Please use https for your sites. 
+
+I would recommend [Digital Ocean](https://www.hywel.me/php/mysql/hosting/2023/04/22/why-i-destroyed-digital-ocean-droplet-migrated-to-app-platform-php-mysql-worry-free-cost-effective-managed-hosting.html) or [Netlify](https://www.hywel.me/sites/2021/11/15/website-page-with-contact-form-using-html-github-and-netlify.html) to host your sites. Both provide great hosting. 
+
+You can always secure your site using [cloudflare](https://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html). 
+
+
+
+

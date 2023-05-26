@@ -111,7 +111,7 @@ That's it, the final result can be found at [audio image map play pause demo](ht
 Source can be found at [GitHub audio image map demo](https://github.com/hyweljohnllewellyn/audioimagemapdemo).
 This is the direct link to the [page source](https://github.com/hyweljohnllewellyn/audioimagemapdemo/blob/main/index.html)
 
-Please consider buying me a coffee for my efforts https://ko-fi.com/hywelllewellyn.
+Please [buy me a coffee for my effort](https://ko-fi.com/hywelllewellyn).
 
 Please use https for your sites. 
 

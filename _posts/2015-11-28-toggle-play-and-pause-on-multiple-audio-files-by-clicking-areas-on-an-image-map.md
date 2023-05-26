@@ -117,8 +117,5 @@ Please use https for your sites.
 
 I would recommend [Digital Ocean](https://www.hywel.me/php/mysql/hosting/2023/04/22/why-i-destroyed-digital-ocean-droplet-migrated-to-app-platform-php-mysql-worry-free-cost-effective-managed-hosting.html) or [Netlify](https://www.hywel.me/sites/2021/11/15/website-page-with-contact-form-using-html-github-and-netlify.html) to host your sites. Both provide great hosting. 
 
-You can always secure your site using [cloudflare](https://www.hywel.me/static/sites/2015/12/06/github-pages-custom-domain-names-with-cloudflare.html). 
-
-
 
 

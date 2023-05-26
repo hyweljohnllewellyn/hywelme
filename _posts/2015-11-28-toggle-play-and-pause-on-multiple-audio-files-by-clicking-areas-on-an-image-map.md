@@ -90,7 +90,7 @@ $.each($('audio'), function () {
 this was then was called from the page
 
 {% highlight html %}
-<script type="text/javascript" src="http://victoriancarolsingershire.uk/assets/js/audioplay.js"></script>
+<script type="text/javascript" src="/js/audioplay.js"></script>
 {% endhighlight %}
 
 Thanks to the following resources for their inspiration:
@@ -108,7 +108,8 @@ Special thanks to Don Wiss who contacted me to point out that the demo site was 
 
 That's it, the final result can be found at [audio image map play pause demo](https://audio-image-map-play-pause-demo.netlify.app).
 
-Source can be found at [GitHub](https://github.com/hyweljohnllewellyn/audioimagemapdemo).
+Source can be found at [GitHub audio image map demo](https://github.com/hyweljohnllewellyn/audioimagemapdemo).
+This is the direct link to the [page source](https://github.com/hyweljohnllewellyn/audioimagemapdemo/blob/main/index.html)
 
 Please consider buying me a coffee for my efforts https://ko-fi.com/hywelllewellyn.
 

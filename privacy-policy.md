@@ -14,7 +14,7 @@ This privacy policy applies between you, the User of this Website and Hywel Llew
 |-|-|
 | **GDPR** | the General Data Protection Regulation (EU) 2016/679; |
 |-|-|
-| **Hywel Llewellyn, we or us** | Hywel Llewellyn of 23 Valley Road,  Codicote,   Hertfordshire,  SG4 8YA; |
+| **Hywel Llewellyn, we or us** | Hywel Llewellyn of Hertfordshire,  UK; |
 |-|-|
 | **User**  or  **you** | any third party that accesses the Website and is not either (i) employed by Hywel Llewellyn and acting in the course of their employment or (ii) engaged as a consultant or otherwise providing services to Hywel Llewellyn and accessing the Website in connection with the provision of such services; and |
 |-|-|

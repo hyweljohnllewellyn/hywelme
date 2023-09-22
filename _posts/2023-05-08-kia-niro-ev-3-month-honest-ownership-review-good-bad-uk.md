@@ -13,7 +13,8 @@ In this review, I will discuss what is good and bad about the Kia Niro EV 2023 a
 
 I will also mention charging. Spoiler alert, by far the cheapest way and the thing that makes the EV feasible is charging at home using [Octopus Energy Intelligent Tariff](https://share.octopus.energy/neat-bee-361). 
 
-UPDATE 22 September 2023 - Note that the Intelligent tariff does not support Kia Niro EV, so I will be switching to [Octopus Go tariff](https://octopus.energy/smart/go/).  Please use my referral code neat-bee-361 to receive £50 credit. Here is the message that I received:
+
+<span style="color:red">UPDATE 22 September 2023</span> - Note that the Intelligent tariff does not support Kia Niro EV, so I will be switching to [Octopus Go tariff](https://octopus.energy/smart/go/).  Please use my referral code neat-bee-361 to receive £50 credit. Here is the message that I received:
 
 ```
 Octopus Energy

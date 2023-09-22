@@ -24,9 +24,16 @@ Hi Hywel,
 
 Apologies for the delay in getting back to you.
 
-Unfortunately at the moment there is an issue with compatibility between Kia EVs and Intelligent Octopus. We are currently working with Kia in hopes that a firmware update will allow Kia vehicles to be compatible with Intelligent again, but for the moment we are unable to get Intelligent working for customers with Kia EVs.
+Unfortunately at the moment there is an issue with 
+compatibility between Kia EVs and Intelligent Octopus. 
+We are currently working with Kia in hopes that a firmware update 
+will allow Kia vehicles to be compatible with Intelligent again, 
+but for the moment we are unable to get Intelligent working for 
+customers with Kia EVs.
 
-I apologise for the confusion caused by this and I understand this may be frustrating. We hope to be able to offer Intelligent Octopus for Kia EV owners again soon!
+I apologise for the confusion caused by this and I understand 
+this may be frustrating. 
+We hope to be able to offer Intelligent Octopus for Kia EV owners again soon!
 
 Do let me know if you have any further questions regarding this.
 
